@@ -1,0 +1,45 @@
+@import "../settings/settings";
+
+.c-btn {
+  padding: 10px;
+  color: $color-black;
+  border-radius: $default-radius;
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+  border: solid 1px currentColor;
+  box-shadow: $color-box-shadow;
+
+  &:hover {
+    box-shadow: $color-box-shadow-hover;
+    transform: $default-scale;
+  }
+
+  &--primary {
+    background-color: $color-primary;
+    border: solid 1px $color-primary;
+    color: $color-white;
+
+    &:hover {
+      background-color: lighten($color-primary, 10%);
+    }
+  }
+
+  &--danger {
+    background-color: $color-danger;
+    border: solid 1px $color-danger;
+    color: #fff;
+
+    &:hover {
+      background-color: lighten($color-danger, 10%);
+    }
+  }
+  &--success {
+    background-color: $color-success;
+    border: solid 1px $color-success;
+    color: #fff;
+
+    &:hover {
+      background-color: lighten($color-success, 10%);
+    }
+  }
+}
