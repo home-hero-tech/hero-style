@@ -1,0 +1,52 @@
+@import '../settings/settings';
+
+.c-form-group {
+  position: relative;
+
+  input {
+    margin: $xxs 0;
+  }
+
+  &--error {
+    label, small {
+      color: $color-danger;
+    }
+
+    input {
+      color: $color-danger;
+      border: 1px solid CurrentColor;
+    }
+
+    &:after {
+      content: '\f057';
+      color: $color-danger;
+      font-size: $xs;
+      position: absolute;
+      font-family: 'Font Awesome 5 Pro';
+      font-weight: 900;
+      top: $lg;
+      right: $xs;
+    }
+  }
+
+  &--success {
+    label, small {
+      color: $color-success;
+    }
+
+    input {
+      color: $color-success;
+      border: 1px solid CurrentColor;
+    }
+
+    &:after {
+      content: '\f00c';
+      color: $color-success;
+      font-size: $xs;
+      position: absolute;
+      font-family: 'Font Awesome 5 Pro';
+      top: $lg;
+      right: $xs;
+    }
+  }
+}

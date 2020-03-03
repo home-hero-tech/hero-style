@@ -1,0 +1,96 @@
+@font-face {
+  font-family: 'gilroy';
+  src: url('../../assets/fonts/gilroy/Gilroy-Regular.ttf');
+}
+@font-face {
+    font-family: 'gilroy';
+    src: url('../../assets/fonts/gilroy/Gilroy-Thin.ttf');
+    font-weight: 100;
+}
+@font-face {
+    font-family: 'gilroy';
+    src: url('../../assets/fonts/gilroy/Gilroy-UltraLight.ttf');
+    font-weight: 200;
+}
+@font-face {
+    font-family: 'gilroy';
+    src: url('../../assets/fonts/gilroy/Gilroy-Light.ttf');
+    font-weight: 300;
+}
+@font-face {
+    font-family: 'gilroy';
+    src: url('../../assets/fonts/gilroy/Gilroy-Medium.ttf');
+    font-weight: 500;
+}
+@font-face {
+    font-family: 'gilroy';
+    src: url('../../assets/fonts/gilroy/Gilroy-SemiBold.ttf');
+    font-weight: 600;
+}
+@font-face {
+    font-family: 'gilroy';
+    src: url('../../assets/fonts/gilroy/Gilroy-Bold.ttf');
+    font-weight: 700;
+}
+@font-face {
+    font-family: 'gilroy';
+    src: url('../../assets/fonts/gilroy/Gilroy-Black.ttf');
+    font-weight: 900;
+}
+
+
+@font-face {
+  font-family: 'muli';
+  src: url('../../assets/fonts/muli/Muli-Regular.ttf');
+}
+@font-face {
+    font-family: 'muli';
+    src: url('../../assets/fonts/muli/Muli-ExtraLight.ttf');
+    font-weight: 200;
+}
+@font-face {
+    font-family: 'muli';
+    src: url('../../assets/fonts/muli/Muli-Light.ttf');
+    font-weight: 300;
+}
+@font-face {
+    font-family: 'muli';
+    src: url('../../assets/fonts/muli/Muli-SemiBold.ttf');
+    font-weight: 600;
+}
+@font-face {
+    font-family: 'muli';
+    src: url('../../assets/fonts/muli/Muli-Bold.ttf');
+    font-weight: 700;
+}
+@font-face {
+    font-family: 'muli';
+    src: url('../../assets/fonts/muli/Muli-ExtraBold.ttf');
+    font-weight: 800;
+}
+@font-face {
+    font-family: 'muli';
+    src: url('../../assets/fonts/muli/Muli-Black.ttf');
+    font-weight: 900;
+}
+
+$font-family: 'muli', sans-serif;
+$font-family-secondary: 'gilroy', sans-serif;
+$font-size-lg: 14px;
+$font-size-md: 12px;
+$font-size-sm: 10px;
+
+%paragraph {
+  font-family: $font-family;
+  font-size: $font-size-lg
+}
+
+%medium {
+  font-family: $font-family;
+  font-size: $font-size-md;
+}
+
+%small {
+  font-family: $font-family;
+  font-size: $font-size-sm;
+}

@@ -1,0 +1,29 @@
+@import '../settings/settings';
+@import '../tools/tools';
+
+* {
+  @extend %medium;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+html, body {
+  height: 100%;
+  background-color: $color-structural-gray-100;
+}
+
+a {
+  @extend %medium;
+  color: $color-brand-primary-300;
+  font-weight: normal;
+  line-height: 18px;
+  &:hover, &:link {
+    color: $color-brand-primary-300;
+    text-decoration: none;
+  }
+}

@@ -1,0 +1,15 @@
+@import '../settings/settings';
+
+.c-input {
+  display: block;
+  width: 100%;
+  height: $lg;
+  border: 1px solid $color-brand-gray-200;
+  padding: $xxs;
+  border-radius: 6px;
+  box-shadow: $color-box-shadow;
+
+  &:focus {
+    border: 1px solid CurrentColor;
+  }
+}

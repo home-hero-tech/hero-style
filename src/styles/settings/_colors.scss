@@ -1,9 +1,64 @@
-$color-white: #FFF;
-$color-black: #3B444B;
+$color-box-shadow: 0px 7px 64px 0px rgba(0, 0, 0, 0.07);
 
-$color-primary: #00A7FA;
-$color-danger: #FF3B28;
-$color-success: #48EB12;
+/////FUNCTIONAL COLORS
 
-$color-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-$color-box-shadow-hover: 0 14px 28px rgba(0, 0, 0, 0.12), 0 10px 10px rgba(0, 0, 0, 0.12);
+$color-functional-destructive: #e04c36;
+$color-functional-destructive-dark: #781d10;
+$color-functional-destructive-light: #f49788;
+$color-functional-success: #4bca81;
+$color-functional-success-dark: #04844b;
+$color-functional-success-darker: #004a29;
+$color-functional-warning: #ffb81a;
+$color-functional-warning-dark: #765200;
+
+/////BRAND COLORS
+
+$color-brand-primary-050: #e2f2ff;
+$color-brand-primary-100: #8dcaff;
+$color-brand-primary-200: #5eb5ff;
+$color-brand-primary-300: #0094ff;
+$color-brand-primary-400: #3a7cf0;
+$color-brand-primary-500: #316ac4;
+$color-brand-primary-600: #4561a9;
+
+$color-brand-secondary-050: #dcf7f7;
+$color-brand-secondary-100: #a9ebeb;
+$color-brand-secondary-200: #6edbdb;
+$color-brand-secondary-300: #32cccc;
+$color-brand-secondary-400: #2db3b3;
+$color-brand-secondary-500: #269999;
+$color-brand-secondary-600: #208080;
+
+$color-brand-gray-050: #f0f3fa;
+$color-brand-gray-100: #c5ccde;
+$color-brand-gray-200: #b1b9cc;
+$color-brand-gray-300: #7e89a6;
+$color-brand-gray-400: #6c7796;
+$color-brand-gray-500: #4b546e;
+$color-brand-gray-600: #3c4358;
+
+$color-brand-primary-gradient: linear-gradient(-135deg, rgb(141, 202, 255) 0%, rgb(0, 148, 255) 100%);
+
+
+////STRUCTURAL COLORS
+
+$color-structural-white: #ffffff;
+$color-structural-gray-100: #f8f9fa;
+$color-structural-gray-200: #f2f3f4;
+$color-structural-gray-300: #e5e8eb;
+$color-structural-gray-400: #ced4da;
+$color-structural-gray-500: #adb5bd;
+$color-structural-gray-600: #697885;
+$color-structural-gray-700: #35424d;
+$color-structural-gray-800: #343a40;
+$color-structural-gray-900: #222529;
+$color-structural-black: #000000;
+$color-structural-black-shadow: rgba(0, 0, 0, 0.08);
+
+
+$color-white: $color-structural-white;
+$color-black: $color-structural-black;
+
+$color-primary: $color-brand-primary-300;
+$color-danger: $color-functional-destructive;
+$color-success: $color-functional-success;
