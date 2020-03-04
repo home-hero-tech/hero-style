@@ -27,3 +27,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 - Split some files into several files to use the ITCSS structure.
+
+## [1.0.4] - 2020-03-04
+### Added
+- Grid, Row, Col components

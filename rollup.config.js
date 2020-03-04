@@ -4,12 +4,11 @@ import postcss from 'rollup-plugin-postcss';
 import resolve from 'rollup-plugin-node-resolve';
 import external from 'rollup-plugin-peer-deps-external';
 import { terser } from 'rollup-plugin-terser';
-import { uglify } from 'rollup-plugin-uglify';
+// import { uglify } from 'rollup-plugin-uglify';
 
 import packageJSON from './package.json';
 
 const input = './src/index.js';
-const minifyExtension = pathToFile => pathToFile.replace(/\.js$/, '.min.js');
 
 export default [
   // CommonJS
@@ -19,75 +18,12 @@ export default [
       {
         file: packageJSON.main,
         format: 'cjs'
+      },
+      {
+        file: packageJSON.module,
+        format: 'es'
       }
     ],
-    plugins: [
-      babel({
-        exclude: 'node_modules/**'
-      }),
-      postcss({
-        modules: true,
-        minimize: {
-          safe: true
-        }
-      }),
-      external(),
-      resolve(),
-      commonjs(),
-    ]
-  },
-  {
-    input,
-    output: {
-      file: minifyExtension(packageJSON.main),
-      format: 'cjs'
-    },
-    plugins: [
-      external(),
-      postcss({
-        modules: true,
-        minimize: {
-          safe: true
-        }
-      }),
-      babel({
-        exclude: 'node_modules/**'
-      }),
-      resolve(),
-      commonjs(),
-      uglify()
-    ]
-  },
-  {
-    input,
-    output: {
-      file: packageJSON.module,
-      format: 'es',
-      exports: 'named'
-    },
-    plugins: [
-      babel({
-        exclude: 'node_modules/**'
-      }),
-      postcss({
-        modules: true,
-        minimize: {
-          safe: true
-        }
-      }),
-      external(),
-      resolve(),
-      commonjs(),
-      terser()
-    ]
-  },
-  {
-    input,
-    output: {
-      file: minifyExtension(packageJSON.module),
-      format: 'es',
-      exports: 'named'
-    },
     plugins: [
       babel({
         exclude: 'node_modules/**'
