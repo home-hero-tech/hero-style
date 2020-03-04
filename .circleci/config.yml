@@ -61,13 +61,16 @@ commands:
   run-deploy:
     steps:
       - build
+        filters:
+          branches:
+            only: master
       - deploy
+        filters:
+          branches:
+            only: master
 
 jobs:
   v12:
-    filters:
-      branches:
-        only: master
     docker:
       - image: circleci/node:12.9.1-browsers
     working_directory: ~/repo
