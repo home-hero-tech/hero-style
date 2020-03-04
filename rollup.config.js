@@ -4,6 +4,7 @@ import postcss from 'rollup-plugin-postcss';
 import resolve from 'rollup-plugin-node-resolve';
 import external from 'rollup-plugin-peer-deps-external';
 import { terser } from 'rollup-plugin-terser';
+import copy from 'rollup-plugin-copy';
 // import { uglify } from 'rollup-plugin-uglify';
 
 import packageJSON from './package.json';
@@ -37,7 +38,10 @@ export default [
       external(),
       resolve(),
       commonjs(),
-      terser()
+      terser(),
+      copy({
+        targets: [{ src: 'src/styles/**/*.*', dest: 'dist/styles' }]
+      })
     ]
   }
 ];
