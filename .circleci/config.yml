@@ -12,6 +12,9 @@ commands:
           name: Lint
           command: yarn lint
   build:
+    branches:
+      only:
+        - master
     steps:
       - run:
           name: Build packages
