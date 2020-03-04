@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Input should match with the snapshot 1`] = `
+<input
+  className="c-input"
+  id="ipt"
+  name="ipt"
+  placeholder="placeholder text"
+  type="text"
+/>
+`;
