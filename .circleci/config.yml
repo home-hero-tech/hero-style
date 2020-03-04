@@ -63,14 +63,14 @@ commands:
       - build
       - deploy
 
-jobs:
-  v12:
-    docker:
-      - image: circleci/node:12.9.1-browsers
-    working_directory: ~/repo
-    steps:
-      - run-all
-      - run-deploy
+v12:
+  docker:
+    - image: circleci/node:12.9.1-browsers
+  working_directory: ~/repo
+  steps:
+    - run-all
+    - run-deploy
+
 workflows:
   node:
     jobs:
