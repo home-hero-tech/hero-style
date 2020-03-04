@@ -1,3 +1,5 @@
+import { Grid, Col, Row } from 'react-flexbox-grid';
+
 // UI
 import Button from './components/atom/button/Button';
 import Form from './components/atom/form/Form';
@@ -10,5 +12,8 @@ export {
   Form,
   Input,
   Label,
-  FormGroup
+  FormGroup,
+  Grid,
+  Col,
+  Row
 };
