@@ -60,14 +60,8 @@ commands:
       - persist-to-workspace
   run-deploy:
     steps:
-      - build:
-        filters:
-          branches:
-            only: master
-      - deploy:
-        filters:
-          branches:
-            only: master
+      - build
+      - deploy
 
 jobs:
   v12:
@@ -80,4 +74,7 @@ jobs:
 workflows:
   node:
     jobs:
-      - v12
+      - v12:
+          filters:
+            branches:
+              only: master
