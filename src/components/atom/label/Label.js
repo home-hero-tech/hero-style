@@ -1,14 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Label = ({ name, children }) => {
-  return <label htmlFor={name}>{children}</label>;
-};
+const Label = ({ name, children }) => <label htmlFor={name}>{children}</label>;
 
 Label.propTypes = {
-  name: PropTypes.string,
-  children: PropTypes.string.isRequired
+  children: PropTypes.string.isRequired,
+  name: PropTypes.string
 };
+
 Label.defaultProps = {
   name: null
 };

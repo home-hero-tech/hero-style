@@ -4,6 +4,9 @@
   "main": "dist/index.js",
   "browser": "dist/index.umd.js",
   "module": "dist/index.es.js",
+  "author": "Home Hero",
+  "description": "Home Hero's Design System",
+  "license": "Apache-2.0",
   "dependencies": {
     "@fortawesome/fontawesome-pro": "^5.12.1",
     "@fortawesome/fontawesome-svg-core": "^1.2.27",

@@ -15,14 +15,14 @@ const Button = ({ primary, success, danger, children }) => {
 };
 
 Button.propTypes = {
-  primary: PropTypes.bool,
+  children: PropTypes.string.isRequired,
   danger: PropTypes.bool,
-  success: PropTypes.bool,
-  children: PropTypes.string.isRequired
+  primary: PropTypes.bool,
+  success: PropTypes.bool
 };
 Button.defaultProps = {
-  primary: false,
   danger: false,
+  primary: false,
   success: false
 };
 

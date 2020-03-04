@@ -1,5 +1,4 @@
-@import '../tools/tools';
-@import './colors';
+@import "../settings/settings";
 
 h1 {
   font-family: $font-family-secondary;
@@ -24,14 +23,4 @@ h4 {
 h5 {
   font-family: $font-family-secondary;
   font-size: 20px;
-}
-
-label {
-  @extend %small;
-  color: $color-brand-gray-500;
-}
-
-small {
-  @extend %small;
-  color: $color-brand-gray-500;
 }
