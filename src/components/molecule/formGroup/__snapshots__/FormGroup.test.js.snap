@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FormGroup should match with the snapshot 1`] = `
+<div
+  className="c-form-group"
+>
+  <label
+    htmlFor="ipt"
+  >
+    Text
+  </label>
+  <input
+    className="c-input"
+    id="ipt"
+    name="ipt"
+    placeholder="placeholder text"
+    type="text"
+  />
+</div>
+`;
+
+exports[`FormGroup should match with the snapshot with Message 1`] = `
+<div
+  className="c-form-group"
+>
+  <label
+    htmlFor="ipt"
+  >
+    Text
+  </label>
+  <input
+    className="c-input"
+    id="ipt"
+    name="ipt"
+    placeholder="placeholder text"
+    type="text"
+  />
+  <small>
+    Default message
+  </small>
+</div>
+`;
