@@ -12,9 +12,6 @@ commands:
           name: Lint
           command: yarn lint
   build:
-    branches:
-      only:
-        - master
     steps:
       - run:
           name: Build packages
@@ -68,6 +65,9 @@ commands:
 
 jobs:
   v12:
+    filters:
+      branches:
+        only: master
     docker:
       - image: circleci/node:12.9.1-browsers
     working_directory: ~/repo
