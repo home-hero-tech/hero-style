@@ -70,13 +70,13 @@ jobs:
     working_directory: ~/repo
     steps:
       - run-all
-        filters:
-          branches:
-            only: master
+          filters:
+            branches:
+              only: master
       - run-deploy
-        filters:
-          branches:
-            only: master
+          filters:
+            branches:
+              only: master
 workflows:
   node:
     jobs:
