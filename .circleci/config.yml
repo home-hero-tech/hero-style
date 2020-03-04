@@ -75,6 +75,6 @@ workflows:
   node:
     jobs:
       - v12:
-        filters:
-          branches:
-            only: master
+          filters:
+            branches:
+              only: master

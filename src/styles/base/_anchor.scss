@@ -1,0 +1,14 @@
+@import "../settings/settings";
+@import "../tools/tools";
+
+a {
+  @extend %medium;
+  color: $color-brand-primary-300;
+  font-weight: normal;
+  line-height: 18px;
+
+  &:hover, &:link {
+    color: $color-brand-primary-300;
+    text-decoration: none;
+  }
+}

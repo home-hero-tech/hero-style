@@ -1,0 +1,6 @@
+@import "../settings/settings";
+
+label {
+  @extend %small;
+  color: $color-brand-gray-500;
+}
