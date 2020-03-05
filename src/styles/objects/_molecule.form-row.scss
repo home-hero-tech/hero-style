@@ -2,6 +2,8 @@
 @import "../tools/tools";
 
 .c-form-row {
+  display: flex;
+
   & + .c-form-row {
     margin-top: $space-sm;
   }

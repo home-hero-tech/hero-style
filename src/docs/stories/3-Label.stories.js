@@ -6,6 +6,4 @@ export default {
   component: Label
 };
 
-export const Default = () => (
-  <Label name={'lbl'}>Text</Label>
-);
+export const Default = () => <Label name="lbl">Text</Label>;

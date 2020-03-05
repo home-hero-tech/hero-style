@@ -55,3 +55,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 - Form component was moved to organism folder (i.e atomic design).
+
+## [1.0.9] - 2020-03-05
+### Added
+- FormRow tests and was published.
+
+## [1.0.10] - 2020-03-05
+### Added
+- Style for FormRow and some improvements at FormGroup component.
+
+## [1.0.11] - 2020-03-05
+### Added
+- New style for tests, now we're using Enzyme to test snapshots for all components.
+- Created and adjusted storybook stories for Form, FormGroup and FormRow
+
+### Changed
+- Fixed Eslint errors for several components.

@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Form should match with the snapshot 1`] = `
+<form
+  onSubmit={[Function]}
+>
+  <FormRow>
+    <FormGroup
+      error={false}
+      id="ipt"
+      label="Text"
+      message="Default message"
+      name="ipt"
+      placeholder="placeholder text"
+      success={false}
+      type="text"
+    />
+  </FormRow>
+</form>
+`;

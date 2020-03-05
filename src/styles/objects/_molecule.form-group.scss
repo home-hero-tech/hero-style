@@ -3,6 +3,7 @@
 
 .c-form-group {
   position: relative;
+  width: 100%;
 
   input {
     margin: $space-xxs 0;
@@ -49,5 +50,9 @@
       top: $space-lg;
       right: $space-xs;
     }
+  }
+
+  & + .c-form-group {
+    margin-left: $space-xs;
   }
 }

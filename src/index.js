@@ -7,7 +7,7 @@ import Input from './components/atom/input/Input';
 import Label from './components/atom/label/Label';
 import Form from './components/organism/form/Form';
 import FormRow from './components/molecule/form-row/FormRow';
-import FormGroup from './components/molecule/formGroup/FormGroup';
+import FormGroup from './components/molecule/form-group/FormGroup';
 
 export {
   Button,

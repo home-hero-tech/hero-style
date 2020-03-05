@@ -1,5 +1,5 @@
 import React from 'react';
-import FormGroup from '../../components/molecule/formGroup/FormGroup';
+import FormGroup from '../../components/molecule/form-group/FormGroup';
 
 export default {
   title: 'FormGroup',
@@ -12,13 +12,6 @@ const _style = {
 
 export const Default = () => (
   <div style={_style}>
-    <FormGroup
-      placeholder="placeholder text"
-      id="ipt"
-      name="ipt"
-      type="text"
-      label="Text"
-    />
     <FormGroup
       placeholder="placeholder text"
       id="ipt"

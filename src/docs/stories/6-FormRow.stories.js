@@ -2,7 +2,7 @@ import React from 'react';
 
 import Form from '../../components/organism/form/Form';
 import FormRow from '../../components/molecule/form-row/FormRow';
-import FormGroup from '../../components/molecule/formGroup/FormGroup';
+import FormGroup from '../../components/molecule/form-group/FormGroup';
 
 export default {
   title: 'FormRow',
@@ -15,7 +15,7 @@ const _style = {
 
 export const Default = () => (
   <div style={_style}>
-    <Form>
+    <Form onSubmit={() => {}}>
       <FormRow>
         <FormGroup
           placeholder="placeholder text"

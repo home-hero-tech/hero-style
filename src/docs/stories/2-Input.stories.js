@@ -12,6 +12,6 @@ const _style = {
 
 export const Default = () => (
   <div style={_style}>
-    <Input placeholder={'placeholder text'} id={'ipt'} name={'ipt'} type={'text'}></Input>
+    <Input placeholder="placeholder text" id="ipt" name="ipt" type="text" />
   </div>
 );

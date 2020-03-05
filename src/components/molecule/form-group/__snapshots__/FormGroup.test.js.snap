@@ -4,13 +4,12 @@ exports[`FormGroup should match with the snapshot 1`] = `
 <div
   className="c-form-group"
 >
-  <label
-    htmlFor="ipt"
+  <Label
+    name="ipt"
   >
     Text
-  </label>
-  <input
-    className="c-input"
+  </Label>
+  <Input
     id="ipt"
     name="ipt"
     placeholder="placeholder text"
@@ -23,13 +22,12 @@ exports[`FormGroup should match with the snapshot with Message 1`] = `
 <div
   className="c-form-group"
 >
-  <label
-    htmlFor="ipt"
+  <Label
+    name="ipt"
   >
     Text
-  </label>
-  <input
-    className="c-input"
+  </Label>
+  <Input
     id="ipt"
     name="ipt"
     placeholder="placeholder text"
