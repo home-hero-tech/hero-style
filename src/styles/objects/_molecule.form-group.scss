@@ -5,7 +5,7 @@
   position: relative;
 
   input {
-    margin: $xxs 0;
+    margin: $space-xxs 0;
   }
 
   &--error {
@@ -21,12 +21,12 @@
     &:after {
       content: '\f057';
       color: $color-danger;
-      font-size: $xs;
+      font-size: $space-xs;
       position: absolute;
       font-family: 'Font Awesome 5 Pro';
       font-weight: 900;
-      top: 30px;
-      right: $xs;
+      top: $space-lg;
+      right: $space-xs;
     }
   }
 
@@ -43,11 +43,11 @@
     &:after {
       content: '\f00c';
       color: $color-success;
-      font-size: $xs;
+      font-size: $space-xs;
       position: absolute;
       font-family: 'Font Awesome 5 Pro';
-      top: 30px;
-      right: $xs;
+      top: $space-lg;
+      right: $space-xs;
     }
   }
 }

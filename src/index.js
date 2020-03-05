@@ -1,3 +1,4 @@
+// GRID
 import { Grid, Col, Row } from 'react-flexbox-grid';
 
 // UI
@@ -13,7 +14,7 @@ export {
   Input,
   Label,
   FormGroup,
-  Grid,
+  Row,
   Col,
-  Row
+  Grid
 };

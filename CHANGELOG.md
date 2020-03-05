@@ -28,6 +28,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - Split some files into several files to use the ITCSS structure.
 
-## [1.0.3] - 2020-03-04
+## [1.0.4] - 2020-03-04
 ### Added
-- Grid component
+- Grid, Row, Col components.
+
+## [1.0.5] - 2020-03-04
+### Added
+- Style in builder folder.
+
+## [1.0.6] - 2020-03-05
+### Added
+- Prefix in scss space variables.
+- Form component is going to fill the entire space.
+
+### Changed
+- Necessary to copy the ITCSS structure to *dist* folder.
+
+## [1.0.7] - 2020-03-05
+### Added
+- Fonts in builder folder.

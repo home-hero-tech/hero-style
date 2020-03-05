@@ -1,11 +1,10 @@
 @import '../settings/settings';
 
 .c-input {
-  display: block;
   width: 100%;
-  height: $lg;
+  height: $space-lg;
   border: 1px solid $color-brand-gray-200;
-  padding: $xs;
+  padding: $space-xxs;
   border-radius: 6px;
   box-shadow: $color-box-shadow;
 
