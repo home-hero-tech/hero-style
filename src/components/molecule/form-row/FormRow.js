@@ -8,7 +8,11 @@ const FormRow = ({ children }) => {
 };
 
 FormRow.propTypes = {
-  children: PropTypes.oneOfType([PropTypes.array, PropTypes.object]).isRequired
+  children: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.array,
+    PropTypes.object
+  ]).isRequired
 };
 
 export default FormRow;
