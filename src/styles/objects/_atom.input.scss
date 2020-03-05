@@ -17,11 +17,11 @@
   }
 
   &__checkbox {
-    width: $md;
-    height: $md;
+    width: $space-md;
+    height: $space-md;
     -webkit-appearance: none;
     -moz-appearance: none;
-    border-radius: $xxs;
+    border-radius: $space-xxs;
     border: 1px solid $color-brand-primary-300;
 
     &:focus {
@@ -30,9 +30,9 @@
 
     &:checked {
       &:after {
-        width: $md;
-        height: $md;
-        border-radius: $xxs;
+        width: $space-md;
+        height: $space-md;
+        border-radius: $space-xxs;
         content: '\f00c';
         position: absolute;
         background-color: $color-brand-primary-300;
@@ -57,11 +57,11 @@
   }
 
   &__radio {
-    width: $md;
-    height: $md;
+    width: $space-md;
+    height: $space-md;
     -webkit-appearance: none;
     -moz-appearance: none;
-    border-radius: $lg;
+    border-radius: $space-lg;
     border: 1px solid $color-brand-primary-300;
 
     &:focus {
@@ -72,8 +72,8 @@
       &:before {
         content: '';
         position: absolute;
-        width: $md;
-        height: $md;
+        width: $space-md;
+        height: $space-md;
         border: 1px solid $color-brand-primary-300;
         border-radius: 100%;
         background: $color-structural-white;
