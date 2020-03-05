@@ -48,6 +48,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Fonts in builder folder.
 
+### Removed
+- Useless images and pdf from font folder.
+
 ## [1.0.8] - 2020-03-05
 ### Added
 - Storybook addons for code source.
@@ -78,4 +81,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Some css improvements.
 
 ## [1.0.13] - 2020-03-05
+### Added
 - Publishing FormActions component.
+
+## [1.0.14] - 2020-03-05
+### Added
+- New params for FormGroup component.
