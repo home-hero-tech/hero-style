@@ -1,0 +1,8 @@
+@import '../settings/settings';
+@import "../tools/tools";
+
+.c-form-row {
+  & + .c-form-row {
+    margin-top: $space-sm;
+  }
+}

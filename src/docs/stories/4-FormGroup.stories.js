@@ -12,26 +12,53 @@ const _style = {
 
 export const Default = () => (
   <div style={_style}>
-    <FormGroup  placeholder={'placeholder text'} id={'ipt'} name={'ipt'} type={'text'} label={'Text'}></FormGroup>
+    <FormGroup
+      placeholder="placeholder text"
+      id="ipt"
+      name="ipt"
+      type="text"
+      label="Text"
+    />
+    <FormGroup
+      placeholder="placeholder text"
+      id="ipt"
+      name="ipt"
+      type="text"
+      label="Text"
+    />
   </div>
 );
 export const Message = () => (
   <div style={_style}>
-    <FormGroup placeholder={'placeholder text'} id={'ipt'} name={'ipt'} type={'text'} label={'Text'} message={'Default message'}></FormGroup>
+    <FormGroup
+      placeholder="placeholder text"
+      id="ipt"
+      name="ipt"
+      type="text"
+      label="Text"
+      message="Default message"
+    />
   </div>
 );
 export const Error = () => (
   <div style={_style}>
-    <FormGroup id={'ipt'} name={'ipt'} type={'text'} label={'Text'} error></FormGroup>
+    <FormGroup id="ipt" name="ipt" type="text" label="Text" error />
   </div>
 );
 export const ErrorMessage = () => (
   <div style={_style}>
-    <FormGroup id={'ipt'} name={'ipt'} type={'text'} label={'Text'} message={'Please, verify'} error></FormGroup>
+    <FormGroup
+      id="ipt"
+      name="ipt"
+      type="text"
+      label="Text"
+      message="Please, verify"
+      error
+    />
   </div>
 );
 export const Success = () => (
   <div style={_style}>
-    <FormGroup id={'ipt'} name={'ipt'} type={'text'} label={'Text'} success></FormGroup>
+    <FormGroup id="ipt" name="ipt" type="text" label="Text" success />
   </div>
 );
