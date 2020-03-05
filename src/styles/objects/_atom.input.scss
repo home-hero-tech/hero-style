@@ -95,13 +95,14 @@
 
     &--disabled {
       border: 1px solid $color-brand-gray-200;
-      background: $color-structural-white;
+      background-color: $color-brand-gray-100;
       &:checked {
         &:before {
-          border: 1px solid $color-brand-gray-200;
+          border: 1px solid $color-brand-gray-300;
+          background-color: $color-brand-gray-100;
         }
         &:after {
-          background-color: $color-brand-gray-200;
+          background-color: $color-brand-gray-300;
         }
       }
     }

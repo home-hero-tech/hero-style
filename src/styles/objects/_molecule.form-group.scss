@@ -16,6 +16,7 @@
     input {
       color: $color-danger;
       border: 1px solid CurrentColor;
+      padding-right: 24px;
     }
 
     &:after {
@@ -25,8 +26,12 @@
       position: absolute;
       font-family: 'Font Awesome 5 Pro';
       font-weight: 900;
-      top: $space-lg;
-      right: $space-xs;
+      top: 20px;
+      right: 1px;
+      background-color: white;
+      padding: 10px $space-xs;
+      border-top-right-radius: 6px;
+      border-bottom-right-radius: 6px;
     }
   }
 
@@ -38,16 +43,25 @@
     input {
       color: $color-success;
       border: 1px solid CurrentColor;
+      padding-right: 28px;
     }
 
     &:after {
       content: '\f00c';
       color: $color-success;
-      font-size: $space-xs;
+      font-size: $font-size-sm;
       position: absolute;
       font-family: 'Font Awesome 5 Pro';
-      top: $space-lg;
-      right: $space-xs;
+      top: 20px;
+      right: 1px;
+      background-color: white;
+      padding: $space-xs $space-xs;
+      border-top-right-radius: 6px;
+      border-bottom-right-radius: 6px;
     }
   }
+}
+
+.icon {
+
 }
