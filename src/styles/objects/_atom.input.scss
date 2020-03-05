@@ -5,11 +5,106 @@
   width: 100%;
   height: $lg;
   border: 1px solid $color-brand-gray-200;
-  padding: $xxs;
+  padding: $xs;
   border-radius: 6px;
   box-shadow: $color-box-shadow;
 
+  &--disabled {
+    background-color: $color-brand-gray-100;
+  }
+
   &:focus {
     border: 1px solid CurrentColor;
+  }
+
+  &__checkbox {
+    width: $md;
+    height: $md;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border-radius: $xxs;
+    border: 1px solid $color-brand-primary-300;
+
+    &:focus {
+      border: 1px solid $color-brand-primary-300;
+    }
+
+    &:checked {
+      &:after {
+        width: $md;
+        height: $md;
+        border-radius: $xxs;
+        content: '\f00c';
+        position: absolute;
+        background-color: $color-brand-primary-300;
+        color: $color-structural-white;
+        font-family: 'Font Awesome 5 Pro';
+        top: 3px;
+        left: 4px;
+        padding: 5px 6px;
+      }
+    }
+
+    &--disabled {
+      border: 1px solid $color-brand-gray-100;
+
+      &:checked {
+        &:after {
+          background-color: $color-brand-gray-100;
+          color: $color-brand-gray-300;
+        }
+      }
+    }
+  }
+
+  &__radio {
+    width: $md;
+    height: $md;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border-radius: $lg;
+    border: 1px solid $color-brand-primary-300;
+
+    &:focus {
+      border: 1px solid $color-brand-primary-300;
+    }
+
+    &:checked {
+      &:before {
+        content: '';
+        position: absolute;
+        width: $md;
+        height: $md;
+        border: 1px solid $color-brand-primary-300;
+        border-radius: 100%;
+        background: $color-structural-white;
+        left: 4px;
+        top: 3px;
+      }
+      &:after {
+        content: '';
+        width: 18px;
+        height: 18px;
+        background-color: $color-brand-primary-300;
+        position: absolute;
+        top: 6px;
+        left: 7px;
+        border-radius: 100%;
+        transition: all 0.2s ease;
+      }
+    }
+
+    &--disabled {
+      border: 1px solid $color-brand-gray-200;
+      background: $color-structural-white;
+      &:checked {
+        &:before {
+          border: 1px solid $color-brand-gray-200;
+        }
+        &:after {
+          background-color: $color-brand-gray-200;
+        }
+      }
+    }
   }
 }

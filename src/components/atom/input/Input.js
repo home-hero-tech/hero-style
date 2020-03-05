@@ -1,27 +1,25 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import classNames from 'classnames';
 import css from './Input.module.scss';
 
-const Input = ({ id, name, type, placeholder }) => (
-  <input
-    className={css['c-input']}
-    id={id}
-    name={name}
-    type={type}
-    placeholder={placeholder}
-  />
-);
+const Input = (props) => {
+  const {disabled, type} = props;
+  const isCheckOrRadio = type==='checkbox' || type==='radio';
 
-Input.propTypes = {
-  id: PropTypes.string,
-  name: PropTypes.string,
-  placeholder: PropTypes.string,
-  type: PropTypes.string
+  const classes = classNames({
+    [css['c-input']]: true,
+    [css['c-input--disabled']]: disabled,
+    [css[`c-input__${type}`]]: isCheckOrRadio,
+    [css[`c-input__${type}--disabled`]]: disabled && isCheckOrRadio
+  });
+
+  return <input
+    className={classes}
+    {...props}
+  />
 };
+
 Input.defaultProps = {
-  id: null,
-  name: null,
-  placeholder: null,
   type: 'text'
 };
 
