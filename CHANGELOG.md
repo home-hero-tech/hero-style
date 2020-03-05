@@ -76,3 +76,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - FormActions component and its test.
 - Some css improvements.
+
+## [1.0.13] - 2020-03-05
+- Publishing FormActions component.
