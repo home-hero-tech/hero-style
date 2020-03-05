@@ -1,0 +1,73 @@
+@import '../settings/settings';
+
+.c-select {
+  width: 100%;
+  box-shadow: $color-box-shadow;
+
+  &--disabled {
+    background-color: $color-brand-gray-100;
+  }
+
+  :global {
+    .css-yk16xz-control {
+      height: $space-xlg;
+      min-height: $space-xlg;
+      border: 1px solid $color-brand-gray-100;
+      border-radius: $default-radius;
+
+      &:focus {
+        border: 1px solid CurrentColor;
+        box-shadow: none;
+      }
+
+      .css-1hwfws3 {
+        padding-left: 16px;
+      }
+    }
+
+    .css-1pahdxg-control {
+      height: $space-xlg;
+      min-height: $space-xlg;
+      box-shadow: none;
+      border: 1px solid CurrentColor;
+      background-color: transparent;
+
+      &:focus, &:hover {
+        border: 1px solid CurrentColor;
+        box-shadow: none;
+      }
+    }
+
+    .css-1okebmr-indicatorSeparator {
+      width: 0;
+    }
+
+    .css-tlfecz-indicatorContainer, .css-1gtu0rj-indicatorContainer {
+      svg {
+        display: none;
+      }
+
+      &:after {
+        content: '\f0dd';
+        font-size: $font-size-md;
+        position: absolute;
+        color: $color-brand-gray-500;
+        font-family: 'Font Awesome 5 Pro';
+        font-weight: 900;
+        top: 0;
+        right: 0;
+        background-color: white;
+        padding: $space-xs $space-sm;
+        border-top-right-radius: $default-radius;
+        border-bottom-right-radius: $default-radius;
+      }
+    }
+
+    .css-1gtu0rj-indicatorContainer {
+      &:after {
+        top: 2px;
+        transform: rotate(180deg);
+      }
+    }
+  }
+}

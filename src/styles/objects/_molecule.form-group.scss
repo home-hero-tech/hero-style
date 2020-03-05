@@ -6,6 +6,7 @@
 
   input {
     margin: $space-xxs 0;
+    padding-right: 46px;
   }
 
   &--error {
@@ -16,22 +17,21 @@
     input {
       color: $color-danger;
       border: 1px solid CurrentColor;
-      padding-right: 24px;
     }
 
     &:after {
       content: '\f057';
       color: $color-danger;
-      font-size: $space-xs;
+      font-size: $font-size-md;
       position: absolute;
       font-family: 'Font Awesome 5 Pro';
       font-weight: 900;
-      top: 20px;
+      top: 22px;
       right: 1px;
       background-color: white;
-      padding: 10px $space-xs;
-      border-top-right-radius: 6px;
-      border-bottom-right-radius: 6px;
+      padding: $space-xs $space-sm;
+      border-top-right-radius: $default-radius;
+      border-bottom-right-radius: $default-radius;
     }
   }
 
@@ -43,21 +43,20 @@
     input {
       color: $color-success;
       border: 1px solid CurrentColor;
-      padding-right: 28px;
     }
 
     &:after {
       content: '\f00c';
       color: $color-success;
-      font-size: $font-size-sm;
+      font-size: $font-size-md;
       position: absolute;
       font-family: 'Font Awesome 5 Pro';
-      top: 20px;
+      top: 22px;
       right: 1px;
       background-color: white;
-      padding: $space-xs $space-xs;
-      border-top-right-radius: 6px;
-      border-bottom-right-radius: 6px;
+      padding: $space-xs $space-sm;
+      border-top-right-radius: $default-radius;
+      border-bottom-right-radius: $default-radius;
     }
   }
 }

@@ -2,10 +2,10 @@
 
 .c-input {
   width: 100%;
-  height: $space-lg;
-  border: 1px solid $color-brand-gray-200;
-  padding: $space-xxs;
-  border-radius: 6px;
+  height: $space-xlg;
+  border: 1px solid $color-brand-gray-100;
+  padding: $space-sm;
+  border-radius: $default-radius;
   box-shadow: $color-box-shadow;
 
   &--disabled {
@@ -23,6 +23,7 @@
     -moz-appearance: none;
     border-radius: $space-xxs;
     border: 1px solid $color-brand-primary-300;
+    padding: 0;
 
     &:focus {
       border: 1px solid $color-brand-primary-300;
@@ -63,6 +64,7 @@
     -moz-appearance: none;
     border-radius: $space-lg;
     border: 1px solid $color-brand-primary-300;
+    padding: 0;
 
     &:focus {
       border: 1px solid $color-brand-primary-300;
