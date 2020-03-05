@@ -5,9 +5,9 @@
   position: relative;
   width: 100%;
 
-  input {
-    margin: $space-xxs 0;
-  }
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
 
   &--error {
     label, small {

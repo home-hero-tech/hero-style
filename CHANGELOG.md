@@ -71,3 +71,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 - Fixed Eslint errors for several components.
+
+## [1.0.12] - 2020-03-05
+### Added
+- FormActions component and its test.
+- Some css improvements.

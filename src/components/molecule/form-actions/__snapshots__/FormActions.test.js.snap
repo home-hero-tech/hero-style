@@ -1,0 +1,70 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FormActions should match with the snapshot 1`] = `
+<div
+  className="c-form-actions"
+>
+  <Button
+    danger={false}
+    primary={false}
+    success={false}
+    type="submit"
+  >
+    Submit
+  </Button>
+  <Button
+    danger={false}
+    onClick={[Function]}
+    primary={false}
+    success={false}
+  >
+    Cancel
+  </Button>
+</div>
+`;
+
+exports[`FormActions should match with the snapshot 2`] = `
+<div
+  className="c-form-actions c-form-actions--align-between"
+>
+  <Button
+    danger={false}
+    primary={false}
+    success={false}
+    type="submit"
+  >
+    Submit
+  </Button>
+  <Button
+    danger={false}
+    onClick={[Function]}
+    primary={false}
+    success={false}
+  >
+    Cancel
+  </Button>
+</div>
+`;
+
+exports[`FormActions should match with the snapshot 3`] = `
+<div
+  className="c-form-actions c-form-actions--align-end"
+>
+  <Button
+    danger={false}
+    primary={false}
+    success={false}
+    type="submit"
+  >
+    Submit
+  </Button>
+  <Button
+    danger={false}
+    onClick={[Function]}
+    primary={false}
+    success={false}
+  >
+    Cancel
+  </Button>
+</div>
+`;
