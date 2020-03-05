@@ -1,0 +1,18 @@
+@import "../settings/settings";
+
+.c-form-actions {
+  display: flex;
+  margin-top: $space-xs;
+
+  &--align-between {
+    justify-content: space-between;
+  }
+
+  &--align-end {
+    justify-content: flex-end;
+  }
+
+  button + button {
+    margin-left: $space-xs;
+  }
+}

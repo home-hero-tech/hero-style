@@ -14,7 +14,9 @@ const FormGroup = ({
   label,
   success,
   error,
-  message
+  message,
+  value,
+  onChange
 }) => {
   const classes = classNames({
     [css['c-form-group']]: true,
@@ -25,7 +27,14 @@ const FormGroup = ({
   return (
     <div className={classes}>
       <Label name={name}>{label}</Label>
-      <Input id={id} name={name} type={type} placeholder={placeholder} />
+      <Input
+        id={id}
+        name={name}
+        type={type}
+        placeholder={placeholder}
+        value={value}
+        onChange={onChange}
+      />
       {message ? <small>{message}</small> : null}
     </div>
   );
@@ -37,9 +46,11 @@ FormGroup.propTypes = {
   label: PropTypes.string,
   message: PropTypes.string,
   name: PropTypes.string,
+  onChange: PropTypes.func,
   placeholder: PropTypes.string,
   success: PropTypes.bool,
-  type: PropTypes.string
+  type: PropTypes.string,
+  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
 };
 FormGroup.defaultProps = {
   error: false,
@@ -47,9 +58,11 @@ FormGroup.defaultProps = {
   label: null,
   message: null,
   name: null,
+  onChange: f => f,
   placeholder: null,
   success: false,
-  type: 'text'
+  type: 'text',
+  value: null
 };
 
 export default FormGroup;

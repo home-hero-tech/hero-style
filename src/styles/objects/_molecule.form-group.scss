@@ -3,6 +3,11 @@
 
 .c-form-group {
   position: relative;
+  width: 100%;
+
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
 
   input {
     margin: $space-xxs 0;
@@ -59,8 +64,8 @@
       border-bottom-right-radius: $default-radius;
     }
   }
-}
 
-.icon {
-
+  & + .c-form-group {
+    margin-left: $space-xs;
+  }
 }

@@ -1,11 +1,13 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
-import Label from './Label';
 
-describe('Label', () => {
+import FormRow from './FormRow';
+
+describe('FormRow', () => {
   it('should match with the snapshot', () => {
-    const wrapper = shallow(<Label name="lbl">Text</Label>);
+    const children = 'FormRow';
+    const wrapper = shallow(<FormRow>{children}</FormRow>);
     expect(toJson(wrapper)).toMatchSnapshot();
   });
 });

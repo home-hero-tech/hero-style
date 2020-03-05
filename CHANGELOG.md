@@ -47,3 +47,47 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.0.7] - 2020-03-05
 ### Added
 - Fonts in builder folder.
+
+### Removed
+- Useless images and pdf from font folder.
+
+## [1.0.8] - 2020-03-05
+### Added
+- Storybook addons for code source.
+- FormRow component.
+
+### Changed
+- Form component was moved to organism folder (i.e atomic design).
+
+## [1.0.9] - 2020-03-05
+### Added
+- FormRow tests and was published.
+
+## [1.0.10] - 2020-03-05
+### Added
+- Style for FormRow and some improvements at FormGroup component.
+
+## [1.0.11] - 2020-03-05
+### Added
+- New style for tests, now we're using Enzyme to test snapshots for all components.
+- Created and adjusted storybook stories for Form, FormGroup and FormRow
+
+### Changed
+- Fixed Eslint errors for several components.
+
+## [1.0.12] - 2020-03-05
+### Added
+- FormActions component and its test.
+- Some css improvements.
+
+## [1.0.13] - 2020-03-05
+### Added
+- Publishing FormActions component.
+
+## [1.0.14] - 2020-03-05
+### Added
+- New params for FormGroup component.
+
+## [1.0.15] - 2020-03-05
+### Changed
+- FormGroup passing props for children.

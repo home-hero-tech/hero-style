@@ -1,5 +1,5 @@
 import React from 'react';
-import FormGroup from '../../components/molecule/formGroup/FormGroup';
+import FormGroup from '../../components/molecule/form-group/FormGroup';
 
 export default {
   title: 'FormGroup',
