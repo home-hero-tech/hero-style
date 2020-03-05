@@ -39,9 +39,15 @@ export default [
       resolve(),
       commonjs(),
       terser(),
-      copy([{ files: 'src/styles/**/*.*', dest: 'dist/styles' }], {
-        verbose: true
-      })
+      copy(
+        [
+          { files: 'src/styles/**/*.*', dest: 'dist/styles' },
+          { files: 'src/assets/**/*.*', dest: 'dist/assets' },
+        ],
+        {
+          verbose: true
+        }
+      )
     ]
   }
 ];

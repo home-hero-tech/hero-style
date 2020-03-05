@@ -44,3 +44,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - Necessary to copy the ITCSS structure to *dist* folder.
 
+## [1.0.7] - 2020-03-05
+### Added
+- Fonts in builder folder.
