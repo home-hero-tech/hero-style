@@ -1,0 +1,34 @@
+@import '../settings/settings';
+
+.c-pagination {
+  width: 100%;
+  :global {
+    .pagination {
+      display: flex !important;
+
+      .page {
+        color: $color-brand-primary-300;
+        background: $color-structural-white;
+        border-radius: $default-radius;
+        box-shadow: $color-box-shadow;
+        height: $space-lg;
+        width: $space-lg;
+        margin: auto 6px;
+        display: table;
+        text-align: center;
+
+        a {
+          display: table-cell;
+          vertical-align: middle;
+        }
+
+        &.active {
+          background: $color-brand-primary-300;
+          a {
+            color: $color-structural-white;
+          }
+        }
+      }
+    }
+  }
+}

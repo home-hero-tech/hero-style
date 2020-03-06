@@ -17,5 +17,27 @@ const placeholder = 'Selecione...';
 const noOptionsMessage = () => 'Nenhuma opção';
 
 export const Default = () => (
-  <Select options={options} placeholder={placeholder} noOptionsMessage={noOptionsMessage}></Select>
+  <Select
+    options={options}
+    placeholder={placeholder}
+    noOptionsMessage={noOptionsMessage}>
+  </Select>
+);
+
+export const Cleareble = () => (
+  <Select
+    options={options}
+    placeholder={placeholder}
+    noOptionsMessage={noOptionsMessage}
+    isMulti={true}>
+  </Select>
+);
+
+export const MultiSelect = () => (
+  <Select
+    options={options}
+    placeholder={placeholder}
+    noOptionsMessage={noOptionsMessage}
+    isMulti={true}>
+  </Select>
 );

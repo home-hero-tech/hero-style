@@ -31,7 +31,7 @@
       position: absolute;
       font-family: 'Font Awesome 5 Pro';
       font-weight: 900;
-      top: 22px;
+      top: $space-md;
       right: 1px;
       background-color: white;
       padding: $space-xs $space-sm;
@@ -56,7 +56,7 @@
       font-size: $font-size-md;
       position: absolute;
       font-family: 'Font Awesome 5 Pro';
-      top: 22px;
+      top: $space-md;
       right: 1px;
       background-color: white;
       padding: $space-xs $space-sm;

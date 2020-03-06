@@ -3,9 +3,12 @@
 exports[`Input should match with the snapshot 1`] = `
 <input
   className="c-input"
+  disabled={null}
   id="ipt"
   name="ipt"
+  onChange={[Function]}
   placeholder="placeholder text"
   type="text"
+  value={null}
 />
 `;

@@ -15,6 +15,7 @@ const Select = ({
                     options,
                     placeholder,
                     noOptionsMessage,
+                    isClearable,
                     value
                   }) => {
 
@@ -30,9 +31,34 @@ const Select = ({
     options={options}
     placeholder={placeholder}
     noOptionsMessage={noOptionsMessage}
+    isClearable={isClearable}
     value={value}
   >
   </RSelect>;
+};
+
+Select.propTypes = {
+  autoFocus: PropTypes.bool,
+  classNamePrefix: PropTypes.string,
+  isDisabled: PropTypes.bool,
+  isMulti: PropTypes.bool,
+  isSearchable: PropTypes.bool,
+  name: PropTypes.string,
+  onChange: PropTypes.oneOfType([
+    PropTypes.array,
+    PropTypes.object,
+    PropTypes.string
+  ]),
+  options: PropTypes.array,
+  placeholder: PropTypes.string,
+  noOptionsMessage: PropTypes.func,
+  isClearable: PropTypes.bool,
+  value: PropTypes.oneOfType([
+    PropTypes.array,
+    PropTypes.object,
+    PropTypes.string,
+    PropTypes.number
+  ])
 };
 
 

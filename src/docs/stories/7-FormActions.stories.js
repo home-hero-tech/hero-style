@@ -6,6 +6,8 @@ import FormRow from '../../components/molecule/form-row/FormRow';
 import FormGroup from '../../components/molecule/form-group/FormGroup';
 import FormActions from '../../components/molecule/form-actions/FormActions';
 import Button from '../../components/atom/button/Button';
+import Label from '../../components/atom/label/Label';
+import Input from '../../components/atom/input/Input';
 
 export default {
   title: 'FormActions',
@@ -20,28 +22,38 @@ export const Default = () => (
   <div style={_style}>
     <Form onSubmit={action('submitted')}>
       <FormRow>
-        <FormGroup
-          placeholder="placeholder text"
-          id="ipt"
-          name="ipt"
-          type="text"
-        />
-        <FormGroup
-          placeholder="placeholder text"
-          id="ipt"
-          name="ipt"
-          type="text"
-          label="Text"
-        />
+        <FormGroup>
+          <Label name={'ipt'}>Label</Label>
+          <Input
+            id="ipt"
+            name="ipt"
+            type="text"
+            placeholder="Placeholder text"
+            value="">
+          </Input>
+        </FormGroup>
+        <FormGroup>
+          <Label name={'ipt'}>Label</Label>
+          <Input
+            id="ipt"
+            name="ipt"
+            type="text"
+            placeholder="Placeholder text">
+            value="">
+          </Input>
+        </FormGroup>
       </FormRow>
       <FormRow>
-        <FormGroup
-          placeholder="placeholder text"
-          id="ipt"
-          name="ipt"
-          type="text"
-          label="Text"
-        />
+        <FormGroup>
+          <Label name={'ipt'}>Label</Label>
+          <Input
+            id="ipt"
+            name="ipt"
+            type="text"
+            placeholder="Placeholder text">
+            value="">
+          </Input>
+        </FormGroup>
       </FormRow>
       <FormActions>
         <Button type="submit">Submit</Button>
@@ -55,28 +67,38 @@ export const AlignBetween = () => (
   <div style={_style}>
     <Form onSubmit={action('submitted')}>
       <FormRow>
-        <FormGroup
-          placeholder="placeholder text"
-          id="ipt"
-          name="ipt"
-          type="text"
-        />
-        <FormGroup
-          placeholder="placeholder text"
-          id="ipt"
-          name="ipt"
-          type="text"
-          label="Text"
-        />
+        <FormGroup>
+          <Label name={'ipt'}>Label</Label>
+          <Input
+            id="ipt"
+            name="ipt"
+            type="text"
+            placeholder="Placeholder text"
+            value="">
+          </Input>
+        </FormGroup>
+        <FormGroup>
+          <Label name={'ipt'}>Label</Label>
+          <Input
+            id="ipt"
+            name="ipt"
+            type="text"
+            placeholder="Placeholder text"
+            value="">
+          </Input>
+        </FormGroup>
       </FormRow>
       <FormRow>
-        <FormGroup
-          placeholder="placeholder text"
-          id="ipt"
-          name="ipt"
-          type="text"
-          label="Text"
-        />
+        <FormGroup>
+          <Label name={'ipt'}>Label</Label>
+          <Input
+            id="ipt"
+            name="ipt"
+            type="text"
+            placeholder="Placeholder text"
+            value="">
+          </Input>
+        </FormGroup>
       </FormRow>
       <FormActions alignBetween>
         <Button type="submit">Submit</Button>
@@ -90,28 +112,38 @@ export const AlignEnd = () => (
   <div style={_style}>
     <Form onSubmit={action('submitted')}>
       <FormRow>
-        <FormGroup
-          placeholder="placeholder text"
-          id="ipt"
-          name="ipt"
-          type="text"
-        />
-        <FormGroup
-          placeholder="placeholder text"
-          id="ipt"
-          name="ipt"
-          type="text"
-          label="Text"
-        />
+        <FormGroup>
+          <Label name={'ipt'}>Label</Label>
+          <Input
+            id="ipt"
+            name="ipt"
+            type="text"
+            placeholder="Placeholder text"
+            value="">
+          </Input>
+        </FormGroup>
+        <FormGroup>
+          <Label name={'ipt'}>Label</Label>
+          <Input
+            id="ipt"
+            name="ipt"
+            type="text"
+            placeholder="Placeholder text"
+            value="">
+          </Input>
+        </FormGroup>
       </FormRow>
       <FormRow>
-        <FormGroup
-          placeholder="placeholder text"
-          id="ipt"
-          name="ipt"
-          type="text"
-          label="Text"
-        />
+        <FormGroup>
+          <Label name={'ipt'}>Label</Label>
+          <Input
+            id="ipt"
+            name="ipt"
+            type="text"
+            placeholder="Placeholder text"
+            value="">
+          </Input>
+        </FormGroup>
       </FormRow>
       <FormActions alignEnd>
         <Button type="submit">Submit</Button>
