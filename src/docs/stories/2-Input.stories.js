@@ -13,37 +13,83 @@ const _style = {
 
 export const Default = () => (
   <div style={_style}>
-    <Input placeholder={'placeholder text'} id={'ipt'} name={'ipt'}></Input>
+    <Input placeholder="placeholder text" id="ipt" name="ipt" />
   </div>
 );
 
 export const DefaultDisabled = () => (
   <div style={_style}>
-    <Input placeholder={'placeholder text'} id={'ipt'} name={'ipt'} disabled></Input>
+    <Input placeholder="placeholder text" id="ipt" name="ipt" disabled />
   </div>
 );
 
 export const Checkbox = () => (
-  <Input id={'ipt'} name={'ipt'} type={'checkbox'} defaultChecked={true} value="1" onChange={action('toggleCheck')}></Input>
+  <Input
+    id="ipt"
+    name="ipt"
+    type="checkbox"
+    defaultChecked
+    value="1"
+    onChange={action('toggleCheck')}
+  />
 );
 
 export const CheckboxDisabledSelected = () => (
-  <Input id={'ipt'} name={'ipt'} type={'checkbox'} defaultChecked={true} value="1" onChange={action('toggleCheck')} disabled></Input>
+  <Input
+    id="ipt"
+    name="ipt"
+    type="checkbox"
+    defaultChecked
+    value="1"
+    onChange={action('toggleCheck')}
+    disabled
+  />
 );
 
 export const CheckboxDisabledUnselected = () => (
-  <Input id={'ipt'} name={'ipt'} type={'checkbox'} defaultChecked={false} value="1" onChange={action('toggleCheck')} disabled></Input>
+  <Input
+    id="ipt"
+    name="ipt"
+    type="checkbox"
+    defaultChecked={false}
+    value="1"
+    onChange={action('toggleCheck')}
+    disabled
+  />
 );
 
 export const RadioButton = () => (
-  <Input placeholder={'placeholder text'} id={'ipt'} name={'ipt'} type={'radio'} value="1" onChange={action('toggleRadio')}></Input>
+  <Input
+    placeholder="placeholder text"
+    id="ipt"
+    name="ipt"
+    type="radio"
+    value="1"
+    onChange={action('toggleRadio')}
+  />
 );
 
 export const RadioButtonDisabledSelected = () => (
-  <Input placeholder={'placeholder text'} id={'ipt'} name={'ipt'} type={'radio'} defaultChecked={true} value="1" onChange={action('toggleRadio')} disabled></Input>
+  <Input
+    placeholder="placeholder text"
+    id="ipt"
+    name="ipt"
+    type="radio"
+    defaultChecked
+    value="1"
+    onChange={action('toggleRadio')}
+    disabled
+  />
 );
 
 export const RadioButtonDisabledUnselected = () => (
-  <Input placeholder={'placeholder text'} id={'ipt'} name={'ipt'} type={'radio'} value="1" onChange={action('toggleRadio')} disabled></Input>
+  <Input
+    placeholder="placeholder text"
+    id="ipt"
+    name="ipt"
+    type="radio"
+    value="1"
+    onChange={action('toggleRadio')}
+    disabled
+  />
 );
-

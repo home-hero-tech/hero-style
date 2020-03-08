@@ -10,10 +10,6 @@
   border: solid 1px currentColor;
   box-shadow: $color-box-shadow;
 
-  &:hover {
-    transform: $default-scale;
-  }
-
   &--primary {
     background-color: $color-primary;
     border: solid 1px $color-primary;

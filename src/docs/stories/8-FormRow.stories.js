@@ -20,26 +20,26 @@ export const Default = () => (
     <Form onSubmit={() => {}}>
       <FormRow>
         <FormGroup>
-          <Label name={'ipt'}>Label</Label>
+          <Label name="ipt">Label</Label>
           <Input
             id="ipt"
             name="ipt"
             type="text"
             placeholder="Placeholder text"
-            value="">
-          </Input>
+            value=""
+          />
         </FormGroup>
       </FormRow>
       <FormRow>
         <FormGroup>
-          <Label name={'ipt'}>Label</Label>
+          <Label name="ipt">Label</Label>
           <Input
             id="ipt"
             name="ipt"
             type="text"
             placeholder="Placeholder text"
-            value="">
-          </Input>
+            value=""
+          />
         </FormGroup>
       </FormRow>
     </Form>

@@ -10,7 +10,7 @@ const options = [
   { value: 'chocolate', label: 'Chocolate' },
   { value: 'strawberry', label: 'Strawberry' },
   { value: 'vanilla', label: 'Vanilla' },
-  { value: 'Coconut', label: 'Coconut' },
+  { value: 'Coconut', label: 'Coconut' }
 ];
 
 const placeholder = 'Selecione...';
@@ -20,8 +20,8 @@ export const Default = () => (
   <Select
     options={options}
     placeholder={placeholder}
-    noOptionsMessage={noOptionsMessage}>
-  </Select>
+    noOptionsMessage={noOptionsMessage}
+  />
 );
 
 export const Cleareble = () => (
@@ -29,8 +29,8 @@ export const Cleareble = () => (
     options={options}
     placeholder={placeholder}
     noOptionsMessage={noOptionsMessage}
-    isMulti={true}>
-  </Select>
+    isMulti
+  />
 );
 
 export const MultiSelect = () => (
@@ -38,6 +38,6 @@ export const MultiSelect = () => (
     options={options}
     placeholder={placeholder}
     noOptionsMessage={noOptionsMessage}
-    isMulti={true}>
-  </Select>
+    isMulti
+  />
 );

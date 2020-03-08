@@ -23,36 +23,34 @@ export const Default = () => (
     <Form onSubmit={action('submitted')}>
       <FormRow>
         <FormGroup>
-          <Label name={'ipt'}>Label</Label>
+          <Label name="ipt">Label</Label>
           <Input
             id="ipt"
             name="ipt"
             type="text"
             placeholder="Placeholder text"
-            value="">
-          </Input>
+            value=""
+          />
         </FormGroup>
         <FormGroup>
-          <Label name={'ipt'}>Label</Label>
+          <Label name="ipt">Label</Label>
           <Input
             id="ipt"
             name="ipt"
             type="text"
-            placeholder="Placeholder text">
-            value="">
-          </Input>
+            placeholder="Placeholder text"
+          />
         </FormGroup>
       </FormRow>
       <FormRow>
         <FormGroup>
-          <Label name={'ipt'}>Label</Label>
+          <Label name="ipt">Label</Label>
           <Input
             id="ipt"
             name="ipt"
             type="text"
-            placeholder="Placeholder text">
-            value="">
-          </Input>
+            placeholder="Placeholder text"
+          />
         </FormGroup>
       </FormRow>
       <FormActions>
@@ -68,36 +66,36 @@ export const AlignBetween = () => (
     <Form onSubmit={action('submitted')}>
       <FormRow>
         <FormGroup>
-          <Label name={'ipt'}>Label</Label>
+          <Label name="ipt">Label</Label>
           <Input
             id="ipt"
             name="ipt"
             type="text"
             placeholder="Placeholder text"
-            value="">
-          </Input>
+            value=""
+          />
         </FormGroup>
         <FormGroup>
-          <Label name={'ipt'}>Label</Label>
+          <Label name="ipt">Label</Label>
           <Input
             id="ipt"
             name="ipt"
             type="text"
             placeholder="Placeholder text"
-            value="">
-          </Input>
+            value=""
+          />
         </FormGroup>
       </FormRow>
       <FormRow>
         <FormGroup>
-          <Label name={'ipt'}>Label</Label>
+          <Label name="ipt">Label</Label>
           <Input
             id="ipt"
             name="ipt"
             type="text"
             placeholder="Placeholder text"
-            value="">
-          </Input>
+            value=""
+          />
         </FormGroup>
       </FormRow>
       <FormActions alignBetween>
@@ -113,36 +111,36 @@ export const AlignEnd = () => (
     <Form onSubmit={action('submitted')}>
       <FormRow>
         <FormGroup>
-          <Label name={'ipt'}>Label</Label>
+          <Label name="ipt">Label</Label>
           <Input
             id="ipt"
             name="ipt"
             type="text"
             placeholder="Placeholder text"
-            value="">
-          </Input>
+            value=""
+          />
         </FormGroup>
         <FormGroup>
-          <Label name={'ipt'}>Label</Label>
+          <Label name="ipt">Label</Label>
           <Input
             id="ipt"
             name="ipt"
             type="text"
             placeholder="Placeholder text"
-            value="">
-          </Input>
+            value=""
+          />
         </FormGroup>
       </FormRow>
       <FormRow>
         <FormGroup>
-          <Label name={'ipt'}>Label</Label>
+          <Label name="ipt">Label</Label>
           <Input
             id="ipt"
             name="ipt"
             type="text"
             placeholder="Placeholder text"
-            value="">
-          </Input>
+            value=""
+          />
         </FormGroup>
       </FormRow>
       <FormActions alignEnd>

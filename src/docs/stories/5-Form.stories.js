@@ -26,8 +26,8 @@ export const Default = () => (
             name="ipt"
             type="text"
             placeholder="Placeholder text"
-            value="">
-          </Input>
+            value=""
+          />
         </FormGroup>
         <FormGroup>
           <Label name="ipt">Label</Label>
@@ -36,8 +36,8 @@ export const Default = () => (
             name="ipt2"
             type="text"
             placeholder="Placeholder text"
-            value="">
-          </Input>
+            value=""
+          />
         </FormGroup>
       </FormRow>
       <FormRow>
@@ -48,8 +48,8 @@ export const Default = () => (
             name="ipt3"
             type="text"
             placeholder="Placeholder text"
-            value="">
-          </Input>
+            value=""
+          />
         </FormGroup>
       </FormRow>
     </Form>

@@ -16,27 +16,27 @@ export const Default = () => (
   <div style={_style}>
     <FormGroup>
       <Label name="ipt">Label</Label>
-      <Input 
-        id="ipt" 
-        name="ipt" 
-        type="text" 
+      <Input
+        id="ipt"
+        name="ipt"
+        type="text"
         placeholder="Placeholder text"
-        value="">
-      </Input>
+        value=""
+      />
     </FormGroup>
   </div>
 );
 export const Message = () => (
   <div style={_style}>
     <FormGroup>
-      <Label name="ipt" >Label</Label>
-      <Input 
-        id="ipt" 
-        name="ipt" 
-        type="text" 
+      <Label name="ipt">Label</Label>
+      <Input
+        id="ipt"
+        name="ipt"
+        type="text"
         placeholder="Placeholder text"
-        value="">
-      </Input>
+        value=""
+      />
       <small>Default message</small>
     </FormGroup>
   </div>
@@ -44,28 +44,16 @@ export const Message = () => (
 export const Error = () => (
   <div style={_style}>
     <FormGroup error>
-      <Label name="ipt" >Label</Label>
-      <Input 
-        id="ipt" 
-        name="ipt" 
-        type="text" 
-        value="m@m">
-
-      </Input>
+      <Label name="ipt">Label</Label>
+      <Input id="ipt" name="ipt" type="text" value="m@m" />
     </FormGroup>
   </div>
 );
 export const ErrorMessage = () => (
   <div style={_style}>
     <FormGroup error>
-      <Label name="ipt" >Label</Label>
-      <Input 
-        id="ipt" 
-        name="ipt" 
-        type="text" 
-        value="m@m">
-
-      </Input>
+      <Label name="ipt">Label</Label>
+      <Input id="ipt" name="ipt" type="text" value="m@m" />
       <small>Please, verify</small>
     </FormGroup>
   </div>
@@ -73,14 +61,8 @@ export const ErrorMessage = () => (
 export const Success = () => (
   <div style={_style}>
     <FormGroup success>
-      <Label name="ipt" >Label</Label>
-      <Input
-        id="ipt"
-        name="ipt"
-        type="text"
-        value="m@m.com">
-
-      </Input>
+      <Label name="ipt">Label</Label>
+      <Input id="ipt" name="ipt" type="text" value="m@m.com" />
     </FormGroup>
   </div>
 );

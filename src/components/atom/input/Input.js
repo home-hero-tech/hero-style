@@ -1,7 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
-import css from './Input.module.scss';
 import PropTypes from 'prop-types';
+import css from './Input.module.scss';
 
 const Input = ({ id, name, type, placeholder, value, onChange, disabled }) => {
   const isCheckOrRadio = type === 'checkbox' || type === 'radio';
@@ -13,16 +13,18 @@ const Input = ({ id, name, type, placeholder, value, onChange, disabled }) => {
     [css[`c-input__${type}--disabled`]]: disabled && isCheckOrRadio
   });
 
-  return <input
-    className={classes}
-    id={id}
-    name={name}
-    type={type}
-    placeholder={placeholder}
-    value={value}
-    onChange={onChange}
-    disabled={disabled}
-  />
+  return (
+    <input
+      className={classes}
+      id={id}
+      name={name}
+      type={type}
+      placeholder={placeholder}
+      value={value}
+      onChange={onChange}
+      disabled={disabled}
+    />
+  );
 };
 
 Input.propTypes = {

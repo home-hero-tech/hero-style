@@ -7,7 +7,7 @@ const options = [
   { value: 'chocolate', label: 'Chocolate' },
   { value: 'strawberry', label: 'Strawberry' },
   { value: 'vanilla', label: 'Vanilla' },
-  { value: 'Coconut', label: 'Coconut' },
+  { value: 'Coconut', label: 'Coconut' }
 ];
 
 const placeholder = 'Selecione...';
@@ -16,7 +16,11 @@ const noOptionsMessage = () => 'Nenhuma opção';
 describe('Select', () => {
   it('should match with the snapshot', () => {
     const wrapper = shallow(
-      <Select options={options} placeholder={placeholder} noOptionsMessage={noOptionsMessage}></Select>
+      <Select
+        options={options}
+        placeholder={placeholder}
+        noOptionsMessage={noOptionsMessage}
+      />
     );
     expect(toJson(wrapper)).toMatchSnapshot();
   });

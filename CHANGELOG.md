@@ -94,4 +94,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [1.0.16] - 2020-03-08
 ### Added
+- Pagination component.
+- Datepicker component.
+
+### Changed
+- FormGroup is only a wrapper passing children like props.
+- Fix eslint for Pagination and DatePicker.
+
+## [1.0.17] - 2020-03-08
+### Added
 - Heading component.
+- Lint for several components.
+
+### Changed
+- Moved Pagination, and select to atom's folder.
+
+### Removed
+- WrapperDatePicker component.
+- Several useless code.

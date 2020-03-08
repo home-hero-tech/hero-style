@@ -1,14 +1,10 @@
-import React, { useState } from 'react';
-import DatePickerWrapper from "../../wrappers/DatePickerWrapper";
+import React from 'react';
 
-import "react-datepicker/dist/react-datepicker.css";
+import DatePicker from '../../components/atom/datepicker/DatePicker';
 
 export default {
   title: 'DatePicker',
-  component: DatePickerWrapper
+  component: DatePicker
 };
 
-
-export const Default = () => (
-  <DatePickerWrapper/>
-);
+export const Default = () => <DatePicker />;
