@@ -1,18 +1,29 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import classNames from 'classnames';
 import css from './Input.module.scss';
+import PropTypes from 'prop-types';
 
-const Input = ({ id, name, type, placeholder, value, onChange }) => (
-  <input
-    className={css['c-input']}
+const Input = ({ id, name, type, placeholder, value, onChange, disabled }) => {
+  const isCheckOrRadio = type === 'checkbox' || type === 'radio';
+
+  const classes = classNames({
+    [css['c-input']]: true,
+    [css['c-input--disabled']]: disabled,
+    [css[`c-input__${type}`]]: isCheckOrRadio,
+    [css[`c-input__${type}--disabled`]]: disabled && isCheckOrRadio
+  });
+
+  return <input
+    className={classes}
     id={id}
     name={name}
     type={type}
     placeholder={placeholder}
     value={value}
     onChange={onChange}
+    disabled={disabled}
   />
-);
+};
 
 Input.propTypes = {
   id: PropTypes.string,
@@ -20,15 +31,18 @@ Input.propTypes = {
   onChange: PropTypes.func,
   placeholder: PropTypes.string,
   type: PropTypes.string,
-  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
+  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  disabled: PropTypes.bool
 };
+
 Input.defaultProps = {
   id: null,
   name: null,
   onChange: f => f,
   placeholder: null,
   type: 'text',
-  value: null
+  value: null,
+  disabled: null
 };
 
 export default Input;

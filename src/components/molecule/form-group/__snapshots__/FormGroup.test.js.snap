@@ -3,38 +3,11 @@
 exports[`FormGroup should match with the snapshot 1`] = `
 <div
   className="c-form-group"
->
-  <Label
-    name="ipt"
-  >
-    Text
-  </Label>
-  <Input
-    id="ipt"
-    name="ipt"
-    placeholder="placeholder text"
-    type="text"
-  />
-</div>
+/>
 `;
 
 exports[`FormGroup should match with the snapshot with Message 1`] = `
 <div
   className="c-form-group"
->
-  <Label
-    name="ipt"
-  >
-    Text
-  </Label>
-  <Input
-    id="ipt"
-    name="ipt"
-    placeholder="placeholder text"
-    type="text"
-  />
-  <small>
-    Default message
-  </small>
-</div>
+/>
 `;

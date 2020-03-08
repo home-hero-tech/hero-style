@@ -9,6 +9,11 @@
   justify-content: flex-end;
   flex-direction: column;
 
+  input {
+    margin: $space-xxs 0;
+    padding-right: 46px;
+  }
+
   &--error {
     label, small {
       color: $color-danger;
@@ -22,12 +27,16 @@
     &:after {
       content: '\f057';
       color: $color-danger;
-      font-size: $space-xs;
+      font-size: $font-size-md;
       position: absolute;
       font-family: 'Font Awesome 5 Pro';
       font-weight: 900;
-      top: $space-lg;
-      right: $space-xs;
+      top: $space-md;
+      right: 1px;
+      background-color: white;
+      padding: $space-xs $space-sm;
+      border-top-right-radius: $default-radius;
+      border-bottom-right-radius: $default-radius;
     }
   }
 
@@ -44,11 +53,15 @@
     &:after {
       content: '\f00c';
       color: $color-success;
-      font-size: $space-xs;
+      font-size: $font-size-md;
       position: absolute;
       font-family: 'Font Awesome 5 Pro';
-      top: $space-lg;
-      right: $space-xs;
+      top: $space-md;
+      right: 1px;
+      background-color: white;
+      padding: $space-xs $space-sm;
+      border-top-right-radius: $default-radius;
+      border-bottom-right-radius: $default-radius;
     }
   }
 

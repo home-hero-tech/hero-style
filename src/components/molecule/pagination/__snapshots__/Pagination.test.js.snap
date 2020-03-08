@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pagination should match with the snapshot 1`] = `
+<div
+  className="c-pagination"
+>
+  <Pagination
+    activePage={1}
+    firstPageText="«"
+    getPageUrl={[Function]}
+    hideFirstLastPages={false}
+    innerClass="pagination"
+    itemClass="page"
+    itemsCountPerPage={20}
+    lastPageText="»"
+    nextPageText="⟩"
+    onChange={[Function]}
+    pageRangeDisplayed={5}
+    prevPageText="⟨"
+    totalItemsCount={450}
+  />
+</div>
+`;

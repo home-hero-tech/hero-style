@@ -2,13 +2,111 @@
 
 .c-input {
   width: 100%;
-  height: $space-lg;
-  border: 1px solid $color-brand-gray-200;
-  padding: $space-xxs;
-  border-radius: 6px;
+  height: $space-xlg;
+  border: 1px solid $color-brand-gray-100;
+  padding: $space-sm;
+  border-radius: $default-radius;
   box-shadow: $color-box-shadow;
+
+  &--disabled {
+    background-color: $color-brand-gray-100;
+  }
 
   &:focus {
     border: 1px solid CurrentColor;
+  }
+
+  &__checkbox {
+    width: $space-md;
+    height: $space-md;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border-radius: $space-xxs;
+    border: 1px solid $color-brand-primary-300;
+    padding: 0;
+
+    &:focus {
+      border: 1px solid $color-brand-primary-300;
+    }
+
+    &:checked {
+      &:after {
+        width: $space-md;
+        height: $space-md;
+        border-radius: $space-xxs;
+        content: '\f00c';
+        position: absolute;
+        background-color: $color-brand-primary-300;
+        color: $color-structural-white;
+        font-family: 'Font Awesome 5 Pro';
+        top: 3px;
+        left: 4px;
+        padding: 5px 6px;
+      }
+    }
+
+    &--disabled {
+      border: 1px solid $color-brand-gray-100;
+
+      &:checked {
+        &:after {
+          background-color: $color-brand-gray-100;
+          color: $color-brand-gray-300;
+        }
+      }
+    }
+  }
+
+  &__radio {
+    width: $space-md;
+    height: $space-md;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border-radius: $space-lg;
+    border: 1px solid $color-brand-primary-300;
+    padding: 0;
+
+    &:focus {
+      border: 1px solid $color-brand-primary-300;
+    }
+
+    &:checked {
+      &:before {
+        content: '';
+        position: absolute;
+        width: $space-md;
+        height: $space-md;
+        border: 1px solid $color-brand-primary-300;
+        border-radius: 100%;
+        background: $color-structural-white;
+        left: 4px;
+        top: 3px;
+      }
+      &:after {
+        content: '';
+        width: 18px;
+        height: 18px;
+        background-color: $color-brand-primary-300;
+        position: absolute;
+        top: 6px;
+        left: 7px;
+        border-radius: 100%;
+        transition: all 0.2s ease;
+      }
+    }
+
+    &--disabled {
+      border: 1px solid $color-brand-gray-200;
+      background-color: $color-brand-gray-100;
+      &:checked {
+        &:before {
+          border: 1px solid $color-brand-gray-300;
+          background-color: $color-brand-gray-100;
+        }
+        &:after {
+          background-color: $color-brand-gray-300;
+        }
+      }
+    }
   }
 }

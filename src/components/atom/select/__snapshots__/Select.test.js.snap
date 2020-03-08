@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Select should match with the snapshot 1`] = `
+<StateManager
+  className="c-select"
+  defaultInputValue=""
+  defaultMenuIsOpen={false}
+  defaultValue={null}
+  noOptionsMessage={[Function]}
+  options={
+    Array [
+      Object {
+        "label": "Chocolate",
+        "value": "chocolate",
+      },
+      Object {
+        "label": "Strawberry",
+        "value": "strawberry",
+      },
+      Object {
+        "label": "Vanilla",
+        "value": "vanilla",
+      },
+      Object {
+        "label": "Coconut",
+        "value": "Coconut",
+      },
+    ]
+  }
+  placeholder="Selecione..."
+/>
+`;

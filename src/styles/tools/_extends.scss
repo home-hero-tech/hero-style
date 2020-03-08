@@ -1,17 +1,21 @@
 @import "../settings/settings";
 
-%paragraph, %medium, %small {
+%large, %paragraph, %medium, %small {
   font-family: $font-family;
 }
 
-%paragraph {
+%large {
   font-size: $font-size-lg
 }
 
-%medium {
-  font-size: $font-size-md;
+%paragraph {
+  font-size: $font-size-md
 }
 
 %small {
   font-size: $font-size-sm;
+}
+
+%extra-small {
+  font-size: $font-size-xs;
 }
