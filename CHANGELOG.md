@@ -91,3 +91,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.0.15] - 2020-03-05
 ### Changed
 - FormGroup passing props for children.
+
+## [1.0.16] - 2020-03-08
+### Added
+- Heading component.
