@@ -1,3 +1,6 @@
+import * as reactDom from 'react-dom';
+import * as react from 'react';
+
 import babel from 'rollup-plugin-babel';
 import commonjs from 'rollup-plugin-commonjs';
 import postcss from 'rollup-plugin-postcss';
@@ -26,6 +29,7 @@ export default [
       }
     ],
     plugins: [
+      external(),
       babel({
         exclude: 'node_modules/**'
       }),
@@ -35,14 +39,18 @@ export default [
           safe: true
         }
       }),
-      external(),
       resolve(),
-      commonjs(),
+      commonjs({
+        namedExports: {
+          react: Object.keys(react),
+          'react-dom': Object.keys(reactDom)
+        }
+      }),
       terser(),
       copy(
         [
           { files: 'src/styles/**/*.*', dest: 'dist/styles' },
-          { files: 'src/assets/**/*.*', dest: 'dist/assets' },
+          { files: 'src/assets/**/*.*', dest: 'dist/assets' }
         ],
         {
           verbose: true
