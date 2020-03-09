@@ -125,3 +125,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 - Default Button colors.
+
+## [1.0.20] - 2020-03-09
+### Added
+- Publishing List and ListItem components.
