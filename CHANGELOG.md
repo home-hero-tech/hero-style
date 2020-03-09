@@ -112,3 +112,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Removed
 - WrapperDatePicker component.
 - Several useless code.
+
+## [1.0.18] - 2020-03-09
+### Removed
+- Useless component.
+
+## [1.0.19] - 2020-03-09
+### Added
+- Large border-radius variable.
+- List component.
+- ListItem component.
+
+### Changed
+- Default Button colors.
