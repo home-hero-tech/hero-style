@@ -149,3 +149,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 - Updated snapshots from some components.
+
+## [1.0.24] - 2020-03-10
+### Added
+- primary props for CardItem.
