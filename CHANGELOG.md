@@ -130,7 +130,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Publishing List and ListItem components.
 
-## [1.0.21] - 2020-03-09
+## [1.0.21] - 2020-03-10
 ### Added
 - Card component.
 - CardItem component.
@@ -138,3 +138,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Removed
 - ListItem component style, it was moved to CardItem.
+
+## [1.0.22] - 2020-03-10
+### Added
+- Added [Media Query](https://github.com/sass-mq) tool helper.
