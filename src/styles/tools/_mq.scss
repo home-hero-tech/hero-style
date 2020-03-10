@@ -1,0 +1,112 @@
+@charset "UTF-8"; // Fixes an issue where Ruby locale is not set properly
+// See https://github.com/sass-mq/sass-mq/pull/10
+
+/// Base font size on the `<body>` element
+/// @type Number (unit)
+$mq-base-font-size: 16px !default;
+
+/// @link https://github.com/sass-mq/sass-mq#responsive-mode-off Disabled responsive mode documentation
+$mq-responsive: true !default;
+
+/// @link https://github.com/sass-mq/sass-mq#seeing-the-currently-active-breakpoint Full documentation and examples
+$mq-breakpoints: (
+  mobile: 320px,
+  tablet: 740px,
+  desktop: 980px,
+  wide: 1300px
+) !default;
+
+// @link https://github.com/sass-mq/sass-mq#adding-custom-breakpoints Full documentation and examples
+$mq-static-breakpoint: desktop !default;
+$mq-media-type: all !default;
+
+@function mq-px2em($px, $base-font-size: $mq-base-font-size) {
+  @if unitless($px) {
+    @warn "Assuming #{$px} to be in pixels, attempting to convert it into pixels.";
+    @return mq-px2em($px * 1px, $base-font-size);
+  } @else if unit($px) == em {
+    @return $px;
+  }
+  @return ($px / $base-font-size) * 1em;
+}
+
+@function mq-get-breakpoint-width($name, $breakpoints: $mq-breakpoints) {
+  @if map-has-key($breakpoints, $name) {
+    @return map-get($breakpoints, $name);
+  } @else {
+    @warn "Breakpoint #{$name} wasn't found in $breakpoints.";
+  }
+}
+
+@mixin mq(
+  $from: false,
+  $until: false,
+  $and: false,
+  $media-type: $mq-media-type,
+  $breakpoints: $mq-breakpoints,
+  $responsive: $mq-responsive,
+  $static-breakpoint: $mq-static-breakpoint
+) {
+  $min-width: 0;
+  $max-width: 0;
+  $media-query: '';
+
+  // From: this breakpoint (inclusive)
+  @if $from {
+    @if type-of($from) == number {
+      $min-width: mq-px2em($from);
+    } @else {
+      $min-width: mq-px2em(mq-get-breakpoint-width($from, $breakpoints));
+    }
+  }
+
+  // Until: that breakpoint (exclusive)
+  @if $until {
+    @if type-of($until) == number {
+      $max-width: mq-px2em($until);
+    } @else {
+      $max-width: mq-px2em(mq-get-breakpoint-width($until, $breakpoints)) - .01em;
+    }
+  }
+
+  // Responsive support is disabled, rasterize the output outside @media blocks
+  // The browser will rely on the cascade itself.
+  @if $responsive == false {
+    $static-breakpoint-width: mq-get-breakpoint-width($static-breakpoint, $breakpoints);
+    $target-width: mq-px2em($static-breakpoint-width);
+
+    // Output only rules that start at or span our target width
+    @if (
+      $and == false
+            and $min-width <= $target-width
+            and (
+                $until == false or $max-width >= $target-width
+            )
+    ) {
+      @content;
+    }
+  }
+
+    // Responsive support is enabled, output rules inside @media queries
+  @else {
+    @if $min-width != 0 {
+      $media-query: '#{$media-query} and (min-width: #{$min-width})';
+    }
+    @if $max-width != 0 {
+      $media-query: '#{$media-query} and (max-width: #{$max-width})';
+    }
+    @if $and {
+      $media-query: '#{$media-query} and #{$and}';
+    }
+
+    // Remove unnecessary media query prefix 'all and '
+    @if ($media-type == 'all' and $media-query != '') {
+      $media-type: '';
+      $media-query: str-slice(unquote($media-query), 6);
+    }
+
+    @media #{$media-type + $media-query} {
+      @content;
+    }
+  }
+}

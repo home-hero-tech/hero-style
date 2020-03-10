@@ -1,12 +1,12 @@
-@import "../settings/settings";
+@import "../../styles/settings/settings";
 
-.c-list-item {
+.c-card {
+  list-style: none;
   padding: $space-md $space-xlg;
   background-color: $color-white;
   border-radius: $radius-lg;
   box-shadow: $color-box-shadow-2;
 
-  & + .c-list-item {
-    margin-top: $space-sm;
-  }
+  display: flex;
+  flex-wrap: wrap;
 }
