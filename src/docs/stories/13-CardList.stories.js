@@ -26,7 +26,7 @@ export const CardList = () => (
 
 export const mLg = () => (
   <Wrapper>
-    <List mLg>
+    <List level={4}>
       <ListItem>
         <Card>
           <CardItem value="some value" label="label" />
@@ -43,7 +43,7 @@ export const mLg = () => (
 
 export const mSm = () => (
   <Wrapper>
-    <List mSm>
+    <List level={1}>
       <ListItem>
         <Card>
           <CardItem value="some value" label="label" />

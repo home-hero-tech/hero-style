@@ -26,9 +26,9 @@ export const DefaultList = () => (
   </Wrapper>
 );
 
-export const mXxs = () => (
+export const Level_0 = () => (
   <Wrapper>
-    <List mXxs>
+    <List level={0}>
       <ListItem>
         <Content>Content</Content>
       </ListItem>
@@ -42,9 +42,9 @@ export const mXxs = () => (
   </Wrapper>
 );
 
-export const mXs = () => (
+export const Level_1 = () => (
   <Wrapper>
-    <List mXs>
+    <List level={1}>
       <ListItem>
         <Content>Content</Content>
       </ListItem>
@@ -58,9 +58,9 @@ export const mXs = () => (
   </Wrapper>
 );
 
-export const mSm = () => (
+export const Level_2 = () => (
   <Wrapper>
-    <List mSm>
+    <List level={2}>
       <ListItem>
         <Content>Content</Content>
       </ListItem>
@@ -74,9 +74,9 @@ export const mSm = () => (
   </Wrapper>
 );
 
-export const mMd = () => (
+export const Level_3 = () => (
   <Wrapper>
-    <List mMd>
+    <List level={3}>
       <ListItem>
         <Content>Content</Content>
       </ListItem>
@@ -90,9 +90,9 @@ export const mMd = () => (
   </Wrapper>
 );
 
-export const mLg = () => (
+export const Level_4 = () => (
   <Wrapper>
-    <List mLg>
+    <List level={4}>
       <ListItem>
         <Content>Content</Content>
       </ListItem>
@@ -106,9 +106,9 @@ export const mLg = () => (
   </Wrapper>
 );
 
-export const mXlg = () => (
+export const Level_5 = () => (
   <Wrapper>
-    <List mXlg>
+    <List level={5}>
       <ListItem>
         <Content>Content</Content>
       </ListItem>

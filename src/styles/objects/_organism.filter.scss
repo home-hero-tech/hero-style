@@ -3,18 +3,45 @@
 
 .c-filter {
   background-color: $color-brand-gray-600;
-
-  .container {
-    width: 100%;
-  }
+  border-radius: $radius-2;
+  overflow: hidden;
 
   .header {
-    background-color: $color-brand-gray-400;
-    height: 20px;
+    background: linear-gradient(-116.56505117707799deg, rgb(108, 119, 150) 0%, rgb(75, 84, 110) 100%);
     width: 100%;
+    padding: 12px 24px;
+    color: $color-structural-white;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: $radius-2;
+    box-shadow: 0px 8px 24px 0px rgba(0, 0, 0, 0.2);
+
+    span {
+      margin-left: $space-1;
+    }
   }
 
   label {
     color: $color-brand-gray-300;
+  }
+
+  &__content {
+    max-height: 0;
+    transition: all 0.3s ease;
+
+    &--open {
+      max-height: 1000px;
+      transition: all 0.3s ease;
+    }
+  }
+
+  :global {
+    .container-fluid {
+      padding: $space-4 $space-3 $space-3 $space-3;
+    }
+
+    .FormActions_c-form-actions__3rqgb {
+      margin-top: $space-3;
+    }
   }
 }

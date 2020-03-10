@@ -1,2 +1,7 @@
-$default-radius: 4px;
-$radius-lg: 12px;
+$radius: 4px;
+
+$radius-1: $radius;
+$radius-2: $radius * 2;
+$radius-3: $radius * 3;
+$radius-4: $radius * 4;
+$radius-5: $radius * 5;

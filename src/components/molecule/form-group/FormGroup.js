@@ -1,7 +1,6 @@
 import React from 'react';
 import classNames from 'classnames';
-import PropTypes from 'prop-types';
-import { Col, getRowProps, getColumnProps } from 'react-flexbox-grid';
+import { Col } from 'react-flexbox-grid';
 
 import css from './FormGroup.module.scss';
 

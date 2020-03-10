@@ -3,39 +3,39 @@
 .c-list {
   list-style: none;
 
-  &--mXlg {
+  &--0 {
     > li + li {
-      margin-top: $space-xlg;
+      margin-top: $space-0;
     }
   }
 
-  &--mLg {
+  &--1 {
     > li + li {
-      margin-top: $space-lg;
+      margin-top: $space-1;
     }
   }
 
-  &--mMd {
+  &--2 {
     > li + li {
-      margin-top: $space-md;
+      margin-top: $space-2;
     }
   }
 
-  &--mSm {
+  &--3 {
     > li + li {
-      margin-top: $space-sm;
+      margin-top: $space-3;
     }
   }
 
-  &--mXs {
+  &--4 {
     > li + li {
-      margin-top: $space-xs;
+      margin-top: $space-4;
     }
   }
 
-  &--mXxs {
+  &--5 {
     > li + li {
-      margin-top: $space-xxs;
+      margin-top: $space-5;
     }
   }
 }

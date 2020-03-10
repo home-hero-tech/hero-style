@@ -9,10 +9,10 @@
       .page {
         color: $color-brand-primary-300;
         background: $color-structural-white;
-        border-radius: $default-radius;
+        border-radius: $radius-2;
         box-shadow: $color-box-shadow;
-        height: $space-lg;
-        width: $space-lg;
+        height: $space-4;
+        width: $space-4;
         margin: auto 6px;
         display: table;
         text-align: center;
