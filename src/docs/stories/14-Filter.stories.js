@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { action } from '@storybook/addon-actions';
 
 import Filter from '../../components/organism/filter/Filter';
@@ -16,123 +16,72 @@ export default {
   component: Filter
 };
 
-// export const ClosedFilter = () => (
-//   <Filter>
-//     <Form>
-//       <Grid fluid>
-//         <FormRow>
-//           <FormGroup md={4}>
-//             <Label name="ipt">Label</Label>
-//             <Input
-//               id="ipt"
-//               name="ipt"
-//               type="text"
-//               placeholder="Placeholder text"
-//               value=""
-//             />
-//           </FormGroup>
-//           <FormGroup md={4}>
-//             <Label name="ipt">Label</Label>
-//             <Input
-//               id="ipt"
-//               name="ipt"
-//               type="text"
-//               placeholder="Placeholder text"
-//               value=""
-//             />
-//           </FormGroup>
-//         </FormRow>
-//         <FormActions alignEnd>
-//           <Button onClick={action('Clean')}>Limpar filtros</Button>
-//           <Button success onClick={action('Filter')} type="submit">Filtrar</Button>
-//         </FormActions>
-//       </Grid>
-//     </Form>
-//   </Filter>
-// );
-//
-// export const OpenedFilter = () => (
-//   <Filter showFilters={true}>
-//     <Form>
-//       <Grid fluid>
-//         <FormRow>
-//           <FormGroup md={4}>
-//             <Label name="ipt">Label</Label>
-//             <Input
-//               id="ipt"
-//               name="ipt"
-//               type="text"
-//               placeholder="Placeholder text"
-//               value=""
-//             />
-//           </FormGroup>
-//           <FormGroup md={4}>
-//             <Label name="ipt">Label</Label>
-//             <Input
-//               id="ipt"
-//               name="ipt"
-//               type="text"
-//               placeholder="Placeholder text"
-//               value=""
-//             />
-//           </FormGroup>
-//         </FormRow>
-//         <FormActions alignEnd>
-//           <Button onClick={action('Clean')}>Limpar filtros</Button>
-//           <Button success onClick={action('Filter')} type="submit">Filtrar</Button>
-//         </FormActions>
-//       </Grid>
-//     </Form>
-//   </Filter>
-// );
+export const ClosedFilter = () => (
+  <Filter onClick={action('clicked')}>
+    <Form>
+      <Grid fluid>
+        <FormRow>
+          <FormGroup md={4}>
+            <Label name="ipt">Label</Label>
+            <Input
+              id="ipt"
+              name="ipt"
+              type="text"
+              placeholder="Placeholder text"
+              value=""
+            />
+          </FormGroup>
+          <FormGroup md={4}>
+            <Label name="ipt">Label</Label>
+            <Input
+              id="ipt"
+              name="ipt"
+              type="text"
+              placeholder="Placeholder text"
+              value=""
+            />
+          </FormGroup>
+        </FormRow>
+        <FormActions alignEnd>
+          <Button onClick={action('Clean')}>Limpar filtros</Button>
+          <Button success onClick={action('Filter')} type="submit">Filtrar</Button>
+        </FormActions>
+      </Grid>
+    </Form>
+  </Filter>
+);
 
-
-export const Default = () => {
-  function Parent({ children, ...props }) {
-    const [state, setState] = useState();
-    return <div>{children(state, setState)}</div>;
-  }
-
-
-  return (
-    <Parent>
-      {(state, setState) => {
-        state = state || {showFilters: false};
-        return (
-          <Filter showFilters={state.showFilters} onClick={(showFilters) => setState({ showFilters })}>
-           <Form>
-             <Grid fluid>
-               <FormRow>
-                 <FormGroup md={4}>
-                   <Label name="ipt">Label</Label>
-                   <Input
-                     id="ipt"
-                     name="ipt"
-                     type="text"
-                     placeholder="Placeholder text"
-                     value=""
-                   />
-                 </FormGroup>
-                 <FormGroup md={4}>
-                   <Label name="ipt">Label</Label>
-                   <Input
-                     id="ipt"
-                     name="ipt"
-                     type="text"
-                     placeholder="Placeholder text"
-                     value=""
-                   />
-                 </FormGroup>
-               </FormRow>
-               <FormActions alignEnd>
-                 <Button onClick={action('Clean')}>Limpar filtros</Button>
-                 <Button success onClick={action('Filter')} type="submit">Filtrar</Button>
-               </FormActions>
-             </Grid>
-           </Form>
-         </Filter>
-        )
-      }}
-    </Parent>
-  )
-};
+export const OpenedFilter = () => (
+  <Filter showFilters={true} onClick={action('clicked')} totalItems={3}>
+    <Form>
+      <Grid fluid>
+        <FormRow>
+          <FormGroup md={4}>
+            <Label name="ipt">Label</Label>
+            <Input
+              id="ipt"
+              name="ipt"
+              type="text"
+              placeholder="Placeholder text"
+              value=""
+            />
+          </FormGroup>
+          <FormGroup md={4}>
+            <Label name="ipt">Label</Label>
+            <Input
+              id="ipt"
+              name="ipt"
+              type="text"
+              placeholder="Placeholder text"
+              value=""
+            />
+          </FormGroup>
+        </FormRow>
+        <FormActions alignEnd>
+          <Button onClick={action('Clean')}>Limpar filtros</Button>
+          <Button success onClick={action('Filter')} type="submit">Filtrar</Button>
+        </FormActions>
+      </Grid>
+    </Form>
+  </Filter>
+);

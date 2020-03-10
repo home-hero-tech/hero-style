@@ -26,7 +26,7 @@ export const DefaultList = () => (
   </Wrapper>
 );
 
-export const Level_0 = () => (
+export const Level0 = () => (
   <Wrapper>
     <List level={0}>
       <ListItem>
@@ -42,7 +42,7 @@ export const Level_0 = () => (
   </Wrapper>
 );
 
-export const Level_1 = () => (
+export const Level1 = () => (
   <Wrapper>
     <List level={1}>
       <ListItem>
@@ -58,7 +58,7 @@ export const Level_1 = () => (
   </Wrapper>
 );
 
-export const Level_2 = () => (
+export const Level2 = () => (
   <Wrapper>
     <List level={2}>
       <ListItem>
@@ -74,7 +74,7 @@ export const Level_2 = () => (
   </Wrapper>
 );
 
-export const Level_3 = () => (
+export const Level3 = () => (
   <Wrapper>
     <List level={3}>
       <ListItem>
@@ -90,7 +90,7 @@ export const Level_3 = () => (
   </Wrapper>
 );
 
-export const Level_4 = () => (
+export const Level4 = () => (
   <Wrapper>
     <List level={4}>
       <ListItem>
@@ -106,7 +106,7 @@ export const Level_4 = () => (
   </Wrapper>
 );
 
-export const Level_5 = () => (
+export const Level5 = () => (
   <Wrapper>
     <List level={5}>
       <ListItem>

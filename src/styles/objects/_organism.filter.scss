@@ -15,6 +15,7 @@
     font-weight: bold;
     border-radius: $radius-2;
     box-shadow: 0px 8px 24px 0px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
 
     span {
       margin-left: $space-1;
@@ -42,6 +43,19 @@
 
     .FormActions_c-form-actions__3rqgb {
       margin-top: $space-3;
+    }
+
+    .Filter_header__tmFgA {
+      .row {
+        div {
+          &:nth-child(2) {
+            text-align: center;
+          }
+          &:last-child {
+            text-align: right;
+          }
+        }
+      }
     }
   }
 }

@@ -4,8 +4,10 @@ import { Row } from 'react-flexbox-grid';
 
 import css from './FormRow.module.scss';
 
-const FormRow = (props) => {
-  return <Row {...props} className={css['c-form-row']}>{props.children}</Row>;
+const FormRow = props => {
+  return <Row {...props} className={css['c-form-row']}>
+    {props.children}
+  </Row>;
 };
 
 FormRow.propTypes = {

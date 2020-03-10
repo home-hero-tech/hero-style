@@ -7,14 +7,14 @@ import css from './List.module.scss';
 
 const List = ({ level, children }) => {
 
-  console.log(css)
-
   const classes = classNames({
     [css['c-list']]: true,
     [css[`c-list--${level}`]]: true
   });
 
-  return <ul className={classes}>{children}</ul>;
+  return <ul className={classes}>
+    {children}
+  </ul>;
 };
 
 List.propTypes = {
