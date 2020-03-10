@@ -46,13 +46,13 @@ export const mSm = () => (
     <List level={1}>
       <ListItem>
         <Card>
-          <CardItem value="some value" label="label" />
+          <CardItem value="Some value" label="Label" primary />
         </Card>
       </ListItem>
       <ListItem>
         <Card>
-          <CardItem value="value" label="label" />
-          <CardItem value="value2" label="label" />
+          <CardItem value="Value" label="Label" />
+          <CardItem value="Value2" label="Label" />
         </Card>
       </ListItem>
     </List>

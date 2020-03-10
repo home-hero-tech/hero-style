@@ -2,11 +2,19 @@
 
 exports[`Select should match with the snapshot 1`] = `
 <StateManager
+  autoFocus={false}
   className="c-select"
+  classNamePrefix={null}
   defaultInputValue=""
   defaultMenuIsOpen={false}
   defaultValue={null}
+  isClearable={false}
+  isDisabled={false}
+  isMulti={false}
+  isSearchable={false}
+  name={null}
   noOptionsMessage={[Function]}
+  onChange={[Function]}
   options={
     Array [
       Object {
@@ -28,5 +36,6 @@ exports[`Select should match with the snapshot 1`] = `
     ]
   }
   placeholder="Selecione..."
+  value={null}
 />
 `;
