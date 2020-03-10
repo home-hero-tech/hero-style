@@ -142,3 +142,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.0.22] - 2020-03-10
 ### Added
 - Added [Media Query](https://github.com/sass-mq) tool helper.
+
+## [1.0.23] - 2020-03-10
+### Added
+- Publishing Card/CardItem components and added tests for them.
+
+### Changed
+- Updated snapshots from some components.
