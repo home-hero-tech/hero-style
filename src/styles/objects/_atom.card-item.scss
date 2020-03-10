@@ -1,0 +1,28 @@
+@import "../settings/settings";
+
+.c-card-item {
+  display: flex;
+  flex-direction: column;
+  margin-right: $space-sm;
+  line-height: 30px;
+
+  span {
+    &:nth-child(1) {
+      font-size: $font-size-sm;
+      color: $color-brand-gray-300;
+    }
+
+    &:nth-child(2) {
+      color: $color-brand-gray-500;
+      font-size: $font-size-md;
+    }
+  }
+
+  &--primary {
+    span {
+      &:nth-child(1) {
+        color: $color-primary;
+      }
+    }
+  }
+}
