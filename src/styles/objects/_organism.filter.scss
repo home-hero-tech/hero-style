@@ -1,0 +1,20 @@
+@import '../settings/settings';
+@import "../tools/tools";
+
+.c-filter {
+  background-color: $color-brand-gray-600;
+
+  .container {
+    width: 100%;
+  }
+
+  .header {
+    background-color: $color-brand-gray-400;
+    height: 20px;
+    width: 100%;
+  }
+
+  label {
+    color: $color-brand-gray-300;
+  }
+}

@@ -2,12 +2,10 @@
 @import "../tools/tools";
 
 .c-form-group {
-  position: relative;
-  width: 100%;
-
   display: flex;
   justify-content: flex-end;
   flex-direction: column;
+  position: relative;
 
   input {
     margin: $space-xxs 0;
@@ -63,9 +61,5 @@
       border-top-right-radius: $default-radius;
       border-bottom-right-radius: $default-radius;
     }
-  }
-
-  & + .c-form-group {
-    margin-left: $space-xs;
   }
 }

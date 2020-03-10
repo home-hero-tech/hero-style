@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Row } from 'react-flexbox-grid';
 
 import css from './FormRow.module.scss';
 
-const FormRow = ({ children }) => {
-  return <div className={css['c-form-row']}>{children}</div>;
+const FormRow = (props) => {
+  return <Row {...props} className={css['c-form-row']}>{props.children}</Row>;
 };
 
 FormRow.propTypes = {

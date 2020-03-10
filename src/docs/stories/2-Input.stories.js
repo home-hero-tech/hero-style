@@ -23,6 +23,12 @@ export const DefaultDisabled = () => (
   </div>
 );
 
+export const Dark = () => (
+  <div style={_style}>
+    <Input placeholder="placeholder text" id="ipt" name="ipt" dark />
+  </div>
+);
+
 export const Checkbox = () => (
   <Input
     id="ipt"
