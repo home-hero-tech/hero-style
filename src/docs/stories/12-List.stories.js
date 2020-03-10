@@ -1,40 +1,123 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import ListItem from '../../components/atom/list-item/ListItem';
 import List from '../../components/molecule/list/List';
+import Wrapper from '../../helpers/wrapper/Wrapper';
+import Content from '../../helpers/content/Content';
 
 export default {
   title: 'List',
   component: List
 };
 
-const _style = {
-  maxWidth: '500px',
-  margin: '20px'
-};
-
-const Wrapper = ({ children }) => <div style={_style}>{children}</div>;
-
 export const DefaultList = () => (
   <Wrapper>
     <List>
       <ListItem>
-        <div>Content</div>
+        <Content>Content</Content>
       </ListItem>
       <ListItem>
-        <div>Content</div>
+        <Content>Content</Content>
       </ListItem>
       <ListItem>
-        <div>Content</div>
+        <Content>Content</Content>
       </ListItem>
     </List>
   </Wrapper>
 );
 
-Wrapper.propTypes = {
-  children: PropTypes.oneOfType([PropTypes.array, PropTypes.object])
-};
-Wrapper.defaultProps = {
-  children: null
-};
+export const mXxs = () => (
+  <Wrapper>
+    <List mXxs>
+      <ListItem>
+        <Content>Content</Content>
+      </ListItem>
+      <ListItem>
+        <Content>Content</Content>
+      </ListItem>
+      <ListItem>
+        <Content>Content</Content>
+      </ListItem>
+    </List>
+  </Wrapper>
+);
+
+export const mXs = () => (
+  <Wrapper>
+    <List mXs>
+      <ListItem>
+        <Content>Content</Content>
+      </ListItem>
+      <ListItem>
+        <Content>Content</Content>
+      </ListItem>
+      <ListItem>
+        <Content>Content</Content>
+      </ListItem>
+    </List>
+  </Wrapper>
+);
+
+export const mSm = () => (
+  <Wrapper>
+    <List mSm>
+      <ListItem>
+        <Content>Content</Content>
+      </ListItem>
+      <ListItem>
+        <Content>Content</Content>
+      </ListItem>
+      <ListItem>
+        <Content>Content</Content>
+      </ListItem>
+    </List>
+  </Wrapper>
+);
+
+export const mMd = () => (
+  <Wrapper>
+    <List mMd>
+      <ListItem>
+        <Content>Content</Content>
+      </ListItem>
+      <ListItem>
+        <Content>Content</Content>
+      </ListItem>
+      <ListItem>
+        <Content>Content</Content>
+      </ListItem>
+    </List>
+  </Wrapper>
+);
+
+export const mLg = () => (
+  <Wrapper>
+    <List mLg>
+      <ListItem>
+        <Content>Content</Content>
+      </ListItem>
+      <ListItem>
+        <Content>Content</Content>
+      </ListItem>
+      <ListItem>
+        <Content>Content</Content>
+      </ListItem>
+    </List>
+  </Wrapper>
+);
+
+export const mXlg = () => (
+  <Wrapper>
+    <List mXlg>
+      <ListItem>
+        <Content>Content</Content>
+      </ListItem>
+      <ListItem>
+        <Content>Content</Content>
+      </ListItem>
+      <ListItem>
+        <Content>Content</Content>
+      </ListItem>
+    </List>
+  </Wrapper>
+);

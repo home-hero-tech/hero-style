@@ -1,3 +1,41 @@
+@import "../settings/spaces";
+
 .c-list {
   list-style: none;
+
+  &--mXlg {
+    > li + li {
+      margin-top: $space-xlg;
+    }
+  }
+
+  &--mLg {
+    > li + li {
+      margin-top: $space-lg;
+    }
+  }
+
+  &--mMd {
+    > li + li {
+      margin-top: $space-md;
+    }
+  }
+
+  &--mSm {
+    > li + li {
+      margin-top: $space-sm;
+    }
+  }
+
+  &--mXs {
+    > li + li {
+      margin-top: $space-xs;
+    }
+  }
+
+  &--mXxs {
+    > li + li {
+      margin-top: $space-xxs;
+    }
+  }
 }

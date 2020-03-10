@@ -129,3 +129,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.0.20] - 2020-03-09
 ### Added
 - Publishing List and ListItem components.
+
+## [1.0.21] - 2020-03-09
+### Added
+- Card component.
+- CardItem component.
+- List component has new props.
+
+### Removed
+- ListItem component style, it was moved to CardItem.
