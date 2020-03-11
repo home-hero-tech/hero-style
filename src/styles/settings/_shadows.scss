@@ -1,0 +1,9 @@
+@import './colors';
+
+$shadow: 8px;
+
+$elevation-0: 0 ($shadow/2) $shadow 0 rgba($color-black,0.08);
+$elevation-1: 0 $shadow ($shadow * 2) 0 rgba($color-black,0.08);
+$elevation-2: 0 ($shadow * 2) ($shadow * 3) 0 rgba($color-black,0.08);
+$elevation-3: 0 ($shadow * 3) ($shadow * 4) 0 rgba($color-black,0.08);
+$elevation-4: 0 ($shadow * 4) ($shadow * 5) 0 rgba($color-black,0.08);
