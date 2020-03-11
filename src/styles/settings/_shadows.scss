@@ -5,25 +5,3 @@ $elevation-8dp: 0 8px 16px 0 rgba($color-black,0.08);
 $elevation-16dp: 0 16px 24px 0 rgba($color-black,0.08);
 $elevation-24dp: 0 24px 32px 0 rgba($color-black,0.08);
 $elevation-32dp: 0 32px 40px 0 rgba($color-black,0.08);
-
-.elevation {
-  &--4dp {
-    box-shadow: $elevation-4dp;
-  }
-
-  &--8dp {
-    box-shadow: $elevation-8dp;
-  }
-
-  &--16dp {
-    box-shadow: $elevation-16dp;
-  }
-
-  &--24dp {
-    box-shadow: $elevation-24dp;
-  }
-
-  &--32dp {
-    box-shadow: $elevation-32dp;
-  }
-}
