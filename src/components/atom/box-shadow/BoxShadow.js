@@ -6,11 +6,11 @@ import css from './BoxShadow.module.scss';
 
 const BoxShadow = ({ level, children }) => {
   const classes = classNames({
-    [css[`elevation--1`]]: level === 1,
-    [css[`elevation--2`]]: level === 2,
-    [css[`elevation--3`]]: level === 3,
-    [css[`elevation--4`]]: level === 4,
-    [css[`elevation--5`]]: level === 5
+    [css['elevation--1']]: level === 1,
+    [css['elevation--2']]: level === 2,
+    [css['elevation--3']]: level === 3,
+    [css['elevation--4']]: level === 4,
+    [css['elevation--5']]: level === 5
   });
 
   return <div className={classes}>{children}</div>;
