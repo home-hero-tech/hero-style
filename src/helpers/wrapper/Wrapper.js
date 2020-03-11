@@ -5,7 +5,10 @@ const Wrapper = ({ style, children }) => <div style={style}>{children}</div>;
 
 Wrapper.propTypes = {
   children: PropTypes.oneOfType([PropTypes.array, PropTypes.object]),
-  style: PropTypes.objectOf(PropTypes.object)
+  style: PropTypes.shape({
+    maxWidth: PropTypes.string,
+    margin: PropTypes.string
+  })
 };
 
 Wrapper.defaultProps = {

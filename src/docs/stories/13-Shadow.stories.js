@@ -23,15 +23,15 @@ const Shadow = ({ level }) => (
   </Wrapper>
 );
 
-export const _4dp = () => <Shadow level={4} />;
+export const _1 = () => <Shadow level={1} />;
 
-export const _8dp = () => <Shadow level={8} />;
+export const _2 = () => <Shadow level={2} />;
 
-export const _16dp = () => <Shadow level={16} />;
+export const _3 = () => <Shadow level={3} />;
 
-export const _24dp = () => <Shadow level={24} />;
+export const _4 = () => <Shadow level={4} />;
 
-export const _32dp = () => <Shadow level={32} />;
+export const _5 = () => <Shadow level={5} />;
 
 export default {
   title: 'Shadow',

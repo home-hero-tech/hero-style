@@ -1,23 +1,23 @@
 @import "../settings/settings";
 
 .elevation {
-  &--4dp {
+  &--1 {
     box-shadow: $elevation-4dp;
   }
 
-  &--8dp {
+  &--2 {
     box-shadow: $elevation-8dp;
   }
 
-  &--16dp {
+  &--3 {
     box-shadow: $elevation-16dp;
   }
 
-  &--24dp {
+  &--4 {
     box-shadow: $elevation-24dp;
   }
 
-  &--32dp {
+  &--5 {
     box-shadow: $elevation-32dp;
   }
 }
