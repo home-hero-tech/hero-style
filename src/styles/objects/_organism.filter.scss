@@ -29,6 +29,7 @@
   &__content {
     max-height: 0;
     transition: all 0.3s ease;
+    padding: $space-4 $space-3 $space-3 $space-3;
 
     &--open {
       max-height: 1000px;
@@ -37,10 +38,6 @@
   }
 
   :global {
-    .container-fluid {
-      padding: $space-4 $space-3 $space-3 $space-3;
-    }
-
     .FormActions_c-form-actions__3rqgb {
       margin-top: $space-3;
     }
@@ -51,6 +48,7 @@
           &:nth-child(2) {
             text-align: center;
           }
+
           &:last-child {
             text-align: right;
           }
