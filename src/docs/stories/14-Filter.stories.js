@@ -16,76 +16,83 @@ export default {
   component: Filter
 };
 
-export const ClosedFilter = () => (
-  <Filter showFilters={false} onClick={action('clicked')}>
-    <Form onSubmit={() => {}}>
-      <Grid fluid>
-        <FormRow>
-          <FormGroup md={4}>
-            <Label name="ipt">Label</Label>
-            <Input
-              id="ipt"
-              name="ipt"
-              type="text"
-              placeholder="Placeholder text"
-              value=""
-            />
-          </FormGroup>
-          <FormGroup md={4}>
-            <Label name="ipt">Label</Label>
-            <Input
-              id="ipt"
-              name="ipt"
-              type="text"
-              placeholder="Placeholder text"
-              value=""
-            />
-          </FormGroup>
-        </FormRow>
-        <FormActions alignEnd>
-          <Button onClick={action('Clean')}>Limpar filtros</Button>
-          <Button success onClick={action('Filter')} type="submit">
-            Filtrar
-          </Button>
-        </FormActions>
-      </Grid>
-    </Form>
-  </Filter>
-);
+export const ClosedFilter = () => {
+  const toggle = false;
+  return (
+    <Filter showFilters={toggle} onClick={action('clicked')}>
+      <Form onSubmit={() => {
+      }}>
+        <Grid fluid>
+          <FormRow>
+            <FormGroup md={4}>
+              <Label name="ipt">Label</Label>
+              <Input
+                id="ipt"
+                name="ipt"
+                type="text"
+                placeholder="Placeholder text"
+                value=""
+              />
+            </FormGroup>
+            <FormGroup md={4}>
+              <Label name="ipt">Label</Label>
+              <Input
+                id="ipt"
+                name="ipt"
+                type="text"
+                placeholder="Placeholder text"
+                value=""
+              />
+            </FormGroup>
+          </FormRow>
+          <FormActions alignEnd>
+            <Button onClick={action('Clean')}>Limpar filtros</Button>
+            <Button success onClick={action('Filter')} type="submit">
+              Filtrar
+            </Button>
+          </FormActions>
+        </Grid>
+      </Form>
+    </Filter>
+  );
+};
 
-export const OpenedFilter = () => (
-  <Filter showFilters={true} onClick={action('clicked')} totalItems={3}>
-    <Form>
-      <Grid fluid>
-        <FormRow>
-          <FormGroup md={4}>
-            <Label name="ipt">Label</Label>
-            <Input
-              id="ipt"
-              name="ipt"
-              type="text"
-              placeholder="Placeholder text"
-              value=""
-            />
-          </FormGroup>
-          <FormGroup md={4}>
-            <Label name="ipt">Label</Label>
-            <Input
-              id="ipt"
-              name="ipt"
-              type="text"
-              placeholder="Placeholder text"
-              value=""
-            />
-          </FormGroup>
-        </FormRow>
-        <FormActions alignEnd>
-          <Button onClick={action('Clean')}>Limpar filtros</Button>
-          <Button success onClick={action('Filter')} type="submit">
-            Filtrar
-          </Button>
-        </FormActions>
-      </Grid>
-    </Form>
-  </Filter>
-);
+export const OpenedFilter = () => {
+  const toggle = true;
+  return (
+    <Filter showFilters={toggle} onClick={action('clicked')} totalItems={3}>
+      <Form onSubmit={() => {}}>
+        <Grid fluid>
+          <FormRow>
+            <FormGroup md={4}>
+              <Label name="ipt">Label</Label>
+              <Input
+                id="ipt"
+                name="ipt"
+                type="text"
+                placeholder="Placeholder text"
+                value=""
+              />
+            </FormGroup>
+            <FormGroup md={4}>
+              <Label name="ipt">Label</Label>
+              <Input
+                id="ipt"
+                name="ipt"
+                type="text"
+                placeholder="Placeholder text"
+                value=""
+              />
+            </FormGroup>
+          </FormRow>
+          <FormActions alignEnd>
+            <Button onClick={action('Clean')}>Limpar filtros</Button>
+            <Button success onClick={action('Filter')} type="submit">
+              Filtrar
+            </Button>
+          </FormActions>
+        </Grid>
+      </Form>
+    </Filter>
+  );
+};
