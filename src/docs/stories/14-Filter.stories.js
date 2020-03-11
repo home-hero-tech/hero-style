@@ -17,8 +17,8 @@ export default {
 };
 
 export const ClosedFilter = () => (
-  <Filter onClick={action('clicked')}>
-    <Form>
+  <Filter showFilters={false} onClick={action('clicked')}>
+    <Form onSubmit={() => {}}>
       <Grid fluid>
         <FormRow>
           <FormGroup md={4}>
@@ -54,7 +54,7 @@ export const ClosedFilter = () => (
 );
 
 export const OpenedFilter = () => (
-  <Filter showFilters onClick={action('clicked')} totalItems={3}>
+  <Filter showFilters={true} onClick={action('clicked')} totalItems={3}>
     <Form>
       <Grid fluid>
         <FormRow>

@@ -180,3 +180,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.0.29] - 2020-03-11
 ### Added
 - Publishing Loader component.
+
+## [1.0.30] - 2020-03-11
+### Added
+- Missing css imports in object folder.
+
+### Changed
+- Adjusted onChange from Filter components.

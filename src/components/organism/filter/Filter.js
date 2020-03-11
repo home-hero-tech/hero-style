@@ -17,7 +17,7 @@ const Filter = ({ tabIndex, onClick, showFilters, totalItems, children }) => {
     <div className={css['c-filter']}>
       <div
         className={css['c-filter__header']}
-        onClick={onClick(!showFilters)}
+        onClick={onClick}
         role="button"
         tabIndex={tabIndex}
         onKeyPress={() => {}}
