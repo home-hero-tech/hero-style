@@ -168,3 +168,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.0.26] - 2020-03-11
 ### Added
 - Publishing Filter component.
+
+## [1.0.27] - 2020-03-11
+### Added
+- BoxShadow component and its tests.
+
+## [1.0.28] - 2020-03-11
+### Added
+- Publishing BoxShadow component.
