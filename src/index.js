@@ -10,6 +10,7 @@ import DatePicker from './components/atom/datepicker/DatePicker';
 import Heading from './components/atom/heading/Heading';
 import Input from './components/atom/input/Input';
 import Label from './components/atom/label/Label';
+import Loader from './components/atom/loader/Loader';
 import ListItem from './components/atom/list-item/ListItem';
 import Pagination from './components/atom/pagination/Pagination';
 import Select from './components/atom/select/Select';
@@ -43,6 +44,7 @@ export {
   Label,
   List,
   ListItem,
+  Loader,
   Pagination,
   Select,
   Row
