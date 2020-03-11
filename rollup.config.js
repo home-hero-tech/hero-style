@@ -34,7 +34,6 @@ export default [
         exclude: 'node_modules/**'
       }),
       postcss({
-        extract: 'dist/bundle.css',
         modules: true,
         minimize: {
           safe: true
