@@ -20,8 +20,7 @@ export const ClosedFilter = () => {
   const toggle = false;
   return (
     <Filter showFilters={toggle} onClick={action('clicked')}>
-      <Form onSubmit={() => {
-      }}>
+      <Form onSubmit={() => {}}>
         <Grid fluid>
           <FormRow>
             <FormGroup md={4}>
