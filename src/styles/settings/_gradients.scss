@@ -1,29 +1,29 @@
 // Primary color gradients
+$gradient-brand-primary-300-100-0: linear-gradient(0, $color-brand-primary-300 0%, $color-brand-primary-100 100%, $color-brand-primary-100 100%);
 $gradient-brand-primary-300-100-45: linear-gradient(45deg, $color-brand-primary-300 0%, $color-brand-primary-100 100%, $color-brand-primary-100 100%);
 $gradient-brand-primary-300-100-90: linear-gradient(90deg, $color-brand-primary-300 0%, $color-brand-primary-100 100%, $color-brand-primary-100 100%);
-$gradient-brand-primary-300-100-135: linear-gradient(135deg, $color-brand-primary-300 0%, $color-brand-primary-100 100%, $color-brand-primary-100 100%);
-$gradient-brand-primary-300-100-180: linear-gradient(180deg, $color-brand-primary-300 0%, $color-brand-primary-100 100%, $color-brand-primary-100 100%);
-$gradient-brand-primary-300-100-225: linear-gradient(225deg, $color-brand-primary-300 0%, $color-brand-primary-100 100%, $color-brand-primary-100 100%);
-$gradient-brand-primary-300-100-270: linear-gradient(270, $color-brand-primary-300 0%, $color-brand-primary-100 100%, $color-brand-primary-100 100%);
-$gradient-brand-primary-300-100-315: linear-gradient(315deg, $color-brand-primary-300 0%, $color-brand-primary-100 100%, $color-brand-primary-100 100%);
-$gradient-brand-primary-300-100-360: linear-gradient(360deg, $color-brand-primary-300 0%, $color-brand-primary-100 100%, $color-brand-primary-100 100%);
+$gradient-brand-primary-300-100-135: linear-gradient(-225deg, $color-brand-primary-300 0%, $color-brand-primary-100 100%, $color-brand-primary-100 100%);
+$gradient-brand-primary-300-100-180: linear-gradient(-180deg, $color-brand-primary-300 0%, $color-brand-primary-100 100%, $color-brand-primary-100 100%);
+$gradient-brand-primary-300-100-225: linear-gradient(-45deg, $color-brand-primary-300 0%, $color-brand-primary-100 100%, $color-brand-primary-100 100%);
+$gradient-brand-primary-300-100-270: linear-gradient(-90deg, $color-brand-primary-300 0%, $color-brand-primary-100 100%, $color-brand-primary-100 100%);
+$gradient-brand-primary-300-100-315: linear-gradient(-135deg, $color-brand-primary-300 0%, $color-brand-primary-100 100%, $color-brand-primary-100 100%);
 
 // Secondary color gradients
+$gradient-brand-secondary-300-100-0: linear-gradient(0, $color-brand-secondary-300 0%, $color-brand-secondary-100 100%, $color-brand-secondary-100 100%);
 $gradient-brand-secondary-300-100-45: linear-gradient(45deg, $color-brand-secondary-300 0%, $color-brand-secondary-100 100%, $color-brand-secondary-100 100%);
 $gradient-brand-secondary-300-100-90: linear-gradient(90deg, $color-brand-secondary-300 0%, $color-brand-secondary-100 100%, $color-brand-secondary-100 100%);
-$gradient-brand-secondary-300-100-135: linear-gradient(135deg, $color-brand-secondary-300 0%, $color-brand-secondary-100 100%, $color-brand-secondary-100 100%);
-$gradient-brand-secondary-300-100-180: linear-gradient(180deg, $color-brand-secondary-300 0%, $color-brand-secondary-100 100%, $color-brand-secondary-100 100%);
-$gradient-brand-secondary-300-100-225: linear-gradient(225deg, $color-brand-secondary-300 0%, $color-brand-secondary-100 100%, $color-brand-secondary-100 100%);
-$gradient-brand-secondary-300-100-270: linear-gradient(270, $color-brand-secondary-300 0%, $color-brand-secondary-100 100%, $color-brand-secondary-100 100%);
-$gradient-brand-secondary-300-100-315: linear-gradient(315deg, $color-brand-secondary-300 0%, $color-brand-secondary-100 100%, $color-brand-secondary-100 100%);
-$gradient-brand-secondary-300-100-360: linear-gradient(360deg, $color-brand-secondary-300 0%, $color-brand-secondary-100 100%, $color-brand-secondary-100 100%);
+$gradient-brand-secondary-300-100-135: linear-gradient(-225deg, $color-brand-secondary-300 0%, $color-brand-secondary-100 100%, $color-brand-secondary-100 100%);
+$gradient-brand-secondary-300-100-180: linear-gradient(-180deg, $color-brand-secondary-300 0%, $color-brand-secondary-100 100%, $color-brand-secondary-100 100%);
+$gradient-brand-secondary-300-100-225: linear-gradient(-45deg, $color-brand-secondary-300 0%, $color-brand-secondary-100 100%, $color-brand-secondary-100 100%);
+$gradient-brand-secondary-300-100-270: linear-gradient(-90deg, $color-brand-secondary-300 0%, $color-brand-secondary-100 100%, $color-brand-secondary-100 100%);
+$gradient-brand-secondary-300-100-315: linear-gradient(-135deg, $color-brand-secondary-300 0%, $color-brand-secondary-100 100%, $color-brand-secondary-100 100%);
 
 // Grayscale gradients
+$gradient-brand-gray-300-100-0: linear-gradient(0, $color-brand-gray-400 0%, $color-brand-gray-500 100%, $color-brand-primary-300 100%);
 $gradient-brand-gray-300-100-45: linear-gradient(45deg, $color-brand-gray-400 0%, $color-brand-gray-500 100%, $color-brand-primary-300 100%);
 $gradient-brand-gray-300-100-90: linear-gradient(90deg, $color-brand-gray-400 0%, $color-brand-gray-500 100%, $color-brand-primary-300 100%);
-$gradient-brand-gray-300-100-135: linear-gradient(135deg, $color-brand-gray-400 0%, $color-brand-gray-500 100%, $color-brand-primary-300 100%);
-$gradient-brand-gray-300-100-180: linear-gradient(180deg, $color-brand-gray-400 0%, $color-brand-gray-500 100%, $color-brand-primary-300 100%);
-$gradient-brand-gray-300-100-225: linear-gradient(225deg, $color-brand-gray-400 0%, $color-brand-gray-500 100%, $color-brand-primary-300 100%);
-$gradient-brand-gray-300-100-270: linear-gradient(270, $color-brand-gray-400 0%, $color-brand-gray-500 100%, $color-brand-primary-300 100%);
-$gradient-brand-gray-300-100-315: linear-gradient(315deg, $color-brand-gray-400 0%, $color-brand-gray-500 100%, $color-brand-primary-300 100%);
-$gradient-brand-gray-300-100-360: linear-gradient(360deg, $color-brand-gray-400 0%, $color-brand-gray-500 100%, $color-brand-primary-300 100%);
+$gradient-brand-gray-300-100-135: linear-gradient(-225deg, $color-brand-gray-400 0%, $color-brand-gray-500 100%, $color-brand-primary-300 100%);
+$gradient-brand-gray-300-100-180: linear-gradient(-180deg, $color-brand-gray-400 0%, $color-brand-gray-500 100%, $color-brand-primary-300 100%);
+$gradient-brand-gray-300-100-225: linear-gradient(-45deg, $color-brand-gray-400 0%, $color-brand-gray-500 100%, $color-brand-primary-300 100%);
+$gradient-brand-gray-300-100-270: linear-gradient(-90deg, $color-brand-gray-400 0%, $color-brand-gray-500 100%, $color-brand-primary-300 100%);
+$gradient-brand-gray-300-100-315: linear-gradient(-135deg, $color-brand-gray-400 0%, $color-brand-gray-500 100%, $color-brand-primary-300 100%);
