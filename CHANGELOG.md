@@ -154,7 +154,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - primary props for CardItem.
 
-## [1.0.25] - 2020-03-10
+## [1.0.25] - 2020-03-11
 ### Added
 - Loader components and its tests.
 - Filter component and its tests.
@@ -164,3 +164,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Components adjusted to uses level instead sizes like params.
 - Updated tests.
 - Fixed lint.
+
+## [1.0.26] - 2020-03-11
+### Added
+- Publishing Filter component.
