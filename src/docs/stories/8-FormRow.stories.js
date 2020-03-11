@@ -13,7 +13,7 @@ export default {
 };
 
 const _style = {
-  'maxWidth': '20%'
+  maxWidth: '20%'
 };
 
 export const Default = () => (

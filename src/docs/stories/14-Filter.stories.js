@@ -1,6 +1,7 @@
 import React from 'react';
 import { action } from '@storybook/addon-actions';
 
+import { Grid } from 'react-flexbox-grid';
 import Filter from '../../components/organism/filter/Filter';
 import Form from '../../components/organism/form/Form';
 import FormActions from '../../components/molecule/form-actions/FormActions';
@@ -9,7 +10,6 @@ import FormGroup from '../../components/molecule/form-group/FormGroup';
 import Label from '../../components/atom/label/Label';
 import Input from '../../components/atom/input/Input';
 import Button from '../../components/atom/button/Button';
-import { Grid } from 'react-flexbox-grid';
 
 export default {
   title: 'Filter',
@@ -44,7 +44,9 @@ export const ClosedFilter = () => (
         </FormRow>
         <FormActions alignEnd>
           <Button onClick={action('Clean')}>Limpar filtros</Button>
-          <Button success onClick={action('Filter')} type="submit">Filtrar</Button>
+          <Button success onClick={action('Filter')} type="submit">
+            Filtrar
+          </Button>
         </FormActions>
       </Grid>
     </Form>
@@ -52,7 +54,7 @@ export const ClosedFilter = () => (
 );
 
 export const OpenedFilter = () => (
-  <Filter showFilters={true} onClick={action('clicked')} totalItems={3}>
+  <Filter showFilters onClick={action('clicked')} totalItems={3}>
     <Form>
       <Grid fluid>
         <FormRow>
@@ -79,7 +81,9 @@ export const OpenedFilter = () => (
         </FormRow>
         <FormActions alignEnd>
           <Button onClick={action('Clean')}>Limpar filtros</Button>
-          <Button success onClick={action('Filter')} type="submit">Filtrar</Button>
+          <Button success onClick={action('Filter')} type="submit">
+            Filtrar
+          </Button>
         </FormActions>
       </Grid>
     </Form>

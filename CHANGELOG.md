@@ -153,3 +153,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.0.24] - 2020-03-10
 ### Added
 - primary props for CardItem.
+
+## [1.0.25] - 2020-03-10
+### Added
+- Loader components and its tests.
+- Filter component and its tests.
+
+### Changed
+- Form components are using Grid components to organize the structure.
+- Components adjusted to uses level instead sizes like params.
+- Updated tests.
+- Fixed lint.

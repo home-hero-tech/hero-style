@@ -7,7 +7,7 @@ import { Row, Col } from 'react-flexbox-grid';
 
 import css from './Filter.module.scss';
 
-const Filter = ({ onClick, showFilters, totalItems, children }) => {
+const Filter = ({ tabIndex, onClick, showFilters, totalItems, children }) => {
   const classes = classNames({
     [css['c-filter__content']]: true,
     [css['c-filter__content--open']]: showFilters
@@ -15,40 +15,51 @@ const Filter = ({ onClick, showFilters, totalItems, children }) => {
 
   return (
     <div className={css['c-filter']}>
-      <div className={css['header']} onClick={onClick(!showFilters)}>
+      <div
+        className={css['c-filter__header']}
+        onClick={onClick(!showFilters)}
+        role="button"
+        tabIndex={tabIndex}
+        onKeyPress={() => {}}
+      >
         <Row>
           <Col md={2}>
-            <FontAwesomeIcon icon={faFilter}/>
+            <FontAwesomeIcon icon={faFilter} />
             <span>Filtro</span>
           </Col>
           <Col md>
-            <p>{totalItems} encontrados</p>
+            <p>
+              {totalItems}
+              encontrados
+            </p>
           </Col>
           <Col md={2}>
-            <FontAwesomeIcon icon={faSort}/>
+            <FontAwesomeIcon icon={faSort} />
             <span>Ordernar: A-z</span>
           </Col>
         </Row>
       </div>
       <div className={classes}>{children}</div>
     </div>
-  )
+  );
 };
 
 Filter.propTypes = {
-  onClick: PropTypes.func,
-  showFilter: PropTypes.bool,
-  totalItems: PropTypes.number,
   children: PropTypes.oneOfType([
     PropTypes.array,
     PropTypes.object,
     PropTypes.string
-  ]).isRequired
+  ]).isRequired,
+  onClick: PropTypes.func,
+  showFilters: PropTypes.bool,
+  tabIndex: PropTypes.number,
+  totalItems: PropTypes.number
 };
 
 Filter.defaultProps = {
   onClick: null,
-  showFilter: false,
+  showFilters: false,
+  tabIndex: 0,
   totalItems: 0
 };
 
