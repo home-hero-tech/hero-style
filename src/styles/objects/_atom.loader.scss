@@ -1,0 +1,38 @@
+@import '../settings/settings';
+
+.c-loader {
+  display: flex;
+  @-webkit-keyframes spin {
+    0% {
+      -webkit-transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+    }
+  }
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  .spinner {
+    border: 2px solid $color-brand-primary-300;
+    border-radius: 50%;
+    border-top: 2px solid $color-structural-white;
+    width: 20px;
+    height: 20px;
+    -webkit-animation: spin 2s linear infinite; /* Safari */
+    animation: spin 2s linear infinite;
+  }
+
+  p {
+    color: $color-brand-gray-500;
+    line-height: 20px;
+    margin-left: $space-1;
+  }
+}
