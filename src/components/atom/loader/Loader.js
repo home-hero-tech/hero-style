@@ -5,8 +5,7 @@ import css from './Loader.module.scss';
 
 const Label = ({ text }) => (
   <div className={css['c-loader']}>
-    <div className={css['spinner']}>
-    </div>
+    <div className={css.spinner} />
     <p>{text}</p>
   </div>
 );

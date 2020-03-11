@@ -1,6 +1,6 @@
 {
   "name": "@homehero/hero-style",
-  "version": "1.0.25",
+  "version": "1.0.27",
   "main": "dist/index.js",
   "browser": "dist/index.umd.js",
   "module": "dist/index.es.js",
@@ -40,6 +40,7 @@
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 9009 -s public",
     "build-storybook": "build-storybook -s public",
+    "lint:fix": "./node_modules/.bin/eslint src/**/*.js --fix",
     "lint": "./node_modules/.bin/eslint src/**/*.js"
   },
   "eslintConfig": {

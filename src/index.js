@@ -22,6 +22,7 @@ import Card from './components/molecule/card/Card';
 
 // organisms
 import Form from './components/organism/form/Form';
+import Filter from './components/organism/filter/Filter';
 
 export {
   Button,

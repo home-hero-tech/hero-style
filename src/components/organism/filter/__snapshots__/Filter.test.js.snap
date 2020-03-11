@@ -5,7 +5,10 @@ exports[`Filter should match with the snapshot 1`] = `
   className="c-filter"
 >
   <div
-    className="header"
+    className="c-filter__header"
+    onKeyPress={[Function]}
+    role="button"
+    tabIndex={0}
   >
     <Row>
       <Col
@@ -51,7 +54,7 @@ exports[`Filter should match with the snapshot 1`] = `
       >
         <p>
           3
-           encontrados
+          encontrados
         </p>
       </Col>
       <Col
@@ -105,7 +108,9 @@ exports[`Filter should match with the snapshot 1`] = `
       >
         <FormRow>
           <FormGroup
+            error={false}
             md={4}
+            success={false}
           >
             <Label
               name="ipt"
@@ -124,7 +129,9 @@ exports[`Filter should match with the snapshot 1`] = `
             />
           </FormGroup>
           <FormGroup
+            error={false}
             md={4}
+            success={false}
           >
             <Label
               name="ipt"

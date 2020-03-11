@@ -6,7 +6,7 @@
   border-radius: $radius-2;
   overflow: hidden;
 
-  .header {
+  &__header {
     background: linear-gradient(-116.56505117707799deg, rgb(108, 119, 150) 0%, rgb(75, 84, 110) 100%);
     width: 100%;
     padding: 12px 24px;
@@ -14,7 +14,7 @@
     font-size: 12px;
     font-weight: bold;
     border-radius: $radius-2;
-    box-shadow: 0px 8px 24px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 24px 0 rgba(0, 0, 0, 0.2);
     cursor: pointer;
 
     span {
