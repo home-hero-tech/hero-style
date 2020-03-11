@@ -1,9 +1,9 @@
 @import './colors';
 
-$base: 8px;
+$shadow: 8px;
 
-$elevation-4dp: 0 ($base/2) $base 0 rgba($color-black,0.08);
-$elevation-8dp: 0 $base ($base * 2) 0 rgba($color-black,0.08);
-$elevation-16dp: 0 ($base * 2) ($base * 3) 0 rgba($color-black,0.08);
-$elevation-24dp: 0 ($base * 3) ($base * 4) 0 rgba($color-black,0.08);
-$elevation-32dp: 0 ($base * 4) ($base * 5) 0 rgba($color-black,0.08);
+$elevation-0: 0 ($shadow/2) $shadow 0 rgba($color-black,0.08);
+$elevation-1: 0 $shadow ($shadow * 2) 0 rgba($color-black,0.08);
+$elevation-2: 0 ($shadow * 2) ($shadow * 3) 0 rgba($color-black,0.08);
+$elevation-3: 0 ($shadow * 3) ($shadow * 4) 0 rgba($color-black,0.08);
+$elevation-4: 0 ($shadow * 4) ($shadow * 5) 0 rgba($color-black,0.08);

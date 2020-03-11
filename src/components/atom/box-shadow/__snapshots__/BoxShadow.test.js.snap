@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BoxShadow should match with the snapshot 1`] = `
+<div
+  className="elevation--1"
+>
+  <div>
+    BoxShadow
+  </div>
+</div>
+`;
