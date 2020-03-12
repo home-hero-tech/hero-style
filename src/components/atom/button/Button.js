@@ -9,10 +9,10 @@ import css from './Button.module.scss';
 const Button = ({ shape, size, container, type, children }) => {
   const classes = classNames({
     [css['c-btn']]: true,
-    [css[`c-btn--size-${size}`]]: true,
     [css[`c-btn--${type}`]]: true,
     [css[`c-btn--${shape}`]]: true,
-    [css[`c-btn--${container}`]]: true
+    [css[`c-btn--${container}`]]: true,
+    [css[`c-btn--size-${size}`]]: true
   });
   return <button className={classes}>{children}</button>;
 };
@@ -35,7 +35,7 @@ Button.defaultProps = {
   type: 'default',
   container: 'default',
   shape: 'rounded',
-  size: 1
+  size: 2
 };
 
 export default Button;

@@ -11,104 +11,62 @@ export default {
 
 const _wrapperStyle = {
   margin: 10,
-  width: 400,
   display: 'flex',
-  justifyContent: 'space-between'
+  justifyContent: 'space-around'
 };
 
-export const Default = () => (
-  <Wrapper style={_wrapperStyle}>
-    <Button onClick={action('clicked')}>Rounded</Button>
+const _columnWrapperStype = {
+  ..._wrapperStyle,
+  width: 140,
+  height: 150,
+  flexDirection: 'column'
+};
 
-    <Button shape="squared" onClick={action('clicked')}>
-      Squared
+export const Sizes = () => (
+  <Wrapper style={_columnWrapperStype}>
+    <Button type="primary" size={1} onClick={action('clicked')}>
+      Button
     </Button>
-
-    <Button container="outlined" onClick={action('clicked')}>
-      Outlined
+    <Button type="primary" size={2} onClick={action('clicked')}>
+      Button
     </Button>
-
-    <Button container="text" onClick={action('clicked')}>
-      Text
+    <Button type="primary" size={3} onClick={action('clicked')}>
+      Button
+    </Button>
+    <Button type="primary" size={4} onClick={action('clicked')}>
+      Button
     </Button>
   </Wrapper>
 );
 
-export const Primary = () => (
-  <Wrapper style={_wrapperStyle}>
+export const Types = () => (
+  <Wrapper style={{ ..._wrapperStyle, width: 500 }}>
+    <Button>Default</Button>
+    <Button type="primary">Primary</Button>
+    <Button type="secondary">Secondary</Button>
+    <Button type="danger">Danger</Button>
+    <Button type="success">Success</Button>
+  </Wrapper>
+);
+
+export const Shapes = () => (
+  <Wrapper style={{ ..._wrapperStyle, width: 210 }}>
     <Button type="primary" onClick={action('clicked')}>
       Rounded
     </Button>
-
     <Button type="primary" shape="squared" onClick={action('clicked')}>
       Squared
     </Button>
-
-    <Button type="primary" container="outlined" onClick={action('clicked')}>
-      Outlined
-    </Button>
-
-    <Button type="primary" container="text" onClick={action('clicked')}>
-      Text
-    </Button>
   </Wrapper>
 );
 
-export const Secondary = () => (
-  <Wrapper style={_wrapperStyle}>
-    <Button type="secondary" onClick={action('clicked')}>
-      Rounded
-    </Button>
-
-    <Button type="secondary" shape="squared" onClick={action('clicked')}>
-      Squared
-    </Button>
-
-    <Button type="secondary" container="outlined" onClick={action('clicked')}>
+export const Containers = () => (
+  <Wrapper style={{ ..._wrapperStyle, width: 310 }}>
+    <Button type="primary">Contained</Button>
+    <Button type="primary" container="outlined">
       Outlined
     </Button>
-
-    <Button type="secondary" container="text" onClick={action('clicked')}>
-      Text
-    </Button>
-  </Wrapper>
-);
-
-export const Danger = () => (
-  <Wrapper style={_wrapperStyle}>
-    <Button type="danger" onClick={action('clicked')}>
-      Rounded
-    </Button>
-
-    <Button type="danger" shape="squared" onClick={action('clicked')}>
-      Squared
-    </Button>
-
-    <Button type="danger" container="outlined" onClick={action('clicked')}>
-      Outlined
-    </Button>
-
-    <Button type="danger" container="text" onClick={action('clicked')}>
-      Text
-    </Button>
-  </Wrapper>
-);
-
-export const Success = () => (
-  <Wrapper style={_wrapperStyle}>
-    <Button type="success" onClick={action('clicked')}>
-      Rounded
-    </Button>
-
-    <Button type="success" shape="squared" onClick={action('clicked')}>
-      Squared
-    </Button>
-
-    <Button type="success" container="outlined" onClick={action('clicked')}>
-      Outlined
-    </Button>
-
-    <Button type="success" container="text" onClick={action('clicked')}>
+    <Button type="primary" container="text">
       Text
     </Button>
   </Wrapper>
