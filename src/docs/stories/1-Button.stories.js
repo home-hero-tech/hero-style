@@ -11,7 +11,7 @@ export default {
 
 const _wrapperStyle = {
   margin: 10,
-  width: 370,
+  width: 400,
   display: 'flex',
   justifyContent: 'space-between'
 };

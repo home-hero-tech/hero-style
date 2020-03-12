@@ -1,9 +1,11 @@
 @import "../settings/settings";
 @import "../tools/tools";
 
+$base: 8px;
+
 .c-btn {
-  height: 34px;
-  padding: 8px 15px;
+  // height: 34px;
+  padding: 8px 24px;
   font-weight: bold;
   color: $color-structural-gray-600;
   border-radius: $radius-4;
@@ -11,6 +13,22 @@
   transition: all .3s ease-in-out;
   border: solid 1px currentColor;
   box-shadow: $color-box-shadow;
+
+  &--size-1 {
+    font-size: 10px;
+  }
+
+  &--size-2 {
+    font-size: 12px;
+  }
+
+  &--size-3 {
+    font-size: 14px;
+  }
+
+  &--size-4 {
+    font-size: 16px;
+  }
 
   &--squared {
     border-radius: $radius-2;
