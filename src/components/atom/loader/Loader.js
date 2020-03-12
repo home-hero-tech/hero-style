@@ -1,12 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Text from '../text/Text';
 
 import css from './Loader.module.scss';
 
 const Label = ({ text }) => (
   <div className={css['c-loader']}>
     <div className={css.spinner} />
-    <p>{text}</p>
+    {text ? <Text>{text}</Text> : null}
   </div>
 );
 
@@ -15,7 +16,7 @@ Label.propTypes = {
 };
 
 Label.defaultProps = {
-  text: 'Carregando'
+  text: null,
 };
 
 export default Label;

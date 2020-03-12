@@ -187,3 +187,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 - Adjusted onChange from Filter components.
+
+## [1.0.31] - 2020-03-11
+- Builder adjustments.
+
+## [1.0.32] - 2020-03-11
+- Builder adjustments.
+
+## [1.0.33] - 2020-03-11
+- Builder adjustments.
+
+## [1.0.34] - 2020-03-11
+- Builder adjustments.
+
+## [1.0.35] - 2020-03-11
+### Added
+- Gradient variables.
+- Several css improvements.

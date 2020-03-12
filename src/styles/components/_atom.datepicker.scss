@@ -9,15 +9,19 @@
       box-shadow: $color-box-shadow;
       padding: 0 $space-2;
 
+      &-wrapper {
+        width: 100%;
+      }
+
       &__input-container {
         &:after {
           content: '\f073';
           font-size: $font-size-md;
           position: absolute;
-          font-family: 'Font Awesome 5 Pro';
+          font-family: $font-family-awesome-5-pro;
           top: $space-0;
           right: 1px;
-          background-color: white;
+          background-color: transparent;
           padding: $space-1 $space-2;
         }
       }
@@ -32,10 +36,9 @@
         border: none;
       }
 
+      &__navigation--previous,
       &__navigation--next {
         &:after {
-          transform: rotate(-45deg);
-          -webkit-transform: rotate(-45deg);
           content: '';
           border: solid $color-brand-primary-300;
           border-width: 0 2px 2px 0;
@@ -46,6 +49,13 @@
           top: 0;
           left: 0;
           margin: $space-1;
+        }
+      }
+
+      &__navigation--next {
+        &:after {
+          transform: rotate(-45deg);
+          -webkit-transform: rotate(-45deg);
         }
       }
 
@@ -53,23 +63,13 @@
         &:after {
           transform: rotate(135deg);
           -webkit-transform: rotate(135deg);
-          content: '';
-          border: solid $color-brand-primary-300;
-          border-width: 0 2px 2px 0;
-          display: inline-block;
-          height: $space-1;
-          width: $space-1;
-          position: absolute;
-          top: 0;
-          left: 0;
-          margin: $space-1;
         }
       }
 
       &__header {
         background-color: $color-structural-white;
         font-size: $font-size-sm;
-        font-family: 'muli';
+        font-family: $font-family;
         font-weight: normal;
         border-color: #ecebed;
       }
@@ -82,13 +82,13 @@
         margin-top: $space-1;
         color: $color-brand-gray-500;
         font-size: $font-size-md;
-        font-family: 'muli';
+        font-family: $font-family;
         font-weight: normal;
       }
 
       &__month {
-        font-family: 'muli';
-        font-size: 12px;
+        font-family: $font-family;
+        font-size: $font-size-sm;
       }
 
       &__day {
@@ -102,23 +102,23 @@
         &--today {
           color: $color-brand-primary-300;
           background-color: $color-brand-gray-050;
-          border-radius: 50%;
+          border-radius: $radius-percent-50;
           font-weight: normal;
 
           &:hover {
             background-color: $color-brand-gray-050;
-            border-radius: 50%;
+            border-radius: $radius-percent-50;
           }
         }
 
         &--selected {
           color: $color-structural-white;
           background: $color-brand-primary-gradient;
-          border-radius: 50%;
+          border-radius: $radius-percent-50;
 
           &:hover {
             background: $color-brand-primary-gradient;
-            border-radius: 50%;
+            border-radius: $radius-percent-50;
           }
         }
 

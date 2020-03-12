@@ -32,5 +32,6 @@ module.exports = {
     'import/no-extraneous-dependencies': 0,
     'max-len': ['error', 120],
     'prettier/prettier': ['error', { 'singleQuote': true }],
+    "react/jsx-one-expression-per-line": 0,
   },
 };

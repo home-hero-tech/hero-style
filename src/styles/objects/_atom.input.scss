@@ -2,9 +2,9 @@
 
 .c-input {
   width: 100%;
-  height: $space-5;
+  height: $input-height;
   border: 1px solid $color-brand-gray-100;
-  padding: $space-2;
+  padding: 0 $space-2;
   border-radius: $radius-2;
   box-shadow: $color-box-shadow;
 
@@ -31,17 +31,13 @@
       color: $color-structural-white;
       border: 1px solid $color-structural-white;
       -webkit-text-fill-color: $color-structural-white;
-      -webkit-box-shadow: 0 0 0px 1000px $color-brand-gray-600 inset;
+      -webkit-box-shadow: 0 0 0 1000px $color-brand-gray-600 inset;
       transition: background-color 5000s ease-in-out 0s;
 
       &:focus {
         border: 1px solid $color-structural-white;
       }
     }
-  }
-
-  &:focus {
-    border: 1px solid CurrentColor;
   }
 
   &__checkbox {
@@ -136,5 +132,9 @@
         }
       }
     }
+  }
+
+  &:focus {
+    border: 1px solid CurrentColor;
   }
 }

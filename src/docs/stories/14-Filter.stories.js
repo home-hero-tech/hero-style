@@ -10,6 +10,7 @@ import FormGroup from '../../components/molecule/form-group/FormGroup';
 import Label from '../../components/atom/label/Label';
 import Input from '../../components/atom/input/Input';
 import Button from '../../components/atom/button/Button';
+import DatePicker from '../../components/atom/datepicker/DatePicker';
 
 export default {
   title: 'Filter',
@@ -61,17 +62,11 @@ export const OpenedFilter = () => {
   return (
     <Filter showFilters={toggle} onClick={action('clicked')} totalItems={3}>
       <Form onSubmit={() => {}}>
-        <Grid fluid>
+        <Grid fluid style={{ padding: 0 }}>
           <FormRow>
             <FormGroup md={4}>
               <Label name="ipt">Label</Label>
-              <Input
-                id="ipt"
-                name="ipt"
-                type="text"
-                placeholder="Placeholder text"
-                value=""
-              />
+              <DatePicker />
             </FormGroup>
             <FormGroup md={4}>
               <Label name="ipt">Label</Label>
@@ -81,6 +76,7 @@ export const OpenedFilter = () => {
                 type="text"
                 placeholder="Placeholder text"
                 value=""
+                dark
               />
             </FormGroup>
           </FormRow>
