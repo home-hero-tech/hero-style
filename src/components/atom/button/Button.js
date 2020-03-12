@@ -6,7 +6,15 @@ import css from './Button.module.scss';
 
 /* <Button type="primary" container="outlined" shape="squared" size="" /> */
 
-const Button = ({ onClick, submit, shape, size, container, type, children }) => {
+const Button = ({
+  onClick,
+  submit,
+  shape,
+  size,
+  container,
+  type,
+  children
+}) => {
   const btnType = submit ? 'submit' : 'button';
 
   const classes = classNames({
