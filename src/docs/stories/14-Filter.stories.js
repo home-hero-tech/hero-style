@@ -11,11 +11,21 @@ import Label from '../../components/atom/label/Label';
 import Input from '../../components/atom/input/Input';
 import Button from '../../components/atom/button/Button';
 import DatePicker from '../../components/atom/datepicker/DatePicker';
+import Select from '../../components/atom/select/Select';
 
 export default {
   title: 'Filter',
   component: Filter
 };
+
+const options = [
+  { value: 'value1', label: 'Label1' },
+  { value: 'value2', label: 'Label2' },
+  { value: 'value3', label: 'Label3' },
+  { value: 'value4', label: 'Label4' }
+];
+
+const currentOption = { value: 'value3', label: 'Label3' };
 
 export const ClosedFilter = () => {
   const toggle = false;
@@ -36,7 +46,7 @@ export const ClosedFilter = () => {
             </FormGroup>
             <FormGroup md={4}>
               <Label name="ipt">Label</Label>
-              <Input
+              <Select
                 id="ipt"
                 name="ipt"
                 type="text"
@@ -70,13 +80,10 @@ export const OpenedFilter = () => {
             </FormGroup>
             <FormGroup md={4}>
               <Label name="ipt">Label</Label>
-              <Input
-                id="ipt"
-                name="ipt"
-                type="text"
-                placeholder="Placeholder text"
-                value=""
-                dark
+              <Select
+                options={options}
+                placeholder="Test"
+                value={currentOption}
               />
             </FormGroup>
           </FormRow>

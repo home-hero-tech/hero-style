@@ -12,6 +12,11 @@ const _style = {
   'max-width': '20%'
 };
 
+const options = [
+  { value: 'value', label: 'Label' },
+  { value: 'value', label: 'Label' }
+];
+
 export const Default = () => (
   <div style={_style}>
     <FormGroup>

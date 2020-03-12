@@ -6,7 +6,6 @@ import css from './Select.module.scss';
 
 const Select = ({
   autoFocus,
-  classNamePrefix,
   isDisabled,
   isMulti,
   isSearchable,
@@ -22,7 +21,7 @@ const Select = ({
     <RSelect
       autoFocus={autoFocus}
       className={css['c-select']}
-      classNamePrefix={classNamePrefix}
+      classNamePrefix="c-select"
       isDisabled={isDisabled}
       isMulti={isMulti}
       isSearchable={isSearchable}
@@ -39,7 +38,6 @@ const Select = ({
 
 Select.propTypes = {
   autoFocus: PropTypes.bool,
-  classNamePrefix: PropTypes.string,
   isClearable: PropTypes.bool,
   isDisabled: PropTypes.bool,
   isMulti: PropTypes.bool,
@@ -59,7 +57,6 @@ Select.propTypes = {
 
 Select.defaultProps = {
   autoFocus: false,
-  classNamePrefix: null,
   isClearable: false,
   isDisabled: false,
   isMulti: false,
