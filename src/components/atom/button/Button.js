@@ -6,7 +6,9 @@ import css from './Button.module.scss';
 
 /* <Button type="primary" container="outlined" shape="squared" size="" /> */
 
-const Button = ({ shape, size, container, type, children }) => {
+const Button = ({ submit, shape, size, container, type, children }) => {
+  const btnType = submit ? 'submit' : 'button';
+
   const classes = classNames({
     [css['c-btn']]: true,
     [css[`c-btn--${type}`]]: true,
@@ -14,7 +16,12 @@ const Button = ({ shape, size, container, type, children }) => {
     [css[`c-btn--${container}`]]: true,
     [css[`c-btn--size-${size}`]]: true
   });
-  return <button className={classes}>{children}</button>;
+
+  return (
+    <button type={btnType} className={classes}>
+      {children}
+    </button>
+  );
 };
 
 Button.propTypes = {
@@ -26,12 +33,14 @@ Button.propTypes = {
     'danger',
     'success'
   ]),
+  submit: PropTypes.bool,
   size: PropTypes.oneOf([1, 2, 3, 4]),
   container: PropTypes.oneOf(['default', 'outlined', 'text']),
   shape: PropTypes.oneOf(['squared', 'rounded'])
 };
 
 Button.defaultProps = {
+  submit: false,
   type: 'default',
   container: 'default',
   shape: 'rounded',
