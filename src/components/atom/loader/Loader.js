@@ -16,7 +16,7 @@ Label.propTypes = {
 };
 
 Label.defaultProps = {
-  text: null,
+  text: null
 };
 
 export default Label;

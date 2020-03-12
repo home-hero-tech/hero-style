@@ -2,7 +2,6 @@ import React from 'react';
 import FormGroup from '../../components/molecule/form-group/FormGroup';
 import Label from '../../components/atom/label/Label';
 import Input from '../../components/atom/input/Input';
-import Text from '../../components/atom/text/Text';
 
 export default {
   title: 'FormGroup',
