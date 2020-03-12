@@ -5,8 +5,6 @@ import PropTypes from 'prop-types';
 import css from './DatePicker.module.scss';
 import cssInput from '../input/Input.module.scss';
 
-import 'react-datepicker/dist/react-datepicker.css';
-
 const DatePicker = ({ selected, format, onChange, ...otherProps }) => (
   <div className={css['c-datepicker']}>
     <RDatePicker

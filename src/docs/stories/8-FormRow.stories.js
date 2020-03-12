@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { Grid } from 'react-flexbox-grid';
 import Form from '../../components/organism/form/Form';
 import FormRow from '../../components/molecule/form-row/FormRow';
 import FormGroup from '../../components/molecule/form-group/FormGroup';
@@ -12,36 +13,38 @@ export default {
 };
 
 const _style = {
-  'max-width': '20%'
+  maxWidth: '20%'
 };
 
 export const Default = () => (
   <div style={_style}>
     <Form onSubmit={() => {}}>
-      <FormRow>
-        <FormGroup>
-          <Label name="ipt">Label</Label>
-          <Input
-            id="ipt"
-            name="ipt"
-            type="text"
-            placeholder="Placeholder text"
-            value=""
-          />
-        </FormGroup>
-      </FormRow>
-      <FormRow>
-        <FormGroup>
-          <Label name="ipt">Label</Label>
-          <Input
-            id="ipt"
-            name="ipt"
-            type="text"
-            placeholder="Placeholder text"
-            value=""
-          />
-        </FormGroup>
-      </FormRow>
+      <Grid fluid>
+        <FormRow>
+          <FormGroup>
+            <Label name="ipt">Label</Label>
+            <Input
+              id="ipt"
+              name="ipt"
+              type="text"
+              placeholder="Placeholder text"
+              value=""
+            />
+          </FormGroup>
+        </FormRow>
+        <FormRow>
+          <FormGroup>
+            <Label name="ipt">Label</Label>
+            <Input
+              id="ipt"
+              name="ipt"
+              type="text"
+              placeholder="Placeholder text"
+              value=""
+            />
+          </FormGroup>
+        </FormRow>
+      </Grid>
     </Form>
   </div>
 );

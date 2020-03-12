@@ -1,6 +1,13 @@
-$space-xlg: 36px;
-$space-lg: 32px;
-$space-md: 24px;
-$space-sm: 16px;
-$space-xs: 8px;
-$space-xxs: 4px;
+$space: 8px;
+
+
+$space-0: $space/2;
+$space-1: $space;
+$space-2: $space * 2;
+$space-3: $space * 3;
+$space-4: $space * 4;
+$space-5: $space * 5;
+$space-6: $space * 6;
+$space-7: $space * 7;
+$space-8: $space * 8;
+$space-9: $space * 9;

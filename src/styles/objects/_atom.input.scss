@@ -2,14 +2,42 @@
 
 .c-input {
   width: 100%;
-  height: $space-xlg;
+  height: $space-5;
   border: 1px solid $color-brand-gray-100;
-  padding: $space-sm;
-  border-radius: $default-radius;
+  padding: $space-2;
+  border-radius: $radius-2;
   box-shadow: $color-box-shadow;
 
   &--disabled {
     background-color: $color-brand-gray-100;
+  }
+
+  &--dark {
+    color: $color-structural-white;
+    background-color: $color-brand-gray-600;
+    border: 1px solid $color-structural-white;
+
+    &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+      color: $color-structural-gray-400;
+      opacity: 1; /* Firefox */
+    }
+
+    &:focus {
+      color: $color-structural-white;
+      border: 1px solid $color-structural-white;
+    }
+
+    &:-webkit-autofill {
+      color: $color-structural-white;
+      border: 1px solid $color-structural-white;
+      -webkit-text-fill-color: $color-structural-white;
+      -webkit-box-shadow: 0 0 0px 1000px $color-brand-gray-600 inset;
+      transition: background-color 5000s ease-in-out 0s;
+
+      &:focus {
+        border: 1px solid $color-structural-white;
+      }
+    }
   }
 
   &:focus {
@@ -17,11 +45,11 @@
   }
 
   &__checkbox {
-    width: $space-md;
-    height: $space-md;
+    width: $space-3;
+    height: $space-3;
     -webkit-appearance: none;
     -moz-appearance: none;
-    border-radius: $space-xxs;
+    border-radius: $space-0;
     border: 1px solid $color-brand-primary-300;
     padding: 0;
 
@@ -31,9 +59,9 @@
 
     &:checked {
       &:after {
-        width: $space-md;
-        height: $space-md;
-        border-radius: $space-xxs;
+        width: $space-3;
+        height: $space-3;
+        border-radius: $space-0;
         content: '\f00c';
         position: absolute;
         background-color: $color-brand-primary-300;
@@ -58,11 +86,11 @@
   }
 
   &__radio {
-    width: $space-md;
-    height: $space-md;
+    width: $space-3;
+    height: $space-3;
     -webkit-appearance: none;
     -moz-appearance: none;
-    border-radius: $space-lg;
+    border-radius: $space-4;
     border: 1px solid $color-brand-primary-300;
     padding: 0;
 
@@ -74,8 +102,8 @@
       &:before {
         content: '';
         position: absolute;
-        width: $space-md;
-        height: $space-md;
+        width: $space-3;
+        height: $space-3;
         border: 1px solid $color-brand-primary-300;
         border-radius: 100%;
         background: $color-structural-white;

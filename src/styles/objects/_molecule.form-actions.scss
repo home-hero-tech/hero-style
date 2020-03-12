@@ -2,7 +2,7 @@
 
 .c-form-actions {
   display: flex;
-  margin-top: $space-xs;
+  margin-top: $space-1;
 
   &--align-between {
     justify-content: space-between;
@@ -13,6 +13,6 @@
   }
 
   button + button {
-    margin-left: $space-xs;
+    margin-left: $space-1;
   }
 }

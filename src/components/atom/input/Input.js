@@ -3,14 +3,24 @@ import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import css from './Input.module.scss';
 
-const Input = ({ id, name, type, placeholder, value, onChange, disabled }) => {
+const Input = ({
+  id,
+  name,
+  type,
+  placeholder,
+  value,
+  onChange,
+  disabled,
+  dark
+}) => {
   const isCheckOrRadio = type === 'checkbox' || type === 'radio';
 
   const classes = classNames({
     [css['c-input']]: true,
     [css['c-input--disabled']]: disabled,
     [css[`c-input__${type}`]]: isCheckOrRadio,
-    [css[`c-input__${type}--disabled`]]: disabled && isCheckOrRadio
+    [css[`c-input__${type}--disabled`]]: disabled && isCheckOrRadio,
+    [css['c-input--dark']]: dark
   });
 
   return (
@@ -34,7 +44,8 @@ Input.propTypes = {
   placeholder: PropTypes.string,
   type: PropTypes.string,
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  disabled: PropTypes.bool
+  disabled: PropTypes.bool,
+  dark: PropTypes.bool
 };
 
 Input.defaultProps = {
@@ -44,7 +55,8 @@ Input.defaultProps = {
   placeholder: null,
   type: 'text',
   value: null,
-  disabled: null
+  disabled: null,
+  dark: null
 };
 
 export default Input;

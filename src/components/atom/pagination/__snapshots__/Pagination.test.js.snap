@@ -15,6 +15,7 @@ exports[`Pagination should match with the snapshot 1`] = `
     lastPageText="»"
     nextPageText="⟩"
     onChange={[Function]}
+    onClick={[Function]}
     pageRangeDisplayed={5}
     prevPageText="⟨"
     totalItemsCount={450}

@@ -1,6 +1,7 @@
 import React from 'react';
 import { action } from '@storybook/addon-actions';
 
+import { Grid } from 'react-flexbox-grid';
 import Form from '../../components/organism/form/Form';
 import FormRow from '../../components/molecule/form-row/FormRow';
 import FormGroup from '../../components/molecule/form-group/FormGroup';
@@ -15,48 +16,50 @@ export default {
 };
 
 const _style = {
-  maxWidth: '400px'
+  maxWidth: '50%'
 };
 
 export const Default = () => (
   <div style={_style}>
     <Form onSubmit={action('submitted')}>
-      <FormRow>
-        <FormGroup>
-          <Label name="ipt">Label</Label>
-          <Input
-            id="ipt"
-            name="ipt"
-            type="text"
-            placeholder="Placeholder text"
-            value=""
-          />
-        </FormGroup>
-        <FormGroup>
-          <Label name="ipt">Label</Label>
-          <Input
-            id="ipt"
-            name="ipt"
-            type="text"
-            placeholder="Placeholder text"
-          />
-        </FormGroup>
-      </FormRow>
-      <FormRow>
-        <FormGroup>
-          <Label name="ipt">Label</Label>
-          <Input
-            id="ipt"
-            name="ipt"
-            type="text"
-            placeholder="Placeholder text"
-          />
-        </FormGroup>
-      </FormRow>
-      <FormActions>
-        <Button type="submit">Submit</Button>
-        <Button onClick={action('cancel')}>Cancel</Button>
-      </FormActions>
+      <Grid fluid>
+        <FormRow>
+          <FormGroup md>
+            <Label name="ipt">Label</Label>
+            <Input
+              id="ipt"
+              name="ipt"
+              type="text"
+              placeholder="Placeholder text"
+              value=""
+            />
+          </FormGroup>
+          <FormGroup md>
+            <Label name="ipt">Label</Label>
+            <Input
+              id="ipt"
+              name="ipt"
+              type="text"
+              placeholder="Placeholder text"
+            />
+          </FormGroup>
+        </FormRow>
+        <FormRow>
+          <FormGroup md>
+            <Label name="ipt">Label</Label>
+            <Input
+              id="ipt"
+              name="ipt"
+              type="text"
+              placeholder="Placeholder text"
+            />
+          </FormGroup>
+        </FormRow>
+        <FormActions>
+          <Button type="submit">Submit</Button>
+          <Button onClick={action('cancel')}>Cancel</Button>
+        </FormActions>
+      </Grid>
     </Form>
   </div>
 );
@@ -64,44 +67,46 @@ export const Default = () => (
 export const AlignBetween = () => (
   <div style={_style}>
     <Form onSubmit={action('submitted')}>
-      <FormRow>
-        <FormGroup>
-          <Label name="ipt">Label</Label>
-          <Input
-            id="ipt"
-            name="ipt"
-            type="text"
-            placeholder="Placeholder text"
-            value=""
-          />
-        </FormGroup>
-        <FormGroup>
-          <Label name="ipt">Label</Label>
-          <Input
-            id="ipt"
-            name="ipt"
-            type="text"
-            placeholder="Placeholder text"
-            value=""
-          />
-        </FormGroup>
-      </FormRow>
-      <FormRow>
-        <FormGroup>
-          <Label name="ipt">Label</Label>
-          <Input
-            id="ipt"
-            name="ipt"
-            type="text"
-            placeholder="Placeholder text"
-            value=""
-          />
-        </FormGroup>
-      </FormRow>
-      <FormActions alignBetween>
-        <Button type="submit">Submit</Button>
-        <Button onClick={action('cancel')}>Cancel</Button>
-      </FormActions>
+      <Grid fluid>
+        <FormRow>
+          <FormGroup md xs={12}>
+            <Label name="ipt">Label</Label>
+            <Input
+              id="ipt"
+              name="ipt"
+              type="text"
+              placeholder="Placeholder text"
+              value=""
+            />
+          </FormGroup>
+          <FormGroup md xs={12}>
+            <Label name="ipt">Label</Label>
+            <Input
+              id="ipt"
+              name="ipt"
+              type="text"
+              placeholder="Placeholder text"
+              value=""
+            />
+          </FormGroup>
+        </FormRow>
+        <FormRow>
+          <FormGroup md>
+            <Label name="ipt">Label</Label>
+            <Input
+              id="ipt"
+              name="ipt"
+              type="text"
+              placeholder="Placeholder text"
+              value=""
+            />
+          </FormGroup>
+        </FormRow>
+        <FormActions alignBetween>
+          <Button type="submit">Submit</Button>
+          <Button onClick={action('cancel')}>Cancel</Button>
+        </FormActions>
+      </Grid>
     </Form>
   </div>
 );
@@ -109,44 +114,46 @@ export const AlignBetween = () => (
 export const AlignEnd = () => (
   <div style={_style}>
     <Form onSubmit={action('submitted')}>
-      <FormRow>
-        <FormGroup>
-          <Label name="ipt">Label</Label>
-          <Input
-            id="ipt"
-            name="ipt"
-            type="text"
-            placeholder="Placeholder text"
-            value=""
-          />
-        </FormGroup>
-        <FormGroup>
-          <Label name="ipt">Label</Label>
-          <Input
-            id="ipt"
-            name="ipt"
-            type="text"
-            placeholder="Placeholder text"
-            value=""
-          />
-        </FormGroup>
-      </FormRow>
-      <FormRow>
-        <FormGroup>
-          <Label name="ipt">Label</Label>
-          <Input
-            id="ipt"
-            name="ipt"
-            type="text"
-            placeholder="Placeholder text"
-            value=""
-          />
-        </FormGroup>
-      </FormRow>
-      <FormActions alignEnd>
-        <Button type="submit">Submit</Button>
-        <Button onClick={action('cancel')}>Cancel</Button>
-      </FormActions>
+      <Grid fluid>
+        <FormRow>
+          <FormGroup md>
+            <Label name="ipt">Label</Label>
+            <Input
+              id="ipt"
+              name="ipt"
+              type="text"
+              placeholder="Placeholder text"
+              value=""
+            />
+          </FormGroup>
+          <FormGroup md>
+            <Label name="ipt">Label</Label>
+            <Input
+              id="ipt"
+              name="ipt"
+              type="text"
+              placeholder="Placeholder text"
+              value=""
+            />
+          </FormGroup>
+        </FormRow>
+        <FormRow>
+          <FormGroup md>
+            <Label name="ipt">Label</Label>
+            <Input
+              id="ipt"
+              name="ipt"
+              type="text"
+              placeholder="Placeholder text"
+              value=""
+            />
+          </FormGroup>
+        </FormRow>
+        <FormActions alignEnd>
+          <Button type="submit">Submit</Button>
+          <Button onClick={action('cancel')}>Cancel</Button>
+        </FormActions>
+      </Grid>
     </Form>
   </div>
 );

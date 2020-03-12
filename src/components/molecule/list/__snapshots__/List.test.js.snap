@@ -2,7 +2,7 @@
 
 exports[`List should match with the snapshot 1`] = `
 <ul
-  className="c-list"
+  className="c-list c-list--1"
 >
   <ListItem>
     <div>

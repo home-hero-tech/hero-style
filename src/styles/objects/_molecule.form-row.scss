@@ -2,9 +2,7 @@
 @import "../tools/tools";
 
 .c-form-row {
-  display: flex;
-
   & + .c-form-row {
-    margin-top: $space-sm;
+    margin-top: $space-2;
   }
 }

@@ -1,0 +1,41 @@
+@import "../settings/spaces";
+
+.c-list {
+  list-style: none;
+
+  &--0 {
+    > li + li {
+      margin-top: $space-0;
+    }
+  }
+
+  &--1 {
+    > li + li {
+      margin-top: $space-1;
+    }
+  }
+
+  &--2 {
+    > li + li {
+      margin-top: $space-2;
+    }
+  }
+
+  &--3 {
+    > li + li {
+      margin-top: $space-3;
+    }
+  }
+
+  &--4 {
+    > li + li {
+      margin-top: $space-4;
+    }
+  }
+
+  &--5 {
+    > li + li {
+      margin-top: $space-5;
+    }
+  }
+}

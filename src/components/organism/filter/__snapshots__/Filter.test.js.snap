@@ -1,0 +1,177 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Filter should match with the snapshot 1`] = `
+<div
+  className="c-filter"
+>
+  <div
+    className="c-filter__header"
+    onKeyPress={[Function]}
+    role="button"
+    tabIndex={0}
+  >
+    <Row>
+      <Col
+        md={2}
+      >
+        <FontAwesomeIcon
+          border={false}
+          className=""
+          fixedWidth={false}
+          flip={null}
+          icon={
+            Object {
+              "icon": Array [
+                512,
+                512,
+                Array [],
+                "f0b0",
+                "M479.968 0H32.038C3.613 0-10.729 34.487 9.41 54.627L192 237.255V424a31.996 31.996 0 0 0 10.928 24.082l64 55.983c20.438 17.883 53.072 3.68 53.072-24.082V237.255L502.595 54.627C522.695 34.528 508.45 0 479.968 0zM288 224v256l-64-56V224L32 32h448L288 224z",
+              ],
+              "iconName": "filter",
+              "prefix": "fal",
+            }
+          }
+          inverse={false}
+          listItem={false}
+          mask={null}
+          pull={null}
+          pulse={false}
+          rotation={null}
+          size={null}
+          spin={false}
+          swapOpacity={false}
+          symbol={false}
+          title=""
+          transform={null}
+        />
+        <span>
+          Filtro
+        </span>
+      </Col>
+      <Col
+        md={true}
+      >
+        <p>
+          3
+          encontrados
+        </p>
+      </Col>
+      <Col
+        md={2}
+      >
+        <FontAwesomeIcon
+          border={false}
+          className=""
+          fixedWidth={false}
+          flip={null}
+          icon={
+            Object {
+              "icon": Array [
+                320,
+                512,
+                Array [],
+                "f0dc",
+                "M288 288H32c-28.4 0-42.8 34.5-22.6 54.6l128 128c12.5 12.5 32.8 12.5 45.3 0l128-128c20-20.1 5.7-54.6-22.7-54.6zM160 448L32 320h256L160 448zM32 224h256c28.4 0 42.8-34.5 22.6-54.6l-128-128c-12.5-12.5-32.8-12.5-45.3 0l-128 128C-10.7 189.5 3.6 224 32 224zM160 64l128 128H32L160 64z",
+              ],
+              "iconName": "sort",
+              "prefix": "fal",
+            }
+          }
+          inverse={false}
+          listItem={false}
+          mask={null}
+          pull={null}
+          pulse={false}
+          rotation={null}
+          size={null}
+          spin={false}
+          swapOpacity={false}
+          symbol={false}
+          title=""
+          transform={null}
+        />
+        <span>
+          Ordernar: A-z
+        </span>
+      </Col>
+    </Row>
+  </div>
+  <div
+    className="c-filter__content c-filter__content--open"
+  >
+    <Form
+      onSubmit={[Function]}
+    >
+      <Grid
+        fluid={true}
+      >
+        <FormRow>
+          <FormGroup
+            error={false}
+            md={4}
+            success={false}
+          >
+            <Label
+              name="ipt"
+            >
+              Label
+            </Label>
+            <Input
+              dark={null}
+              disabled={null}
+              id="ipt"
+              name="ipt"
+              onChange={[Function]}
+              placeholder="Placeholder text"
+              type="text"
+              value=""
+            />
+          </FormGroup>
+          <FormGroup
+            error={false}
+            md={4}
+            success={false}
+          >
+            <Label
+              name="ipt"
+            >
+              Label
+            </Label>
+            <Input
+              dark={null}
+              disabled={null}
+              id="ipt"
+              name="ipt"
+              onChange={[Function]}
+              placeholder="Placeholder text"
+              type="text"
+              value=""
+            />
+          </FormGroup>
+        </FormRow>
+        <FormActions
+          alignBetween={false}
+          alignEnd={true}
+        >
+          <Button
+            danger={false}
+            primary={false}
+            success={false}
+          >
+            Limpar filtros
+          </Button>
+          <Button
+            danger={false}
+            primary={false}
+            success={true}
+            type="submit"
+          >
+            Filtrar
+          </Button>
+        </FormActions>
+      </Grid>
+    </Form>
+  </div>
+</div>
+`;

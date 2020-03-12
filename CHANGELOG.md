@@ -142,3 +142,48 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.0.22] - 2020-03-10
 ### Added
 - Added [Media Query](https://github.com/sass-mq) tool helper.
+
+## [1.0.23] - 2020-03-10
+### Added
+- Publishing Card/CardItem components and added tests for them.
+
+### Changed
+- Updated snapshots from some components.
+
+## [1.0.24] - 2020-03-10
+### Added
+- primary props for CardItem.
+
+## [1.0.25] - 2020-03-11
+### Added
+- Loader components and its tests.
+- Filter component and its tests.
+
+### Changed
+- Form components are using Grid components to organize the structure.
+- Components adjusted to uses level instead sizes like params.
+- Updated tests.
+- Fixed lint.
+
+## [1.0.26] - 2020-03-11
+### Added
+- Publishing Filter component.
+
+## [1.0.27] - 2020-03-11
+### Added
+- BoxShadow component and its tests.
+
+## [1.0.28] - 2020-03-11
+### Added
+- Publishing BoxShadow component.
+
+## [1.0.29] - 2020-03-11
+### Added
+- Publishing Loader component.
+
+## [1.0.30] - 2020-03-11
+### Added
+- Missing css imports in object folder.
+
+### Changed
+- Adjusted onChange from Filter components.

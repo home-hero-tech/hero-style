@@ -2,15 +2,13 @@
 @import "../tools/tools";
 
 .c-form-group {
-  position: relative;
-  width: 100%;
-
   display: flex;
   justify-content: flex-end;
   flex-direction: column;
+  position: relative;
 
   input {
-    margin: $space-xxs 0;
+    margin: $space-0 0;
     padding-right: 46px;
   }
 
@@ -31,12 +29,12 @@
       position: absolute;
       font-family: 'Font Awesome 5 Pro';
       font-weight: 900;
-      top: $space-md;
+      top: $space-3;
       right: 1px;
       background-color: white;
-      padding: $space-xs $space-sm;
-      border-top-right-radius: $default-radius;
-      border-bottom-right-radius: $default-radius;
+      padding: $space-1 $space-2;
+      border-top-right-radius: $radius-2;
+      border-bottom-right-radius: $radius-2;
     }
   }
 
@@ -56,16 +54,12 @@
       font-size: $font-size-md;
       position: absolute;
       font-family: 'Font Awesome 5 Pro';
-      top: $space-md;
+      top: $space-3;
       right: 1px;
       background-color: white;
-      padding: $space-xs $space-sm;
-      border-top-right-radius: $default-radius;
-      border-bottom-right-radius: $default-radius;
+      padding: $space-1 $space-2;
+      border-top-right-radius: $radius-2;
+      border-bottom-right-radius: $radius-2;
     }
-  }
-
-  & + .c-form-group {
-    margin-left: $space-xs;
   }
 }

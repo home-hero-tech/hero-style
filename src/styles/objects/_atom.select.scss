@@ -10,10 +10,10 @@
 
   :global {
     .css-yk16xz-control {
-      height: $space-xlg;
-      min-height: $space-xlg;
+      height: $space-5;
+      min-height: $space-5;
       border: 1px solid $color-brand-gray-100;
-      border-radius: $default-radius;
+      border-radius: $radius-2;
 
       &:focus {
         border: 1px solid CurrentColor;
@@ -26,8 +26,8 @@
     }
 
     .css-1pahdxg-control {
-      height: $space-xlg;
-      min-height: $space-xlg;
+      height: $space-5;
+      min-height: $space-5;
       box-shadow: none;
       border: 1px solid CurrentColor;
       background-color: transparent;
@@ -38,7 +38,7 @@
       }
 
       .css-1hwfws3 {
-        padding-left: $space-sm;
+        padding-left: $space-2;
       }
     }
 
@@ -46,7 +46,7 @@
       background-color: $color-brand-primary-300;
       border-radius: 12px;
       color: $color-structural-white;
-      padding: 2px $space-xxs;
+      padding: 2px $space-0;
 
       .css-12jo7m5 {
         color: $color-structural-white;
@@ -82,9 +82,9 @@
         top: 0;
         right: 0;
         background-color: white;
-        padding: $space-xs $space-sm;
-        border-top-right-radius: $default-radius;
-        border-bottom-right-radius: $default-radius;
+        padding: $space-1 $space-2;
+        border-top-right-radius: $radius-2;
+        border-bottom-right-radius: $radius-2;
       }
     }
 
@@ -94,7 +94,7 @@
       .css-1n7v3ny-option,  .css-yt9ioa-option, .css-9gakcf-option {
         background-color: $color-structural-white;
         color: $color-brand-gray-200;
-        padding-left: $space-sm;
+        padding-left: $space-2;
       }
 
       .css-1n7v3ny-option {
