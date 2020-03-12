@@ -4,26 +4,35 @@ import PropTypes from 'prop-types';
 
 import css from './Button.module.scss';
 
-const Button = ({ primary, success, danger, children }) => {
+/* <Button type="primary" container="outlined" shape="squared" size="" /> */
+
+const Button = ({ shape, container, type, children }) => {
   const classes = classNames({
     [css['c-btn']]: true,
-    [css['c-btn--primary']]: primary,
-    [css['c-btn--danger']]: danger,
-    [css['c-btn--success']]: success
+    [css[`c-btn--${type}`]]: true,
+    [css[`c-btn--${shape}`]]: true,
+    [css[`c-btn--${container}`]]: true
   });
   return <button className={classes}>{children}</button>;
 };
 
 Button.propTypes = {
   children: PropTypes.string.isRequired,
-  danger: PropTypes.bool,
-  primary: PropTypes.bool,
-  success: PropTypes.bool
+  type: PropTypes.oneOf([
+    'default',
+    'primary',
+    'secondary',
+    'danger',
+    'success'
+  ]),
+  container: PropTypes.oneOf(['default', 'outlined', 'text']),
+  shape: PropTypes.oneOf(['squared', 'rounded'])
 };
+
 Button.defaultProps = {
-  danger: false,
-  primary: false,
-  success: false
+  type: 'default',
+  container: 'default',
+  shape: 'rounded'
 };
 
 export default Button;
