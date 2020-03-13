@@ -1,1 +1,19 @@
 @import "../../../styles/objects/atom.box-shadow";
+
+.c-box-shadow {
+  &--radius-1 {
+    border-radius: $radius-1;
+  }
+
+  &--radius-2 {
+    border-radius: $radius-2;
+  }
+
+  &--radius-3 {
+    border-radius: $radius-3;
+  }
+
+  &--radius-4 {
+    border-radius: $radius-4;
+  }
+}
