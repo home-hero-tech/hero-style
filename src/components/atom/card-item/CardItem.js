@@ -24,7 +24,7 @@ ListItem.propTypes = {
   format: PropTypes.string,
   label: PropTypes.string,
   primary: PropTypes.bool,
-  value: PropTypes.oneOfType([PropTypes.string, PropTypes.instanceOf(Date)])
+  value: PropTypes.oneOfType([PropTypes.string, PropTypes.instanceOf(Date), PropTypes.number])
     .isRequired
 };
 

@@ -69,32 +69,34 @@ export const ClosedFilter = () => {
 
 export const OpenedFilter = () => {
   const toggle = true;
+
   return (
-    <Filter showFilters={toggle} onClick={action('clicked')} totalItems={3}>
-      <Form onSubmit={() => {}}>
-        <Grid fluid style={{ padding: 0 }}>
-          <FormRow>
-            <FormGroup md={4}>
-              <Label name="ipt">Label</Label>
-              <DatePicker />
-            </FormGroup>
-            <FormGroup md={4}>
-              <Label name="ipt">Label</Label>
-              <Select
-                options={options}
-                placeholder="Test"
-                value={currentOption}
-              />
-            </FormGroup>
-          </FormRow>
-          <FormActions alignEnd>
-            <Button onClick={action('Clean')}>Limpar filtros</Button>
-            <Button success onClick={action('Filter')} type="submit">
-              Filtrar
-            </Button>
-          </FormActions>
-        </Grid>
-      </Form>
+    <Filter
+      showFilters={toggle}
+      onClick={action('clicked')}
+      totalItems={3}
+      onSubmit={() => {}}
+    >
+      <FormRow>
+        <FormGroup md={4}>
+          <Label name="ipt">Label</Label>
+          <DatePicker />
+        </FormGroup>
+        <FormGroup md={4}>
+          <Label name="ipt">Label</Label>
+          <Select
+            options={options}
+            placeholder="Test"
+            value={currentOption}
+          />
+        </FormGroup>
+      </FormRow>
+      <FormActions alignEnd>
+        <Button onClick={action('Clean')}>Limpar filtros</Button>
+        <Button type="success" onClick={action('Filter')}>
+          Filtrar
+        </Button>
+      </FormActions>
     </Filter>
   );
 };

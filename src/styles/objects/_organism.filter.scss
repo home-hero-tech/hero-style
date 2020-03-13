@@ -7,7 +7,7 @@
   border-radius: $radius-2;
 
   &__header {
-    background: linear-gradient(-116.56505117707799deg, rgb(108, 119, 150) 0%, rgb(75, 84, 110) 100%);
+    background: $gradient-brand-gray-300-100-270;
     width: 100%;
     height: $filter-height;
     padding: 0 $space-3;
@@ -35,7 +35,7 @@
     transition: all 0.3s ease;
 
     &--open {
-      padding: $space-4 $space-3;
+      padding: $space-3;
 
       @include mq($until: desktop) {
         padding: $space-2 $space-0;
@@ -44,5 +44,9 @@
       max-height: 1000px;
       transition: all 0.3s ease;
     }
+  }
+
+  &__footer {
+    padding: $space-2 $space-3;
   }
 }

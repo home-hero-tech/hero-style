@@ -113,11 +113,11 @@
 
         &--selected {
           color: $color-structural-white;
-          background: $color-brand-primary-gradient;
+          background: $gradient-brand-primary-300-100-315;
           border-radius: $radius-percent-50;
 
           &:hover {
-            background: $color-brand-primary-gradient;
+            background: $gradient-brand-primary-300-100-315;
             border-radius: $radius-percent-50;
           }
         }
