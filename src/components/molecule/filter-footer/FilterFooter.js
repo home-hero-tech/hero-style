@@ -4,9 +4,7 @@ import PropTypes from 'prop-types';
 import css from './FilterFooter.module.scss';
 
 const FilterFooter = ({ children }) => (
-  <div className={css['c-filter-footer']}>
-    {children}
-  </div>
+  <div className={css['c-filter-footer']}>{children}</div>
 );
 
 FilterFooter.propTypes = {

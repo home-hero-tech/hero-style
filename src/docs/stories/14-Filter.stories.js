@@ -84,11 +84,7 @@ export const OpenedFilter = () => {
         </FormGroup>
         <FormGroup md={4}>
           <Label name="ipt">Label</Label>
-          <Select
-            options={options}
-            placeholder="Test"
-            value={currentOption}
-          />
+          <Select options={options} placeholder="Test" value={currentOption} />
         </FormGroup>
       </FormRow>
       <FormActions alignEnd>

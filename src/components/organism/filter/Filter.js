@@ -4,14 +4,21 @@ import classNames from 'classnames';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFilter, faSort } from '@fortawesome/pro-light-svg-icons';
 
+import { Grid } from 'react-flexbox-grid';
 import Text from '../../atom/text/Text';
 import BoxShadow from '../../atom/box-shadow/BoxShadow';
 import Form from '../form/Form';
-import { Grid } from 'react-flexbox-grid';
 
 import css from './Filter.module.scss';
 
-const Filter = ({ tabIndex, onClick, showFilters, totalItems, onSubmit, children }) => {
+const Filter = ({
+  tabIndex,
+  onClick,
+  showFilters,
+  totalItems,
+  onSubmit,
+  children
+}) => {
   const classes = classNames({
     [css['c-filter__content']]: true,
     [css['c-filter__content--open']]: showFilters
@@ -19,8 +26,8 @@ const Filter = ({ tabIndex, onClick, showFilters, totalItems, onSubmit, children
 
   const contentRender = () => (
     <>
-    <div className={classes}>{children[0]}</div>
-    <div className={css['c-filter__footer']}>{children[1]}</div>
+      <div className={classes}>{children[0]}</div>
+      <div className={css['c-filter__footer']}>{children[1]}</div>
     </>
   );
 
@@ -67,6 +74,7 @@ Filter.propTypes = {
     PropTypes.string
   ]).isRequired,
   onClick: PropTypes.func,
+  onSubmit: PropTypes.func,
   showFilters: PropTypes.bool,
   tabIndex: PropTypes.number,
   totalItems: PropTypes.number
@@ -74,6 +82,7 @@ Filter.propTypes = {
 
 Filter.defaultProps = {
   onClick: null,
+  onSubmit: null,
   showFilters: false,
   tabIndex: 0,
   totalItems: 0
