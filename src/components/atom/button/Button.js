@@ -33,7 +33,7 @@ const Button = ({
 };
 
 Button.propTypes = {
-  onClick: PropTypes.func.isRequired,
+  onClick: PropTypes.func,
   children: PropTypes.string.isRequired,
   type: PropTypes.oneOf([
     'default',
@@ -49,6 +49,7 @@ Button.propTypes = {
 };
 
 Button.defaultProps = {
+  onClick: null,
   submit: false,
   type: 'default',
   container: 'default',
