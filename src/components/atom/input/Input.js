@@ -32,7 +32,7 @@ const Input = ({
       type={type}
       placeholder={placeholder}
       value={value}
-      defaultValue={value}
+      defaultValue={defaultValue}
       onChange={onChange}
       disabled={disabled}
     />
