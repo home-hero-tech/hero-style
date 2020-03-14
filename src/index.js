@@ -22,6 +22,9 @@ import FormActions from './components/molecule/form-actions/FormActions';
 import FormGroup from './components/molecule/form-group/FormGroup';
 import FormRow from './components/molecule/form-row/FormRow';
 import List from './components/molecule/list/List';
+import FilterHeader from './components/molecule/filter-header/FilterHeader';
+import FilterContent from './components/molecule/filter-content/FilterContent';
+import FilterFooter from './components/molecule/filter-footer/FilterFooter';
 
 // organisms
 import Form from './components/organism/form/Form';
@@ -35,6 +38,9 @@ export {
   Col,
   DatePicker,
   Filter,
+  FilterHeader,
+  FilterContent,
+  FilterFooter,
   Form,
   FormActions,
   FormGroup,
