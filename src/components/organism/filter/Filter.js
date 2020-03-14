@@ -6,9 +6,7 @@ import css from './Filter.module.scss';
 const Filter = ({ children }) => {
   return (
     <div className={css['c-filter']}>
-      <form>
-        {children}
-      </form>
+      <form>{children}</form>
     </div>
   );
 };
@@ -21,7 +19,6 @@ Filter.propTypes = {
   ]).isRequired
 };
 
-Filter.defaultProps = {
-};
+Filter.defaultProps = {};
 
 export default Filter;

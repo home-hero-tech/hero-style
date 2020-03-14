@@ -7,11 +7,7 @@ import Text from '../../atom/text/Text';
 
 import css from '../../organism/filter/Filter.module.scss';
 
-const FilterHeader = ({
-  onClick,
-  tabIndex,
-  totalItems
-}) => (
+const FilterHeader = ({ onClick, tabIndex, totalItems }) => (
   <BoxShadow level={1} radius={4}>
     <div
       className={css['c-filter__header']}

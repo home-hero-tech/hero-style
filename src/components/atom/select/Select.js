@@ -70,7 +70,8 @@ Select.defaultProps = {
   options: null,
   placeholder: null,
   noOptionsMessage: f => f,
-  value: null
+  value: null,
+  dark: false
 };
 
 export default Select;

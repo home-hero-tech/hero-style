@@ -13,7 +13,8 @@ const DatePicker = ({ selected, format, onChange, dark, ...otherProps }) => {
     [cssInput['c-input--dark']]: dark
   });
 
-  return (<div className={css[className]}>
+  return (
+    <div className={css[className]}>
       <RDatePicker
         selected={selected}
         format={format}
@@ -34,19 +35,21 @@ const DatePicker = ({ selected, format, onChange, dark, ...otherProps }) => {
         {...otherProps}
       />
     </div>
-  )
+  );
 };
 
 DatePicker.propTypes = {
   format: PropTypes.string,
   onChange: PropTypes.func,
-  selected: PropTypes.instanceOf(Date)
+  selected: PropTypes.instanceOf(Date),
+  dark: PropTypes.bool
 };
 
 DatePicker.defaultProps = {
   format: 'dd/MM/yyyy',
   onChange: f => f,
-  selected: new Date()
+  selected: new Date(),
+  dark: false
 };
 
 export default DatePicker;

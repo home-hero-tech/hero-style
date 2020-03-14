@@ -42,10 +42,18 @@ export const Sizes = () => (
 export const Types = () => (
   <Wrapper style={{ ..._wrapperStyle, width: 500 }}>
     <Button onClick={action('clicked')}>Default</Button>
-    <Button type="primary" onClick={action('clicked')}>Primary</Button>
-    <Button type="secondary" onClick={action('clicked')}>Secondary</Button>
-    <Button type="danger" onClick={action('clicked')}>Danger</Button>
-    <Button type="success" onClick={action('clicked')}>Success</Button>
+    <Button type="primary" onClick={action('clicked')}>
+      Primary
+    </Button>
+    <Button type="secondary" onClick={action('clicked')}>
+      Secondary
+    </Button>
+    <Button type="danger" onClick={action('clicked')}>
+      Danger
+    </Button>
+    <Button type="success" onClick={action('clicked')}>
+      Success
+    </Button>
   </Wrapper>
 );
 
@@ -62,7 +70,9 @@ export const Shapes = () => (
 
 export const Containers = () => (
   <Wrapper style={{ ..._wrapperStyle, width: 310 }}>
-    <Button type="primary" onClick={action('clicked')}>Contained</Button>
+    <Button type="primary" onClick={action('clicked')}>
+      Contained
+    </Button>
     <Button type="primary" container="outlined" onClick={action('clicked')}>
       Outlined
     </Button>

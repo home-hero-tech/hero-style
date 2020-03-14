@@ -5,12 +5,9 @@ import css from '../../organism/filter/Filter.module.scss';
 
 const FilterFooter = ({ showFilters, children }) => (
   <>
-  {
-    showFilters ? (
-      <div className={css['c-filter__footer']}>
-        {children}
-      </div>) : null
-  }
+    {showFilters ? (
+      <div className={css['c-filter__footer']}>{children}</div>
+    ) : null}
   </>
 );
 
@@ -21,6 +18,10 @@ FilterFooter.propTypes = {
     PropTypes.object
   ]).isRequired,
   showFilters: PropTypes.bool
+};
+
+FilterFooter.defaultProps = {
+  showFilters: false
 };
 
 export default FilterFooter;
