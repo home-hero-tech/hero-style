@@ -9,6 +9,7 @@ const Input = ({
   type,
   placeholder,
   value,
+  defaultValue,
   onChange,
   disabled,
   dark
@@ -31,6 +32,7 @@ const Input = ({
       type={type}
       placeholder={placeholder}
       value={value}
+      defaultValue={value}
       onChange={onChange}
       disabled={disabled}
     />
@@ -44,6 +46,7 @@ Input.propTypes = {
   placeholder: PropTypes.string,
   type: PropTypes.string,
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  defaultValue: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   disabled: PropTypes.bool,
   dark: PropTypes.bool
 };
@@ -55,6 +58,7 @@ Input.defaultProps = {
   placeholder: null,
   type: 'text',
   value: null,
+  defaultValue: null,
   disabled: null,
   dark: null
 };
