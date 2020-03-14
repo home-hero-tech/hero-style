@@ -31,19 +31,7 @@
   }
 
   &__content {
-    max-height: 0;
-    transition: all 0.3s ease;
-
-    &--open {
-      padding: $space-3;
-
-      @include mq($until: desktop) {
-        padding: $space-2 $space-0;
-      }
-
-      max-height: 1000px;
-      transition: all 0.3s ease;
-    }
+    padding: $space-3;
   }
 
   &__footer {

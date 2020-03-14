@@ -15,13 +15,16 @@ const Select = ({
   placeholder,
   noOptionsMessage,
   isClearable,
-  value
+  value,
+  dark
 }) => {
+  const className = dark ? 'c-select--dark' : 'c-select';
+
   return (
     <RSelect
       autoFocus={autoFocus}
-      className={css['c-select']}
-      classNamePrefix="c-select"
+      className={css[className]}
+      classNamePrefix={className}
       isDisabled={isDisabled}
       isMulti={isMulti}
       isSearchable={isSearchable}
@@ -52,7 +55,8 @@ Select.propTypes = {
     PropTypes.object,
     PropTypes.string,
     PropTypes.number
-  ])
+  ]),
+  dark: PropTypes.bool
 };
 
 Select.defaultProps = {

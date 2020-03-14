@@ -3,18 +3,13 @@ import PropTypes from 'prop-types';
 
 import css from '../../organism/filter/Filter.module.scss';
 
-const FilterFooter = ({ showFilters, children }) => (
+const FilterContent = ({ showFilters, children }) => (
   <>
-  {
-    showFilters ? (
-      <div className={css['c-filter__footer']}>
-        {children}
-      </div>) : null
-  }
+  { showFilters ? (<div className={css['c-filter__content']}>{children}</div>) : null }
   </>
 );
 
-FilterFooter.propTypes = {
+FilterContent.propTypes = {
   children: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.array,
@@ -23,4 +18,4 @@ FilterFooter.propTypes = {
   showFilters: PropTypes.bool
 };
 
-export default FilterFooter;
+export default FilterContent;

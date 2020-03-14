@@ -6,7 +6,7 @@
 
     .react-datepicker {
       border: none;
-      box-shadow: $color-box-shadow;
+      box-shadow: $elevation-4;
       padding: 0 $space-2;
 
       &-wrapper {
@@ -30,7 +30,7 @@
         background-color: $color-structural-white;
         padding: 0;
         border-radius: $radius-2;
-        box-shadow: $color-box-shadow-2;
+        box-shadow: $elevation-1;
         height: $space-3;
         width: $space-3;
         border: none;
@@ -124,6 +124,140 @@
 
         &--outside-month {
           color: $color-brand-gray-200;
+        }
+      }
+    }
+  }
+
+  &--dark {
+    background-color: $color-brand-gray-500;
+
+    :global {
+      @import "~react-datepicker/dist/react-datepicker.min.css";
+
+      .react-datepicker {
+        border: none;
+        box-shadow: $elevation-4;
+        padding: 0 $space-2;
+        background-color: $color-brand-gray-500;
+
+        &-wrapper {
+          width: 100%;
+        }
+
+        &__input-container {
+          &:after {
+            content: '\f073';
+            font-size: $font-size-md;
+            position: absolute;
+            font-family: $font-family-awesome-5-pro;
+            top: $space-0;
+            right: 1px;
+            background-color: transparent;
+            padding: $space-1 $space-2;
+            color: $color-structural-white;
+          }
+        }
+
+        &__navigation {
+          background-color: $color-brand-gray-600;
+          padding: 0;
+          border-radius: $radius-2;
+          box-shadow: $elevation-1;
+          height: $space-3;
+          width: $space-3;
+          border: none;
+        }
+
+        &__navigation--previous,
+        &__navigation--next {
+          &:after {
+            content: '';
+            border: solid $color-brand-primary-300;
+            border-width: 0 2px 2px 0;
+            display: inline-block;
+            height: $space-1;
+            width: $space-1;
+            position: absolute;
+            top: 0;
+            left: 0;
+            margin: $space-1;
+          }
+        }
+
+        &__navigation--next {
+          &:after {
+            transform: rotate(-45deg);
+            -webkit-transform: rotate(-45deg);
+          }
+        }
+
+        &__navigation--previous {
+          &:after {
+            transform: rotate(135deg);
+            -webkit-transform: rotate(135deg);
+          }
+        }
+
+        &__header {
+          background-color: $color-brand-gray-500;
+          font-size: $font-size-sm;
+          font-family: $font-family;
+          font-weight: normal;
+          border-color: #ecebed;
+        }
+
+        &__day-name {
+          color: $color-brand-gray-200;
+        }
+
+        &__current-month {
+          margin-top: $space-1;
+          color: $color-structural-white;
+          font-size: $font-size-md;
+          font-family: $font-family;
+          font-weight: normal;
+        }
+
+        &__month {
+          font-family: $font-family;
+          font-size: $font-size-sm;
+        }
+
+        &__day {
+          color: $color-structural-white;
+
+          &:hover {
+            background: none;
+            font-weight: bold;
+          }
+
+          &--today {
+            color: $color-brand-primary-300;
+            background-color: $color-brand-gray-600;
+            border-radius: $radius-percent-50;
+            font-weight: normal;
+
+            &:hover {
+              background-color: $color-brand-gray-050;
+              border-radius: $radius-percent-50;
+            }
+          }
+
+          &--selected {
+            color: $color-structural-white;
+            background: $gradient-brand-primary-300-100-315;
+            border-radius: $radius-percent-50;
+
+            &:hover {
+              background: $gradient-brand-primary-300-100-315;
+              border-radius: $radius-percent-50;
+            }
+          }
+
+          &--outside-month {
+            color: $color-brand-gray-200;
+          }
         }
       }
     }

@@ -11,7 +11,7 @@ $base: 8px;
   cursor: pointer;
   transition: all .3s ease-in-out;
   border: solid 1px currentColor;
-  box-shadow: $color-box-shadow;
+  box-shadow: $elevation-4;
   white-space: nowrap;
   width: min-content;
 

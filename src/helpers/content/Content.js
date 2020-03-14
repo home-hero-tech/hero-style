@@ -8,7 +8,7 @@ const _contentStyle = {
 const Content = ({ children }) => <div style={_contentStyle}>{children}</div>;
 
 Content.propTypes = {
-  children: PropTypes.oneOfType([PropTypes.array, PropTypes.object])
+  children: PropTypes.any
 };
 Content.defaultProps = {
   children: null

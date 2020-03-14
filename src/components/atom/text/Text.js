@@ -16,7 +16,7 @@ const Text = ({ center, end, children }) => {
 
 Text.propTypes = {
   center: PropTypes.bool,
-  children: PropTypes.string,
+  children: PropTypes.any,
   end: PropTypes.bool
 };
 
