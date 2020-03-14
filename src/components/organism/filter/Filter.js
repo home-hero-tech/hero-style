@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 
 import css from './Filter.module.scss';
 
-const Filter = ({ children }) => {
+const Filter = ({ onSubmit, children }) => {
   return (
     <div className={css['c-filter']}>
-      <form>{children}</form>
+      <form onSubmit={onSubmit}>{children}</form>
     </div>
   );
 };
@@ -16,9 +16,12 @@ Filter.propTypes = {
     PropTypes.array,
     PropTypes.object,
     PropTypes.string
-  ]).isRequired
+  ]).isRequired,
+  onSubmit: PropTypes.func
 };
 
-Filter.defaultProps = {};
+Filter.defaultProps = {
+  onSubmit: null
+};
 
 export default Filter;
