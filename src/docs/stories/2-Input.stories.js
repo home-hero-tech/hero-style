@@ -19,7 +19,13 @@ export const Default = () => (
 
 export const DefaultDisabled = () => (
   <div style={_style}>
-    <Input placeholder="placeholder text" id="ipt" name="ipt" value="" disabled />
+    <Input
+      placeholder="placeholder text"
+      id="ipt"
+      name="ipt"
+      value=""
+      disabled
+    />
   </div>
 );
 
@@ -74,7 +80,6 @@ export const RadioButton = () => (
     onChange={action('toggleRadio')}
   />
 );
-
 
 export const RadioButtonChecked = () => (
   <Input
