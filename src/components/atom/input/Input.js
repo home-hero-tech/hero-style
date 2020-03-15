@@ -12,7 +12,8 @@ const Input = ({
   defaultValue,
   onChange,
   disabled,
-  dark
+  dark,
+  ...otherProps
 }) => {
   const isCheckOrRadio = type === 'checkbox' || type === 'radio';
 
@@ -24,7 +25,19 @@ const Input = ({
     [css['c-input--dark']]: dark
   });
 
-  return (
+  return defaultValue ? (
+    <input
+      className={classes}
+      id={id}
+      name={name}
+      type={type}
+      placeholder={placeholder}
+      defaultValue={defaultValue}
+      onChange={onChange}
+      disabled={disabled}
+      {...otherProps}
+    />
+  ) : (
     <input
       className={classes}
       id={id}
@@ -32,9 +45,9 @@ const Input = ({
       type={type}
       placeholder={placeholder}
       value={value}
-      defaultValue={defaultValue}
       onChange={onChange}
       disabled={disabled}
+      {...otherProps}
     />
   );
 };
@@ -45,7 +58,7 @@ Input.propTypes = {
   onChange: PropTypes.func,
   placeholder: PropTypes.string,
   type: PropTypes.string,
-  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.bool]),
   defaultValue: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   disabled: PropTypes.bool,
   dark: PropTypes.bool

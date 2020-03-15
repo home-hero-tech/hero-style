@@ -13,19 +13,19 @@ const _style = {
 
 export const Default = () => (
   <div style={_style}>
-    <Input placeholder="placeholder text" id="ipt" name="ipt" />
+    <Input placeholder="placeholder text" id="ipt" name="ipt" value="" />
   </div>
 );
 
 export const DefaultDisabled = () => (
   <div style={_style}>
-    <Input placeholder="placeholder text" id="ipt" name="ipt" disabled />
+    <Input placeholder="placeholder text" id="ipt" name="ipt" value="" disabled />
   </div>
 );
 
 export const Dark = () => (
   <div style={_style}>
-    <Input placeholder="placeholder text" id="ipt" name="ipt" dark />
+    <Input placeholder="placeholder text" id="ipt" name="ipt" value="" dark />
   </div>
 );
 
@@ -72,6 +72,19 @@ export const RadioButton = () => (
     type="radio"
     value="1"
     onChange={action('toggleRadio')}
+  />
+);
+
+
+export const RadioButtonChecked = () => (
+  <Input
+    placeholder="placeholder text"
+    id="ipt"
+    name="ipt"
+    type="radio"
+    value="1"
+    onChange={action('toggleRadio')}
+    checked
   />
 );
 
