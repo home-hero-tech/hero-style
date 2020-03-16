@@ -200,7 +200,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.0.34] - 2020-03-11
 - Builder adjustments.
 
-## [1.0.35] - 2020-03-11
+## [1.0.35] - 2020-03-12
 ### Added
 - Gradient variables.
 - Several css improvements.
+
+## [1.0.36] - 2020-03-12
+### Added
+- Text component and its tests.
+- Publishing Text component.
+
+## [1.0.36] ~ [1.0.49] - 2020-03-12 / 2020-03-16
+### Added
+- Several css improvements.
+
+## [1.0.50] - 2020-03-12
+### Changed
+- Heading font-family to "muli" like default font.

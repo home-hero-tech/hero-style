@@ -8,10 +8,13 @@ const _contentStyle = {
 const Content = ({ children }) => <div style={_contentStyle}>{children}</div>;
 
 Content.propTypes = {
-  children: PropTypes.oneOfType([PropTypes.array, PropTypes.object])
+  children: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.array,
+    PropTypes.object
+  ]).isRequired
 };
-Content.defaultProps = {
-  children: null
-};
+
+Content.defaultProps = {};
 
 export default Content;

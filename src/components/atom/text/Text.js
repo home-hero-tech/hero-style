@@ -16,7 +16,12 @@ const Text = ({ center, end, children }) => {
 
 Text.propTypes = {
   center: PropTypes.bool,
-  children: PropTypes.string,
+  children: PropTypes.PropTypes.oneOfType([
+    PropTypes.array,
+    PropTypes.object,
+    PropTypes.string,
+    PropTypes.number
+  ]),
   end: PropTypes.bool
 };
 

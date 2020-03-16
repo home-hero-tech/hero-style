@@ -21,6 +21,7 @@ export const Default = () => (
     options={options}
     placeholder={placeholder}
     noOptionsMessage={noOptionsMessage}
+    value={options[3]}
   />
 );
 

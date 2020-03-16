@@ -1,5 +1,7 @@
 import React from 'react';
 import { action } from '@storybook/addon-actions';
+
+import Wrapper from '../../helpers/wrapper/Wrapper';
 import Button from '../../components/atom/button/Button';
 
 export default {
@@ -7,21 +9,75 @@ export default {
   component: Button
 };
 
-export const Default = () => (
-  <Button onClick={action('clicked')}>Hello Button</Button>
+const _wrapperStyle = {
+  margin: 10,
+  display: 'flex',
+  justifyContent: 'space-around'
+};
+
+const _columnWrapperStype = {
+  ..._wrapperStyle,
+  width: 140,
+  height: 150,
+  flexDirection: 'column'
+};
+
+export const Sizes = () => (
+  <Wrapper style={_columnWrapperStype}>
+    <Button type="primary" size={1} onClick={action('clicked')}>
+      Button
+    </Button>
+    <Button type="primary" size={2} onClick={action('clicked')}>
+      Button
+    </Button>
+    <Button type="primary" size={3} onClick={action('clicked')}>
+      Button
+    </Button>
+    <Button type="primary" size={4} onClick={action('clicked')}>
+      Button
+    </Button>
+  </Wrapper>
 );
-export const Primary = () => (
-  <Button primary onClick={action('clicked')}>
-    Hello Button
-  </Button>
+
+export const Types = () => (
+  <Wrapper style={{ ..._wrapperStyle, width: 500 }}>
+    <Button onClick={action('clicked')}>Default</Button>
+    <Button type="primary" onClick={action('clicked')}>
+      Primary
+    </Button>
+    <Button type="secondary" onClick={action('clicked')}>
+      Secondary
+    </Button>
+    <Button type="danger" onClick={action('clicked')}>
+      Danger
+    </Button>
+    <Button type="success" onClick={action('clicked')}>
+      Success
+    </Button>
+  </Wrapper>
 );
-export const Danger = () => (
-  <Button danger onClick={action('clicked')}>
-    Hello Button
-  </Button>
+
+export const Shapes = () => (
+  <Wrapper style={{ ..._wrapperStyle, width: 210 }}>
+    <Button type="primary" onClick={action('clicked')}>
+      Rounded
+    </Button>
+    <Button type="primary" shape="squared" onClick={action('clicked')}>
+      Squared
+    </Button>
+  </Wrapper>
 );
-export const Success = () => (
-  <Button success onClick={action('clicked')}>
-    Hello Button
-  </Button>
+
+export const Containers = () => (
+  <Wrapper style={{ ..._wrapperStyle, width: 310 }}>
+    <Button type="primary" onClick={action('clicked')}>
+      Contained
+    </Button>
+    <Button type="primary" container="outlined" onClick={action('clicked')}>
+      Outlined
+    </Button>
+    <Button type="primary" container="text" onClick={action('clicked')}>
+      Text
+    </Button>
+  </Wrapper>
 );

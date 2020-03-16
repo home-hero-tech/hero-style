@@ -15,9 +15,9 @@ const _boxStyle = {
   borderRadius: '4px'
 };
 
-const Shadow = ({ level }) => (
+const Shadow = props => (
   <Wrapper style={_wrapperStyle}>
-    <BoxShadow level={level}>
+    <BoxShadow {...props}>
       <div style={_boxStyle} />
     </BoxShadow>
   </Wrapper>

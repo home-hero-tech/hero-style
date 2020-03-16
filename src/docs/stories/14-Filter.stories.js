@@ -1,16 +1,13 @@
 import React from 'react';
 import { action } from '@storybook/addon-actions';
 
-import { Grid } from 'react-flexbox-grid';
 import Filter from '../../components/organism/filter/Filter';
-import Form from '../../components/organism/form/Form';
+import FilterHeader from '../../components/molecule/filter-header/FilterHeader';
+import FilterContent from '../../components/molecule/filter-content/FilterContent';
+import FilterFooter from '../../components/molecule/filter-footer/FilterFooter';
+import FilterSearchForm from '../../helpers/forms/FilterSearchForm';
 import FormActions from '../../components/molecule/form-actions/FormActions';
-import FormRow from '../../components/molecule/form-row/FormRow';
-import FormGroup from '../../components/molecule/form-group/FormGroup';
-import Label from '../../components/atom/label/Label';
-import Input from '../../components/atom/input/Input';
 import Button from '../../components/atom/button/Button';
-import DatePicker from '../../components/atom/datepicker/DatePicker';
 
 export default {
   title: 'Filter',
@@ -21,73 +18,39 @@ export const ClosedFilter = () => {
   const toggle = false;
   return (
     <Filter showFilters={toggle} onClick={action('clicked')}>
-      <Form onSubmit={() => {}}>
-        <Grid fluid>
-          <FormRow>
-            <FormGroup md={4}>
-              <Label name="ipt">Label</Label>
-              <Input
-                id="ipt"
-                name="ipt"
-                type="text"
-                placeholder="Placeholder text"
-                value=""
-              />
-            </FormGroup>
-            <FormGroup md={4}>
-              <Label name="ipt">Label</Label>
-              <Input
-                id="ipt"
-                name="ipt"
-                type="text"
-                placeholder="Placeholder text"
-                value=""
-              />
-            </FormGroup>
-          </FormRow>
-          <FormActions alignEnd>
-            <Button onClick={action('Clean')}>Limpar filtros</Button>
-            <Button success onClick={action('Filter')} type="submit">
-              Filtrar
-            </Button>
-          </FormActions>
-        </Grid>
-      </Form>
+      <FilterHeader totalItems={0} onClick={action('ShowFilter')} />
+      <FilterContent showFilters={toggle}>
+        <FilterSearchForm />
+      </FilterContent>
+      <FilterFooter showFilters={toggle}>
+        <FormActions alignEnd>
+          <Button onClick={action('Clean')}>Limpar filtros</Button>
+          <Button type="success" onClick={action('Filter')}>
+            Filtrar
+          </Button>
+        </FormActions>
+      </FilterFooter>
     </Filter>
   );
 };
 
 export const OpenedFilter = () => {
   const toggle = true;
+
   return (
-    <Filter showFilters={toggle} onClick={action('clicked')} totalItems={3}>
-      <Form onSubmit={() => {}}>
-        <Grid fluid style={{ padding: 0 }}>
-          <FormRow>
-            <FormGroup md={4}>
-              <Label name="ipt">Label</Label>
-              <DatePicker />
-            </FormGroup>
-            <FormGroup md={4}>
-              <Label name="ipt">Label</Label>
-              <Input
-                id="ipt"
-                name="ipt"
-                type="text"
-                placeholder="Placeholder text"
-                value=""
-                dark
-              />
-            </FormGroup>
-          </FormRow>
-          <FormActions alignEnd>
-            <Button onClick={action('Clean')}>Limpar filtros</Button>
-            <Button success onClick={action('Filter')} type="submit">
-              Filtrar
-            </Button>
-          </FormActions>
-        </Grid>
-      </Form>
+    <Filter>
+      <FilterHeader totalItems={3} onClick={action('ShowFilter')} />
+      <FilterContent showFilters={toggle}>
+        <FilterSearchForm />
+      </FilterContent>
+      <FilterFooter showFilters={toggle}>
+        <FormActions alignEnd>
+          <Button onClick={action('Clean')}>Limpar filtros</Button>
+          <Button type="success" onClick={action('Filter')}>
+            Filtrar
+          </Button>
+        </FormActions>
+      </FilterFooter>
     </Filter>
   );
 };

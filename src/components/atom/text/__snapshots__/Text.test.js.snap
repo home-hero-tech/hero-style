@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Text should match with the snapshot 1`] = `
+<p
+  className="c-text"
+>
+  Some information
+</p>
+`;

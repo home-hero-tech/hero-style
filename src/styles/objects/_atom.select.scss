@@ -2,72 +2,150 @@
 
 .c-select {
   width: 100%;
-  box-shadow: $color-box-shadow;
-
-  &--disabled {
-    background-color: $color-brand-gray-100;
+  &__control,
+  &__menu {
+    border-radius: $radius-2 !important;
+    box-shadow: $elevation-0 !important;
+    border-color: $color-brand-gray-400 !important;
+    background-color: $color-structural-white !important;
   }
 
-  :global {
-    .css-yk16xz-control {
-      height: $space-5;
-      min-height: $space-5;
-      border: 1px solid $color-brand-gray-100;
-      border-radius: $radius-2;
+  &__placeholder {
+    color: $color-brand-gray-200 !important;
+  }
 
-      &:focus {
-        border: 1px solid CurrentColor;
-        box-shadow: none;
-      }
+  &__indicators {
+    background-color: transparent !important;
+    color: red !important;
+  }
 
-      .css-1hwfws3 {
-        padding-left: 16px;
-      }
+  &__indicator-separator {
+    background-color: transparent !important;
+    width: 0 !important;
+  }
+
+  &__single-value {
+    color: $color-brand-gray-500 !important;
+  }
+
+  &__value-container {
+    padding: 0 $space-2 !important;
+  }
+
+  &__menu-list {
+    border-radius: $radius-2;
+    overflow: hidden;
+  }
+
+  &__option {
+    cursor: pointer !important;
+    transition: all .3s ease-in-out;
+    color: $color-brand-gray-200 !important;
+    background-color: transparent;
+
+    &:hover,
+    &--is-focused,
+    &--is-selected {
+      background-color: transparent !important;
     }
 
-    .css-1pahdxg-control {
-      height: $space-5;
-      min-height: $space-5;
-      box-shadow: none;
-      border: 1px solid CurrentColor;
+    &:hover {
+      color: $color-brand-gray-300 !important;
+    }
+
+    &--is-selected {
+      color: $color-brand-gray-500 !important;
+    }
+  }
+
+
+  &__indicator {
+    svg {
+      display: none;
+    }
+
+    &:after {
+      content: '\f0dd';
+      font-size: $font-size-md;
+      position: absolute;
+      color: $color-brand-gray-300;
+      font-family: $font-family-awesome-5-pro;
+      font-weight: 900;
+      top: 0;
+      right: 0;
       background-color: transparent;
+      padding: $space-1 $space-2;
+    }
+  }
 
-      &:focus, &:hover {
-        border: 1px solid CurrentColor;
-        box-shadow: none;
-      }
+  &--dark {
+    &__control {
+      border-radius: $radius-2 !important;
+      box-shadow: $elevation-0 !important;
+      background-color: $color-brand-gray-600 !important;
 
-      .css-1hwfws3 {
-        padding-left: $space-2;
+      &:hover,
+      &--is-focused,
+      &--is-selected {
+        border-color: $color-structural-white !important;
       }
     }
 
-    .css-1rhbuit-multiValue {
-      background-color: $color-brand-primary-300;
-      border-radius: 12px;
-      color: $color-structural-white;
-      padding: 2px $space-0;
+    &__menu {
+      border-radius: $radius-2 !important;
+      box-shadow: $elevation-0 !important;
+      background-color: $color-brand-gray-400 !important;
+    }
 
-      .css-12jo7m5 {
-        color: $color-structural-white;
-        font-size: $font-size-sm;
+    &__single-value,
+    &__placeholder {
+      color: $color-structural-white !important;
+    }
+
+    &__indicators {
+      background-color: transparent !important;
+      color: red !important;
+    }
+
+    &__indicator-separator {
+      background-color: transparent !important;
+      width: 0 !important;
+    }
+
+    &__value-container {
+      padding: 0 $space-2 !important;
+    }
+
+    &__menu-list {
+      border-radius: $radius-2;
+      overflow: hidden;
+    }
+
+    &__option {
+      cursor: pointer !important;
+      transition: all .3s ease-in-out;
+      color: $color-brand-gray-200 !important;
+      background-color: transparent !important;
+      border-color: $color-structural-white !important;
+
+      &:hover,
+      &--is-focused,
+      &--is-selected {
+        background-color: transparent !important;
+        border-color: $color-structural-white !important;
       }
 
-      .css-xb97g8 {
-        &:hover {
-          background-color: transparent;
-          color: inherit;
-          transform: scale(1.2);
-          cursor: pointer;
-        }
+      &:hover {
+        color: $color-brand-gray-100 !important;
+        border-color: $color-structural-white !important;
+      }
+
+      &--is-selected {
+        color: $color-structural-white !important;
       }
     }
 
-    .css-1okebmr-indicatorSeparator {
-      width: 0;
-    }
-
-    .css-tlfecz-indicatorContainer, .css-1gtu0rj-indicatorContainer {
+    &__indicator {
       svg {
         display: none;
       }
@@ -76,33 +154,13 @@
         content: '\f0dd';
         font-size: $font-size-md;
         position: absolute;
-        color: $color-brand-gray-500;
-        font-family: 'Font Awesome 5 Pro';
+        color: $color-structural-white;
+        font-family: $font-family-awesome-5-pro;
         font-weight: 900;
         top: 0;
         right: 0;
-        background-color: white;
+        background-color: transparent;
         padding: $space-1 $space-2;
-        border-top-right-radius: $radius-2;
-        border-bottom-right-radius: $radius-2;
-      }
-    }
-
-    .css-26l3qy-menu {
-      box-shadow: $color-box-shadow;
-
-      .css-1n7v3ny-option,  .css-yt9ioa-option, .css-9gakcf-option {
-        background-color: $color-structural-white;
-        color: $color-brand-gray-200;
-        padding-left: $space-2;
-      }
-
-      .css-1n7v3ny-option {
-        color: $color-brand-gray-300;
-      }
-
-      .css-9gakcf-option {
-        color: $color-brand-gray-500;
       }
     }
   }
