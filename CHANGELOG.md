@@ -224,3 +224,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [1.0.52] - 2020-03-16
 - Publishing Tooltip component.
+
+## [1.0.53] - 2020-03-16
+### Changed
+- Tooltip component name.

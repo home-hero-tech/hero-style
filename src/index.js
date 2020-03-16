@@ -25,7 +25,7 @@ import FormActions from './components/molecule/form-actions/FormActions';
 import FormGroup from './components/molecule/form-group/FormGroup';
 import FormRow from './components/molecule/form-row/FormRow';
 import List from './components/molecule/list/List';
-import ToolTip from './components/molecule/tooltip/Tooltip';
+import Tooltip from './components/molecule/tooltip/Tooltip';
 
 // organisms
 import Form from './components/organism/form/Form';
@@ -56,6 +56,6 @@ export {
   Pagination,
   Select,
   Text,
-  ToolTip,
+  Tooltip,
   Row
 };
