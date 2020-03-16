@@ -8,5 +8,7 @@ export default {
 };
 
 export const Default = () => (
-  <Tooltip description="Some description" animation="perspective">Hover me</Tooltip>
+  <Tooltip description="Some description" animation="perspective">
+    Hover me
+  </Tooltip>
 );
