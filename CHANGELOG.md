@@ -217,3 +217,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.0.50] - 2020-03-12
 ### Changed
 - Heading font-family to "muli" like default font.
+
+## [1.0.51] - 2020-03-16
+### Added
+- Tooltip component.
