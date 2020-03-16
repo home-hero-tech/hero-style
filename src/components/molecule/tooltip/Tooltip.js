@@ -10,7 +10,7 @@ const ToolTip = ({ description, animation, children, ...otherProps }) => {
     <Wrapper
       arrow
       animation={animation}
-      className={css['c-tooltip']}
+      className={css}
       title={description}
       {...otherProps}
     >
