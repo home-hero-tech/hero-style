@@ -18,13 +18,14 @@ import Text from './components/atom/text/Text';
 
 // molecules
 import Card from './components/molecule/card/Card';
+import FilterHeader from './components/molecule/filter-header/FilterHeader';
+import FilterContent from './components/molecule/filter-content/FilterContent';
+import FilterFooter from './components/molecule/filter-footer/FilterFooter';
 import FormActions from './components/molecule/form-actions/FormActions';
 import FormGroup from './components/molecule/form-group/FormGroup';
 import FormRow from './components/molecule/form-row/FormRow';
 import List from './components/molecule/list/List';
-import FilterHeader from './components/molecule/filter-header/FilterHeader';
-import FilterContent from './components/molecule/filter-content/FilterContent';
-import FilterFooter from './components/molecule/filter-footer/FilterFooter';
+import ToolTip from './components/molecule/tooltip/Tooltip';
 
 // organisms
 import Form from './components/organism/form/Form';
@@ -55,5 +56,6 @@ export {
   Pagination,
   Select,
   Text,
+  ToolTip,
   Row
 };
