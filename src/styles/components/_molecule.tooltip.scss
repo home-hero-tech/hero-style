@@ -1,0 +1,20 @@
+@import "../settings/types";
+@import "../settings/colors";
+
+:global {
+  @import "~react-tippy/dist/tippy.css";
+
+  .tippy-tooltip-content {
+    color: $color-structural-white;
+    font-size: 12px;
+    font-family: $font-family;
+  }
+
+  .tippy-tooltip {
+    background-color: $color-brand-secondary-300;
+  }
+
+  .tippy-popper[x-placement^=bottom] [x-arrow] {
+    border-bottom: 7px solid $color-brand-secondary-300;
+  }
+}
