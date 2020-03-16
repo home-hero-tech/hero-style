@@ -17,4 +17,12 @@
   .tippy-popper[x-placement^=bottom] [x-arrow] {
     border-bottom: 7px solid $color-brand-secondary-300 !important;;
   }
+
+  .tippy-popper[x-placement^=right] [x-arrow] {
+    border-right: 7px solid $color-brand-secondary-300 !important;;
+  }
+
+  .tippy-popper[x-placement^=left] [x-arrow] {
+    border-left: 7px solid $color-brand-secondary-300 !important;;
+  }
 }
