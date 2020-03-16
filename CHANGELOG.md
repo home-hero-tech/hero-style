@@ -209,3 +209,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Text component and its tests.
 - Publishing Text component.
+
+## [1.0.36] ~ [1.0.49] - 2020-03-12 / 2020-03-16
+### Added
+- Several css improvements.
+
+## [1.0.50] - 2020-03-12
+### Changed
+- Heading font-family to "muli" like default font.
