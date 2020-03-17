@@ -21,6 +21,7 @@ const Button = ({
 
   const classes = classNames({
     [css['c-btn']]: true,
+    [css['ripple']]: true,
     [css[`c-btn--${type}`]]: true,
     [css[`c-btn--${shape}`]]: true,
     [css[`c-btn--${container}`]]: true,
