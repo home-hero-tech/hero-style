@@ -2,9 +2,9 @@ import React from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 
-import css from './Button.module.scss';
+import Loader from '../loader/Loader';
 
-/* <Button type="primary" container="outlined" shape="squared" size="" /> */
+import css from './Button.module.scss';
 
 const Button = ({
   onClick,
@@ -13,7 +13,9 @@ const Button = ({
   size,
   container,
   type,
-  children
+  children,
+  disabled,
+  loading
 }) => {
   const btnType = submit ? 'submit' : 'button';
 
@@ -25,9 +27,19 @@ const Button = ({
     [css[`c-btn--size-${size}`]]: true
   });
 
+  const handleClick = event => {
+    event.stopPropagation();
+    onClick(event);
+  };
+
   return (
-    <button type={btnType} className={classes} onClick={onClick}>
-      {children}
+    <button
+      disabled={disabled}
+      type={btnType}
+      className={classes}
+      onClick={handleClick}
+    >
+      {loading ? <Loader /> : children}
     </button>
   );
 };
@@ -45,7 +57,9 @@ Button.propTypes = {
   submit: PropTypes.bool,
   size: PropTypes.oneOf([1, 2, 3, 4]),
   container: PropTypes.oneOf(['default', 'outlined', 'text']),
-  shape: PropTypes.oneOf(['squared', 'rounded'])
+  shape: PropTypes.oneOf(['squared', 'rounded']),
+  loading: PropTypes.bool,
+  disabled: PropTypes.bool
 };
 
 Button.defaultProps = {
@@ -54,7 +68,9 @@ Button.defaultProps = {
   type: 'default',
   container: 'default',
   shape: 'rounded',
-  size: 2
+  size: 2,
+  loading: false,
+  disabled: false
 };
 
 export default Button;
