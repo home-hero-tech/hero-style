@@ -178,10 +178,6 @@ $base: 8px;
     border: solid 1px $color-danger;
     background: $color-danger;
 
-    &:active {
-      background-color: lighten($color-danger, 50%);
-    }
-
     &.c-btn--outlined {
       background: transparent;
       border: solid 1px $color-danger;
