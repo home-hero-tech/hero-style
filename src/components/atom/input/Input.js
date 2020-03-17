@@ -13,6 +13,7 @@ const Input = ({
   onChange,
   disabled,
   dark,
+  parentRef,
   ...otherProps
 }) => {
   const isCheckOrRadio = type === 'checkbox' || type === 'radio';
@@ -35,6 +36,7 @@ const Input = ({
       defaultValue={defaultValue}
       onChange={onChange}
       disabled={disabled}
+      ref={parentRef}
       {...otherProps}
     />
   ) : (
@@ -47,6 +49,7 @@ const Input = ({
       value={value}
       onChange={onChange}
       disabled={disabled}
+      ref={parentRef}
       {...otherProps}
     />
   );
@@ -65,7 +68,8 @@ Input.propTypes = {
   ]),
   defaultValue: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   disabled: PropTypes.bool,
-  dark: PropTypes.bool
+  dark: PropTypes.bool,
+  parentRef: PropTypes.func
 };
 
 Input.defaultProps = {
@@ -77,7 +81,8 @@ Input.defaultProps = {
   value: null,
   defaultValue: null,
   disabled: null,
-  dark: null
+  dark: null,
+  parentRef: null
 };
 
 export default Input;
