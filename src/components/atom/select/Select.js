@@ -16,7 +16,8 @@ const Select = ({
   noOptionsMessage,
   isClearable,
   value,
-  dark
+  dark,
+  ...otherProps
 }) => {
   const className = dark ? 'c-select--dark' : 'c-select';
 
@@ -35,6 +36,7 @@ const Select = ({
       noOptionsMessage={noOptionsMessage}
       isClearable={isClearable}
       value={value}
+      {...otherProps}
     />
   );
 };
