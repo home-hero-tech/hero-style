@@ -34,7 +34,11 @@ const Button = ({
 
 Button.propTypes = {
   onClick: PropTypes.func,
-  children: PropTypes.string.isRequired,
+  children: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.object,
+    PropTypes.array
+  ]).isRequired,
   type: PropTypes.oneOf([
     'default',
     'primary',

@@ -228,3 +228,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.0.53] - 2020-03-16
 ### Changed
 - Tooltip component name.
+
+
+## [1.0.59] - 2020-03-18
+### Changed
+- Adjusted PropTypes form button to accept both strings, objects and arrays.
