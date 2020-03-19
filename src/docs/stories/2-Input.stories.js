@@ -1,6 +1,9 @@
 import React from 'react';
 import { action } from '@storybook/addon-actions';
+
+import Wrapper from '../../helpers/wrapper/Wrapper';
 import Input from '../../components/atom/input/Input';
+import MaskedInput from '../../components/atom/masked-input/MaskedInput';
 
 export default {
   title: 'Input',
@@ -9,6 +12,15 @@ export default {
 
 const _style = {
   maxWidth: '20%'
+};
+
+const _columnWrapperStyle = {
+  width: 500,
+  height: 180,
+  padding: 20,
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'space-around'
 };
 
 export const Default = () => (
@@ -116,4 +128,27 @@ export const RadioButtonDisabledUnselected = () => (
     onChange={action('toggleRadio')}
     disabled
   />
+);
+
+export const Masked = () => (
+  <Wrapper style={_columnWrapperStyle}>
+    <MaskedInput
+      type="cnpj"
+      placeholder="CNPJ Input"
+      onChange={action('click')}
+      value=""
+    />
+    <MaskedInput
+      type="cpf"
+      placeholder="CPF Input"
+      onChange={action('click')}
+      value=""
+    />
+    <MaskedInput
+      type="phone"
+      placeholder="Phone Input"
+      onChange={action('click')}
+      value=""
+    />
+  </Wrapper>
 );
