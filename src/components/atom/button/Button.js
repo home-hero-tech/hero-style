@@ -28,17 +28,12 @@ const Button = ({
     [css[`c-btn--size-${size}`]]: true
   });
 
-  const handleClick = event => {
-    event.stopPropagation();
-    onClick(event);
-  };
-
   return (
     <button
       disabled={disabled}
       type={btnType}
       className={classes}
-      onClick={handleClick}
+      onClick={onClick}
     >
       {loading ? <Loader /> : children}
     </button>
