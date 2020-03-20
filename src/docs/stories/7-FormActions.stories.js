@@ -56,7 +56,7 @@ export const Default = () => (
           </FormGroup>
         </FormRow>
         <FormActions>
-          <Button type="submit" onClick={action('clicked')}>
+          <Button type="success" submit onClick={action('clicked')}>
             Submit
           </Button>
           <Button onClick={action('cancel')}>Cancel</Button>
@@ -105,7 +105,7 @@ export const AlignBetween = () => (
           </FormGroup>
         </FormRow>
         <FormActions alignBetween>
-          <Button type="submit" onClick={action('clicked')}>
+          <Button type="success" submit onClick={action('clicked')}>
             Submit
           </Button>
           <Button onClick={action('cancel')}>Cancel</Button>
@@ -154,7 +154,7 @@ export const AlignEnd = () => (
           </FormGroup>
         </FormRow>
         <FormActions alignEnd>
-          <Button type="submit" onClick={action('clicked')}>
+          <Button type="success" submit onClick={action('clicked')}>
             Submit
           </Button>
           <Button onClick={action('cancel')}>Cancel</Button>
