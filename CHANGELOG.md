@@ -233,3 +233,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.0.59] - 2020-03-18
 ### Changed
 - Adjusted PropTypes form button to accept both strings, objects and arrays.
+
+## [1.0.60] - 2020-03-20
+### Added
+- Input with masks.
+- New props for Heading.
+
+### Changed
+- Button colors.

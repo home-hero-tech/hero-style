@@ -16,6 +16,7 @@ export const H3 = () => <Heading level={3} title="Title" />;
 export const H4 = () => <Heading level={4} title="Title" />;
 export const H5 = () => <Heading level={5} title="Title" />;
 export const H6 = () => <Heading level={6} title="Title" />;
+export const withMargin = () => <Heading level={1} title="Title" withMargin />;
 export const withOtherProps = () => (
   <Heading level={6} title="Title" style={someStyle} />
 );
