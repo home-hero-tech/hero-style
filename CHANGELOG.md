@@ -241,3 +241,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 - Button colors.
+
+## [1.0.61] - 2020-03-20
+### Added
+- Added Input mask component.
+
+## [1.0.62] - 2020-03-20
+### Added
+- Publishing Input mask component.
+
+## [1.0.63] - 2020-03-20
+### Added
+- New props for Heading component.
