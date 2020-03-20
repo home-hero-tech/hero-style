@@ -1,5 +1,31 @@
+@import "../settings/colors";
+
 .c-heading {
+  &--gray {
+    color: $color-brand-gray-300;
+  }
+
   &--withMargin {
     margin: 1em 0
+  }
+
+  &--light {
+    font-weight: 200;
+  }
+
+  &--bold {
+    font-weight: 700;
+  }
+
+  &--uppercase {
+    text-transform: uppercase;
+  }
+
+  &--lowercase {
+    text-transform: lowercase;
+  }
+
+  &--capitalize {
+    text-transform: capitalize;
   }
 }
