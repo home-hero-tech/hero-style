@@ -253,3 +253,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.0.63] - 2020-03-20
 ### Added
 - New props for Heading component.
+
+## [1.0.63] - 2020-03-20
+### Removed
+- handleClick from Button.
+
+## [1.0.64] - 2020-03-20
+### Changed
+- Datepicker format props to dateFormat.
