@@ -48,6 +48,7 @@
     border-radius: $space-0;
     border: 1px solid $color-brand-primary-300;
     padding: 0;
+    position: relative;
 
     &:focus {
       border: 1px solid $color-brand-primary-300 !important;
@@ -63,8 +64,8 @@
         background-color: $color-brand-primary-300;
         color: $color-structural-white;
         font-family: 'Font Awesome 5 Pro';
-        top: 3px;
-        left: 4px;
+        left: -1px;
+        top: -1px;
         padding: 5px 6px;
       }
     }
