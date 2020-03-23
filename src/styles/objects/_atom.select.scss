@@ -6,8 +6,13 @@
   &__menu {
     border-radius: $radius-2 !important;
     box-shadow: $elevation-0 !important;
-    border-color: $color-brand-gray-400 !important;
     background-color: $color-structural-white !important;
+
+    &:hover,
+    &--is-focused,
+    &--is-selected {
+      border-color: $color-brand-gray-400 !important;
+    }
   }
 
   &__placeholder {
