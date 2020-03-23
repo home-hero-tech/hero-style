@@ -66,7 +66,7 @@ Select.defaultProps = {
   noOptionsMessage: f => f,
   value: null,
   dark: false,
-  firstMessage: () => 'Digite para buscar',
+  firstMessage: () => 'Digite para buscar'
 };
 
 export default Select;
