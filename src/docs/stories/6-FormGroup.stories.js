@@ -20,9 +20,7 @@ const options = [
   { value: 'Coconut', label: 'Coconut' }
 ];
 
-
 const noOptionsMessage = () => 'Nenhuma opção';
-
 
 export const Default = () => (
   <div style={_style}>
