@@ -6,13 +6,13 @@ import css from './Select.module.scss';
 
 const Select = ({
   dark,
-  name,
+  firstMessage,
   multiple,
-  noOptionsMessage,
+  name,
   onChange,
+  noOptionsMessage,
   options,
   placeholder,
-  firstMessage,
   searchable,
   value,
   ...otherProps
@@ -20,16 +20,17 @@ const Select = ({
   const className = dark ? 'c-select--dark' : 'c-select';
 
   const allProps = {
+    backspaceRemoves: true,
     className: css[className],
     classNamePrefix: className,
+    deleteRemoves: true,
+    isMulti: multiple,
+    isSearchable: searchable,
+    value,
     name,
     options,
     onChange,
     placeholder,
-    backspaceRemoves: true,
-    deleteRemoves: true,
-    isMulti: multiple,
-    isSearchable: searchable,
     noOptionsMessage: ({ inputValue }) =>
       inputValue && inputValue.length ? noOptionsMessage() : firstMessage(),
     ...otherProps
@@ -57,16 +58,16 @@ Select.propTypes = {
 };
 
 Select.defaultProps = {
+  dark: false,
+  firstMessage: () => 'Digite para buscar',
   multiple: false,
-  searchable: true,
   name: null,
+  searchable: true,
   onChange: f => f,
   options: null,
   placeholder: 'Selecionar',
   noOptionsMessage: f => f,
-  value: null,
-  dark: false,
-  firstMessage: () => 'Digite para buscar'
+  value: null
 };
 
 export default Select;

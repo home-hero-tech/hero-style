@@ -269,3 +269,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - FormGroup message error is align on the right side.
 - Several adjusts on Select component.
+
+## [1.0.67] - 2020-03-23
+### Added
+- Missing props in Select.
