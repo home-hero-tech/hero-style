@@ -261,3 +261,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.0.65] - 2020-03-20
 ### Changed
 - Datepicker format props to dateFormat.
+
+## [1.0.66] - 2020-03-23
+### Added
+- FormGroup has need margin at top.
+
+### Changed
+- FormGroup message error is align on the right side.
+- Several adjusts on Select component.

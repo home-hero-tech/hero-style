@@ -7,6 +7,7 @@
   flex-direction: column;
   position: relative;
   min-height: $input-height;
+  margin-top: $space-1;
 
   &--error,
   &--success {
@@ -20,7 +21,7 @@
       top: $input-height - 10px;
       transform: translateY(10%);
       background-color: transparent;
-      right: $space-2;
+      right: $space-3;
     }
 
     input {
@@ -59,12 +60,13 @@
 
   & + .c-form-group {
     @include mq($until: tablet) {
-      padding-top: $space-2;
+      margin-top: $space-3;
     }
   }
 
   small {
     position: absolute;
-    bottom: -16px;
+    bottom: -$space-2;
+    right: $space-1;
   }
 }

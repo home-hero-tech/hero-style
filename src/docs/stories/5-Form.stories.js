@@ -58,3 +58,48 @@ export const Default = () => (
     </Form>
   </div>
 );
+
+export const Errors = () => (
+  <div style={_style}>
+    <Form onSubmit={() => {}}>
+      <Grid fluid>
+        <FormRow>
+          <FormGroup md error>
+            <Label name="ipt">Label</Label>
+            <Input
+              id="ipt"
+              name="ipt"
+              type="text"
+              placeholder="Placeholder text"
+              value=""
+            />
+            <small>Lorem ipsum dolor sit consectetu ave.</small>
+          </FormGroup>
+          <FormGroup md error>
+            <Label name="ipt">Label</Label>
+            <Input
+              id="ipt2"
+              name="ipt2"
+              type="text"
+              placeholder="Placeholder text"
+              value=""
+            />
+            <small>Error message</small>
+          </FormGroup>
+        </FormRow>
+        <FormRow>
+          <FormGroup md error>
+            <Label name="ipt">Label</Label>
+            <Input
+              id="ipt3"
+              name="ipt3"
+              type="text"
+              placeholder="Placeholder text"
+              value=""
+            />
+          </FormGroup>
+        </FormRow>
+      </Grid>
+    </Form>
+  </div>
+);
