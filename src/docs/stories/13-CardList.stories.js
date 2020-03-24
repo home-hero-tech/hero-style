@@ -51,6 +51,12 @@ export const mSm = () => (
       </ListItem>
       <ListItem>
         <Card>
+          <CardItem value="Value" label="Label" />
+          <CardItem value="Value2" label="Label" />
+        </Card>
+      </ListItem>
+      <ListItem>
+        <Card>
           <CardItem value="Value" label="Label" col={8} />
           <CardItem value="Value2" label="Label" col={4} />
         </Card>

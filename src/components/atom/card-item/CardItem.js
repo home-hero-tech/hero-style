@@ -13,8 +13,15 @@ const ListItem = ({ primary, label, format, value, col, ellipsis }) => {
     [css['c-card-item--primary']]: primary,
     [css['c-card-item--ellipsis']]: ellipsis
   });
-  return (
+  return col ? (
     <Col className={classes} md={col}>
+      <span>{label}</span>
+      <span className={css.truncate}>
+        {value instanceof Date ? moment(value).format(format) : value}
+      </span>
+    </Col>
+  ) : (
+    <Col className={classes}>
       <span>{label}</span>
       <span className={css.truncate}>
         {value instanceof Date ? moment(value).format(format) : value}
