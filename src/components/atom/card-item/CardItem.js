@@ -16,7 +16,7 @@ const ListItem = ({ primary, label, format, value, col, ellipsis }) => {
   return (
     <Col className={classes} md={col}>
       <span>{label}</span>
-      <span className={css['truncate']}>
+      <span className={css.truncate}>
         {value instanceof Date ? moment(value).format(format) : value}
       </span>
     </Col>

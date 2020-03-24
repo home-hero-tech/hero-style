@@ -64,7 +64,12 @@ export const ellipses = () => (
     <List level={1}>
       <ListItem>
         <Card>
-          <CardItem value="Lorem Ipsum is simply dummy text of the printing and typesetting industry." label="Label" col={8} ellipsis />
+          <CardItem
+            value="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+            label="Label"
+            col={8}
+            ellipsis
+          />
           <CardItem value="Value2" label="Label" col={4} />
         </Card>
       </ListItem>

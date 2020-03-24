@@ -7,9 +7,7 @@ import css from './Card.module.scss';
 
 const Card = ({ children }) => (
   <Grid fluid>
-    <Row className={css['c-card']}>
-      {children}
-    </Row>
+    <Row className={css['c-card']}>{children}</Row>
   </Grid>
 );
 
