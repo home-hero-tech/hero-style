@@ -3,7 +3,7 @@
 .c-card-item {
   display: flex;
   flex-direction: column;
-  margin-right: $space-5;
+  padding-right: $space-5;
   line-height: 30px;
 
   span {
@@ -23,6 +23,14 @@
       &:nth-child(1) {
         color: $color-primary;
       }
+    }
+  }
+
+  &--ellipsis {
+    .truncate {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
   }
 }
