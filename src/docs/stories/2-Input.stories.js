@@ -150,5 +150,17 @@ export const Masked = () => (
       onChange={action('click')}
       value=""
     />
+    <MaskedInput
+      type="zipCode"
+      placeholder="Zipcode Input"
+      onChange={action('click')}
+      value=""
+    />
+    <MaskedInput
+      type="currency"
+      placeholder="currency Input"
+      onChange={action('click')}
+      value=""
+    />
   </Wrapper>
 );

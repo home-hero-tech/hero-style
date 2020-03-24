@@ -54,4 +54,16 @@ export const phoneMask = [
   /\d/
 ];
 
-export default { cnpjMask, cpfMask, phoneMask };
+export const zipCodeMask = [
+  /\d/,
+  /\d/,
+  /\d/,
+  /\d/,
+  /\d/,
+  '-',
+  /\d/,
+  /\d/,
+  /\d/
+];
+
+export default { cnpjMask, cpfMask, phoneMask, zipCodeMask };
