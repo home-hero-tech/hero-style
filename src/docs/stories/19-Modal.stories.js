@@ -93,3 +93,25 @@ export const titleAndDescription = () => (
     </Modal>
   </Wrapper>
 );
+
+export const buttonTexts = () => (
+  <Wrapper style={style}>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime!
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime!
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime!
+    <Modal
+      isOpen={isOpen}
+      onConfirm={action('Confirm')}
+      onCancel={action('Cancel')}
+      contentLabel="With Actions Modal"
+      title="Modal Title"
+      closeTimeoutMS={3000}
+      description="Lorem ipsum dolor sit amet, consectetur adipisicing."
+      btnCancelText="Cancelling"
+      btnConfirmText="Confirming"
+    >
+      <h2>blabla</h2>
+      <SomeContent />
+    </Modal>
+  </Wrapper>
+);
