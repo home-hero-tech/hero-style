@@ -1,10 +1,15 @@
 import React from 'react';
-
 import PropTypes from 'prop-types';
+
+import { Row, Grid } from 'react-flexbox-grid';
 
 import css from './Card.module.scss';
 
-const Card = ({ children }) => <ul className={css['c-card']}>{children}</ul>;
+const Card = ({ children }) => (
+  <Grid fluid>
+    <Row className={css['c-card']}>{children}</Row>
+  </Grid>
+);
 
 Card.propTypes = {
   children: PropTypes.oneOfType([PropTypes.object, PropTypes.array])

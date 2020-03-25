@@ -1,35 +1,59 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 
-const Heading = ({ level, title, ...otherProps }) => {
+import css from './Heading.module.scss';
+
+const Heading = ({
+  level,
+  withMargin,
+  gray,
+  light,
+  bold,
+  title,
+  uppercase,
+  lowercase,
+  capitalize,
+  ...otherProps
+}) => {
+  const classes = classNames({
+    [css['c-heading--withMargin']]: withMargin,
+    [css['c-heading--gray']]: gray,
+    [css['c-heading--bold']]: bold,
+    [css['c-heading--light']]: light,
+    [css['c-heading--uppercase']]: uppercase,
+    [css['c-heading--lowercase']]: lowercase,
+    [css['c-heading--capitalize']]: capitalize
+  });
+
   const headingMaps = {
     1: (
-      <h1 title={title} {...otherProps}>
+      <h1 className={classes} title={title} {...otherProps}>
         {title}
       </h1>
     ),
     2: (
-      <h2 title={title} {...otherProps}>
+      <h2 className={classes} title={title} {...otherProps}>
         {title}
       </h2>
     ),
     3: (
-      <h3 title={title} {...otherProps}>
+      <h3 className={classes} title={title} {...otherProps}>
         {title}
       </h3>
     ),
     4: (
-      <h4 title={title} {...otherProps}>
+      <h4 className={classes} title={title} {...otherProps}>
         {title}
       </h4>
     ),
     5: (
-      <h5 title={title} {...otherProps}>
+      <h5 className={classes} title={title} {...otherProps}>
         {title}
       </h5>
     ),
     6: (
-      <h6 title={title} {...otherProps}>
+      <h6 className={classes} title={title} {...otherProps}>
         {title}
       </h6>
     )

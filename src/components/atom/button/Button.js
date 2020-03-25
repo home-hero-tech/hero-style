@@ -2,9 +2,9 @@ import React from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 
-import css from './Button.module.scss';
+import Loader from '../loader/Loader';
 
-/* <Button type="primary" container="outlined" shape="squared" size="" /> */
+import css from './Button.module.scss';
 
 const Button = ({
   onClick,
@@ -13,12 +13,15 @@ const Button = ({
   size,
   container,
   type,
-  children
+  children,
+  disabled,
+  loading
 }) => {
   const btnType = submit ? 'submit' : 'button';
 
   const classes = classNames({
     [css['c-btn']]: true,
+    [css.ripple]: true,
     [css[`c-btn--${type}`]]: true,
     [css[`c-btn--${shape}`]]: true,
     [css[`c-btn--${container}`]]: true,
@@ -26,15 +29,24 @@ const Button = ({
   });
 
   return (
-    <button type={btnType} className={classes} onClick={onClick}>
-      {children}
+    <button
+      disabled={disabled}
+      type={btnType}
+      className={classes}
+      onClick={onClick}
+    >
+      {loading ? <Loader /> : children}
     </button>
   );
 };
 
 Button.propTypes = {
   onClick: PropTypes.func,
-  children: PropTypes.string.isRequired,
+  children: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.object,
+    PropTypes.array
+  ]).isRequired,
   type: PropTypes.oneOf([
     'default',
     'primary',
@@ -45,7 +57,9 @@ Button.propTypes = {
   submit: PropTypes.bool,
   size: PropTypes.oneOf([1, 2, 3, 4]),
   container: PropTypes.oneOf(['default', 'outlined', 'text']),
-  shape: PropTypes.oneOf(['squared', 'rounded'])
+  shape: PropTypes.oneOf(['squared', 'rounded']),
+  loading: PropTypes.bool,
+  disabled: PropTypes.bool
 };
 
 Button.defaultProps = {
@@ -54,7 +68,9 @@ Button.defaultProps = {
   type: 'default',
   container: 'default',
   shape: 'rounded',
-  size: 2
+  size: 2,
+  loading: false,
+  disabled: false
 };
 
 export default Button;

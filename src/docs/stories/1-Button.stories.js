@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { action } from '@storybook/addon-actions';
 
 import Wrapper from '../../helpers/wrapper/Wrapper';
@@ -40,8 +40,13 @@ export const Sizes = () => (
 );
 
 export const Types = () => (
-  <Wrapper style={{ ..._wrapperStyle, width: 500 }}>
-    <Button onClick={action('clicked')}>Default</Button>
+  <Wrapper style={{ ..._wrapperStyle, width: 630 }}>
+    <Button disabled onClick={action('clicked')}>
+      Disabled
+    </Button>
+    <Button type="default" onClick={action('clicked')}>
+      Default
+    </Button>
     <Button type="primary" onClick={action('clicked')}>
       Primary
     </Button>
@@ -56,6 +61,22 @@ export const Types = () => (
     </Button>
   </Wrapper>
 );
+
+export const Loading = () => {
+  const [loading, setLoading] = useState(false);
+  return (
+    <Wrapper>
+      <Button
+        size={4}
+        type="primary"
+        loading={loading}
+        onClick={() => setLoading(!loading)}
+      >
+        Click Me
+      </Button>
+    </Wrapper>
+  );
+};
 
 export const Shapes = () => (
   <Wrapper style={{ ..._wrapperStyle, width: 210 }}>

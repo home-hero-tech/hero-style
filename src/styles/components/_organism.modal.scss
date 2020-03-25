@@ -1,0 +1,83 @@
+@import "../settings/settings";
+
+.c-modal,
+.c-modal-overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+}
+
+.c-modal {
+  width: 530px;
+  background-color: $color-structural-white;
+  z-index: 9030;
+  padding: $space-5 $space-4;
+
+  transition: all .3s ease-in-out;
+
+  &--pre-left {
+    left: -100%;
+  }
+
+  &--pre-right {
+    right: -100%;
+  }
+
+  &--left {
+    left: 0;
+    animation: slideToRight .3s;
+  }
+
+  &--right {
+    right: 0;
+  }
+
+  &__heading {
+    h3 {
+      font-weight: 300;
+      margin-bottom: $space-1;
+    }
+
+    p {
+      font-size: 14px;
+      color: $color-brand-gray-300;
+    }
+  }
+
+  &__heading ~ &__content {
+    margin-top: $space-2;
+  }
+
+  &__actions {
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: $space-2 $space-4;
+
+    background-color: $color-brand-gray-050;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.c-modal-overlay {
+  background-color: rgba($color-brand-gray-600, .8);
+  left: 0;
+  right: 0;
+  z-index: 9000;
+
+  &--left {
+    left: 0;
+  }
+
+  &--right {
+    right: 0;
+  }
+}
+
+
+
