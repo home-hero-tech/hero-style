@@ -1,8 +1,8 @@
 import React from 'react';
 
-import Button from '../../components/atom/button/Button';
+import { action } from '@storybook/addon-actions';
+
 import Modal from '../../components/organism/modal/Modal';
-import ModalActions from '../../components/molecule/modal-actions/ModalActions';
 import Wrapper from '../../helpers/wrapper/Wrapper';
 
 export default {
@@ -30,7 +30,7 @@ export const Default = () => (
     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime!
     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime!
     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime!
-    <Modal isOpen={isOpen}>
+    <Modal isOpen={isOpen} contentLabel="Default Modal">
       <SomeContent />
     </Modal>
   </Wrapper>
@@ -41,7 +41,7 @@ export const left = () => (
     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime!
     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime!
     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime!
-    <Modal isOpen={isOpen} left>
+    <Modal isOpen={isOpen} left right={false} contentLabel="Default Modal">
       <SomeContent />
     </Modal>
   </Wrapper>
@@ -52,7 +52,7 @@ export const right = () => (
     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime!
     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime!
     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime!
-    <Modal isOpen={isOpen} right>
+    <Modal isOpen={isOpen} right contentLabel="Right Modal">
       <SomeContent />
     </Modal>
   </Wrapper>
@@ -65,9 +65,30 @@ export const withActions = () => (
     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime!
     <Modal
       isOpen={isOpen}
-      onConfirm={() => console.log('Confirm')}
-      onCancel={() => console.log('Cancel')}
+      onConfirm={action('Confirm')}
+      onCancel={action('Cancel')}
+      contentLabel="With Actions Modal"
     >
+      <SomeContent />
+    </Modal>
+  </Wrapper>
+);
+
+export const titleAndDescription = () => (
+  <Wrapper style={style}>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime!
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime!
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime!
+    <Modal
+      isOpen={isOpen}
+      onConfirm={action('Confirm')}
+      onCancel={action('Cancel')}
+      contentLabel="With Actions Modal"
+      title="Modal Title"
+      closeTimeoutMS={3000}
+      description="Lorem ipsum dolor sit amet, consectetur adipisicing."
+    >
+      <h2>blabla</h2>
       <SomeContent />
     </Modal>
   </Wrapper>

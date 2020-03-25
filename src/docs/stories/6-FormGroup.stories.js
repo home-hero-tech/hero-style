@@ -69,7 +69,6 @@ export const ErrorMessage = () => (
   </div>
 );
 
-
 export const ErrorMessageSelect = () => (
   <div style={_style}>
     <FormGroup error>
