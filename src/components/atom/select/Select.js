@@ -31,7 +31,7 @@ const Select = ({
     value,
     name,
     options,
-    onChange: val => onChange({ target: { name, value: val } }),
+    onChange,
     placeholder,
     noOptionsMessage: ({ inputValue }) =>
       inputValue && inputValue.length ? noOptionsMessage() : firstMessage(),
