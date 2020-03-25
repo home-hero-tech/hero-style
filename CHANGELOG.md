@@ -277,3 +277,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.0.74] - 2020-03-25
 ### Changed
 - onChange from Select has a new structure.
+
+## [1.0.75] - 2020-03-25
+### Changed
+- Adjusted value of onChange from Select.
