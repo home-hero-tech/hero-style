@@ -25,20 +25,19 @@ export const Default = () => (
   />
 );
 
-export const Cleareble = () => (
-  <Select
-    options={options}
-    placeholder={placeholder}
-    noOptionsMessage={noOptionsMessage}
-    isMulti
-  />
-);
-
 export const MultiSelect = () => (
   <Select
     options={options}
     placeholder={placeholder}
     noOptionsMessage={noOptionsMessage}
-    isMulti
+    multiple
+  />
+);
+export const SearchableOff = () => (
+  <Select
+    options={options}
+    placeholder="Digite para encontrar uma opção"
+    noOptionsMessage={noOptionsMessage}
+    searchable={false}
   />
 );

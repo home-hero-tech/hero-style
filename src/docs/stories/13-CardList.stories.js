@@ -55,6 +55,30 @@ export const mSm = () => (
           <CardItem value="Value2" label="Label" />
         </Card>
       </ListItem>
+      <ListItem>
+        <Card>
+          <CardItem value="Value" label="Label" col={8} />
+          <CardItem value="Value2" label="Label" col={4} />
+        </Card>
+      </ListItem>
+    </List>
+  </Wrapper>
+);
+
+export const ellipses = () => (
+  <Wrapper>
+    <List level={1}>
+      <ListItem>
+        <Card>
+          <CardItem
+            value="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+            label="Label"
+            col={8}
+            ellipsis
+          />
+          <CardItem value="Value2" label="Label" col={4} />
+        </Card>
+      </ListItem>
     </List>
   </Wrapper>
 );

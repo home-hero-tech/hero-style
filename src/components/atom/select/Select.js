@@ -5,47 +5,46 @@ import RSelect from 'react-select';
 import css from './Select.module.scss';
 
 const Select = ({
-  autoFocus,
-  isDisabled,
-  isMulti,
-  isSearchable,
+  dark,
+  firstMessage,
+  multiple,
   name,
   onChange,
+  noOptionsMessage,
   options,
   placeholder,
-  noOptionsMessage,
-  isClearable,
+  searchable,
   value,
-  dark
+  ...otherProps
 }) => {
   const className = dark ? 'c-select--dark' : 'c-select';
 
-  return (
-    <RSelect
-      autoFocus={autoFocus}
-      className={css[className]}
-      classNamePrefix={className}
-      isDisabled={isDisabled}
-      isMulti={isMulti}
-      isSearchable={isSearchable}
-      name={name}
-      onChange={onChange}
-      options={options}
-      placeholder={placeholder}
-      noOptionsMessage={noOptionsMessage}
-      isClearable={isClearable}
-      value={value}
-    />
-  );
+  const allProps = {
+    backspaceRemoves: true,
+    className: css[className],
+    classNamePrefix: className,
+    deleteRemoves: true,
+    isMulti: multiple,
+    isSearchable: searchable,
+    value,
+    name,
+    options,
+    onChange,
+    placeholder,
+    noOptionsMessage: ({ inputValue }) =>
+      inputValue && inputValue.length ? noOptionsMessage() : firstMessage(),
+    ...otherProps
+  };
+
+  return <RSelect {...allProps} />;
 };
 
 Select.propTypes = {
-  autoFocus: PropTypes.bool,
-  isClearable: PropTypes.bool,
-  isDisabled: PropTypes.bool,
-  isMulti: PropTypes.bool,
-  isSearchable: PropTypes.bool,
+  dark: PropTypes.bool,
+  firstMessage: PropTypes.func,
+  multiple: PropTypes.bool,
   name: PropTypes.string,
+  searchable: PropTypes.bool,
   noOptionsMessage: PropTypes.func,
   onChange: PropTypes.func,
   options: PropTypes.instanceOf(Array),
@@ -55,23 +54,20 @@ Select.propTypes = {
     PropTypes.object,
     PropTypes.string,
     PropTypes.number
-  ]),
-  dark: PropTypes.bool
+  ])
 };
 
 Select.defaultProps = {
-  autoFocus: false,
-  isClearable: false,
-  isDisabled: false,
-  isMulti: false,
-  isSearchable: false,
+  dark: false,
+  firstMessage: () => 'Digite para buscar',
+  multiple: false,
   name: null,
+  searchable: true,
   onChange: f => f,
   options: null,
-  placeholder: null,
+  placeholder: 'Selecionar',
   noOptionsMessage: f => f,
-  value: null,
-  dark: false
+  value: null
 };
 
 export default Select;

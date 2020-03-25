@@ -17,7 +17,7 @@ const DatePicker = ({ selected, format, onChange, dark, ...otherProps }) => {
     <div className={css[className]}>
       <RDatePicker
         selected={selected}
-        format={format}
+        dateFormat={format}
         onChange={onChange}
         popperModifiers={{
           offset: {

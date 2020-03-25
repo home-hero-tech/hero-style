@@ -3,11 +3,13 @@
 
 .c-form-group {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   flex-direction: column;
   position: relative;
+  min-height: $input-height;
 
   &--error,
+  &--error-no-icon,
   &--success {
     position: relative;
 
@@ -19,7 +21,7 @@
       top: $input-height - 10px;
       transform: translateY(10%);
       background-color: transparent;
-      right: $space-2;
+      right: $space-3;
     }
 
     input {
@@ -34,12 +36,28 @@
       color: $color-danger;
     }
 
-    &:after {
-      content: '\f057';
-      color: $color-danger;
-      font-weight: 900;
-      border-top-right-radius: $radius-2;
-      border-bottom-right-radius: $radius-2;
+    &--icon {
+      &:after {
+        content: '\f057';
+        color: $color-danger;
+        font-weight: 900;
+        border-top-right-radius: $radius-2;
+        border-bottom-right-radius: $radius-2;
+      }
+    }
+
+    :global {
+      .c-select {
+        &__control {
+          border-color: $color-danger !important;
+
+          &:hover,
+          &--is-focused,
+          &--is-selected {
+            border-color: $color-danger !important;
+          }
+        }
+      }
     }
   }
 
@@ -54,15 +72,31 @@
       content: '\f00c';
       color: $color-success;
     }
+
+    :global {
+      .c-select {
+        &__control {
+          border-color: $color-success !important;
+
+          &:hover,
+          &--is-focused,
+          &--is-selected {
+            border-color: $color-success !important;
+          }
+        }
+      }
+    }
   }
 
   & + .c-form-group {
     @include mq($until: tablet) {
-      padding-top: $space-2;
+      margin-top: $space-3;
     }
   }
 
   small {
-    padding-top: $space-0;
+    position: absolute;
+    bottom: -$space-2;
+    right: $space-1;
   }
 }

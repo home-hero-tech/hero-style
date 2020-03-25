@@ -217,3 +217,59 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.0.50] - 2020-03-12
 ### Changed
 - Heading font-family to "muli" like default font.
+
+## [1.0.51] - 2020-03-16
+### Added
+- Tooltip component.
+
+## [1.0.52] - 2020-03-16
+- Publishing Tooltip component.
+
+## [1.0.53] - 2020-03-16
+### Changed
+- Tooltip component name.
+
+
+## [1.0.59] - 2020-03-18
+### Changed
+- Adjusted PropTypes form button to accept both strings, objects and arrays.
+
+## [1.0.60] - 2020-03-20
+### Added
+- Input with masks.
+- New props for Heading.
+
+### Changed
+- Button colors.
+
+## [1.0.61] - 2020-03-20
+### Added
+- Added Input mask component.
+
+## [1.0.62] - 2020-03-20
+### Added
+- Publishing Input mask component.
+
+## [1.0.63] - 2020-03-20
+### Added
+- New props for Heading component.
+
+## [1.0.64] - 2020-03-20
+### Removed
+- handleClick from Button.
+
+## [1.0.65] - 2020-03-20
+### Changed
+- Datepicker format props to dateFormat.
+
+## [1.0.66] - 2020-03-23
+### Added
+- FormGroup has need margin at top.
+
+### Changed
+- FormGroup message error is align on the right side.
+- Several adjusts on Select component.
+
+## [1.0.67] - 2020-03-23
+### Added
+- Missing props in Select.
