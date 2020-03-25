@@ -13,6 +13,8 @@ import css from './Modal.module.scss';
 ReactModal.setAppElement('#root');
 
 const Modal = ({
+  btnCancelText,
+  btnConfirmText,
   children,
   left,
   right,
@@ -58,12 +60,12 @@ const Modal = ({
         <ModalActions>
           {onCancel ? (
             <Button onClick={onCancel} container="outlined" type="primary">
-              Cancelar
+              {btnCancelText}
             </Button>
           ) : null}
           {onConfirm ? (
             <Button onClick={onConfirm} type="primary">
-              Enviar
+              {btnConfirmText}
             </Button>
           ) : null}
         </ModalActions>
@@ -73,6 +75,8 @@ const Modal = ({
 };
 
 Modal.propTypes = {
+  btnCancelText: PropTypes.string,
+  btnConfirmText: PropTypes.string,
   children: PropTypes.oneOfType([
     PropTypes.object,
     PropTypes.array,
@@ -88,6 +92,8 @@ Modal.propTypes = {
 };
 
 Modal.defaultProps = {
+  btnCancelText: 'Cancelar',
+  btnConfirmText: 'Enviar',
   left: false,
   right: true,
   onCancel: null,
