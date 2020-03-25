@@ -9,6 +9,7 @@ const ToolTip = ({ description, animation, children, ...otherProps }) => {
   return (
     <Wrapper
       arrow
+      arrowSize="small"
       animation={animation}
       className={css['c-tooltip']}
       title={description}

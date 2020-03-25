@@ -31,6 +31,7 @@ import Tooltip from './components/molecule/tooltip/Tooltip';
 // organisms
 import Form from './components/organism/form/Form';
 import Filter from './components/organism/filter/Filter';
+import Modal from './components/organism/modal/Modal';
 
 export {
   BoxShadow,
@@ -55,6 +56,7 @@ export {
   ListItem,
   Loader,
   MaskedInput,
+  Modal,
   Pagination,
   Select,
   Text,

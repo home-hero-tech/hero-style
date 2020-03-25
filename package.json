@@ -1,6 +1,6 @@
 {
   "name": "@homehero/hero-style",
-  "version": "1.0.76",
+  "version": "1.0.77",
   "main": "dist/index.js",
   "browser": "dist/index.umd.js",
   "module": "dist/index.es.js",
@@ -26,6 +26,7 @@
     "react-flexbox-grid": "^2.1.2",
     "react-input-mask": "^3.0.0-alpha.2",
     "react-js-pagination": "^3.0.3",
+    "react-modal": "^3.11.2",
     "react-scripts": "3.4.0",
     "react-select": "^3.0.8",
     "react-text-mask": "^5.4.3",
