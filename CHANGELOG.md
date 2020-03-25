@@ -286,3 +286,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - Reverted select actions.
 
+## [1.0.77] - 2020-03-25
+### Added
+- Modal component.
