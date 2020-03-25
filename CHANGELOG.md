@@ -274,6 +274,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Missing props in Select.
 
-## [1.0.74] - 2020-03-23
-### Added
-- Modal component.
+## [1.0.74] - 2020-03-25
+### Changed
+- onChange from Select has a new structure.
+
+## [1.0.75] - 2020-03-25
+### Changed
+- Adjusted value of onChange from Select.
+
+## [1.0.76] - 2020-03-25
+### Changed
+- Reverted select actions.
+
