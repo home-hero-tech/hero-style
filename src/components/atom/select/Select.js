@@ -7,6 +7,7 @@ import css from './Select.module.scss';
 const Select = ({
   dark,
   firstMessage,
+  id,
   multiple,
   name,
   onChange,
@@ -21,6 +22,7 @@ const Select = ({
 
   const allProps = {
     backspaceRemoves: true,
+    inputId: id || name,
     className: css[className],
     classNamePrefix: className,
     deleteRemoves: true,
@@ -29,7 +31,7 @@ const Select = ({
     value,
     name,
     options,
-    onChange,
+    onChange: val => onChange({ target: { name, ...val } }),
     placeholder,
     noOptionsMessage: ({ inputValue }) =>
       inputValue && inputValue.length ? noOptionsMessage() : firstMessage(),
@@ -41,6 +43,7 @@ const Select = ({
 
 Select.propTypes = {
   dark: PropTypes.bool,
+  id: PropTypes.string,
   firstMessage: PropTypes.func,
   multiple: PropTypes.bool,
   name: PropTypes.string,
@@ -59,6 +62,7 @@ Select.propTypes = {
 
 Select.defaultProps = {
   dark: false,
+  id: null,
   firstMessage: () => 'Digite para buscar',
   multiple: false,
   name: null,
