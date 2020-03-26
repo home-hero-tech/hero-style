@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import { action } from '@storybook/addon-actions';
 
@@ -94,24 +94,29 @@ export const titleAndDescription = () => (
   </Wrapper>
 );
 
-export const buttonTexts = () => (
-  <Wrapper style={style}>
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime!
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime!
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime!
-    <Modal
-      isOpen={isOpen}
-      onConfirm={action('Confirm')}
-      onCancel={action('Cancel')}
-      contentLabel="With Actions Modal"
-      title="Modal Title"
-      closeTimeoutMS={3000}
-      description="Lorem ipsum dolor sit amet, consectetur adipisicing."
-      btnCancelText="Cancelling"
-      btnConfirmText="Confirming"
-    >
-      <h2>blabla</h2>
-      <SomeContent />
-    </Modal>
-  </Wrapper>
-);
+export const buttonTexts = () => {
+  const [open, toggleOpen] = useState(false);
+  return (
+    <Wrapper style={style}>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime!
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime!
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime!
+      <button onClick={() => toggleOpen(true)}>Open</button>
+      <Modal
+        open={open}
+        onConfirm={action('Confirm')}
+        onCancel={() => toggleOpen(false)}
+        contentLabel="With Actions Modal"
+        title="Modal Title"
+        closeTimeoutMS={300}
+        description="Lorem ipsum dolor sit amet, consectetur adipisicing."
+        btnCancelText="Cancelling"
+        btnConfirmText="Confirming"
+        onRequestClose={() => toggleOpen(false)}
+      >
+        <h2>blabla</h2>
+        <SomeContent />
+      </Modal>
+    </Wrapper>
+  );
+};

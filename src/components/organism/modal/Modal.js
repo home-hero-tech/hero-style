@@ -13,6 +13,7 @@ import css from './Modal.module.scss';
 ReactModal.setAppElement('#root');
 
 const Modal = ({
+  open,
   btnCancelText,
   btnConfirmText,
   children,
@@ -20,6 +21,7 @@ const Modal = ({
   right,
   onCancel,
   onConfirm,
+  onRequestClose,
   contentLabel,
   title,
   description,
@@ -43,10 +45,13 @@ const Modal = ({
   return (
     <ReactModal
       fluid
+      isOpen={open}
       className={classes}
       overlayClassName={classesOverlay}
       contentLabel={contentLabel}
       shouldCloseOnOverlayClick
+      closeTimeoutMS={300}
+      onRequestClose={onRequestClose}
       {...otherProps}
     >
       {title || description ? (
@@ -83,12 +88,14 @@ Modal.propTypes = {
     PropTypes.string
   ]).isRequired,
   contentLabel: PropTypes.string.isRequired,
+  description: PropTypes.string,
   left: PropTypes.bool,
   onCancel: PropTypes.func,
   onConfirm: PropTypes.func,
+  onRequestClose: PropTypes.func,
+  open: PropTypes.bool.isRequired,
   right: PropTypes.bool,
-  title: PropTypes.string,
-  description: PropTypes.string
+  title: PropTypes.string
 };
 
 Modal.defaultProps = {
@@ -98,6 +105,7 @@ Modal.defaultProps = {
   right: true,
   onCancel: null,
   onConfirm: null,
+  onRequestClose: null,
   title: null,
   description: null
 };
