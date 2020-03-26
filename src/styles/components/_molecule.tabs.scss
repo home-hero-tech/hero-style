@@ -1,0 +1,64 @@
+@import '../settings/settings';
+@import '../tools/mq';
+
+:global {
+  @import "~react-tabs/style/react-tabs";
+}
+
+.c-tabs {
+  font-family: $font-family;
+
+  :global {
+    .react-tabs__tab-list {
+      border-bottom: none;
+      margin: 0;
+      transition: all .3s ease-in-out;
+
+      @include mq($until: tablet) {
+        display: block;
+        overflow-y: auto;
+        width: 100%;
+        white-space: nowrap;
+      }
+    }
+
+    .react-tabs__tab {
+      padding: $space-1;
+      border: none;
+      border-bottom: solid 2px transparent;
+      font-size: $font-size-sm;
+      transition: all .3s linear;
+      background-color: transparent;
+      height: 36px;
+
+      display: flex;
+      align-items: center;
+
+      &-list {
+        display: flex;
+      }
+
+      & + .react-tabs__tab {
+        margin-left: $space-2;
+      }
+
+      @include mq($until: tablet) {
+        margin: 0 12px;
+      }
+
+      &:hover, &:focus, &--selected {
+        outline: none;
+        border: none;
+        color: $color-primary;
+        border-bottom: solid 2px $color-primary;
+        box-shadow: none;
+
+        &:after,
+        &:before {
+          outline: none;
+          display: none;
+        }
+      }
+    }
+  }
+}
