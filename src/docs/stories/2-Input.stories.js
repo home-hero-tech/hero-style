@@ -16,7 +16,6 @@ const _style = {
 
 const _columnWrapperStyle = {
   width: 500,
-  height: 180,
   padding: 20,
   display: 'flex',
   flexDirection: 'column',
