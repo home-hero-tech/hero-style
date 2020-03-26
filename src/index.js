@@ -1,6 +1,12 @@
 // GRID
 import { Grid, Col, Row } from 'react-flexbox-grid';
 
+// Tabs
+import { Tab, TabList, TabPanel } from 'react-tabs';
+import Tabs from './components/molecule/tabs/Tabs';
+import ScrollableTabs from './components/molecule/tabs/ScrollableTabs';
+import { TabPane as ScrollablePanel } from 'rc-tabs';
+
 // UI
 // atoms
 import BoxShadow from './components/atom/box-shadow/BoxShadow';
@@ -58,7 +64,13 @@ export {
   MaskedInput,
   Modal,
   Pagination,
+  ScrollableTabs,
+  ScrollablePanel,
   Select,
+  Tab,
+  Tabs,
+  TabList,
+  TabPanel,
   Text,
   Tooltip,
   Row
