@@ -3,12 +3,13 @@ import PropTypes from 'prop-types';
 
 import EmptyModal from '../empty-modal/EmptyModal';
 
-const Modal = ({
+const FormModal = ({
   // EmptyModal props
   open,
   left,
   right,
   onRequestClose,
+  onSubmit,
   contentLabel,
 
   children,
@@ -23,12 +24,12 @@ const Modal = ({
       right={right}
       {...otherProps}
     >
-      {children}
+      <form onSubmit={onSubmit}>{children}</form>
     </EmptyModal>
   );
 };
 
-Modal.propTypes = {
+FormModal.propTypes = {
   children: PropTypes.oneOfType([
     PropTypes.object,
     PropTypes.array,
@@ -37,16 +38,17 @@ Modal.propTypes = {
   contentLabel: PropTypes.string.isRequired,
   left: PropTypes.bool,
   onRequestClose: PropTypes.func,
+  onSubmit: PropTypes.func.isRequired,
   open: PropTypes.bool.isRequired,
   right: PropTypes.bool
 };
 
-Modal.defaultProps = {
+FormModal.defaultProps = {
   left: false,
   right: true,
   onRequestClose: f => f
 };
 
-Modal.displayName = 'Modal';
+FormModal.displayName = 'FormModal';
 
-export default Modal;
+export default FormModal;
