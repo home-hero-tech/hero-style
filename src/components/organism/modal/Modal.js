@@ -8,7 +8,7 @@ import ModalHeader from '../../molecule/modal-children/ModalHeader';
 import css from './Modal.module.scss';
 
 const Modal = ({
-  // Modal props
+  // EmptyModal props
   open,
   left,
   right,
@@ -75,5 +75,7 @@ Modal.defaultProps = {
   title: null,
   description: null
 };
+
+Modal.displayName = 'Modal';
 
 export default Modal;

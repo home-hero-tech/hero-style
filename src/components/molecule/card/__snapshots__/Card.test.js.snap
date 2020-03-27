@@ -1,14 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Card should match with the snapshot 1`] = `
-<ul
-  className="c-card"
+<Grid
+  fluid={true}
 >
-  <ListItem
-    format="DD MMM YYYY [às] HH:mm"
-    label="Label"
-    primary={false}
-    value="Value"
-  />
-</ul>
+  <Row
+    className="c-card"
+  >
+    <ListItem
+      col={null}
+      ellipsis={false}
+      format="DD MMM YYYY [às] HH:mm"
+      label="Label"
+      primary={false}
+      value="Value"
+    />
+  </Row>
+</Grid>
 `;

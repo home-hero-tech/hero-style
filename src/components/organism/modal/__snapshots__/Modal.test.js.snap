@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Modal should match with the snapshot 1`] = `
+<div
+  id="root"
+>
+  <Modal
+    btnCancelText="Cancelar"
+    btnConfirmText="Enviar"
+    contentLabel="Modal"
+    description={null}
+    left={false}
+    onCancel={[Function]}
+    onConfirm={[Function]}
+    onRequestClose={null}
+    open={true}
+    right={true}
+    title={null}
+  >
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio, vitae!
+  </Modal>
+</div>
+`;

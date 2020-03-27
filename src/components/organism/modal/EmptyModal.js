@@ -5,9 +5,9 @@ import classNames from 'classnames';
 
 import css from './Modal.module.scss';
 
-ReactModal.setAppElement('#root');
+// ReactModal.setAppElement('#root');
 
-const Modal = ({
+const EmptyModal = ({
   open,
   children,
   left,
@@ -48,7 +48,7 @@ const Modal = ({
   );
 };
 
-Modal.propTypes = {
+EmptyModal.propTypes = {
   children: PropTypes.oneOfType([
     PropTypes.object,
     PropTypes.array,
@@ -58,13 +58,15 @@ Modal.propTypes = {
   left: PropTypes.bool,
   onRequestClose: PropTypes.func,
   open: PropTypes.bool.isRequired,
-  right: PropTypes.bool,
+  right: PropTypes.bool
 };
 
-Modal.defaultProps = {
+EmptyModal.defaultProps = {
   left: false,
   right: true,
-  onRequestClose: null,
+  onRequestClose: null
 };
 
-export default Modal;
+EmptyModal.displayName = 'EmptyModal';
+
+export default EmptyModal;

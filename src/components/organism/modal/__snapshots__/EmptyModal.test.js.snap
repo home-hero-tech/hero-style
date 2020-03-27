@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EmptyModal should match with the *left* props 1`] = `
+<div
+  id="root"
+>
+  <EmptyModal
+    contentLabel="Default EmptyModal"
+    left={true}
+    onRequestClose={null}
+    open={true}
+    right={true}
+  >
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio, vitae!
+  </EmptyModal>
+</div>
+`;
+
+exports[`EmptyModal should match with the *right* props 1`] = `
+<div
+  id="root"
+>
+  <EmptyModal
+    contentLabel="Default EmptyModal"
+    left={false}
+    onRequestClose={null}
+    open={true}
+    right={true}
+  >
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio, vitae!
+  </EmptyModal>
+</div>
+`;
+
+exports[`EmptyModal should match with the snapshot 1`] = `
+<div
+  id="root"
+>
+  <EmptyModal
+    contentLabel="Default EmptyModal"
+    left={false}
+    onRequestClose={null}
+    open={true}
+    right={true}
+  >
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio, vitae!
+  </EmptyModal>
+</div>
+`;

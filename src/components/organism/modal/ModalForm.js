@@ -7,8 +7,8 @@ import ModalHeader from '../../molecule/modal-children/ModalHeader';
 
 import css from './Modal.module.scss';
 
-const Modal = ({
-  // Modal props
+const ModalForm = ({
+  // EmptyModal props
   open,
   left,
   right,
@@ -47,7 +47,7 @@ const Modal = ({
   );
 };
 
-Modal.propTypes = {
+ModalForm.propTypes = {
   btnCancelText: PropTypes.string,
   btnConfirmText: PropTypes.string,
   children: PropTypes.oneOfType([
@@ -65,7 +65,7 @@ Modal.propTypes = {
   title: PropTypes.string
 };
 
-Modal.defaultProps = {
+ModalForm.defaultProps = {
   btnCancelText: 'Cancelar',
   btnConfirmText: 'Enviar',
   left: false,
@@ -77,4 +77,6 @@ Modal.defaultProps = {
   description: null
 };
 
-export default Modal;
+ModalForm.displayName = 'ModalForm';
+
+export default ModalForm;

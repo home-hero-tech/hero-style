@@ -37,9 +37,9 @@ export const Default = () => (
     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime!
     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime!
     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime!
-    <Modal open={isOpen} contentLabel="Default Modal">
+    <EmptyModal open={isOpen} contentLabel="Default EmptyModal">
       <SomeContent />
-    </Modal>
+    </EmptyModal>
   </Wrapper>
 );
 
@@ -48,9 +48,14 @@ export const left = () => (
     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime!
     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime!
     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime!
-    <Modal open={isOpen} left right={false} contentLabel="Default Modal">
+    <EmptyModal
+      open={isOpen}
+      left
+      right={false}
+      contentLabel="Default EmptyModal"
+    >
       <SomeContent />
-    </Modal>
+    </EmptyModal>
   </Wrapper>
 );
 
@@ -59,9 +64,9 @@ export const right = () => (
     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime!
     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime!
     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime!
-    <Modal open={isOpen} right contentLabel="Right Modal">
+    <EmptyModal open={isOpen} right contentLabel="Right EmptyModal">
       <SomeContent />
-    </Modal>
+    </EmptyModal>
   </Wrapper>
 );
 
@@ -74,7 +79,7 @@ export const withActions = () => (
       open={isOpen}
       onConfirm={action('Confirm')}
       onCancel={action('Cancel')}
-      contentLabel="With Actions Modal"
+      contentLabel="With Actions EmptyModal"
     >
       <SomeContent />
     </Modal>
@@ -88,8 +93,8 @@ export const titleAndDescription = () => (
     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime!
     <Modal
       open={isOpen}
-      contentLabel="With Actions Modal"
-      title="Modal Title"
+      contentLabel="With Actions EmptyModal"
+      title="EmptyModal Title"
       closeTimeoutMS={3000}
       description="Lorem ipsum dolor sit amet, consectetur adipisicing."
     >
@@ -110,8 +115,8 @@ export const buttonTexts = () => {
         open={open}
         onConfirm={action('Confirm')}
         onCancel={() => toggleOpen(false)}
-        contentLabel="With Actions Modal"
-        title="Modal Title"
+        contentLabel="With Actions EmptyModal"
+        title="EmptyModal Title"
         closeTimeoutMS={300}
         description="Lorem ipsum dolor sit amet, consectetur adipisicing."
         btnCancelText="Cancel?"
@@ -139,8 +144,8 @@ export const _ModalForm = () => {
         open={open}
         onConfirm={handleSubmit}
         onCancel={() => toggleOpen(false)}
-        contentLabel="With Actions Modal"
-        title="Modal Title"
+        contentLabel="With Actions EmptyModal"
+        title="EmptyModal Title"
         description="Lorem ipsum dolor sit amet, consectetur adipisicing."
         btnCancelText="Cancelling"
         btnConfirmText="Confirming"
@@ -208,7 +213,7 @@ export const _EmptyModal = () => {
         open={open}
         onConfirm={handleSubmit}
         onCancel={() => toggleOpen(false)}
-        contentLabel="With Actions Modal"
+        contentLabel="With Actions EmptyModal"
         onRequestClose={() => toggleOpen(false)}
       >
         Test

@@ -1,0 +1,110 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ModalForm should match with the snapshot 1`] = `
+<div
+  id="root"
+>
+  <ModalForm
+    btnCancelText="Cancelling"
+    btnConfirmText="Confirming"
+    contentLabel="With Actions EmptyModal"
+    description="Lorem ipsum dolor sit amet, consectetur adipisicing."
+    left={false}
+    onCancel={[Function]}
+    onConfirm={[Function]}
+    onRequestClose={[Function]}
+    open={true}
+    right={true}
+    title="EmptyModal Title"
+  >
+    <Grid
+      fluid={true}
+      style={
+        Object {
+          "padding": 0,
+        }
+      }
+    >
+      <FormRow>
+        <FormGroup
+          error={false}
+          icon={false}
+          md={true}
+          success={false}
+        >
+          <Label
+            name="name"
+          >
+            Nome
+          </Label>
+          <Input
+            dark={null}
+            defaultValue={null}
+            disabled={null}
+            id="name"
+            name="name"
+            onChange={[Function]}
+            parentRef={null}
+            placeholder="Ex: Banheiro"
+            type="text"
+            value=""
+          />
+        </FormGroup>
+      </FormRow>
+      <FormRow>
+        <FormGroup
+          error={false}
+          icon={false}
+          md={true}
+          success={false}
+        >
+          <Label
+            name="idRefurbish"
+          >
+            Nome
+          </Label>
+          <Input
+            dark={null}
+            defaultValue={null}
+            disabled={null}
+            id="idRefurbish"
+            name="idRefurbish"
+            onChange={[Function]}
+            parentRef={null}
+            placeholder="Ex: Banheiro"
+            type="text"
+            value=""
+          />
+        </FormGroup>
+      </FormRow>
+      <FormRow>
+        <FormGroup
+          error={false}
+          icon={false}
+          md={true}
+          success={false}
+        >
+          <Label
+            name="observation"
+          >
+            Observações
+          </Label>
+          <Input
+            dark={null}
+            defaultValue={null}
+            disabled={null}
+            id="observation"
+            multiple={true}
+            name="observation"
+            onChange={[Function]}
+            parentRef={null}
+            placeholder="Ativo"
+            type="text"
+            value=""
+          />
+        </FormGroup>
+      </FormRow>
+    </Grid>
+  </ModalForm>
+</div>
+`;

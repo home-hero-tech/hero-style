@@ -38,6 +38,8 @@ import Tooltip from './components/molecule/tooltip/Tooltip';
 import Form from './components/organism/form/Form';
 import Filter from './components/organism/filter/Filter';
 import Modal from './components/organism/modal/Modal';
+import ModalForm from './components/organism/modal/ModalForm';
+import EmptyModal from './components/organism/modal/EmptyModal';
 
 export {
   BoxShadow,
@@ -46,6 +48,7 @@ export {
   CardItem,
   Col,
   DatePicker,
+  EmptyModal,
   Filter,
   FilterHeader,
   FilterContent,
@@ -63,6 +66,7 @@ export {
   Loader,
   MaskedInput,
   Modal,
+  ModalForm,
   Pagination,
   ScrollableTabs,
   ScrollablePanel,

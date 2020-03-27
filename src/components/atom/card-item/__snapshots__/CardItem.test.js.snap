@@ -1,14 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`CardItem should match with the snapshot 1`] = `
-<li
+<Col
   className="c-card-item"
 >
   <span>
     Label
   </span>
-  <span>
+  <span
+    className="truncate"
+  >
     Value
   </span>
-</li>
+</Col>
 `;
