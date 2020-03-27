@@ -1,10 +1,9 @@
 @import "../settings/settings";
 @import "../tools/tools";
 
-$base: 8px;
 
 .c-btn {
-  padding: 8px 24px;
+  padding: $space-1 $space-3;
   font-weight: bold;
   color: $color-structural-gray-600;
   border-radius: $radius-4;
@@ -34,7 +33,7 @@ $base: 8px;
 
   &--size-2 {
     font-size: 12px;
-    height: 33px;
+    height: 32px;
 
     .spinner {
       width: 12px;
@@ -44,12 +43,12 @@ $base: 8px;
 
   &--size-3 {
     font-size: 14px;
-    height: 35px;
+    height: 34px;
   }
 
   &--size-4 {
     font-size: 16px;
-    height: 37px;
+    height: 36px;
   }
 
   &--squared {
@@ -72,7 +71,6 @@ $base: 8px;
   &--text {
     background: transparent;
     border: none;
-    color: currentColor;
     color: $color-structural-gray-600;
 
     &:hover {
@@ -207,7 +205,7 @@ $base: 8px;
   &--success {
     background-color: $color-success;
     border: solid 1px $color-success;
-    color: #fff;
+    color: $color-white;
 
     &.c-btn--outlined {
       background: transparent;

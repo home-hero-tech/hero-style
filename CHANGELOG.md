@@ -288,4 +288,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [1.0.77] - 2020-03-25
 ### Added
-- Modal component.
+- EmptyModal component.
+
+## [1.0.78] - 2020-03-26
+### Added
+- Tab and Scrolalble components.
+
+## [1.0.79] - 2020-03-26
+### Added
+- Other props for EmptyModal component.
+
+## [1.0.80] - 2020-03-26
+### Added
+- EmptyModal, ModalForm and its tests.
+
+### Changed
+- Updated component tests.
