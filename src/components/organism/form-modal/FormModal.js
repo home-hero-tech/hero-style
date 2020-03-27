@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import EmptyModal from '../empty-modal/EmptyModal';
+import Modal from '../modal/Modal';
 
 const FormModal = ({
   // EmptyModal props
@@ -16,7 +16,7 @@ const FormModal = ({
   ...otherProps
 }) => {
   return (
-    <EmptyModal
+    <Modal
       open={open}
       contentLabel={contentLabel}
       onRequestClose={onRequestClose}
@@ -25,7 +25,7 @@ const FormModal = ({
       {...otherProps}
     >
       <form onSubmit={onSubmit}>{children}</form>
-    </EmptyModal>
+    </Modal>
   );
 };
 

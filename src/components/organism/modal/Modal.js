@@ -1,30 +1,51 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import ReactModal from 'react-modal';
+import classNames from 'classnames';
 
-import EmptyModal from '../empty-modal/EmptyModal';
+import css from './Modal.module.scss';
+
+ReactModal.setAppElement('#root');
 
 const Modal = ({
-  // EmptyModal props
   open,
+  children,
   left,
   right,
   onRequestClose,
   contentLabel,
-
-  children,
+  widthLevel,
   ...otherProps
 }) => {
+  const classes = classNames({
+    [css['c-modal']]: true,
+    [css['c-modal--pre-left']]: left,
+    [css['c-modal--pre-right']]: right,
+    [css[`c-modal--width-${widthLevel}`]]: true,
+
+    [css['c-modal-overlay--left']]: left,
+    [css['c-modal-overlay--right']]: right
+  });
+
+  const classesOverlay = classNames({
+    [css['c-modal-overlay']]: true,
+    [css['c-modal-overlay--left']]: left,
+    [css['c-modal-overlay--right']]: right
+  });
+
   return (
-    <EmptyModal
-      open={open}
+    <ReactModal
+      isOpen={open}
+      className={classes}
+      overlayClassName={classesOverlay}
       contentLabel={contentLabel}
+      shouldCloseOnOverlayClick
+      closeTimeoutMS={300}
       onRequestClose={onRequestClose}
-      left={left}
-      right={right}
       {...otherProps}
     >
       {children}
-    </EmptyModal>
+    </ReactModal>
   );
 };
 
@@ -38,15 +59,15 @@ Modal.propTypes = {
   left: PropTypes.bool,
   onRequestClose: PropTypes.func,
   open: PropTypes.bool.isRequired,
-  right: PropTypes.bool
+  right: PropTypes.bool,
+  widthLevel: PropTypes.number
 };
 
 Modal.defaultProps = {
   left: false,
   right: true,
-  onRequestClose: f => f
+  onRequestClose: null,
+  widthLevel: 1
 };
-
-Modal.displayName = 'Modal';
 
 export default Modal;

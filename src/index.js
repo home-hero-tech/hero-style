@@ -35,7 +35,6 @@ import List from './components/molecule/list/List';
 import Tooltip from './components/molecule/tooltip/Tooltip';
 
 // organisms
-import EmptyModal from './components/organism/empty-modal/EmptyModal';
 import Form from './components/organism/form/Form';
 import FormModal from './components/organism/form-modal/FormModal';
 import Filter from './components/organism/filter/Filter';
@@ -48,7 +47,6 @@ export {
   CardItem,
   Col,
   DatePicker,
-  EmptyModal,
   Filter,
   FilterHeader,
   FilterContent,
