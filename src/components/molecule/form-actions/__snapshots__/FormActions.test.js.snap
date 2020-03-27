@@ -5,18 +5,26 @@ exports[`FormActions should match with the snapshot 1`] = `
   className="c-form-actions"
 >
   <Button
-    danger={false}
-    primary={false}
-    success={false}
+    container="default"
+    disabled={false}
+    loading={false}
+    onClick={null}
+    shape="rounded"
+    size={2}
+    submit={false}
     type="submit"
   >
     Submit
   </Button>
   <Button
-    danger={false}
+    container="default"
+    disabled={false}
+    loading={false}
     onClick={[Function]}
-    primary={false}
-    success={false}
+    shape="rounded"
+    size={2}
+    submit={false}
+    type="default"
   >
     Cancel
   </Button>
@@ -28,18 +36,26 @@ exports[`FormActions should match with the snapshot 2`] = `
   className="c-form-actions c-form-actions--align-between"
 >
   <Button
-    danger={false}
-    primary={false}
-    success={false}
+    container="default"
+    disabled={false}
+    loading={false}
+    onClick={null}
+    shape="rounded"
+    size={2}
+    submit={false}
     type="submit"
   >
     Submit
   </Button>
   <Button
-    danger={false}
+    container="default"
+    disabled={false}
+    loading={false}
     onClick={[Function]}
-    primary={false}
-    success={false}
+    shape="rounded"
+    size={2}
+    submit={false}
+    type="default"
   >
     Cancel
   </Button>
@@ -51,18 +67,26 @@ exports[`FormActions should match with the snapshot 3`] = `
   className="c-form-actions c-form-actions--align-end"
 >
   <Button
-    danger={false}
-    primary={false}
-    success={false}
+    container="default"
+    disabled={false}
+    loading={false}
+    onClick={null}
+    shape="rounded"
+    size={2}
+    submit={false}
     type="submit"
   >
     Submit
   </Button>
   <Button
-    danger={false}
+    container="default"
+    disabled={false}
+    loading={false}
     onClick={[Function]}
-    primary={false}
-    success={false}
+    shape="rounded"
+    size={2}
+    submit={false}
+    type="default"
   >
     Cancel
   </Button>

@@ -7,8 +7,11 @@ exports[`Loader should match with the snapshot 1`] = `
   <div
     className="spinner"
   />
-  <p>
+  <Text
+    center={false}
+    end={false}
+  >
     Loading
-  </p>
+  </Text>
 </div>
 `;

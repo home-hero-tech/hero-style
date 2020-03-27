@@ -2,11 +2,14 @@
 
 exports[`Form should match with the snapshot 1`] = `
 <form
+  className={null}
+  noValidate={true}
   onSubmit={[Function]}
 >
   <FormRow>
     <FormGroup
       error={false}
+      icon={false}
       id="ipt"
       label="Text"
       message="Default message"

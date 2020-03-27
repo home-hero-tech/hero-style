@@ -1,4 +1,20 @@
 @import "../settings/settings";
+@import '../tools/mq';
+
+:global {
+  .ReactModal__Overlay {
+    opacity: 0;
+    transition: opacity .2s ease-in-out;
+  }
+
+  .ReactModal__Overlay--after-open{
+    opacity: 1;
+  }
+
+  .ReactModal__Overlay--before-close{
+    opacity: 0;
+  }
+}
 
 .c-modal,
 .c-modal-overlay {
@@ -12,8 +28,28 @@
   background-color: $color-structural-white;
   z-index: 9030;
   padding: $space-5 $space-4;
-
   transition: all .3s ease-in-out;
+
+  form {
+    height: 100%;
+  }
+
+  form {
+    height: 100%;
+
+    main > div > div {
+      max-width: 100%;
+    }
+  }
+
+  @include mq($until: tablet) {
+    width: 100%;
+    padding: $space-3 $space-2;
+  }
+
+  @include mq($until: mobile) {
+    padding: $space-2 $space-1;
+  }
 
   &--pre-left {
     left: -100%;
@@ -45,7 +81,12 @@
   }
 
   &__heading ~ &__content {
-    margin-top: $space-2;
+    margin: $space-2 0;
+  }
+
+  &__content {
+    overflow: auto;
+    height: calc(100% - 120px);
   }
 
   &__actions {
@@ -61,6 +102,10 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @include mq($until: mobile) {
+      padding: $space-1 $space-2;
+    }
   }
 }
 

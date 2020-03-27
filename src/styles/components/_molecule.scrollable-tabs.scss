@@ -1,0 +1,55 @@
+@import '../settings/settings';
+@import '../tools/mq';
+
+:global {
+  .rc-tabs-top .rc-tabs-bar, .rc-tabs-bar, .rc-tabs-top {
+    border-bottom: none;
+  }
+
+  .rc-tabs, .rc-tabs-top, .rc-tabs-content, .rc-tabs-content-animated {
+    height: 100%;
+  }
+
+  .rc-tabs-bar {
+    line-height: 1em;
+  }
+
+  .rc-tabs-content {
+    background-color: transparent;
+  }
+
+  .rc-tabs-tab-prev,
+  .rc-tabs-tab-next {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding-bottom: $space-1;
+  }
+
+  .rc-tabs-tab {
+    font-family: $font-family;
+    padding: $space-1;
+    border: none;
+    border-bottom: solid 2px transparent;
+    font-size: $font-size-sm;
+    transition: all .3s linear;
+    background-color: transparent;
+    margin-right: 0 !important;
+    height: 34px;
+
+    &:hover {
+      cursor: pointer;
+      color: $color-primary;
+    }
+
+    & + .rc-tabs-tab {
+      margin-left: $space-2;
+      margin-right: 0;
+    }
+  }
+
+  .rc-tabs-top .rc-tabs-content-animated .rc-tabs-tabpane {
+    //height: 100%;
+  }
+}

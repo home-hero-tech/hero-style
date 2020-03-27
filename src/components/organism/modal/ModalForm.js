@@ -7,13 +7,12 @@ import ModalHeader from '../../molecule/modal-children/ModalHeader';
 
 import css from './Modal.module.scss';
 
-const Modal = ({
+const ModalForm = ({
   // EmptyModal props
   open,
   left,
   right,
   onRequestClose,
-  contentLabel,
 
   btnCancelText,
   btnConfirmText,
@@ -27,25 +26,28 @@ const Modal = ({
   return (
     <EmptyModal
       open={open}
-      contentLabel={contentLabel}
+      contentLabel={title}
       onRequestClose={onRequestClose}
       left={left}
       right={right}
       {...otherProps}
     >
-      <ModalHeader title={title} description={description} />
-      <main className={css['c-modal__content']}>{children}</main>
-      <ModalActions
-        onCancel={onCancel}
-        onConfirm={onConfirm}
-        btnCancelText={btnCancelText}
-        btnConfirmText={btnConfirmText}
-      />
+      <form onSubmit={onConfirm}>
+        <ModalHeader title={title} description={description} />
+        <main className={css['c-modal__content']}>{children}</main>
+        <ModalActions
+          isForm
+          onCancel={onCancel}
+          onConfirm={onConfirm}
+          btnCancelText={btnCancelText}
+          btnConfirmText={btnConfirmText}
+        />
+      </form>
     </EmptyModal>
   );
 };
 
-Modal.propTypes = {
+ModalForm.propTypes = {
   btnCancelText: PropTypes.string,
   btnConfirmText: PropTypes.string,
   children: PropTypes.oneOfType([
@@ -53,7 +55,6 @@ Modal.propTypes = {
     PropTypes.array,
     PropTypes.string
   ]).isRequired,
-  contentLabel: PropTypes.string.isRequired,
   description: PropTypes.string,
   left: PropTypes.bool,
   onCancel: PropTypes.func,
@@ -64,7 +65,7 @@ Modal.propTypes = {
   title: PropTypes.string
 };
 
-Modal.defaultProps = {
+ModalForm.defaultProps = {
   btnCancelText: 'Cancelar',
   btnConfirmText: 'Enviar',
   left: false,
@@ -76,6 +77,6 @@ Modal.defaultProps = {
   description: null
 };
 
-Modal.displayName = 'Modal';
+ModalForm.displayName = 'ModalForm';
 
-export default Modal;
+export default ModalForm;

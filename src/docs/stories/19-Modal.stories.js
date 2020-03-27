@@ -1,9 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Grid } from 'react-flexbox-grid';
 
 import { action } from '@storybook/addon-actions';
 
 import Modal from '../../components/organism/modal/Modal';
+import EmptyModal from '../../components/organism/modal/EmptyModal';
+import ModalForm from '../../components/organism/modal/ModalForm';
 import Wrapper from '../../helpers/wrapper/Wrapper';
+import Input from '../../components/atom/input/Input';
+import Label from '../../components/atom/label/Label';
+import FormGroup from '../../components/molecule/form-group/FormGroup';
+import FormRow from '../../components/molecule/form-row/FormRow';
 
 export default {
   title: 'Modal',
@@ -30,9 +37,9 @@ export const Default = () => (
     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime!
     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime!
     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime!
-    <Modal isOpen={isOpen} contentLabel="Default Modal">
+    <EmptyModal open={isOpen} contentLabel="Default EmptyModal">
       <SomeContent />
-    </Modal>
+    </EmptyModal>
   </Wrapper>
 );
 
@@ -41,9 +48,14 @@ export const left = () => (
     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime!
     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime!
     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime!
-    <Modal isOpen={isOpen} left right={false} contentLabel="Default Modal">
+    <EmptyModal
+      open={isOpen}
+      left
+      right={false}
+      contentLabel="Default EmptyModal"
+    >
       <SomeContent />
-    </Modal>
+    </EmptyModal>
   </Wrapper>
 );
 
@@ -52,9 +64,9 @@ export const right = () => (
     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime!
     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime!
     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime!
-    <Modal isOpen={isOpen} right contentLabel="Right Modal">
+    <EmptyModal open={isOpen} right contentLabel="Right EmptyModal">
       <SomeContent />
-    </Modal>
+    </EmptyModal>
   </Wrapper>
 );
 
@@ -64,10 +76,10 @@ export const withActions = () => (
     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime!
     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime!
     <Modal
-      isOpen={isOpen}
+      open={isOpen}
       onConfirm={action('Confirm')}
       onCancel={action('Cancel')}
-      contentLabel="With Actions Modal"
+      contentLabel="With Actions EmptyModal"
     >
       <SomeContent />
     </Modal>
@@ -80,38 +92,132 @@ export const titleAndDescription = () => (
     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime!
     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime!
     <Modal
-      isOpen={isOpen}
-      onConfirm={action('Confirm')}
-      onCancel={action('Cancel')}
-      contentLabel="With Actions Modal"
-      title="Modal Title"
+      open={isOpen}
+      contentLabel="With Actions EmptyModal"
+      title="EmptyModal Title"
       closeTimeoutMS={3000}
       description="Lorem ipsum dolor sit amet, consectetur adipisicing."
     >
-      <h2>blabla</h2>
       <SomeContent />
     </Modal>
   </Wrapper>
 );
 
-export const buttonTexts = () => (
-  <Wrapper style={style}>
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime!
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime!
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime!
-    <Modal
-      isOpen={isOpen}
-      onConfirm={action('Confirm')}
-      onCancel={action('Cancel')}
-      contentLabel="With Actions Modal"
-      title="Modal Title"
-      closeTimeoutMS={3000}
-      description="Lorem ipsum dolor sit amet, consectetur adipisicing."
-      btnCancelText="Cancelling"
-      btnConfirmText="Confirming"
-    >
-      <h2>blabla</h2>
-      <SomeContent />
-    </Modal>
-  </Wrapper>
-);
+export const buttonTexts = () => {
+  const [open, toggleOpen] = useState(true);
+  return (
+    <Wrapper style={style}>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime!
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime!
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime!
+      <button onClick={() => toggleOpen(true)}>Open</button>
+      <Modal
+        open={open}
+        onConfirm={action('Confirm')}
+        onCancel={() => toggleOpen(false)}
+        contentLabel="With Actions EmptyModal"
+        title="EmptyModal Title"
+        closeTimeoutMS={300}
+        description="Lorem ipsum dolor sit amet, consectetur adipisicing."
+        btnCancelText="Cancel?"
+        btnConfirmText="Confirm?"
+        onRequestClose={() => toggleOpen(false)}
+      >
+        <SomeContent />
+      </Modal>
+    </Wrapper>
+  );
+};
+
+export const _ModalForm = () => {
+  const [open, toggleOpen] = useState(true);
+  const handleSubmit = e => {
+    e.preventDefault();
+  };
+  return (
+    <Wrapper style={style}>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime!
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime!
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime!
+      <button onClick={() => toggleOpen(true)}>Open</button>
+      <ModalForm
+        open={open}
+        onConfirm={handleSubmit}
+        onCancel={() => toggleOpen(false)}
+        contentLabel="With Actions EmptyModal"
+        title="EmptyModal Title"
+        description="Lorem ipsum dolor sit amet, consectetur adipisicing."
+        btnCancelText="Cancelling"
+        btnConfirmText="Confirming"
+        onRequestClose={() => toggleOpen(false)}
+      >
+        <Grid fluid style={{ padding: 0 }}>
+          <FormRow>
+            <FormGroup md>
+              <Label name="name">Nome</Label>
+              <Input
+                id="name"
+                name="name"
+                type="text"
+                placeholder="Ex: Banheiro"
+                onChange={action('onChange')}
+                value=""
+              />
+            </FormGroup>
+          </FormRow>
+          <FormRow>
+            <FormGroup md>
+              <Label name="idRefurbish">Nome</Label>
+              <Input
+                id="idRefurbish"
+                name="idRefurbish"
+                type="text"
+                placeholder="Ex: Banheiro"
+                onChange={action('idRefurbish')}
+                value=""
+              />
+            </FormGroup>
+          </FormRow>
+
+          <FormRow>
+            <FormGroup md>
+              <Label name="observation">Observações</Label>
+              <Input
+                id="observation"
+                name="observation"
+                placeholder="Ativo"
+                multiple
+                onChange={action('change')}
+                value=""
+              />
+            </FormGroup>
+          </FormRow>
+        </Grid>
+      </ModalForm>
+    </Wrapper>
+  );
+};
+
+export const _EmptyModal = () => {
+  const [open, toggleOpen] = useState(true);
+  const handleSubmit = e => {
+    e.preventDefault();
+  };
+  return (
+    <Wrapper style={style}>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime!
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime!
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime!
+      <button onClick={() => toggleOpen(true)}>Open</button>
+      <EmptyModal
+        open={open}
+        onConfirm={handleSubmit}
+        onCancel={() => toggleOpen(false)}
+        contentLabel="With Actions EmptyModal"
+        onRequestClose={() => toggleOpen(false)}
+      >
+        Test
+      </EmptyModal>
+    </Wrapper>
+  );
+};

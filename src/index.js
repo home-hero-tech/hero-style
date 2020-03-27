@@ -1,6 +1,12 @@
 // GRID
 import { Grid, Col, Row } from 'react-flexbox-grid';
 
+// Tabs
+import { Tab, TabList, TabPanel } from 'react-tabs';
+import Tabs from './components/molecule/tabs/Tabs';
+import ScrollableTabs from './components/molecule/tabs/ScrollableTabs';
+import { TabPane as ScrollablePanel } from 'rc-tabs';
+
 // UI
 // atoms
 import BoxShadow from './components/atom/box-shadow/BoxShadow';
@@ -32,6 +38,8 @@ import Tooltip from './components/molecule/tooltip/Tooltip';
 import Form from './components/organism/form/Form';
 import Filter from './components/organism/filter/Filter';
 import Modal from './components/organism/modal/Modal';
+import ModalForm from './components/organism/modal/ModalForm';
+import EmptyModal from './components/organism/modal/EmptyModal';
 
 export {
   BoxShadow,
@@ -40,6 +48,7 @@ export {
   CardItem,
   Col,
   DatePicker,
+  EmptyModal,
   Filter,
   FilterHeader,
   FilterContent,
@@ -57,8 +66,15 @@ export {
   Loader,
   MaskedInput,
   Modal,
+  ModalForm,
   Pagination,
+  ScrollableTabs,
+  ScrollablePanel,
   Select,
+  Tab,
+  Tabs,
+  TabList,
+  TabPanel,
   Text,
   Tooltip,
   Row
