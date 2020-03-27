@@ -4,8 +4,12 @@ import { Tabs } from 'react-tabs';
 
 import css from './Tabs.module.scss';
 
-const TabsComponent = ({ children }) => {
-  return <Tabs className={css['c-tabs']}>{children}</Tabs>;
+const TabsComponent = ({ children, ...otherProps }) => {
+  return (
+    <Tabs className={css['c-tabs']} {...otherProps}>
+      {children}
+    </Tabs>
+  );
 };
 
 TabsComponent.propTypes = {
