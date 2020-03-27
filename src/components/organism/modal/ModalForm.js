@@ -13,7 +13,6 @@ const Modal = ({
   left,
   right,
   onRequestClose,
-  contentLabel,
 
   btnCancelText,
   btnConfirmText,
@@ -27,20 +26,23 @@ const Modal = ({
   return (
     <EmptyModal
       open={open}
-      contentLabel={contentLabel}
+      contentLabel={title}
       onRequestClose={onRequestClose}
       left={left}
       right={right}
       {...otherProps}
     >
-      <ModalHeader title={title} description={description} />
-      <main className={css['c-modal__content']}>{children}</main>
-      <ModalActions
-        onCancel={onCancel}
-        onConfirm={onConfirm}
-        btnCancelText={btnCancelText}
-        btnConfirmText={btnConfirmText}
-      />
+      <form onSubmit={onConfirm}>
+        <ModalHeader title={title} description={description} />
+        <main className={css['c-modal__content']}>{children}</main>
+        <ModalActions
+          isForm
+          onCancel={onCancel}
+          onConfirm={onConfirm}
+          btnCancelText={btnCancelText}
+          btnConfirmText={btnConfirmText}
+        />
+      </form>
     </EmptyModal>
   );
 };
@@ -53,7 +55,6 @@ Modal.propTypes = {
     PropTypes.array,
     PropTypes.string
   ]).isRequired,
-  contentLabel: PropTypes.string.isRequired,
   description: PropTypes.string,
   left: PropTypes.bool,
   onCancel: PropTypes.func,
