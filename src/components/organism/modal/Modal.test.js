@@ -13,8 +13,8 @@ describe('Modal', () => {
         <Modal
           open={isOpen}
           contentLabel="Modal"
-          onConfirm={() => console.log('confirm')}
-          onCancel={() => console.log('cancel')}
+          onConfirm={() => {}}
+          onCancel={() => {}}
         >
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio, vitae!
         </Modal>

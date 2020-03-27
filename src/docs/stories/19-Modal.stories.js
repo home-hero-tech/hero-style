@@ -26,7 +26,7 @@ const style = {
   maxWidth: '100%'
 };
 
-export const Width_1_Default = () => {
+export const Width1Default = () => {
   const [open, toggleOpen] = useState(true);
   return (
     <Wrapper style={style}>
@@ -46,7 +46,7 @@ export const Width_1_Default = () => {
   );
 };
 
-export const Width_2 = () => {
+export const Width2 = () => {
   const [open, toggleOpen] = useState(true);
   return (
     <Wrapper style={style}>
@@ -66,7 +66,7 @@ export const Width_2 = () => {
   );
 };
 
-export const Width_3 = () => {
+export const Width3 = () => {
   const [open, toggleOpen] = useState(true);
   return (
     <Wrapper style={style}>
