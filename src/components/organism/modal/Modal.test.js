@@ -10,12 +10,33 @@ describe('Modal', () => {
 
     const wrapper = shallow(
       <div id="root">
-        <Modal
-          open={isOpen}
-          contentLabel="Modal"
-          onConfirm={() => console.log('confirm')}
-          onCancel={() => console.log('cancel')}
-        >
+        <Modal open={isOpen} contentLabel="Default Modal">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio, vitae!
+        </Modal>
+      </div>
+    );
+    expect(toJson(wrapper)).toMatchSnapshot();
+  });
+
+  it('should match with the *right* props', () => {
+    const isOpen = true;
+
+    const wrapper = shallow(
+      <div id="root">
+        <Modal open={isOpen} contentLabel="Default Modal" right>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio, vitae!
+        </Modal>
+      </div>
+    );
+    expect(toJson(wrapper)).toMatchSnapshot();
+  });
+
+  it('should match with the *left* props', () => {
+    const isOpen = true;
+
+    const wrapper = shallow(
+      <div id="root">
+        <Modal open={isOpen} contentLabel="Default Modal" left>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio, vitae!
         </Modal>
       </div>
