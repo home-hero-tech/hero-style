@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ModalContent should match with the snapshot 1`] = `
+<main
+  className="c-modal__content"
+>
+  <div>
+    Content
+  </div>
+</main>
+`;

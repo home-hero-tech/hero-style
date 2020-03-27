@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ModalFooter should match with the snapshot 1`] = `
+<footer
+  className="c-modal__actions"
+>
+  <Button
+    container="default"
+    disabled={false}
+    loading={false}
+    onClick={[Function]}
+    shape="rounded"
+    size={2}
+    submit={false}
+    type="default"
+  >
+    1st action
+  </Button>
+  <Button
+    container="default"
+    disabled={false}
+    loading={false}
+    onClick={[Function]}
+    shape="rounded"
+    size={2}
+    submit={false}
+    type="primary"
+  >
+    2nd action
+  </Button>
+</footer>
+`;
