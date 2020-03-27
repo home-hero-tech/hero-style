@@ -26,6 +26,66 @@ const style = {
   maxWidth: '100%'
 };
 
+export const Width_1_Default = () => {
+  const [open, toggleOpen] = useState(true);
+  return (
+    <Wrapper style={style}>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime!
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime!
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime!
+      <button onClick={() => toggleOpen(true)}>Open</button>
+      <EmptyModal
+        open={open}
+        contentLabel="With Actions EmptyModal"
+        onRequestClose={() => toggleOpen(false)}
+        widthLevel={1}
+      >
+        Test
+      </EmptyModal>
+    </Wrapper>
+  );
+};
+
+export const Width_2 = () => {
+  const [open, toggleOpen] = useState(true);
+  return (
+    <Wrapper style={style}>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime!
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime!
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime!
+      <button onClick={() => toggleOpen(true)}>Open</button>
+      <EmptyModal
+        open={open}
+        contentLabel="With Actions EmptyModal"
+        onRequestClose={() => toggleOpen(false)}
+        widthLevel={2}
+      >
+        Test
+      </EmptyModal>
+    </Wrapper>
+  );
+};
+
+export const Width_3 = () => {
+  const [open, toggleOpen] = useState(true);
+  return (
+    <Wrapper style={style}>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime!
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime!
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime!
+      <button onClick={() => toggleOpen(true)}>Open</button>
+      <EmptyModal
+        open={open}
+        contentLabel="With Actions EmptyModal"
+        onRequestClose={() => toggleOpen(false)}
+        widthLevel={3}
+      >
+        Test
+      </EmptyModal>
+    </Wrapper>
+  );
+};
+
 export const _EmptyModal = () => {
   const [open, toggleOpen] = useState(true);
   return (

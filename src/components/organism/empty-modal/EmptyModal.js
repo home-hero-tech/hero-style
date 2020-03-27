@@ -14,12 +14,14 @@ const Modal = ({
   right,
   onRequestClose,
   contentLabel,
+  widthLevel,
   ...otherProps
 }) => {
   const classes = classNames({
     [css['c-modal']]: true,
     [css['c-modal--pre-left']]: left,
     [css['c-modal--pre-right']]: right,
+    [css[`c-modal--width-${widthLevel}`]]: true,
 
     [css['c-modal-overlay--left']]: left,
     [css['c-modal-overlay--right']]: right
@@ -33,7 +35,6 @@ const Modal = ({
 
   return (
     <ReactModal
-      fluid
       isOpen={open}
       className={classes}
       overlayClassName={classesOverlay}
@@ -58,13 +59,15 @@ Modal.propTypes = {
   left: PropTypes.bool,
   onRequestClose: PropTypes.func,
   open: PropTypes.bool.isRequired,
-  right: PropTypes.bool
+  right: PropTypes.bool,
+  widthLevel: PropTypes.number
 };
 
 Modal.defaultProps = {
   left: false,
   right: true,
-  onRequestClose: null
+  onRequestClose: null,
+  widthLevel: 1
 };
 
 export default Modal;
