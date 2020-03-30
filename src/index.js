@@ -22,6 +22,7 @@ import Pagination from './components/atom/pagination/Pagination';
 import Select from './components/atom/select/Select';
 import Text from './components/atom/text/Text';
 import MaskedInput from './components/atom/masked-input/MaskedInput';
+import FileInput from './components/atom/file-input/FileInput';
 
 // molecules
 import Card from './components/molecule/card/Card';
@@ -50,6 +51,7 @@ export {
   CardItem,
   Col,
   DatePicker,
+  FileInput,
   Filter,
   FilterHeader,
   FilterContent,
