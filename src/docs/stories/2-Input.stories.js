@@ -4,6 +4,7 @@ import { action } from '@storybook/addon-actions';
 import Wrapper from '../../helpers/wrapper/Wrapper';
 import Input from '../../components/atom/input/Input';
 import MaskedInput from '../../components/atom/masked-input/MaskedInput';
+import FileInput from '../../components/atom/file-input/FileInput';
 
 export default {
   title: 'Input',
@@ -162,4 +163,14 @@ export const Masked = () => (
       value=""
     />
   </Wrapper>
+);
+
+export const File = () => (
+  <FileInput
+    text="Enviar"
+    id="ipt"
+    name="ipt"
+    onChange={action('changeFile')}
+    multiple
+  />
 );
