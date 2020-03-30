@@ -34,11 +34,23 @@
   }
 
   &--width-2 {
-    width: 1060px;
+    width: 740px;
   }
 
   &--width-3 {
+    width: 980px;
+  }
+
+  &--width-4 {
     width: 100%;
+  }
+
+  &--width-1,
+  &--width-2,
+  &--width-3 {
+    @include mq($until: tablet) {
+      width: 100%;
+    }
   }
 
   form {
@@ -50,7 +62,6 @@
   }
 
   @include mq($until: mobile) {
-    width: 100%;
     padding: $space-2 $space-1;
   }
 

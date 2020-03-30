@@ -329,3 +329,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.0.86] - 2020-03-30
 ### Added
 - New props for Text component.
+
+## [1.0.87] - 2020-03-30
+### Changed
+- Adjusted Modal widthLevels.
