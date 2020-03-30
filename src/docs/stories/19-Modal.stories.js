@@ -1,16 +1,18 @@
 import React, { useState } from 'react';
-import { Grid } from 'react-flexbox-grid';
 
 import { action } from '@storybook/addon-actions';
 
 import Modal from '../../components/organism/modal/Modal';
-import EmptyModal from '../../components/organism/modal/EmptyModal';
-import ModalForm from '../../components/organism/modal/ModalForm';
+import ModalForm from '../../components/organism/form-modal/FormModal';
+import ModalHeader from '../../components/molecule/modal-header/ModalHeader';
+import ModalFooter from '../../components/molecule/modal-footer/ModalFooter';
+import ModalContent from '../../components/molecule/modal-content/ModalContent';
 import Wrapper from '../../helpers/wrapper/Wrapper';
 import Input from '../../components/atom/input/Input';
 import Label from '../../components/atom/label/Label';
 import FormGroup from '../../components/molecule/form-group/FormGroup';
 import FormRow from '../../components/molecule/form-row/FormRow';
+import Button from '../../components/atom/button/Button';
 
 export default {
   title: 'Modal',
@@ -23,82 +25,7 @@ const style = {
   maxWidth: '100%'
 };
 
-const SomeContent = () => {
-  return (
-    <div>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam,
-      quaerat?
-    </div>
-  );
-};
-
-export const Default = () => (
-  <Wrapper style={style}>
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime!
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime!
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime!
-    <Modal open={isOpen} contentLabel="Default Modal">
-      <SomeContent />
-    </Modal>
-  </Wrapper>
-);
-
-export const left = () => (
-  <Wrapper style={style}>
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime!
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime!
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime!
-    <Modal open={isOpen} left right={false} contentLabel="Default Modal">
-      <SomeContent />
-    </Modal>
-  </Wrapper>
-);
-
-export const right = () => (
-  <Wrapper style={style}>
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime!
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime!
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime!
-    <Modal open={isOpen} right contentLabel="Right Modal">
-      <SomeContent />
-    </Modal>
-  </Wrapper>
-);
-
-export const withActions = () => (
-  <Wrapper style={style}>
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime!
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime!
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime!
-    <Modal
-      open={isOpen}
-      onConfirm={action('Confirm')}
-      onCancel={action('Cancel')}
-      contentLabel="With Actions Modal"
-    >
-      <SomeContent />
-    </Modal>
-  </Wrapper>
-);
-
-export const titleAndDescription = () => (
-  <Wrapper style={style}>
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime!
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime!
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime!
-    <Modal
-      open={isOpen}
-      contentLabel="With Actions Modal"
-      title="Modal Title"
-      closeTimeoutMS={3000}
-      description="Lorem ipsum dolor sit amet, consectetur adipisicing."
-    >
-      <SomeContent />
-    </Modal>
-  </Wrapper>
-);
-
-export const buttonTexts = () => {
+export const emptyModal = () => {
   const [open, toggleOpen] = useState(true);
   return (
     <Wrapper style={style}>
@@ -108,21 +35,151 @@ export const buttonTexts = () => {
       <button onClick={() => toggleOpen(true)}>Open</button>
       <Modal
         open={open}
-        onConfirm={action('Confirm')}
-        onCancel={() => toggleOpen(false)}
-        contentLabel="With Actions Modal"
-        title="Modal Title"
-        closeTimeoutMS={300}
-        description="Lorem ipsum dolor sit amet, consectetur adipisicing."
-        btnCancelText="Cancel?"
-        btnConfirmText="Confirm?"
+        contentLabel="With Actions EmptyModal"
         onRequestClose={() => toggleOpen(false)}
       >
-        <SomeContent />
+        Test
       </Modal>
     </Wrapper>
   );
 };
+
+export const Width1Default = () => {
+  const [open, toggleOpen] = useState(true);
+  return (
+    <Wrapper style={style}>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime!
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime!
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime!
+      <button onClick={() => toggleOpen(true)}>Open</button>
+      <Modal
+        open={open}
+        contentLabel="With Actions EmptyModal"
+        onRequestClose={() => toggleOpen(false)}
+        widthLevel={1}
+      >
+        Test
+      </Modal>
+    </Wrapper>
+  );
+};
+
+export const Width2 = () => {
+  const [open, toggleOpen] = useState(true);
+  return (
+    <Wrapper style={style}>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime!
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime!
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime!
+      <button onClick={() => toggleOpen(true)}>Open</button>
+      <Modal
+        open={open}
+        contentLabel="With Actions EmptyModal"
+        onRequestClose={() => toggleOpen(false)}
+        widthLevel={2}
+      >
+        Test
+      </Modal>
+    </Wrapper>
+  );
+};
+
+export const Width3 = () => {
+  const [open, toggleOpen] = useState(true);
+  return (
+    <Wrapper style={style}>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime!
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime!
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime!
+      <button onClick={() => toggleOpen(true)}>Open</button>
+      <Modal
+        open={open}
+        contentLabel="With Actions EmptyModal"
+        onRequestClose={() => toggleOpen(false)}
+        widthLevel={3}
+      >
+        Test
+      </Modal>
+    </Wrapper>
+  );
+};
+
+export const left = () => {
+  const [open, toggleOpen] = useState(true);
+  return (
+    <Wrapper style={style}>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime!
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime!
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime!
+      <button onClick={() => toggleOpen(true)}>Open</button>
+      <Modal
+        open={open}
+        contentLabel="With Actions EmptyModal"
+        onRequestClose={() => toggleOpen(false)}
+        left
+      >
+        Test
+      </Modal>
+    </Wrapper>
+  );
+};
+
+export const right = () => {
+  const [open, toggleOpen] = useState(true);
+  return (
+    <Wrapper style={style}>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime!
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime!
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime!
+      <button onClick={() => toggleOpen(true)}>Open</button>
+      <Modal
+        contentLabel="With Actions EmptyModal"
+        open={open}
+        onRequestClose={() => toggleOpen(false)}
+        right
+      >
+        Test
+      </Modal>
+    </Wrapper>
+  );
+};
+
+export const _ModalHeader = () => (
+  <Wrapper style={style}>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime!
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime!
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime!
+    <Modal
+      open={isOpen}
+      onConfirm={action('Confirm')}
+      onCancel={action('Cancel')}
+      contentLabel="With Actions EmptyModal"
+    >
+      <ModalHeader title="Title" description="Description" />
+    </Modal>
+  </Wrapper>
+);
+
+export const _ModalFooter = () => (
+  <Wrapper style={style}>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime!
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime!
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime!
+    <Modal
+      open={isOpen}
+      onConfirm={action('Confirm')}
+      onCancel={action('Cancel')}
+      contentLabel="With Actions EmptyModal"
+    >
+      <ModalFooter>
+        <Button onClick={action('click')}>1st action</Button>
+        <Button onClick={action('click')} type="primary">
+          2nd action
+        </Button>
+      </ModalFooter>
+    </Modal>
+  </Wrapper>
+);
 
 export const _ModalForm = () => {
   const [open, toggleOpen] = useState(true);
@@ -137,16 +194,12 @@ export const _ModalForm = () => {
       <button onClick={() => toggleOpen(true)}>Open</button>
       <ModalForm
         open={open}
-        onConfirm={handleSubmit}
-        onCancel={() => toggleOpen(false)}
-        contentLabel="With Actions Modal"
-        title="Modal Title"
-        description="Lorem ipsum dolor sit amet, consectetur adipisicing."
-        btnCancelText="Cancelling"
-        btnConfirmText="Confirming"
+        onSubmit={handleSubmit}
+        contentLabel="With Actions EmptyModal"
         onRequestClose={() => toggleOpen(false)}
       >
-        <Grid fluid style={{ padding: 0 }}>
+        <ModalHeader title="Title" description="Description" />
+        <ModalContent>
           <FormRow>
             <FormGroup md>
               <Label name="name">Nome</Label>
@@ -187,32 +240,16 @@ export const _ModalForm = () => {
               />
             </FormGroup>
           </FormRow>
-        </Grid>
+        </ModalContent>
+        <ModalFooter>
+          <Button onClick={action('click')} container="outlined" type="primary">
+            Cancel
+          </Button>
+          <Button onClick={action('click')} type="primary" submit>
+            Confirm
+          </Button>
+        </ModalFooter>
       </ModalForm>
-    </Wrapper>
-  );
-};
-
-export const _EmptyModal = () => {
-  const [open, toggleOpen] = useState(true);
-  const handleSubmit = e => {
-    e.preventDefault();
-  };
-  return (
-    <Wrapper style={style}>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime!
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime!
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime!
-      <button onClick={() => toggleOpen(true)}>Open</button>
-      <EmptyModal
-        open={open}
-        onConfirm={handleSubmit}
-        onCancel={() => toggleOpen(false)}
-        contentLabel="With Actions Modal"
-        onRequestClose={() => toggleOpen(false)}
-      >
-        Test
-      </EmptyModal>
     </Wrapper>
   );
 };

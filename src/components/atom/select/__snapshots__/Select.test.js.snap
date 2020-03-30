@@ -2,16 +2,16 @@
 
 exports[`Select should match with the snapshot 1`] = `
 <StateManager
-  autoFocus={false}
+  backspaceRemoves={true}
   className="c-select"
-  classNamePrefix={null}
+  classNamePrefix="c-select"
   defaultInputValue=""
   defaultMenuIsOpen={false}
   defaultValue={null}
-  isClearable={false}
-  isDisabled={false}
+  deleteRemoves={true}
+  inputId={null}
   isMulti={false}
-  isSearchable={false}
+  isSearchable={true}
   name={null}
   noOptionsMessage={[Function]}
   onChange={[Function]}

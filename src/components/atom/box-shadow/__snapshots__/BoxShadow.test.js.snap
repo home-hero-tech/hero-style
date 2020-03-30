@@ -2,7 +2,7 @@
 
 exports[`BoxShadow should match with the snapshot 1`] = `
 <div
-  className="elevation--1"
+  className="c-box-shadow--elevation-1 c-box-shadow--radius-2"
 >
   <div>
     BoxShadow

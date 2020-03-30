@@ -1,79 +1,73 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
-import EmptyModal from './EmptyModal';
-import ModalActions from '../../molecule/modal-children/ModalActions';
-import ModalHeader from '../../molecule/modal-children/ModalHeader';
+import ReactModal from 'react-modal';
+import classNames from 'classnames';
 
 import css from './Modal.module.scss';
 
+ReactModal.setAppElement('#root');
+
 const Modal = ({
-  // Modal props
   open,
+  children,
   left,
   right,
   onRequestClose,
   contentLabel,
-
-  btnCancelText,
-  btnConfirmText,
-  children,
-  onCancel,
-  onConfirm,
-  title,
-  description,
+  widthLevel,
   ...otherProps
 }) => {
+  const classes = classNames({
+    [css['c-modal']]: true,
+    [css['c-modal--pre-left']]: left,
+    [css['c-modal--pre-right']]: right,
+    [css[`c-modal--width-${widthLevel}`]]: true,
+
+    [css['c-modal-overlay--left']]: left,
+    [css['c-modal-overlay--right']]: right
+  });
+
+  const classesOverlay = classNames({
+    [css['c-modal-overlay']]: true,
+    [css['c-modal-overlay--left']]: left,
+    [css['c-modal-overlay--right']]: right
+  });
+
   return (
-    <EmptyModal
-      open={open}
+    <ReactModal
+      isOpen={open}
+      className={classes}
+      overlayClassName={classesOverlay}
       contentLabel={contentLabel}
+      shouldCloseOnOverlayClick
+      closeTimeoutMS={300}
       onRequestClose={onRequestClose}
-      left={left}
-      right={right}
       {...otherProps}
     >
-      <ModalHeader title={title} description={description} />
-      <main className={css['c-modal__content']}>{children}</main>
-      <ModalActions
-        onCancel={onCancel}
-        onConfirm={onConfirm}
-        btnCancelText={btnCancelText}
-        btnConfirmText={btnConfirmText}
-      />
-    </EmptyModal>
+      {children}
+    </ReactModal>
   );
 };
 
 Modal.propTypes = {
-  btnCancelText: PropTypes.string,
-  btnConfirmText: PropTypes.string,
   children: PropTypes.oneOfType([
     PropTypes.object,
     PropTypes.array,
     PropTypes.string
   ]).isRequired,
   contentLabel: PropTypes.string.isRequired,
-  description: PropTypes.string,
   left: PropTypes.bool,
-  onCancel: PropTypes.func,
-  onConfirm: PropTypes.func,
   onRequestClose: PropTypes.func,
   open: PropTypes.bool.isRequired,
   right: PropTypes.bool,
-  title: PropTypes.string
+  widthLevel: PropTypes.number
 };
 
 Modal.defaultProps = {
-  btnCancelText: 'Cancelar',
-  btnConfirmText: 'Enviar',
   left: false,
   right: true,
-  onCancel: null,
-  onConfirm: null,
   onRequestClose: null,
-  title: null,
-  description: null
+  widthLevel: 1
 };
 
 export default Modal;

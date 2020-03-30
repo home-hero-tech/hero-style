@@ -6,12 +6,12 @@ import Heading from '../../atom/heading/Heading';
 import Text from '../../atom/text/Text';
 
 const ModalHeader = ({ title, description }) => {
-  return title || description ? (
+  return (
     <header className={css['c-modal__heading']}>
       {title ? <Heading level={3} title={title} /> : null}
       {description ? <Text>{description}</Text> : null}
     </header>
-  ) : null;
+  );
 };
 
 ModalHeader.propTypes = {
@@ -21,7 +21,7 @@ ModalHeader.propTypes = {
 
 ModalHeader.defaultProps = {
   description: null,
-  title: null
+  title: 'Header'
 };
 
 ModalHeader.displayName = 'ModalHeader';

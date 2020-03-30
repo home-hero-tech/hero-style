@@ -2,7 +2,10 @@
 
 exports[`Button should match with the snapshot 1`] = `
 <button
-  className="c-btn"
+  className="c-btn ripple c-btn--default c-btn--rounded c-btn--size-2"
+  disabled={false}
+  onClick={null}
+  type="button"
 >
   Button
 </button>

@@ -7,11 +7,11 @@
     transition: opacity .2s ease-in-out;
   }
 
-  .ReactModal__Overlay--after-open{
+  .ReactModal__Overlay--after-open {
     opacity: 1;
   }
 
-  .ReactModal__Overlay--before-close{
+  .ReactModal__Overlay--before-close {
     opacity: 0;
   }
 }
@@ -24,30 +24,33 @@
 }
 
 .c-modal {
-  width: 530px;
   background-color: $color-structural-white;
   z-index: 9030;
   padding: $space-5 $space-4;
   transition: all .3s ease-in-out;
 
-  form {
-    height: 100%;
+  &--width-1 {
+    width: 530px;
+  }
+
+  &--width-2 {
+    width: 1060px;
+  }
+
+  &--width-3 {
+    width: 100%;
   }
 
   form {
     height: 100%;
-
-    main > div > div {
-      max-width: 100%;
-    }
   }
 
   @include mq($until: tablet) {
-    width: 100%;
     padding: $space-3 $space-2;
   }
 
   @include mq($until: mobile) {
+    width: 100%;
     padding: $space-2 $space-1;
   }
 
@@ -61,7 +64,6 @@
 
   &--left {
     left: 0;
-    animation: slideToRight .3s;
   }
 
   &--right {
@@ -87,6 +89,7 @@
   &__content {
     overflow: auto;
     height: calc(100% - 120px);
+    padding-right: $space-1;
   }
 
   &__actions {
@@ -95,7 +98,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    padding: $space-2 $space-4;
+    padding: $space-2 $space-4 $space-2 $space-4;
 
     background-color: $color-brand-gray-050;
 
