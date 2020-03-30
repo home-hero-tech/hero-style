@@ -32,6 +32,9 @@ import FormActions from './components/molecule/form-actions/FormActions';
 import FormGroup from './components/molecule/form-group/FormGroup';
 import FormRow from './components/molecule/form-row/FormRow';
 import List from './components/molecule/list/List';
+import ModalContent from './components/molecule/modal-content/ModalContent';
+import ModalFooter from './components/molecule/modal-footer/ModalFooter';
+import ModalHeader from './components/molecule/modal-header/ModalHeader';
 import Tooltip from './components/molecule/tooltip/Tooltip';
 
 // organisms
@@ -65,6 +68,9 @@ export {
   Loader,
   MaskedInput,
   Modal,
+  ModalContent,
+  ModalFooter,
+  ModalHeader,
   Pagination,
   ScrollableTabs,
   ScrollablePanel,

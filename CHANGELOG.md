@@ -312,4 +312,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.0.81] - 2020-03-27
 ### Added
 - New Modal structure components.
+- Modal improvements.
+
+## [1.0.81] - 2020-03-27
+### Added
 - Publishing new Modal structure components.
