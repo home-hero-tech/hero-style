@@ -309,11 +309,23 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Tabs props.
 
-## [1.0.81] - 2020-03-27
+## [1.0.82] - 2020-03-27
 ### Added
 - New Modal structure components.
 - Modal improvements.
 
-## [1.0.81] - 2020-03-27
+## [1.0.83] - 2020-03-27
 ### Added
 - Publishing new Modal structure components.
+
+## [1.0.84] - 2020-03-30
+### Added
+- File Input component and its tests.
+
+## [1.0.85] - 2020-03-30
+### Added
+- Publishing File Input component.
+
+## [1.0.86] - 2020-03-30
+### Added
+- New props for Text component.
