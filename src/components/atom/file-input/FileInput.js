@@ -7,7 +7,11 @@ import css from './FileInput.module.scss';
 const FileInput = ({ id, name, text, multiple, ...props }) => {
   return (
     <div className={css['c-file']}>
-      <input id={id} name={name} type="file" {...props} multiple />
+      {multiple ? (
+        <input id={id} name={name} type="file" {...props} multiple />
+      ) : (
+        <input id={id} name={name} type="file" {...props} />
+      )}
       <label htmlFor={name}>
         <FontAwesomeIcon icon={faCloudUpload} />
         <span>{text}</span>
