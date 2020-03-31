@@ -4,10 +4,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCloudUpload } from '@fortawesome/pro-light-svg-icons';
 import css from './FileInput.module.scss';
 
-const FileInput = ({ id, name, text, multiple, ...props }) => {
+const FileInput = ({ id, name, text, mult, ...props }) => {
   return (
     <div className={css['c-file']}>
-      {multiple ? (
+      {mult ? (
         <input id={id} name={name} type="file" {...props} multiple />
       ) : (
         <input id={id} name={name} type="file" {...props} />
@@ -24,14 +24,14 @@ FileInput.propTypes = {
   id: PropTypes.string,
   name: PropTypes.string,
   text: PropTypes.string,
-  multiple: PropTypes.bool
+  mult: PropTypes.bool
 };
 
 FileInput.defaultProps = {
   id: null,
   name: null,
   text: '',
-  multiple: false
+  mult: false
 };
 
 export default FileInput;
