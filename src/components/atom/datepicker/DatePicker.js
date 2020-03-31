@@ -48,7 +48,7 @@ DatePicker.propTypes = {
 DatePicker.defaultProps = {
   format: 'dd/MM/yyyy',
   onChange: f => f,
-  selected: new Date(),
+  selected: null,
   dark: false
 };
 
