@@ -336,6 +336,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [1.0.88] - 2020-03-30
 ### Added
+- File Input component and its tests.
+
+## [1.0.89] - 2020-03-30
+### Added
 - Now the body, html, and #root use the default DS color.
 
 ### Removed
