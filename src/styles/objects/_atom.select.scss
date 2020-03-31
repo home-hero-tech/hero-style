@@ -5,8 +5,9 @@
   &__control,
   &__menu {
     border-radius: $radius-2 !important;
-    box-shadow: $elevation-0 !important;
+    box-shadow: none !important;
     background-color: $color-structural-white !important;
+    border-color: $color-brand-gray-200 !important;
 
     &:hover,
     &--is-focused,
@@ -39,7 +40,8 @@
 
   &__menu-list {
     border-radius: $radius-2;
-    overflow: hidden;
+    box-shadow: $elevation-4 !important;
+    border: solid 1px $color-brand-gray-400;
   }
 
   &__option {
@@ -86,7 +88,7 @@
   &--dark {
     &__control {
       border-radius: $radius-2 !important;
-      box-shadow: $elevation-0 !important;
+      box-shadow: none !important;
       background-color: $color-brand-gray-600 !important;
 
       &:hover,
@@ -98,7 +100,7 @@
 
     &__menu {
       border-radius: $radius-2 !important;
-      box-shadow: $elevation-0 !important;
+      box-shadow: none !important;
       background-color: $color-brand-gray-400 !important;
     }
 

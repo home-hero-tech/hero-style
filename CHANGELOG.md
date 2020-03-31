@@ -333,3 +333,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.0.87] - 2020-03-30
 ### Changed
 - Adjusted Modal widthLevels.
+
+## [1.0.88] - 2020-03-30
+### Added
+- Now the body, html, and #root use the default DS color.
+
+### Removed
+- Box-shadow from Input components.
