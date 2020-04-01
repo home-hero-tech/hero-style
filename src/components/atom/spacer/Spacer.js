@@ -13,21 +13,27 @@ const Spacer = ({
   mbMd,
   mbSm,
   mbXs,
+  mxLg,
+  mxMd,
+  mxSm,
+  mxXs,
   inline,
   children
 }) => {
   const classes = classNames({
     [css['c-spacer']]: true,
     [css['c-spacer--inline']]: inline,
-    [css[`c-spacer--mt-lg-${mtLg}`]]: !!mtLg,
-    [css[`c-spacer--mt-md-${mtMd}`]]: !!mtMd,
-    [css[`c-spacer--mt-sm-${mtSm}`]]: !!mtSm,
-    [css[`c-spacer--mt-xs-${mtXs}`]]: !!mtXs,
-    [css[`c-spacer--mb-lg-${mbLg}`]]: !!mbLg,
-    [css[`c-spacer--mb-md-${mbMd}`]]: !!mbMd,
-    [css[`c-spacer--mb-sm-${mbSm}`]]: !!mbSm,
-    [css[`c-spacer--mb-xs-${mbXs}`]]: !!mbXs
+    [css[`c-spacer--mt-lg-${mtLg || mxLg}`]]: !!mtLg || !!mxLg,
+    [css[`c-spacer--mt-md-${mtMd || mxMd}`]]: !!mtMd || !!mxMd,
+    [css[`c-spacer--mt-sm-${mtSm || mxSm}`]]: !!mtSm || !!mxSm,
+    [css[`c-spacer--mt-xs-${mtXs || mxXs}`]]: !!mtXs || !!mxXs,
+    [css[`c-spacer--mb-lg-${mbLg || mxLg}`]]: !!mbLg || !!mxLg,
+    [css[`c-spacer--mb-md-${mbMd || mxMd}`]]: !!mbMd || !!mxMd,
+    [css[`c-spacer--mb-sm-${mbSm || mxSm}`]]: !!mbSm || !!mxSm,
+    [css[`c-spacer--mb-xs-${mbXs || mxXs}`]]: !!mbXs || !!mxXs
   });
+
+  console.log('classes', classes);
 
   return <div className={classes}>{children}</div>;
 };
@@ -41,6 +47,10 @@ Spacer.propTypes = {
   mbMd: PropTypes.number,
   mbSm: PropTypes.number,
   mbXs: PropTypes.number,
+  mxLg: PropTypes.number,
+  mxMd: PropTypes.number,
+  mxSm: PropTypes.number,
+  mxXs: PropTypes.number,
   inline: PropTypes.bool,
   children: PropTypes.oneOfType([
     PropTypes.string,
@@ -58,6 +68,10 @@ Spacer.defaultProps = {
   mbMd: null,
   mbSm: null,
   mbXs: null,
+  mxLg: null,
+  mxMd: null,
+  mxSm: null,
+  mxXs: null,
   children: null,
   inline: false
 };

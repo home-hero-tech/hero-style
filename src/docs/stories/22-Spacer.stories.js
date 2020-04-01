@@ -35,3 +35,19 @@ export const marginBottom = () => (
     </Button>
   </Wrapper>
 );
+
+export const marginTopAndBottom = () => (
+  <Wrapper>
+    <Button type="primary" size={1} onClick={action('clicked')}>
+      Button
+    </Button>
+    <Spacer mxLg={3} mxMd={2} mxSm={3} mxXs={4}>
+      <Button type="primary" size={1} onClick={action('clicked')}>
+        Button
+      </Button>
+    </Spacer>
+    <Button type="primary" size={2} onClick={action('clicked')}>
+      Button
+    </Button>
+  </Wrapper>
+);
