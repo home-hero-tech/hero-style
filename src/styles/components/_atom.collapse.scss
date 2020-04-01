@@ -1,0 +1,11 @@
+.c-collapse {
+  &__content {
+    transition: max-height .35s ease;
+    overflow: hidden;
+    max-height: 0;
+  }
+
+  &--open &__content {
+    max-height: 100vh;
+  }
+}
