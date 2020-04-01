@@ -37,6 +37,7 @@ import ModalContent from './components/molecule/modal-content/ModalContent';
 import ModalFooter from './components/molecule/modal-footer/ModalFooter';
 import ModalHeader from './components/molecule/modal-header/ModalHeader';
 import Tooltip from './components/molecule/tooltip/Tooltip';
+import Spacer from './components/molecule/spacer/Spacer';
 
 // organisms
 import Form from './components/organism/form/Form';
@@ -77,6 +78,7 @@ export {
   ScrollableTabs,
   ScrollablePanel,
   Select,
+  Spacer,
   Tab,
   Tabs,
   TabList,

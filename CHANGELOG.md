@@ -352,3 +352,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.0.92] - 2020-03-31
 ### Changed
 - Select improvements.
+
+## [1.0.93] - 2020-04-01
+### Added
+- Collapse component and its tests.
+
+## [1.0.94] - 2020-04-01
+### Added
+- Spacer component and its tests.

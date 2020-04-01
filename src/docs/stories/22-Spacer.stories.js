@@ -3,7 +3,7 @@ import { action } from '@storybook/addon-actions';
 
 import Wrapper from '../../helpers/wrapper/Wrapper';
 import Button from '../../components/atom/button/Button';
-import Spacer from '../../components/atom/spacer/Spacer';
+import Spacer from '../../components/molecule/spacer/Spacer';
 
 export default {
   title: 'Spacer',
