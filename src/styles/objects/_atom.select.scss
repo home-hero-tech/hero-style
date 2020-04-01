@@ -7,12 +7,12 @@
     border-radius: $radius-2 !important;
     box-shadow: none !important;
     background-color: $color-structural-white !important;
-    border-color: $color-brand-gray-200 !important;
+    border-color: $color-brand-gray-100 !important;
 
     &:hover,
     &--is-focused,
     &--is-selected {
-      border-color: $color-brand-gray-400 !important;
+      border-color: $color-brand-gray-500 !important;
     }
   }
 

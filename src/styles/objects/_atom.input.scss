@@ -135,7 +135,7 @@
     }
   }
 
-  &:focus {
-    border: 1px solid CurrentColor;
+  &:focus, &:hover {
+    border: 1px solid currentColor;
   }
 }
