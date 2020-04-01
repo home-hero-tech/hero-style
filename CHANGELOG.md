@@ -345,6 +345,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Removed
 - Box-shadow from Input components.
 
-## [1.0.91] - 2020-03-30
+## [1.0.91] - 2020-03-31
 ### Changed
 - Input hover, focus, and default colors.
+
+## [1.0.92] - 2020-03-31
+### Changed
+- Select improvements.
