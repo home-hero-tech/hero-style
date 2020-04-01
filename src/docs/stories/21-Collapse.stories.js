@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Row, Col } from 'react-flexbox-grid';
 
 import Button from '../../components/atom/button/Button';
 import Collapse from '../../components/atom/collapse/Collapse';
