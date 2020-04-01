@@ -13,11 +13,19 @@
       &--mt-lg-#{$size} {
         margin-top: $space * $size;
       }
+
+      &--mb-lg-#{$size} {
+        margin-bottom: $space * $size;
+      }
     }
 
     @include mq($from: tablet, $until: desktop) {
       &--mt-md-#{$size} {
         margin-top: $space * $size;
+      }
+
+      &--mb-md-#{$size} {
+        margin-bottom: $space * $size;
       }
     }
 
@@ -25,11 +33,19 @@
       &--mt-sm-#{$size} {
         margin-top: $space * $size;
       }
+
+      &--mb-sm-#{$size} {
+        margin-bottom: $space * $size;
+      }
     }
 
     @include mq($until: mobile) {
       &--mt-xs-#{$size} {
         margin-top: $space * $size;
+      }
+
+      &--mb-xs-#{$size} {
+        margin-bottom: $space * $size;
       }
     }
   }

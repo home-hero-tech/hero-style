@@ -22,3 +22,16 @@ export const marginTop = () => (
     </Spacer>
   </Wrapper>
 );
+
+export const marginBottom = () => (
+  <Wrapper>
+    <Spacer mbLg={1} mbMd={2} mbSm={3} mbXs={4}>
+      <Button type="primary" size={1} onClick={action('clicked')}>
+        Button
+      </Button>
+    </Spacer>
+    <Button type="primary" size={2} onClick={action('clicked')}>
+      Button
+    </Button>
+  </Wrapper>
+);
