@@ -1,15 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import classNames from 'classnames';
-
 import css from './ListItemCWrapper.module.scss';
 
 const ListItemCWrapper = ({ children }) => {
-  const classes = classNames({
-    [css['c-wrapper']]: true
-  });
-  return <div className={classes}>{children}</div>;
+  return <div className={css['c-wrapper']}>{children}</div>;
 };
 
 ListItemCWrapper.propTypes = {
