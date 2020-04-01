@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Spacer should match with the snapshot 1`] = `
+<div
+  className="c-spacer c-spacer--mt-lg-1 c-spacer--mt-md-1 c-spacer--mt-sm-1 c-spacer--mt-xs-1"
+>
+  <div>
+    Information
+  </div>
+</div>
+`;
