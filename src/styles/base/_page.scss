@@ -1,5 +1,6 @@
 @import "../tools/tools";
 
-body {
+body, html, #root {
   @extend %paragraph;
+  color: $color-brand-gray-500;
 }

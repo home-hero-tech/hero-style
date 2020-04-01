@@ -22,6 +22,7 @@ import Pagination from './components/atom/pagination/Pagination';
 import Select from './components/atom/select/Select';
 import Text from './components/atom/text/Text';
 import MaskedInput from './components/atom/masked-input/MaskedInput';
+import FileInput from './components/atom/file-input/FileInput';
 
 // molecules
 import Card from './components/molecule/card/Card';
@@ -32,6 +33,9 @@ import FormActions from './components/molecule/form-actions/FormActions';
 import FormGroup from './components/molecule/form-group/FormGroup';
 import FormRow from './components/molecule/form-row/FormRow';
 import List from './components/molecule/list/List';
+import ModalContent from './components/molecule/modal-content/ModalContent';
+import ModalFooter from './components/molecule/modal-footer/ModalFooter';
+import ModalHeader from './components/molecule/modal-header/ModalHeader';
 import Tooltip from './components/molecule/tooltip/Tooltip';
 
 // organisms
@@ -47,6 +51,7 @@ export {
   CardItem,
   Col,
   DatePicker,
+  FileInput,
   Filter,
   FilterHeader,
   FilterContent,
@@ -65,6 +70,9 @@ export {
   Loader,
   MaskedInput,
   Modal,
+  ModalContent,
+  ModalFooter,
+  ModalHeader,
   Pagination,
   ScrollableTabs,
   ScrollablePanel,

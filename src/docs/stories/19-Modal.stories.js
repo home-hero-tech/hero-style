@@ -104,6 +104,26 @@ export const Width3 = () => {
   );
 };
 
+export const Width4 = () => {
+  const [open, toggleOpen] = useState(true);
+  return (
+    <Wrapper style={style}>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime!
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime!
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime!
+      <button onClick={() => toggleOpen(true)}>Open</button>
+      <Modal
+        open={open}
+        contentLabel="With Actions EmptyModal"
+        onRequestClose={() => toggleOpen(false)}
+        widthLevel={4}
+      >
+        Test
+      </Modal>
+    </Wrapper>
+  );
+};
+
 export const left = () => {
   const [open, toggleOpen] = useState(true);
   return (

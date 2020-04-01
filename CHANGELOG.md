@@ -308,3 +308,47 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.0.81] - 2020-03-27
 ### Added
 - Tabs props.
+
+## [1.0.82] - 2020-03-27
+### Added
+- New Modal structure components.
+- Modal improvements.
+
+## [1.0.83] - 2020-03-27
+### Added
+- Publishing new Modal structure components.
+
+## [1.0.84] - 2020-03-30
+### Added
+- File Input component and its tests.
+
+## [1.0.85] - 2020-03-30
+### Added
+- Publishing File Input component.
+
+## [1.0.86] - 2020-03-30
+### Added
+- New props for Text component.
+
+## [1.0.87] - 2020-03-30
+### Changed
+- Adjusted Modal widthLevels.
+
+## [1.0.88] - 2020-03-30
+### Added
+- File Input component and its tests.
+
+## [1.0.89] - 2020-03-30
+### Added
+- Now the body, html, and #root use the default DS color.
+
+### Removed
+- Box-shadow from Input components.
+
+## [1.0.91] - 2020-03-31
+### Changed
+- Input hover, focus, and default colors.
+
+## [1.0.92] - 2020-03-31
+### Changed
+- Select improvements.

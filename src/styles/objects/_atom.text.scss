@@ -1,3 +1,5 @@
+@import "../settings/types";
+
 .c-text {
   line-height: 20px;
 
@@ -7,5 +9,21 @@
 
   &--center {
     text-align: center;
+  }
+
+  &--lg {
+    font-size: $font-size-lg;
+  }
+
+  &--sm {
+    font-size: $font-size-sm;
+  }
+
+  &--xs {
+    font-size: $font-size-xs;
+  }
+
+  &--uppercase {
+    text-transform: uppercase;
   }
 }
