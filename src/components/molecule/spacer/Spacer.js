@@ -33,8 +33,6 @@ const Spacer = ({
     [css[`c-spacer--mb-xs-${mbXs || mxXs}`]]: !!mbXs || !!mxXs
   });
 
-  console.log('classes', classes);
-
   return <div className={classes}>{children}</div>;
 };
 
