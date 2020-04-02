@@ -375,3 +375,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 - Updated several component tests.
+
+## [1.0.98] - 2020-04-01
+### Added
+- New props for Text component.

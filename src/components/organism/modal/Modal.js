@@ -5,7 +5,7 @@ import classNames from 'classnames';
 
 import css from './Modal.module.scss';
 
-// ReactModal.setAppElement('#root');
+ReactModal.setAppElement('#root');
 
 const Modal = ({
   open,
