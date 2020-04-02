@@ -85,7 +85,7 @@ CardItem.defaultProps = {
   primary: false,
   small: false,
   svgPrimary: false,
-  valPrimary: false,
+  valPrimary: false
 };
 
 CardItem.displayName = 'CardItem';
