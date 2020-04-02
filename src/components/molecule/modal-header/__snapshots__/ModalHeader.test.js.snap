@@ -11,6 +11,10 @@ exports[`ModalHeader should match with the snapshot 1`] = `
   <Text
     center={false}
     end={false}
+    lg={false}
+    sm={false}
+    uppercase={false}
+    xs={false}
   >
     Description
   </Text>

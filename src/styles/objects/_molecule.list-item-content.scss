@@ -1,0 +1,30 @@
+@import "../settings/colors";
+@import "../settings/spaces";
+@import "../tools/tools";
+
+.c-list-item-content {
+  padding-bottom: $space-2;
+
+  @include mq($until: tablet) {
+    padding-bottom: $space-1;
+  }
+
+  @include mq($until: mobile) {
+    padding-bottom: $space-0;
+  }
+
+  &__default {
+    display: flex;
+    flex: 1;
+    border-bottom: solid 1px transparent;
+
+    &--border {
+      border-bottom: solid 1px $color-brand-gray-050;
+    }
+  }
+
+  &__action {
+    padding-right: $space-2;
+    border-bottom: solid 1px transparent;
+  }
+}

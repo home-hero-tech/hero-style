@@ -3,11 +3,17 @@
 exports[`Card should match with the snapshot 1`] = `
 <Grid
   fluid={true}
+  style={
+    Object {
+      "margin": 0,
+      "padding": 0,
+    }
+  }
 >
   <Row
     className="c-card"
   >
-    <ListItem
+    <CardItem
       col={null}
       ellipsis={false}
       format="DD MMM YYYY [às] HH:mm"

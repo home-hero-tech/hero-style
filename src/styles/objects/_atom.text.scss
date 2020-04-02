@@ -1,7 +1,12 @@
 @import "../settings/types";
+@import "../settings/colors";
 
 .c-text {
   line-height: 20px;
+
+  &--fill {
+    width: 100%;
+  }
 
   &--end {
     text-align: right;
@@ -25,5 +30,21 @@
 
   &--uppercase {
     text-transform: uppercase;
+  }
+
+  &--primary {
+    color: $color-primary;
+  }
+
+  &--danger {
+    color: $color-danger;
+  }
+
+  &--success {
+    color: $color-success;
+  }
+
+  &--warning {
+    color: $color-warning;
   }
 }

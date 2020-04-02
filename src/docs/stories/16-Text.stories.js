@@ -7,10 +7,15 @@ export default {
   component: Text
 };
 
-export const Default = () => <Text>Some test</Text>;
-export const End = () => <Text end>Some test</Text>;
-export const Center = () => <Text center>Some test</Text>;
-export const Lg = () => <Text lg>Some test</Text>;
-export const Sm = () => <Text sm>Some test</Text>;
-export const Xs = () => <Text xs>Some test</Text>;
-export const Uppercase = () => <Text uppercase>Some test</Text>;
+export const Default = () => <Text>Default</Text>;
+export const End = () => <Text end>End</Text>;
+export const Center = () => <Text center>Center</Text>;
+export const Lg = () => <Text lg>Text</Text>;
+export const Sm = () => <Text sm>Text</Text>;
+export const Xs = () => <Text xs>Text</Text>;
+export const Uppercase = () => <Text uppercase>Uppercase</Text>;
+export const Fill = () => <Text fill>Fill all the spaces</Text>;
+export const Primary = () => <Text primary>Primary</Text>;
+export const Success = () => <Text success>Success</Text>;
+export const Danger = () => <Text danger>Danger</Text>;
+export const Warning = () => <Text warning>Warning</Text>;

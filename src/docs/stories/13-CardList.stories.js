@@ -1,4 +1,5 @@
 import React from 'react';
+import { action } from '@storybook/addon-actions';
 
 import ListItem from '../../components/atom/list-item/ListItem';
 import List from '../../components/molecule/list/List';
@@ -6,6 +7,8 @@ import Card from '../../components/molecule/card/Card';
 import CardItem from '../../components/atom/card-item/CardItem';
 
 import Wrapper from '../../helpers/wrapper/Wrapper';
+import CardLine from '../../components/organism/card-line/CardLine';
+import Input from '../../components/atom/input/Input';
 
 export default {
   title: 'Card',
@@ -78,6 +81,27 @@ export const ellipses = () => (
           />
           <CardItem value="Value2" label="Label" col={4} />
         </Card>
+      </ListItem>
+    </List>
+  </Wrapper>
+);
+
+export const _CardLine = () => (
+  <Wrapper>
+    <List level={5}>
+      <ListItem>
+        <CardLine>
+          <Input
+            id="ipt"
+            name="ipt"
+            type="checkbox"
+            defaultChecked
+            value="1"
+            onChange={action('toggleCheck')}
+          />
+          <CardItem value="Value" label="Label" />
+          <CardItem value="Value" label="Label" />
+        </CardLine>
       </ListItem>
     </List>
   </Wrapper>

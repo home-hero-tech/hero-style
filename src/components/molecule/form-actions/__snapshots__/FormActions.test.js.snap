@@ -11,8 +11,8 @@ exports[`FormActions should match with the snapshot 1`] = `
     onClick={null}
     shape="rounded"
     size={2}
-    submit={false}
-    type="submit"
+    submit={true}
+    type="primary"
   >
     Submit
   </Button>
@@ -42,8 +42,8 @@ exports[`FormActions should match with the snapshot 2`] = `
     onClick={null}
     shape="rounded"
     size={2}
-    submit={false}
-    type="submit"
+    submit={true}
+    type="primary"
   >
     Submit
   </Button>
@@ -73,8 +73,8 @@ exports[`FormActions should match with the snapshot 3`] = `
     onClick={null}
     shape="rounded"
     size={2}
-    submit={false}
-    type="submit"
+    submit={true}
+    type="primary"
   >
     Submit
   </Button>

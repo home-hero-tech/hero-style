@@ -7,7 +7,7 @@ import { Col } from 'react-flexbox-grid';
 
 import css from './CardItem.module.scss';
 
-const ListItem = ({ primary, label, format, value, col, ellipsis }) => {
+const CardItem = ({ primary, label, format, value, col, ellipsis }) => {
   const classes = classNames({
     [css['c-card-item']]: true,
     [css['c-card-item--primary']]: primary,
@@ -30,7 +30,7 @@ const ListItem = ({ primary, label, format, value, col, ellipsis }) => {
   );
 };
 
-ListItem.propTypes = {
+CardItem.propTypes = {
   format: PropTypes.string,
   label: PropTypes.string,
   primary: PropTypes.bool,
@@ -43,7 +43,7 @@ ListItem.propTypes = {
   ellipsis: PropTypes.bool
 };
 
-ListItem.defaultProps = {
+CardItem.defaultProps = {
   label: null,
   primary: false,
   format: 'DD MMM YYYY [às] HH:mm',
@@ -51,4 +51,6 @@ ListItem.defaultProps = {
   ellipsis: false
 };
 
-export default ListItem;
+CardItem.displayName = 'CardItem';
+
+export default CardItem;
