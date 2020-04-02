@@ -4,13 +4,17 @@ exports[`CardItem should match with the snapshot 1`] = `
 <Col
   className="c-card-item"
 >
-  <span>
-    Label
-  </span>
-  <span
-    className="truncate"
+  <div
+    className="c-card-item__content"
   >
-    Value
-  </span>
+    <span>
+      Label
+    </span>
+    <span
+      className="truncate"
+    >
+      Value
+    </span>
+  </div>
 </Col>
 `;

@@ -9,27 +9,45 @@ exports[`ListItemCWrapper should match with the snapshot 1`] = `
     isAction={false}
   >
     <CardItem
-      col={null}
       ellipsis={false}
       format="DD MMM YYYY [às] HH:mm"
+      gray={false}
       label="Label"
+      lbGray={false}
+      lbPrimary={false}
+      leftIcon={false}
       primary={false}
+      small={false}
+      svgPrimary={false}
+      valPrimary={false}
       value="Value"
     />
     <CardItem
-      col={null}
       ellipsis={false}
       format="DD MMM YYYY [às] HH:mm"
+      gray={false}
       label="Label"
+      lbGray={false}
+      lbPrimary={false}
+      leftIcon={false}
       primary={false}
+      small={false}
+      svgPrimary={false}
+      valPrimary={false}
       value="Value"
     />
     <CardItem
-      col={null}
       ellipsis={false}
       format="DD MMM YYYY [às] HH:mm"
+      gray={false}
       label="Label"
+      lbGray={false}
+      lbPrimary={false}
+      leftIcon={false}
       primary={false}
+      small={false}
+      svgPrimary={false}
+      valPrimary={false}
       value="Value"
     />
   </ListItemContent>
