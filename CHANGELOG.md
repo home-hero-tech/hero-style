@@ -380,6 +380,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - New props for Text component.
 
-## [1.0.99] - 2020-04-01
+## [1.0.99] - 2020-04-02
+### Added
+- New props for Scrollable Tabs component.
+
+## [1.0.100] - 2020-04-01
 ### Added
 - Several improvements in Card Item.

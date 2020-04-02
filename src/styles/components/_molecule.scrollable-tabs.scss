@@ -53,3 +53,17 @@
     //height: 100%;
   }
 }
+
+.c-scroll-tabs {
+  &--dark {
+    :global {
+      .rc-tabs-nav-wrap {
+        background: $gradient-brand-gray-300-100-315;
+      }
+
+      .rc-tabs-tab {
+        color: $color-structural-white;
+      }
+    }
+  }
+}
