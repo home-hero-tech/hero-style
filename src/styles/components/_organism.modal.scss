@@ -81,6 +81,12 @@
     right: 0;
   }
 
+  &--center {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
   &__heading {
     h3 {
       font-weight: 300;
