@@ -379,3 +379,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.0.98] - 2020-04-01
 ### Added
 - New props for Text component.
+
+## [1.0.99] - 2020-04-02
+### Added
+- New props for Scrollable Tabs component.
