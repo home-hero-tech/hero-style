@@ -1,8 +1,17 @@
 @import "../../styles/settings/settings";
+@import "../tools/tools";
 
 .c-card {
   padding: $space-3 $space-5;
   background-color: $color-white;
   border-radius: $radius-3;
   box-shadow: $elevation-1;
+
+  @include mq($until: tablet) {
+    padding: $space-2 $space-4;
+  }
+
+  @include mq($until: mobile) {
+    padding: $space-1 $space-3;
+  }
 }
