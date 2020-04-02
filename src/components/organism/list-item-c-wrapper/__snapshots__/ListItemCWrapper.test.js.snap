@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ListItemCWrapper should match with the snapshot 1`] = `
+<div
+  className="c-wrapper"
+>
+  <ListItemContent
+    border={false}
+    isAction={false}
+  >
+    <CardItem
+      col={null}
+      ellipsis={false}
+      format="DD MMM YYYY [às] HH:mm"
+      label="Label"
+      primary={false}
+      value="Value"
+    />
+    <CardItem
+      col={null}
+      ellipsis={false}
+      format="DD MMM YYYY [às] HH:mm"
+      label="Label"
+      primary={false}
+      value="Value"
+    />
+    <CardItem
+      col={null}
+      ellipsis={false}
+      format="DD MMM YYYY [às] HH:mm"
+      label="Label"
+      primary={false}
+      value="Value"
+    />
+  </ListItemContent>
+</div>
+`;

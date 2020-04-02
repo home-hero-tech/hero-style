@@ -364,3 +364,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.0.95] - 2020-04-01
 ### Removed
 - Console log.
+
+## [1.0.96] - 2020-04-01
+### Added
+- Card Line component and some components to assist the List component.
+
+## [1.0.97] - 2020-04-01
+### Added
+- Publishing Card Line, ListItemContent and ListItemCWrapper.
+
+### Changed
+- Updated several component tests.

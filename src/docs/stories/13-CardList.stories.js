@@ -7,7 +7,7 @@ import Card from '../../components/molecule/card/Card';
 import CardItem from '../../components/atom/card-item/CardItem';
 
 import Wrapper from '../../helpers/wrapper/Wrapper';
-import CardLine from '../../components/molecule/card-line/CardLine';
+import CardLine from '../../components/organism/card-line/CardLine';
 import Input from '../../components/atom/input/Input';
 
 export default {

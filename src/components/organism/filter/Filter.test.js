@@ -42,7 +42,7 @@ describe('Filter', () => {
             </FormRow>
             <FormActions alignEnd>
               <Button>Limpar filtros</Button>
-              <Button success type="submit">
+              <Button success type="primary" submit>
                 Filtrar
               </Button>
             </FormActions>

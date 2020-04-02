@@ -87,9 +87,9 @@ exports[`Filter should match with the snapshot 1`] = `
             onClick={null}
             shape="rounded"
             size={2}
-            submit={false}
+            submit={true}
             success={true}
-            type="submit"
+            type="primary"
           >
             Filtrar
           </Button>
