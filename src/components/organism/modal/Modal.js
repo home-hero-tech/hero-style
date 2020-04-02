@@ -12,6 +12,7 @@ const Modal = ({
   children,
   left,
   right,
+  center,
   onRequestClose,
   contentLabel,
   widthLevel,
@@ -22,6 +23,7 @@ const Modal = ({
     [css['c-modal--pre-left']]: left,
     [css['c-modal--pre-right']]: right,
     [css[`c-modal--width-${widthLevel}`]]: true,
+    [css['c-modal--center']]: center,
 
     [css['c-modal-overlay--left']]: left,
     [css['c-modal-overlay--right']]: right
@@ -59,6 +61,7 @@ Modal.propTypes = {
   left: PropTypes.bool,
   onRequestClose: PropTypes.func,
   open: PropTypes.bool.isRequired,
+  center: PropTypes.bool,
   right: PropTypes.bool,
   widthLevel: PropTypes.number
 };
@@ -67,7 +70,8 @@ Modal.defaultProps = {
   left: false,
   right: true,
   onRequestClose: null,
-  widthLevel: 1
+  widthLevel: 1,
+  center: false
 };
 
 export default Modal;

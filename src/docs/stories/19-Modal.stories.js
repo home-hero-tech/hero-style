@@ -273,3 +273,39 @@ export const _ModalForm = () => {
     </Wrapper>
   );
 };
+
+export const boxModal = () => {
+  const [open, toggleOpen] = useState(true);
+  return (
+    <Wrapper style={style}>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime!
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime!
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime!
+      <button onClick={() => toggleOpen(true)}>Open</button>
+      <Modal
+        open={open}
+        contentLabel="With Actions EmptyModal"
+        center
+        onRequestClose={() => toggleOpen(false)}
+      >
+        <ModalHeader title="Title" description="Description" />
+        <ModalContent>
+          <div>
+            <p>teste</p>
+            <p>teste</p>
+            <p>teste</p>
+            <p>teste</p>
+          </div>
+        </ModalContent>
+        <ModalFooter>
+          <Button onClick={action('click')} container="outlined" type="primary">
+            Cancel
+          </Button>
+          <Button onClick={action('click')} type="primary" submit>
+            Confirm
+          </Button>
+        </ModalFooter>
+      </Modal>
+    </Wrapper>
+  );
+};
