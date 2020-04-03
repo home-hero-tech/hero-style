@@ -5,8 +5,8 @@ import { Row, Grid } from 'react-flexbox-grid';
 
 import css from './Card.module.scss';
 
-const Card = ({ children }) => (
-  <Grid fluid style={{ margin: 0, padding: 0 }}>
+const Card = ({ children, ...otherProps }) => (
+  <Grid fluid {...otherProps}>
     <Row className={css['c-card']}>{children}</Row>
   </Grid>
 );

@@ -9,10 +9,15 @@ exports[`Loader should match with the snapshot 1`] = `
   />
   <Text
     center={false}
+    danger={false}
     end={false}
+    fill={false}
     lg={false}
+    primary={false}
     sm={false}
+    success={false}
     uppercase={false}
+    warning={false}
     xs={false}
   >
     Loading

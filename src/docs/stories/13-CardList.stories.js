@@ -1,6 +1,8 @@
 import React from 'react';
 import { action } from '@storybook/addon-actions';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLayerGroup } from '@fortawesome/pro-light-svg-icons';
 import ListItem from '../../components/atom/list-item/ListItem';
 import List from '../../components/molecule/list/List';
 import Card from '../../components/molecule/card/Card';
@@ -76,7 +78,7 @@ export const ellipses = () => (
           <CardItem
             value="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
             label="Label"
-            col={8}
+            md={8}
             ellipsis
           />
           <CardItem value="Value2" label="Label" col={4} />
@@ -99,8 +101,17 @@ export const _CardLine = () => (
             value="1"
             onChange={action('toggleCheck')}
           />
-          <CardItem value="Value" label="Label" />
-          <CardItem value="Value" label="Label" />
+          <CardItem
+            value="Value"
+            label="Label"
+            leftIcon={<FontAwesomeIcon icon={faLayerGroup} />}
+          />
+          <CardItem
+            value="Value"
+            label="Label"
+            small
+            leftIcon={<FontAwesomeIcon icon={faLayerGroup} />}
+          />
         </CardLine>
       </ListItem>
     </List>

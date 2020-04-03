@@ -1,24 +1,56 @@
 @import "../settings/settings";
+@import "../tools/tools";
 
 .c-card-item {
   display: flex;
-  flex-direction: column;
-  padding-right: $space-5;
+  align-items: center;
+  margin-right: $space-5;
   line-height: 30px;
 
-  span {
-    &:nth-child(1) {
-      font-size: $font-size-sm;
-      color: $color-brand-gray-300;
-    }
+  @include mq($until: tablet) {
+    margin-right: $space-3;
+  }
 
-    &:nth-child(2) {
-      color: $color-brand-gray-500;
-      font-size: $font-size-md;
+  @include mq($until: mobile) {
+    margin-right: $space-2;
+  }
+
+  svg {
+    font-size: 16px;
+  }
+
+  svg + div {
+    margin-left: $space-2;
+
+    @include mq($until: mobile) {
+      margin-left: $space-1;
+    }
+  }
+
+  &__content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+
+    span {
+      &:nth-child(1) {
+        font-size: $font-size-sm;
+        color: $color-brand-gray-300;
+      }
     }
   }
 
   &--primary {
+    span {
+      &:nth-child(1),
+      &:nth-child(2) {
+        color: $color-primary;
+      }
+    }
+  }
+
+  &--lb-primary {
     span {
       &:nth-child(1) {
         color: $color-primary;
@@ -26,11 +58,69 @@
     }
   }
 
+  &--val-primary {
+    span {
+      &:nth-child(2) {
+        color: $color-primary;
+      }
+    }
+  }
+
+  &--svg-white {
+    svg {
+      color: $color-white;
+    }
+  }
+
+  &--lb-white {
+    span {
+      &:nth-child(1) {
+        color: $color-white;
+      }
+    }
+  }
+
+  &--val-white {
+    span {
+      &:nth-child(2) {
+        color: $color-white;
+      }
+    }
+  }
+
+  &--svg-white {
+    svg {
+      color: $color-white;
+    }
+  }
+
+  &--gray {
+    span {
+      &:nth-child(1),
+      &:nth-child(2) {
+        color: $color-brand-gray-500;
+      }
+    }
+  }
+
+  &--lb-gray {
+    span {
+      &:nth-child(1) {
+        color: $color-brand-gray-500;
+      }
+    }
+  }
+
   &--ellipsis {
     .truncate {
+      display: inline;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
     }
+  }
+
+  &--small {
+    line-height: 18px;
   }
 }
