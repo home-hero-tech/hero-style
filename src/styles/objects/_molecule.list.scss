@@ -4,7 +4,7 @@
 .c-list {
   list-style: none;
 
-  a {
+  a, a:hover, a:focus, a:visited {
     color: $color-brand-gray-500;
   }
 
