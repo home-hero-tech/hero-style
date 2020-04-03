@@ -1,0 +1,44 @@
+@import "../settings/settings";
+
+.c-dropdown-menu {
+  position: absolute;
+  background: $color-white;
+  box-shadow: 0 0 ($shadow*2) ($shadow/2) $color-structural-black-shadow;
+  white-space: nowrap;
+  z-index: 999;
+
+  &--above {
+    bottom: 100%;
+  }
+
+  &--below {
+    top: 100%;
+  }
+
+  li {
+    font-size: .75rem;
+    cursor: pointer;
+    transition: background-color .3s ease-in-out;
+
+    &:hover {
+      background-color: $color-brand-gray-050;
+    }
+
+    button, a {
+      box-shadow: none;
+      display: block;
+      padding: $space-2 $space-3;
+      color: $color-brand-gray-300;
+      transition: all .3s cubic-bezier(.65, -0.79, .29, 1.76);
+      font-weight: normal;
+      height: auto;
+      font-size: 12px;
+      font-family: "muli", sans-serif;
+    }
+
+    &:hover button, &:hover a {
+      color: $color-brand-gray-500;
+      font-weight: bold;
+    }
+  }
+}
