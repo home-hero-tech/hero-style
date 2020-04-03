@@ -39,6 +39,8 @@ import ModalFooter from './components/molecule/modal-footer/ModalFooter';
 import ModalHeader from './components/molecule/modal-header/ModalHeader';
 import Tooltip from './components/molecule/tooltip/Tooltip';
 import Spacer from './components/molecule/spacer/Spacer';
+import DropdownMenu from './components/molecule/dropdown-menu/DropdownMenu';
+import Dropdown from './components/molecule/dropdown/dropdown';
 
 // organisms
 import CardLine from './components/organism/card-line/CardLine';
@@ -91,5 +93,7 @@ export {
   TabPanel,
   Text,
   Tooltip,
-  Row
+  Row,
+  Dropdown,
+  DropdownMenu
 };
