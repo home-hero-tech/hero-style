@@ -10,7 +10,8 @@ const ShapeAction = ({
   size,
   isButton,
   isLink,
-  children
+  children,
+  ...otherProps
 }) => {
   const classes = classNames({
     [css['c-shape-action']]: true,
@@ -21,9 +22,19 @@ const ShapeAction = ({
     [css[`c-shape-action--size-${size}`]]: size
   });
 
-  if (isButton) return <button className={classes}>{children}</button>;
+  if (isButton && !isLink) {
+    return (
+      <button className={classes} {...otherProps}>
+        {children}
+      </button>
+    );
+  }
 
-  return <span className={classes}>{children}</span>;
+  return (
+    <span className={classes} {...otherProps}>
+      {children}
+    </span>
+  );
 };
 
 ShapeAction.propTypes = {
@@ -33,16 +44,16 @@ ShapeAction.propTypes = {
   fill: PropTypes.oneOf(['primary', 'success', 'danger']),
   shape: PropTypes.oneOf(['squared', 'rounded']),
   size: PropTypes.oneOf([1, 2, 3, 4]),
-  isLink: PropTypes.bool
+  isLink: PropTypes.bool,
 };
 ShapeAction.defaultProps = {
   children: null,
   isButton: false,
   fill: null,
-  type: 'primary',
+  type: null,
   shape: 'squared',
   size: 1,
-  isLink: false
+  isLink: false,
 };
 ShapeAction.displayName = 'ShapeAction';
 

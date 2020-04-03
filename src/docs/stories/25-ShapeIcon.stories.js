@@ -1,101 +1,104 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLayerGroup } from '@fortawesome/pro-light-svg-icons';
-import ShapeIcon from '../../components/atom/shape-action/ShapeAction';
+import ShapeAction from '../../components/atom/shape-action/ShapeAction';
 import Spacer from '../../components/molecule/spacer/Spacer';
 
 import Wrapper from '../../helpers/wrapper/Wrapper';
 
 export default {
-  title: 'RoundIcon',
-  component: ShapeIcon
+  title: 'ShapeAction',
+  component: ShapeAction
 };
 
 export const Types = () => (
   <Wrapper>
-    <ShapeIcon type="primary">
+    <ShapeAction>
       <FontAwesomeIcon icon={faLayerGroup} />
-    </ShapeIcon>
+    </ShapeAction>
+    <ShapeAction type="primary">
+      <FontAwesomeIcon icon={faLayerGroup} />
+    </ShapeAction>
     <Spacer inline>
-      <ShapeIcon type="danger">
+      <ShapeAction type="danger">
         <FontAwesomeIcon icon={faLayerGroup} />
-      </ShapeIcon>
+      </ShapeAction>
     </Spacer>
-    <ShapeIcon type="success">
+    <ShapeAction type="success">
       <FontAwesomeIcon icon={faLayerGroup} />
-    </ShapeIcon>
+    </ShapeAction>
   </Wrapper>
 );
 
 export const Shapes = () => (
   <Wrapper>
-    <ShapeIcon type="primary" shape="rounded">
+    <ShapeAction type="primary" shape="rounded">
       <FontAwesomeIcon icon={faLayerGroup} />
-    </ShapeIcon>
-    <ShapeIcon type="primary" shape="squared">
+    </ShapeAction>
+    <ShapeAction type="primary" shape="squared">
       <FontAwesomeIcon icon={faLayerGroup} />
-    </ShapeIcon>
+    </ShapeAction>
   </Wrapper>
 );
 
 export const isButton = () => (
   <Wrapper>
-    <ShapeIcon type="primary" isButton>
+    <ShapeAction type="primary" isButton>
       <FontAwesomeIcon icon={faLayerGroup} />
-    </ShapeIcon>
+    </ShapeAction>
 
-    <ShapeIcon type="danger" shape="rounded" isButton>
+    <ShapeAction type="danger" shape="rounded" isButton>
       <FontAwesomeIcon icon={faLayerGroup} />
-    </ShapeIcon>
+    </ShapeAction>
   </Wrapper>
 );
 
 export const Fill = () => (
   <Wrapper>
-    <ShapeIcon type="primary" isButton fill="primary">
+    <ShapeAction type="primary" isButton fill="primary">
       <FontAwesomeIcon icon={faLayerGroup} />
-    </ShapeIcon>
-    <ShapeIcon isButton fill="success" shape="rounded">
+    </ShapeAction>
+    <ShapeAction isButton fill="success" shape="rounded">
       <FontAwesomeIcon icon={faLayerGroup} />
-    </ShapeIcon>
-    <ShapeIcon type="primary" isButton fill="danger">
+    </ShapeAction>
+    <ShapeAction type="primary" isButton fill="danger">
       <FontAwesomeIcon icon={faLayerGroup} />
-    </ShapeIcon>
+    </ShapeAction>
   </Wrapper>
 );
 
 export const renderAction = () => (
   <Wrapper>
-    <ShapeIcon type="primary" isButton fill="primary" renderAction>
+    <ShapeAction type="primary" isButton fill="primary" renderAction>
       <FontAwesomeIcon icon={faLayerGroup} />
-    </ShapeIcon>
-    <ShapeIcon isButton fill="success" shape="rounded">
+    </ShapeAction>
+    <ShapeAction isButton fill="success" shape="rounded">
       <FontAwesomeIcon icon={faLayerGroup} />
-    </ShapeIcon>
-    <ShapeIcon type="primary" isButton fill="danger">
+    </ShapeAction>
+    <ShapeAction type="primary" isButton fill="danger">
       <FontAwesomeIcon icon={faLayerGroup} />
-    </ShapeIcon>
-    <ShapeIcon isButton fill="primary" shape="rounded" size={3} isLink>
+    </ShapeAction>
+    <ShapeAction isButton fill="primary" shape="rounded" size={3} isLink>
       <a href="www.google.com">
         <FontAwesomeIcon icon={faLayerGroup} />
       </a>
-    </ShapeIcon>
+    </ShapeAction>
   </Wrapper>
 );
 
 export const sizes = () => (
   <Wrapper>
-    <ShapeIcon isButton fill="primary" shape="rounded" size={1}>
+    <ShapeAction isButton fill="primary" shape="rounded" size={1}>
       <FontAwesomeIcon icon={faLayerGroup} />
-    </ShapeIcon>
-    <ShapeIcon type="success" isButton size={2}>
+    </ShapeAction>
+    <ShapeAction type="success" isButton size={2}>
       <FontAwesomeIcon icon={faLayerGroup} />
-    </ShapeIcon>
-    <ShapeIcon type="danger" isButton fill="danger" size={3}>
+    </ShapeAction>
+    <ShapeAction type="danger" isButton fill="danger" size={3}>
       <FontAwesomeIcon icon={faLayerGroup} />
-    </ShapeIcon>
-    <ShapeIcon type="primary" isButton shape="rounded" size={4}>
+    </ShapeAction>
+    <ShapeAction type="primary" isButton shape="rounded" size={4}>
       <FontAwesomeIcon icon={faLayerGroup} />
-    </ShapeIcon>
+    </ShapeAction>
   </Wrapper>
 );
