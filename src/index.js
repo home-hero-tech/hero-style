@@ -39,6 +39,8 @@ import ModalFooter from './components/molecule/modal-footer/ModalFooter';
 import ModalHeader from './components/molecule/modal-header/ModalHeader';
 import Tooltip from './components/molecule/tooltip/Tooltip';
 import Spacer from './components/molecule/spacer/Spacer';
+import DropdownMenu from './components/molecule/dropdown-menu/DropdownMenu';
+import Dropdown from './components/molecule/dropdown/Dropdown';
 
 // organisms
 import CardLine from './components/organism/card-line/CardLine';
@@ -56,6 +58,8 @@ export {
   CardLine,
   Col,
   DatePicker,
+  Dropdown,
+  DropdownMenu,
   FileInput,
   Filter,
   FilterHeader,
