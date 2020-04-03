@@ -53,9 +53,8 @@ export const marginTopAndBottom = () => (
   </Wrapper>
 );
 
-
 export const marginLeft = () => (
-  <Wrapper style={{display: "flex"}}>
+  <Wrapper style={{ display: 'flex' }}>
     <Label>Texte 1</Label>
     <Spacer mlLg={1} mlMd={2} mlSm={3} mlXs={4}>
       <Label>Text with margin left</Label>
@@ -63,9 +62,8 @@ export const marginLeft = () => (
   </Wrapper>
 );
 
-
 export const marginRight = () => (
-  <Wrapper style={{display: "flex"}}>
+  <Wrapper style={{ display: 'flex' }}>
     <Spacer mrLg={1} mrMd={2} mrSm={3} mrXs={4}>
       <Label>Text with margin right</Label>
     </Spacer>
@@ -73,10 +71,8 @@ export const marginRight = () => (
   </Wrapper>
 );
 
-
-
 export const marginLeftAndRight = () => (
-  <Wrapper style={{display: "flex"}}>
+  <Wrapper style={{ display: 'flex' }}>
     <Label>Texte 1</Label>
     <Spacer mxLg={1} mxMd={2} mxSm={3} mxXs={4}>
       <Label>Text with margin left and right</Label>

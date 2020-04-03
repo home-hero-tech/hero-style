@@ -18,70 +18,112 @@ export default {
 };
 
 export const Above = () => (
-  <Wrapper style={{margin: '100px'}}>
-  <Dropdown>
-    <DropdownMenu above>
-      <List>
-        <ListItem>
-          <Button type="default" container="text" onClick={action('clicked')}>Açao 1</Button>
-        </ListItem>
-         <ListItem>
-          <Button type="default" container="text" onClick={action('clicked 2')}>Açao 2</Button>
-        </ListItem>
-         <ListItem>
-          <Button type="default" container="text" onClick={action('clicked 3')}>Açao 3</Button>
-        </ListItem>
-      </List>
-    </DropdownMenu>
-    <ShapeIcon type="primary">
-      <FontAwesomeIcon icon={faEllipsisV} />
-    </ShapeIcon>
-  </Dropdown>
+  <Wrapper style={{ margin: '100px' }}>
+    <Dropdown>
+      <DropdownMenu above>
+        <List>
+          <ListItem>
+            <Button type="default" container="text" onClick={action('clicked')}>
+              Açao 1
+            </Button>
+          </ListItem>
+          <ListItem>
+            <Button
+              type="default"
+              container="text"
+              onClick={action('clicked 2')}
+            >
+              Açao 2
+            </Button>
+          </ListItem>
+          <ListItem>
+            <Button
+              type="default"
+              container="text"
+              onClick={action('clicked 3')}
+            >
+              Açao 3
+            </Button>
+          </ListItem>
+        </List>
+      </DropdownMenu>
+      <ShapeIcon type="primary">
+        <FontAwesomeIcon icon={faEllipsisV} />
+      </ShapeIcon>
+    </Dropdown>
   </Wrapper>
 );
 
 export const Below = () => (
-  <Wrapper style={{margin: '100px'}}>
-  <Dropdown>
-    <DropdownMenu below>
-      <List>
-        <ListItem>
-          <Button type="default" container="text" onClick={action('clicked')}>Açao 1</Button>
-        </ListItem>
-         <ListItem>
-          <Button type="default" container="text" onClick={action('clicked 2')}>Açao 2</Button>
-        </ListItem>
-         <ListItem>
-          <Button type="default" container="text" onClick={action('clicked 3')}>Açao 3</Button>
-        </ListItem>
-      </List>
-    </DropdownMenu>
-    <ShapeIcon type="primary">
-      <FontAwesomeIcon icon={faEllipsisV} />
-    </ShapeIcon>
-  </Dropdown>
+  <Wrapper style={{ margin: '100px' }}>
+    <Dropdown>
+      <DropdownMenu below>
+        <List>
+          <ListItem>
+            <Button type="default" container="text" onClick={action('clicked')}>
+              Açao 1
+            </Button>
+          </ListItem>
+          <ListItem>
+            <Button
+              type="default"
+              container="text"
+              onClick={action('clicked 2')}
+            >
+              Açao 2
+            </Button>
+          </ListItem>
+          <ListItem>
+            <Button
+              type="default"
+              container="text"
+              onClick={action('clicked 3')}
+            >
+              Açao 3
+            </Button>
+          </ListItem>
+        </List>
+      </DropdownMenu>
+      <ShapeIcon type="primary">
+        <FontAwesomeIcon icon={faEllipsisV} />
+      </ShapeIcon>
+    </Dropdown>
   </Wrapper>
 );
 
 export const Before = () => (
-  <Wrapper style={{margin: '100px'}}>
-  <Dropdown>
-    <DropdownMenu below before>
-      <List>
-        <ListItem>
-          <Button type="default" container="text" onClick={action('clicked')}>Açao 1</Button>
-        </ListItem>
-         <ListItem>
-          <Button type="default" container="text" onClick={action('clicked 2')}>Açao 2</Button>
-        </ListItem>
-         <ListItem>
-          <Button type="default" container="text" onClick={action('clicked 3')}>Açao 3</Button>
-        </ListItem>
-      </List>
-    </DropdownMenu>
-    <ShapeIcon type="primary">
-      <FontAwesomeIcon icon={faEllipsisV} />
-    </ShapeIcon>
-  </Dropdown>
+  <Wrapper style={{ margin: '100px' }}>
+    <Dropdown>
+      <DropdownMenu below before>
+        <List>
+          <ListItem>
+            <Button type="default" container="text" onClick={action('clicked')}>
+              Açao 1
+            </Button>
+          </ListItem>
+          <ListItem>
+            <Button
+              type="default"
+              container="text"
+              onClick={action('clicked 2')}
+            >
+              Açao 2
+            </Button>
+          </ListItem>
+          <ListItem>
+            <Button
+              type="default"
+              container="text"
+              onClick={action('clicked 3')}
+            >
+              Açao 3
+            </Button>
+          </ListItem>
+        </List>
+      </DropdownMenu>
+      <ShapeIcon type="primary">
+        <FontAwesomeIcon icon={faEllipsisV} />
+      </ShapeIcon>
+    </Dropdown>
   </Wrapper>
 );

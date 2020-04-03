@@ -7,9 +7,9 @@ const defaultStyle = {
 };
 
 const Wrapper = ({ style, children }) => {
-  style = {...defaultStyle, ...style};
+  const _style = { ...defaultStyle, ...style };
 
-  return <div style={style}>{children}</div>;
+  return <div style={_style}>{children}</div>;
 };
 
 Wrapper.propTypes = {

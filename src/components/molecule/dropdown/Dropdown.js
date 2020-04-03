@@ -3,9 +3,8 @@ import PropTypes from 'prop-types';
 
 import css from './Dropdown.module.scss';
 
-const Dropdown = ({ onClick, children }) => {
-
-  return <div className={css['c-dropdown']} onClick={onClick}>{children}</div>;
+const Dropdown = ({ children }) => {
+  return <div className={css['c-dropdown']}>{children}</div>;
 };
 
 Dropdown.propTypes = {
@@ -13,12 +12,9 @@ Dropdown.propTypes = {
     PropTypes.string,
     PropTypes.object,
     PropTypes.array
-  ]).isRequired,
-  onClick: PropTypes.func
+  ]).isRequired
 };
 
-Dropdown.defaultProps = {
-  onClick: null
-};
+Dropdown.defaultProps = {};
 
 export default Dropdown;
