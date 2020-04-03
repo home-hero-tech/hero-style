@@ -395,3 +395,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.0.102] - 2020-04-01
 ### Changed
 - Adjusted **focus**, **hover**, **visited** from anchor.
+
+## [1.0.104] - 2020-04-01
+### Added
+- Shape Action component and its tests.
