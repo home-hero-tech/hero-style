@@ -387,3 +387,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.0.100] - 2020-04-01
 ### Added
 - Several improvements in Card Item.
+
+## [1.0.101] - 2020-04-01
+### Changed
+- Anchor has text color in List component by default.

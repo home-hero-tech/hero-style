@@ -1,7 +1,12 @@
 @import "../settings/spaces";
+@import "../settings/colors";
 
 .c-list {
   list-style: none;
+
+  a {
+    color: $color-brand-gray-500;
+  }
 
   &--0 {
     > li + li {
