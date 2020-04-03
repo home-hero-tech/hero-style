@@ -5,7 +5,6 @@
   display: flex;
   align-items: center;
   margin-right: $space-5;
-  line-height: 30px;
 
   @include mq($until: tablet) {
     margin-right: $space-3;
@@ -26,6 +25,23 @@
       margin-left: $space-1;
     }
   }
+
+  span {
+    font-weight: 300;
+  }
+
+  &--default {
+    span {
+
+      &:nth-child(1) {
+        line-height: 17px;
+      }
+      &:nth-child(2) {
+        line-height: 20px;
+      }
+    }
+  }
+
 
   &__content {
     display: flex;
@@ -103,6 +119,22 @@
   }
 
   &--small {
-    line-height: 18px;
+    span {
+      &:nth-child(1) {
+        line-height: 15px;
+      }
+      &:nth-child(2) {
+        line-height: 17px;
+      }
+
+      &:nth-child(1) {
+        font-size: $font-size-xs;
+        color: $color-brand-gray-300;
+      }
+
+      &:nth-child(2) {
+        font-size: $font-size-sm;
+      }
+    }
   }
 }

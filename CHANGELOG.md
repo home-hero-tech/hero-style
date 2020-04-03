@@ -407,3 +407,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.0.106] - 2020-04-03
 ### Added
 - DropDown component.
+
+## [1.0.107] - 2020-04-03
+### Changed
+- Several improvements on Card and CardItem components.

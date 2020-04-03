@@ -1,22 +1,31 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 
 import { Row, Grid } from 'react-flexbox-grid';
 
 import css from './Card.module.scss';
 
-const Card = ({ children, ...otherProps }) => (
-  <Grid fluid {...otherProps}>
-    <Row className={css['c-card']}>{children}</Row>
-  </Grid>
-);
+const Card = ({ small, children, ...otherProps }) => {
+  const classes = classNames({
+    [css['c-card']]: true,
+    [css['c-card--small']]: small
+  });
+  return (
+    <Grid fluid {...otherProps}>
+      <Row className={classes}>{children}</Row>
+    </Grid>
+  );
+};
 
 Card.propTypes = {
-  children: PropTypes.oneOfType([PropTypes.object, PropTypes.array])
+  children: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
+  small: PropTypes.bool,
 };
 
 Card.defaultProps = {
-  children: null
+  children: null,
+  small: false,
 };
 
 export default Card;
