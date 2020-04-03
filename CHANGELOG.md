@@ -384,18 +384,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - New props for Scrollable Tabs component.
 
-## [1.0.100] - 2020-04-01
+## [1.0.100] - 2020-04-02
 ### Added
 - Several improvements in Card Item.
 
-## [1.0.101] - 2020-04-01
+## [1.0.101] - 2020-04-02
 ### Changed
 - Anchor has text color in List component by default.
 
-## [1.0.102] - 2020-04-01
+## [1.0.102] - 2020-04-02
 ### Changed
 - Adjusted **focus**, **hover**, **visited** from anchor.
 
-## [1.0.104] - 2020-04-01
+## [1.0.104] - 2020-04-03
 ### Added
 - Shape Action component and its tests.
+
+## [1.0.105] - 2020-04-03
+### Added
+- Props for white color in CardItem.

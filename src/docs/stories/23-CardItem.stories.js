@@ -36,7 +36,12 @@ export const small = () => (
 export const Primary = () => (
   <Wrapper>
     <Card>
-      <CardItem value="Primary" label="Primary" primary />
+      <CardItem
+        value="Primary"
+        label="Primary"
+        leftIcon={<FontAwesomeIcon icon={faLayerGroup} />}
+        primary
+      />
     </Card>
   </Wrapper>
 );
@@ -57,10 +62,28 @@ export const valPrimary = () => (
   </Wrapper>
 );
 
+export const svgPrimary = () => (
+  <Wrapper>
+    <Card>
+      <CardItem
+        value="svgPrimary"
+        label="svgPrimary"
+        svgPrimary
+        leftIcon={<FontAwesomeIcon icon={faLayerGroup} />}
+      />
+    </Card>
+  </Wrapper>
+);
+
 export const Gray = () => (
   <Wrapper>
     <Card>
-      <CardItem value="gray" label="gray" gray />
+      <CardItem
+        value="gray"
+        label="gray"
+        gray
+        leftIcon={<FontAwesomeIcon icon={faLayerGroup} />}
+      />
     </Card>
   </Wrapper>
 );
@@ -82,6 +105,56 @@ export const LeftIcon = () => (
         gray
         leftIcon={<FontAwesomeIcon icon={faLayerGroup} />}
       />
+    </Card>
+  </Wrapper>
+);
+
+export const White = () => (
+  <Wrapper>
+    <Card>
+      <div style={{ backgroundColor: '#909090' }}>
+        <CardItem
+          value="White"
+          label="White"
+          white
+          leftIcon={<FontAwesomeIcon icon={faLayerGroup} />}
+        />
+      </div>
+    </Card>
+  </Wrapper>
+);
+
+export const lbWhite = () => (
+  <Wrapper>
+    <Card>
+      <div style={{ backgroundColor: '#909090' }}>
+        <CardItem value="lbWhite" label="lbWhite" lbWhite />
+      </div>
+    </Card>
+  </Wrapper>
+);
+
+export const valWhite = () => (
+  <Wrapper>
+    <Card>
+      <div style={{ backgroundColor: '#909090' }}>
+        <CardItem value="valWhite" label="valWhite" valWhite />
+      </div>
+    </Card>
+  </Wrapper>
+);
+
+export const svgWhite = () => (
+  <Wrapper>
+    <Card>
+      <div style={{ backgroundColor: '#909090' }}>
+        <CardItem
+          value="svgWhite"
+          label="svgWhite"
+          svgWhite
+          leftIcon={<FontAwesomeIcon icon={faLayerGroup} />}
+        />
+      </div>
     </Card>
   </Wrapper>
 );

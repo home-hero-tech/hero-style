@@ -20,6 +20,10 @@ const CardItem = ({
   svgPrimary,
   valPrimary,
   value,
+  white,
+  lbWhite,
+  valWhite,
+  svgWhite,
   ...otherProps
 }) => {
   const classes = classNames({
@@ -27,13 +31,15 @@ const CardItem = ({
     [css['c-card-item--ellipsis']]: ellipsis,
     [css['c-card-item--small']]: small,
 
-    [css['c-card-item--gray']]: gray,
     [css['c-card-item--lb-gray']]: gray || lbGray,
 
-    [css['c-card-item--primary']]: primary,
     [css['c-card-item--lb-primary']]: primary || lbPrimary,
     [css['c-card-item--val-primary']]: primary || valPrimary,
-    [css['c-card-item--svg-primary']]: primary || svgPrimary
+    [css['c-card-item--svg-primary']]: primary || svgPrimary,
+
+    [css['c-card-item--lb-white']]: white || lbWhite,
+    [css['c-card-item--val-white']]: white || valWhite,
+    [css['c-card-item--svg-white']]: white || svgWhite
   });
 
   const renderContent = (_label, _value, _leftIcon) => (
@@ -61,12 +67,16 @@ CardItem.propTypes = {
   gray: PropTypes.bool,
   label: PropTypes.string,
   lbPrimary: PropTypes.bool,
+  lbWhite: PropTypes.bool,
   lbGray: PropTypes.bool,
   leftIcon: PropTypes.instanceOf(Object),
   primary: PropTypes.bool,
+  white: PropTypes.bool,
   small: PropTypes.bool,
   svgPrimary: PropTypes.bool,
+  svgWhite: PropTypes.bool,
   valPrimary: PropTypes.bool,
+  valWhite: PropTypes.bool,
   value: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.instanceOf(Date),
@@ -80,12 +90,16 @@ CardItem.defaultProps = {
   gray: false,
   label: null,
   lbPrimary: false,
+  lbWhite: false,
   lbGray: false,
   leftIcon: null,
   primary: false,
+  white: false,
   small: false,
   svgPrimary: false,
-  valPrimary: false
+  svgWhite: false,
+  valPrimary: false,
+  valWhite: false
 };
 
 CardItem.displayName = 'CardItem';

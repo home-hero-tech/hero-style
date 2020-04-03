@@ -41,15 +41,6 @@
     }
   }
 
-  &--primary {
-    span {
-      &:nth-child(1),
-      &:nth-child(2) {
-        color: $color-primary;
-      }
-    }
-  }
-
   &--lb-primary {
     span {
       &:nth-child(1) {
@@ -66,9 +57,9 @@
     }
   }
 
-  &--svg-white {
+  &--svg-primary {
     svg {
-      color: $color-white;
+      color: $color-primary;
     }
   }
 
@@ -91,15 +82,6 @@
   &--svg-white {
     svg {
       color: $color-white;
-    }
-  }
-
-  &--gray {
-    span {
-      &:nth-child(1),
-      &:nth-child(2) {
-        color: $color-brand-gray-500;
-      }
     }
   }
 
