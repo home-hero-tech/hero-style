@@ -13,6 +13,7 @@ import BoxShadow from './components/atom/box-shadow/BoxShadow';
 import Button from './components/atom/button/Button';
 import CardItem from './components/atom/card-item/CardItem';
 import DatePicker from './components/atom/datepicker/DatePicker';
+import FileInput from './components/atom/file-input/FileInput';
 import Heading from './components/atom/heading/Heading';
 import Input from './components/atom/input/Input';
 import Label from './components/atom/label/Label';
@@ -20,9 +21,9 @@ import Loader from './components/atom/loader/Loader';
 import ListItem from './components/atom/list-item/ListItem';
 import Pagination from './components/atom/pagination/Pagination';
 import Select from './components/atom/select/Select';
+import ShapeAction from './components/atom/shape-action/ShapeAction';
 import Text from './components/atom/text/Text';
 import MaskedInput from './components/atom/masked-input/MaskedInput';
-import FileInput from './components/atom/file-input/FileInput';
 
 // molecules
 import Card from './components/molecule/card/Card';
@@ -88,6 +89,7 @@ export {
   ScrollableTabs,
   ScrollablePanel,
   Select,
+  ShapeAction,
   Spacer,
   Tab,
   Tabs,

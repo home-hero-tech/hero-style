@@ -411,3 +411,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.0.107] - 2020-04-03
 ### Changed
 - Several improvements on Card and CardItem components.
+
+## [1.0.109] - 2020-04-03
+### Add
+- Publishing Shape Action component.
