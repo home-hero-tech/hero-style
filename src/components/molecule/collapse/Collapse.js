@@ -13,7 +13,7 @@ const Collapse = ({ isOpen, children }) => {
 
 Collapse.propTypes = {
   isOpen: PropTypes.bool,
-  children: PropTypes.instanceOf(PropTypes.object).isRequired
+  children: PropTypes.instanceOf(Object).isRequired
 };
 
 Collapse.defaultProps = {

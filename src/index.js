@@ -27,6 +27,7 @@ import MaskedInput from './components/atom/masked-input/MaskedInput';
 
 // molecules
 import Card from './components/molecule/card/Card';
+import Collapse from './components/molecule/collapse/Collapse';
 import FilterHeader from './components/molecule/filter-header/FilterHeader';
 import FilterContent from './components/molecule/filter-content/FilterContent';
 import FilterFooter from './components/molecule/filter-footer/FilterFooter';
@@ -58,6 +59,7 @@ export {
   CardItem,
   CardLine,
   Col,
+  Collapse,
   DatePicker,
   Dropdown,
   DropdownMenu,

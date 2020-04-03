@@ -419,3 +419,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.0.110] - 2020-04-03
 ### Add
 - Some props in ShapeAction.
+
+## [1.0.111] - 2020-04-03
+### Add
+- Publishing Collapse Component.
