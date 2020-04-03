@@ -42,7 +42,11 @@ export const small = () => (
           <CardItem value="Ativo" label="Status" small />
           <CardItem value="Matheus Alexandre" label="Nome do orçamento" small />
           <CardItem value="04 de Set 2019 às 13:58" label="Criado em" small />
-          <CardItem value="04 de Set 2019 às 13:58" label="Atualizado em" small />
+          <CardItem
+            value="04 de Set 2019 às 13:58"
+            label="Atualizado em"
+            small
+          />
         </Card>
       </ListItem>
     </List>

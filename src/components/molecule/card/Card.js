@@ -20,12 +20,12 @@ const Card = ({ small, children, ...otherProps }) => {
 
 Card.propTypes = {
   children: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
-  small: PropTypes.bool,
+  small: PropTypes.bool
 };
 
 Card.defaultProps = {
   children: null,
-  small: false,
+  small: false
 };
 
 export default Card;
