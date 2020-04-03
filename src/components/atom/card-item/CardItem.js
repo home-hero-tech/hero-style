@@ -28,6 +28,7 @@ const CardItem = ({
 }) => {
   const classes = classNames({
     [css['c-card-item']]: true,
+    [css['c-card-item--default']]: true,
     [css['c-card-item--ellipsis']]: ellipsis,
     [css['c-card-item--small']]: small,
 
