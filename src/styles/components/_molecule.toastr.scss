@@ -1,0 +1,22 @@
+@import "../settings/settings";
+
+:global {
+  @import "~react-toastify/dist/ReactToastify.css";
+}
+
+.Toastify {
+  &__toast {
+    &--success {
+      background: $color-success !important;
+    }
+    &--error {
+      background: $color-danger !important;
+    }
+    &--warning {
+      background: $color-warning !important;
+    }
+    &--info {
+      background: $color-brand-primary-300 !important;
+    }
+  }
+}
