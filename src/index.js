@@ -58,6 +58,8 @@ export {
   CardLine,
   Col,
   DatePicker,
+  Dropdown,
+  DropdownMenu,
   FileInput,
   Filter,
   FilterHeader,
@@ -93,7 +95,5 @@ export {
   TabPanel,
   Text,
   Tooltip,
-  Row,
-  Dropdown,
-  DropdownMenu
+  Row
 };
