@@ -426,6 +426,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [1.0.112] - 2020-04-03
 ### Add
+- Toastr component.
+
+## [1.0.113] - 2020-04-03
+### Add
 - EmptyCardItem component and its test.
 - Improvements on List component.
 
