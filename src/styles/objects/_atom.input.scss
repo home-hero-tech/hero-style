@@ -138,4 +138,8 @@
   &:focus, &:hover {
     border: 1px solid currentColor;
   }
+
+  &__checkbox, &__radio {
+    margin: 0;
+  }
 }
