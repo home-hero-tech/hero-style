@@ -22,6 +22,8 @@ const EmptyCardItem = ({
   children,
   ...otherProps
 }) => {
+  const {lg, md, sm, xs } = otherProps;
+
   const classes = classNames({
     [css['c-card-item']]: true,
     [css['c-card-item--default']]: true,
@@ -36,7 +38,9 @@ const EmptyCardItem = ({
 
     [css['c-card-item--lb-white']]: white || lbWhite,
     [css['c-card-item--val-white']]: white || valWhite,
-    [css['c-card-item--svg-white']]: white || svgWhite
+    [css['c-card-item--svg-white']]: white || svgWhite,
+
+    [css['c-card-item--no-margin']]: lg || md || sm || xs
   });
 
   return (
