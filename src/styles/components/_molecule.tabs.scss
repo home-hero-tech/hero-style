@@ -30,6 +30,7 @@
       transition: all .3s linear;
       background-color: transparent;
       height: 36px;
+      color: $color-brand-gray-200;
 
       display: flex;
       align-items: center;
@@ -49,7 +50,7 @@
       &:hover, &:focus, &--selected {
         outline: none;
         border: none;
-        color: $color-primary;
+        color: $color-brand-gray-500;
         border-bottom: solid 2px $color-primary;
         box-shadow: none;
 

@@ -444,3 +444,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.0.116] - 2020-04-03
 ### Changed
 - Collapse component fill all the spaces.
+
+## [1.0.117] - 2020-04-04
+### Changed
+- Fixed wrong colors from Default and Scrollable Tabs components.
