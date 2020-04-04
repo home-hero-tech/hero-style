@@ -448,3 +448,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.0.117] - 2020-04-04
 ### Changed
 - Fixed wrong colors from Default and Scrollable Tabs components.
+
+## [1.0.118] - 2020-04-04
+### Added
+- Line component and its tests.

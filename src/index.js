@@ -18,6 +18,7 @@ import FileInput from './components/atom/file-input/FileInput';
 import Heading from './components/atom/heading/Heading';
 import Input from './components/atom/input/Input';
 import Label from './components/atom/label/Label';
+import Line from './components/atom/line/Line';
 import Loader from './components/atom/loader/Loader';
 import ListItem from './components/atom/list-item/ListItem';
 import Pagination from './components/atom/pagination/Pagination';
@@ -77,6 +78,7 @@ export {
   Heading,
   Input,
   Label,
+  Line,
   List,
   ListItem,
   Loader,
