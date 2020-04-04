@@ -22,7 +22,7 @@ const EmptyCardItem = ({
   children,
   ...otherProps
 }) => {
-  const {lg, md, sm, xs } = otherProps;
+  const { lg, md, sm, xs } = otherProps;
 
   const classes = classNames({
     [css['c-card-item']]: true,
