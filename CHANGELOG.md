@@ -436,3 +436,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Removed
 - ListItemContent component and its tests.
 - ListItemCWrapper component and its tests.
+
+## [1.0.114] - 2020-04-03
+### Changed
+- Decreased margin-left from **ul** inside another ul.

@@ -46,10 +46,10 @@
   }
 
   ul {
-    margin-left: $space-8 + 2px;
+    margin-left: $space-6 + 2px;
 
     @include mq($until: tablet) {
-      margin-left: $space-6 + 2px;
+      margin-left: $space-4 + 2px;
     }
   }
 }
