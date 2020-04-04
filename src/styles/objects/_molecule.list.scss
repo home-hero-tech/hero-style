@@ -51,5 +51,9 @@
     @include mq($until: tablet) {
       margin-left: $space-4;
     }
+
+    @include mq($until: mobile) {
+      margin-left: $space-2;
+    }
   }
 }

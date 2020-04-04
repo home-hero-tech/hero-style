@@ -6,8 +6,12 @@
   align-items: center;
   margin-right: $space-2;
 
-  @include mq($until: mobile) {
+  @include mq($until: tablet) {
     margin-right: $space-1;
+  }
+
+  @include mq($until: mobile) {
+    margin-right: $space-0;
   }
 
   svg {
@@ -17,8 +21,12 @@
   svg + div {
     margin-left: $space-2;
 
-    @include mq($until: mobile) {
+    @include mq($until: tablet) {
       margin-left: $space-1;
+    }
+
+    @include mq($until: mobile) {
+      margin-left: $space-0;
     }
   }
 
@@ -34,6 +42,18 @@
 
       &:nth-child(2) {
         line-height: 20px;
+      }
+    }
+  }
+
+  &--small {
+    span {
+      &:nth-child(1) {
+        line-height: 15px;
+      }
+
+      &:nth-child(2) {
+        line-height: 17px;
       }
     }
   }
@@ -114,26 +134,6 @@
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
-    }
-  }
-
-  &--small {
-    span {
-      &:nth-child(1) {
-        line-height: 15px;
-      }
-
-      &:nth-child(2) {
-        line-height: 17px;
-      }
-
-      &:nth-child(1) {
-        font-size: $font-size-xs;
-      }
-
-      &:nth-child(2) {
-        font-size: $font-size-sm;
-      }
     }
   }
 }
