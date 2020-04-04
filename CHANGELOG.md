@@ -440,3 +440,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.0.114] - 2020-04-03
 ### Changed
 - Decreased margin-left from **ul** inside another ul.
+
+## [1.0.116] - 2020-04-03
+### Changed
+- Collapse component fill all the spaces.
