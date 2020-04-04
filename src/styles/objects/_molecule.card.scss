@@ -8,11 +8,11 @@
   box-shadow: $elevation-1;
 
   @include mq($until: tablet) {
-    padding: $space-2 $space-4;
+    padding: $space-1 $space-2;
   }
 
   @include mq($until: mobile) {
-    padding: $space-1 $space-3;
+    padding: $space-0 $space-1;
   }
 
   &--small {

@@ -5,7 +5,11 @@ const _contentStyle = {
   background: '#8dcaff'
 };
 
-const Content = ({ children }) => <div style={_contentStyle}>{children}</div>;
+const Content = ({ children, ...otherProps }) => (
+  <div style={_contentStyle} {...otherProps}>
+    {children}
+  </div>
+);
 
 Content.propTypes = {
   children: PropTypes.oneOfType([

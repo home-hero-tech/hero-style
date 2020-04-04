@@ -4,14 +4,10 @@
 .c-card-item {
   display: flex;
   align-items: center;
-  margin-right: $space-5;
-
-  @include mq($until: tablet) {
-    margin-right: $space-3;
-  }
+  margin-right: $space-2;
 
   @include mq($until: mobile) {
-    margin-right: $space-2;
+    margin-right: $space-1;
   }
 
   svg {
@@ -32,10 +28,10 @@
 
   &--default {
     span {
-
       &:nth-child(1) {
         line-height: 17px;
       }
+
       &:nth-child(2) {
         line-height: 20px;
       }
@@ -123,6 +119,7 @@
       &:nth-child(1) {
         line-height: 15px;
       }
+
       &:nth-child(2) {
         line-height: 17px;
       }

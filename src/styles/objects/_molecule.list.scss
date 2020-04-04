@@ -1,5 +1,6 @@
 @import "../settings/spaces";
 @import "../settings/colors";
+@import "../tools/mq";
 
 .c-list {
   list-style: none;
@@ -41,6 +42,14 @@
   &--5 {
     > li + li {
       margin-top: $space-5;
+    }
+  }
+
+  ul {
+    margin-left: $space-8 + 2px;
+
+    @include mq($until: tablet) {
+      margin-left: $space-6 + 2px;
     }
   }
 }

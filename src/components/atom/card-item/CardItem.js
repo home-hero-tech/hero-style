@@ -1,48 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import moment from 'moment';
-import classNames from 'classnames';
-
-import { Col } from 'react-flexbox-grid';
 
 import css from './CardItem.module.scss';
 
-const CardItem = ({
-  ellipsis,
-  format,
-  gray,
-  label,
-  lbGray,
-  lbPrimary,
-  leftIcon,
-  primary,
-  small,
-  svgPrimary,
-  valPrimary,
-  value,
-  white,
-  lbWhite,
-  valWhite,
-  svgWhite,
-  ...otherProps
-}) => {
-  const classes = classNames({
-    [css['c-card-item']]: true,
-    [css['c-card-item--default']]: true,
-    [css['c-card-item--ellipsis']]: ellipsis,
-    [css['c-card-item--small']]: small,
+import EmptyCardItem from '../empty-card-item/EmptyCardItem';
 
-    [css['c-card-item--lb-gray']]: gray || lbGray,
-
-    [css['c-card-item--lb-primary']]: primary || lbPrimary,
-    [css['c-card-item--val-primary']]: primary || valPrimary,
-    [css['c-card-item--svg-primary']]: primary || svgPrimary,
-
-    [css['c-card-item--lb-white']]: white || lbWhite,
-    [css['c-card-item--val-white']]: white || valWhite,
-    [css['c-card-item--svg-white']]: white || svgWhite
-  });
-
+const CardItem = ({ format, label, leftIcon, value, ...otherProps }) => {
   const renderContent = (_label, _value, _leftIcon) => (
     <>
       {_leftIcon || null}
@@ -56,9 +20,9 @@ const CardItem = ({
   );
 
   return (
-    <Col className={classes} {...otherProps}>
+    <EmptyCardItem {...otherProps}>
       {renderContent(label, value, leftIcon)}
-    </Col>
+    </EmptyCardItem>
   );
 };
 

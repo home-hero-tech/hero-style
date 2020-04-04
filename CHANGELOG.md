@@ -423,3 +423,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.0.111] - 2020-04-03
 ### Add
 - Publishing Collapse Component.
+
+## [1.0.112] - 2020-04-03
+### Add
+- EmptyCardItem component and its test.
+- Improvements on List component.
+
+### Removed
+- ListItemContent component and its tests.
+- ListItemCWrapper component and its tests.
