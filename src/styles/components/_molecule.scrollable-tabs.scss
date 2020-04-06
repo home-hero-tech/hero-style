@@ -57,6 +57,12 @@
       }
     }
   }
+
+  .rc-tabs-tabpane-active::-webkit-scrollbar {
+    display: none;
+    -ms-overflow-style: none;
+    overflow: -moz-scrollbars-none;
+  }
 }
 
 .c-scroll-tabs {

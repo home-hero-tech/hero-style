@@ -464,3 +464,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.0.121] - 2020-04-04
 ### Added
 - Some media queries in List and CardItem components.
+
+## [1.0.124] - 2020-04-06
+### Removed
+- Scrollbar won't to display scrollbar in the ScrollablePanel from Scrollable Tabs.
