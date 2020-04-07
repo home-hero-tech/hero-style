@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid, Col } from 'react-flexbox-grid';
+import { Grid } from 'react-flexbox-grid';
 
 import Wrapper from '../../helpers/wrapper/Wrapper';
 import Form from '../../components/organism/form/Form';
