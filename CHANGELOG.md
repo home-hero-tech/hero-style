@@ -468,3 +468,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.0.124] - 2020-04-06
 ### Removed
 - Scrollbar won't to display scrollbar in the ScrollablePanel from Scrollable Tabs.
+
+## [1.0.126] - 2020-04-07
+### Changed
+- Some improvements in Grid component.
