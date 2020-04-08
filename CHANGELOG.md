@@ -472,3 +472,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.0.126] - 2020-04-07
 ### Changed
 - Some improvements in Grid component.
+
+## [1.0.127] - 2020-04-08
+### Removed
+- Padding from next and prev Icon from Scrollable Tabs.
