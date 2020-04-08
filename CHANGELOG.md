@@ -480,3 +480,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.0.128] - 2020-04-08
 ### Changed
 - Increased the SVG size from CardItem.
+
+## [1.0.129] - 2020-04-08
+### Added
+- Added !import in paddings of next and Prev icons from Scrollable tabs.
