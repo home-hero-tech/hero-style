@@ -3,7 +3,7 @@
 
 :global {
   .rc-tabs-top .rc-tabs-bar, .rc-tabs-bar, .rc-tabs-top {
-    border-bottom: none;
+    border-bottom: none !important;
   }
 
   .rc-tabs-top .rc-tabs-nav-container-scrolling {

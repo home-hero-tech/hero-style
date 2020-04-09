@@ -44,6 +44,26 @@ export const emptyModal = () => {
   );
 };
 
+export const noPadding = () => {
+  const [open, toggleOpen] = useState(true);
+  return (
+    <Wrapper style={style}>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime!
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime!
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime!
+      <button onClick={() => toggleOpen(true)}>Open</button>
+      <Modal
+        open={open}
+        contentLabel="With Actions EmptyModal"
+        onRequestClose={() => toggleOpen(false)}
+        hasPadding={false}
+      >
+        Test
+      </Modal>
+    </Wrapper>
+  );
+};
+
 export const Width1Default = () => {
   const [open, toggleOpen] = useState(true);
   return (

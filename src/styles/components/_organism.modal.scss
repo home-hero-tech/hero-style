@@ -26,8 +26,11 @@
 .c-modal {
   background-color: $color-structural-white;
   z-index: 9030;
-  padding: $space-5 $space-4;
   transition: all .3s ease-in-out;
+
+  &--has-padding {
+    padding: $space-5 $space-4;
+  }
 
   &--width-1 {
     width: 530px;
