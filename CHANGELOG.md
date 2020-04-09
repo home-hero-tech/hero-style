@@ -488,3 +488,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.0.130] - 2020-04-08
 ### Removed
 - Padding from prev and next Icon from Scrollable Tabs.
+
+## [1.0.131] - 2020-04-09
+### Added
+- Gray Light color in Shape Action component.
+- Props 'small' in default input and Checkbox.
+
+### Changed
+- Font-size from CardItem for default and small props.

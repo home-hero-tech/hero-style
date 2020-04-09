@@ -16,10 +16,26 @@
 
   svg {
     font-size: 20px;
+
+    @include mq($until: desktop) {
+      font-size: $font-size-lg;
+    }
+
+    @include mq($until: tablet) {
+      font-size: $font-size-md;
+    }
+
+    @include mq($until: mobile) {
+      font-size: $font-size-sm;
+    }
   }
 
   svg + div {
     margin-left: $space-2;
+
+    @include mq($from: wide) {
+      margin-left: $space-3;
+    }
 
     @include mq($until: tablet) {
       margin-left: $space-1;
@@ -30,18 +46,15 @@
     }
   }
 
-  span {
-    font-weight: 300;
-  }
-
   &--default {
     span {
       &:nth-child(1) {
-        line-height: 17px;
+        margin-bottom: $space-1;
+        font-size: $font-size-sm;
       }
 
       &:nth-child(2) {
-        line-height: 20px;
+        font-size: $font-size-md;
       }
     }
   }
@@ -49,12 +62,17 @@
   &--small {
     span {
       &:nth-child(1) {
-        line-height: 15px;
+        margin-bottom: $space-0;
+        font-size: $font-size-xs;
       }
 
       &:nth-child(2) {
-        line-height: 17px;
+        font-size: $font-size-sm;
       }
+    }
+
+    svg {
+      font-size: $font-size-lg;
     }
   }
 
@@ -70,7 +88,6 @@
 
     span {
       &:nth-child(1) {
-        font-size: $font-size-sm;
         color: $color-brand-gray-300;
       }
     }

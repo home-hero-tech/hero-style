@@ -28,7 +28,20 @@ export const Default = () => (
 export const small = () => (
   <Wrapper>
     <Card>
-      <CardItem value="small" label="small" small />
+      <CardItem value="Small" label="Small" small />
+    </Card>
+  </Wrapper>
+);
+
+export const smallSvg = () => (
+  <Wrapper>
+    <Card>
+      <CardItem
+        value="Small"
+        label="Small"
+        small
+        leftIcon={<FontAwesomeIcon icon={faLayerGroup} />}
+      />
     </Card>
   </Wrapper>
 );

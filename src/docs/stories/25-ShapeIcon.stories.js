@@ -16,6 +16,9 @@ export const Types = () => (
     <ShapeAction>
       <FontAwesomeIcon icon={faLayerGroup} />
     </ShapeAction>
+    <ShapeAction type="gray-light">
+      <FontAwesomeIcon icon={faLayerGroup} />
+    </ShapeAction>
     <ShapeAction type="primary">
       <FontAwesomeIcon icon={faLayerGroup} />
     </ShapeAction>
@@ -55,6 +58,9 @@ export const isButton = () => (
 
 export const Fill = () => (
   <Wrapper>
+    <ShapeAction type="primary" isButton fill="gray-light">
+      <FontAwesomeIcon icon={faLayerGroup} />
+    </ShapeAction>
     <ShapeAction type="primary" isButton fill="primary">
       <FontAwesomeIcon icon={faLayerGroup} />
     </ShapeAction>
@@ -75,13 +81,13 @@ export const renderAction = () => (
     <ShapeAction isButton fill="success" shape="rounded">
       <FontAwesomeIcon icon={faLayerGroup} />
     </ShapeAction>
-    <ShapeAction type="primary" isButton fill="danger">
-      <FontAwesomeIcon icon={faLayerGroup} />
-    </ShapeAction>
-    <ShapeAction isButton fill="primary" shape="rounded" size={3} isLink>
+    <ShapeAction fill="gray-light" shape="rounded" isLink>
       <a href="www.google.com">
         <FontAwesomeIcon icon={faLayerGroup} />
       </a>
+    </ShapeAction>
+    <ShapeAction type="primary" isButton fill="danger">
+      <FontAwesomeIcon icon={faLayerGroup} />
     </ShapeAction>
   </Wrapper>
 );

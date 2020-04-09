@@ -5,10 +5,17 @@
   height: $input-height;
   border: 1px solid $color-brand-gray-100;
   padding: 0 $space-2;
-  border-radius: $radius-2;
+  border-radius: $radius-1;
 
   &--disabled {
     background-color: $color-brand-gray-100;
+  }
+
+  &--small {
+    height: $input-height-small;
+    font-size: $font-size-sm;
+    padding: 0 $space-1;
+    border-radius: $radius-1;
   }
 
   &--dark {
@@ -44,10 +51,25 @@
     height: $space-3;
     -webkit-appearance: none;
     -moz-appearance: none;
-    border-radius: $space-0;
+    border-radius: $radius-1;
     border: 1px solid $color-brand-primary-300;
     padding: 0;
     position: relative;
+
+    &--small {
+      width: $space-2 + 3px !important;
+      height: $space-2 + 3px !important;
+
+      &:checked {
+        &:after {
+          width: $space-2 + 3px !important;
+          height: $space-2 + 3px !important;
+
+          padding: 2px !important;
+          font-size: $font-size-sm;
+        }
+      }
+    }
 
     &:focus {
       border: 1px solid $color-brand-primary-300 !important;
@@ -57,7 +79,7 @@
       &:after {
         width: $space-3;
         height: $space-3;
-        border-radius: $space-0;
+        border-radius: $radius-1;
         content: '\f00c';
         position: absolute;
         background-color: $color-brand-primary-300;
@@ -65,7 +87,9 @@
         font-family: 'Font Awesome 5 Pro';
         left: -1px;
         top: -1px;
-        padding: 5px 6px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
     }
 
@@ -107,6 +131,7 @@
         left: -1px;
         top: -1px;
       }
+
       &:after {
         content: '';
         width: 18px;
@@ -123,11 +148,13 @@
     &--disabled {
       border: 1px solid $color-brand-gray-200;
       background-color: $color-brand-gray-100;
+
       &:checked {
         &:before {
           border: 1px solid $color-brand-gray-300;
           background-color: $color-brand-gray-100;
         }
+
         &:after {
           background-color: $color-brand-gray-300;
         }

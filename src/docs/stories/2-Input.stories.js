@@ -41,9 +41,28 @@ export const DefaultDisabled = () => (
   </div>
 );
 
+export const DefaultSmall = () => (
+  <div style={_style}>
+    <Input placeholder="Placeholder" id="ipt" name="ipt" value="" small />
+  </div>
+);
+
 export const Dark = () => (
   <div style={_style}>
     <Input placeholder="placeholder text" id="ipt" name="ipt" value="" dark />
+  </div>
+);
+
+export const DarkSmall = () => (
+  <div style={_style}>
+    <Input
+      placeholder="Dark Placeholder"
+      id="ipt"
+      name="ipt"
+      value=""
+      dark
+      small
+    />
   </div>
 );
 
@@ -55,6 +74,18 @@ export const Checkbox = () => (
     defaultChecked
     value="1"
     onChange={action('toggleCheck')}
+  />
+);
+
+export const CheckboxSmall = () => (
+  <Input
+    id="ipt"
+    name="ipt"
+    type="checkbox"
+    defaultChecked
+    value="1"
+    onChange={action('toggleCheck')}
+    small
   />
 );
 

@@ -14,6 +14,7 @@ const Input = ({
   disabled,
   dark,
   parentRef,
+  small,
   ...otherProps
 }) => {
   const isCheckOrRadio = type === 'checkbox' || type === 'radio';
@@ -22,9 +23,13 @@ const Input = ({
     [css['c-input']]: true,
     [css['c-input--disabled']]: disabled,
     [css[`c-input__${type}`]]: isCheckOrRadio,
+    [css[`c-input__${type}--small`]]: !!isCheckOrRadio && small,
     [css[`c-input__${type}--disabled`]]: disabled && isCheckOrRadio,
-    [css['c-input--dark']]: dark
+    [css['c-input--dark']]: dark,
+    [css['c-input--small']]: small && !isCheckOrRadio
   });
+
+  console.log('classes==>', classes);
 
   return defaultValue ? (
     <input

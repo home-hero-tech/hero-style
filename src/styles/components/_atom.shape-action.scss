@@ -17,8 +17,14 @@
 
   &--is-link {
     a:link {
-      color: $color-white
+      color: $color-white;
+      display: flex;
     };
+  }
+
+  &--gray-light {
+    color: $color-brand-gray-200;
+    border: solid 1px $color-brand-gray-200;
   }
 
   &--primary {
@@ -44,11 +50,17 @@
     border-radius: $radius-2;
   }
 
+  &--fill-gray-light,
   &--fill-primary,
   &--fill-success,
   &--fill-danger,
   &:link {
     color: $color-white;
+  }
+
+  &--fill-gray-light {
+    background-color: $color-brand-gray-200;
+    border: solid 1px $color-brand-gray-200;
   }
 
   &--fill-primary {
