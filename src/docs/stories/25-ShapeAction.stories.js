@@ -1,6 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLayerGroup } from '@fortawesome/pro-light-svg-icons';
+import { faLayerGroup, faEllipsisV} from '@fortawesome/pro-light-svg-icons';
 import ShapeAction from '../../components/atom/shape-action/ShapeAction';
 import Spacer from '../../components/molecule/spacer/Spacer';
 
@@ -47,11 +47,11 @@ export const Shapes = () => (
 export const isButton = () => (
   <Wrapper>
     <ShapeAction type="primary" isButton>
-      <FontAwesomeIcon icon={faLayerGroup} />
+      <FontAwesomeIcon icon={faEllipsisV} />
     </ShapeAction>
 
     <ShapeAction type="danger" shape="rounded" isButton>
-      <FontAwesomeIcon icon={faLayerGroup} />
+      <FontAwesomeIcon icon={faEllipsisV} />
     </ShapeAction>
   </Wrapper>
 );
