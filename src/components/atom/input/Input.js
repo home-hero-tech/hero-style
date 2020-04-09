@@ -29,8 +29,6 @@ const Input = ({
     [css['c-input--small']]: small && !isCheckOrRadio
   });
 
-  console.log('classes==>', classes);
-
   return defaultValue ? (
     <input
       className={classes}
@@ -73,6 +71,7 @@ Input.propTypes = {
   ]),
   defaultValue: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   disabled: PropTypes.bool,
+  small: PropTypes.bool,
   dark: PropTypes.bool,
   parentRef: PropTypes.func
 };
@@ -86,6 +85,7 @@ Input.defaultProps = {
   value: null,
   defaultValue: null,
   disabled: null,
+  small: null,
   dark: null,
   parentRef: null
 };
