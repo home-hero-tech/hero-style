@@ -23,6 +23,11 @@
     };
   }
 
+  &--white {
+    color: $color-white;
+    border: solid 1px $color-white;
+  }
+
   &--gray-light {
     color: $color-brand-gray-200;
     border: solid 1px $color-brand-gray-200;

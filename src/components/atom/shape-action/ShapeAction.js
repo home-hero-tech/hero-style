@@ -40,7 +40,13 @@ const ShapeAction = ({
 ShapeAction.propTypes = {
   children: PropTypes.instanceOf(Object),
   isButton: PropTypes.bool,
-  type: PropTypes.oneOf(['primary', 'success', 'danger', 'gray-light']),
+  type: PropTypes.oneOf([
+    'primary',
+    'success',
+    'danger',
+    'gray-light',
+    'white'
+  ]),
   fill: PropTypes.oneOf(['primary', 'success', 'danger', 'gray-light']),
   shape: PropTypes.oneOf(['squared', 'rounded']),
   size: PropTypes.oneOf([1, 2, 3, 4]),
