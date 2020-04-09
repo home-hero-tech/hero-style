@@ -15,11 +15,7 @@
   }
 
   svg {
-    font-size: 20px;
-
-    @include mq($until: desktop) {
-      font-size: $font-size-lg;
-    }
+    font-size: $font-size-lg;
 
     @include mq($until: tablet) {
       font-size: $font-size-md;
@@ -33,16 +29,8 @@
   svg + div {
     margin-left: $space-2;
 
-    @include mq($from: wide) {
-      margin-left: $space-3;
-    }
-
-    @include mq($until: tablet) {
-      margin-left: $space-1;
-    }
-
     @include mq($until: mobile) {
-      margin-left: $space-0;
+      margin-left: $space-1;
     }
   }
 
@@ -75,10 +63,6 @@
       &:nth-child(1) + &:nth-child(2) {
         margin-bottom: $space-0;
       }
-    }
-
-    svg {
-      font-size: $font-size-lg;
     }
   }
 
