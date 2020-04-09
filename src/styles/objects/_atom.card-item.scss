@@ -49,12 +49,15 @@
   &--default {
     span {
       &:nth-child(1) {
-        margin-bottom: $space-1;
         font-size: $font-size-sm;
       }
 
       &:nth-child(2) {
         font-size: $font-size-md;
+      }
+
+      &:nth-child(1) + &:nth-child(2) {
+        margin-bottom: $space-1;
       }
     }
   }
@@ -62,12 +65,15 @@
   &--small {
     span {
       &:nth-child(1) {
-        margin-bottom: $space-0;
         font-size: $font-size-xs;
       }
 
       &:nth-child(2) {
         font-size: $font-size-sm;
+      }
+
+      &:nth-child(1) + &:nth-child(2) {
+        margin-bottom: $space-0;
       }
     }
 

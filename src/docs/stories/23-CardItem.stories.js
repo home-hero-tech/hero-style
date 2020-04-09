@@ -25,11 +25,59 @@ export const Default = () => (
   </Wrapper>
 );
 
+export const Label = () => (
+  <Wrapper>
+    <List>
+      <ListItem>
+        <Card>
+          <CardItem label="Default" />
+        </Card>
+      </ListItem>
+    </List>
+  </Wrapper>
+);
+
+export const Value = () => (
+  <Wrapper>
+    <List>
+      <ListItem>
+        <Card>
+          <CardItem value="Default" />
+        </Card>
+      </ListItem>
+    </List>
+  </Wrapper>
+);
+
 export const small = () => (
   <Wrapper>
     <Card>
       <CardItem value="Small" label="Small" small />
     </Card>
+  </Wrapper>
+);
+
+export const LabelSmall = () => (
+  <Wrapper>
+    <List>
+      <ListItem>
+        <Card>
+          <CardItem label="Default" small />
+        </Card>
+      </ListItem>
+    </List>
+  </Wrapper>
+);
+
+export const ValueSmall = () => (
+  <Wrapper>
+    <List>
+      <ListItem>
+        <Card>
+          <CardItem value="Default" small />
+        </Card>
+      </ListItem>
+    </List>
   </Wrapper>
 );
 

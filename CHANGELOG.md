@@ -496,3 +496,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 - Font-size from CardItem for default and small props.
+
+## [1.0.131] - 2020-04-09
+### Changed
+- In the CardItem is going to apply margin top only if there're two spans.
