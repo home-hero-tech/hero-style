@@ -43,10 +43,10 @@
       &:nth-child(2) {
         font-size: $font-size-md;
       }
+    }
 
-      &:nth-child(1) + &:nth-child(2) {
-        margin-bottom: $space-1;
-      }
+    span + span {
+      margin-top: $space-1;
     }
   }
 
@@ -59,10 +59,10 @@
       &:nth-child(2) {
         font-size: $font-size-sm;
       }
+    }
 
-      &:nth-child(1) + &:nth-child(2) {
-        margin-bottom: $space-0;
-      }
+    span + span {
+      margin-top: $space-0;
     }
   }
 
