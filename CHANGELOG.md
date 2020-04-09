@@ -507,3 +507,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Removed
 - Value it's not required in CardItem.
+
+## [1.0.134] ~ [1.0.135] - 2020-04-09
+### Added
+- Improvements on CardItem component.

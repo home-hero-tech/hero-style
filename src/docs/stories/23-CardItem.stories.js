@@ -25,6 +25,19 @@ export const Default = () => (
   </Wrapper>
 );
 
+export const LeftIcon = () => (
+  <Wrapper>
+    <Card>
+      <CardItem
+        value="valGray"
+        label="valGray"
+        gray
+        leftIcon={<FontAwesomeIcon icon={faLayerGroup} />}
+      />
+    </Card>
+  </Wrapper>
+);
+
 export const Label = () => (
   <Wrapper>
     <List>
@@ -153,19 +166,6 @@ export const lbGray = () => (
   <Wrapper>
     <Card>
       <CardItem value="lbGray" label="lbGray" lbGray />
-    </Card>
-  </Wrapper>
-);
-
-export const LeftIcon = () => (
-  <Wrapper>
-    <Card>
-      <CardItem
-        value="valGray"
-        label="valGray"
-        gray
-        leftIcon={<FontAwesomeIcon icon={faLayerGroup} />}
-      />
     </Card>
   </Wrapper>
 );
