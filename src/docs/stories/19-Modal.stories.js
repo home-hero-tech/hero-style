@@ -143,6 +143,25 @@ export const Width4 = () => {
     </Wrapper>
   );
 };
+export const Width5 = () => {
+  const [open, toggleOpen] = useState(true);
+  return (
+    <Wrapper style={style}>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime!
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime!
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime!
+      <button onClick={() => toggleOpen(true)}>Open</button>
+      <Modal
+        open={open}
+        contentLabel="With Actions EmptyModal"
+        onRequestClose={() => toggleOpen(false)}
+        widthLevel={5}
+      >
+        Test
+      </Modal>
+    </Wrapper>
+  );
+};
 
 export const left = () => {
   const [open, toggleOpen] = useState(true);
@@ -240,7 +259,7 @@ export const _ModalForm = () => {
       >
         <ModalHeader title="Title" description="Description" />
         <ModalContent>
-          <FormRow>
+          <FormRow style={{ marginRight: 0 }}>
             <FormGroup md>
               <Label name="name">Nome</Label>
               <Input
@@ -253,7 +272,72 @@ export const _ModalForm = () => {
               />
             </FormGroup>
           </FormRow>
-          <FormRow>
+          <FormRow style={{ marginRight: 0 }}>
+            <FormGroup md>
+              <Label name="name">Nome</Label>
+              <Input
+                id="name"
+                name="name"
+                type="text"
+                placeholder="Ex: Banheiro"
+                onChange={action('onChange')}
+                value=""
+              />
+            </FormGroup>
+          </FormRow>
+          <FormRow style={{ marginRight: 0 }}>
+            <FormGroup md>
+              <Label name="name">Nome</Label>
+              <Input
+                id="name"
+                name="name"
+                type="text"
+                placeholder="Ex: Banheiro"
+                onChange={action('onChange')}
+                value=""
+              />
+            </FormGroup>
+          </FormRow>
+          <FormRow style={{ marginRight: 0 }}>
+            <FormGroup md>
+              <Label name="name">Nome</Label>
+              <Input
+                id="name"
+                name="name"
+                type="text"
+                placeholder="Ex: Banheiro"
+                onChange={action('onChange')}
+                value=""
+              />
+            </FormGroup>
+          </FormRow>
+          <FormRow style={{ marginRight: 0 }}>
+            <FormGroup md>
+              <Label name="name">Nome</Label>
+              <Input
+                id="name"
+                name="name"
+                type="text"
+                placeholder="Ex: Banheiro"
+                onChange={action('onChange')}
+                value=""
+              />
+            </FormGroup>
+          </FormRow>
+          <FormRow style={{ marginRight: 0 }}>
+            <FormGroup md>
+              <Label name="name">Nome</Label>
+              <Input
+                id="name"
+                name="name"
+                type="text"
+                placeholder="Ex: Banheiro"
+                onChange={action('onChange')}
+                value=""
+              />
+            </FormGroup>
+          </FormRow>
+          <FormRow style={{ marginRight: 0 }}>
             <FormGroup md>
               <Label name="idRefurbish">Nome</Label>
               <Input
@@ -267,7 +351,7 @@ export const _ModalForm = () => {
             </FormGroup>
           </FormRow>
 
-          <FormRow>
+          <FormRow style={{ marginRight: 0 }}>
             <FormGroup md>
               <Label name="observation">Observações</Label>
               <Input

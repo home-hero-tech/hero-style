@@ -511,3 +511,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.0.134] ~ [1.0.135] - 2020-04-09
 ### Added
 - Improvements on CardItem component.
+
+## [1.0.141] - 2020-04-13
+### Added
+- Improvements on Modal components.

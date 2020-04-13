@@ -37,20 +37,25 @@
   }
 
   &--width-2 {
-    width: 740px;
+    width: #{map-get($mq-breakpoints, tablet)};
   }
 
   &--width-3 {
-    width: 980px;
+    width: #{map-get($mq-breakpoints, desktop)};
   }
 
   &--width-4 {
+    width: #{map-get($mq-breakpoints, wide)};
+  }
+
+  &--width-5 {
     width: 100%;
   }
 
   &--width-1,
   &--width-2,
-  &--width-3 {
+  &--width-3,
+  &--width-4 {
     @include mq($until: tablet) {
       width: 100%;
     }
@@ -103,13 +108,12 @@
   }
 
   &__heading ~ &__content {
-    margin: $space-2 0;
+    margin: $space-3 0;
   }
 
   &__content {
     overflow: auto;
-    height: calc(100% - 120px);
-    padding-right: $space-1;
+    height: calc(100% - #{$modal-footer-height * 2});
   }
 
   &__actions {
@@ -118,7 +122,8 @@
     bottom: 0;
     left: 0;
     right: 0;
-    padding: $space-2 $space-4 $space-2 $space-4;
+    height: $modal-footer-height;
+    padding: 0 $space-3;
 
     background-color: $color-brand-gray-050;
 
