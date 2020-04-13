@@ -27,7 +27,7 @@ const ShapeAction = ({
     return (
       <button
         className={classes}
-        type={submit ? 'submit' : 'text'}
+        type={submit ? 'submit' : 'button'}
         {...otherProps}
       >
         {children}
