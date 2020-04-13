@@ -11,6 +11,7 @@ const ShapeAction = ({
   isButton,
   isLink,
   children,
+  submit,
   ...otherProps
 }) => {
   const classes = classNames({
@@ -24,7 +25,11 @@ const ShapeAction = ({
 
   if (isButton && !isLink) {
     return (
-      <button className={classes} {...otherProps}>
+      <button
+        className={classes}
+        type={submit ? 'submit' : 'text'}
+        {...otherProps}
+      >
         {children}
       </button>
     );
@@ -39,27 +44,23 @@ const ShapeAction = ({
 
 ShapeAction.propTypes = {
   children: PropTypes.instanceOf(Object),
-  isButton: PropTypes.bool,
-  type: PropTypes.oneOf([
-    'primary',
-    'success',
-    'danger',
-    'gray-light',
-    'white'
-  ]),
   fill: PropTypes.oneOf(['primary', 'success', 'danger', 'gray-light']),
+  isButton: PropTypes.bool,
+  isLink: PropTypes.bool,
   shape: PropTypes.oneOf(['squared', 'rounded']),
   size: PropTypes.oneOf([1, 2, 3, 4]),
-  isLink: PropTypes.bool
+  submit: PropTypes.bool,
+  type: PropTypes.oneOf(['primary', 'success', 'danger', 'gray-light', 'white'])
 };
 ShapeAction.defaultProps = {
+  submit: false,
   children: null,
-  isButton: false,
   fill: null,
-  type: null,
+  isButton: false,
+  isLink: false,
   shape: 'squared',
   size: 1,
-  isLink: false
+  type: null
 };
 ShapeAction.displayName = 'ShapeAction';
 
