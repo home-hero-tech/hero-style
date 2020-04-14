@@ -30,6 +30,14 @@
 
   &--has-padding {
     padding: $space-5 $space-4;
+
+    @include mq($until: tablet) {
+      padding: $space-3 $space-2;
+    }
+
+    @include mq($until: mobile) {
+      padding: $space-2 $space-1;
+    }
   }
 
   &--width-1 {
@@ -46,6 +54,10 @@
 
   &--width-4 {
     width: #{map-get($mq-breakpoints, wide)};
+
+    @include mq($until: desktop) {
+      width: 100%;
+    }
   }
 
   &--width-5 {
@@ -54,8 +66,7 @@
 
   &--width-1,
   &--width-2,
-  &--width-3,
-  &--width-4 {
+  &--width-3 {
     @include mq($until: tablet) {
       width: 100%;
     }
@@ -63,14 +74,6 @@
 
   form {
     height: 100%;
-  }
-
-  @include mq($until: tablet) {
-    padding: $space-3 $space-2;
-  }
-
-  @include mq($until: mobile) {
-    padding: $space-2 $space-1;
   }
 
   &--pre-left {
@@ -113,7 +116,7 @@
 
   &__content {
     overflow: auto;
-    height: calc(100% - #{$modal-footer-height * 2});
+    height: calc(100% - #{$modal-footer-height});
   }
 
   &__actions {
