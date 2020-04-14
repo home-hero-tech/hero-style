@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLayerGroup } from '@fortawesome/pro-light-svg-icons';
 import ListItem from '../../components/atom/list-item/ListItem';
 import List from '../../components/molecule/list/List';
-import Card from '../../components/molecule/card/Card';
+import Card from '../../components/molecule/old_card/Card';
 import CardItem from '../../components/atom/card-item/CardItem';
 
 import Wrapper from '../../helpers/wrapper/Wrapper';

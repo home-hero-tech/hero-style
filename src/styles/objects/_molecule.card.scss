@@ -2,21 +2,33 @@
 @import "../tools/tools";
 
 .c-card {
-  padding: $space-2 $space-3;
   background-color: $color-white;
   border-radius: $radius-3;
   box-shadow: $elevation-1;
 
-  @include mq($until: tablet) {
-    padding: $space-1 $space-2;
+  &--borderless {
+    box-shadow: none;
+    border: none;
   }
 
-  @include mq($until: mobile) {
-    padding: $space-0 $space-1;
+  &__header {
+    font-weight: bold;
+    padding: $space-2 $space-2;
+    background-color: $color-brand-gray-050;
+    border-bottom: 1px solid $color-brand-gray-050;
+    border-top-left-radius: $radius-3;
+    border-top-right-radius: $radius-3;
   }
 
-  &--small {
-    padding: $space-1 $space-2;
-    border-radius: $radius-2;
+  &__body {
+    padding: $space-2 $space-2;
+  }
+
+  &__footer {
+    padding: $space-0 $space-2;
+    background-color: $color-brand-gray-050;
+    border-top: 1px solid $color-brand-gray-050;
+    border-bottom-left-radius: $radius-3;
+    border-bottom-right-radius: $radius-3;
   }
 }

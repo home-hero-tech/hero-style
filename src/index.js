@@ -11,6 +11,9 @@ import { TabPane as ScrollablePanel } from 'rc-tabs';
 // atoms
 import BoxShadow from './components/atom/box-shadow/BoxShadow';
 import Button from './components/atom/button/Button';
+import CardHeader from './components/atom/card-header/CardHeader';
+import CardBody from './components/atom/card-body/CardBody';
+import CardFooter from './components/atom/card-footer/CardFooter';
 import CardItem from './components/atom/card-item/CardItem';
 import DatePicker from './components/atom/datepicker/DatePicker';
 import EmptyCardItem from './components/atom/empty-card-item/EmptyCardItem';
@@ -56,6 +59,9 @@ export {
   BoxShadow,
   Button,
   Card,
+  CardHeader,
+  CardBody,
+  CardFooter,
   CardItem,
   CardLine,
   Col,
