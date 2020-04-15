@@ -219,3 +219,16 @@ export const svgWhite = () => (
     </Card>
   </Wrapper>
 );
+
+export const svgDefaultSizeFALSE = () => (
+  <Wrapper>
+    <Card>
+      <CardItem
+        value="Default"
+        label="Default"
+        svgDefaultSize={false}
+        leftIcon={<FontAwesomeIcon icon={faLayerGroup} />}
+      />
+    </Card>
+  </Wrapper>
+);
