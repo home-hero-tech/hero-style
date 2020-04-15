@@ -1,7 +1,13 @@
 @import "../settings/spaces";
+@import "../settings/colors";
+@import "../tools/mq";
 
 .c-list {
   list-style: none;
+
+  a, a:hover, a:focus, a:visited, a:link {
+    color: $color-brand-gray-500;
+  }
 
   &--0 {
     > li + li {
@@ -36,6 +42,18 @@
   &--5 {
     > li + li {
       margin-top: $space-5;
+    }
+  }
+
+  ul {
+    margin-left: $space-5 + 2;
+
+    @include mq($until: tablet) {
+      margin-left: $space-4;
+    }
+
+    @include mq($until: mobile) {
+      margin-left: $space-2;
     }
   }
 }

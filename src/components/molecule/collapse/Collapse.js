@@ -1,11 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 
 import css from './Collapse.module.scss';
 
 const Collapse = ({ isOpen, children }) => {
+  const classes = classNames({
+    [css['c-collapse']]: true,
+    [css['c-collapse--open']]: isOpen
+  });
+
   return (
-    <div className={css[`c-collapse${isOpen ? '--open' : ''}`]}>
+    <div className={classes}>
       <div className={css[`c-collapse__content`]}>{children}</div>
     </div>
   );
@@ -13,7 +19,7 @@ const Collapse = ({ isOpen, children }) => {
 
 Collapse.propTypes = {
   isOpen: PropTypes.bool,
-  children: PropTypes.instanceOf(PropTypes.object).isRequired
+  children: PropTypes.instanceOf(Object).isRequired
 };
 
 Collapse.defaultProps = {

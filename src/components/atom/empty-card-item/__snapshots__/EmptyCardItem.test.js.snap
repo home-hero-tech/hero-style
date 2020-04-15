@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EmptyCardItem should match with the snapshot 1`] = `
+<Col
+  className="c-card-item c-card-item--default"
+  label="Label"
+  value="Value"
+/>
+`;

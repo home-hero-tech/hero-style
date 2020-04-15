@@ -379,3 +379,139 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.0.98] - 2020-04-01
 ### Added
 - New props for Text component.
+
+## [1.0.99] - 2020-04-02
+### Added
+- New props for Scrollable Tabs component.
+
+## [1.0.100] - 2020-04-02
+### Added
+- Several improvements in Card Item.
+
+## [1.0.101] - 2020-04-02
+### Changed
+- Anchor has text color in List component by default.
+
+## [1.0.102] - 2020-04-02
+### Changed
+- Adjusted **focus**, **hover**, **visited** from anchor.
+
+## [1.0.104] - 2020-04-03
+### Added
+- Shape Action component and its tests.
+
+## [1.0.105] - 2020-04-03
+### Added
+- Props for white color in CardItem.
+
+## [1.0.106] - 2020-04-03
+### Added
+- DropDown component.
+
+## [1.0.107] - 2020-04-03
+### Changed
+- Several improvements on Card and CardItem components.
+
+## [1.0.109] - 2020-04-03
+### Add
+- Publishing Shape Action component.
+
+## [1.0.110] - 2020-04-03
+### Add
+- Some props in ShapeAction.
+
+## [1.0.111] - 2020-04-03
+### Add
+- Publishing Collapse Component.
+
+## [1.0.112] - 2020-04-03
+### Add
+- Toastr component.
+
+## [1.0.113] - 2020-04-03
+### Add
+- EmptyCardItem component and its test.
+- Improvements on List component.
+
+### Removed
+- ListItemContent component and its tests.
+- ListItemCWrapper component and its tests.
+
+## [1.0.114] - 2020-04-03
+### Changed
+- Decreased margin-left from **ul** inside another ul.
+
+## [1.0.116] - 2020-04-03
+### Changed
+- Collapse component fill all the spaces.
+
+## [1.0.117] - 2020-04-04
+### Changed
+- Fixed wrong colors from Default and Scrollable Tabs components.
+
+## [1.0.118] - 2020-04-04
+### Added
+- Line component and its tests.
+
+## [1.0.119] - 2020-04-04
+### Added
+- Props in EmptyCardItem component.
+
+## [1.0.120] - 2020-04-04
+### Removed
+- Margin from Radio and Checkbox components.
+
+## [1.0.121] - 2020-04-04
+### Added
+- Some media queries in List and CardItem components.
+
+## [1.0.124] - 2020-04-06
+### Removed
+- Scrollbar won't to display scrollbar in the ScrollablePanel from Scrollable Tabs.
+
+## [1.0.126] - 2020-04-07
+### Changed
+- Some improvements in Grid component.
+
+## [1.0.127] - 2020-04-08
+### Removed
+- Padding from next and prev Icon from Scrollable Tabs.
+
+## [1.0.128] - 2020-04-08
+### Changed
+- Increased the SVG size from CardItem.
+
+## [1.0.129] - 2020-04-08
+### Added
+- Added !import in paddings of next and Prev icons from Scrollable tabs.
+
+## [1.0.130] - 2020-04-08
+### Removed
+- Padding from prev and next Icon from Scrollable Tabs.
+
+## [1.0.131] - 2020-04-09
+### Added
+- Gray Light color in Shape Action component.
+- Props 'small' in default input and Checkbox.
+
+### Changed
+- Font-size from CardItem for default and small props.
+
+## [1.0.132] - 2020-04-09
+### Changed
+- In the CardItem is going to apply margin top only if there're two spans.
+
+## [1.0.133] - 2020-04-09
+### Added
+- Card css improvements.
+
+### Removed
+- Value it's not required in CardItem.
+
+## [1.0.134] ~ [1.0.135] - 2020-04-09
+### Added
+- Improvements on CardItem component.
+
+## [1.0.141] ~ [1.0.141] - 2020-04-13
+### Added
+- Improvements on Modal components.

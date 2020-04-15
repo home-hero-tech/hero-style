@@ -75,3 +75,46 @@ export const Scrollable = () => {
     </Wrapper>
   );
 };
+
+export const ScrollableDark = () => {
+  const [activeKey, setActiveKey] = useState('1');
+
+  const onChange = currentKey => setActiveKey(currentKey);
+
+  const onTabClick = key => {
+    if (key !== activeKey) {
+      onChange('');
+    }
+  };
+
+  const numbers = {
+    1: 'First',
+    2: 'Second',
+    3: 'Third',
+    4: 'Fourth'
+  };
+
+  return (
+    <Wrapper style={style}>
+      <ScrollableTabs
+        onChange={onChange}
+        onTabClick={onTabClick}
+        activeKey={activeKey}
+        dark
+      >
+        {[1, 2, 3, 4].map((item, index) => (
+          <ScrollablePanel
+            tab={`${numbers[index + 1]} tab`}
+            key={`${index + 1}`}
+          >
+            {index + 1} - Lorem ipsum dolor sit amet, consectetur adipisicing
+            elit. Animi commodi cumque fuga repellendus voluptas. Delectus
+            distinctio doloribus error eveniet fugiat neque odit quas recusandae
+            totam? Deserunt distinctio est iste reiciendis.
+          </ScrollablePanel>
+        ))}
+        <ScrollablePanel tab="Disabed" key="5" disabled />
+      </ScrollableTabs>
+    </Wrapper>
+  );
+};

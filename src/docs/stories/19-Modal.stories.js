@@ -44,6 +44,26 @@ export const emptyModal = () => {
   );
 };
 
+export const noPadding = () => {
+  const [open, toggleOpen] = useState(true);
+  return (
+    <Wrapper style={style}>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime!
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime!
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime!
+      <button onClick={() => toggleOpen(true)}>Open</button>
+      <Modal
+        open={open}
+        contentLabel="With Actions EmptyModal"
+        onRequestClose={() => toggleOpen(false)}
+        hasPadding={false}
+      >
+        Test
+      </Modal>
+    </Wrapper>
+  );
+};
+
 export const Width1Default = () => {
   const [open, toggleOpen] = useState(true);
   return (
@@ -117,6 +137,25 @@ export const Width4 = () => {
         contentLabel="With Actions EmptyModal"
         onRequestClose={() => toggleOpen(false)}
         widthLevel={4}
+      >
+        Test
+      </Modal>
+    </Wrapper>
+  );
+};
+export const Width5 = () => {
+  const [open, toggleOpen] = useState(true);
+  return (
+    <Wrapper style={style}>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime!
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime!
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime!
+      <button onClick={() => toggleOpen(true)}>Open</button>
+      <Modal
+        open={open}
+        contentLabel="With Actions EmptyModal"
+        onRequestClose={() => toggleOpen(false)}
+        widthLevel={5}
       >
         Test
       </Modal>
@@ -220,7 +259,7 @@ export const _ModalForm = () => {
       >
         <ModalHeader title="Title" description="Description" />
         <ModalContent>
-          <FormRow>
+          <FormRow style={{ marginRight: 0 }}>
             <FormGroup md>
               <Label name="name">Nome</Label>
               <Input
@@ -233,7 +272,72 @@ export const _ModalForm = () => {
               />
             </FormGroup>
           </FormRow>
-          <FormRow>
+          <FormRow style={{ marginRight: 0 }}>
+            <FormGroup md>
+              <Label name="name">Nome</Label>
+              <Input
+                id="name"
+                name="name"
+                type="text"
+                placeholder="Ex: Banheiro"
+                onChange={action('onChange')}
+                value=""
+              />
+            </FormGroup>
+          </FormRow>
+          <FormRow style={{ marginRight: 0 }}>
+            <FormGroup md>
+              <Label name="name">Nome</Label>
+              <Input
+                id="name"
+                name="name"
+                type="text"
+                placeholder="Ex: Banheiro"
+                onChange={action('onChange')}
+                value=""
+              />
+            </FormGroup>
+          </FormRow>
+          <FormRow style={{ marginRight: 0 }}>
+            <FormGroup md>
+              <Label name="name">Nome</Label>
+              <Input
+                id="name"
+                name="name"
+                type="text"
+                placeholder="Ex: Banheiro"
+                onChange={action('onChange')}
+                value=""
+              />
+            </FormGroup>
+          </FormRow>
+          <FormRow style={{ marginRight: 0 }}>
+            <FormGroup md>
+              <Label name="name">Nome</Label>
+              <Input
+                id="name"
+                name="name"
+                type="text"
+                placeholder="Ex: Banheiro"
+                onChange={action('onChange')}
+                value=""
+              />
+            </FormGroup>
+          </FormRow>
+          <FormRow style={{ marginRight: 0 }}>
+            <FormGroup md>
+              <Label name="name">Nome</Label>
+              <Input
+                id="name"
+                name="name"
+                type="text"
+                placeholder="Ex: Banheiro"
+                onChange={action('onChange')}
+                value=""
+              />
+            </FormGroup>
+          </FormRow>
+          <FormRow style={{ marginRight: 0 }}>
             <FormGroup md>
               <Label name="idRefurbish">Nome</Label>
               <Input
@@ -247,7 +351,7 @@ export const _ModalForm = () => {
             </FormGroup>
           </FormRow>
 
-          <FormRow>
+          <FormRow style={{ marginRight: 0 }}>
             <FormGroup md>
               <Label name="observation">Observações</Label>
               <Input
@@ -270,6 +374,42 @@ export const _ModalForm = () => {
           </Button>
         </ModalFooter>
       </ModalForm>
+    </Wrapper>
+  );
+};
+
+export const boxModal = () => {
+  const [open, toggleOpen] = useState(true);
+  return (
+    <Wrapper style={style}>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime!
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime!
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime!
+      <button onClick={() => toggleOpen(true)}>Open</button>
+      <Modal
+        open={open}
+        contentLabel="With Actions EmptyModal"
+        center
+        onRequestClose={() => toggleOpen(false)}
+      >
+        <ModalHeader title="Title" description="Description" />
+        <ModalContent>
+          <div>
+            <p>teste</p>
+            <p>teste</p>
+            <p>teste</p>
+            <p>teste</p>
+          </div>
+        </ModalContent>
+        <ModalFooter>
+          <Button onClick={action('click')} container="outlined" type="primary">
+            Cancel
+          </Button>
+          <Button onClick={action('click')} type="primary" submit>
+            Confirm
+          </Button>
+        </ModalFooter>
+      </Modal>
     </Wrapper>
   );
 };

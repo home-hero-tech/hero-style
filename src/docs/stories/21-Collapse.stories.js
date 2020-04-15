@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 import Button from '../../components/atom/button/Button';
-import Collapse from '../../components/atom/collapse/Collapse';
+import Collapse from '../../components/molecule/collapse/Collapse';
 import Card from '../../components/molecule/card/Card';
 
 export default {

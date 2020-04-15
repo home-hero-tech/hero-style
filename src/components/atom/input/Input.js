@@ -14,6 +14,7 @@ const Input = ({
   disabled,
   dark,
   parentRef,
+  small,
   ...otherProps
 }) => {
   const isCheckOrRadio = type === 'checkbox' || type === 'radio';
@@ -22,8 +23,10 @@ const Input = ({
     [css['c-input']]: true,
     [css['c-input--disabled']]: disabled,
     [css[`c-input__${type}`]]: isCheckOrRadio,
+    [css[`c-input__${type}--small`]]: !!isCheckOrRadio && small,
     [css[`c-input__${type}--disabled`]]: disabled && isCheckOrRadio,
-    [css['c-input--dark']]: dark
+    [css['c-input--dark']]: dark,
+    [css['c-input--small']]: small && !isCheckOrRadio
   });
 
   return defaultValue ? (
@@ -68,6 +71,7 @@ Input.propTypes = {
   ]),
   defaultValue: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   disabled: PropTypes.bool,
+  small: PropTypes.bool,
   dark: PropTypes.bool,
   parentRef: PropTypes.func
 };
@@ -81,6 +85,7 @@ Input.defaultProps = {
   value: null,
   defaultValue: null,
   disabled: null,
+  small: null,
   dark: null,
   parentRef: null
 };

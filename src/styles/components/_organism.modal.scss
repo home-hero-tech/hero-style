@@ -26,22 +26,41 @@
 .c-modal {
   background-color: $color-structural-white;
   z-index: 9030;
-  padding: $space-5 $space-4;
   transition: all .3s ease-in-out;
+
+  &--has-padding {
+    padding: $space-5 $space-4;
+
+    @include mq($until: tablet) {
+      padding: $space-3 $space-2;
+    }
+
+    @include mq($until: mobile) {
+      padding: $space-2 $space-1;
+    }
+  }
 
   &--width-1 {
     width: 530px;
   }
 
   &--width-2 {
-    width: 740px;
+    width: #{map-get($mq-breakpoints, tablet)};
   }
 
   &--width-3 {
-    width: 980px;
+    width: #{map-get($mq-breakpoints, desktop)};
   }
 
   &--width-4 {
+    width: #{map-get($mq-breakpoints, wide)};
+
+    @include mq($until: desktop) {
+      width: 100%;
+    }
+  }
+
+  &--width-5 {
     width: 100%;
   }
 
@@ -55,14 +74,6 @@
 
   form {
     height: 100%;
-  }
-
-  @include mq($until: tablet) {
-    padding: $space-3 $space-2;
-  }
-
-  @include mq($until: mobile) {
-    padding: $space-2 $space-1;
   }
 
   &--pre-left {
@@ -81,6 +92,12 @@
     right: 0;
   }
 
+  &--center {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
   &__heading {
     h3 {
       font-weight: 300;
@@ -94,13 +111,12 @@
   }
 
   &__heading ~ &__content {
-    margin: $space-2 0;
+    margin: $space-3 0;
   }
 
   &__content {
     overflow: auto;
-    height: calc(100% - 120px);
-    padding-right: $space-1;
+    height: calc(100% - #{$modal-footer-height});
   }
 
   &__actions {
@@ -109,7 +125,8 @@
     bottom: 0;
     left: 0;
     right: 0;
-    padding: $space-2 $space-4 $space-2 $space-4;
+    height: $modal-footer-height;
+    padding: 0 $space-3;
 
     background-color: $color-brand-gray-050;
 

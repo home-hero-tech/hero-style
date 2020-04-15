@@ -1,0 +1,110 @@
+@import "../settings/colors";
+@import "../settings/radius";
+@import "../settings/width";
+@import "../settings/height";
+@import "../settings/spaces";
+
+.c-shape-action {
+  border: solid 1px $color-brand-gray-300;
+  padding: 0;
+  margin: 0;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+  background-color: transparent;
+
+  &--is-link {
+    a:link {
+      color: $color-white;
+      display: flex;
+    };
+  }
+
+  &--white {
+    color: $color-white;
+    border: solid 1px $color-white;
+  }
+
+  &--gray-light {
+    color: $color-brand-gray-200;
+    border: solid 1px $color-brand-gray-200;
+  }
+
+  &--primary {
+    color: $color-primary;
+    border: solid 1px $color-primary;
+  }
+
+  &--success {
+    color: $color-success;
+    border: solid 1px $color-success;
+  }
+
+  &--danger {
+    color: $color-danger;
+    border: solid 1px $color-danger;
+  }
+
+  &--rounded {
+    border-radius: $radius-percent-50;
+  }
+
+  &--squared {
+    border-radius: $radius-2;
+  }
+
+  &--fill-gray-light,
+  &--fill-primary,
+  &--fill-success,
+  &--fill-danger,
+  &:link {
+    color: $color-white;
+  }
+
+  &--fill-gray-light {
+    background-color: $color-brand-gray-200;
+    border: solid 1px $color-brand-gray-200;
+  }
+
+  &--fill-primary {
+    background-color: $color-primary;
+    border: solid 1px $color-primary;
+  }
+
+  &--fill-success {
+    background-color: $color-success;
+    border: solid 1px $color-success;
+  }
+
+  &--fill-danger {
+    background-color: $color-danger;
+    border: solid 1px $color-danger;
+  }
+
+  &--size-1 {
+    font-size: 12px;
+    height: $shape-action-height - 6px;
+    width: $shape-action-width - 6px;
+  }
+
+  &--size-2 {
+    font-size: 12px;
+    height: $shape-action-height - 4px;
+    width: $shape-action-width - 4px;
+  }
+
+  &--size-3 {
+    font-size: 14px;
+    height: $shape-action-height - 2px;
+    width: $shape-action-width - 2px;
+  }
+
+  &--size-4 {
+    font-size: 16px;
+    height: $shape-action-height;
+    width: $shape-action-width;
+  }
+}

@@ -1,24 +1,80 @@
 @import "../settings/settings";
+@import "../tools/tools";
 
 .c-card-item {
   display: flex;
-  flex-direction: column;
-  padding-right: $space-5;
-  line-height: 30px;
+  align-items: center;
+  margin-right: $space-2;
 
-  span {
-    &:nth-child(1) {
-      font-size: $font-size-sm;
-      color: $color-brand-gray-300;
+  @include mq($until: tablet) {
+    margin-right: $space-1;
+  }
+
+  @include mq($until: mobile) {
+    margin-right: $space-0;
+  }
+
+  svg {
+    font-size: $font-size-lg;
+
+    @include mq($until: tablet) {
+      font-size: $font-size-md;
     }
 
-    &:nth-child(2) {
-      color: $color-brand-gray-500;
-      font-size: $font-size-md;
+    @include mq($until: mobile) {
+      font-size: $font-size-sm;
     }
   }
 
-  &--primary {
+  svg + div {
+    margin-left: $space-2;
+
+    @include mq($until: mobile) {
+      margin-left: $space-1;
+    }
+  }
+
+  &__label {
+    font-size: $font-size-sm;
+    color: $color-brand-gray-300;
+
+    &--small {
+      font-size: $font-size-xs;
+    }
+  }
+
+  &__value {
+    font-size: $font-size-md;
+
+    &--small {
+      font-size: $font-size-sm;
+    }
+  }
+
+  &--default {
+    span + span {
+      margin-top: $space-1;
+    }
+  }
+
+  &--small {
+    span + span {
+      margin-top: $space-0;
+    }
+  }
+
+  &--no-margin {
+    margin-right: 0;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  &--lb-primary {
     span {
       &:nth-child(1) {
         color: $color-primary;
@@ -26,8 +82,53 @@
     }
   }
 
+  &--val-primary {
+    span {
+      &:nth-child(2) {
+        color: $color-primary;
+      }
+    }
+  }
+
+  &--svg-primary {
+    svg {
+      color: $color-primary;
+    }
+  }
+
+  &--lb-white {
+    span {
+      &:nth-child(1) {
+        color: $color-white;
+      }
+    }
+  }
+
+  &--val-white {
+    span {
+      &:nth-child(2) {
+        color: $color-white;
+      }
+    }
+  }
+
+  &--svg-white {
+    svg {
+      color: $color-white;
+    }
+  }
+
+  &--lb-gray {
+    span {
+      &:nth-child(1) {
+        color: $color-brand-gray-500;
+      }
+    }
+  }
+
   &--ellipsis {
     .truncate {
+      display: inline;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;

@@ -1,14 +1,14 @@
 import React from 'react';
 
 import { action } from '@storybook/addon-actions';
-import ListItemContent from '../../components/molecule/list-item-content/ListItemContent';
 import ListItem from '../../components/atom/list-item/ListItem';
 import List from '../../components/molecule/list/List';
-import ListItemCWrapper from '../../components/organism/list-item-c-wrapper/ListItemCWrapper';
 import Wrapper from '../../helpers/wrapper/Wrapper';
 import Content from '../../helpers/content/Content';
 import Input from '../../components/atom/input/Input';
 import CardItem from '../../components/atom/card-item/CardItem';
+import CardLine from '../../components/organism/card-line/CardLine';
+import EmptyCardItem from '../../components/atom/empty-card-item/EmptyCardItem';
 
 export default {
   title: 'List',
@@ -131,8 +131,8 @@ export const withActions = () => (
   <Wrapper>
     <List level={5}>
       <ListItem>
-        <ListItemCWrapper>
-          <ListItemContent isAction>
+        <CardLine>
+          <EmptyCardItem>
             <Input
               id="ipt"
               name="ipt"
@@ -141,13 +141,11 @@ export const withActions = () => (
               value="1"
               onChange={action('toggleCheck')}
             />
-          </ListItemContent>
-          <ListItemContent>
-            <CardItem value="Value" label="Label" />
-            <CardItem value="Value" label="Label" />
-            <CardItem value="Value" label="Label" />
-          </ListItemContent>
-        </ListItemCWrapper>
+          </EmptyCardItem>
+          <CardItem value="Value" label="Label" />
+          <CardItem value="Value" label="Label" />
+          <CardItem value="Value" label="Label" />
+        </CardLine>
       </ListItem>
       <ListItem>
         <Content>Content</Content>
@@ -159,33 +157,23 @@ export const withActions = () => (
   </Wrapper>
 );
 
-export const withActionsBorder = () => (
+export const ListAndSubList = () => (
   <Wrapper>
-    <List level={5}>
+    <List>
       <ListItem>
-        <ListItemCWrapper>
-          <ListItemContent isAction>
-            <Input
-              id="ipt"
-              name="ipt"
-              type="checkbox"
-              defaultChecked
-              value="1"
-              onChange={action('toggleCheck')}
-            />
-          </ListItemContent>
-          <ListItemContent border>
-            <CardItem value="Value" label="Label" />
-            <CardItem value="Value" label="Label" />
-            <CardItem value="Value" label="Label" />
-          </ListItemContent>
-        </ListItemCWrapper>
-      </ListItem>
-      <ListItem>
-        <Content>Content</Content>
-      </ListItem>
-      <ListItem>
-        <Content>Content</Content>
+        <Content>
+          <List>
+            <ListItem>
+              <Content style={{ backgroundColor: 'red' }}>Content</Content>
+            </ListItem>
+            <ListItem>
+              <Content>Content</Content>
+            </ListItem>
+            <ListItem>
+              <Content>Content</Content>
+            </ListItem>
+          </List>
+        </Content>
       </ListItem>
     </List>
   </Wrapper>
