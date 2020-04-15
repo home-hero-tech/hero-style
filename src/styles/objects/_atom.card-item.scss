@@ -29,10 +29,10 @@
   }
 
   svg + div {
-    margin-left: $space-2;
+    margin-left: $space-1;
 
     @include mq($until: mobile) {
-      margin-left: $space-1;
+      margin-left: $space-0;
     }
   }
 
