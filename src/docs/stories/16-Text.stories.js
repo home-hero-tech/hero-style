@@ -19,3 +19,10 @@ export const Primary = () => <Text primary>Primary</Text>;
 export const Success = () => <Text success>Success</Text>;
 export const Danger = () => <Text danger>Danger</Text>;
 export const Warning = () => <Text warning>Warning</Text>;
+export const Ellipsis = () => (
+  <div style={{ width: 200 }}>
+    <Text ellipsis>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+    </Text>
+  </div>
+);

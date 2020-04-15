@@ -16,7 +16,8 @@ const Text = ({
   success,
   uppercase,
   warning,
-  xs
+  xs,
+  ellipsis
 }) => {
   const classes = classNames({
     [css['c-text']]: true,
@@ -30,7 +31,8 @@ const Text = ({
     [css['c-text--lg']]: lg,
     [css['c-text--sm']]: sm,
     [css['c-text--xs']]: xs,
-    [css['c-text--uppercase']]: uppercase
+    [css['c-text--uppercase']]: uppercase,
+    [css['c-text--ellipsis']]: ellipsis
   });
 
   return <p className={classes}>{children}</p>;
@@ -53,7 +55,8 @@ Text.propTypes = {
   success: PropTypes.bool,
   uppercase: PropTypes.bool,
   warning: PropTypes.bool,
-  xs: PropTypes.bool
+  xs: PropTypes.bool,
+  ellipsis: PropTypes.bool
 };
 
 Text.defaultProps = {
@@ -68,7 +71,8 @@ Text.defaultProps = {
   success: false,
   uppercase: false,
   warning: false,
-  xs: false
+  xs: false,
+  ellipsis: false
 };
 
 export default Text;
