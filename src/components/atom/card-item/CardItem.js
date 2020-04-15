@@ -19,6 +19,7 @@ const CardItem = ({ format, label, leftIcon, value, small, ...otherProps }) => {
     [css['c-card-item__label--small']]: !!small,
     [css.truncate]: true
   });
+
   const renderContent = (_label, _value, _leftIcon) => (
     <>
       {_leftIcon || null}

@@ -85,25 +85,25 @@
   }
 
   &--size-1 {
-    font-size: 12px;
+    font-size: 12px !important;
     height: $shape-action-height - 6px;
     width: $shape-action-width - 6px;
   }
 
   &--size-2 {
-    font-size: 12px;
+    font-size: 12px !important;
     height: $shape-action-height - 4px;
     width: $shape-action-width - 4px;
   }
 
   &--size-3 {
-    font-size: 14px;
+    font-size: 14px !important;
     height: $shape-action-height - 2px;
     width: $shape-action-width - 2px;
   }
 
   &--size-4 {
-    font-size: 16px;
+    font-size: 16px !important;
     height: $shape-action-height;
     width: $shape-action-width;
   }

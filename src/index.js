@@ -11,6 +11,9 @@ import { TabPane as ScrollablePanel } from 'rc-tabs';
 // atoms
 import BoxShadow from './components/atom/box-shadow/BoxShadow';
 import Button from './components/atom/button/Button';
+import CardHeader from './components/atom/card-header/CardHeader';
+import CardBody from './components/atom/card-body/CardBody';
+import CardFooter from './components/atom/card-footer/CardFooter';
 import CardItem from './components/atom/card-item/CardItem';
 import DatePicker from './components/atom/datepicker/DatePicker';
 import EmptyCardItem from './components/atom/empty-card-item/EmptyCardItem';
@@ -28,7 +31,8 @@ import Text from './components/atom/text/Text';
 import MaskedInput from './components/atom/masked-input/MaskedInput';
 
 // molecules
-import Card from './components/molecule/card/Card';
+import Card from './components/molecule/old_card/Card';
+import CardV2 from './components/molecule/card/Card';
 import Collapse from './components/molecule/collapse/Collapse';
 import FilterHeader from './components/molecule/filter-header/FilterHeader';
 import FilterContent from './components/molecule/filter-content/FilterContent';
@@ -56,6 +60,10 @@ export {
   BoxShadow,
   Button,
   Card,
+  CardV2,
+  CardHeader,
+  CardBody,
+  CardFooter,
   CardItem,
   CardLine,
   Col,

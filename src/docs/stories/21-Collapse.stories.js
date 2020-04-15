@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 import Button from '../../components/atom/button/Button';
 import Collapse from '../../components/molecule/collapse/Collapse';
-import Card from '../../components/molecule/card/Card';
+import Card from '../../components/molecule/old_card/Card';
 
 export default {
   title: 'Collapsible',

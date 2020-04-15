@@ -20,6 +20,7 @@ const EmptyCardItem = ({
   valWhite,
   svgWhite,
   children,
+  svgDefaultSize,
   ...otherProps
 }) => {
   const { lg, md, sm, xs } = otherProps;
@@ -29,6 +30,7 @@ const EmptyCardItem = ({
     [css['c-card-item--default']]: true,
     [css['c-card-item--ellipsis']]: ellipsis,
     [css['c-card-item--small']]: small,
+    [css['c-card-item--svg-default-size']]: svgDefaultSize,
 
     [css['c-card-item--lb-gray']]: gray || lbGray,
 
@@ -67,7 +69,8 @@ EmptyCardItem.propTypes = {
   svgPrimary: PropTypes.bool,
   svgWhite: PropTypes.bool,
   valPrimary: PropTypes.bool,
-  valWhite: PropTypes.bool
+  valWhite: PropTypes.bool,
+  svgDefaultSize: PropTypes.bool
 };
 
 EmptyCardItem.defaultProps = {
@@ -83,7 +86,8 @@ EmptyCardItem.defaultProps = {
   svgPrimary: false,
   svgWhite: false,
   valPrimary: false,
-  valWhite: false
+  valWhite: false,
+  svgDefaultSize: true
 };
 
 EmptyCardItem.displayName = 'EmptyCardItem';

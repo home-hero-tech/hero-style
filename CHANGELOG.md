@@ -512,6 +512,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Improvements on CardItem component.
 
-## [1.0.141] ~ [1.0.141] - 2020-04-13
+## [1.0.141] ~ [1.0.144] - 2020-04-13
 ### Added
 - Improvements on Modal components.
+
+## [1.0.145] - 2020-04-14
+### Added
+- Improvements on List component.
+
+## [1.0.146] - 2020-04-15
+### Added
+- Improvements on Shape Action to force svg size.

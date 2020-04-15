@@ -14,23 +14,25 @@
     margin-right: $space-0;
   }
 
-  svg {
-    font-size: $font-size-lg;
+  &--svg-default-size {
+    svg {
+      font-size: $font-size-lg;
 
-    @include mq($until: tablet) {
-      font-size: $font-size-md;
-    }
+      @include mq($until: tablet) {
+        font-size: $font-size-md;
+      }
 
-    @include mq($until: mobile) {
-      font-size: $font-size-sm;
+      @include mq($until: mobile) {
+        font-size: $font-size-sm;
+      }
     }
   }
 
   svg + div {
-    margin-left: $space-2;
+    margin-left: $space-1;
 
     @include mq($until: mobile) {
-      margin-left: $space-1;
+      margin-left: $space-0;
     }
   }
 
