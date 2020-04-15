@@ -46,7 +46,7 @@
   }
 
   ul {
-    margin-left: $space-5 + 2;
+    margin-left: $space-4 + 3px;
 
     @include mq($until: tablet) {
       margin-left: $space-4;
