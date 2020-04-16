@@ -1,43 +1,46 @@
 @import "../settings/spaces";
 
-$grid-gutter: $space-2 !default;
 
-.container-fluid {
-  padding: 0 !important;
-}
+:global {
+  $grid-gutter: $space-2 !default;
 
-.row {
-  margin-left: 0 !important;
-}
-
-$max-grid-columns: 12;
-
-@for $size from 0 through $max-grid-columns {
-  .col-lg-#{$size} {
-    padding-left: 0 !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    padding-right: $grid-gutter !important;
+  .container-fluid {
+    padding: 0 !important;
   }
 
-  .col-md-#{$size} {
-    padding-left: 0 !important;
+  .row {
     margin-left: 0 !important;
-    margin-right: 0 !important;
-    padding-right: $grid-gutter !important;
   }
 
-  .col-sm-#{$size} {
-    padding-left: 0 !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    padding-right: $grid-gutter !important;
-  }
+  $max-grid-columns: 12;
 
-  .col-xs-#{$size} {
-    padding-left: 0 !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    padding-right: $grid-gutter !important;
+  @for $size from 0 through $max-grid-columns {
+    .col-lg-#{$size} {
+      padding-left: 0 !important;
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+      padding-right: $grid-gutter !important;
+    }
+
+    .col-md-#{$size} {
+      padding-left: 0 !important;
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+      padding-right: $grid-gutter !important;
+    }
+
+    .col-sm-#{$size} {
+      padding-left: 0 !important;
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+      padding-right: $grid-gutter !important;
+    }
+
+    .col-xs-#{$size} {
+      padding-left: 0 !important;
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+      padding-right: $grid-gutter !important;
+    }
   }
 }
