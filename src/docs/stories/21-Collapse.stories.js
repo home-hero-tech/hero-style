@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 
 import Button from '../../components/atom/button/Button';
 import Collapse from '../../components/molecule/collapse/Collapse';
-import Card from '../../components/molecule/old_card/Card';
+import Card from '../../components/molecule/card/Card';
+import CardBody from '../../components/atom/card-body/CardBody';
 
 export default {
   title: 'Collapsible',
@@ -25,14 +26,16 @@ export const Collapsible = () => {
 
   return (
     <Card>
-      <div style={divStyle}>
-        <Button onClick={() => setIsOpen(!isOpen)}>Click Me</Button>
-        <Collapse isOpen={isOpen}>
-          <div style={collapsedStyle}>
-            <p>Collapse open</p>
-          </div>
-        </Collapse>
-      </div>
+      <CardBody>
+        <div style={divStyle}>
+          <Button onClick={() => setIsOpen(!isOpen)}>Click Me</Button>
+          <Collapse isOpen={isOpen}>
+            <div style={collapsedStyle}>
+              <p>Collapse open</p>
+            </div>
+          </Collapse>
+        </div>
+      </CardBody>
     </Card>
   );
 };
