@@ -16,15 +16,26 @@ const Select = ({
   placeholder,
   searchable,
   value,
+  small,
   ...otherProps
 }) => {
-  const className = dark ? 'c-select--dark' : 'c-select';
+  let selectClass = 'c-select';
+
+  if (dark && !small) {
+    selectClass = selectClass.concat('--dark');
+  } else if (!dark && small) {
+    selectClass = selectClass.concat('--small');
+  } else if (small && dark) {
+    selectClass = selectClass.concat('--small-dark');
+  } else {
+    selectClass = selectClass.concat('--default');
+  }
 
   const allProps = {
     backspaceRemoves: true,
     inputId: id || name,
-    className: css[className],
-    classNamePrefix: className,
+    className: css[selectClass],
+    classNamePrefix: selectClass,
     deleteRemoves: true,
     isMulti: multiple,
     isSearchable: searchable,
@@ -43,6 +54,7 @@ const Select = ({
 
 Select.propTypes = {
   dark: PropTypes.bool,
+  small: PropTypes.bool,
   id: PropTypes.string,
   firstMessage: PropTypes.func,
   multiple: PropTypes.bool,
@@ -62,6 +74,7 @@ Select.propTypes = {
 
 Select.defaultProps = {
   dark: false,
+  small: false,
   id: null,
   firstMessage: () => 'Digite para buscar',
   multiple: false,

@@ -25,6 +25,35 @@ export const Default = () => (
   />
 );
 
+export const Dark = () => (
+  <Select
+    options={options}
+    placeholder={placeholder}
+    noOptionsMessage={noOptionsMessage}
+    value={options[3]}
+    dark
+  />
+);
+
+export const small = () => (
+  <Select
+    options={options}
+    placeholder={placeholder}
+    noOptionsMessage={noOptionsMessage}
+    small
+  />
+);
+
+export const SmallDark = () => (
+  <Select
+    options={options}
+    placeholder={placeholder}
+    noOptionsMessage={noOptionsMessage}
+    dark
+    small
+  />
+);
+
 export const MultiSelect = () => (
   <Select
     options={options}
