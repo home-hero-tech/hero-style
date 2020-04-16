@@ -1,5 +1,5 @@
 // GRID
-import { Grid, Col, Row } from 'react-flexbox-grid';
+import { Col, Row } from 'react-flexbox-grid';
 
 // Tabs
 import { Tab, TabList, TabPanel } from 'react-tabs';
@@ -48,6 +48,7 @@ import Tooltip from './components/molecule/tooltip/Tooltip';
 import Spacer from './components/molecule/spacer/Spacer';
 import DropdownMenu from './components/molecule/dropdown-menu/DropdownMenu';
 import Dropdown from './components/molecule/dropdown/Dropdown';
+import Grid from './components/molecule/grid/Grid';
 
 // organisms
 import CardLine from './components/organism/card-line/CardLine';
