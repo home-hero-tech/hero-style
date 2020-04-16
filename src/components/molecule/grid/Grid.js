@@ -5,12 +5,16 @@ import { Grid } from 'react-flexbox-grid';
 
 import css from './Grid.module.scss';
 
-const FlexGrid = ({children, ...props}) => {
+const FlexGrid = ({ children, ...props }) => {
   const classes = classNames({
     [css['c-grid']]: true
   });
 
-  return <Grid className={classes} {...props} >{children}</Grid>;
+  return (
+    <Grid className={classes} {...props}>
+      {children}
+    </Grid>
+  );
 };
 
 FlexGrid.propTypes = {
