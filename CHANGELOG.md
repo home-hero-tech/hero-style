@@ -523,3 +523,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.0.146] - 2020-04-15
 ### Added
 - Improvements on Shape Action to force svg size.
+
+## [1.0.154] - 2020-04-15
+### Added
+- Small Select component.

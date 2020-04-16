@@ -2,94 +2,52 @@
 
 .c-select {
   width: 100%;
-  &__control,
-  &__menu {
-    border-radius: $radius-2 !important;
-    box-shadow: none !important;
-    background-color: $color-structural-white !important;
-    border-color: $color-brand-gray-100 !important;
-    min-height: 36px !important;
 
-    &:hover,
-    &--is-focused,
-    &--is-selected {
-      border-color: $color-brand-gray-500 !important;
-    }
-  }
+  &--default, &--small {
+    &__control,
+    &__menu {
+      background-color: $color-structural-white !important;
+      border-color: $color-brand-gray-100 !important;
 
-  &__placeholder {
-    color: $color-brand-gray-200 !important;
-  }
-
-  &__indicators {
-    background-color: transparent !important;
-    color: red !important;
-  }
-
-  &__indicator-separator {
-    background-color: transparent !important;
-    width: 0 !important;
-  }
-
-  &__single-value {
-    color: $color-brand-gray-500 !important;
-  }
-
-  &__value-container {
-    padding: 0 $space-2 !important;
-  }
-
-  &__menu-list {
-    border-radius: $radius-2;
-    box-shadow: $elevation-4 !important;
-    border: solid 1px $color-brand-gray-400;
-  }
-
-  &__option {
-    cursor: pointer !important;
-    transition: all .3s ease-in-out;
-    color: $color-brand-gray-200 !important;
-    background-color: transparent;
-
-    &:hover,
-    &--is-focused,
-    &--is-selected {
-      background-color: transparent !important;
+      &:hover,
+      &--is-focused,
+      &--is-selected {
+        border-color: $color-brand-gray-500 !important;
+      }
     }
 
-    &:hover {
-      color: $color-brand-gray-300 !important;
+    &__placeholder {
+      color: $color-brand-gray-200 !important;
     }
 
-    &--is-selected {
+    &__single-value {
       color: $color-brand-gray-500 !important;
     }
-  }
 
-
-  &__indicator {
-    svg {
-      display: none;
+    &__menu-list {
+      box-shadow: $elevation-4 !important;
+      border: solid 1px $color-brand-gray-400;
     }
 
-    &:after {
-      content: '\f0dd';
-      font-size: $font-size-md;
-      position: absolute;
-      color: $color-brand-gray-300;
-      font-family: $font-family-awesome-5-pro;
-      font-weight: 900;
-      top: 0;
-      right: 0;
-      background-color: transparent;
-      padding: $space-1 $space-2;
+    &__option {
+      &:hover {
+        color: $color-brand-gray-300 !important;
+      }
+
+      &--is-selected {
+        color: $color-brand-gray-500 !important;
+      }
+    }
+
+    &__indicator {
+      &:after {
+        color: $color-brand-gray-300;
+      }
     }
   }
 
-  &--dark {
+  &--dark, &--small-dark {
     &__control {
-      border-radius: $radius-2 !important;
-      box-shadow: none !important;
       background-color: $color-brand-gray-600 !important;
 
       &:hover,
@@ -100,14 +58,52 @@
     }
 
     &__menu {
-      border-radius: $radius-2 !important;
-      box-shadow: none !important;
       background-color: $color-brand-gray-400 !important;
     }
 
-    &__single-value,
-    &__placeholder {
+    &__single-value {
       color: $color-structural-white !important;
+    }
+
+    &__placeholder {
+      color: $color-brand-gray-200 !important;
+    }
+
+    &__option {
+      border-color: $color-structural-white !important;
+
+      &:hover,
+      &--is-focused,
+      &--is-selected {
+        border-color: $color-structural-white !important;
+      }
+
+      &:hover {
+        color: $color-brand-gray-100 !important;
+        border-color: $color-structural-white !important;
+      }
+
+      &--is-selected {
+        color: $color-structural-white !important;
+      }
+    }
+
+    &__indicator {
+      &:after {
+        position: absolute;
+      }
+    }
+  }
+
+  &--small,
+  &--small-dark,
+  &--default,
+  &--dark {
+    &__control,
+    &__menu {
+      border-radius: $radius-2 !important;
+      box-shadow: none !important;
+      transition: all .3s ease-in-out !important;
     }
 
     &__indicators {
@@ -124,6 +120,10 @@
       padding: 0 $space-2 !important;
     }
 
+    &__single-value {
+      font-weight: 300 !important;
+    }
+
     &__menu-list {
       border-radius: $radius-2;
       overflow: hidden;
@@ -133,23 +133,12 @@
       cursor: pointer !important;
       transition: all .3s ease-in-out;
       color: $color-brand-gray-200 !important;
-      background-color: transparent !important;
-      border-color: $color-structural-white !important;
+      background-color: transparent;
 
       &:hover,
       &--is-focused,
       &--is-selected {
         background-color: transparent !important;
-        border-color: $color-structural-white !important;
-      }
-
-      &:hover {
-        color: $color-brand-gray-100 !important;
-        border-color: $color-structural-white !important;
-      }
-
-      &--is-selected {
-        color: $color-structural-white !important;
       }
     }
 
@@ -162,7 +151,6 @@
         content: '\f0dd';
         font-size: $font-size-md;
         position: absolute;
-        color: $color-structural-white;
         font-family: $font-family-awesome-5-pro;
         font-weight: 900;
         top: 0;
@@ -170,6 +158,48 @@
         background-color: transparent;
         padding: $space-1 $space-2;
       }
+    }
+  }
+
+  &--default,
+  &--dark {
+    &__control,
+    &__menu {
+      min-height: 36px !important;
+    }
+  }
+
+  &--small, &--small-dark {
+    &__control,
+    &__menu {
+      border-radius: $radius-2 !important;
+    }
+
+    &__control,
+    &__menu,
+    &__value-container {
+      min-height: 23px !important;
+      height: 23px !important;
+    }
+
+    &__indicator {
+      &:after {
+        top: -7px;
+        right: -4px;
+      }
+    }
+
+    &__placeholder {
+      top: 11px !important;
+      margin: 0 !important;
+    }
+
+    &__value-container {
+      padding: 0 $space-1 !important;
+    }
+
+    &__single-value, &__placeholder {
+      font-size: $font-size-sm;
     }
   }
 }
