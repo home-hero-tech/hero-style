@@ -21,7 +21,7 @@ const Card = ({ className, border, children, ...otherProps }) => {
 Card.propTypes = {
   className: PropTypes.string,
   border: PropTypes.bool,
-  children: PropTypes.oneOfType([PropTypes.object, PropTypes.array])
+  children: PropTypes.oneOf([PropTypes.object, PropTypes.array])
 };
 
 Card.defaultProps = {
