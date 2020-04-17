@@ -4,9 +4,10 @@ import classNames from 'classnames';
 
 import css from './CardFooter.module.scss';
 
-const CardBody = ({ className, children }) => {
+const CardBody = ({ className, size, children }) => {
   const classes = classNames({
     [css['c-card__footer']]: true,
+    [css[`c-card__footer--${size}`]]: true,
     [className]: !!className
   });
 
@@ -15,11 +16,13 @@ const CardBody = ({ className, children }) => {
 
 CardBody.propTypes = {
   className: PropTypes.string,
+  size: PropTypes.oneOf(['default', 'small']),
   children: PropTypes.oneOfType([PropTypes.object, PropTypes.array])
 };
 
 CardBody.defaultProps = {
   className: '',
+  size: 'default',
   children: null
 };
 

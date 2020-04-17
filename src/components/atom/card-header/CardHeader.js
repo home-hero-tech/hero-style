@@ -4,9 +4,10 @@ import classNames from 'classnames';
 
 import css from './CardHeader.module.scss';
 
-const CardHeader = ({ className, children }) => {
+const CardHeader = ({ className, size, children }) => {
   const classes = classNames({
     [css['c-card__header']]: true,
+    [css[`c-card__header--${size}`]]: true,
     [className]: !!className
   });
 
@@ -15,11 +16,13 @@ const CardHeader = ({ className, children }) => {
 
 CardHeader.propTypes = {
   className: PropTypes.string,
+  size: PropTypes.oneOf(['default', 'small']),
   children: PropTypes.oneOfType([PropTypes.object, PropTypes.array])
 };
 
 CardHeader.defaultProps = {
   className: '',
+  size: 'default',
   children: null
 };
 

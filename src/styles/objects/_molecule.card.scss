@@ -18,10 +18,16 @@
     border-bottom: 1px solid $color-brand-gray-050;
     border-top-left-radius: $radius-3;
     border-top-right-radius: $radius-3;
+    &--small {
+      padding: $space-1 $space-2;  
+    }
   }
 
   &__body {
     padding: $space-2 $space-3;
+    &--small {
+      padding: $space-1 $space-2;  
+    }
   }
 
   &__footer {
@@ -30,5 +36,8 @@
     border-top: 1px solid $color-brand-gray-050;
     border-bottom-left-radius: $radius-3;
     border-bottom-right-radius: $radius-3;
+    &--small {
+      padding: $space-1 $space-2;  
+    }
   }
 }
