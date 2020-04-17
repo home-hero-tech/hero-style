@@ -61,7 +61,7 @@ CardItem.propTypes = {
     PropTypes.string,
     PropTypes.instanceOf(Date),
     PropTypes.number
-  ]).isRequired
+  ])
 };
 
 CardItem.defaultProps = {
@@ -79,7 +79,8 @@ CardItem.defaultProps = {
   svgPrimary: false,
   svgWhite: false,
   valPrimary: false,
-  valWhite: false
+  valWhite: false,
+  value: null
 };
 
 CardItem.displayName = 'CardItem';
