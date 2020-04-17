@@ -24,6 +24,7 @@ const ScrollableTabs = ({
 
   return (
     <Tabs
+      destroyInactiveTabPane
       renderTabBar={() => (
         <ScrollableInkTabBar
           onTabClick={onTabClick}
@@ -31,7 +32,7 @@ const ScrollableTabs = ({
           nextIcon={nextIcon}
         />
       )}
-      renderTabContent={() => <TabContent animatedWithMargin />}
+      renderTabContent={() => <TabContent animated={false} />}
       activeKey={activeKey}
       onChange={onChange}
       className={classes}
