@@ -15,7 +15,7 @@ const Wrapper = ({ style, children }) => {
 Wrapper.propTypes = {
   children: PropTypes.oneOfType([PropTypes.array, PropTypes.object]),
   style: PropTypes.shape({
-    maxWidth: PropTypes.string,
+    maxWidth: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     margin: PropTypes.string
   })
 };

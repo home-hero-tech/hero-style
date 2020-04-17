@@ -17,7 +17,11 @@ const CardHeader = ({ className, size, children }) => {
 CardHeader.propTypes = {
   className: PropTypes.string,
   size: PropTypes.oneOf(['default', 'small']),
-  children: PropTypes.oneOfType([PropTypes.object, PropTypes.array])
+  children: PropTypes.oneOfType([
+    PropTypes.object,
+    PropTypes.array,
+    PropTypes.string
+  ])
 };
 
 CardHeader.defaultProps = {

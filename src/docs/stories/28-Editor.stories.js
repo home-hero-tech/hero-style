@@ -1,4 +1,5 @@
 import React from 'react';
+import { action } from '@storybook/addon-actions';
 
 import Editor from '../../components/molecule/editor/Editor';
 
@@ -16,7 +17,7 @@ const input =
 export const Default = () => {
   return (
     <Wrapper>
-      <Editor value={input} />
+      <Editor value={input} onChange={action('cancel')} />
     </Wrapper>
   );
 };
@@ -24,7 +25,7 @@ export const Default = () => {
 export const WithoutToolbar = () => {
   return (
     <Wrapper>
-      <Editor value={input} toolbar={false} />
+      <Editor value={input} toolbar={false} onChange={action('cancel')} />
     </Wrapper>
   );
 };
