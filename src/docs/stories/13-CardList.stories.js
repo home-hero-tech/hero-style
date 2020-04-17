@@ -62,7 +62,7 @@ export const WithCardItems = () => (
         <CardBody>
           <Row middle="xs">
             <Col>
-              <Spacer mrLg={2}>
+              <Spacer mrLg={2} mrMd={2}>
                 <Input
                   id="ipt"
                   name="ipt"
@@ -91,6 +91,16 @@ export const Borderless = () => (
       <CardHeader>Card Header</CardHeader>
       <CardBody>
         <p>Borderless Card</p>
+      </CardBody>
+    </Card>
+  </Wrapper>
+);
+
+export const Small = () => (
+  <Wrapper style={{ maxWidth: 800, marginTop: 10 }}>
+    <Card>
+      <CardBody size="small">
+        <p>Small Card</p>
       </CardBody>
     </Card>
   </Wrapper>
