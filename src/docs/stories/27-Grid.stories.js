@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid } from 'react-flexbox-grid';
+import FlexGrid from '../../components/molecule/grid/Grid';
 
 import Wrapper from '../../helpers/wrapper/Wrapper';
 import Form from '../../components/organism/form/Form';
@@ -12,13 +12,13 @@ import Button from '../../components/atom/button/Button';
 
 export default {
   title: 'Grid',
-  component: Grid
+  component: FlexGrid
 };
 
 export const Default = () => (
   <Wrapper style={{ maxWidth: '100%' }}>
     <Form onSubmit={() => {}}>
-      <Grid fluid>
+      <FlexGrid fluid>
         <FormRow>
           <FormGroup lg={12}>
             <Label name="ipt">Label</Label>
@@ -93,7 +93,7 @@ export const Default = () => (
             Filtrar
           </Button>
         </FormActions>
-      </Grid>
+      </FlexGrid>
     </Form>
   </Wrapper>
 );

@@ -1,5 +1,5 @@
 // GRID
-import { Grid, Col, Row } from 'react-flexbox-grid';
+import { Col, Row } from 'react-flexbox-grid';
 
 // Tabs
 import { Tab, TabList, TabPanel } from 'react-tabs';
@@ -31,8 +31,7 @@ import Text from './components/atom/text/Text';
 import MaskedInput from './components/atom/masked-input/MaskedInput';
 
 // molecules
-import Card from './components/molecule/old_card/Card';
-import CardV2 from './components/molecule/card/Card';
+import Card from './components/molecule/card/Card';
 import Collapse from './components/molecule/collapse/Collapse';
 import FilterHeader from './components/molecule/filter-header/FilterHeader';
 import FilterContent from './components/molecule/filter-content/FilterContent';
@@ -48,6 +47,7 @@ import Tooltip from './components/molecule/tooltip/Tooltip';
 import Spacer from './components/molecule/spacer/Spacer';
 import DropdownMenu from './components/molecule/dropdown-menu/DropdownMenu';
 import Dropdown from './components/molecule/dropdown/Dropdown';
+import Grid from './components/molecule/grid/Grid';
 
 // organisms
 import CardLine from './components/organism/card-line/CardLine';
@@ -60,7 +60,6 @@ export {
   BoxShadow,
   Button,
   Card,
-  CardV2,
   CardHeader,
   CardBody,
   CardFooter,

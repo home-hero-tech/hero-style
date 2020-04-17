@@ -3,8 +3,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLayerGroup } from '@fortawesome/pro-light-svg-icons';
 import ListItem from '../../components/atom/list-item/ListItem';
 import List from '../../components/molecule/list/List';
-import Card from '../../components/molecule/old_card/Card';
+import Card from '../../components/molecule/card/Card';
 import CardItem from '../../components/atom/card-item/CardItem';
+import CardBody from '../../components/atom/card-body/CardBody';
 
 import Wrapper from '../../helpers/wrapper/Wrapper';
 
@@ -18,7 +19,9 @@ export const Default = () => (
     <List>
       <ListItem>
         <Card>
-          <CardItem value="Default" label="Default" />
+          <CardBody>
+            <CardItem value="Default" label="Default" />
+          </CardBody>
         </Card>
       </ListItem>
     </List>
@@ -28,12 +31,14 @@ export const Default = () => (
 export const LeftIcon = () => (
   <Wrapper>
     <Card>
-      <CardItem
-        value="valGray"
-        label="valGray"
-        gray
-        leftIcon={<FontAwesomeIcon icon={faLayerGroup} />}
-      />
+      <CardBody>
+        <CardItem
+          value="valGray"
+          label="valGray"
+          gray
+          leftIcon={<FontAwesomeIcon icon={faLayerGroup} />}
+        />
+      </CardBody>
     </Card>
   </Wrapper>
 );
@@ -43,7 +48,9 @@ export const Label = () => (
     <List>
       <ListItem>
         <Card>
-          <CardItem label="Default" />
+          <CardBody>
+            <CardItem label="Default" />
+          </CardBody>
         </Card>
       </ListItem>
     </List>
@@ -55,7 +62,9 @@ export const Value = () => (
     <List>
       <ListItem>
         <Card>
-          <CardItem value="Default" />
+          <CardBody>
+            <CardItem value="Default" />
+          </CardBody>
         </Card>
       </ListItem>
     </List>
@@ -65,7 +74,9 @@ export const Value = () => (
 export const small = () => (
   <Wrapper>
     <Card>
-      <CardItem value="Small" label="Small" small />
+      <CardBody>
+        <CardItem value="Small" label="Small" small />
+      </CardBody>
     </Card>
   </Wrapper>
 );
@@ -75,7 +86,9 @@ export const LabelSmall = () => (
     <List>
       <ListItem>
         <Card>
-          <CardItem label="Default" small />
+          <CardBody>
+            <CardItem label="Default" small />
+          </CardBody>
         </Card>
       </ListItem>
     </List>
@@ -87,7 +100,9 @@ export const ValueSmall = () => (
     <List>
       <ListItem>
         <Card>
-          <CardItem value="Default" small />
+          <CardBody>
+            <CardItem value="Default" small />
+          </CardBody>
         </Card>
       </ListItem>
     </List>
@@ -97,12 +112,14 @@ export const ValueSmall = () => (
 export const smallSvg = () => (
   <Wrapper>
     <Card>
-      <CardItem
-        value="Small"
-        label="Small"
-        small
-        leftIcon={<FontAwesomeIcon icon={faLayerGroup} />}
-      />
+      <CardBody>
+        <CardItem
+          value="Small"
+          label="Small"
+          small
+          leftIcon={<FontAwesomeIcon icon={faLayerGroup} />}
+        />
+      </CardBody>
     </Card>
   </Wrapper>
 );
@@ -110,12 +127,14 @@ export const smallSvg = () => (
 export const Primary = () => (
   <Wrapper>
     <Card>
-      <CardItem
-        value="Primary"
-        label="Primary"
-        leftIcon={<FontAwesomeIcon icon={faLayerGroup} />}
-        primary
-      />
+      <CardBody>
+        <CardItem
+          value="Primary"
+          label="Primary"
+          leftIcon={<FontAwesomeIcon icon={faLayerGroup} />}
+          primary
+        />
+      </CardBody>
     </Card>
   </Wrapper>
 );
@@ -123,7 +142,9 @@ export const Primary = () => (
 export const lbPrimary = () => (
   <Wrapper>
     <Card>
-      <CardItem value="lbPrimary" label="lbPrimary" lbPrimary />
+      <CardBody>
+        <CardItem value="lbPrimary" label="lbPrimary" lbPrimary />
+      </CardBody>
     </Card>
   </Wrapper>
 );
@@ -131,7 +152,9 @@ export const lbPrimary = () => (
 export const valPrimary = () => (
   <Wrapper>
     <Card>
-      <CardItem value="valPrimary" label="valPrimary" valPrimary />
+      <CardBody>
+        <CardItem value="valPrimary" label="valPrimary" valPrimary />
+      </CardBody>
     </Card>
   </Wrapper>
 );
@@ -139,12 +162,14 @@ export const valPrimary = () => (
 export const svgPrimary = () => (
   <Wrapper>
     <Card>
-      <CardItem
-        value="svgPrimary"
-        label="svgPrimary"
-        svgPrimary
-        leftIcon={<FontAwesomeIcon icon={faLayerGroup} />}
-      />
+      <CardBody>
+        <CardItem
+          value="svgPrimary"
+          label="svgPrimary"
+          svgPrimary
+          leftIcon={<FontAwesomeIcon icon={faLayerGroup} />}
+        />
+      </CardBody>
     </Card>
   </Wrapper>
 );
@@ -152,12 +177,14 @@ export const svgPrimary = () => (
 export const Gray = () => (
   <Wrapper>
     <Card>
-      <CardItem
-        value="gray"
-        label="gray"
-        gray
-        leftIcon={<FontAwesomeIcon icon={faLayerGroup} />}
-      />
+      <CardBody>
+        <CardItem
+          value="gray"
+          label="gray"
+          gray
+          leftIcon={<FontAwesomeIcon icon={faLayerGroup} />}
+        />
+      </CardBody>
     </Card>
   </Wrapper>
 );
@@ -165,7 +192,9 @@ export const Gray = () => (
 export const lbGray = () => (
   <Wrapper>
     <Card>
-      <CardItem value="lbGray" label="lbGray" lbGray />
+      <CardBody>
+        <CardItem value="lbGray" label="lbGray" lbGray />
+      </CardBody>
     </Card>
   </Wrapper>
 );
@@ -173,14 +202,16 @@ export const lbGray = () => (
 export const White = () => (
   <Wrapper>
     <Card>
-      <div style={{ backgroundColor: '#909090' }}>
-        <CardItem
-          value="White"
-          label="White"
-          white
-          leftIcon={<FontAwesomeIcon icon={faLayerGroup} />}
-        />
-      </div>
+      <CardBody>
+        <div style={{ backgroundColor: '#909090' }}>
+          <CardItem
+            value="White"
+            label="White"
+            white
+            leftIcon={<FontAwesomeIcon icon={faLayerGroup} />}
+          />
+        </div>
+      </CardBody>
     </Card>
   </Wrapper>
 );
@@ -188,9 +219,11 @@ export const White = () => (
 export const lbWhite = () => (
   <Wrapper>
     <Card>
-      <div style={{ backgroundColor: '#909090' }}>
-        <CardItem value="lbWhite" label="lbWhite" lbWhite />
-      </div>
+      <CardBody>
+        <div style={{ backgroundColor: '#909090' }}>
+          <CardItem value="lbWhite" label="lbWhite" lbWhite />
+        </div>
+      </CardBody>
     </Card>
   </Wrapper>
 );
@@ -198,9 +231,11 @@ export const lbWhite = () => (
 export const valWhite = () => (
   <Wrapper>
     <Card>
-      <div style={{ backgroundColor: '#909090' }}>
-        <CardItem value="valWhite" label="valWhite" valWhite />
-      </div>
+      <CardBody>
+        <div style={{ backgroundColor: '#909090' }}>
+          <CardItem value="valWhite" label="valWhite" valWhite />
+        </div>
+      </CardBody>
     </Card>
   </Wrapper>
 );
@@ -208,14 +243,16 @@ export const valWhite = () => (
 export const svgWhite = () => (
   <Wrapper>
     <Card>
-      <div style={{ backgroundColor: '#909090' }}>
-        <CardItem
-          value="svgWhite"
-          label="svgWhite"
-          svgWhite
-          leftIcon={<FontAwesomeIcon icon={faLayerGroup} />}
-        />
-      </div>
+      <CardBody>
+        <div style={{ backgroundColor: '#909090' }}>
+          <CardItem
+            value="svgWhite"
+            label="svgWhite"
+            svgWhite
+            leftIcon={<FontAwesomeIcon icon={faLayerGroup} />}
+          />
+        </div>
+      </CardBody>
     </Card>
   </Wrapper>
 );
@@ -223,12 +260,14 @@ export const svgWhite = () => (
 export const svgDefaultSizeFALSE = () => (
   <Wrapper>
     <Card>
-      <CardItem
-        value="Default"
-        label="Default"
-        svgDefaultSize={false}
-        leftIcon={<FontAwesomeIcon icon={faLayerGroup} />}
-      />
+      <CardBody>
+        <CardItem
+          value="Default"
+          label="Default"
+          svgDefaultSize={false}
+          leftIcon={<FontAwesomeIcon icon={faLayerGroup} />}
+        />
+      </CardBody>
     </Card>
   </Wrapper>
 );
