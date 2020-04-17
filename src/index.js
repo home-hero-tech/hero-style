@@ -48,6 +48,7 @@ import Spacer from './components/molecule/spacer/Spacer';
 import DropdownMenu from './components/molecule/dropdown-menu/DropdownMenu';
 import Dropdown from './components/molecule/dropdown/Dropdown';
 import Grid from './components/molecule/grid/Grid';
+import Editor from './components/molecule/editor/Editor';
 
 // organisms
 import CardLine from './components/organism/card-line/CardLine';
@@ -82,6 +83,7 @@ export {
   FormModal,
   FormRow,
   Grid,
+  Editor,
   Heading,
   Input,
   Label,
