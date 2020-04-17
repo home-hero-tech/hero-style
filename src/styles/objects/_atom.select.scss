@@ -22,16 +22,18 @@
 
     &__single-value {
       color: $color-brand-gray-500 !important;
+      margin: 0!important;
     }
 
     &__menu-list {
       box-shadow: $elevation-4 !important;
+      background-color: $color-white;
       border: solid 1px $color-brand-gray-400;
     }
 
     &__option {
       &:hover {
-        color: $color-brand-gray-300 !important;
+        color: $color-brand-gray-500 !important;
       }
 
       &--is-selected {
@@ -57,11 +59,11 @@
       }
     }
 
-    &__menu {
+    &__menu, &__menu-list {
       background-color: $color-brand-gray-400 !important;
     }
 
-    &__single-value {
+    &__single-value, &__input {
       color: $color-structural-white !important;
     }
 
@@ -72,14 +74,13 @@
     &__option {
       border-color: $color-structural-white !important;
 
-      &:hover,
       &--is-focused,
       &--is-selected {
-        border-color: $color-structural-white !important;
+        border-color: $color-brand-gray-500 !important;
       }
 
       &:hover {
-        color: $color-brand-gray-100 !important;
+        color: $color-structural-white !important;
         border-color: $color-structural-white !important;
       }
 
@@ -200,6 +201,15 @@
 
     &__single-value, &__placeholder {
       font-size: $font-size-sm;
+      color: $color-white !important;
+      top: 11px !important;
+      margin: 0 !important;
     }
   }
+}
+
+.css-b8ldur-Input {
+  margin: 0 !important;;
+  padding-bottom: 0 !important;;
+  height: 100% !important;
 }

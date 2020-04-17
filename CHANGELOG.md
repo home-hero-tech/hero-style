@@ -532,3 +532,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - WYSIWYG component.
 - Small props in Card component.
+
+## [1.0.154] - 2020-04-15
+### Changed
+- Background color in options from Select component and some improvements on its.
