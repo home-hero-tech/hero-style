@@ -48,7 +48,7 @@ ShapeAction.propTypes = {
   isButton: PropTypes.bool,
   isLink: PropTypes.bool,
   shape: PropTypes.oneOf(['squared', 'rounded']),
-  size: PropTypes.oneOf([1, 2, 3, 4]),
+  size: PropTypes.oneOf([0, 1, 2, 3, 4]),
   submit: PropTypes.bool,
   type: PropTypes.oneOf(['primary', 'success', 'danger', 'gray-light', 'white'])
 };
