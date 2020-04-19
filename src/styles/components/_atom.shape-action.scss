@@ -86,8 +86,8 @@
 
   &--size-0 {
     font-size: 12px !important;
-    height: $shape-action-height - $space-1;
-    width: $shape-action-width - $space-1;
+    height: $shape-action-height - 12px;
+    width: $shape-action-width - 12px;
     border-radius: $space-0;
 
     svg {

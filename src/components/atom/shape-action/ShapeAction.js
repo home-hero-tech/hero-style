@@ -20,7 +20,7 @@ const ShapeAction = ({
     [css[`c-shape-action--${type}`]]: type,
     [css[`c-shape-action--fill-${fill}`]]: fill,
     [css[`c-shape-action--${shape}`]]: shape,
-    [css[`c-shape-action--size-${size}`]]: size
+    [css[`c-shape-action--size-${size}`]]: size !== null || size !== undefined
   });
 
   if (isButton && !isLink) {

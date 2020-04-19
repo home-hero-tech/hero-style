@@ -94,6 +94,9 @@ export const renderAction = () => (
 
 export const sizes = () => (
   <Wrapper>
+    <ShapeAction isButton fill="primary" shape="squared" size={0}>
+      <FontAwesomeIcon icon={faLayerGroup} />
+    </ShapeAction>
     <ShapeAction isButton fill="primary" shape="rounded" size={1}>
       <FontAwesomeIcon icon={faLayerGroup} />
     </ShapeAction>
