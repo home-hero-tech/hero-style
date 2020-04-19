@@ -84,27 +84,54 @@
     border: solid 1px $color-danger;
   }
 
+  &--size-0 {
+    font-size: 12px !important;
+    height: $shape-action-height - $space-1;
+    width: $shape-action-width - $space-1;
+    border-radius: $space-0;
+
+    svg {
+      font-size: 12px !important;
+    }
+  }
+
   &--size-1 {
     font-size: 12px !important;
     height: $shape-action-height - 6px;
     width: $shape-action-width - 6px;
+
+    svg {
+      font-size: 12px !important;
+    }
   }
 
   &--size-2 {
     font-size: 12px !important;
     height: $shape-action-height - 4px;
     width: $shape-action-width - 4px;
+
+    svg {
+      font-size: 12px !important;
+    }
   }
 
   &--size-3 {
     font-size: 14px !important;
     height: $shape-action-height - 2px;
     width: $shape-action-width - 2px;
+
+    svg {
+      font-size: 14px !important;
+    }
   }
 
   &--size-4 {
     font-size: 16px !important;
     height: $shape-action-height;
     width: $shape-action-width;
+
+    svg {
+      font-size: 16px !important;
+    }
   }
 }
