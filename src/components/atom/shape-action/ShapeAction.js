@@ -20,7 +20,7 @@ const ShapeAction = ({
     [css[`c-shape-action--${type}`]]: type,
     [css[`c-shape-action--fill-${fill}`]]: fill,
     [css[`c-shape-action--${shape}`]]: shape,
-    [css[`c-shape-action--size-${size}`]]: size
+    [css[`c-shape-action--size-${size}`]]: size !== null || size !== undefined
   });
 
   if (isButton && !isLink) {
@@ -48,7 +48,7 @@ ShapeAction.propTypes = {
   isButton: PropTypes.bool,
   isLink: PropTypes.bool,
   shape: PropTypes.oneOf(['squared', 'rounded']),
-  size: PropTypes.oneOf([1, 2, 3, 4]),
+  size: PropTypes.oneOf([0, 1, 2, 3, 4]),
   submit: PropTypes.bool,
   type: PropTypes.oneOf(['primary', 'success', 'danger', 'gray-light', 'white'])
 };

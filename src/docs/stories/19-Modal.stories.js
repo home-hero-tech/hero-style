@@ -37,6 +37,7 @@ export const emptyModal = () => {
         open={open}
         contentLabel="With Actions EmptyModal"
         onRequestClose={() => toggleOpen(false)}
+        onCancel={() => toggleOpen(false)}
       >
         Test
       </Modal>
