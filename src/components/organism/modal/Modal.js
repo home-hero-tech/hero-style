@@ -5,6 +5,8 @@ import classNames from 'classnames';
 
 import css from './Modal.module.scss';
 
+import CloseButton from './CloseButton';
+
 ReactModal.setAppElement('#root');
 
 const Modal = ({
@@ -17,6 +19,7 @@ const Modal = ({
   contentLabel,
   widthLevel,
   hasPadding,
+  onCancel,
   ...otherProps
 }) => {
   const classes = classNames({
@@ -48,6 +51,7 @@ const Modal = ({
       onRequestClose={onRequestClose}
       {...otherProps}
     >
+      {onCancel ? <CloseButton onClick={onCancel} /> : null}
       {children}
     </ReactModal>
   );
