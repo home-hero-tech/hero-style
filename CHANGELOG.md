@@ -539,8 +539,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [1.0.160] - 2020-04-15
 ### Changed
-- Added props to remove animation and to destroy inactived panel
+- Added props to remove animation and to destroy the inactivated panel.
 
 ## [1.0.161] - 2020-04-15
 ### Changed
 - Some improvements to fix console errors on DS, components without scroll, etc.
+
+## [1.0.170] - 2020-04-20
+### Added
+- Button to close the Modal.
