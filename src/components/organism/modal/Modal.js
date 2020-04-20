@@ -66,6 +66,7 @@ Modal.propTypes = {
   contentLabel: PropTypes.string.isRequired,
   left: PropTypes.bool,
   onRequestClose: PropTypes.func,
+  onCancel: PropTypes.func,
   open: PropTypes.bool.isRequired,
   center: PropTypes.bool,
   right: PropTypes.bool,
@@ -78,6 +79,7 @@ Modal.defaultProps = {
   right: true,
   hasPadding: true,
   onRequestClose: null,
+  onCancel: null,
   widthLevel: 1,
   center: false
 };
