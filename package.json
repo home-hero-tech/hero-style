@@ -1,6 +1,6 @@
 {
   "name": "@homehero/hero-style",
-  "version": "1.0.172",
+  "version": "1.0.173",
   "main": "dist/index.js",
   "browser": "dist/index.umd.js",
   "module": "dist/index.es.js",

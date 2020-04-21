@@ -2,7 +2,7 @@
   width: 100%;
   display: none;
 
-  &--open > &__content {
+  &--open {
     display: block;
   }
 }
