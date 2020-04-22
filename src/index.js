@@ -4,8 +4,6 @@ import { Col, Row } from 'react-flexbox-grid';
 // Tabs
 import { Tab, TabList, TabPanel } from 'react-tabs';
 import Tabs from './components/molecule/tabs/Tabs';
-import ScrollableTabs from './components/molecule/tabs/ScrollableTabs';
-import { TabPane as ScrollablePanel } from 'rc-tabs';
 
 // UI
 // atoms
@@ -97,8 +95,6 @@ export {
   ModalFooter,
   ModalHeader,
   Pagination,
-  ScrollableTabs,
-  ScrollablePanel,
   Select,
   ShapeAction,
   Spacer,

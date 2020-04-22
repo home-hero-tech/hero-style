@@ -548,3 +548,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.0.170] - 2020-04-20
 ### Added
 - Button to close the Modal.
+
+## [1.0.175] - 2020-04-20
+### Added
+- Dark theme for Default Tab
+
+### Removed
+- Scrollable Tabs (rc-tabs) and their children.
