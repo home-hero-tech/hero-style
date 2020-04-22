@@ -11,8 +11,9 @@
   :global {
     .react-tabs__tab-list {
       border-bottom: none;
-      margin: 0;
       transition: all .3s ease-in-out;
+      padding: 0 $space-4;
+      margin: 0;
 
       @include mq($until: tablet) {
         display: block;
