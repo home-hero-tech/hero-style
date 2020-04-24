@@ -130,6 +130,10 @@
       overflow: hidden;
     }
 
+    &__placeholder {
+      font-weight: 300;
+    }
+
     &__option {
       cursor: pointer !important;
       transition: all .3s ease-in-out;

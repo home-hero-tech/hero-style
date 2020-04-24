@@ -555,3 +555,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Removed
 - Scrollable Tabs (rc-tabs) and their children.
+
+## [1.0.178] - 2020-04-20
+### Changed
+- Fixed wrong colors, font weights and css improvements.
