@@ -5,7 +5,6 @@ import css from './Label.module.scss';
 
 const Label = ({ name, small, children }) => {
   const classes = classNames({
-    [css['c-label']]: true,
     [css['c-label--small']]: !!small
   });
 
@@ -17,7 +16,11 @@ const Label = ({ name, small, children }) => {
 };
 
 Label.propTypes = {
-  children: PropTypes.string.isRequired,
+  children: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.object,
+    PropTypes.array
+  ]).isRequired,
   name: PropTypes.string,
   small: PropTypes.bool
 };
@@ -26,5 +29,7 @@ Label.defaultProps = {
   name: null,
   small: false
 };
+
+Label.displayName = 'Label';
 
 export default Label;

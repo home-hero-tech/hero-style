@@ -36,6 +36,25 @@ export const Default = () => (
     </FormGroup>
   </div>
 );
+
+export const Small = () => (
+  <div style={_style}>
+    <FormGroup>
+      <Label name="ipt" small>
+        Label
+      </Label>
+      <Input
+        small
+        id="ipt"
+        name="ipt"
+        type="text"
+        placeholder="Placeholder text"
+        value=""
+      />
+    </FormGroup>
+  </div>
+);
+
 export const Message = () => (
   <div style={_style}>
     <FormGroup>
