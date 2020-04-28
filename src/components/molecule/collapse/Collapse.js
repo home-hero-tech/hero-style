@@ -10,11 +10,11 @@ const Collapse = ({ isOpen, children }) => {
     [css['c-collapse--open']]: isOpen
   });
 
-  return (
+  return isOpen ? (
     <div className={classes}>
       <div className={css[`c-collapse__content`]}>{children}</div>
     </div>
-  );
+  ) : null;
 };
 
 Collapse.propTypes = {

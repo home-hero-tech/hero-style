@@ -548,3 +548,29 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.0.170] - 2020-04-20
 ### Added
 - Button to close the Modal.
+
+## [1.0.175] - 2020-04-20
+### Added
+- Dark theme for Default Tab
+
+### Removed
+- Scrollable Tabs (rc-tabs) and their children.
+
+## [1.0.178] - 2020-04-20
+### Changed
+- Fixed wrong colors, font weights and css improvements.
+
+## [1.0.179] - 2020-04-27
+### Added
+- Display name for Label and Input components.
+
+### Changed
+- Label prop Types for children.
+
+## [1.0.180] - 2020-04-28
+### Added
+- New props for Button.
+
+## [1.0.180] - 2020-04-28
+### Removed
+- Useless css lines.

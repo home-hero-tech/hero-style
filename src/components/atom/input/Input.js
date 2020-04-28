@@ -90,4 +90,6 @@ Input.defaultProps = {
   parentRef: null
 };
 
+Input.displayName = 'Input';
+
 export default Input;

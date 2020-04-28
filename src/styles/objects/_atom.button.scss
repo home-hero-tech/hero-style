@@ -13,8 +13,6 @@
   white-space: nowrap;
   width: min-content;
   background-position: center;
-  flex-direction: column;
-  justify-content: center;
   transition: transform .5s;
 
   &:active {
@@ -77,6 +75,10 @@
       border: none;
       background: transparent;
     }
+  }
+
+  &--no-shadow {
+    box-shadow: none;
   }
 
   &:disabled {

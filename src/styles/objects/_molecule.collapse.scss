@@ -1,11 +1,8 @@
 .c-collapse {
   width: 100%;
+  display: none;
 
-  &__content {
-    display: none;
-  }
-
-  &--open > &__content {
+  &--open {
     display: block;
   }
 }

@@ -40,7 +40,7 @@ export const Sizes = () => (
 );
 
 export const Types = () => (
-  <Wrapper style={{ ..._wrapperStyle, width: 630 }}>
+  <Wrapper style={{ ..._wrapperStyle, maxWidth: '100%' }}>
     <Button disabled onClick={action('clicked')}>
       Disabled
     </Button>
@@ -58,6 +58,9 @@ export const Types = () => (
     </Button>
     <Button type="success" onClick={action('clicked')}>
       Success
+    </Button>
+    <Button type="default" noShadow onClick={action('clicked')}>
+      No Shadow
     </Button>
   </Wrapper>
 );
