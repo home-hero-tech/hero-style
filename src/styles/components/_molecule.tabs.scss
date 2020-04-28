@@ -8,12 +8,37 @@
 .c-tabs {
   font-family: $font-family;
 
+  /* Let's get this party started */
+  ::-webkit-scrollbar {
+    height: 4px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+      -webkit-border-radius: 10px;
+      border-radius: 10px;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+      -webkit-border-radius: 10px;
+      border-radius: 10px;
+      background: $color-structural-gray-500;
+  }
+  ::-webkit-scrollbar-thumb:window-inactive {
+      background: $color-structural-gray-500;
+  }
+
   :global {
     .react-tabs__tab-list {
       border-bottom: none;
       transition: all .3s ease-in-out;
       padding: 0 $space-4;
       margin: 0;
+      display: block;
+      overflow: auto hidden;
+      width: 100%;
+      white-space: nowrap;
 
       @include mq($until: tablet) {
         display: block;
@@ -32,6 +57,7 @@
       height: 36px;
       color: $color-brand-gray-200;
       position: relative;
+      margin-bottom: 3px;
 
       display: flex;
       align-items: center;
@@ -85,6 +111,14 @@
   }
 
   &--dark {
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+        background: $color-brand-gray-200;
+    }
+    ::-webkit-scrollbar-thumb:window-inactive {
+        background: $color-brand-gray-200;
+    }
+
     :global {
       .react-tabs__tab-list {
         background: $gradient-brand-gray-300-100-315;
