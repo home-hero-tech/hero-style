@@ -48,13 +48,16 @@
 
     :global {
       .c-select {
-        &__control {
-          border-color: $color-danger !important;
-
-          &:hover,
-          &--is-focused,
-          &--is-selected {
+        &--default, &--small {
+          &__control,
+          &__menu {
             border-color: $color-danger !important;
+
+            &:hover,
+            &--is-focused,
+            &--is-selected {
+              border-color: $color-danger !important;
+            }
           }
         }
       }

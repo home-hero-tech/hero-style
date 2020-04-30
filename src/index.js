@@ -27,6 +27,7 @@ import Select from './components/atom/select/Select';
 import ShapeAction from './components/atom/shape-action/ShapeAction';
 import Text from './components/atom/text/Text';
 import MaskedInput from './components/atom/masked-input/MaskedInput';
+import * as mask from './components/atom/masked-input/masks';
 
 // molecules
 import Card from './components/molecule/card/Card';
@@ -90,6 +91,7 @@ export {
   ListItem,
   Loader,
   MaskedInput,
+  mask,
   Modal,
   ModalContent,
   ModalFooter,
