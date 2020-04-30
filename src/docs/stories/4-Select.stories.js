@@ -20,7 +20,6 @@ export const Default = () => (
   <Select
     options={options}
     placeholder={placeholder}
-    noOptionsMessage={noOptionsMessage}
     value={options[3]}
   />
 );
