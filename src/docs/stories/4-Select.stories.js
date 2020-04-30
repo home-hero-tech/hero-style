@@ -17,12 +17,7 @@ const placeholder = 'Selecione...';
 const noOptionsMessage = () => 'Nenhuma opção';
 
 export const Default = () => (
-  <Select
-    options={options}
-    placeholder={placeholder}
-    noOptionsMessage={noOptionsMessage}
-    value={options[3]}
-  />
+  <Select options={options} placeholder={placeholder} value={options[3]} />
 );
 
 export const Dark = () => (

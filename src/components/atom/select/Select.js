@@ -83,7 +83,7 @@ Select.defaultProps = {
   onChange: f => f,
   options: null,
   placeholder: 'Selecionar',
-  noOptionsMessage: f => f,
+  noOptionsMessage: () => 'Nenhuma opção',
   value: null
 };
 
