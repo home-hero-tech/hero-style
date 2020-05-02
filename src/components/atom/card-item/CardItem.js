@@ -6,8 +6,9 @@ import classNames from 'classnames';
 import css from './CardItem.module.scss';
 
 import EmptyCardItem from '../empty-card-item/EmptyCardItem';
+import Tooltip from '../../molecule/tooltip/Tooltip';
 
-const CardItem = ({ format, label, leftIcon, value, small, ...otherProps }) => {
+const CardItem = ({ format, label, leftIcon, value, small, tooltip, ...otherProps }) => {
   const valueClasses = classNames({
     [css['c-card-item__value']]: true,
     [css['c-card-item__value--small']]: !!small,
@@ -20,15 +21,22 @@ const CardItem = ({ format, label, leftIcon, value, small, ...otherProps }) => {
     [css.truncate]: true
   });
 
-  const renderContent = (_label, _value, _leftIcon) => (
+  const renderContent = (_label, _value, _leftIcon, tooltip) => (
     <>
       {_leftIcon || null}
       <div className={css['c-card-item__content']}>
         {_label ? <span className={labelClasses}>{_label}</span> : null}
         {_value ? (
-          <span className={valueClasses}>
-            {_value instanceof Date ? moment(_value).format(format) : _value}
-          </span>
+          tooltip ? (
+              <span className={valueClasses}>
+                {_value instanceof Date ? moment(_value).format(format)
+                  : <Tooltip description={tooltip} position="bottom-start" animation="perspective">{_value}</Tooltip>}
+              </span>
+          ) : (
+            <span className={valueClasses}>
+              {_value instanceof Date ? moment(_value).format(format) : _value}
+            </span>
+          )
         ) : null}
       </div>
     </>
@@ -36,7 +44,7 @@ const CardItem = ({ format, label, leftIcon, value, small, ...otherProps }) => {
 
   return (
     <EmptyCardItem small={small} {...otherProps}>
-      {renderContent(label, value, leftIcon)}
+      {renderContent(label, value, leftIcon, tooltip)}
     </EmptyCardItem>
   );
 };
@@ -61,7 +69,8 @@ CardItem.propTypes = {
     PropTypes.string,
     PropTypes.instanceOf(Date),
     PropTypes.number
-  ])
+  ]),
+  tooltip: PropTypes.string
 };
 
 CardItem.defaultProps = {
@@ -80,7 +89,8 @@ CardItem.defaultProps = {
   svgWhite: false,
   valPrimary: false,
   valWhite: false,
-  value: null
+  value: null,
+  tooltip: null
 };
 
 CardItem.displayName = 'CardItem';
