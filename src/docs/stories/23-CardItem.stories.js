@@ -1,12 +1,12 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLayerGroup } from '@fortawesome/pro-light-svg-icons';
+import { Grid, Row } from 'react-flexbox-grid';
 import ListItem from '../../components/atom/list-item/ListItem';
 import List from '../../components/molecule/list/List';
 import Card from '../../components/molecule/card/Card';
 import CardItem from '../../components/atom/card-item/CardItem';
 import CardBody from '../../components/atom/card-body/CardBody';
-import { Grid, Row } from 'react-flexbox-grid';
 
 import Wrapper from '../../helpers/wrapper/Wrapper';
 
@@ -35,7 +35,13 @@ export const WithColumns = () => (
       <CardBody>
         <Row style={{ margin: 0 }}>
           <CardItem value="Default" label="Default" md={2} />
-          <CardItem value="Default text long to break spaces with more text to realy break" label="Default" md={2} ellipsis tooltip="teste do tooltips" />
+          <CardItem
+            value="Default text long to break spaces with more text to realy break"
+            label="Default"
+            md={2}
+            ellipsis
+            tooltip="teste do tooltips"
+          />
           <CardItem value="Default" label="Default" md={2} />
         </Row>
       </CardBody>

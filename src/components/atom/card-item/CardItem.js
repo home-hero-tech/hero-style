@@ -8,7 +8,15 @@ import css from './CardItem.module.scss';
 import EmptyCardItem from '../empty-card-item/EmptyCardItem';
 import Tooltip from '../../molecule/tooltip/Tooltip';
 
-const CardItem = ({ format, label, leftIcon, value, small, tooltip, ...otherProps }) => {
+const CardItem = ({
+  format,
+  label,
+  leftIcon,
+  value,
+  small,
+  tooltip,
+  ...otherProps
+}) => {
   const valueClasses = classNames({
     [css['c-card-item__value']]: true,
     [css['c-card-item__value--small']]: !!small,
@@ -21,22 +29,30 @@ const CardItem = ({ format, label, leftIcon, value, small, tooltip, ...otherProp
     [css.truncate]: true
   });
 
-  const renderContent = (_label, _value, _leftIcon, tooltip) => (
+  const RenderValue = (_value, _tooltip) =>
+    _tooltip ? (
+      <Tooltip
+        description={_tooltip}
+        position="bottom-start"
+        animation="perspective"
+      >
+        {_value}
+      </Tooltip>
+    ) : (
+      value
+    );
+
+  const renderContent = (_label, _value, _leftIcon, _tooltip) => (
     <>
       {_leftIcon || null}
       <div className={css['c-card-item__content']}>
         {_label ? <span className={labelClasses}>{_label}</span> : null}
         {_value ? (
-          tooltip ? (
-              <span className={valueClasses}>
-                {_value instanceof Date ? moment(_value).format(format)
-                  : <Tooltip description={tooltip} position="bottom-start" animation="perspective">{_value}</Tooltip>}
-              </span>
-          ) : (
-            <span className={valueClasses}>
-              {_value instanceof Date ? moment(_value).format(format) : _value}
-            </span>
-          )
+          <span className={valueClasses}>
+            {_value instanceof Date
+              ? RenderValue(moment(_value).format(format), _tooltip)
+              : RenderValue(_value, _tooltip)}
+          </span>
         ) : null}
       </div>
     </>
