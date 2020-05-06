@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { faPlane, faShip, faTruck } from '@fortawesome/pro-light-svg-icons';
 
-import BoxSelect from '../../components/molecule/box-select/BoxSelect';
+import CardSelect from '../../components/molecule/card-select/CardSelect';
 
 export default {
-  title: 'BoxSelect',
-  component: BoxSelect
+  title: 'CardSelect',
+  component: CardSelect
 };
 
 const options = [
@@ -33,21 +33,40 @@ export const Default = () => {
   const [selected, setSelected] = useState(options[0]);
   return (
     <div style={{ padding: 12, width: 800 }}>
-      <BoxSelect selected={selected} options={options} onChange={setSelected} />
-    </div>
-  );
-};
-
-export const Squared = () => {
-  const [selected, setSelected] = useState(options[0]);
-  return (
-    <div style={{ padding: 12, width: 500 }}>
-      <BoxSelect
+      <CardSelect
         noCheck
         selected={selected}
         options={options}
         onChange={setSelected}
-        shape="squared"
+      />
+    </div>
+  );
+};
+
+export const Small = () => {
+  const [selected, setSelected] = useState(options[0]);
+  return (
+    <div style={{ padding: 12, width: 500 }}>
+      <CardSelect
+        type="small"
+        selected={selected}
+        options={options}
+        onChange={setSelected}
+      />
+    </div>
+  );
+};
+
+export const Text = () => {
+  const [selected, setSelected] = useState(options[0]);
+  return (
+    <div style={{ padding: 12, width: 500 }}>
+      <CardSelect
+        type="text"
+        flex="col"
+        selected={selected}
+        options={options}
+        onChange={setSelected}
       />
     </div>
   );
