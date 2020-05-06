@@ -74,6 +74,7 @@
 
   form {
     height: 100%;
+    padding-bottom: $space-7;
   }
 
   &--pre-left {
@@ -155,7 +156,6 @@
   left: 0;
   right: 0;
   z-index: 9000;
-  position: absolute;
 
   &--left {
     left: 0;
