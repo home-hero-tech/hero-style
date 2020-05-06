@@ -575,6 +575,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Removed
 - Useless css lines.
 
-## [1.0.188] - 2020-04-28
+## [1.0.188] - 2020-05-06
+### Removed
+- Useless css lines to fix render bugs.
+
+## [1.0.189] - 2020-05-06
 ### Removed
 - Useless css lines to fix render bugs.

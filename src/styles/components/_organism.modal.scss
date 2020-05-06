@@ -112,12 +112,12 @@
   }
 
   &__heading ~ &__content {
-    margin: $space-3 0;
+    padding: 0 0 $space-6 0;
   }
 
   &__content {
     overflow: auto;
-    height: calc(100% - #{$modal-footer-height});
+    height: 100%;
   }
 
   &__actions {
