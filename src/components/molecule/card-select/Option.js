@@ -39,6 +39,7 @@ const Option = ({ index, selected, label, icon, type, onClick, noCheck }) => {
 };
 
 Option.propTypes = {
+  type: PropTypes.oneOf(['small', 'default']),
   index: PropTypes.number.isRequired,
   selected: PropTypes.bool.isRequired,
   label: PropTypes.string.isRequired,
@@ -48,6 +49,7 @@ Option.propTypes = {
 };
 
 Option.defaultProps = {
+  type: 'default',
   icon: null,
   onClick: f => f
 };
