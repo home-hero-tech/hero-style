@@ -31,6 +31,7 @@ import * as mask from './components/atom/masked-input/masks';
 
 // molecules
 import Card from './components/molecule/card/Card';
+import CardSelect from './components/molecule/card-select/CardSelect';
 import Collapse from './components/molecule/collapse/Collapse';
 import FilterHeader from './components/molecule/filter-header/FilterHeader';
 import FilterContent from './components/molecule/filter-content/FilterContent';
@@ -65,6 +66,7 @@ export {
   CardFooter,
   CardItem,
   CardLine,
+  CardSelect,
   Col,
   Collapse,
   DatePicker,
