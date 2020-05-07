@@ -1,0 +1,121 @@
+@import "../settings/settings";
+
+.c-card-select {
+  display: flex;
+  flex-wrap: wrap;
+
+  &--flex-row {
+    flex-direction: row;
+  }
+
+  &--flex-col {
+    flex-direction: column;
+  }
+}
+
+.c-text-option {
+  display: flex;
+  align-items: center;
+  background: $color-brand-primary-050;
+  color: $color-brand-primary-300;
+  padding: 10px $space-1;
+  margin: $space-1 $space-0;
+  border-radius: $radius-2;
+  font-size: 16px;
+  &:hover {
+    cursor: pointer;
+    border: 2px solid $color-brand-primary-300;
+    padding: 8px calc(#{$space-1} - 2px);
+  }
+
+  &--checked {
+    background: $color-brand-primary-300;
+    .c-text-option__title, .c-text-option__checkbox {
+      color: #fff;
+      font-weight: bold;
+    }
+    .c-text-option__checkbox {
+      border: 2px solid #50c9c3;
+      background: linear-gradient(90deg, rgb(80, 201, 195) 0%, rgb(150, 222, 218) 100%);
+    }
+  }
+
+  &__title {
+    padding: 0 $space-1;
+    color: $color-brand-primary-300;
+  }
+
+  &__checkbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    height: $space-3;
+    width: $space-3;
+    border-radius: $radius-4;
+    top: $space-1;
+    right: $space-1;
+    border: 2px solid $color-brand-primary-300;
+  }
+};
+
+.c-card-option {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 180px;
+  width: 180px;
+  padding: 6px;
+  margin: $space-1 $space-0;
+  border-radius: $radius-2;
+  background: $color-brand-primary-050;
+  color: $color-brand-primary-300;
+  font-size: $space-2;
+  font-weight: bold;
+  transition: .2s;
+  &:hover {
+    cursor: pointer;
+    border: 2px solid $color-brand-primary-300;
+    .c-card-option__checkbox {
+      top: $space-1 - 2;
+      right: $space-1 - 2;
+      transition: .2s;
+    }
+  }
+
+  &--small {
+    height: 90px;
+  }
+
+  &__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 50px;
+  }
+
+  &__checkbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    height: $space-3;
+    width: $space-3;
+    border-radius: $radius-4;
+    top: $space-1;
+    right: $space-1;
+    border: 2px solid $color-brand-primary-300;
+  }
+
+  &--checked {
+    background: $color-brand-primary-300;
+    color: #fff;
+    .c-card-option__checkbox {
+      border: 2px solid #50c9c3;
+      background: linear-gradient(90deg, rgb(80, 201, 195) 0%, rgb(150, 222, 218) 100%);
+    }
+  }
+}
