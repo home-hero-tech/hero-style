@@ -19,7 +19,7 @@
   background: $color-brand-primary-050;
   color: $color-brand-primary-300;
   padding: 10px $space-1;
-  margin: $space-1;
+  margin: $space-1 $space-0;
   border-radius: $radius-2;
   font-size: 16px;
   &:hover {
@@ -68,7 +68,7 @@
   height: 180px;
   width: 180px;
   padding: 6px;
-  margin: 8px 16px;
+  margin: $space-1 $space-0;
   border-radius: $radius-2;
   background: $color-brand-primary-050;
   color: $color-brand-primary-300;
