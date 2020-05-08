@@ -1,4 +1,5 @@
 @import "../settings/settings";
+@import "../tools/tools";
 
 .c-card-select {
   display: flex;
@@ -19,7 +20,7 @@
   background: $color-brand-primary-050;
   color: $color-brand-primary-300;
   padding: 10px $space-1;
-  margin: $space-1;
+  margin: $space-1 $space-0;
   border-radius: $radius-2;
   font-size: 16px;
   &:hover {
@@ -68,7 +69,7 @@
   height: 180px;
   width: 180px;
   padding: 6px;
-  margin: 8px 16px;
+  margin: $space-1 $space-0;
   border-radius: $radius-2;
   background: $color-brand-primary-050;
   color: $color-brand-primary-300;
@@ -117,5 +118,10 @@
       border: 2px solid #50c9c3;
       background: linear-gradient(90deg, rgb(80, 201, 195) 0%, rgb(150, 222, 218) 100%);
     }
+  }
+
+  @include mq($until: tablet) {
+    height: 160px;
+    width: 160px;
   }
 }
