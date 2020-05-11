@@ -579,3 +579,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Removed
 - Useless css lines to fix render bugs.
 
+## [1.0.197] - 2020-05-11
+### Added
+- Icons in Input component.

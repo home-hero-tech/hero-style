@@ -1,7 +1,10 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLink } from '@fortawesome/pro-light-svg-icons';
+
 import FormGroup from '../../components/molecule/form-group/FormGroup';
-import Label from '../../components/atom/label/Label';
 import Input from '../../components/atom/input/Input';
+import Label from '../../components/atom/label/Label';
 import Select from '../../components/atom/select/Select';
 
 export default {
@@ -32,6 +35,22 @@ export const Default = () => (
         type="text"
         placeholder="Placeholder text"
         value=""
+      />
+    </FormGroup>
+  </div>
+);
+
+export const WithIcon = () => (
+  <div style={_style}>
+    <FormGroup>
+      <Label name="ipt">Label</Label>
+      <Input
+        id="ipt"
+        name="ipt"
+        type="text"
+        placeholder="Placeholder text"
+        value=""
+        icon={<FontAwesomeIcon icon={faLink} />}
       />
     </FormGroup>
   </div>

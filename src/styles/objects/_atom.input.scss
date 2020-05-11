@@ -1,5 +1,35 @@
 @import '../settings/settings';
 
+.c-input-wrapper {
+  position: relative;
+
+  &__icon {
+    svg {
+      position: absolute;
+      content: '';
+      top: calc(#{$input-height} - 70%);
+      color: currentColor;
+      left: $space-2;
+    }
+
+    &--small {
+      svg {
+        top: calc(#{$input-height-small} - 80%);
+        left: $space-1 * 1.5;
+        font-size: $font-size-sm;
+      }
+    }
+  }
+
+  &__icon .c-input {
+    padding: 0 $space-2 0 $space-5;
+  }
+
+  &__icon--small .c-input {
+    padding: 0 $space-2 0 $space-4;
+  }
+}
+
 .c-input {
   width: 100%;
   height: $input-height;

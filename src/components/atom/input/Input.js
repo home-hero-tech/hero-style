@@ -15,6 +15,7 @@ const Input = ({
   dark,
   parentRef,
   small,
+  icon,
   ...otherProps
 }) => {
   const isCheckOrRadio = type === 'checkbox' || type === 'radio';
@@ -29,32 +30,43 @@ const Input = ({
     [css['c-input--small']]: small && !isCheckOrRadio
   });
 
-  return defaultValue ? (
-    <input
-      className={classes}
-      id={id}
-      name={name}
-      type={type}
-      placeholder={placeholder}
-      defaultValue={defaultValue}
-      onChange={onChange}
-      disabled={disabled}
-      ref={parentRef}
-      {...otherProps}
-    />
-  ) : (
-    <input
-      className={classes}
-      id={id}
-      name={name}
-      type={type}
-      placeholder={placeholder}
-      value={value}
-      onChange={onChange}
-      disabled={disabled}
-      ref={parentRef}
-      {...otherProps}
-    />
+  const classesWrapper = classNames({
+    [css['c-input-wrapper']]: true,
+    [css['c-input-wrapper__icon']]: !!icon,
+    [css['c-input-wrapper__icon--small']]: !!small
+  });
+
+  return (
+    <div className={classesWrapper}>
+      {icon || null}
+      {defaultValue ? (
+        <input
+          className={classes}
+          id={id}
+          name={name}
+          type={type}
+          placeholder={placeholder}
+          defaultValue={defaultValue}
+          onChange={onChange}
+          disabled={disabled}
+          ref={parentRef}
+          {...otherProps}
+        />
+      ) : (
+        <input
+          className={classes}
+          id={id}
+          name={name}
+          type={type}
+          placeholder={placeholder}
+          value={value}
+          onChange={onChange}
+          disabled={disabled}
+          ref={parentRef}
+          {...otherProps}
+        />
+      )}
+    </div>
   );
 };
 
@@ -73,7 +85,8 @@ Input.propTypes = {
   disabled: PropTypes.bool,
   small: PropTypes.bool,
   dark: PropTypes.bool,
-  parentRef: PropTypes.func
+  parentRef: PropTypes.func,
+  icon: PropTypes.instanceOf(Object)
 };
 
 Input.defaultProps = {
@@ -87,7 +100,8 @@ Input.defaultProps = {
   disabled: null,
   small: null,
   dark: null,
-  parentRef: null
+  parentRef: null,
+  icon: null
 };
 
 Input.displayName = 'Input';

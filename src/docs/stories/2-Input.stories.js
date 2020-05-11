@@ -1,6 +1,8 @@
 import React from 'react';
 import { action } from '@storybook/addon-actions';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLink } from '@fortawesome/pro-light-svg-icons';
 import Wrapper from '../../helpers/wrapper/Wrapper';
 import Input from '../../components/atom/input/Input';
 import MaskedInput from '../../components/atom/masked-input/MaskedInput';
@@ -29,6 +31,18 @@ export const Default = () => (
   </div>
 );
 
+export const WithIcon = () => (
+  <div style={_style}>
+    <Input
+      placeholder="placeholder text"
+      id="ipt"
+      name="ipt"
+      value=""
+      icon={<FontAwesomeIcon icon={faLink} />}
+    />
+  </div>
+);
+
 export const DefaultDisabled = () => (
   <div style={_style}>
     <Input
@@ -44,6 +58,19 @@ export const DefaultDisabled = () => (
 export const DefaultSmall = () => (
   <div style={_style}>
     <Input placeholder="Placeholder" id="ipt" name="ipt" value="" small />
+  </div>
+);
+
+export const DefaultSmallWithIcon = () => (
+  <div style={_style}>
+    <Input
+      placeholder="Placeholder"
+      id="ipt"
+      name="ipt"
+      value=""
+      small
+      icon={<FontAwesomeIcon icon={faLink} />}
+    />
   </div>
 );
 
