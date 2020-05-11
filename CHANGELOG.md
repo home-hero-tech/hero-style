@@ -594,3 +594,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.0.200] - 2020-05-11
 ### Changed
 - Fixed wrong colors and font weights in Input and Select components.
+
+## [1.0.201] - 2020-05-11
+### Changed
+- Padding from Select.

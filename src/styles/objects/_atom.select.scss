@@ -251,7 +251,7 @@
   // icons
   &--with-icon {
     &__value-container {
-      padding: 0 $space-5 !important;
+      padding: 0 $space-5 0 calc(#{$space-5} - 2px) !important;
     }
   }
 
