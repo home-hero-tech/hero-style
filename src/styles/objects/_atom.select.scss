@@ -42,7 +42,7 @@
     &__control,
     &__menu {
       background-color: $color-structural-white !important;
-      border-color: $color-brand-gray-100 !important;
+      border-color: $color-brand-gray-200 !important;
       min-height: $input-height !important;
 
       &:hover,
@@ -257,7 +257,7 @@
 
   &--with-icon--small {
     &__value-container {
-      padding: 0 $space-4 !important;
+      padding: 0 $space-4 0 calc(#{$space-4} - 2px) !important;
     }
   }
 }
