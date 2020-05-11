@@ -48,6 +48,10 @@
     color: $color-warning;
   }
 
+  &--gray-light {
+    color: $color-brand-gray-300;
+  }
+
   &--ellipsis {
     white-space: nowrap;
     overflow: hidden;

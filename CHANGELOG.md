@@ -582,3 +582,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.0.197] - 2020-05-11
 ### Added
 - Icons in Input component.
+
+## [1.0.198] - 2020-05-11
+### Added
+- Gray Light color in Text component.
