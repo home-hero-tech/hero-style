@@ -1,13 +1,49 @@
 @import '../settings/settings';
 
+.c-select-wrapper {
+  position: relative;
+
+  &__icon {
+    svg {
+      position: absolute;
+      content: '';
+      top: calc(#{$input-height} - 70%);
+      color: currentColor;
+      left: $space-2;
+
+      z-index: 2;
+    }
+
+    &--small {
+      svg {
+        top: calc(#{$input-height-small} - 80%);
+        left: $space-1 * 1.5;
+        font-size: $font-size-sm;
+      }
+    }
+  }
+
+  &__icon .c-select--default__value-container {
+    margin: 30px !important;
+    padding-left: 50px !important;
+    background-color: red !important;
+  }
+
+  &__icon--small .c-select {
+    background-color: red;
+    padding: 0 $space-2 0 $space-4;
+  }
+}
+
 .c-select {
   width: 100%;
 
-  &--default, &--small {
+  &--default, &--small, &--with-icon {
     &__control,
     &__menu {
       background-color: $color-structural-white !important;
       border-color: $color-brand-gray-100 !important;
+      min-height: $input-height !important;
 
       &:hover,
       &--is-focused,
@@ -96,6 +132,8 @@
     }
   }
 
+  &--with-icon,
+  &--with-icon--small,
   &--small,
   &--small-dark,
   &--default,
@@ -174,7 +212,7 @@
     }
   }
 
-  &--small, &--small-dark {
+  &--small, &--small-dark, &--with-icon--small {
     &__control,
     &__menu {
       border-radius: $radius-2 !important;
@@ -207,6 +245,19 @@
       font-size: $font-size-sm;
       top: 11px !important;
       margin: 0 !important;
+    }
+  }
+
+  // icons
+  &--with-icon {
+    &__value-container {
+      padding: 0 $space-5 !important;
+    }
+  }
+
+  &--with-icon--small {
+    &__value-container {
+      padding: 0 $space-4 !important;
     }
   }
 }

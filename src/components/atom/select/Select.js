@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import RSelect from 'react-select';
 
+import classNames from 'classnames';
 import css from './Select.module.scss';
 
 const Select = ({
@@ -17,11 +18,16 @@ const Select = ({
   searchable,
   value,
   small,
+  icon,
   ...otherProps
 }) => {
   let selectClass = 'c-select';
 
-  if (dark && !small) {
+  if (icon && !small && !dark) {
+    selectClass = selectClass.concat('--with-icon');
+  } else if (icon && small) {
+    selectClass = selectClass.concat('--with-icon--small');
+  } else if (dark && !small) {
     selectClass = selectClass.concat('--dark');
   } else if (!dark && small) {
     selectClass = selectClass.concat('--small');
@@ -49,21 +55,33 @@ const Select = ({
     ...otherProps
   };
 
-  return <RSelect {...allProps} />;
+  const classesWrapper = classNames({
+    [css['c-select-wrapper']]: true,
+    [css['c-select-wrapper__icon']]: !!icon,
+    [css['c-select-wrapper__icon--small']]: !!small
+  });
+
+  return (
+    <div className={classesWrapper}>
+      {icon || null}
+      <RSelect {...allProps} />
+    </div>
+  );
 };
 
 Select.propTypes = {
   dark: PropTypes.bool,
-  small: PropTypes.bool,
-  id: PropTypes.string,
   firstMessage: PropTypes.func,
+  id: PropTypes.string,
+  icon: PropTypes.instanceOf(Object),
   multiple: PropTypes.bool,
   name: PropTypes.string,
-  searchable: PropTypes.bool,
   noOptionsMessage: PropTypes.func,
   onChange: PropTypes.func,
   options: PropTypes.instanceOf(Array),
   placeholder: PropTypes.string,
+  small: PropTypes.bool,
+  searchable: PropTypes.bool,
   value: PropTypes.oneOfType([
     PropTypes.array,
     PropTypes.object,
@@ -74,16 +92,17 @@ Select.propTypes = {
 
 Select.defaultProps = {
   dark: false,
-  small: false,
   id: null,
+  icon: null,
   firstMessage: () => 'Digite para buscar',
   multiple: false,
   name: null,
-  searchable: true,
+  noOptionsMessage: () => 'Nenhuma opção',
   onChange: f => f,
   options: null,
   placeholder: 'Selecionar',
-  noOptionsMessage: () => 'Nenhuma opção',
+  small: false,
+  searchable: true,
   value: null
 };
 

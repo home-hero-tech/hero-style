@@ -1,4 +1,6 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLink } from '@fortawesome/pro-light-svg-icons';
 import Select from '../../components/atom/select/Select';
 
 export default {
@@ -20,6 +22,15 @@ export const Default = () => (
   <Select options={options} placeholder={placeholder} value={options[3]} />
 );
 
+export const withIcon = () => (
+  <Select
+    options={options}
+    placeholder={placeholder}
+    value={options[3]}
+    icon={<FontAwesomeIcon icon={faLink} />}
+  />
+);
+
 export const Dark = () => (
   <Select
     options={options}
@@ -36,6 +47,16 @@ export const small = () => (
     placeholder={placeholder}
     noOptionsMessage={noOptionsMessage}
     small
+  />
+);
+
+export const smallWithIcon = () => (
+  <Select
+    options={options}
+    placeholder={placeholder}
+    noOptionsMessage={noOptionsMessage}
+    small
+    icon={<FontAwesomeIcon icon={faLink} />}
   />
 );
 
