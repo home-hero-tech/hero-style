@@ -56,14 +56,13 @@ const Select = ({
   };
 
   const classesWrapper = classNames({
-    [css['c-select-wrapper']]: true,
     [css['c-select-wrapper__icon']]: !!icon,
     [css['c-select-wrapper__icon--small']]: !!small
   });
 
   return (
-    <div className={classesWrapper}>
-      {icon || null}
+    <div className={css['c-select-wrapper']}>
+      <span className={classesWrapper}>{icon || null}</span>
       <RSelect {...allProps} />
     </div>
   );

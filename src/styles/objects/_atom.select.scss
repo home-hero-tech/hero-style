@@ -4,22 +4,18 @@
   position: relative;
 
   &__icon {
-    svg {
-      position: absolute;
-      content: '';
-      top: calc(#{$input-height} - 70%);
-      color: currentColor;
-      left: $space-2;
+    position: absolute;
+    content: '';
+    top: calc(#{$input-height} - 70%);
+    color: currentColor;
+    left: $space-2;
 
-      z-index: 2;
-    }
+    z-index: 2;
 
     &--small {
-      svg {
-        top: calc(#{$input-height-small} - 80%);
-        left: $space-1 * 1.5;
-        font-size: $font-size-sm;
-      }
+      top: calc(#{$input-height-small} - 80%);
+      left: $space-1 * 1.5;
+      font-size: $font-size-sm;
     }
   }
 
@@ -58,7 +54,7 @@
 
     &__single-value {
       color: $color-brand-gray-500 !important;
-      margin: 0!important;
+      margin: 0 !important;
     }
 
     &__menu-list {
