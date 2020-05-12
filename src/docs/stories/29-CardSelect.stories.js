@@ -57,6 +57,20 @@ export const Small = () => {
   );
 };
 
+export const Multiple = () => {
+  const [selected, setSelected] = useState([]);
+  return (
+    <div style={{ padding: 12, width: 500 }}>
+      <CardSelect
+        multiple
+        selected={selected}
+        options={options}
+        onChange={setSelected}
+      />
+    </div>
+  );
+};
+
 export const Text = () => {
   const [selected, setSelected] = useState(options[0]);
   return (
