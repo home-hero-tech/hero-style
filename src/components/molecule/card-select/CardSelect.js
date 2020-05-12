@@ -10,6 +10,7 @@ import './CardSelect.scss';
 const CardSelect = ({
   type,
   selected,
+  multiple,
   options,
   onChange,
   className,
@@ -21,8 +22,23 @@ const CardSelect = ({
     'c-card-select--flex-row': flex === 'row'
   });
 
-  const handleChange = id => () => onChange(options.find(opt => opt.id === id));
-  const isSelected = opt => !!selected && selected.value === opt.value;
+  const isSelected = opt => {
+    if (!selected) return false;
+    return multiple
+      ? selected.map(x => x.value).includes(opt.value)
+      : selected.value === opt.value;
+  };
+
+  const handleChange = id => () => {
+    const option = options.find(opt => opt.id === id);
+    let changed = option;
+    if (multiple) {
+      changed = isSelected(option)
+        ? selected.filter(s => s.value !== option.value)
+        : selected.concat(option);
+    }
+    onChange(changed);
+  };
 
   const Option = type === 'text' ? TextOption : CardOption;
 
@@ -46,10 +62,18 @@ const CardSelect = ({
 CardSelect.propTypes = {
   type: PropTypes.oneOf(['small', 'default', 'text']),
   flex: PropTypes.oneOf(['row', 'col']),
-  selected: PropTypes.shape({
-    label: PropTypes.string,
-    value: PropTypes.any
-  }),
+  selected: PropTypes.oneOfType([
+    PropTypes.shape({
+      label: PropTypes.string,
+      value: PropTypes.any
+    }),
+    PropTypes.arrayOf(
+      PropTypes.shape({
+        label: PropTypes.string,
+        value: PropTypes.any
+      })
+    )
+  ]),
   options: PropTypes.arrayOf(
     PropTypes.shape({
       label: PropTypes.string,
@@ -58,6 +82,7 @@ CardSelect.propTypes = {
   ),
   className: PropTypes.string,
   noCheck: PropTypes.bool,
+  multiple: PropTypes.bool,
   onChange: PropTypes.func
 };
 
@@ -68,6 +93,7 @@ CardSelect.defaultProps = {
   options: [],
   className: '',
   noCheck: false,
+  multiple: false,
   onChange: f => f
 };
 

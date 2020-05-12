@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Form = ({ onSubmit, className, children }) => (
-  <form onSubmit={onSubmit} className={className} noValidate>
+const Form = ({ children, ...otherProps }) => (
+  <form noValidate {...otherProps}>
     {children}
   </form>
 );
@@ -13,12 +13,14 @@ Form.propTypes = {
     PropTypes.object,
     PropTypes.string
   ]).isRequired,
+  autoComplete: PropTypes.oneOf(['off', 'on']),
   onSubmit: PropTypes.func.isRequired,
   className: PropTypes.string
 };
 
 Form.defaultProps = {
-  className: null
+  className: null,
+  autoComplete: 'off'
 };
 
 export default Form;
