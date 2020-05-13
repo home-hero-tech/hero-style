@@ -23,11 +23,7 @@ const Option = ({ index, selected, label, icon, type, onClick, noCheck }) => {
       onKeyPress={handleKeyPress}
       tabIndex={0}
     >
-      {icon && (
-        <div className="c-card-option__icon">
-          <FontAwesomeIcon icon={icon} size="2x" />
-        </div>
-      )}
+      {icon && <div className="c-card-option__icon">{icon}</div>}
       <p className="c-card-option__title">{label}</p>
       {!noCheck && (
         <span className="c-card-option__checkbox">
