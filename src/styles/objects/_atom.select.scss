@@ -146,10 +146,6 @@
       color: red !important;
     }
 
-    &__indicator-separator {
-      background-color: transparent !important;
-      width: 0 !important;
-    }
 
     &__value-container {
       padding: 0 $space-2 !important;
@@ -182,9 +178,9 @@
     }
 
     &__indicator {
-      svg {
-        display: none;
-      }
+      //svg {
+      //  display: none;
+      //}
 
       &:after {
         content: '\f0dd';
@@ -205,6 +201,12 @@
     &__control,
     &__menu {
       min-height: 36px !important;
+    }
+
+    &__dropdown-indicator {
+      svg {
+        color: transparent;
+      }
     }
   }
 

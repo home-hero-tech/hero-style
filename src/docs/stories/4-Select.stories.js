@@ -19,7 +19,12 @@ const placeholder = 'Selecione...';
 const noOptionsMessage = () => 'Nenhuma opção';
 
 export const Default = () => (
-  <Select options={options} placeholder={placeholder} value={options[3]} />
+  <Select
+    options={options}
+    placeholder={placeholder}
+    value={options[3]}
+    isClearable
+  />
 );
 
 export const withIcon = () => (

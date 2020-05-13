@@ -19,6 +19,7 @@ const Select = ({
   value,
   small,
   icon,
+  isClearable,
   ...otherProps
 }) => {
   let selectClass = 'c-select';
@@ -50,6 +51,7 @@ const Select = ({
     options,
     onChange,
     placeholder,
+    isClearable,
     noOptionsMessage: ({ inputValue }) =>
       inputValue && inputValue.length ? noOptionsMessage() : firstMessage(),
     ...otherProps
@@ -86,7 +88,8 @@ Select.propTypes = {
     PropTypes.object,
     PropTypes.string,
     PropTypes.number
-  ])
+  ]),
+  isClearable: PropTypes.bool
 };
 
 Select.defaultProps = {
@@ -102,7 +105,8 @@ Select.defaultProps = {
   placeholder: 'Selecionar',
   small: false,
   searchable: true,
-  value: null
+  value: null,
+  isClearable: false
 };
 
 export default Select;
