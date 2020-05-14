@@ -33,7 +33,7 @@ const Input = ({
   const classesWrapper = classNames({
     [css['c-input-wrapper']]: true,
     [css['c-input-wrapper__icon']]: !!icon,
-    [css['c-input-wrapper__icon--small']]: !!small
+    [css['c-input-wrapper__icon--small']]: !!icon && !!small
   });
 
   return (
