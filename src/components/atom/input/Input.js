@@ -43,6 +43,7 @@ const Input = ({
         id={id}
         name={name}
         type={type}
+        value={value}
         placeholder={placeholder}
         onChange={onChange}
         disabled={disabled}

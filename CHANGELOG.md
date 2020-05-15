@@ -610,3 +610,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.0.208] - 2020-05-15
 ### Removed
 - Ternary in Input file to avoid console errors.
+
+## [1.0.209] - 2020-05-15
+### Added
+- Value like input props.
