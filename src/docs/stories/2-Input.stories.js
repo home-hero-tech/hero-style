@@ -193,9 +193,8 @@ export const Masked = () => {
 
   const handleChange = e => {
     const { value } = e.target;
-    console.log('target', value);
-    onChangeVal(value)
-  }
+    onChangeVal(value);
+  };
 
   return (
     <Wrapper style={_columnWrapperStyle}>
@@ -204,7 +203,6 @@ export const Masked = () => {
         placeholder="CPF Input"
         onChange={handleChange}
         value={val}
-        // defaultValue={{}}
       />
       <MaskedInput
         type="cnpj"
