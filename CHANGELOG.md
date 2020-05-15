@@ -602,3 +602,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.0.202] - 2020-05-11
 ### Add
 - Wrapper around icon render in Select to avoid multi select option render error.
+
+## [1.0.207] - 2020-05-15
+### Change
+- Input prop types from value.

@@ -95,7 +95,7 @@ Input.defaultProps = {
   onChange: f => f,
   placeholder: null,
   type: 'text',
-  value: null,
+  value: '',
   defaultValue: null,
   disabled: null,
   small: null,
