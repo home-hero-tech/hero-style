@@ -614,3 +614,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.0.209] - 2020-05-15
 ### Added
 - Value like input props.
+
+## [1.0.209] - 2020-05-15
+### Removed
+- Value and DefaultValue props from Input component.

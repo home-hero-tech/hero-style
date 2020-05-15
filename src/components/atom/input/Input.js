@@ -8,7 +8,6 @@ const Input = ({
   name,
   type,
   placeholder,
-  value,
   onChange,
   disabled,
   dark,
@@ -43,7 +42,6 @@ const Input = ({
         id={id}
         name={name}
         type={type}
-        value={value}
         placeholder={placeholder}
         onChange={onChange}
         disabled={disabled}
@@ -60,11 +58,6 @@ Input.propTypes = {
   onChange: PropTypes.func,
   placeholder: PropTypes.string,
   type: PropTypes.string,
-  value: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.number,
-    PropTypes.bool
-  ]),
   disabled: PropTypes.bool,
   small: PropTypes.bool,
   dark: PropTypes.bool,
@@ -78,7 +71,6 @@ Input.defaultProps = {
   onChange: f => f,
   placeholder: null,
   type: 'text',
-  value: '',
   disabled: null,
   small: null,
   dark: null,
