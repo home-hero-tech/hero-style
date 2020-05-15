@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { action } from '@storybook/addon-actions';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -188,40 +188,51 @@ export const RadioButtonDisabledUnselected = () => (
   />
 );
 
-export const Masked = () => (
-  <Wrapper style={_columnWrapperStyle}>
-    <MaskedInput
-      type="cnpj"
-      placeholder="CNPJ Input"
-      onChange={action('click')}
-      value=""
-    />
-    <MaskedInput
-      type="cpf"
-      placeholder="CPF Input"
-      onChange={action('click')}
-      value=""
-    />
-    <MaskedInput
-      type="phone"
-      placeholder="Phone Input"
-      onChange={action('click')}
-      value=""
-    />
-    <MaskedInput
-      type="zipCode"
-      placeholder="Zipcode Input"
-      onChange={action('click')}
-      value=""
-    />
-    <MaskedInput
-      type="currency"
-      placeholder="currency Input"
-      onChange={action('click')}
-      value=""
-    />
-  </Wrapper>
-);
+export const Masked = () => {
+  const [val, onChangeVal] = useState('');
+
+  const handleChange = e => {
+    const { value } = e.target;
+    console.log('target', value);
+    onChangeVal(value)
+  }
+
+  return (
+    <Wrapper style={_columnWrapperStyle}>
+      <MaskedInput
+        type="cpf"
+        placeholder="CPF Input"
+        onChange={handleChange}
+        value={val}
+        // defaultValue={{}}
+      />
+      <MaskedInput
+        type="cnpj"
+        placeholder="CNPJ Input"
+        onChange={action('click')}
+        value=""
+      />
+      <MaskedInput
+        type="phone"
+        placeholder="Phone Input"
+        onChange={action('click')}
+        value=""
+      />
+      <MaskedInput
+        type="zipCode"
+        placeholder="Zipcode Input"
+        onChange={action('click')}
+        value=""
+      />
+      <MaskedInput
+        type="currency"
+        placeholder="currency Input"
+        onChange={action('click')}
+        value=""
+      />
+    </Wrapper>
+  );
+};
 
 export const File = () => (
   <FileInput

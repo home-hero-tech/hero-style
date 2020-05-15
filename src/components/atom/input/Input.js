@@ -9,7 +9,6 @@ const Input = ({
   type,
   placeholder,
   value,
-  defaultValue,
   onChange,
   disabled,
   dark,
@@ -39,33 +38,17 @@ const Input = ({
   return (
     <div className={classesWrapper}>
       {icon || null}
-      {defaultValue ? (
-        <input
-          className={classes}
-          id={id}
-          name={name}
-          type={type}
-          placeholder={placeholder}
-          defaultValue={defaultValue}
-          onChange={onChange}
-          disabled={disabled}
-          ref={parentRef}
-          {...otherProps}
-        />
-      ) : (
-        <input
-          className={classes}
-          id={id}
-          name={name}
-          type={type}
-          placeholder={placeholder}
-          value={value}
-          onChange={onChange}
-          disabled={disabled}
-          ref={parentRef}
-          {...otherProps}
-        />
-      )}
+      <input
+        className={classes}
+        id={id}
+        name={name}
+        type={type}
+        placeholder={placeholder}
+        onChange={onChange}
+        disabled={disabled}
+        ref={parentRef}
+        {...otherProps}
+      />
     </div>
   );
 };
@@ -81,7 +64,6 @@ Input.propTypes = {
     PropTypes.number,
     PropTypes.bool
   ]),
-  defaultValue: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   disabled: PropTypes.bool,
   small: PropTypes.bool,
   dark: PropTypes.bool,
@@ -96,7 +78,6 @@ Input.defaultProps = {
   placeholder: null,
   type: 'text',
   value: '',
-  defaultValue: null,
   disabled: null,
   small: null,
   dark: null,

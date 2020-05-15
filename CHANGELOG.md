@@ -600,9 +600,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Padding from Select.
 
 ## [1.0.202] - 2020-05-11
-### Add
+### Added
 - Wrapper around icon render in Select to avoid multi select option render error.
 
 ## [1.0.207] - 2020-05-15
-### Change
+### Changed
 - Input prop types from value.
+
+## [1.0.208] - 2020-05-15
+### Removed
+- Ternary in Input file to avoid console errors.
