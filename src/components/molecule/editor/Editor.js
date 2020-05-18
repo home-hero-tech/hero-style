@@ -3,11 +3,13 @@ import PropTypes from 'prop-types';
 import ReactQuill from 'react-quill';
 import './Editor.scss';
 
-const Editor = ({ value, onChange, toolbar, ...otherProps }) => {
+const Editor = ({ value, modules, onChange, toolbar, ...otherProps }) => {
+  const optionsToolbar = modules || {};
+
   return (
     <div className="c-editor">
       <ReactQuill
-        modules={!toolbar ? { toolbar: null } : {}}
+        modules={!toolbar ? { toolbar: null } : { toolbar: optionsToolbar }}
         theme="snow"
         value={value}
         onChange={onChange}
@@ -20,12 +22,18 @@ const Editor = ({ value, onChange, toolbar, ...otherProps }) => {
 Editor.propTypes = {
   value: PropTypes.string,
   toolbar: PropTypes.bool,
-  onChange: PropTypes.func.isRequired
+  onChange: PropTypes.func.isRequired,
+  modules: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.object,
+    PropTypes.array
+  ])
 };
 
 Editor.defaultProps = {
   value: '',
-  toolbar: true
+  toolbar: true,
+  modules: null
 };
 
 export default Editor;

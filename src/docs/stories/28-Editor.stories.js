@@ -29,3 +29,15 @@ export const WithoutToolbar = () => {
     </Wrapper>
   );
 };
+
+export const SpecificToolbarItems = () => {
+  return (
+    <Wrapper>
+      <Editor
+        value={input}
+        modules={[['bold', 'italic', 'underline', 'link'], ['clean']]}
+        onChange={action('cancel')}
+      />
+    </Wrapper>
+  );
+};

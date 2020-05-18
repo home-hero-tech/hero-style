@@ -618,3 +618,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.0.209] - 2020-05-15
 ### Removed
 - Value and DefaultValue props from Input component.
+
+## [1.0.211] - 2020-05-18
+### Changed
+- Now it's possible to manipulate the toolbar icons by a props called 'modules'.
