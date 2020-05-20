@@ -600,5 +600,25 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Padding from Select.
 
 ## [1.0.202] - 2020-05-11
-### Add
+### Added
 - Wrapper around icon render in Select to avoid multi select option render error.
+
+## [1.0.207] - 2020-05-15
+### Changed
+- Input prop types from value.
+
+## [1.0.208] - 2020-05-15
+### Removed
+- Ternary in Input file to avoid console errors.
+
+## [1.0.209] - 2020-05-15
+### Added
+- Value like input props.
+
+## [1.0.209] - 2020-05-15
+### Removed
+- Value and DefaultValue props from Input component.
+
+## [1.0.211] - 2020-05-18
+### Changed
+- Now it's possible to manipulate the toolbar icons by a props called 'modules'.
