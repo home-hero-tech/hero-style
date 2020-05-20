@@ -77,51 +77,6 @@
     padding-bottom: $space-7;
   }
 
-  &--pre-left {
-    left: -100%;
-  }
-
-  &--pre-right {
-    right: -100%;
-  }
-
-  &--left {
-    left: 0;
-  }
-
-  &--right {
-    right: 0;
-  }
-
-  &--center {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-
-  &__heading {
-    margin-bottom: $space-2;
-
-    h3 {
-      font-weight: 300;
-      margin-bottom: $space-1;
-    }
-
-    p {
-      font-size: 14px;
-      color: $color-brand-gray-300;
-    }
-  }
-
-  &__heading ~ &__content {
-    padding: 0 0 $space-6 0;
-  }
-
-  &__content {
-    overflow: auto;
-    height: 100%;
-  }
-
   &__actions {
     position: absolute;
     content: '';
@@ -147,6 +102,56 @@
     @include mq($until: mobile) {
       padding: $space-1 $space-2;
     }
+  }
+
+  &--pre-left {
+    left: -100%;
+  }
+
+  &--pre-right {
+    right: -100%;
+  }
+
+  &--left {
+    left: 0;
+  }
+
+  &--right {
+    right: 0;
+  }
+
+  &--center {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: $radius-5;
+    .c-modal__actions {
+      border-bottom-left-radius: $radius-5;
+      border-bottom-right-radius: $radius-5;
+    }
+  }
+
+  &__heading {
+    margin-bottom: $space-2;
+
+    h3 {
+      font-weight: 300;
+      margin-bottom: $space-1;
+    }
+
+    p {
+      font-size: 14px;
+      color: $color-brand-gray-300;
+    }
+  }
+
+  &__heading ~ &__content {
+    padding: 0 0 $space-6 0;
+  }
+
+  &__content {
+    overflow: auto;
+    height: 100%;
   }
 
   &__close-btn {
