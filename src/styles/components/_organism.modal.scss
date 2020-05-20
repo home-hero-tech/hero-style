@@ -135,7 +135,14 @@
 
     display: flex;
     align-items: center;
-    justify-content: space-between;
+
+    &--align-end {
+      justify-content: flex-end;
+    }
+
+    &--align-between {
+      justify-content: space-between;
+    }
 
     @include mq($until: mobile) {
       padding: $space-1 $space-2;
