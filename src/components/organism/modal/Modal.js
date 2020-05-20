@@ -20,10 +20,10 @@ const Modal = ({
   widthLevel,
   hasPadding,
   onCancel,
+  className,
   ...otherProps
 }) => {
-  const classes = classNames({
-    [css['c-modal']]: true,
+  const classes = classNames(css['c-modal'], className, {
     [css['c-modal--pre-left']]: left,
     [css['c-modal--pre-right']]: right,
     [css[`c-modal--width-${widthLevel}`]]: true,
@@ -71,7 +71,8 @@ Modal.propTypes = {
   center: PropTypes.bool,
   right: PropTypes.bool,
   hasPadding: PropTypes.bool,
-  widthLevel: PropTypes.number
+  widthLevel: PropTypes.number,
+  className: PropTypes.string
 };
 
 Modal.defaultProps = {
@@ -81,7 +82,8 @@ Modal.defaultProps = {
   onRequestClose: null,
   onCancel: null,
   widthLevel: 1,
-  center: false
+  center: false,
+  className: ''
 };
 
 export default Modal;
