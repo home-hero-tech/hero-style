@@ -30,7 +30,8 @@ const Spacer = ({
   mySm,
   myXs,
   inline,
-  children
+  children,
+  ...otherProps
 }) => {
   const classes = classNames({
     [css['c-spacer']]: true,
@@ -53,7 +54,7 @@ const Spacer = ({
     [css[`c-spacer--mr-xs-${mrXs || mxXs}`]]: !!mrXs || !!mxXs
   });
 
-  return <div className={classes}>{children}</div>;
+  return <div className={classes} {...otherProps}>{children}</div>;
 };
 
 Spacer.propTypes = {
