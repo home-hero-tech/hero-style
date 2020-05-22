@@ -37,7 +37,7 @@ const Button = ({
       className={classes}
       onClick={onClick}
     >
-      {loading ? <Loader /> : children}
+      {loading ? <Loader small={size <= 2} /> : children}
     </button>
   );
 };

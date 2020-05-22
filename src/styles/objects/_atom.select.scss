@@ -6,14 +6,17 @@
   &__icon {
     position: absolute;
     content: '';
-    top: calc(#{$input-height} - 70%);
+    align-items: center;
     color: currentColor;
     left: $space-2;
+    top: 50%;
+    transform: translateY(-50%);
 
     z-index: 2;
 
     &--small {
-      top: calc(#{$input-height-small} - 80%);
+      top: 50%;
+      transform: translateY(-50%);
       left: $space-1 * 1.5;
       font-size: $font-size-sm;
     }
@@ -244,12 +247,26 @@
       top: 11px !important;
       margin: 0 !important;
     }
+
+    &__dropdown-indicator {
+      padding: 0 $space-1 !important;
+
+      svg {
+        color: transparent;
+      }
+    }
   }
 
   // icons
   &--with-icon {
     &__value-container {
       padding: 0 $space-5 0 calc(#{$space-5} - 2px) !important;
+    }
+
+    &__dropdown-indicator {
+      svg {
+        color: transparent;
+      }
     }
   }
 
