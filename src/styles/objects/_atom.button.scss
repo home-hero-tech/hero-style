@@ -20,32 +20,22 @@
   }
 
   &--size-1 {
-    font-size: 10px;
+    font-size: $font-size-xs;
     height: 30px;
-
-    .spinner {
-      width: 12px;
-      height: 12px;
-    }
   }
 
   &--size-2 {
-    font-size: 12px;
+    font-size: $font-size-sm;
     height: 32px;
-
-    .spinner {
-      width: 12px;
-      height: 12px;
-    }
   }
 
   &--size-3 {
-    font-size: 14px;
+    font-size: $font-size-md;
     height: 34px;
   }
 
   &--size-4 {
-    font-size: 16px;
+    font-size: $font-size-lg;
     height: 36px;
   }
 

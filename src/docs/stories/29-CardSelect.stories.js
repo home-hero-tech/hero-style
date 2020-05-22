@@ -47,7 +47,7 @@ export const Default = () => {
 export const Small = () => {
   const [selected, setSelected] = useState(options[0]);
   return (
-    <div style={{ padding: 12, width: 500 }}>
+    <div style={{ padding: 12, width: 800 }}>
       <CardSelect
         type="small"
         selected={selected}
@@ -61,7 +61,7 @@ export const Small = () => {
 export const Multiple = () => {
   const [selected, setSelected] = useState([]);
   return (
-    <div style={{ padding: 12, width: 500 }}>
+    <div style={{ padding: 12, width: 800 }}>
       <CardSelect
         multiple
         selected={selected}
@@ -75,7 +75,7 @@ export const Multiple = () => {
 export const Text = () => {
   const [selected, setSelected] = useState(options[0]);
   return (
-    <div style={{ padding: 12, width: 500 }}>
+    <div style={{ padding: 12, width: 800 }}>
       <CardSelect
         type="text"
         flex="col"

@@ -12,6 +12,11 @@
     height: 20px;
     -webkit-animation: spin 2s linear infinite; /* Safari */
     animation: spin 2s linear infinite;
+
+    &--small {
+      width: 12px;
+      height: 12px;
+    }
   }
 
   p {
