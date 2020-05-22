@@ -231,7 +231,7 @@ export const _ModalFooter = () => (
       onCancel={action('Cancel')}
       contentLabel="With Actions EmptyModal"
     >
-      <ModalFooter>
+      <ModalFooter align="between">
         <Button onClick={action('click')}>1st action</Button>
         <Button onClick={action('click')} type="primary">
           2nd action

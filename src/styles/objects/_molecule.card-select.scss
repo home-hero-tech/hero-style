@@ -22,11 +22,12 @@
   padding: 10px $space-1;
   margin: $space-1 $space-0;
   border-radius: $radius-2;
-  font-size: 16px;
+  font-size: $font-size-lg;
+  box-shadow: $elevation-3;
   &:hover {
     cursor: pointer;
     border: 2px solid $color-brand-primary-300;
-    padding: 8px calc(#{$space-1} - 2px);
+    padding: $space-1 calc(#{$space-1} - 2px);
   }
 
   &--checked {
@@ -37,7 +38,7 @@
     }
     .c-text-option__checkbox {
       border: 2px solid #50c9c3;
-      background: linear-gradient(90deg, rgb(80, 201, 195) 0%, rgb(150, 222, 218) 100%);
+      background: $gradient-brand-secondary-300-100-90;
     }
   }
 
@@ -69,13 +70,14 @@
   height: 180px;
   width: 180px;
   padding: 6px;
-  margin: $space-1 $space-0;
+  margin: $space-3 $space-3 0 0;
   border-radius: $radius-2;
   background: $color-brand-primary-050;
   color: $color-brand-primary-300;
-  font-size: $space-2;
+  font-size: $font-size-lg;
   font-weight: bold;
   transition: .2s;
+  box-shadow: $elevation-3;
   &:hover {
     cursor: pointer;
     border: 2px solid $color-brand-primary-300;
@@ -88,6 +90,11 @@
 
   &--small {
     height: 90px;
+    font-size: $font-size-md;
+
+    .c-card-option__icon {
+      padding: 12px;
+    }
   }
 
   &__icon {
@@ -108,6 +115,10 @@
     top: $space-1;
     right: $space-1;
     border: 2px solid $color-brand-primary-300;
+    
+    svg {
+      display: none;
+    }
   }
 
   &--checked {
@@ -115,7 +126,11 @@
     color: #fff;
     .c-card-option__checkbox {
       border: 2px solid #50c9c3;
-      background: linear-gradient(90deg, rgb(80, 201, 195) 0%, rgb(150, 222, 218) 100%);
+      background: $gradient-brand-secondary-300-100-90;
+    }
+
+    svg {
+      display: block;
     }
   }
 
