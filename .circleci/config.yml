@@ -10,7 +10,7 @@ commands:
     steps:
       - run:
           name: Lint
-          command: yarn lint
+          command: yarn lint:fix
   build:
     steps:
       - run:
