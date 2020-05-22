@@ -54,7 +54,7 @@ const CardSelect = ({
           onClick={handleChange(opt.id)}
           noCheck={noCheck}
         />
-          ))}
+      ))}
     </div>
   );
 };

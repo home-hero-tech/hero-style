@@ -16,12 +16,12 @@ const Label = ({ text, small }) => {
       <div className={classes} />
       {text ? <Text>{text}</Text> : null}
     </div>
-  )
+  );
 };
 
 Label.propTypes = {
   text: PropTypes.string,
-  small: PropTypes.bool,
+  small: PropTypes.bool
 };
 
 Label.defaultProps = {

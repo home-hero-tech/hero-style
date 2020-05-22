@@ -8,5 +8,5 @@ export default {
 };
 
 export const Default = () => <Loader />;
-export const Small = () => <Loader small={true} />;
+export const Small = () => <Loader small />;
 export const WithText = () => <Loader text="Test" />;
