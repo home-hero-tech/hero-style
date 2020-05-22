@@ -7,6 +7,7 @@
 
   &--flex-row {
     flex-direction: row;
+    justify-content: center;
   }
 
   &--flex-col {
@@ -20,7 +21,7 @@
   background: $color-brand-primary-050;
   color: $color-brand-primary-300;
   padding: 10px $space-1;
-  margin: $space-1 $space-0;
+  margin: $space-2 $space-2 0 0;
   border-radius: $radius-2;
   font-size: $font-size-lg;
   box-shadow: $elevation-3;
@@ -34,7 +35,6 @@
     background: $color-brand-primary-300;
     .c-text-option__title, .c-text-option__checkbox {
       color: #fff;
-      font-weight: bold;
     }
     .c-text-option__checkbox {
       border: 2px solid #50c9c3;
@@ -54,10 +54,16 @@
     background: #fff;
     height: $space-3;
     width: $space-3;
+    min-width: $space-3;
     border-radius: $radius-4;
     top: $space-1;
     right: $space-1;
     border: 2px solid $color-brand-primary-300;
+  }
+
+  @include mq($until: tablet) {
+    margin: $space-2 $space-1 0 0;
+    font-size: $font-size-sm;
   }
 };
 
@@ -135,7 +141,7 @@
   }
 
   @include mq($until: tablet) {
-    height: 160px;
-    width: 160px;
+    margin: $space-2 $space-1 0 0;
+    width: 95%;
   }
 }

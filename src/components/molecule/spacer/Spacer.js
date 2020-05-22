@@ -54,7 +54,11 @@ const Spacer = ({
     [css[`c-spacer--mr-xs-${mrXs || mxXs}`]]: !!mrXs || !!mxXs
   });
 
-  return <div className={classes} {...otherProps}>{children}</div>;
+  return (
+    <div className={classes} {...otherProps}>
+      {children}
+    </div>
+  );
 };
 
 Spacer.propTypes = {
