@@ -16,12 +16,15 @@
   transition: transform .5s;
   font-family: $font-family;
 
-  svg {
-    margin-right: $space-1;
-  }
 
   &:active {
     transform: scale(.92);
+  }
+
+  &--has-svg {
+    svg {
+      margin-right: $space-1;
+    }
   }
 
   &--size-1 {

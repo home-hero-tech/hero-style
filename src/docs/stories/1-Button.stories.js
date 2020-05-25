@@ -14,12 +14,12 @@ export default {
 
 const _wrapperStyle = {
   margin: 10,
-  display: 'flex',
-  justifyContent: 'space-around'
+  display: 'flex'
 };
 
 const _columnWrapperStype = {
   ..._wrapperStyle,
+  justifyContent: 'space-around',
   width: 140,
   height: 150,
   flexDirection: 'column'
@@ -71,7 +71,7 @@ export const Types = () => (
 export const Loading = () => {
   const [loading, setLoading] = useState(false);
   return (
-    <Wrapper>
+    <Wrapper style={{ ..._wrapperStyle, maxWidth: '100%' }}>
       <Button
         size={2}
         type="primary"
@@ -118,9 +118,9 @@ export const Containers = () => (
 );
 
 export const WithSvg = () => (
-  <Wrapper>
-    <Button type="primary" onClick={action('clicked')}>
-      <FontAwesomeIcon icon={faPlus} /> Button
+  <Wrapper style={{ ..._wrapperStyle, maxWidth: '100%' }}>
+    <Button type="primary" onClick={action('clicked')} hasSVG>
+      <FontAwesomeIcon icon={faPlus} /> Text
     </Button>
   </Wrapper>
 );

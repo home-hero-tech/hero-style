@@ -633,8 +633,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [1.3.1] - 2020-05-25
 ### Added
-- Default padding if exists any SVG in Button component.
+- Default margin if exists any SVG in Button component.
 
 ### Change
 - Font-family from Button component.
 - Font-weight from Filter component.
+
+## [1.3.2] - 2020-05-25
+### Change
+- Move default margin of SVG to props in Button component.
