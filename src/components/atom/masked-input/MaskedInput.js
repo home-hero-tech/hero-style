@@ -51,7 +51,7 @@ MaskedInput.propTypes = {
 
 MaskedInput.defaultProps = {
   maskOptions: {
-    prefix: 'R$',
+    prefix: 'R$ ',
     suffix: '',
     includeThousandsSeparator: true,
     thousandsSeparatorSymbol: '.',

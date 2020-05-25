@@ -622,3 +622,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.0.211] - 2020-05-18
 ### Changed
 - Now it's possible to manipulate the toolbar icons by a props called 'modules'.
+
+## [1.2.0] - 2020-05-22
+### Added
+- New props for Editor component to fill height.
+- New props for Spacer component.
+
+### Changed
+- Default prefix from MaskedInput component.

@@ -1,19 +1,32 @@
 @import '../settings/settings';
 
 .c-editor {
+  height: auto;
+  border-radius: $radius-2;
+
+  &--full-height {
+    height: 100%;
+
+    .quill {
+      height: 100%;
+    }
+
+    .ql-container {
+      height: 100%;
+    }
+  }
+
   .quill {
     .ql-container {
-      border-top-left-radius: $radius-2;
-      border-top-right-radius: $radius-2;
-      border-bottom-left-radius: $radius-2;
-      border-bottom-right-radius: $radius-2;
+      border-radius: $radius-2;
+      border-color: $color-brand-gray-200;
     }
 
     .ql-toolbar ~ .ql-container {
       border-top-left-radius: 0;
       border-top-right-radius: 0;
     }
-    
+
     .ql-toolbar {
       background: $color-brand-gray-050;
       border-top-left-radius: $radius-2;
