@@ -15,8 +15,11 @@ const CardItem = ({
   value,
   small,
   tooltip,
+  className,
   ...otherProps
 }) => {
+  const classes = classNames(css['c-card-item__content'], className);
+
   const valueClasses = classNames({
     [css['c-card-item__value']]: true,
     [css['c-card-item__value--small']]: !!small,
@@ -45,7 +48,7 @@ const CardItem = ({
   const renderContent = (_label, _value, _leftIcon, _tooltip) => (
     <>
       {_leftIcon || null}
-      <div className={css['c-card-item__content']}>
+      <div className={classes}>
         {_label ? <span className={labelClasses}>{_label}</span> : null}
         {_value ? (
           <span className={valueClasses}>
@@ -86,7 +89,8 @@ CardItem.propTypes = {
     PropTypes.instanceOf(Date),
     PropTypes.number
   ]),
-  tooltip: PropTypes.string
+  tooltip: PropTypes.string,
+  className: PropTypes.string
 };
 
 CardItem.defaultProps = {
@@ -106,7 +110,8 @@ CardItem.defaultProps = {
   valPrimary: false,
   valWhite: false,
   value: null,
-  tooltip: null
+  tooltip: null,
+  className: null
 };
 
 CardItem.displayName = 'CardItem';
