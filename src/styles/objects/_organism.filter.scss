@@ -37,4 +37,10 @@
   &__footer {
     padding: $space-2 $space-3;
   }
+
+  @include mq($until: mobile) {
+    &__heading:nth-child(2) {
+      display: none;
+    } 
+  }
 }
