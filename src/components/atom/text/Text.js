@@ -18,7 +18,9 @@ const Text = ({
   uppercase,
   warning,
   xs,
-  ellipsis
+  ellipsis,
+  thin,
+  regular
 }) => {
   const classes = classNames({
     [css['c-text']]: true,
@@ -34,7 +36,9 @@ const Text = ({
     [css['c-text--uppercase']]: uppercase,
     [css['c-text--success']]: success,
     [css['c-text--warning']]: warning,
-    [css['c-text--xs']]: xs
+    [css['c-text--xs']]: xs,
+    [css['c-text--thin']]: thin,
+    [css['c-text--regular']]: regular
   });
 
   return <p className={classes}>{children}</p>;
@@ -55,8 +59,10 @@ Text.propTypes = {
   grayLight: PropTypes.bool,
   lg: PropTypes.bool,
   primary: PropTypes.bool,
+  regular: PropTypes.bool,
   sm: PropTypes.bool,
   success: PropTypes.bool,
+  thin: PropTypes.bool,
   uppercase: PropTypes.bool,
   warning: PropTypes.bool,
   xs: PropTypes.bool
@@ -72,8 +78,10 @@ Text.defaultProps = {
   grayLight: false,
   lg: false,
   primary: false,
+  regular: false,
   sm: false,
   success: false,
+  thin: false,
   uppercase: false,
   warning: false,
   xs: false

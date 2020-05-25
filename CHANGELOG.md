@@ -630,3 +630,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 - Default prefix from MaskedInput component.
+
+## [1.3.1] - 2020-05-25
+### Added
+- Default padding if exists any SVG in Button component.
+
+### Change
+- Font-family from Button component.
+- Font-weight from Filter component.

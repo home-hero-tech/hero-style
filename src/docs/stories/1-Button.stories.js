@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import { action } from '@storybook/addon-actions';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPlus } from '@fortawesome/pro-light-svg-icons';
+
 import Wrapper from '../../helpers/wrapper/Wrapper';
 import Button from '../../components/atom/button/Button';
 
@@ -110,6 +113,14 @@ export const Containers = () => (
     </Button>
     <Button type="primary" container="text" onClick={action('clicked')}>
       Text
+    </Button>
+  </Wrapper>
+);
+
+export const WithSvg = () => (
+  <Wrapper>
+    <Button type="primary" onClick={action('clicked')}>
+      <FontAwesomeIcon icon={faPlus} /> Button
     </Button>
   </Wrapper>
 );
