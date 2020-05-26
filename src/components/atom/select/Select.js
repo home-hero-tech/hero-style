@@ -112,7 +112,7 @@ Select.defaultProps = {
   placeholder: 'Selecionar',
   small: false,
   searchable: true,
-  async: true,
+  async: false,
   value: null,
   isClearable: false
 };

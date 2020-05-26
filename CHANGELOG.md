@@ -643,7 +643,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Change
 - Move default margin of SVG to props in Button component.
 
-## [1.4.0] - 2020-05-25
+## [1.4.0] - 2020-05-26
 ### Add
 - Props **async** in Select to make the component async.
 - CSS improvements on Editor component.
+
+## [1.4.1] - 2020-05-26
+### Changed
+- Default props **sync** from Select should be false.
