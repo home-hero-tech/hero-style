@@ -14,9 +14,17 @@
   width: min-content;
   background-position: center;
   transition: transform .5s;
+  font-family: $font-family;
+
 
   &:active {
     transform: scale(.92);
+  }
+
+  &--has-svg {
+    svg {
+      margin-right: $space-1;
+    }
   }
 
   &--size-1 {

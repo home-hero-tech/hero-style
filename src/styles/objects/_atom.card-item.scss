@@ -12,6 +12,7 @@
 
   @include mq($until: mobile) {
     margin-right: $space-0;
+    padding: $space-1 $space-0;
   }
 
   &--svg-default-size {

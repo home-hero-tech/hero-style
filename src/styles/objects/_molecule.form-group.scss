@@ -98,8 +98,10 @@
   }
 
   small {
-    position: absolute;
-    bottom: -$space-2;
-    right: $space-1;
+    position: relative;
+    margin-top: $space-0;
+    // position: absolute;
+    // bottom: -$space-2;
+    // right: $space-1;
   }
 }

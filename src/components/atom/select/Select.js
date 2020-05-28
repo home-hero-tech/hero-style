@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import RSelect from 'react-select';
+import RSelectAsync from 'react-select/async';
 
 import classNames from 'classnames';
 import css from './Select.module.scss';
@@ -20,6 +21,7 @@ const Select = ({
   small,
   icon,
   isClearable,
+  async,
   ...otherProps
 }) => {
   let selectClass = 'c-select';
@@ -62,10 +64,14 @@ const Select = ({
     [css['c-select-wrapper__icon--small']]: !!small
   });
 
+  let elem = <RSelect {...allProps} />;
+
+  if (async) elem = <RSelectAsync {...allProps} />;
+
   return (
     <div className={css['c-select-wrapper']}>
       <span className={classesWrapper}>{icon || null}</span>
-      <RSelect {...allProps} />
+      {elem}
     </div>
   );
 };
@@ -83,6 +89,7 @@ Select.propTypes = {
   placeholder: PropTypes.string,
   small: PropTypes.bool,
   searchable: PropTypes.bool,
+  async: PropTypes.bool,
   value: PropTypes.oneOfType([
     PropTypes.array,
     PropTypes.object,
@@ -105,6 +112,7 @@ Select.defaultProps = {
   placeholder: 'Selecionar',
   small: false,
   searchable: true,
+  async: false,
   value: null,
   isClearable: false
 };

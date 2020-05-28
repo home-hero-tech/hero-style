@@ -17,8 +17,9 @@ const FilterHeader = ({ onClick, tabIndex, totalItems }) => (
       onKeyPress={() => {}}
     >
       <div className={css['c-filter__heading']}>
-        <FontAwesomeIcon icon={faFilter} />
-        <span>Filtro</span>
+        <Text regular>
+          <FontAwesomeIcon icon={faFilter} /> Filtro
+        </Text>
       </div>
       <div className={css['c-filter__heading']}>
         <Text center>
@@ -27,7 +28,7 @@ const FilterHeader = ({ onClick, tabIndex, totalItems }) => (
         </Text>
       </div>
       <div className={css['c-filter__heading']}>
-        <Text end>
+        <Text end regular>
           <FontAwesomeIcon icon={faSort} /> Ordernar: A-z
         </Text>
       </div>

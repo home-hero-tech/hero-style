@@ -16,7 +16,8 @@ const Button = ({
   children,
   disabled,
   loading,
-  noShadow
+  noShadow,
+  hasSVG
 }) => {
   const btnType = submit ? 'submit' : 'button';
 
@@ -27,7 +28,8 @@ const Button = ({
     [css[`c-btn--${shape}`]]: true,
     [css[`c-btn--${container}`]]: true,
     [css[`c-btn--size-${size}`]]: true,
-    [css['c-btn--no-shadow']]: !!noShadow
+    [css['c-btn--no-shadow']]: !!noShadow,
+    [css['c-btn--has-svg']]: !!hasSVG
   });
 
   return (
@@ -62,7 +64,8 @@ Button.propTypes = {
   shape: PropTypes.oneOf(['squared', 'rounded']),
   loading: PropTypes.bool,
   disabled: PropTypes.bool,
-  noShadow: PropTypes.bool
+  noShadow: PropTypes.bool,
+  hasSVG: PropTypes.bool
 };
 
 Button.defaultProps = {
@@ -74,7 +77,8 @@ Button.defaultProps = {
   size: 2,
   loading: false,
   disabled: false,
-  noShadow: false
+  noShadow: false,
+  hasSVG: false
 };
 
 export default Button;

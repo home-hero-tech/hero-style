@@ -57,4 +57,12 @@
     overflow: hidden;
     text-overflow: ellipsis;
   }
+
+  &--thin {
+    font-weight: 300;
+  }
+
+  &--regular {
+    font-weight: 500;
+  }
 }

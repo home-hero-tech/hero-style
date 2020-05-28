@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import { action } from '@storybook/addon-actions';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPlus } from '@fortawesome/pro-light-svg-icons';
+
 import Wrapper from '../../helpers/wrapper/Wrapper';
 import Button from '../../components/atom/button/Button';
 
@@ -11,12 +14,12 @@ export default {
 
 const _wrapperStyle = {
   margin: 10,
-  display: 'flex',
-  justifyContent: 'space-around'
+  display: 'flex'
 };
 
 const _columnWrapperStype = {
   ..._wrapperStyle,
+  justifyContent: 'space-around',
   width: 140,
   height: 150,
   flexDirection: 'column'
@@ -68,7 +71,7 @@ export const Types = () => (
 export const Loading = () => {
   const [loading, setLoading] = useState(false);
   return (
-    <Wrapper>
+    <Wrapper style={{ ..._wrapperStyle, maxWidth: '100%' }}>
       <Button
         size={2}
         type="primary"
@@ -110,6 +113,14 @@ export const Containers = () => (
     </Button>
     <Button type="primary" container="text" onClick={action('clicked')}>
       Text
+    </Button>
+  </Wrapper>
+);
+
+export const WithSvg = () => (
+  <Wrapper style={{ ..._wrapperStyle, maxWidth: '100%' }}>
+    <Button type="primary" onClick={action('clicked')} hasSVG>
+      <FontAwesomeIcon icon={faPlus} /> Text
     </Button>
   </Wrapper>
 );
