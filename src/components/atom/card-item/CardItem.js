@@ -15,6 +15,7 @@ const CardItem = ({
   value,
   small,
   tooltip,
+  href,
   className,
   ...otherProps
 }) => {
@@ -32,20 +33,23 @@ const CardItem = ({
     [css.truncate]: true
   });
 
-  const RenderValue = (_value, _tooltip) =>
-    _tooltip ? (
-      <Tooltip
-        description={_tooltip}
-        position="bottom-start"
-        animation="perspective"
-      >
-        {_value}
-      </Tooltip>
-    ) : (
-      value
-    );
+  const RenderValue = (_value, _tooltip, _href) => {
+    if (_tooltip) {
+      return (
+        <Tooltip
+          description={_tooltip}
+          position="bottom-start"
+          animation="perspective"
+        >
+          {_href ? <a href={_href}>{_value}</a> : value}
+        </Tooltip>
+      );
+    }
 
-  const renderContent = (_label, _value, _leftIcon, _tooltip) => (
+    return _href ? <a href={_href}>{_value}</a> : _value;
+  };
+
+  const renderContent = (_label, _value, _leftIcon, _tooltip, _href) => (
     <>
       {_leftIcon || null}
       <div className={classes}>
@@ -53,8 +57,8 @@ const CardItem = ({
         {_value ? (
           <span className={valueClasses}>
             {_value instanceof Date
-              ? RenderValue(moment(_value).format(format), _tooltip)
-              : RenderValue(_value, _tooltip)}
+              ? RenderValue(moment(_value).format(format), _tooltip, _href)
+              : RenderValue(_value, _tooltip, _href)}
           </span>
         ) : null}
       </div>
@@ -63,7 +67,7 @@ const CardItem = ({
 
   return (
     <EmptyCardItem small={small} {...otherProps}>
-      {renderContent(label, value, leftIcon, tooltip)}
+      {renderContent(label, value, leftIcon, tooltip, href)}
     </EmptyCardItem>
   );
 };
@@ -83,6 +87,7 @@ CardItem.propTypes = {
   svgPrimary: PropTypes.bool,
   svgWhite: PropTypes.bool,
   valPrimary: PropTypes.bool,
+  valSuccess: PropTypes.bool,
   valWhite: PropTypes.bool,
   value: PropTypes.oneOfType([
     PropTypes.string,
@@ -90,6 +95,7 @@ CardItem.propTypes = {
     PropTypes.number
   ]),
   tooltip: PropTypes.string,
+  href: PropTypes.string,
   className: PropTypes.string
 };
 
@@ -108,10 +114,12 @@ CardItem.defaultProps = {
   svgPrimary: false,
   svgWhite: false,
   valPrimary: false,
+  valSuccess: false,
   valWhite: false,
   value: null,
   tooltip: null,
-  className: null
+  className: null,
+  href: null
 };
 
 CardItem.displayName = 'CardItem';

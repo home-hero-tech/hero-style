@@ -93,6 +93,14 @@
     }
   }
 
+  &--val-success {
+    span {
+      &:nth-child(2) {
+        color: $color-success;
+      }
+    }
+  }
+
   &--svg-primary {
     svg {
       color: $color-primary;

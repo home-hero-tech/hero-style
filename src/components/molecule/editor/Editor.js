@@ -10,12 +10,13 @@ const Editor = ({
   fullHeight,
   onChange,
   toolbar,
+  rows,
+  className,
   ...otherProps
 }) => {
   const optionsToolbar = modules || {};
 
-  const classes = classNames({
-    'c-editor': true,
+  const classes = classNames('c-editor', `c-editor--rows-${rows}`, className, {
     'c-editor--full-height': fullHeight
   });
 
@@ -36,6 +37,8 @@ Editor.propTypes = {
   value: PropTypes.string,
   toolbar: PropTypes.bool,
   onChange: PropTypes.func.isRequired,
+  className: PropTypes.string,
+  rows: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   modules: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.object,
@@ -46,6 +49,8 @@ Editor.propTypes = {
 
 Editor.defaultProps = {
   value: '',
+  className: '',
+  rows: 'auto',
   toolbar: true,
   modules: null,
   fullHeight: false

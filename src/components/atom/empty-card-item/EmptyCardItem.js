@@ -12,9 +12,11 @@ const EmptyCardItem = ({
   lbGray,
   lbPrimary,
   primary,
+  success,
   small,
   svgPrimary,
   valPrimary,
+  valSuccess,
   white,
   lbWhite,
   valWhite,
@@ -36,6 +38,7 @@ const EmptyCardItem = ({
 
     [css['c-card-item--lb-primary']]: primary || lbPrimary,
     [css['c-card-item--val-primary']]: primary || valPrimary,
+    [css['c-card-item--val-success']]: success || valSuccess,
     [css['c-card-item--svg-primary']]: primary || svgPrimary,
 
     [css['c-card-item--lb-white']]: white || lbWhite,
@@ -64,11 +67,13 @@ EmptyCardItem.propTypes = {
   lbWhite: PropTypes.bool,
   lbGray: PropTypes.bool,
   primary: PropTypes.bool,
+  success: PropTypes.bool,
   white: PropTypes.bool,
   small: PropTypes.bool,
   svgPrimary: PropTypes.bool,
   svgWhite: PropTypes.bool,
   valPrimary: PropTypes.bool,
+  valSuccess: PropTypes.bool,
   valWhite: PropTypes.bool,
   svgDefaultSize: PropTypes.bool
 };
@@ -81,11 +86,13 @@ EmptyCardItem.defaultProps = {
   lbWhite: false,
   lbGray: false,
   primary: false,
+  success: false,
   white: false,
   small: false,
   svgPrimary: false,
   svgWhite: false,
   valPrimary: false,
+  valSuccess: false,
   valWhite: false,
   svgDefaultSize: true
 };

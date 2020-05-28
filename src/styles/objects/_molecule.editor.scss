@@ -1,9 +1,25 @@
 @import '../settings/settings';
 @import '../tools/mq';
 
+$initial-size: 28px;
+$row-size: 18px;
+
+@for $i from 1 through 20 {
+  .c-editor--rows-#{$i} {
+    .quill .ql-container {
+      height: $initial-size + $row-size * $i;
+    }
+  }
+}
+
+
 .c-editor {
   height: auto;
   border-radius: $radius-2;
+
+  &--rows-auto {
+    height: auto;
+  }
 
   &--full-height {
     height: 100%;

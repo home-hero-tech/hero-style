@@ -170,11 +170,17 @@ export const lbPrimary = () => (
   </Wrapper>
 );
 
-export const valPrimary = () => (
+export const withCustomValueDisplay = () => (
   <Wrapper>
     <Card>
       <CardBody>
-        <CardItem value="valPrimary" label="valPrimary" valPrimary />
+        <CardItem label="Name" value="Primary" valPrimary />
+      </CardBody>
+    </Card>
+    <br />
+    <Card>
+      <CardBody>
+        <CardItem label="Name" value="Success" valSuccess />
       </CardBody>
     </Card>
   </Wrapper>
@@ -287,6 +293,20 @@ export const svgDefaultSizeFALSE = () => (
           label="Default"
           svgDefaultSize={false}
           leftIcon={<FontAwesomeIcon icon={faLayerGroup} />}
+        />
+      </CardBody>
+    </Card>
+  </Wrapper>
+);
+
+export const withHref = () => (
+  <Wrapper>
+    <Card>
+      <CardBody>
+        <CardItem
+          label="Endereço"
+          value="Home hero"
+          href="https://homehero.com.br/?interno"
         />
       </CardBody>
     </Card>
