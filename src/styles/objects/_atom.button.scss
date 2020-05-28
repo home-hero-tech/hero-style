@@ -22,6 +22,8 @@
   }
 
   &--has-svg {
+    display: flex;
+    align-items: center;
     svg {
       margin-right: $space-1;
     }
