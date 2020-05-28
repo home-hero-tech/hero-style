@@ -30,6 +30,12 @@ export const WithoutToolbar = () => {
   );
 };
 
+export const WithFixedRows = () => (
+  <Wrapper>
+    <Editor value={input} onChange={action('changed')} rows={13} />
+  </Wrapper>
+);
+
 export const SpecificToolbarItems = () => {
   return (
     <Wrapper>
