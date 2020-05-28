@@ -73,7 +73,7 @@ export const Errors = () => (
               placeholder="Placeholder text"
               value=""
             />
-            <small>Lorem ipsum dolor sit consectetu ave.</small>
+            <small>Lorem ipsum dolor sit consectetu ave Lorem ipsum dolor sit consectetu ave..</small>
           </FormGroup>
           <FormGroup md error>
             <Label name="ipt">Label</Label>
