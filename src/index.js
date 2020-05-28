@@ -1,5 +1,6 @@
 // GRID
 import { Col, Row } from 'react-flexbox-grid';
+import TextMaskInput from 'react-text-mask';
 
 // Tabs
 import { Tab, TabList, TabPanel } from 'react-tabs';
@@ -108,5 +109,6 @@ export {
   TabPanel,
   Text,
   Tooltip,
-  Row
+  Row,
+  TextMaskInput
 };
