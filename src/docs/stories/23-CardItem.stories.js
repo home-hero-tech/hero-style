@@ -170,11 +170,17 @@ export const lbPrimary = () => (
   </Wrapper>
 );
 
-export const valPrimary = () => (
+export const withCustomValueDisplay = () => (
   <Wrapper>
     <Card>
       <CardBody>
-        <CardItem value="valPrimary" label="valPrimary" valPrimary />
+        <CardItem label="Name" value="Primary" valPrimary />
+      </CardBody>
+    </Card>
+    <br />
+    <Card>
+      <CardBody>
+        <CardItem label="Name" value="Success" valSuccess />
       </CardBody>
     </Card>
   </Wrapper>

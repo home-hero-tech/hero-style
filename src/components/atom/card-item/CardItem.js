@@ -87,6 +87,7 @@ CardItem.propTypes = {
   svgPrimary: PropTypes.bool,
   svgWhite: PropTypes.bool,
   valPrimary: PropTypes.bool,
+  valSuccess: PropTypes.bool,
   valWhite: PropTypes.bool,
   value: PropTypes.oneOfType([
     PropTypes.string,
@@ -113,6 +114,7 @@ CardItem.defaultProps = {
   svgPrimary: false,
   svgWhite: false,
   valPrimary: false,
+  valSuccess: false,
   valWhite: false,
   value: null,
   tooltip: null,
