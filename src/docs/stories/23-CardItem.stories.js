@@ -292,3 +292,17 @@ export const svgDefaultSizeFALSE = () => (
     </Card>
   </Wrapper>
 );
+
+export const withHref = () => (
+  <Wrapper>
+    <Card>
+      <CardBody>
+        <CardItem
+          label="Endereço"
+          value="Home hero"
+          href="https://homehero.com.br/?interno"
+        />
+      </CardBody>
+    </Card>
+  </Wrapper>
+);
