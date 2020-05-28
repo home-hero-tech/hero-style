@@ -12,31 +12,27 @@ export const Default = () => {
   const handleChange = e => setValue(e.target.files[0]);
 
   return (
-    <div>
-      <ImageUpload
-        id="image-upload"
-        name="ipt"
-        text="Buscar arquivo"
-        value={value}
-        onChange={handleChange}
-        onRemove={() => setValue(null)}
-      />
-    </div>
+    <ImageUpload
+      id="image-upload"
+      name="ipt"
+      text="Buscar arquivo"
+      value={value}
+      onChange={handleChange}
+      onRemove={() => setValue(null)}
+    />
   );
 };
 
 export const Disabled = () => {
   const [value, setValue] = useState(null);
   return (
-    <div>
-      <ImageUpload
-        id="image-upload"
-        name="ipt"
-        text="Buscar arquivo"
-        value={value}
-        onChange={setValue}
-        disabled
-      />
-    </div>
+    <ImageUpload
+      id="image-upload"
+      name="ipt"
+      text="Buscar arquivo"
+      value={value}
+      onChange={setValue}
+      disabled
+    />
   );
 };

@@ -44,7 +44,10 @@ const ImageUpload = ({
             <img src={getFileUrl(value)} alt={name} />
           </div>
           <div className={css['c-image-input__actions']}>
-            <label className={shapeActionClasses} htmlFor={id}>
+            <label
+              className={shapeActionClasses}
+              htmlFor={disabled ? null : id}
+            >
               <FontAwesomeIcon icon={faCloudUpload} />
             </label>
             <ShapeAction
@@ -58,7 +61,7 @@ const ImageUpload = ({
           </div>
         </div>
       ) : (
-        <label className={buttonClasses} htmlFor={id}>
+        <label className={buttonClasses} htmlFor={disabled ? null : id}>
           <FontAwesomeIcon icon={faCloudUpload} />
           <span>{text}</span>
         </label>
