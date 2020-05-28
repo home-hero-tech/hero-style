@@ -1,0 +1,121 @@
+@import "../settings/settings";
+@import "../tools/tools";
+
+.c-image-input {
+  display: flex;
+  flex-direction: row;
+  
+  &__content {
+    padding: 2px;
+    border: 1px solid black;
+    border-radius: $radius-2;
+    width: fit-content;
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+
+    label+span {
+      margin-top: $space-0;
+    }
+
+    label, span {
+      margin: 0 $space-1;
+    }
+  }
+
+  img {
+    max-width: 302px;
+  }
+}
+
+input[type="file"].c-input {
+  display: none
+}
+
+.c-image-input__button {
+  display: block;
+  padding: $space-1 $space-3;
+  font-weight: bold;
+  border-radius: $radius-4;
+  cursor: pointer;
+  border: 1px solid $color-primary;
+  box-shadow: $elevation-4;
+  white-space: nowrap;
+  width: min-content;
+  background-position: center;
+  transition: transform .5s;
+  background: $color-brand-primary-300;
+  user-select: none;
+
+  svg, span {
+    color: $color-white;
+  }
+
+  svg+span {
+    margin-left: $space-0;
+  }
+
+  &.c-btn--outlined {
+    background: transparent;
+    border: solid 1px $color-primary;
+    color: $color-primary;
+
+    &:hover {
+      background: rgba($color-primary, .1);
+    }
+
+    &:focus {
+      background: rgba($color-primary, .2);
+    }
+  }
+
+  &.c-btn--text {
+    border: none;
+    background: transparent;
+    color: $color-primary;
+
+    &:hover {
+      border: none;
+      background: transparent;
+    }
+  }
+
+  &:not(.c-image-input__button--disabled) {
+    &:active {
+      transform: scale(.92);
+    }
+  }
+
+  &--disabled {
+    color: $color-brand-gray-300;
+    background-color: $color-brand-gray-100;
+    border-color: $color-brand-gray-100;
+
+    &.c-btn--outlined {
+      background: transparent;
+      border: solid 1px $color-brand-gray-100;
+
+      &:hover {
+        background: rgba($color-brand-gray-100, .1);
+      }
+
+      &:focus {
+        background: rgba($color-brand-gray-100, .2);
+      }
+    }
+
+    &.c-btn--text {
+      border: none;
+      background: transparent;
+      color: $color-brand-gray-300;
+
+      &:hover {
+        border: none;
+        background: transparent;
+      }
+    }
+  }
+}

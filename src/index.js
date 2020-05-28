@@ -19,6 +19,7 @@ import EmptyCardItem from './components/atom/empty-card-item/EmptyCardItem';
 import FileInput from './components/atom/file-input/FileInput';
 import Heading from './components/atom/heading/Heading';
 import Input from './components/atom/input/Input';
+import ImageUpload from './components/atom/image-upload/ImageUpload';
 import Label from './components/atom/label/Label';
 import Line from './components/atom/line/Line';
 import Loader from './components/atom/loader/Loader';
@@ -88,6 +89,7 @@ export {
   Editor,
   Heading,
   Input,
+  ImageUpload,
   Label,
   Line,
   List,
