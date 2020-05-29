@@ -232,12 +232,35 @@ export const Masked = () => {
   );
 };
 
-export const File = () => (
-  <FileInput
-    text="Enviar"
-    id="ipt"
-    name="ipt"
-    onChange={action('changeFile')}
-    multiple
-  />
-);
+export const fileInput = () => {
+  const [value, setValue] = useState(null);
+  return (
+    <Wrapper>
+      <FileInput
+        text="Envie o arquivo da sua proposta"
+        id="ipt"
+        name="ipt"
+        value={value}
+        onChange={e => setValue(e.target.files[0])}
+        onRemove={() => setValue(null)}
+      />
+    </Wrapper>
+  );
+};
+
+export const disabledFileInput = () => {
+  const [value, setValue] = useState(null);
+  return (
+    <Wrapper>
+      <FileInput
+        text="Envie o arquivo da sua proposta"
+        id="ipt"
+        name="ipt"
+        value={value}
+        onChange={e => setValue(e.target.files[0])}
+        onRemove={() => setValue(null)}
+        disabled
+      />
+    </Wrapper>
+  );
+};
