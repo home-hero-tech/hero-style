@@ -36,7 +36,7 @@
     }
 
     @include mq($until: mobile) {
-      padding: $space-2 $space-1;
+      padding: $space-2 $space-3;
     }
   }
 
