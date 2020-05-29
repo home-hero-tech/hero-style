@@ -12,12 +12,14 @@ const Editor = ({
   toolbar,
   rows,
   className,
+  bgWhite,
   ...otherProps
 }) => {
   const optionsToolbar = modules || {};
 
   const classes = classNames('c-editor', `c-editor--rows-${rows}`, className, {
-    'c-editor--full-height': fullHeight
+    'c-editor--full-height': fullHeight,
+    'c-editor--bg-white': bgWhite
   });
 
   return (
@@ -44,7 +46,8 @@ Editor.propTypes = {
     PropTypes.object,
     PropTypes.array
   ]),
-  fullHeight: PropTypes.bool
+  fullHeight: PropTypes.bool,
+  bgWhite: PropTypes.bool
 };
 
 Editor.defaultProps = {
@@ -53,7 +56,8 @@ Editor.defaultProps = {
   rows: 'auto',
   toolbar: true,
   modules: null,
-  fullHeight: false
+  fullHeight: false,
+  bgWhite: false
 };
 
 export default Editor;
