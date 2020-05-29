@@ -74,7 +74,7 @@
 
   form {
     height: 100%;
-    padding-bottom: $space-7;
+    padding-bottom: $space-10;
   }
 
   &__actions {
@@ -160,7 +160,7 @@
     right: $space-2;
     border: none;
     background-color: transparent;
-    font-size: 16px;
+    font-size: $font-size-lg;
     cursor: pointer;
   }
 }
