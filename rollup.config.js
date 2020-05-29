@@ -8,6 +8,7 @@ import resolve from 'rollup-plugin-node-resolve';
 import external from 'rollup-plugin-peer-deps-external';
 import { terser } from 'rollup-plugin-terser';
 import copy from 'rollup-plugin-copy-glob';
+import image from '@rollup/plugin-image';
 // import { uglify } from 'rollup-plugin-uglify';
 
 import packageJSON from './package.json';
@@ -30,6 +31,7 @@ export default [
     ],
     plugins: [
       external(),
+      image(),
       babel({
         exclude: 'node_modules/**'
       }),
