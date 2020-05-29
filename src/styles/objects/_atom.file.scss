@@ -2,17 +2,61 @@
 
 .c-file {
   label {
-    color: $color-brand-primary-300;
     font-size: $font-size-md;
     cursor: pointer;
   }
 
+  svg {
+    color: $color-brand-primary-300;
+  }
+  
   input[type="file"] {
     display: none
   }
 
-  span {
-    margin-left: $space-1;
+  &__empty, &__content {
+    display: flex;
+    padding: $space-2;
+    border-radius: $radius-2;
+    img, svg {
+      margin-right: $space-2;
+    }
+  };
+
+  &__content {
+    border: 1px solid $color-brand-primary-300;
+  }
+
+  &__empty {
+    border: 2px dashed $color-brand-gray-100;
+    padding: calc(#{$space-2} + 5px) $space-2;
+  }
+  
+  &__empty > &__text {
+    display: flex;
+    align-items: center;
+  }
+
+  &__text {
+    color: $color-brand-gray-300;
+    &--primary {
+      color: $color-brand-primary-300;
+    }
+    &--align-center {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__label {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    button {
+      padding: 0;
+      height: $space-2;
+    }
   }
 }
 
