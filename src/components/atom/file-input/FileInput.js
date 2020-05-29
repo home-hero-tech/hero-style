@@ -27,8 +27,6 @@ const FileInput = ({
     [css['c-file--disabled']]: disabled
   });
 
-  console.log(classes);
-
   const getHtmlForID = () => (disabled ? null : id);
 
   const handleChange = e => {
