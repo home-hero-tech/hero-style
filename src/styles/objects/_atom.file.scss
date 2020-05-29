@@ -6,6 +6,12 @@
     cursor: pointer;
   }
 
+  &--disabled { 
+    &__content, svg {
+      color: $color-brand-gray-100 !important;
+    }
+  }
+
   svg {
     color: $color-brand-primary-300;
   }

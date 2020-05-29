@@ -11,7 +11,7 @@ import fileIcon from '../../../assets/images/file-icon.svg';
 
 import css from './FileInput.module.scss';
 
-const FileInput = ({ 
+const FileInput = ({
   id,
   name,
   text,
@@ -23,7 +23,11 @@ const FileInput = ({
   disabled,
   inputProps
 }) => {
-  const classes = classNames(className, css['c-file']);
+  const classes = classNames(className, css['c-file'], {
+    [css['c-file--disabled']]: disabled
+  });
+
+  console.log(classes);
 
   const getHtmlForID = () => (disabled ? null : id);
 
