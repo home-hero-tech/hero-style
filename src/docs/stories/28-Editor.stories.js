@@ -60,3 +60,17 @@ export const FullHeight = () => {
     </Wrapper>
   );
 };
+
+export const BgWhite = () => {
+  return (
+    <Wrapper style={{ height: '400px', backgroundColor: '#f0f0f0' }}>
+      <Editor
+        value={input}
+        modules={[['bold', 'italic', 'underline', 'link'], ['clean']]}
+        onChange={action('cancel')}
+        fullHeight
+        bgWhite
+      />
+    </Wrapper>
+  );
+};

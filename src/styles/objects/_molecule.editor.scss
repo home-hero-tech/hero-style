@@ -22,18 +22,26 @@ $row-size: 18px;
   }
 
   &--full-height {
-    height: 100%;
+    height: calc(100% - 42px);
 
     .quill {
       height: 100%;
     }
 
-    .ql-container {
-      height: 100%;
+    .ql-container .ql-snow {
+      height: calc(100% - 42px);
     }
 
     @include mq($until: tablet) {
       height: auto;
+    }
+  }
+
+  &--bg-white {
+    .ql-editor {
+      background-color: $color-white;
+      border-bottom-left-radius: $radius-2;
+      border-bottom-right-radius: $radius-2;
     }
   }
 
