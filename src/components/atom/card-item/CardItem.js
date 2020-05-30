@@ -34,14 +34,15 @@ const CardItem = ({
     [css.truncate]: true
   });
 
-  const RenderValue = (_value, _tooltip, _href, html) => {
-    if(html) {
+  const RenderValue = (_value, _tooltip, _href, _html) => {
+    if (_html) {
       return (
         <div
-          dangerouslySetInnerHTML={{
+          dangerouslySetInnerHTML={{ //eslint-disable-line
             __html: _value
           }}
-        />);
+        />
+      );
     }
 
     if (_tooltip) {
@@ -59,7 +60,7 @@ const CardItem = ({
     return _href ? <a href={_href}>{_value}</a> : _value;
   };
 
-  const renderContent = (_label, _value, _leftIcon, _tooltip, _href, html) => (
+  const renderContent = (_label, _value, _leftIcon, _tooltip, _href, _html) => (
     <>
       {_leftIcon || null}
       <div className={classes}>
@@ -67,8 +68,13 @@ const CardItem = ({
         {_value ? (
           <span className={valueClasses}>
             {_value instanceof Date
-              ? RenderValue(moment(_value).format(format), _tooltip, _href, html)
-              : RenderValue(_value, _tooltip, _href, html)}
+              ? RenderValue(
+                  moment(_value).format(format),
+                  _tooltip,
+                  _href,
+                  _html
+                )
+              : RenderValue(_value, _tooltip, _href, _html)}
           </span>
         ) : null}
       </div>
