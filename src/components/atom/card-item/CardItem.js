@@ -17,6 +17,7 @@ const CardItem = ({
   tooltip,
   href,
   className,
+  html,
   ...otherProps
 }) => {
   const classes = classNames(css['c-card-item__content'], className);
@@ -33,7 +34,16 @@ const CardItem = ({
     [css.truncate]: true
   });
 
-  const RenderValue = (_value, _tooltip, _href) => {
+  const RenderValue = (_value, _tooltip, _href, html) => {
+    if(html) {
+      return (
+        <div
+          dangerouslySetInnerHTML={{
+            __html: _value
+          }}
+        />);
+    }
+
     if (_tooltip) {
       return (
         <Tooltip
@@ -49,7 +59,7 @@ const CardItem = ({
     return _href ? <a href={_href}>{_value}</a> : _value;
   };
 
-  const renderContent = (_label, _value, _leftIcon, _tooltip, _href) => (
+  const renderContent = (_label, _value, _leftIcon, _tooltip, _href, html) => (
     <>
       {_leftIcon || null}
       <div className={classes}>
@@ -57,8 +67,8 @@ const CardItem = ({
         {_value ? (
           <span className={valueClasses}>
             {_value instanceof Date
-              ? RenderValue(moment(_value).format(format), _tooltip, _href)
-              : RenderValue(_value, _tooltip, _href)}
+              ? RenderValue(moment(_value).format(format), _tooltip, _href, html)
+              : RenderValue(_value, _tooltip, _href, html)}
           </span>
         ) : null}
       </div>
@@ -67,7 +77,7 @@ const CardItem = ({
 
   return (
     <EmptyCardItem small={small} {...otherProps}>
-      {renderContent(label, value, leftIcon, tooltip, href)}
+      {renderContent(label, value, leftIcon, tooltip, href, html)}
     </EmptyCardItem>
   );
 };
@@ -96,7 +106,8 @@ CardItem.propTypes = {
   ]),
   tooltip: PropTypes.string,
   href: PropTypes.string,
-  className: PropTypes.string
+  className: PropTypes.string,
+  html: PropTypes.bool
 };
 
 CardItem.defaultProps = {
@@ -119,7 +130,8 @@ CardItem.defaultProps = {
   value: null,
   tooltip: null,
   className: null,
-  href: null
+  href: null,
+  html: false
 };
 
 CardItem.displayName = 'CardItem';
