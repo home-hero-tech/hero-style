@@ -65,7 +65,7 @@ const FileInput = ({
         <label className={css['c-file__content']} htmlFor={getHtmlForID()}>
           <img src={fileIcon} alt="file-icon" />
           <div className={css['c-file__label']}>
-            <div className={css['c-file__text']}>{value.name}</div>
+            <div className={css['c-file__text']}>{value.filename}</div>
             <Button type="danger" container="text" onClick={handleRemove}>
               Remover arquivo
             </Button>
