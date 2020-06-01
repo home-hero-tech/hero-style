@@ -39,13 +39,6 @@
       overflow: auto hidden;
       width: 100%;
       white-space: nowrap;
-
-      @include mq($until: tablet) {
-        display: block;
-        overflow-y: auto;
-        width: 100%;
-        white-space: nowrap;
-      }
     }
 
     .react-tabs__tab {
@@ -81,7 +74,6 @@
         right: 0;
         background-color: transparent;
         height: 3px;
-        z-index: 30;
         border-top-left-radius: 200px;
         border-top-right-radius: 200px;
         transition: background-color .3s ease-in-out;
