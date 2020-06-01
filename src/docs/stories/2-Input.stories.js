@@ -244,14 +244,6 @@ export const fileInput = () => {
         onChange={e => setValue(e.target.files[0])}
         onRemove={() => setValue(null)}
       />
-    </Wrapper>
-  );
-};
-
-export const disabledFileInput = () => {
-  const [value, setValue] = useState(null);
-  return (
-    <Wrapper>
       <FileInput
         text="Envie o arquivo da sua proposta"
         id="ipt"
@@ -259,6 +251,30 @@ export const disabledFileInput = () => {
         value={value}
         onChange={e => setValue(e.target.files[0])}
         onRemove={() => setValue(null)}
+        disabled
+      />
+    </Wrapper>
+  );
+};
+
+export const buttonFileInput = () => {
+  return (
+    <Wrapper>
+      <FileInput
+        text="Selecionar arquivo"
+        type="button"
+        id="ipt"
+        name="ipt"
+        onChange={action('change')}
+        onRemove={action('remove')}
+      />
+      <FileInput
+        text="Desabilitado"
+        type="button"
+        id="ipt"
+        name="ipt"
+        onChange={action('change')}
+        onRemove={action('remove')}
         disabled
       />
     </Wrapper>

@@ -3,7 +3,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUpload } from '@fortawesome/pro-light-svg-icons';
+import { faUpload, faCloudUpload } from '@fortawesome/pro-light-svg-icons';
 
 import Button from '../button/Button';
 
@@ -13,6 +13,7 @@ import css from './FileInput.module.scss';
 
 const FileInput = ({
   id,
+  type,
   name,
   text,
   value,
@@ -23,6 +24,7 @@ const FileInput = ({
   disabled,
   inputProps
 }) => {
+
   const classes = classNames(className, css['c-file'], {
     [css['c-file--disabled']]: disabled
   });
@@ -38,6 +40,48 @@ const FileInput = ({
     onRemove(e);
   };
 
+  const renderCard = () => {
+    if (value) {
+      return (
+        <label className={css['c-file__content']} htmlFor={getHtmlForID()}>
+          <img src={fileIcon} alt="file-icon" />
+          <div className={css['c-file__label']}>
+            <div className={css['c-file__text']}>{value.filename}</div>
+            <Button type="danger" container="text" onClick={handleRemove}>
+              Remover arquivo
+            </Button>
+          </div>
+        </label>
+      );
+    }
+    return (
+      <label className={css['c-file__empty']} htmlFor={getHtmlForID()}>
+        <FontAwesomeIcon icon={faUpload} size="2x" />
+        <div
+          className={classNames(
+            css['c-file__text'],
+            css['c-file__text--primary'],
+            css['c-file__text--align-center']
+          )}
+        >
+          {text}
+        </div>
+      </label>
+    );
+  };
+
+  const renderButton = () => {
+    const btnClasses = classNames(css['c-file__button'], {
+      [css['c-file__button--disabled']]: disabled
+    });
+    return (
+      <label className={btnClasses} htmlFor={disabled ? null : id}>
+        <FontAwesomeIcon icon={faCloudUpload} />
+        <span>{text}</span>
+      </label>
+    );
+  };
+
   return (
     <div className={classes}>
       <input
@@ -49,35 +93,14 @@ const FileInput = ({
         multiple={multiple}
         {...inputProps}
       />
-      {!value ? (
-        <label className={css['c-file__empty']} htmlFor={getHtmlForID()}>
-          <FontAwesomeIcon icon={faUpload} size="2x" />
-          <div
-            className={classNames(
-              css['c-file__text--primary'],
-              css['c-file__text--align-center']
-            )}
-          >
-            {text}
-          </div>
-        </label>
-      ) : (
-        <label className={css['c-file__content']} htmlFor={getHtmlForID()}>
-          <img src={fileIcon} alt="file-icon" />
-          <div className={css['c-file__label']}>
-            <div className={css['c-file__text']}>{value.filename}</div>
-            <Button type="danger" container="text" onClick={handleRemove}>
-              Remover arquivo
-            </Button>
-          </div>
-        </label>
-      )}
+      {type === 'card' ? renderCard() : renderButton()}
     </div>
   );
 };
 
 FileInput.propTypes = {
   id: PropTypes.string.isRequired,
+  type: PropTypes.oneOf(['card', 'button']),
   name: PropTypes.string,
   text: PropTypes.string,
   multiple: PropTypes.bool,
@@ -92,6 +115,7 @@ FileInput.propTypes = {
 FileInput.defaultProps = {
   name: 'image',
   text: 'Carregar imagem',
+  type: 'card',
   className: '',
   value: null,
   disabled: false,
