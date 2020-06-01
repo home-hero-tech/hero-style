@@ -22,14 +22,14 @@ $row-size: 18px;
   }
 
   &--full-height {
-    height: calc(100% - 42px);
+    height: calc(100% - 40px);
 
     .quill {
       height: 100%;
     }
 
     .ql-container .ql-snow {
-      height: calc(100% - 42px);
+      height: calc(100% - 40px);
     }
 
     @include mq($until: tablet) {

@@ -312,3 +312,19 @@ export const withHref = () => (
     </Card>
   </Wrapper>
 );
+
+export const withHtml = () => (
+  <Wrapper>
+    <Card>
+      <CardBody>
+        <CardItem
+          label="Endereço"
+          value={`<h1>Home Hero</h1>
+              <p> teste</p>
+            `}
+          html
+        />
+      </CardBody>
+    </Card>
+  </Wrapper>
+);

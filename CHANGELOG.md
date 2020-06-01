@@ -652,6 +652,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - Default props **sync** from Select should be false.
 
-## [1.6.1] - 2020-00-01
+## [1.7.4] - 2020-00-01
 ### Remove
 - Some css props from Tabs component.

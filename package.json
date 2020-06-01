@@ -1,6 +1,6 @@
 {
   "name": "@homehero/hero-style",
-  "version": "1.6.1",
+  "version": "1.7.4",
   "main": "dist/index.js",
   "browser": "dist/index.umd.js",
   "module": "dist/index.es.js",
@@ -13,6 +13,7 @@
     "@fortawesome/free-solid-svg-icons": "^5.12.1",
     "@fortawesome/pro-light-svg-icons": "^5.12.1",
     "@fortawesome/react-fontawesome": "^0.1.8",
+    "@rollup/plugin-image": "^2.0.5",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
