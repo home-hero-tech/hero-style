@@ -6,12 +6,6 @@
     cursor: pointer;
   }
 
-  &--disabled { 
-    &__content, svg {
-      color: $color-brand-gray-100 !important;
-    }
-  }
-
   svg {
     color: $color-brand-primary-300;
   }
@@ -62,6 +56,69 @@
     button {
       padding: 0;
       height: $space-2;
+    }
+  }
+
+  &--disabled { 
+    .c-file__text, svg {
+      color: $color-brand-gray-100 !important;
+    }
+  }
+
+  &__button {
+    display: block;
+    color: #fff;
+    padding: $space-1 $space-3;
+    font-weight: bold;
+    border-radius: $radius-4;
+    cursor: pointer;
+    border: 1px solid $color-primary;
+    box-shadow: $elevation-4;
+    white-space: nowrap;
+    width: min-content;
+    background-position: center;
+    transition: transform .5s;
+    background: $color-brand-primary-300;
+    user-select: none;
+    
+    span {
+      font-size: $font-size-sm;
+    }
+  
+    svg, span {
+      color: $color-white;
+    }
+  
+    svg+span {
+      margin-left: $space-0;
+    }
+  
+    &:not(.c-file__button--disabled) {
+      &:active {
+        transform: scale(.92);
+      }
+    }
+  
+    &--disabled {
+      background-color: $color-brand-gray-100;
+      border-color: $color-brand-gray-100;
+
+      svg, span {
+        color: #fff !important;
+      }
+  
+      &.c-btn--outlined {
+        background: transparent;
+        border: solid 1px $color-brand-gray-100;
+  
+        &:hover {
+          background: rgba($color-brand-gray-100, .1);
+        }
+  
+        &:focus {
+          background: rgba($color-brand-gray-100, .2);
+        }
+      }
     }
   }
 }
