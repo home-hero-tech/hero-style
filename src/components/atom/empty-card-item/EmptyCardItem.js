@@ -9,6 +9,7 @@ import css from '../card-item/CardItem.module.scss';
 const EmptyCardItem = ({
   ellipsis,
   gray,
+  grayLight,
   lbGray,
   lbPrimary,
   primary,
@@ -17,6 +18,7 @@ const EmptyCardItem = ({
   svgPrimary,
   valPrimary,
   valSuccess,
+  valGrayLight,
   white,
   lbWhite,
   valWhite,
@@ -39,6 +41,7 @@ const EmptyCardItem = ({
     [css['c-card-item--lb-primary']]: primary || lbPrimary,
     [css['c-card-item--val-primary']]: primary || valPrimary,
     [css['c-card-item--val-success']]: success || valSuccess,
+    [css['c-card-item--val-gray-light']]: grayLight || valGrayLight,
     [css['c-card-item--svg-primary']]: primary || svgPrimary,
 
     [css['c-card-item--lb-white']]: white || lbWhite,
@@ -63,6 +66,7 @@ EmptyCardItem.propTypes = {
   ]),
   ellipsis: PropTypes.bool,
   gray: PropTypes.bool,
+  grayLight: PropTypes.bool,
   lbPrimary: PropTypes.bool,
   lbWhite: PropTypes.bool,
   lbGray: PropTypes.bool,
@@ -74,6 +78,7 @@ EmptyCardItem.propTypes = {
   svgWhite: PropTypes.bool,
   valPrimary: PropTypes.bool,
   valSuccess: PropTypes.bool,
+  valGrayLight: PropTypes.bool,
   valWhite: PropTypes.bool,
   svgDefaultSize: PropTypes.bool
 };
@@ -82,6 +87,7 @@ EmptyCardItem.defaultProps = {
   children: null,
   ellipsis: false,
   gray: false,
+  grayLight: false,
   lbPrimary: false,
   lbWhite: false,
   lbGray: false,
@@ -93,6 +99,7 @@ EmptyCardItem.defaultProps = {
   svgWhite: false,
   valPrimary: false,
   valSuccess: false,
+  valGrayLight: false,
   valWhite: false,
   svgDefaultSize: true
 };

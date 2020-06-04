@@ -651,3 +651,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.4.1] - 2020-05-26
 ### Changed
 - Default props **sync** from Select should be false.
+
+## [1.7.4] - 2020-00-01
+### Remove
+- Some css props from Tabs component.
+
+## [1.7.6] - 2020-00-01
+### Added
+- props grayLight an valGrayLight in CardItem/EmptyCardItem components.
+
+## [1.7.7] - 2020-00-01
+### Added
+- Flex wrap in CardLine css.

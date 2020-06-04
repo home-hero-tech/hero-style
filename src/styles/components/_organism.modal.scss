@@ -68,13 +68,17 @@
   &--width-2,
   &--width-3 {
     @include mq($until: tablet) {
-      width: 100%;
+      width: 90%;
     }
   }
 
   form {
     height: 100%;
     padding-bottom: $space-10;
+
+    @include mq($until: tablet) {
+      height: auto;
+    }
   }
 
   &__actions {

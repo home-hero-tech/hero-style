@@ -24,6 +24,7 @@ const FileInput = ({
   disabled,
   inputProps
 }) => {
+
   const classes = classNames(className, css['c-file'], {
     [css['c-file--disabled']]: disabled
   });
