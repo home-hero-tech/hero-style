@@ -39,6 +39,10 @@
       overflow: auto hidden;
       width: 100%;
       white-space: nowrap;
+
+      @include mq($until: tablet) {
+        padding: 0 $space-1;
+      }
     }
 
     .react-tabs__tab {
@@ -63,7 +67,7 @@
       }
 
       @include mq($until: tablet) {
-        margin: 0 12px;
+        margin: 0;
       }
 
       &:after {
