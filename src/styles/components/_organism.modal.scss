@@ -186,25 +186,19 @@
 }
 
 @include mq($until: tablet) {
-  &:not(.c-modal--center) {
     .c-modal {
+      &:not(.c-modal--center) {
+
       height: 100%;
       overflow: auto;
-      &__content {
+      .c-modal__content {
         height: auto;
         overflow: unset;
       }
-      &__actions {
+      .c-modal__actions {
         position: fixed;
-      }
-
-      &--width-1,
-      &--width-2,
-      &--width-3 {
-        .c-modal__actions {
-          width: 90%;
-          left: auto;
-        }
+        width: 90%;
+        left: auto;
       }
     }
   }
