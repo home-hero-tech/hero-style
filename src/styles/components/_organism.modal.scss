@@ -184,5 +184,18 @@
   }
 }
 
-
-
+@include mq($until: mobile) {
+  .c-modal {
+    &:not(.c-modal--center) {
+      height: 100%;
+      overflow: auto;
+      &__content {
+        height: auto;
+        overflow: unset;
+      }
+      &__actions {
+        position: fixed;
+      }
+    }
+  }
+}
