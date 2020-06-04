@@ -102,10 +102,6 @@
     &--align-between {
       justify-content: space-between;
     }
-
-    @include mq($until: mobile) {
-      padding: $space-1 $space-2;
-    }
   }
 
   &--pre-left {
@@ -167,6 +163,21 @@
     font-size: $font-size-lg;
     cursor: pointer;
   }
+
+  @include mq($until: mobile) {
+    &:not(.c-modal--center) {
+      height: 100%;
+      overflow: auto;
+      &__content {
+        height: auto;
+        overflow: unset !important;
+      }
+      &__actions {
+        position: fixed;
+        padding: $space-1 $space-2;
+      }
+    }
+  }
 }
 
 .c-modal-overlay {
@@ -181,21 +192,5 @@
 
   &--right {
     right: 0;
-  }
-}
-
-@include mq($until: mobile) {
-  .c-modal {
-    &:not(.c-modal--center) {
-      height: 100%;
-      overflow: auto;
-      &__content {
-        height: auto;
-        overflow: unset;
-      }
-      &__actions {
-        position: fixed;
-      }
-    }
   }
 }
