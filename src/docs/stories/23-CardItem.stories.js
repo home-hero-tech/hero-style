@@ -226,6 +226,16 @@ export const lbGray = () => (
   </Wrapper>
 );
 
+export const valGrayLight = () => (
+  <Wrapper>
+    <Card>
+      <CardBody>
+        <CardItem value="grayLight" label="GrayLight" valGrayLight />
+      </CardBody>
+    </Card>
+  </Wrapper>
+);
+
 export const White = () => (
   <Wrapper>
     <Card>

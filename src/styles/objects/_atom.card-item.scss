@@ -101,6 +101,14 @@
     }
   }
 
+  &--val-gray-light {
+    span {
+      &:nth-child(2) {
+        color: $color-brand-gray-100;
+      }
+    }
+  }
+
   &--svg-primary {
     svg {
       color: $color-primary;
