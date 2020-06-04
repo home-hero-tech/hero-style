@@ -78,6 +78,7 @@
 
     @include mq($until: tablet) {
       height: auto;
+      padding-bottom: $space-2;
     }
   }
 
@@ -101,6 +102,10 @@
 
     &--align-between {
       justify-content: space-between;
+    }
+
+    @include mq($until: mobile) {
+      padding: $space-1 $space-2;
     }
   }
 
@@ -163,21 +168,6 @@
     font-size: $font-size-lg;
     cursor: pointer;
   }
-
-  @include mq($until: mobile) {
-    &:not(.c-modal--center) {
-      height: 100%;
-      overflow: auto;
-      &__content {
-        height: auto;
-        overflow: unset !important;
-      }
-      &__actions {
-        position: fixed;
-        padding: $space-1 $space-2;
-      }
-    }
-  }
 }
 
 .c-modal-overlay {
@@ -192,5 +182,30 @@
 
   &--right {
     right: 0;
+  }
+}
+
+@include mq($until: tablet) {
+  &:not(.c-modal--center) {
+    .c-modal {
+      height: 100%;
+      overflow: auto;
+      &__content {
+        height: auto;
+        overflow: unset;
+      }
+      &__actions {
+        position: fixed;
+      }
+
+      &--width-1,
+      &--width-2,
+      &--width-3 {
+        .c-modal__actions {
+          width: 90%;
+          left: auto;
+        }
+      }
+    }
   }
 }
