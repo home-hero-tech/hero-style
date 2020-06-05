@@ -133,6 +133,22 @@ export const Level5 = () => (
   </Wrapper>
 );
 
+export const Clickable = () => (
+  <Wrapper>
+    <List clickable>
+      <ListItem>
+        <Content>Content</Content>
+      </ListItem>
+      <ListItem>
+        <Content>Content</Content>
+      </ListItem>
+      <ListItem>
+        <Content>Content</Content>
+      </ListItem>
+    </List>
+  </Wrapper>
+);
+
 export const withActions = () => (
   <Wrapper>
     <List level={5}>
