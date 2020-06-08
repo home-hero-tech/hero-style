@@ -6,10 +6,11 @@ import classNames from 'classnames';
 
 import css from './Tabs.module.scss';
 
-const TabsComponent = ({ dark, children, ...otherProps }) => {
+const TabsComponent = ({ dark, darkSecondary, children, ...otherProps }) => {
   const classes = classNames({
     [css['c-tabs']]: true,
-    [css['c-tabs--dark']]: !!dark
+    [css['c-tabs--dark']]: !!dark,
+    [css['c-tabs--dark-secondary']]: !!darkSecondary
   });
 
   return (
@@ -21,12 +22,14 @@ const TabsComponent = ({ dark, children, ...otherProps }) => {
 
 TabsComponent.propTypes = {
   children: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
-  dark: PropTypes.bool
+  dark: PropTypes.bool,
+  darkSecondary: PropTypes.bool
 };
 
 TabsComponent.defaultProps = {
   children: null,
-  dark: false
+  dark: false,
+  darkSecondary: false
 };
 
 TabsComponent.displayName = 'TabsComponent';
