@@ -45,6 +45,21 @@ export const Dark = () => (
   </Wrapper>
 );
 
+export const DarkSecondary = () => (
+  <Wrapper style={style}>
+    <Tabs darkSecondary>
+      <TabList>
+        <Tab>First tab</Tab>
+        <Tab>Second tab</Tab>
+        <Tab>Third tab</Tab>
+      </TabList>
+      <TabPanel>First content</TabPanel>
+      <TabPanel>Second content</TabPanel>
+      <TabPanel>Third content</TabPanel>
+    </Tabs>
+  </Wrapper>
+);
+
 export const ManyTabs = () => (
   <Wrapper style={style}>
     <Tabs dark>
