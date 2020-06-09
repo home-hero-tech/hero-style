@@ -667,3 +667,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.9.0] - 2020-06-08
 ### Added
 - Other dark style in Tabs component.
+
+## [1.9.1] - 2020-06-08
+### Changed
+- Tab bar change to white color.
