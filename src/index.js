@@ -24,11 +24,12 @@ import Label from './components/atom/label/Label';
 import Line from './components/atom/line/Line';
 import Loader from './components/atom/loader/Loader';
 import ListItem from './components/atom/list-item/ListItem';
+import MaskedInput from './components/atom/masked-input/MaskedInput';
 import Pagination from './components/atom/pagination/Pagination';
 import Select from './components/atom/select/Select';
 import ShapeAction from './components/atom/shape-action/ShapeAction';
 import Text from './components/atom/text/Text';
-import MaskedInput from './components/atom/masked-input/MaskedInput';
+import ToastMsg from './components/atom/toast/Toast';
 import * as mask from './components/atom/masked-input/masks';
 
 // molecules
@@ -111,6 +112,7 @@ export {
   TabPanel,
   Text,
   Tooltip,
+  ToastMsg,
   Row,
   TextMaskInput
 };

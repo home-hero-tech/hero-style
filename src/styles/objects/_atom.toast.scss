@@ -1,0 +1,54 @@
+@import "../settings/settings";
+@import "../tools/tools";
+
+.toast {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  overflow-wrap: break-word !important;
+  color: $color-brand-gray-500;
+  padding: $space-1 $space-2 $space-3 $space-2;
+
+  &--success {
+    button {
+      color: $color-success !important;
+    }
+  }
+
+  &--error {
+    button {
+      color: $color-danger !important;
+    }
+  }
+
+  &--warning {
+    button {
+      color: $color-warning !important;
+    }
+  }
+
+  &--info {
+    button {
+      color: $color-brand-primary-300 !important;
+    }
+  }
+
+  button {
+    background-color: transparent;
+    border: none;
+    color: currentColor;
+    padding: 0;
+    margin: 0;
+    font-family: $font-family;
+    font-weight: 600;
+    font-size: $font-size-xs;
+  }
+
+  p {
+    word-break: break-all;
+    line-height: 1.5em;
+    font-size: $font-size-sm;
+  }
+}
