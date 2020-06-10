@@ -3,7 +3,7 @@ import ReactSwitch from 'react-switch';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-import css from './Switch.module.scss';
+import css from './Switcher.module.scss';
 
 const Switcher = ({ checked, ...otherProps }) => {
   const classes = classNames({
