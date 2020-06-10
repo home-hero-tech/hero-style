@@ -149,6 +149,12 @@
         &:hover, &:focus, &--selected {
           color: $color-structural-white;
         }
+
+        &:hover, &:focus, &--selected {
+          &:after {
+            background-color: white;
+          }
+        }
       }
     }
   }
