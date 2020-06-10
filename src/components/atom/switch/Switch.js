@@ -10,16 +10,17 @@ const Switch = ({ className, checked, ...otherProps }) => {
     [css['c-switch--active']]: checked
   });
   return (
-    <ReactSwitch
-      className={classes}
-      checkedIcon={false}
-      uncheckedIcon={false}
-      handleDiameter={18}
-      height={11}
-      width={26}
-      checked={checked}
-      {...otherProps}
-    />
+    <div className={classes}>
+      <ReactSwitch
+        checkedIcon={false}
+        uncheckedIcon={false}
+        handleDiameter={18}
+        height={11}
+        width={26}
+        checked={checked}
+        {...otherProps}
+      />
+    </div>
   );
 };
 
