@@ -3,11 +3,11 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import ReactSwitch from 'react-switch';
 
-import './Switch.scss';
+import css from './Switch.module.scss';
 
 const Switch = ({ className, checked, ...otherProps }) => {
-  const classes = classNames('c-switch', className, {
-    'c-switch--active': checked
+  const classes = classNames(css['c-switch'], className, {
+    [css['c-switch--active']]: checked
   });
   return (
     <ReactSwitch
