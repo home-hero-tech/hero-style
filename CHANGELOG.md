@@ -667,3 +667,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.9.0] - 2020-06-08
 ### Added
 - Other dark style in Tabs component.
+
+## [1.10.0] - 2020-06-10
+### Changed
+- Added new Switch component
