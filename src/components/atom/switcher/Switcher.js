@@ -1,11 +1,12 @@
 import React from 'react';
-import ReactSwitch from 'react-switch';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 import css from './Switcher.module.scss';
 
-const Switcher = ({ checked, ...otherProps }) => {
+const ReactSwitch = require('react-switch').default;
+
+const Switch = ({ checked, ...otherProps }) => {
   const classes = classNames({
     [css['c-switch']]: true,
     [css['c-switch--active']]: checked
@@ -26,12 +27,12 @@ const Switcher = ({ checked, ...otherProps }) => {
   );
 };
 
-Switcher.propTypes = {
+Switch.propTypes = {
   checked: PropTypes.bool
 };
-Switcher.defaultProps = {
+Switch.defaultProps = {
   checked: false
 };
-Switcher.displayName = 'Switcher';
+Switch.displayName = 'Switch';
 
-export default Switcher;
+export default Switch;
