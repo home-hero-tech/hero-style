@@ -30,9 +30,10 @@ const Button = ({
     [css[`c-btn--${container}`]]: true,
     [css[`c-btn--size-${size}`]]: true,
     [css['c-btn--no-shadow']]: !!noShadow,
-    [css['c-btn--has-svg']]: !!hasSVG,
+    [css['c-btn--has-svg']]: !!hasSVG
+     },
     className
-  });
+    );
 
   return (
     <button
