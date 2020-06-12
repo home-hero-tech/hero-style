@@ -47,6 +47,11 @@ const Button = ({
 };
 
 Button.propTypes = {
+  className: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.object,
+    PropTypes.array
+  ]),
   onClick: PropTypes.func,
   children: PropTypes.oneOfType([
     PropTypes.string,
@@ -71,6 +76,7 @@ Button.propTypes = {
 };
 
 Button.defaultProps = {
+  className: '',
   onClick: null,
   submit: false,
   type: 'default',
