@@ -29,7 +29,7 @@ import Select from './components/atom/select/Select';
 import ShapeAction from './components/atom/shape-action/ShapeAction';
 import Text from './components/atom/text/Text';
 import MaskedInput from './components/atom/masked-input/MaskedInput';
-import Switcher from './components/atom/switcher/Switcher';
+import Switch from './components/atom/switcher/Switcher';
 import * as mask from './components/atom/masked-input/masks';
 
 // molecules
@@ -106,7 +106,7 @@ export {
   Select,
   ShapeAction,
   Spacer,
-  Switcher,
+  Switch,
   Tab,
   Tabs,
   TabList,
