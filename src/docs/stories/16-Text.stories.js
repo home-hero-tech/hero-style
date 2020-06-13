@@ -19,7 +19,8 @@ export const Primary = () => <Text primary>Primary</Text>;
 export const Success = () => <Text success>Success</Text>;
 export const Danger = () => <Text danger>Danger</Text>;
 export const Warning = () => <Text warning>Warning</Text>;
-export const GrayLight = () => <Text grayLight>Gray Light</Text>;
+export const grayVal200 = () => <Text grayVal="200">Gray Val 200</Text>;
+export const grayVal300 = () => <Text grayVal="300">Gray Val 300</Text>;
 export const Ellipsis = () => (
   <div style={{ width: 200 }}>
     <Text ellipsis>
