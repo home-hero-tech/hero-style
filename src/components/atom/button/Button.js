@@ -17,20 +17,26 @@ const Button = ({
   disabled,
   loading,
   noShadow,
-  hasSVG
+  hasSVG,
+  fullWidth,
+  className
 }) => {
   const btnType = submit ? 'submit' : 'button';
 
-  const classes = classNames({
-    [css['c-btn']]: true,
-    [css.ripple]: true,
-    [css[`c-btn--${type}`]]: true,
-    [css[`c-btn--${shape}`]]: true,
-    [css[`c-btn--${container}`]]: true,
-    [css[`c-btn--size-${size}`]]: true,
-    [css['c-btn--no-shadow']]: !!noShadow,
-    [css['c-btn--has-svg']]: !!hasSVG
-  });
+  const classes = classNames(
+    {
+      [css['c-btn']]: true,
+      [css.ripple]: true,
+      [css[`c-btn--${type}`]]: true,
+      [css[`c-btn--${shape}`]]: true,
+      [css[`c-btn--${container}`]]: true,
+      [css[`c-btn--size-${size}`]]: true,
+      [css['c-btn--no-shadow']]: !!noShadow,
+      [css['c-btn--has-svg']]: !!hasSVG,
+      [css['c-btn--full-width']]: fullWidth
+    },
+    className
+  );
 
   return (
     <button
@@ -45,6 +51,11 @@ const Button = ({
 };
 
 Button.propTypes = {
+  className: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.object,
+    PropTypes.array
+  ]),
   onClick: PropTypes.func,
   children: PropTypes.oneOfType([
     PropTypes.string,
@@ -65,10 +76,12 @@ Button.propTypes = {
   loading: PropTypes.bool,
   disabled: PropTypes.bool,
   noShadow: PropTypes.bool,
-  hasSVG: PropTypes.bool
+  hasSVG: PropTypes.bool,
+  fullWidth: PropTypes.bool
 };
 
 Button.defaultProps = {
+  className: '',
   onClick: null,
   submit: false,
   type: 'default',
@@ -78,7 +91,8 @@ Button.defaultProps = {
   loading: false,
   disabled: false,
   noShadow: false,
-  hasSVG: false
+  hasSVG: false,
+  fullWidth: false
 };
 
 export default Button;

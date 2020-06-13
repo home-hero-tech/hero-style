@@ -21,6 +21,12 @@
     transform: scale(.92);
   }
 
+  &--full-width {
+    margin: auto;
+    width: 100%;
+    justify-content: center;
+  }
+
   &--has-svg {
     display: flex;
     align-items: center;

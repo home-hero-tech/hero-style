@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
-import Switch from '../../components/atom/switch/Switch';
+import Switcher from '../../components/atom/switcher/Switcher';
 
 export default {
-  title: 'Switch',
-  component: Switch
+  title: 'Switcher',
+  component: Switcher
 };
 
 export const Default = () => {
   const [value, setValue] = useState(false);
 
-  return <Switch checked={value} onChange={() => setValue(!value)} />;
+  return <Switcher checked={value} onChange={() => setValue(!value)} />;
 };
