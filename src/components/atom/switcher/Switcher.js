@@ -4,7 +4,7 @@ import classNames from 'classnames';
 
 import css from './Switcher.module.scss';
 
-const ReactSwitch = require('react-switch').default;
+const ReactSwitch = require('react-switch').default; //eslint-disable-line
 
 const Switch = ({ checked, ...otherProps }) => {
   const classes = classNames({

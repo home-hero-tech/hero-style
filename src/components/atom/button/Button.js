@@ -23,19 +23,20 @@ const Button = ({
 }) => {
   const btnType = submit ? 'submit' : 'button';
 
-  const classes = classNames({
-    [css['c-btn']]: true,
-    [css.ripple]: true,
-    [css[`c-btn--${type}`]]: true,
-    [css[`c-btn--${shape}`]]: true,
-    [css[`c-btn--${container}`]]: true,
-    [css[`c-btn--size-${size}`]]: true,
-    [css['c-btn--no-shadow']]: !!noShadow,
-    [css['c-btn--has-svg']]: !!hasSVG,
-    [css['c-btn--full-width']]: fullWidth
-     },
+  const classes = classNames(
+    {
+      [css['c-btn']]: true,
+      [css.ripple]: true,
+      [css[`c-btn--${type}`]]: true,
+      [css[`c-btn--${shape}`]]: true,
+      [css[`c-btn--${container}`]]: true,
+      [css[`c-btn--size-${size}`]]: true,
+      [css['c-btn--no-shadow']]: !!noShadow,
+      [css['c-btn--has-svg']]: !!hasSVG,
+      [css['c-btn--full-width']]: fullWidth
+    },
     className
-    );
+  );
 
   return (
     <button
@@ -75,7 +76,8 @@ Button.propTypes = {
   loading: PropTypes.bool,
   disabled: PropTypes.bool,
   noShadow: PropTypes.bool,
-  hasSVG: PropTypes.bool
+  hasSVG: PropTypes.bool,
+  fullWidth: PropTypes.bool
 };
 
 Button.defaultProps = {
