@@ -28,3 +28,6 @@ export const Ellipsis = () => (
     </Text>
   </div>
 );
+export const Thin = () => <Text thin>Gray Light</Text>;
+export const Regular = () => <Text regular>Gray Light</Text>;
+export const Bold = () => <Text bold>Bold</Text>;

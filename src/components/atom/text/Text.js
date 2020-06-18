@@ -20,7 +20,8 @@ const Text = ({
   xs,
   ellipsis,
   thin,
-  regular
+  regular,
+  bold
 }) => {
   const classes = classNames({
     [css['c-text']]: true,
@@ -38,7 +39,8 @@ const Text = ({
     [css['c-text--warning']]: warning,
     [css['c-text--xs']]: xs,
     [css['c-text--thin']]: thin,
-    [css['c-text--regular']]: regular
+    [css['c-text--regular']]: regular,
+    [css['c-text--bold']]: bold
   });
 
   return <p className={classes}>{children}</p>;
@@ -63,6 +65,7 @@ Text.propTypes = {
   sm: PropTypes.bool,
   success: PropTypes.bool,
   thin: PropTypes.bool,
+  bold: PropTypes.bool,
   uppercase: PropTypes.bool,
   warning: PropTypes.bool,
   xs: PropTypes.bool
@@ -82,6 +85,7 @@ Text.defaultProps = {
   sm: false,
   success: false,
   thin: false,
+  bold: false,
   uppercase: false,
   warning: false,
   xs: false
