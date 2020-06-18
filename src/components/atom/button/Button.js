@@ -64,6 +64,7 @@ Button.propTypes = {
   ]).isRequired,
   type: PropTypes.oneOf([
     'default',
+    'disabled',
     'primary',
     'secondary',
     'danger',
