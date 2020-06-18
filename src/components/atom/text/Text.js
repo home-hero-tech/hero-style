@@ -21,7 +21,8 @@ const Text = ({
   ellipsis,
   thin,
   regular,
-  bold
+  bold,
+  ...otherProps
 }) => {
   const classes = classNames({
     [css['c-text']]: true,
@@ -43,7 +44,11 @@ const Text = ({
     [css['c-text--bold']]: bold
   });
 
-  return <p className={classes}>{children}</p>;
+  return (
+    <p className={classes} {...otherProps}>
+      {children}
+    </p>
+  );
 };
 
 Text.propTypes = {

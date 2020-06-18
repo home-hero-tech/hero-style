@@ -679,3 +679,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.12.1] - 2020-06-18
 ### Added
 - Text component has new props.
+
+## [1.13.1] - 2020-06-18
+### Added
+- Text component pass other props to tag.
