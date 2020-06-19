@@ -74,11 +74,9 @@
 
   form {
     height: 100%;
-    padding-bottom: $space-10;
 
     @include mq($until: tablet) {
       height: auto;
-      padding-bottom: $space-2;
     }
   }
 
@@ -150,13 +148,10 @@
     }
   }
 
-  &__heading ~ &__content {
-    padding: 0 0 $space-6 0;
-  }
-
   &__content {
     overflow: hidden auto;
     height: 100%;
+    padding-bottom: $modal-footer-height * 2;
   }
 
   &__close-btn {

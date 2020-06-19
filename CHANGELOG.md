@@ -683,3 +683,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.13.1] - 2020-06-18
 ### Added
 - Text component pass other props to tag.
+
+## [1.13.2] - 2020-06-18
+### Changed
+- Move padding from form to content in Modal component.
