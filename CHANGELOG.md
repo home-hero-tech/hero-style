@@ -687,3 +687,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.13.2] - 2020-06-18
 ### Changed
 - Move padding from form to content in Modal component.
+
+## [1.14.0] - 2020-06-18
+### Added
+- Tabs component has new props.

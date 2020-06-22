@@ -45,7 +45,7 @@
       }
 
       @include mq($until: mobile) {
-        padding: 0;
+        padding: 0 $space-1;
       }
     }
 
@@ -105,6 +105,14 @@
         &:after {
           background-color: $color-primary;
         }
+      }
+    }
+  }
+
+  &--white {
+    :global {
+      .react-tabs__tab-list {
+        background: white;
       }
     }
   }

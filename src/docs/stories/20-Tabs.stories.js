@@ -15,9 +15,24 @@ const style = {
   height: '100%'
 };
 
-export const Default = () => (
+export const DefaultTransparent = () => (
   <Wrapper style={style}>
     <Tabs>
+      <TabList>
+        <Tab>First tab</Tab>
+        <Tab>Second tab</Tab>
+        <Tab>Third tab</Tab>
+      </TabList>
+      <TabPanel>First content</TabPanel>
+      <TabPanel>Second content</TabPanel>
+      <TabPanel>Third content</TabPanel>
+    </Tabs>
+  </Wrapper>
+);
+
+export const White = () => (
+  <Wrapper style={style}>
+    <Tabs white>
       <TabList>
         <Tab>First tab</Tab>
         <Tab>Second tab</Tab>

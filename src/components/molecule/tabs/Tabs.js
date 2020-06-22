@@ -6,9 +6,16 @@ import classNames from 'classnames';
 
 import css from './Tabs.module.scss';
 
-const TabsComponent = ({ dark, darkSecondary, children, ...otherProps }) => {
+const TabsComponent = ({
+  white,
+  dark,
+  darkSecondary,
+  children,
+  ...otherProps
+}) => {
   const classes = classNames({
     [css['c-tabs']]: true,
+    [css['c-tabs--white']]: !!white,
     [css['c-tabs--dark']]: !!dark,
     [css['c-tabs--dark-secondary']]: !!darkSecondary
   });
@@ -23,12 +30,14 @@ const TabsComponent = ({ dark, darkSecondary, children, ...otherProps }) => {
 TabsComponent.propTypes = {
   children: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
   dark: PropTypes.bool,
+  white: PropTypes.bool,
   darkSecondary: PropTypes.bool
 };
 
 TabsComponent.defaultProps = {
   children: null,
   dark: false,
+  white: false,
   darkSecondary: false
 };
 
