@@ -19,7 +19,8 @@ const Button = ({
   noShadow,
   hasSVG,
   fullWidth,
-  className
+  className,
+  ...otherProps
 }) => {
   const btnType = submit ? 'submit' : 'button';
 
@@ -44,6 +45,7 @@ const Button = ({
       type={btnType}
       className={classes}
       onClick={onClick}
+      {...otherProps}
     >
       {loading ? <Loader small={size <= 2} /> : children}
     </button>
