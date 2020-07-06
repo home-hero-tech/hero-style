@@ -7,6 +7,7 @@ import { Col } from 'react-flexbox-grid';
 import css from '../card-item/CardItem.module.scss';
 
 const EmptyCardItem = ({
+  className,
   ellipsis,
   gray,
   grayLight,
@@ -29,27 +30,26 @@ const EmptyCardItem = ({
 }) => {
   const { lg, md, sm, xs } = otherProps;
 
-  const classes = classNames({
-    [css['c-card-item']]: true,
-    [css['c-card-item--default']]: true,
-    [css['c-card-item--ellipsis']]: ellipsis,
-    [css['c-card-item--small']]: small,
-    [css['c-card-item--svg-default-size']]: svgDefaultSize,
-
-    [css['c-card-item--lb-gray']]: gray || lbGray,
-
-    [css['c-card-item--lb-primary']]: primary || lbPrimary,
-    [css['c-card-item--val-primary']]: primary || valPrimary,
-    [css['c-card-item--val-success']]: success || valSuccess,
-    [css['c-card-item--val-gray-light']]: grayLight || valGrayLight,
-    [css['c-card-item--svg-primary']]: primary || svgPrimary,
-
-    [css['c-card-item--lb-white']]: white || lbWhite,
-    [css['c-card-item--val-white']]: white || valWhite,
-    [css['c-card-item--svg-white']]: white || svgWhite,
-
-    [css['c-card-item--no-margin']]: lg || md || sm || xs
-  });
+  const classes = classNames(
+    {
+      [css['c-card-item']]: true,
+      [css['c-card-item--default']]: true,
+      [css['c-card-item--ellipsis']]: ellipsis,
+      [css['c-card-item--small']]: small,
+      [css['c-card-item--svg-default-size']]: svgDefaultSize,
+      [css['c-card-item--lb-gray']]: gray || lbGray,
+      [css['c-card-item--lb-primary']]: primary || lbPrimary,
+      [css['c-card-item--val-primary']]: primary || valPrimary,
+      [css['c-card-item--val-success']]: success || valSuccess,
+      [css['c-card-item--val-gray-light']]: grayLight || valGrayLight,
+      [css['c-card-item--svg-primary']]: primary || svgPrimary,
+      [css['c-card-item--lb-white']]: white || lbWhite,
+      [css['c-card-item--val-white']]: white || valWhite,
+      [css['c-card-item--svg-white']]: white || svgWhite,
+      [css['c-card-item--no-margin']]: lg || md || sm || xs
+    },
+    className
+  );
 
   return (
     <Col className={classes} {...otherProps}>
@@ -60,6 +60,11 @@ const EmptyCardItem = ({
 
 EmptyCardItem.propTypes = {
   children: PropTypes.oneOfType([
+    PropTypes.object,
+    PropTypes.array,
+    PropTypes.string
+  ]),
+  className: PropTypes.oneOfType([
     PropTypes.object,
     PropTypes.array,
     PropTypes.string
@@ -84,6 +89,7 @@ EmptyCardItem.propTypes = {
 };
 
 EmptyCardItem.defaultProps = {
+  className: '',
   children: null,
   ellipsis: false,
   gray: false,
