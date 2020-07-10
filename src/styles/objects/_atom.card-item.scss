@@ -44,6 +44,10 @@
     &--small {
       font-size: $font-size-xs;
     }
+
+    &--thin {
+      font-weight: 300;
+    }
   }
 
   &__value {
@@ -52,6 +56,10 @@
 
     &--small {
       font-size: $font-size-sm;
+    }
+
+    &--thin {
+      font-weight: 300;
     }
   }
 

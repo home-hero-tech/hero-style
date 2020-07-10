@@ -18,18 +18,21 @@ const CardItem = ({
   href,
   className,
   html,
+  thin,
   ...otherProps
 }) => {
   const classes = classNames(css['c-card-item__content'], className);
 
   const valueClasses = classNames({
     [css['c-card-item__value']]: true,
+    [css['c-card-item__value--thin']]: thin,
     [css['c-card-item__value--small']]: !!small,
     [css.truncate]: true
   });
 
   const labelClasses = classNames({
     [css['c-card-item__label']]: true,
+    [css['c-card-item__value--thin']]: thin,
     [css['c-card-item__label--small']]: !!small,
     [css.truncate]: true
   });
@@ -114,7 +117,8 @@ CardItem.propTypes = {
   tooltip: PropTypes.string,
   href: PropTypes.string,
   className: PropTypes.string,
-  html: PropTypes.bool
+  html: PropTypes.bool,
+  thin: PropTypes.bool
 };
 
 CardItem.defaultProps = {
@@ -139,7 +143,8 @@ CardItem.defaultProps = {
   tooltip: null,
   className: null,
   href: null,
-  html: false
+  html: false,
+  thin: false
 };
 
 CardItem.displayName = 'CardItem';

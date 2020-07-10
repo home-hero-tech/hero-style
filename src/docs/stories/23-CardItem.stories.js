@@ -29,6 +29,20 @@ export const Default = () => (
   </Wrapper>
 );
 
+export const Thin = () => (
+  <Wrapper>
+    <Card>
+      <CardBody>
+        <CardItem
+          label="Endereço"
+          value="Lorem Ipsum is simply dummy text of the printing and typesetting industry"
+          thin
+        />
+      </CardBody>
+    </Card>
+  </Wrapper>
+);
+
 export const WithColumns = () => (
   <Grid fluid>
     <Card>
