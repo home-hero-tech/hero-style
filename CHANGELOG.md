@@ -695,3 +695,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.15.0] - 2020-06-18
 ### Added
 - CardItem component has new props.
+
+## [1.15.1] - 2020-07-16
+### Changed
+- PropType from FileInput value.
+- Style of svg class from Button.

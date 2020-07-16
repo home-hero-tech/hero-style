@@ -105,7 +105,7 @@ FileInput.propTypes = {
   name: PropTypes.string,
   text: PropTypes.string,
   multiple: PropTypes.bool,
-  value: PropTypes.instanceOf(File),
+  value: PropTypes.instanceOf(Object),
   disabled: PropTypes.bool,
   className: PropTypes.string,
   onChange: PropTypes.func.isRequired,
