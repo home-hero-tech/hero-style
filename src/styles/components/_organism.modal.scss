@@ -192,9 +192,19 @@
       }
       .c-modal__actions {
         position: fixed;
-        width: 90%;
+        width: 100%;
         left: auto;
       }
+    }
+  }
+}
+
+@include mq($until: mobile) {
+  .c-modal {
+    .c-modal__actions {
+      height: auto;
+      display: flex;
+      flex-direction: column-reverse;
     }
   }
 }

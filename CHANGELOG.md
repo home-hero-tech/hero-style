@@ -700,3 +700,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - PropType from FileInput value.
 - Style of svg class from Button.
+
+## [1.15.2] - 2020-07-16
+### Change
+- Modal actions MQ.
