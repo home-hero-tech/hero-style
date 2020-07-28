@@ -4,14 +4,14 @@ import classNames from 'classnames';
 
 import css from './CardBody.module.scss';
 
-const CardBody = ({ className, size, children }) => {
+const CardBody = ({ className, size, children, ...props }) => {
   const classes = classNames({
     [css['c-card__body']]: true,
     [css[`c-card__body--${size}`]]: true,
     [className]: !!className
   });
 
-  return <div className={classes}>{children}</div>;
+  return <div className={classes} {...props}>{children}</div>;
 };
 
 CardBody.propTypes = {

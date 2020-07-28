@@ -2,6 +2,7 @@
 @import "../tools/tools";
 
 .c-card {
+  position: relative;
   background-color: $color-white;
   border-radius: $radius-2;
   box-shadow: $elevation-1;
