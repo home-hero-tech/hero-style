@@ -7,7 +7,7 @@ import Text from '../../atom/text/Text';
 
 import css from '../../organism/filter/Filter.module.scss';
 
-const FilterHeader = ({ onClick, tabIndex, totalItems, handleOrder }) => (
+const FilterHeader = ({ onClick, tabIndex, totalItems, handleOrder, children }) => (
   <BoxShadow level={1} radius={4}>
     <div
       className={css['c-filter__header']}
@@ -38,6 +38,7 @@ const FilterHeader = ({ onClick, tabIndex, totalItems, handleOrder }) => (
         </Text>
       </div>
     </div>
+    {children}
   </BoxShadow>
 );
 
@@ -45,10 +46,12 @@ FilterHeader.propTypes = {
   onClick: PropTypes.func,
   handleOrder: PropTypes.func,
   tabIndex: PropTypes.number,
-  totalItems: PropTypes.number
+  totalItems: PropTypes.number,
+  children: PropTypes.oneOfType([PropTypes.object])
 };
 
 FilterHeader.defaultProps = {
+  children: null,
   onClick: null,
   handleOrder: f => f,
   tabIndex: 0,
