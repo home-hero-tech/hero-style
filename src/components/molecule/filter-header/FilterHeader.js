@@ -7,7 +7,7 @@ import Text from '../../atom/text/Text';
 
 import css from '../../organism/filter/Filter.module.scss';
 
-const FilterHeader = ({ onClick, tabIndex, totalItems }) => (
+const FilterHeader = ({ onClick, tabIndex, totalItems, handleOrder }) => (
   <BoxShadow level={1} radius={4}>
     <div
       className={css['c-filter__header']}
@@ -27,7 +27,12 @@ const FilterHeader = ({ onClick, tabIndex, totalItems }) => (
           {`${totalItems > 1 ? 's' : ''}`}
         </Text>
       </div>
-      <div className={css['c-filter__heading']}>
+      {/* eslint-disable-next-line jsx-a11y/click-events-have-key-events,jsx-a11y/interactive-supports-focus */}
+      <div
+        onClick={handleOrder}
+        role="button"
+        className={css['c-filter__heading']}
+      >
         <Text end regular>
           <FontAwesomeIcon icon={faSort} /> Ordernar: A-z
         </Text>
@@ -38,12 +43,14 @@ const FilterHeader = ({ onClick, tabIndex, totalItems }) => (
 
 FilterHeader.propTypes = {
   onClick: PropTypes.func,
+  handleOrder: PropTypes.func,
   tabIndex: PropTypes.number,
   totalItems: PropTypes.number
 };
 
 FilterHeader.defaultProps = {
   onClick: null,
+  handleOrder: f => f,
   tabIndex: 0,
   totalItems: 0
 };
