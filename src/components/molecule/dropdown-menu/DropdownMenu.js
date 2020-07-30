@@ -4,12 +4,13 @@ import PropTypes from 'prop-types';
 
 import css from './DropdownMenu.module.scss';
 
-const DropdownMenu = ({ onLeave, above, below, before, children }) => {
+const DropdownMenu = ({ onLeave, above, below, before, rightInside, children }) => {
   const classes = classNames({
     [css['c-dropdown-menu']]: true,
     [css['c-dropdown-menu--above']]: above,
     [css['c-dropdown-menu--below']]: below,
-    [css['c-dropdown-menu--before']]: before
+    [css['c-dropdown-menu--before']]: before,
+    [css['c-dropdown-menu--right-inside']]: rightInside
   });
 
   return (
@@ -28,6 +29,7 @@ DropdownMenu.propTypes = {
   onLeave: PropTypes.func,
   above: PropTypes.bool,
   below: PropTypes.bool,
+  rightInside: PropTypes.bool,
   before: PropTypes.bool
 };
 
@@ -35,6 +37,7 @@ DropdownMenu.defaultProps = {
   onLeave: null,
   above: false,
   below: false,
+  rightInside: false,
   before: false
 };
 
