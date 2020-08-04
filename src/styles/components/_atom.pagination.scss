@@ -5,6 +5,8 @@
   :global {
     .pagination {
       display: flex !important;
+      justify-content: center;
+      margin-top: $space-2;
 
       .page {
         color: $color-brand-primary-300;
