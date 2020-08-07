@@ -8,6 +8,7 @@ exports[`Filter should match with the snapshot 1`] = `
     onSubmit={null}
   >
     <Form
+      autoComplete="off"
       className={null}
       onSubmit={[Function]}
     >
@@ -23,18 +24,20 @@ exports[`Filter should match with the snapshot 1`] = `
           >
             <Label
               name="ipt"
+              small={false}
             >
               Label
             </Label>
             <Input
               dark={null}
-              defaultValue={null}
               disabled={null}
+              icon={null}
               id="ipt"
               name="ipt"
               onChange={[Function]}
               parentRef={null}
               placeholder="Placeholder text"
+              small={null}
               type="text"
               value=""
             />
@@ -47,18 +50,20 @@ exports[`Filter should match with the snapshot 1`] = `
           >
             <Label
               name="ipt"
+              small={false}
             >
               Label
             </Label>
             <Input
               dark={null}
-              defaultValue={null}
               disabled={null}
+              icon={null}
               id="ipt"
               name="ipt"
               onChange={[Function]}
               parentRef={null}
               placeholder="Placeholder text"
+              small={null}
               type="text"
               value=""
             />
@@ -69,9 +74,13 @@ exports[`Filter should match with the snapshot 1`] = `
           alignEnd={true}
         >
           <Button
+            className=""
             container="default"
             disabled={false}
+            fullWidth={false}
+            hasSVG={false}
             loading={false}
+            noShadow={false}
             onClick={null}
             shape="rounded"
             size={2}
@@ -81,9 +90,13 @@ exports[`Filter should match with the snapshot 1`] = `
             Limpar filtros
           </Button>
           <Button
+            className=""
             container="default"
             disabled={false}
+            fullWidth={false}
+            hasSVG={false}
             loading={false}
+            noShadow={false}
             onClick={null}
             shape="rounded"
             size={2}

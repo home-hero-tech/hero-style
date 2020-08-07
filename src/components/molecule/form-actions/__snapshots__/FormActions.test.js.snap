@@ -5,9 +5,13 @@ exports[`FormActions should match with the snapshot 1`] = `
   className="c-form-actions"
 >
   <Button
+    className=""
     container="default"
     disabled={false}
+    fullWidth={false}
+    hasSVG={false}
     loading={false}
+    noShadow={false}
     onClick={null}
     shape="rounded"
     size={2}
@@ -17,9 +21,13 @@ exports[`FormActions should match with the snapshot 1`] = `
     Submit
   </Button>
   <Button
+    className=""
     container="default"
     disabled={false}
+    fullWidth={false}
+    hasSVG={false}
     loading={false}
+    noShadow={false}
     onClick={[Function]}
     shape="rounded"
     size={2}
@@ -36,9 +44,13 @@ exports[`FormActions should match with the snapshot 2`] = `
   className="c-form-actions c-form-actions--align-between"
 >
   <Button
+    className=""
     container="default"
     disabled={false}
+    fullWidth={false}
+    hasSVG={false}
     loading={false}
+    noShadow={false}
     onClick={null}
     shape="rounded"
     size={2}
@@ -48,9 +60,13 @@ exports[`FormActions should match with the snapshot 2`] = `
     Submit
   </Button>
   <Button
+    className=""
     container="default"
     disabled={false}
+    fullWidth={false}
+    hasSVG={false}
     loading={false}
+    noShadow={false}
     onClick={[Function]}
     shape="rounded"
     size={2}
@@ -67,9 +83,13 @@ exports[`FormActions should match with the snapshot 3`] = `
   className="c-form-actions c-form-actions--align-end"
 >
   <Button
+    className=""
     container="default"
     disabled={false}
+    fullWidth={false}
+    hasSVG={false}
     loading={false}
+    noShadow={false}
     onClick={null}
     shape="rounded"
     size={2}
@@ -79,9 +99,13 @@ exports[`FormActions should match with the snapshot 3`] = `
     Submit
   </Button>
   <Button
+    className=""
     container="default"
     disabled={false}
+    fullWidth={false}
+    hasSVG={false}
     loading={false}
+    noShadow={false}
     onClick={[Function]}
     shape="rounded"
     size={2}

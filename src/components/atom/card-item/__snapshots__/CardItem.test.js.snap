@@ -1,31 +1,39 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`CardItem should match with the snapshot 1`] = `
-<CardItem
+<EmptyCardItem
+  className=""
   ellipsis={false}
   gray={false}
+  grayLight={false}
   lbGray={false}
   lbPrimary={false}
   lbWhite={false}
   primary={false}
   small={false}
+  success={false}
+  svgDefaultSize={true}
   svgPrimary={false}
   svgWhite={false}
+  valGrayLight={false}
   valPrimary={false}
+  valSuccess={false}
   valWhite={false}
   white={false}
 >
   <div
     className="c-card-item__content"
   >
-    <span>
+    <span
+      className="c-card-item__label truncate"
+    >
       Label
     </span>
     <span
-      className="truncate"
+      className="c-card-item__value truncate"
     >
       Value
     </span>
   </div>
-</CardItem>
+</EmptyCardItem>
 `;

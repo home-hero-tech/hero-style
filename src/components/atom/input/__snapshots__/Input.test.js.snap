@@ -1,14 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Input should match with the snapshot 1`] = `
-<input
-  className="c-input"
-  disabled={null}
-  id="ipt"
-  name="ipt"
-  onChange={[Function]}
-  placeholder="placeholder text"
-  type="text"
-  value={null}
-/>
+<div
+  className="c-input-wrapper"
+>
+  <input
+    className="c-input"
+    disabled={null}
+    id="ipt"
+    name="ipt"
+    onChange={[Function]}
+    placeholder="placeholder text"
+    type="text"
+  />
+</div>
 `;

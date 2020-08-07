@@ -2,11 +2,16 @@
 
 exports[`Modal should match with the *left* props 1`] = `
 <div
+  className="root"
   id="root"
 >
   <Modal
+    center={false}
+    className=""
     contentLabel="Default Modal"
+    hasPadding={true}
     left={true}
+    onCancel={null}
     onRequestClose={null}
     open={true}
     right={true}
@@ -19,11 +24,16 @@ exports[`Modal should match with the *left* props 1`] = `
 
 exports[`Modal should match with the *right* props 1`] = `
 <div
+  className="root"
   id="root"
 >
   <Modal
+    center={false}
+    className=""
     contentLabel="Default Modal"
+    hasPadding={true}
     left={false}
+    onCancel={null}
     onRequestClose={null}
     open={true}
     right={true}
@@ -36,11 +46,16 @@ exports[`Modal should match with the *right* props 1`] = `
 
 exports[`Modal should match with the snapshot 1`] = `
 <div
+  className="root"
   id="root"
 >
   <Modal
+    center={false}
+    className=""
     contentLabel="Default Modal"
+    hasPadding={true}
     left={false}
+    onCancel={null}
     onRequestClose={null}
     open={true}
     right={true}

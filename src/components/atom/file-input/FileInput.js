@@ -100,28 +100,30 @@ const FileInput = ({
 };
 
 FileInput.propTypes = {
-  id: PropTypes.string.isRequired,
-  type: PropTypes.oneOf(['card', 'button']),
-  name: PropTypes.string,
-  text: PropTypes.string,
-  multiple: PropTypes.bool,
-  value: PropTypes.instanceOf(Object),
-  disabled: PropTypes.bool,
   className: PropTypes.string,
-  onChange: PropTypes.func.isRequired,
-  onRemove: PropTypes.func.isRequired,
-  inputProps: PropTypes.instanceOf(Object)
+  inputProps: PropTypes.instanceOf(Object),
+  id: PropTypes.string.isRequired,
+  disabled: PropTypes.bool,
+  multiple: PropTypes.bool,
+  name: PropTypes.string,
+  onRemove: PropTypes.func,
+  onChange: PropTypes.func,
+  text: PropTypes.string,
+  type: PropTypes.oneOf(['card', 'button']),
+  value: PropTypes.instanceOf(Object)
 };
 
 FileInput.defaultProps = {
+  className: '',
+  disabled: false,
+  inputProps: {},
+  multiple: false,
   name: 'image',
+  onChange: f => f,
+  onRemove: f => f,
   text: 'Carregar imagem',
   type: 'card',
-  className: '',
-  value: null,
-  disabled: false,
-  multiple: false,
-  inputProps: {}
+  value: null
 };
 
 export default FileInput;

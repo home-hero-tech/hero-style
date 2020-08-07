@@ -1,41 +1,49 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Select should match with the snapshot 1`] = `
-<StateManager
-  backspaceRemoves={true}
-  className="c-select"
-  classNamePrefix="c-select"
-  defaultInputValue=""
-  defaultMenuIsOpen={false}
-  defaultValue={null}
-  deleteRemoves={true}
-  inputId={null}
-  isMulti={false}
-  isSearchable={true}
-  name={null}
-  noOptionsMessage={[Function]}
-  onChange={[Function]}
-  options={
-    Array [
-      Object {
-        "label": "Chocolate",
-        "value": "chocolate",
-      },
-      Object {
-        "label": "Strawberry",
-        "value": "strawberry",
-      },
-      Object {
-        "label": "Vanilla",
-        "value": "vanilla",
-      },
-      Object {
-        "label": "Coconut",
-        "value": "Coconut",
-      },
-    ]
-  }
-  placeholder="Selecione..."
-  value={null}
-/>
+<div
+  className="c-select-wrapper"
+>
+  <span
+    className=""
+  />
+  <StateManager
+    backspaceRemoves={true}
+    className="c-select--default"
+    classNamePrefix="c-select--default"
+    defaultInputValue=""
+    defaultMenuIsOpen={false}
+    defaultValue={null}
+    deleteRemoves={true}
+    inputId={null}
+    isClearable={false}
+    isMulti={false}
+    isSearchable={true}
+    name={null}
+    noOptionsMessage={[Function]}
+    onChange={[Function]}
+    options={
+      Array [
+        Object {
+          "label": "Chocolate",
+          "value": "chocolate",
+        },
+        Object {
+          "label": "Strawberry",
+          "value": "strawberry",
+        },
+        Object {
+          "label": "Vanilla",
+          "value": "vanilla",
+        },
+        Object {
+          "label": "Coconut",
+          "value": "Coconut",
+        },
+      ]
+    }
+    placeholder="Selecione..."
+    value={null}
+  />
+</div>
 `;

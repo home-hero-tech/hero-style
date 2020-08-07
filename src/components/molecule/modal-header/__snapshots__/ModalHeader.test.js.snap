@@ -9,14 +9,19 @@ exports[`ModalHeader should match with the snapshot 1`] = `
     title="Title"
   />
   <Text
+    bold={false}
     center={false}
     danger={false}
+    ellipsis={false}
     end={false}
     fill={false}
+    grayVal={null}
     lg={false}
     primary={false}
+    regular={false}
     sm={false}
     success={false}
+    thin={false}
     uppercase={false}
     warning={false}
     xs={false}

@@ -2,7 +2,7 @@
 
 exports[`EmptyCardItem should match with the snapshot 1`] = `
 <Col
-  className="c-card-item c-card-item--default"
+  className="c-card-item c-card-item--default c-card-item--svg-default-size"
   label="Label"
   value="Value"
 />

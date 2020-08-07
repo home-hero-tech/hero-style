@@ -117,6 +117,7 @@ exports[`ShapeAction should match with the *fill* props equals success 1`] = `
 exports[`ShapeAction should match with the *isButton* props equals true 1`] = `
 <button
   className="c-shape-action c-shape-action--primary c-shape-action--fill-danger c-shape-action--squared c-shape-action--size-1"
+  type="button"
 >
   <FontAwesomeIcon
     border={false}
@@ -534,7 +535,7 @@ exports[`ShapeAction should match with the *type* props equals success 1`] = `
 
 exports[`ShapeAction should match with the snapshot 1`] = `
 <span
-  className="c-shape-action c-shape-action--primary c-shape-action--squared c-shape-action--size-1"
+  className="c-shape-action c-shape-action--squared c-shape-action--size-1"
 >
   <FontAwesomeIcon
     border={false}

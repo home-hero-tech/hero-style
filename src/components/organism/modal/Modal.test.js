@@ -1,5 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
+import ReactModal from 'react-modal';
 import toJson from 'enzyme-to-json';
 
 import Modal from './Modal';
@@ -9,7 +10,7 @@ describe('Modal', () => {
     const isOpen = true;
 
     const wrapper = shallow(
-      <div id="root">
+      <div id="root" className="root">
         <Modal open={isOpen} contentLabel="Default Modal">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio, vitae!
         </Modal>
@@ -22,7 +23,7 @@ describe('Modal', () => {
     const isOpen = true;
 
     const wrapper = shallow(
-      <div id="root">
+      <div id="root" className="root">
         <Modal open={isOpen} contentLabel="Default Modal" right>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio, vitae!
         </Modal>
@@ -35,7 +36,7 @@ describe('Modal', () => {
     const isOpen = true;
 
     const wrapper = shallow(
-      <div id="root">
+      <div id="root" className="root">
         <Modal open={isOpen} contentLabel="Default Modal" left>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio, vitae!
         </Modal>

@@ -2,6 +2,7 @@
 
 exports[`Form should match with the snapshot 1`] = `
 <form
+  autoComplete="off"
   className={null}
   noValidate={true}
   onSubmit={[Function]}

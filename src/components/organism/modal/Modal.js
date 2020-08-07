@@ -7,7 +7,7 @@ import css from './Modal.module.scss';
 
 import CloseButton from './CloseButton';
 
-ReactModal.setAppElement('#root');
+if (process.env.NODE_ENV !== 'test') ReactModal.setAppElement('#root');
 
 const Modal = ({
   open,
@@ -49,6 +49,7 @@ const Modal = ({
       shouldCloseOnOverlayClick
       closeTimeoutMS={300}
       onRequestClose={onRequestClose}
+      ariaHideApp={process.env.NODE_ENV !== 'test'}
       {...otherProps}
     >
       {onCancel ? <CloseButton onClick={onCancel} /> : null}

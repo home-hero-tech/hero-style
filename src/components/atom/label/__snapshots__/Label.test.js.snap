@@ -2,6 +2,7 @@
 
 exports[`Label should match with the snapshot 1`] = `
 <label
+  className=""
   htmlFor="lbl"
 >
   Text

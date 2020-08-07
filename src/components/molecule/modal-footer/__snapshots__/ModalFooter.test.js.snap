@@ -2,12 +2,16 @@
 
 exports[`ModalFooter should match with the snapshot 1`] = `
 <footer
-  className="c-modal__actions"
+  className="c-modal__actions c-modal__actions--align-between"
 >
   <Button
+    className=""
     container="default"
     disabled={false}
+    fullWidth={false}
+    hasSVG={false}
     loading={false}
+    noShadow={false}
     onClick={[Function]}
     shape="rounded"
     size={2}
@@ -17,9 +21,13 @@ exports[`ModalFooter should match with the snapshot 1`] = `
     1st action
   </Button>
   <Button
+    className=""
     container="default"
     disabled={false}
+    fullWidth={false}
+    hasSVG={false}
     loading={false}
+    noShadow={false}
     onClick={[Function]}
     shape="rounded"
     size={2}
