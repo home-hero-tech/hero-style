@@ -1,26 +1,28 @@
-name: npm-publish
+name: Build react and deploy to s3 on PR-MERGED
 on:
   push:
     branches:
-      - master # Change this to your default branch
+      - master
 jobs:
-  npm-publish:
-    name: npm-publish
+  build:
+    name:  Build react and deploy to s3 on PR-MERGED
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [12.x]
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@master
-      - name: Set up Node.js
-        uses: actions/setup-node@master
-        with:
-          node-version: 12.x
-      - name: Publish if version has been updated
-        uses: pascalgn/npm-publish-action@06e0830ea83eea10ed4a62654eeaedafb8bf50fc
-#        with: # All of theses inputs are optional
-#          tag_name: "v%s"
-#          tag_message: "v%s"
-#          commit_pattern: "^v(\\S+)"
-#          workspace: "."
-        env: # More info about the environment variables in the README
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Leave this as is, it's automatically generated
-          NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }} # You need to set this in your repo settings
+      - uses: actions/checkout@v2
+      - name: Install dependencies
+        run: yarn install
+      - name: Lint
+        run: yarn lint:fix
+      - name: Build packages
+        run: yarn build
+      - name: Test
+        run: yarn test
+
+      - name: Authenticate with registry
+        run: echo "//registry.npmjs.org/:_authToken=${{secrets.NPM_AUTH_TOKEN}}" > .npmrc
+      - name: Publish package
+        run: npm publish --access public
+
