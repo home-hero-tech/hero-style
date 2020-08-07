@@ -26,6 +26,7 @@ jobs:
           AWS_ACCESS_KEY_ID: ${{ secrets.S3_AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.S3_AWS_SECRET_ACCESS_KEY }}
           AWS_REGION: ${{ secrets.AWS_REGION }}
+          AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
           SOURCE_DIR: './storybook-static'      # optional: defaults to entire repository
       - name: Deploy index.html as static
         uses: jakejarvis/s3-sync-action@master
