@@ -65,19 +65,19 @@ CardSelect.propTypes = {
   selected: PropTypes.oneOfType([
     PropTypes.shape({
       label: PropTypes.string,
-      value: PropTypes.any
+      value: PropTypes.oneOfType([PropTypes.any])
     }),
     PropTypes.arrayOf(
       PropTypes.shape({
         label: PropTypes.string,
-        value: PropTypes.any
+        value: PropTypes.oneOfType([PropTypes.any])
       })
     )
   ]),
   options: PropTypes.arrayOf(
     PropTypes.shape({
       label: PropTypes.string,
-      value: PropTypes.any
+      value: PropTypes.oneOfType([PropTypes.any])
     })
   ),
   className: PropTypes.string,
