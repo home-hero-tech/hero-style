@@ -27,7 +27,7 @@ jobs:
           CI: true
 
       - name: Generate build
-        run: npm run build
+        run: npm run build-storybook
 
       # Share artifact inside workflow
       - name: Share artifact inside workflow
@@ -47,7 +47,7 @@ jobs:
         uses: actions/download-artifact@v1
         with:
           name: react-github-actions-build
-        
+
       - name: Upload to s3
         uses: jakejarvis/s3-sync-action@master
         with:
