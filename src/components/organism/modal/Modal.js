@@ -7,7 +7,7 @@ import css from './Modal.module.scss';
 
 import CloseButton from './CloseButton';
 
-if (process.env.NODE_ENV !== 'test') ReactModal.setAppElement('#root');
+// ReactModal.setAppElement('#root');
 
 const Modal = ({
   open,
