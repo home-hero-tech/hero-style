@@ -1,63 +1,39 @@
-name: Hero-style to s3
-
+name: Publish Hero-Style to s3
 on:
   push:
     branches:
-    - master
+      - master
 
 jobs:
   build:
-    name: Hero-style building
+    name:  Publish Hero-Style to s3
     runs-on: ubuntu-latest
     strategy:
       matrix:
         node-version: [12.x]
     steps:
-      - name: Clone repository
-        uses: actions/checkout@v2
-
-      - name: Use Node 12.x
-        uses: actions/setup-node@v1
-        with:
-          node-version: 12.x
-
+      - uses: actions/checkout@v2
       - name: Install dependencies
-        run: yarn install
+        run: npm install
+      - name: Build
+        run: CI=false npm run build-storybook --if-present
 
-      - name: Tests
-        run: yarn run test
-        env:
-          CI: true
-
-      - name: Generate build
-        run: yarn run build-storybook
-
-      # Share artifact inside workflow
-      - name: Share artifact inside workflow
-        uses: actions/upload-artifact@v1
-        with:
-          name: react-github-actions-build
-          path: build
-
-  deploy:
-    runs-on: ubuntu-latest
-    # When application is successfully tested and build has been generated
-    # Then we can start with deployment
-    needs: build
-    steps:
-      # Download previously shared build
-      - name: Get artifact
-        uses: actions/download-artifact@v1
-        with:
-          name: react-github-actions-build
-
-      - name: Upload to s3
+      - name: Deploy
         uses: jakejarvis/s3-sync-action@master
         with:
-          args: --acl public-read --follow-symlinks --delete
+          args: --acl public-read --exclude "index.html" --follow-symlinks --metadata "Accept-Encoding=gzip" --cache-control "max-age=14400" --delete
         env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.S3_AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.S3_AWS_SECRET_ACCESS_KEY }}
+          AWS_REGION: ${{ secrets.AWS_REGION }}
+          SOURCE_DIR: './storybook-static'      # optional: defaults to entire repository
+      - name: Deploy index.html as static
+        uses: jakejarvis/s3-sync-action@master
+        with:
+          args: --exclude '*' --include "index.html" --acl public-read --follow-symlinks --metadata "Accept-Encoding=gzip" --cache-control "max-age=0,public,proxy-revalidate,must-revalidate" --delete
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.S3_AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.S3_AWS_SECRET_ACCESS_KEY }}
+          AWS_REGION: ${{ secrets.AWS_REGION }}
           AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          AWS_REGION: ${{ secrets.AWS_REGION }}   # optional: defaults to us-east-1
-          SOURCE_DIR: 'public'      # optional: defaults to entire repository
+          SOURCE_DIR: './storybook-static'      # optional: defaults to entire repository

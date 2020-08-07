@@ -1,11 +1,11 @@
-name: Build react and deploy to s3 on PR-MERGED
+name: Publish to NPM
 on:
   push:
     branches:
       - master
 jobs:
   build:
-    name:  Build react and deploy to s3 on PR-MERGED
+    name:  Publish to NPM
     runs-on: ubuntu-latest
     strategy:
       matrix:
