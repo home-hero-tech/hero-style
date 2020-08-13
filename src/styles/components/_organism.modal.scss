@@ -192,7 +192,7 @@
       }
       .c-modal__actions {
         position: fixed;
-        width: 100%;
+        width: 90%;
         left: auto;
       }
     }
@@ -204,7 +204,6 @@
     .c-modal__actions {
       height: auto;
       display: flex;
-      flex-direction: column-reverse;
     }
   }
 }
