@@ -52,6 +52,7 @@ import DropdownMenu from './components/molecule/dropdown-menu/DropdownMenu';
 import Dropdown from './components/molecule/dropdown/Dropdown';
 import Grid from './components/molecule/grid/Grid';
 import Editor from './components/molecule/editor/Editor';
+import Slider from './components/molecule/slider/Slider';
 
 // organisms
 import CardLine from './components/organism/card-line/CardLine';
@@ -103,8 +104,10 @@ export {
   ModalFooter,
   ModalHeader,
   Pagination,
+  Row,
   Select,
   ShapeAction,
+  Slider,
   Spacer,
   Switch,
   Tab,
@@ -113,6 +116,5 @@ export {
   TabPanel,
   Text,
   Tooltip,
-  Row,
-  TextMaskInput
+  TextMaskInput,
 };
