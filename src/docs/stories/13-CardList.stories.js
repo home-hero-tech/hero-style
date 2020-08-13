@@ -60,24 +60,31 @@ export const WithCardItems = () => (
     <Grid fluid>
       <Card>
         <CardBody>
-          <Row middle="xs">
-            <Col>
-              <Spacer mrLg={2} mrMd={2}>
-                <Input
-                  id="ipt"
-                  name="ipt"
-                  type="checkbox"
-                  defaultChecked
-                  value="1"
-                  onChange={action('toggleCheck')}
-                />
-              </Spacer>
+          <Row>
+            <Col xs={11}>
+              <Row middle="xs">
+                <Col>
+                  <Spacer mrLg={2} mrMd={2}>
+                    <Input
+                      id="ipt"
+                      name="ipt"
+                      type="checkbox"
+                      defaultChecked
+                      value="1"
+                      onChange={action('toggleCheck')}
+                    />
+                  </Spacer>
+                </Col>
+                <CardItem label="#" value="1" />
+                <CardItem label="Status" value="Ativo" />
+                <CardItem label="Nome" value="Matheus Alexandre" />
+                <CardItem label="Criado em" value="04 de Set 2019 às 13:58" />
+                <CardItem label="Atualizado em" value="04 de Set 2019 às 13:58" />
+              </Row>
             </Col>
-            <CardItem label="#" value="1" />
-            <CardItem label="Status" value="Ativo" />
-            <CardItem label="Nome" value="Matheus Alexandre" />
-            <CardItem label="Criado em" value="04 de Set 2019 às 13:58" />
-            <CardItem label="Atualizado em" value="04 de Set 2019 às 13:58" />
+            <Col xs="1">
+              actions
+            </Col>
           </Row>
         </CardBody>
       </Card>
