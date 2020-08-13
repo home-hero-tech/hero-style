@@ -1,0 +1,23 @@
+:global {
+  .slick-slider {
+    .slick-arrow {
+      width: 25px;
+      height: 25px;
+      z-index: 2;
+      &.slick-prev {
+        left: -10px;
+      }
+      &.slick-next {
+        right: -10px;
+      }
+      &::before {
+        color: #6c7796;
+        font-size: 25px;
+      }
+    }
+  }
+}
+
+.c-slider {
+  z-index: -1px;
+}
