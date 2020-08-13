@@ -4,7 +4,7 @@ exports[`DatePicker should match with the snapshot 1`] = `
 <div
   className="c-datepicker"
 >
-  <o
+  <t
     allowSameDay={false}
     calendarClassName="c-calendar"
     className="c-input"
@@ -51,14 +51,12 @@ exports[`DatePicker should match with the snapshot 1`] = `
     renderDayContents={[Function]}
     selected={2020-03-11T10:41:40.597Z}
     shouldCloseOnSelect={true}
-    showFullMonthYearPicker={false}
     showMonthYearPicker={false}
     showPopperArrow={false}
     showPreviousMonths={false}
     showQuarterYearPicker={false}
     showTimeInput={false}
     showTimeSelect={false}
-    showYearPicker={false}
     strictParsing={false}
     timeCaption="Time"
     timeInputLabel="Time"
