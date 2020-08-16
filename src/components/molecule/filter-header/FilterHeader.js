@@ -34,7 +34,7 @@ const FilterHeader = ({ onClick, tabIndex, totalItems, handleOrder, children }) 
         className={css['c-filter__heading']}
       >
         <Text end regular>
-          <FontAwesomeIcon icon={faSort} /> Ordernar
+          <FontAwesomeIcon icon={faSort} /> Ordenar
         </Text>
       </div>
     </div>
