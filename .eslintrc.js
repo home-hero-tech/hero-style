@@ -23,15 +23,18 @@ module.exports = {
   },
   plugins: [
     'react',
+    'prettier'
   ],
   rules: {
     'react/jsx-filename-extension': [1, { 'extensions': ['.js', '.jsx'] }],
+    "react/jsx-one-expression-per-line": 0,
     'react/jsx-props-no-spreading': 0,
     'react/button-has-type': 0,
+    'react/jsx-curly-newline': 0,
     'no-underscore-dangle': 0,
     'import/no-extraneous-dependencies': 0,
     'max-len': ['error', 120],
     'prettier/prettier': ['error', { 'singleQuote': true }],
-    "react/jsx-one-expression-per-line": 0,
+    'import/prefer-default-export': 0,
   },
 };

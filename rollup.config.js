@@ -9,7 +9,6 @@ import external from 'rollup-plugin-peer-deps-external';
 import { terser } from 'rollup-plugin-terser';
 import copy from 'rollup-plugin-copy-glob';
 import image from '@rollup/plugin-image';
-// import { uglify } from 'rollup-plugin-uglify';
 
 import packageJSON from './package.json';
 
@@ -37,9 +36,9 @@ export default [
       }),
       postcss({
         modules: true,
-        minimize: {
-          safe: true
-        }
+        minimize: true,
+        extract: true
+        // sourceMap: true (adds 500kb to the package)
       }),
       resolve(),
       commonjs({
