@@ -6,13 +6,7 @@ import classNames from 'classnames';
 
 import css from './Tabs.module.scss';
 
-const TabsComponent = ({
-  white,
-  dark,
-  darkSecondary,
-  children,
-  ...otherProps
-}) => {
+const TabsComponent = ({ white, dark, darkSecondary, children, ...otherProps }) => {
   const classes = classNames({
     [css['c-tabs']]: true,
     [css['c-tabs--white']]: !!white,

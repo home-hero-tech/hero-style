@@ -25,12 +25,7 @@ const Form = () => {
         </FormGroup>
         <FormGroup md={4}>
           <Label name="ipt">Label</Label>
-          <Select
-            options={options}
-            placeholder="Test"
-            value={currentOption}
-            dark
-          />
+          <Select options={options} placeholder="Test" value={currentOption} dark />
         </FormGroup>
       </FormRow>
       <FormRow>
@@ -40,12 +35,7 @@ const Form = () => {
         </FormGroup>
         <FormGroup md={4}>
           <Label name="ipt">Label</Label>
-          <Select
-            options={options}
-            placeholder="Test"
-            value={currentOption}
-            dark
-          />
+          <Select options={options} placeholder="Test" value={currentOption} dark />
         </FormGroup>
       </FormRow>
     </>

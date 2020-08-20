@@ -29,13 +29,7 @@ export const Default = () => (
   <div style={_style}>
     <FormGroup>
       <Label name="ipt">Label</Label>
-      <Input
-        id="ipt"
-        name="ipt"
-        type="text"
-        placeholder="Placeholder text"
-        value=""
-      />
+      <Input id="ipt" name="ipt" type="text" placeholder="Placeholder text" value="" />
     </FormGroup>
   </div>
 );
@@ -62,14 +56,7 @@ export const Small = () => (
       <Label name="ipt" small>
         Label
       </Label>
-      <Input
-        small
-        id="ipt"
-        name="ipt"
-        type="text"
-        placeholder="Placeholder text"
-        value=""
-      />
+      <Input small id="ipt" name="ipt" type="text" placeholder="Placeholder text" value="" />
     </FormGroup>
   </div>
 );
@@ -78,13 +65,7 @@ export const Message = () => (
   <div style={_style}>
     <FormGroup>
       <Label name="ipt">Label</Label>
-      <Input
-        id="ipt"
-        name="ipt"
-        type="text"
-        placeholder="Placeholder text"
-        value=""
-      />
+      <Input id="ipt" name="ipt" type="text" placeholder="Placeholder text" value="" />
       <small>Default message</small>
     </FormGroup>
   </div>
@@ -111,12 +92,7 @@ export const ErrorMessageSelect = () => (
   <div style={_style}>
     <FormGroup error>
       <Label name="ipt">Label</Label>
-      <Select
-        options={options}
-        placeholder="Selecione..."
-        noOptionsMessage={noOptionsMessage}
-        searchable={false}
-      />
+      <Select options={options} placeholder="Selecione..." noOptionsMessage={noOptionsMessage} searchable={false} />
       <small>Please, verify</small>
     </FormGroup>
   </div>

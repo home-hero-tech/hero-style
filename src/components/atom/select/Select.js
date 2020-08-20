@@ -54,8 +54,7 @@ const Select = ({
     onChange,
     placeholder,
     isClearable,
-    noOptionsMessage: ({ inputValue }) =>
-      inputValue && inputValue.length ? noOptionsMessage() : firstMessage(),
+    noOptionsMessage: ({ inputValue }) => (inputValue && inputValue.length ? noOptionsMessage() : firstMessage()),
     ...otherProps
   };
 
@@ -90,12 +89,7 @@ Select.propTypes = {
   small: PropTypes.bool,
   searchable: PropTypes.bool,
   async: PropTypes.bool,
-  value: PropTypes.oneOfType([
-    PropTypes.array,
-    PropTypes.object,
-    PropTypes.string,
-    PropTypes.number
-  ]),
+  value: PropTypes.oneOfType([PropTypes.array, PropTypes.object, PropTypes.string, PropTypes.number]),
   isClearable: PropTypes.bool
 };
 

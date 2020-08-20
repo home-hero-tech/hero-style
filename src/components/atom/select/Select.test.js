@@ -15,13 +15,7 @@ const noOptionsMessage = () => 'Nenhuma opção';
 
 describe('Select', () => {
   it('should match with the snapshot', () => {
-    const wrapper = shallow(
-      <Select
-        options={options}
-        placeholder={placeholder}
-        noOptionsMessage={noOptionsMessage}
-      />
-    );
+    const wrapper = shallow(<Select options={options} placeholder={placeholder} noOptionsMessage={noOptionsMessage} />);
     expect(toJson(wrapper)).toMatchSnapshot();
   });
 });

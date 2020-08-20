@@ -59,16 +59,8 @@ const EmptyCardItem = ({
 };
 
 EmptyCardItem.propTypes = {
-  children: PropTypes.oneOfType([
-    PropTypes.object,
-    PropTypes.array,
-    PropTypes.string
-  ]),
-  className: PropTypes.oneOfType([
-    PropTypes.object,
-    PropTypes.array,
-    PropTypes.string
-  ]),
+  children: PropTypes.oneOfType([PropTypes.object, PropTypes.array, PropTypes.string]),
+  className: PropTypes.oneOfType([PropTypes.object, PropTypes.array, PropTypes.string]),
   ellipsis: PropTypes.bool,
   gray: PropTypes.bool,
   grayLight: PropTypes.bool,

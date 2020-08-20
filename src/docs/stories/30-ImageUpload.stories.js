@@ -25,14 +25,5 @@ export const Default = () => {
 
 export const Disabled = () => {
   const [value, setValue] = useState(null);
-  return (
-    <ImageUpload
-      id="image-upload"
-      name="ipt"
-      text="Buscar arquivo"
-      value={value}
-      onChange={setValue}
-      disabled
-    />
-  );
+  return <ImageUpload id="image-upload" name="ipt" text="Buscar arquivo" value={value} onChange={setValue} disabled />;
 };

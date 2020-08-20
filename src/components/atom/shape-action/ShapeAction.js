@@ -3,17 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import css from './ShapeAction.module.scss';
 
-const ShapeAction = ({
-  type,
-  shape,
-  fill,
-  size,
-  isButton,
-  isLink,
-  children,
-  submit,
-  ...otherProps
-}) => {
+const ShapeAction = ({ type, shape, fill, size, isButton, isLink, children, submit, ...otherProps }) => {
   const classes = classNames({
     [css['c-shape-action']]: true,
     [css['c-shape-action--is-link']]: isLink,
@@ -25,11 +15,7 @@ const ShapeAction = ({
 
   if (isButton && !isLink) {
     return (
-      <button
-        className={classes}
-        type={submit ? 'submit' : 'button'}
-        {...otherProps}
-      >
+      <button className={classes} type={submit ? 'submit' : 'button'} {...otherProps}>
         {children}
       </button>
     );

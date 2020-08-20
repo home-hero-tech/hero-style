@@ -23,35 +23,17 @@ export const Default = () => (
         <FormRow>
           <FormGroup md>
             <Label name="ipt">Label</Label>
-            <Input
-              id="ipt"
-              name="ipt"
-              type="text"
-              placeholder="Placeholder text"
-              value=""
-            />
+            <Input id="ipt" name="ipt" type="text" placeholder="Placeholder text" value="" />
           </FormGroup>
           <FormGroup md>
             <Label name="ipt">Label</Label>
-            <Input
-              id="ipt2"
-              name="ipt2"
-              type="text"
-              placeholder="Placeholder text"
-              value=""
-            />
+            <Input id="ipt2" name="ipt2" type="text" placeholder="Placeholder text" value="" />
           </FormGroup>
         </FormRow>
         <FormRow>
           <FormGroup md>
             <Label name="ipt">Label</Label>
-            <Input
-              id="ipt3"
-              name="ipt3"
-              type="text"
-              placeholder="Placeholder text"
-              value=""
-            />
+            <Input id="ipt3" name="ipt3" type="text" placeholder="Placeholder text" value="" />
           </FormGroup>
         </FormRow>
       </Grid>
@@ -66,40 +48,19 @@ export const Errors = () => (
         <FormRow>
           <FormGroup md error>
             <Label name="ipt">Label</Label>
-            <Input
-              id="ipt"
-              name="ipt"
-              type="text"
-              placeholder="Placeholder text"
-              value=""
-            />
-            <small>
-              Lorem ipsum dolor sit consectetu ave Lorem ipsum dolor sit
-              consectetu ave..
-            </small>
+            <Input id="ipt" name="ipt" type="text" placeholder="Placeholder text" value="" />
+            <small>Lorem ipsum dolor sit consectetu ave Lorem ipsum dolor sit consectetu ave..</small>
           </FormGroup>
           <FormGroup md error>
             <Label name="ipt">Label</Label>
-            <Input
-              id="ipt2"
-              name="ipt2"
-              type="text"
-              placeholder="Placeholder text"
-              value=""
-            />
+            <Input id="ipt2" name="ipt2" type="text" placeholder="Placeholder text" value="" />
             <small>Error message</small>
           </FormGroup>
         </FormRow>
         <FormRow>
           <FormGroup md error>
             <Label name="ipt">Label</Label>
-            <Input
-              id="ipt3"
-              name="ipt3"
-              type="text"
-              placeholder="Placeholder text"
-              value=""
-            />
+            <Input id="ipt3" name="ipt3" type="text" placeholder="Placeholder text" value="" />
           </FormGroup>
         </FormRow>
       </Grid>

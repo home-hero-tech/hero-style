@@ -26,33 +26,17 @@ export const Default = () => (
         <FormRow>
           <FormGroup md>
             <Label name="ipt">Label</Label>
-            <Input
-              id="ipt"
-              name="ipt"
-              type="text"
-              placeholder="Placeholder text"
-              value=""
-            />
+            <Input id="ipt" name="ipt" type="text" placeholder="Placeholder text" value="" />
           </FormGroup>
           <FormGroup md>
             <Label name="ipt">Label</Label>
-            <Input
-              id="ipt"
-              name="ipt"
-              type="text"
-              placeholder="Placeholder text"
-            />
+            <Input id="ipt" name="ipt" type="text" placeholder="Placeholder text" />
           </FormGroup>
         </FormRow>
         <FormRow>
           <FormGroup md>
             <Label name="ipt">Label</Label>
-            <Input
-              id="ipt"
-              name="ipt"
-              type="text"
-              placeholder="Placeholder text"
-            />
+            <Input id="ipt" name="ipt" type="text" placeholder="Placeholder text" />
           </FormGroup>
         </FormRow>
         <FormActions>
@@ -73,35 +57,17 @@ export const AlignBetween = () => (
         <FormRow>
           <FormGroup md xs={12}>
             <Label name="ipt">Label</Label>
-            <Input
-              id="ipt"
-              name="ipt"
-              type="text"
-              placeholder="Placeholder text"
-              value=""
-            />
+            <Input id="ipt" name="ipt" type="text" placeholder="Placeholder text" value="" />
           </FormGroup>
           <FormGroup md xs={12}>
             <Label name="ipt">Label</Label>
-            <Input
-              id="ipt"
-              name="ipt"
-              type="text"
-              placeholder="Placeholder text"
-              value=""
-            />
+            <Input id="ipt" name="ipt" type="text" placeholder="Placeholder text" value="" />
           </FormGroup>
         </FormRow>
         <FormRow>
           <FormGroup md>
             <Label name="ipt">Label</Label>
-            <Input
-              id="ipt"
-              name="ipt"
-              type="text"
-              placeholder="Placeholder text"
-              value=""
-            />
+            <Input id="ipt" name="ipt" type="text" placeholder="Placeholder text" value="" />
           </FormGroup>
         </FormRow>
         <FormActions alignBetween>
@@ -122,35 +88,17 @@ export const AlignEnd = () => (
         <FormRow>
           <FormGroup md>
             <Label name="ipt">Label</Label>
-            <Input
-              id="ipt"
-              name="ipt"
-              type="text"
-              placeholder="Placeholder text"
-              value=""
-            />
+            <Input id="ipt" name="ipt" type="text" placeholder="Placeholder text" value="" />
           </FormGroup>
           <FormGroup md>
             <Label name="ipt">Label</Label>
-            <Input
-              id="ipt"
-              name="ipt"
-              type="text"
-              placeholder="Placeholder text"
-              value=""
-            />
+            <Input id="ipt" name="ipt" type="text" placeholder="Placeholder text" value="" />
           </FormGroup>
         </FormRow>
         <FormRow>
           <FormGroup md>
             <Label name="ipt">Label</Label>
-            <Input
-              id="ipt"
-              name="ipt"
-              type="text"
-              placeholder="Placeholder text"
-              value=""
-            />
+            <Input id="ipt" name="ipt" type="text" placeholder="Placeholder text" value="" />
           </FormGroup>
         </FormRow>
         <FormActions alignEnd>

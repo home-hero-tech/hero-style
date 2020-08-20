@@ -8,19 +8,7 @@ import css from './CardItem.module.scss';
 import EmptyCardItem from '../empty-card-item/EmptyCardItem';
 import Tooltip from '../../molecule/tooltip/Tooltip';
 
-const CardItem = ({
-  format,
-  label,
-  leftIcon,
-  value,
-  small,
-  tooltip,
-  href,
-  className,
-  html,
-  thin,
-  ...otherProps
-}) => {
+const CardItem = ({ format, label, leftIcon, value, small, tooltip, href, className, html, thin, ...otherProps }) => {
   const classes = classNames(css['c-card-item__content'], className);
 
   const valueClasses = classNames({
@@ -50,11 +38,7 @@ const CardItem = ({
 
     if (_tooltip) {
       return (
-        <Tooltip
-          description={_tooltip}
-          position="bottom-start"
-          animation="perspective"
-        >
+        <Tooltip description={_tooltip} position="bottom-start" animation="perspective">
           {_href ? <a href={_href}>{_value}</a> : value}
         </Tooltip>
       );
@@ -71,12 +55,7 @@ const CardItem = ({
         {_value ? (
           <span className={valueClasses}>
             {_value instanceof Date
-              ? RenderValue(
-                  moment(_value).format(format),
-                  _tooltip,
-                  _href,
-                  _html
-                )
+              ? RenderValue(moment(_value).format(format), _tooltip, _href, _html)
               : RenderValue(_value, _tooltip, _href, _html)}
           </span>
         ) : null}
@@ -109,11 +88,7 @@ CardItem.propTypes = {
   valSuccess: PropTypes.bool,
   valGrayLight: PropTypes.bool,
   valWhite: PropTypes.bool,
-  value: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.instanceOf(Date),
-    PropTypes.number
-  ]),
+  value: PropTypes.oneOfType([PropTypes.string, PropTypes.instanceOf(Date), PropTypes.number]),
   tooltip: PropTypes.string,
   href: PropTypes.string,
   className: PropTypes.string,

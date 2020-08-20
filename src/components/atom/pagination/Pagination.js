@@ -3,14 +3,7 @@ import PropTypes from 'prop-types';
 import RPagination from 'react-js-pagination';
 import css from './Pagination.module.scss';
 
-const Pagination = ({
-  activePage,
-  itemsCountPerPage,
-  totalItemsCount,
-  pageRangeDisplayed,
-  onClick,
-  onChange
-}) => {
+const Pagination = ({ activePage, itemsCountPerPage, totalItemsCount, pageRangeDisplayed, onClick, onChange }) => {
   return (
     <div className={css['c-pagination']}>
       <RPagination

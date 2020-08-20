@@ -28,20 +28,12 @@ export const Above = () => (
             </Button>
           </ListItem>
           <ListItem>
-            <Button
-              type="default"
-              container="text"
-              onClick={action('clicked 2')}
-            >
+            <Button type="default" container="text" onClick={action('clicked 2')}>
               Açao 2
             </Button>
           </ListItem>
           <ListItem>
-            <Button
-              type="default"
-              container="text"
-              onClick={action('clicked 3')}
-            >
+            <Button type="default" container="text" onClick={action('clicked 3')}>
               Açao 3
             </Button>
           </ListItem>
@@ -65,20 +57,12 @@ export const Below = () => (
             </Button>
           </ListItem>
           <ListItem>
-            <Button
-              type="default"
-              container="text"
-              onClick={action('clicked 2')}
-            >
+            <Button type="default" container="text" onClick={action('clicked 2')}>
               Açao 2
             </Button>
           </ListItem>
           <ListItem>
-            <Button
-              type="default"
-              container="text"
-              onClick={action('clicked 3')}
-            >
+            <Button type="default" container="text" onClick={action('clicked 3')}>
               Açao 3
             </Button>
           </ListItem>
@@ -102,20 +86,12 @@ export const Before = () => (
             </Button>
           </ListItem>
           <ListItem>
-            <Button
-              type="default"
-              container="text"
-              onClick={action('clicked 2')}
-            >
+            <Button type="default" container="text" onClick={action('clicked 2')}>
               Açao 2
             </Button>
           </ListItem>
           <ListItem>
-            <Button
-              type="default"
-              container="text"
-              onClick={action('clicked 3')}
-            >
+            <Button type="default" container="text" onClick={action('clicked 3')}>
               Açao 3
             </Button>
           </ListItem>

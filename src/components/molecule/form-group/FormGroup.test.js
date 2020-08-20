@@ -5,15 +5,7 @@ import FormGroup from './FormGroup';
 
 describe('FormGroup', () => {
   it('should match with the snapshot', () => {
-    const wrapper = shallow(
-      <FormGroup
-        placeholder="placeholder text"
-        id="ipt"
-        name="ipt"
-        type="text"
-        label="Text"
-      />
-    );
+    const wrapper = shallow(<FormGroup placeholder="placeholder text" id="ipt" name="ipt" type="text" label="Text" />);
     expect(toJson(wrapper)).toMatchSnapshot();
   });
 

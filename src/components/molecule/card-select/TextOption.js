@@ -16,19 +16,8 @@ const TextOption = ({ index, selected, label, onClick, noCheck }) => {
   };
 
   return (
-    <div
-      key={index}
-      role="button"
-      className={optionClasses}
-      onClick={onClick}
-      onKeyPress={handleKeyPress}
-      tabIndex={0}
-    >
-      {!noCheck && (
-        <span className="c-text-option__checkbox">
-          {selected && <FontAwesomeIcon icon={faCheck} />}
-        </span>
-      )}
+    <div key={index} role="button" className={optionClasses} onClick={onClick} onKeyPress={handleKeyPress} tabIndex={0}>
+      {!noCheck && <span className="c-text-option__checkbox">{selected && <FontAwesomeIcon icon={faCheck} />}</span>}
       <div className="c-text-option__title">
         <Text>{label}</Text>
       </div>

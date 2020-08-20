@@ -11,19 +11,7 @@ import fileIcon from '../../../assets/images/file-icon.svg';
 
 import css from './FileInput.module.scss';
 
-const FileInput = ({
-  id,
-  type,
-  name,
-  text,
-  value,
-  multiple,
-  onChange,
-  onRemove,
-  className,
-  disabled,
-  inputProps
-}) => {
+const FileInput = ({ id, type, name, text, value, multiple, onChange, onRemove, className, disabled, inputProps }) => {
   const classes = classNames(className, css['c-file'], {
     [css['c-file--disabled']]: disabled
   });
@@ -45,9 +33,7 @@ const FileInput = ({
         <label className={css['c-file__content']} htmlFor={getHtmlForID()}>
           <img src={fileIcon} alt="file-icon" />
           <div className={css['c-file__label']}>
-            <div className={css['c-file__text']}>
-              {value.filename || value.name}
-            </div>
+            <div className={css['c-file__text']}>{value.filename || value.name}</div>
             <Button type="danger" container="text" onClick={handleRemove}>
               Remover arquivo
             </Button>
@@ -59,11 +45,7 @@ const FileInput = ({
       <label className={css['c-file__empty']} htmlFor={getHtmlForID()}>
         <FontAwesomeIcon icon={faUpload} size="2x" />
         <div
-          className={classNames(
-            css['c-file__text'],
-            css['c-file__text--primary'],
-            css['c-file__text--align-center']
-          )}
+          className={classNames(css['c-file__text'], css['c-file__text--primary'], css['c-file__text--align-center'])}
         >
           {text}
         </div>

@@ -53,12 +53,7 @@ const Text = ({
 
 Text.propTypes = {
   center: PropTypes.bool,
-  children: PropTypes.oneOfType([
-    PropTypes.array,
-    PropTypes.object,
-    PropTypes.string,
-    PropTypes.number
-  ]),
+  children: PropTypes.oneOfType([PropTypes.array, PropTypes.object, PropTypes.string, PropTypes.number]),
   danger: PropTypes.bool,
   ellipsis: PropTypes.bool,
   end: PropTypes.bool,

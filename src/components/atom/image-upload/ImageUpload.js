@@ -9,17 +9,7 @@ import ShapeAction from '../shape-action/ShapeAction';
 import css from './ImageUpload.module.scss';
 import shapeActionCss from '../shape-action/ShapeAction.module.scss';
 
-const ImageUpload = ({
-  id,
-  name,
-  text,
-  value,
-  onChange,
-  onRemove,
-  className,
-  disabled,
-  inputProps
-}) => {
+const ImageUpload = ({ id, name, text, value, onChange, onRemove, className, disabled, inputProps }) => {
   const wrapperClasses = classNames(className, css['c-image-input']);
 
   const buttonClasses = classNames(css['c-image-input__button'], {
@@ -44,18 +34,10 @@ const ImageUpload = ({
             <img src={getFileUrl(value)} alt={name} />
           </div>
           <div className={css['c-image-input__actions']}>
-            <label
-              className={shapeActionClasses}
-              htmlFor={disabled ? null : id}
-            >
+            <label className={shapeActionClasses} htmlFor={disabled ? null : id}>
               <FontAwesomeIcon icon={faCloudUpload} />
             </label>
-            <ShapeAction
-              type="danger"
-              container="outlined"
-              shape="squared"
-              size={2}
-            >
+            <ShapeAction type="danger" container="outlined" shape="squared" size={2}>
               <FontAwesomeIcon icon={faTrash} onClick={onRemove} />
             </ShapeAction>
           </div>

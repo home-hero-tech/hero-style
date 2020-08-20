@@ -8,11 +8,7 @@ const Dropdown = ({ children }) => {
 };
 
 Dropdown.propTypes = {
-  children: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.object,
-    PropTypes.array
-  ]).isRequired
+  children: PropTypes.oneOfType([PropTypes.string, PropTypes.object, PropTypes.array]).isRequired
 };
 
 Dropdown.defaultProps = {};

@@ -33,25 +33,13 @@ export const Default = () => (
 
 export const WithIcon = () => (
   <div style={_style}>
-    <Input
-      placeholder="placeholder text"
-      id="ipt"
-      name="ipt"
-      value=""
-      icon={<FontAwesomeIcon icon={faLink} />}
-    />
+    <Input placeholder="placeholder text" id="ipt" name="ipt" value="" icon={<FontAwesomeIcon icon={faLink} />} />
   </div>
 );
 
 export const DefaultDisabled = () => (
   <div style={_style}>
-    <Input
-      placeholder="placeholder text"
-      id="ipt"
-      name="ipt"
-      value=""
-      disabled
-    />
+    <Input placeholder="placeholder text" id="ipt" name="ipt" value="" disabled />
   </div>
 );
 
@@ -63,14 +51,7 @@ export const DefaultSmall = () => (
 
 export const DefaultSmallWithIcon = () => (
   <div style={_style}>
-    <Input
-      placeholder="Placeholder"
-      id="ipt"
-      name="ipt"
-      value=""
-      small
-      icon={<FontAwesomeIcon icon={faLink} />}
-    />
+    <Input placeholder="Placeholder" id="ipt" name="ipt" value="" small icon={<FontAwesomeIcon icon={faLink} />} />
   </div>
 );
 
@@ -82,50 +63,20 @@ export const Dark = () => (
 
 export const DarkSmall = () => (
   <div style={_style}>
-    <Input
-      placeholder="Dark Placeholder"
-      id="ipt"
-      name="ipt"
-      value=""
-      dark
-      small
-    />
+    <Input placeholder="Dark Placeholder" id="ipt" name="ipt" value="" dark small />
   </div>
 );
 
 export const Checkbox = () => (
-  <Input
-    id="ipt"
-    name="ipt"
-    type="checkbox"
-    defaultChecked
-    value="1"
-    onChange={action('toggleCheck')}
-  />
+  <Input id="ipt" name="ipt" type="checkbox" defaultChecked value="1" onChange={action('toggleCheck')} />
 );
 
 export const CheckboxSmall = () => (
-  <Input
-    id="ipt"
-    name="ipt"
-    type="checkbox"
-    defaultChecked
-    value="1"
-    onChange={action('toggleCheck')}
-    small
-  />
+  <Input id="ipt" name="ipt" type="checkbox" defaultChecked value="1" onChange={action('toggleCheck')} small />
 );
 
 export const CheckboxDisabledSelected = () => (
-  <Input
-    id="ipt"
-    name="ipt"
-    type="checkbox"
-    defaultChecked
-    value="1"
-    onChange={action('toggleCheck')}
-    disabled
-  />
+  <Input id="ipt" name="ipt" type="checkbox" defaultChecked value="1" onChange={action('toggleCheck')} disabled />
 );
 
 export const CheckboxDisabledUnselected = () => (
@@ -141,14 +92,7 @@ export const CheckboxDisabledUnselected = () => (
 );
 
 export const RadioButton = () => (
-  <Input
-    placeholder="placeholder text"
-    id="ipt"
-    name="ipt"
-    type="radio"
-    value="1"
-    onChange={action('toggleRadio')}
-  />
+  <Input placeholder="placeholder text" id="ipt" name="ipt" type="radio" value="1" onChange={action('toggleRadio')} />
 );
 
 export const RadioButtonChecked = () => (
@@ -198,36 +142,11 @@ export const Masked = () => {
 
   return (
     <Wrapper style={_columnWrapperStyle}>
-      <MaskedInput
-        type="cpf"
-        placeholder="CPF Input"
-        onChange={handleChange}
-        value={val}
-      />
-      <MaskedInput
-        type="cnpj"
-        placeholder="CNPJ Input"
-        onChange={action('click')}
-        value=""
-      />
-      <MaskedInput
-        type="phone"
-        placeholder="Phone Input"
-        onChange={action('click')}
-        value=""
-      />
-      <MaskedInput
-        type="zipCode"
-        placeholder="Zipcode Input"
-        onChange={action('click')}
-        value=""
-      />
-      <MaskedInput
-        type="currency"
-        placeholder="currency Input"
-        onChange={action('click')}
-        value=""
-      />
+      <MaskedInput type="cpf" placeholder="CPF Input" onChange={handleChange} value={val} />
+      <MaskedInput type="cnpj" placeholder="CNPJ Input" onChange={action('click')} value="" />
+      <MaskedInput type="phone" placeholder="Phone Input" onChange={action('click')} value="" />
+      <MaskedInput type="zipCode" placeholder="Zipcode Input" onChange={action('click')} value="" />
+      <MaskedInput type="currency" placeholder="currency Input" onChange={action('click')} value="" />
     </Wrapper>
   );
 };

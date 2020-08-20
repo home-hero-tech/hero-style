@@ -40,38 +40,17 @@ const Button = ({
   );
 
   return (
-    <button
-      disabled={disabled}
-      type={btnType}
-      className={classes}
-      onClick={onClick}
-      {...otherProps}
-    >
+    <button disabled={disabled} type={btnType} className={classes} onClick={onClick} {...otherProps}>
       {loading ? <Loader small={size <= 2} /> : children}
     </button>
   );
 };
 
 Button.propTypes = {
-  className: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.object,
-    PropTypes.array
-  ]),
+  className: PropTypes.oneOfType([PropTypes.string, PropTypes.object, PropTypes.array]),
   onClick: PropTypes.func,
-  children: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.object,
-    PropTypes.array
-  ]).isRequired,
-  type: PropTypes.oneOf([
-    'default',
-    'disabled',
-    'primary',
-    'secondary',
-    'danger',
-    'success'
-  ]),
+  children: PropTypes.oneOfType([PropTypes.string, PropTypes.object, PropTypes.array]).isRequired,
+  type: PropTypes.oneOf(['default', 'disabled', 'primary', 'secondary', 'danger', 'success']),
   submit: PropTypes.bool,
   size: PropTypes.oneOf([1, 2, 3, 4]),
   container: PropTypes.oneOf(['default', 'outlined', 'text']),

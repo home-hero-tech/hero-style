@@ -21,11 +21,7 @@ const DropdownMenu = ({ onLeave, above, below, before, rightInside, children }) 
 };
 
 DropdownMenu.propTypes = {
-  children: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.object,
-    PropTypes.array
-  ]).isRequired,
+  children: PropTypes.oneOfType([PropTypes.string, PropTypes.object, PropTypes.array]).isRequired,
   onLeave: PropTypes.func,
   above: PropTypes.bool,
   below: PropTypes.bool,

@@ -12,11 +12,7 @@ const Filter = ({ onSubmit, children }) => {
 };
 
 Filter.propTypes = {
-  children: PropTypes.oneOfType([
-    PropTypes.array,
-    PropTypes.object,
-    PropTypes.string
-  ]).isRequired,
+  children: PropTypes.oneOfType([PropTypes.array, PropTypes.object, PropTypes.string]).isRequired,
   onSubmit: PropTypes.func
 };
 

@@ -22,69 +22,33 @@ export const Default = () => (
         <FormRow>
           <FormGroup lg={12}>
             <Label name="ipt">Label</Label>
-            <Input
-              id="ipt"
-              name="ipt"
-              type="text"
-              placeholder="Placeholder text"
-              value=""
-            />
+            <Input id="ipt" name="ipt" type="text" placeholder="Placeholder text" value="" />
           </FormGroup>
         </FormRow>
         <FormRow>
           <FormGroup lg={12}>
             <Label name="ipt">Label</Label>
-            <Input
-              id="ipt"
-              name="ipt"
-              type="text"
-              placeholder="Placeholder text"
-              value=""
-            />
+            <Input id="ipt" name="ipt" type="text" placeholder="Placeholder text" value="" />
           </FormGroup>
         </FormRow>
         <FormRow>
           <FormGroup md={4}>
             <Label name="ipt">Label</Label>
-            <Input
-              id="ipt"
-              name="ipt"
-              type="text"
-              placeholder="Placeholder text"
-              value=""
-            />
+            <Input id="ipt" name="ipt" type="text" placeholder="Placeholder text" value="" />
           </FormGroup>
           <FormGroup md={4}>
             <Label name="ipt">Label</Label>
-            <Input
-              id="ipt"
-              name="ipt"
-              type="text"
-              placeholder="Placeholder text"
-              value=""
-            />
+            <Input id="ipt" name="ipt" type="text" placeholder="Placeholder text" value="" />
           </FormGroup>
         </FormRow>
         <FormRow>
           <FormGroup md={4}>
             <Label name="ipt">Label</Label>
-            <Input
-              id="ipt"
-              name="ipt"
-              type="text"
-              placeholder="Placeholder text"
-              value=""
-            />
+            <Input id="ipt" name="ipt" type="text" placeholder="Placeholder text" value="" />
           </FormGroup>
           <FormGroup md={4}>
             <Label name="ipt">Label</Label>
-            <Input
-              id="ipt"
-              name="ipt"
-              type="text"
-              placeholder="Placeholder text"
-              value=""
-            />
+            <Input id="ipt" name="ipt" type="text" placeholder="Placeholder text" value="" />
           </FormGroup>
         </FormRow>
         <FormActions alignEnd>

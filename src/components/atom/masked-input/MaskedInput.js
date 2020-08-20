@@ -40,13 +40,8 @@ const MaskedInput = ({ type, maskOptions, ...otherProps }) => {
 };
 
 MaskedInput.propTypes = {
-  type: PropTypes.oneOf(['phone', 'cnpj', 'cpf', 'zipCode', 'currency'])
-    .isRequired,
-  maskOptions: PropTypes.oneOfType([
-    PropTypes.array,
-    PropTypes.object,
-    PropTypes.string
-  ])
+  type: PropTypes.oneOf(['phone', 'cnpj', 'cpf', 'zipCode', 'currency']).isRequired,
+  maskOptions: PropTypes.oneOfType([PropTypes.array, PropTypes.object, PropTypes.string])
 };
 
 MaskedInput.defaultProps = {

@@ -72,20 +72,10 @@ export const Loading = () => {
   const [loading, setLoading] = useState(false);
   return (
     <Wrapper style={{ ..._wrapperStyle, maxWidth: '100%' }}>
-      <Button
-        size={2}
-        type="primary"
-        loading={loading}
-        onClick={() => setLoading(!loading)}
-      >
+      <Button size={2} type="primary" loading={loading} onClick={() => setLoading(!loading)}>
         Click Me
       </Button>
-      <Button
-        size={4}
-        type="primary"
-        loading={loading}
-        onClick={() => setLoading(!loading)}
-      >
+      <Button size={4} type="primary" loading={loading} onClick={() => setLoading(!loading)}>
         Click Me
       </Button>
     </Wrapper>

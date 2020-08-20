@@ -67,12 +67,7 @@ export const LeftIcon = () => (
   <Wrapper>
     <Card>
       <CardBody>
-        <CardItem
-          value="valGray"
-          label="valGray"
-          gray
-          leftIcon={<FontAwesomeIcon icon={faLayerGroup} />}
-        />
+        <CardItem value="valGray" label="valGray" gray leftIcon={<FontAwesomeIcon icon={faLayerGroup} />} />
       </CardBody>
     </Card>
   </Wrapper>
@@ -148,12 +143,7 @@ export const smallSvg = () => (
   <Wrapper>
     <Card>
       <CardBody>
-        <CardItem
-          value="Small"
-          label="Small"
-          small
-          leftIcon={<FontAwesomeIcon icon={faLayerGroup} />}
-        />
+        <CardItem value="Small" label="Small" small leftIcon={<FontAwesomeIcon icon={faLayerGroup} />} />
       </CardBody>
     </Card>
   </Wrapper>
@@ -163,12 +153,7 @@ export const Primary = () => (
   <Wrapper>
     <Card>
       <CardBody>
-        <CardItem
-          value="Primary"
-          label="Primary"
-          leftIcon={<FontAwesomeIcon icon={faLayerGroup} />}
-          primary
-        />
+        <CardItem value="Primary" label="Primary" leftIcon={<FontAwesomeIcon icon={faLayerGroup} />} primary />
       </CardBody>
     </Card>
   </Wrapper>
@@ -204,12 +189,7 @@ export const svgPrimary = () => (
   <Wrapper>
     <Card>
       <CardBody>
-        <CardItem
-          value="svgPrimary"
-          label="svgPrimary"
-          svgPrimary
-          leftIcon={<FontAwesomeIcon icon={faLayerGroup} />}
-        />
+        <CardItem value="svgPrimary" label="svgPrimary" svgPrimary leftIcon={<FontAwesomeIcon icon={faLayerGroup} />} />
       </CardBody>
     </Card>
   </Wrapper>
@@ -219,12 +199,7 @@ export const Gray = () => (
   <Wrapper>
     <Card>
       <CardBody>
-        <CardItem
-          value="gray"
-          label="gray"
-          gray
-          leftIcon={<FontAwesomeIcon icon={faLayerGroup} />}
-        />
+        <CardItem value="gray" label="gray" gray leftIcon={<FontAwesomeIcon icon={faLayerGroup} />} />
       </CardBody>
     </Card>
   </Wrapper>
@@ -255,12 +230,7 @@ export const White = () => (
     <Card>
       <CardBody>
         <div style={{ backgroundColor: '#909090' }}>
-          <CardItem
-            value="White"
-            label="White"
-            white
-            leftIcon={<FontAwesomeIcon icon={faLayerGroup} />}
-          />
+          <CardItem value="White" label="White" white leftIcon={<FontAwesomeIcon icon={faLayerGroup} />} />
         </div>
       </CardBody>
     </Card>
@@ -296,12 +266,7 @@ export const svgWhite = () => (
     <Card>
       <CardBody>
         <div style={{ backgroundColor: '#909090' }}>
-          <CardItem
-            value="svgWhite"
-            label="svgWhite"
-            svgWhite
-            leftIcon={<FontAwesomeIcon icon={faLayerGroup} />}
-          />
+          <CardItem value="svgWhite" label="svgWhite" svgWhite leftIcon={<FontAwesomeIcon icon={faLayerGroup} />} />
         </div>
       </CardBody>
     </Card>
@@ -327,11 +292,7 @@ export const withHref = () => (
   <Wrapper>
     <Card>
       <CardBody>
-        <CardItem
-          label="Endereço"
-          value="Home hero"
-          href="https://homehero.com.br/?interno"
-        />
+        <CardItem label="Endereço" value="Home hero" href="https://homehero.com.br/?interno" />
       </CardBody>
     </Card>
   </Wrapper>

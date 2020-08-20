@@ -15,14 +15,7 @@ const Option = ({ index, selected, label, icon, type, onClick, noCheck }) => {
   };
 
   return (
-    <div
-      key={index}
-      role="button"
-      className={optionClasses}
-      onClick={onClick}
-      onKeyPress={handleKeyPress}
-      tabIndex={0}
-    >
+    <div key={index} role="button" className={optionClasses} onClick={onClick} onKeyPress={handleKeyPress} tabIndex={0}>
       {icon && <div className="c-card-option__icon">{icon}</div>}
       <p className="c-card-option__title">{label}</p>
       {!noCheck && (

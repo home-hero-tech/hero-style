@@ -18,11 +18,7 @@ const FlexGrid = ({ children, ...props }) => {
 };
 
 FlexGrid.propTypes = {
-  children: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.object,
-    PropTypes.array
-  ])
+  children: PropTypes.oneOfType([PropTypes.string, PropTypes.object, PropTypes.array])
 };
 
 FlexGrid.defaultProps = {

@@ -23,9 +23,7 @@ export const grayVal200 = () => <Text grayVal="200">Gray Val 200</Text>;
 export const grayVal300 = () => <Text grayVal="300">Gray Val 300</Text>;
 export const Ellipsis = () => (
   <div style={{ width: 200 }}>
-    <Text ellipsis>
-      Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-    </Text>
+    <Text ellipsis>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</Text>
   </div>
 );
 export const Thin = () => <Text thin>Gray Light</Text>;

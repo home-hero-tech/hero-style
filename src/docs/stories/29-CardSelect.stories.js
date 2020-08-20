@@ -34,12 +34,7 @@ export const Default = () => {
   const [selected, setSelected] = useState(options[0]);
   return (
     <div style={{ padding: 12, width: 800 }}>
-      <CardSelect
-        noCheck
-        selected={selected}
-        options={options}
-        onChange={setSelected}
-      />
+      <CardSelect noCheck selected={selected} options={options} onChange={setSelected} />
     </div>
   );
 };
@@ -48,12 +43,7 @@ export const Small = () => {
   const [selected, setSelected] = useState(options[0]);
   return (
     <div style={{ padding: 12, width: 800 }}>
-      <CardSelect
-        type="small"
-        selected={selected}
-        options={options}
-        onChange={setSelected}
-      />
+      <CardSelect type="small" selected={selected} options={options} onChange={setSelected} />
     </div>
   );
 };
@@ -62,12 +52,7 @@ export const Multiple = () => {
   const [selected, setSelected] = useState([]);
   return (
     <div style={{ padding: 12, width: 800 }}>
-      <CardSelect
-        multiple
-        selected={selected}
-        options={options}
-        onChange={setSelected}
-      />
+      <CardSelect multiple selected={selected} options={options} onChange={setSelected} />
     </div>
   );
 };
@@ -76,13 +61,7 @@ export const Text = () => {
   const [selected, setSelected] = useState(options[0]);
   return (
     <div style={{ padding: 12, width: 800 }}>
-      <CardSelect
-        type="text"
-        flex="col"
-        selected={selected}
-        options={options}
-        onChange={setSelected}
-      />
+      <CardSelect type="text" flex="col" selected={selected} options={options} onChange={setSelected} />
     </div>
   );
 };

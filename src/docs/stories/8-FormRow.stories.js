@@ -23,25 +23,13 @@ export const Default = () => (
         <FormRow>
           <FormGroup>
             <Label name="ipt">Label</Label>
-            <Input
-              id="ipt"
-              name="ipt"
-              type="text"
-              placeholder="Placeholder text"
-              value=""
-            />
+            <Input id="ipt" name="ipt" type="text" placeholder="Placeholder text" value="" />
           </FormGroup>
         </FormRow>
         <FormRow>
           <FormGroup>
             <Label name="ipt">Label</Label>
-            <Input
-              id="ipt"
-              name="ipt"
-              type="text"
-              placeholder="Placeholder text"
-              value=""
-            />
+            <Input id="ipt" name="ipt" type="text" placeholder="Placeholder text" value="" />
           </FormGroup>
         </FormRow>
       </Grid>

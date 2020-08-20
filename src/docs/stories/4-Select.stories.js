@@ -18,41 +18,18 @@ const options = [
 const placeholder = 'Selecione...';
 const noOptionsMessage = () => 'Nenhuma opção';
 
-export const Default = () => (
-  <Select
-    options={options}
-    placeholder={placeholder}
-    value={options[3]}
-    isClearable
-  />
-);
+export const Default = () => <Select options={options} placeholder={placeholder} value={options[3]} isClearable />;
 
 export const withIcon = () => (
-  <Select
-    options={options}
-    placeholder={placeholder}
-    value={options[3]}
-    icon={<FontAwesomeIcon icon={faLink} />}
-  />
+  <Select options={options} placeholder={placeholder} value={options[3]} icon={<FontAwesomeIcon icon={faLink} />} />
 );
 
 export const Dark = () => (
-  <Select
-    options={options}
-    placeholder={placeholder}
-    noOptionsMessage={noOptionsMessage}
-    value={options[3]}
-    dark
-  />
+  <Select options={options} placeholder={placeholder} noOptionsMessage={noOptionsMessage} value={options[3]} dark />
 );
 
 export const small = () => (
-  <Select
-    options={options}
-    placeholder={placeholder}
-    noOptionsMessage={noOptionsMessage}
-    small
-  />
+  <Select options={options} placeholder={placeholder} noOptionsMessage={noOptionsMessage} small />
 );
 
 export const smallWithIcon = () => (
@@ -66,22 +43,11 @@ export const smallWithIcon = () => (
 );
 
 export const SmallDark = () => (
-  <Select
-    options={options}
-    placeholder={placeholder}
-    noOptionsMessage={noOptionsMessage}
-    dark
-    small
-  />
+  <Select options={options} placeholder={placeholder} noOptionsMessage={noOptionsMessage} dark small />
 );
 
 export const MultiSelect = () => (
-  <Select
-    options={options}
-    placeholder={placeholder}
-    noOptionsMessage={noOptionsMessage}
-    multiple
-  />
+  <Select options={options} placeholder={placeholder} noOptionsMessage={noOptionsMessage} multiple />
 );
 export const SearchableOff = () => (
   <Select

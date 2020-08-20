@@ -3,19 +3,7 @@ import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import css from './Input.module.scss';
 
-const Input = ({
-  id,
-  name,
-  type,
-  placeholder,
-  onChange,
-  disabled,
-  dark,
-  parentRef,
-  small,
-  icon,
-  ...otherProps
-}) => {
+const Input = ({ id, name, type, placeholder, onChange, disabled, dark, parentRef, small, icon, ...otherProps }) => {
   const isCheckOrRadio = type === 'checkbox' || type === 'radio';
 
   const classes = classNames({

@@ -87,11 +87,7 @@ Spacer.propTypes = {
   mxSm: PropTypes.number,
   mxXs: PropTypes.number,
   inline: PropTypes.bool,
-  children: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.object,
-    PropTypes.array
-  ])
+  children: PropTypes.oneOfType([PropTypes.string, PropTypes.object, PropTypes.array])
 };
 
 Spacer.defaultProps = {

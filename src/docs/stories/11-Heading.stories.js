@@ -48,6 +48,4 @@ export const colors = () => (
   </Wrapper>
 );
 
-export const withOtherProps = () => (
-  <Heading level={6} title="Title" style={someStyle} />
-);
+export const withOtherProps = () => <Heading level={6} title="Title" style={someStyle} />;

@@ -17,9 +17,5 @@ const renderCard = item => (
 );
 
 export const Default = () => {
-  return (
-    <Slider style={{ maxWidth: 800, margin: '0 auto' }}>
-      {[1, 2, 3, 4, 5, 6].map(renderCard)}
-    </Slider>
-  );
+  return <Slider style={{ maxWidth: 800, margin: '0 auto' }}>{[1, 2, 3, 4, 5, 6].map(renderCard)}</Slider>;
 };

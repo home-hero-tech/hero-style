@@ -16,11 +16,7 @@ const Label = ({ name, small, children }) => {
 };
 
 Label.propTypes = {
-  children: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.object,
-    PropTypes.array
-  ]).isRequired,
+  children: PropTypes.oneOfType([PropTypes.string, PropTypes.object, PropTypes.array]).isRequired,
   name: PropTypes.string,
   small: PropTypes.bool
 };

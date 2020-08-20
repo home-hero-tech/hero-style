@@ -6,9 +6,7 @@ import ModalHeader from './ModalHeader';
 
 describe('ModalHeader', () => {
   it('should match with the snapshot', () => {
-    const wrapper = shallow(
-      <ModalHeader title="Title" description="Description" />
-    );
+    const wrapper = shallow(<ModalHeader title="Title" description="Description" />);
     expect(toJson(wrapper)).toMatchSnapshot();
   });
 });

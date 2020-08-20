@@ -11,7 +11,11 @@ const CardBody = ({ className, size, children, ...props }) => {
     [className]: !!className
   });
 
-  return <div className={classes} {...props}>{children}</div>;
+  return (
+    <div className={classes} {...props}>
+      {children}
+    </div>
+  );
 };
 
 CardBody.propTypes = {

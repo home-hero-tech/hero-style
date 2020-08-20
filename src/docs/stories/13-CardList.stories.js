@@ -82,9 +82,7 @@ export const WithCardItems = () => (
                 <CardItem label="Atualizado em" value="04 de Set 2019 às 13:58" />
               </Row>
             </Col>
-            <Col xs="1">
-              actions
-            </Col>
+            <Col xs="1">actions</Col>
           </Row>
         </CardBody>
       </Card>

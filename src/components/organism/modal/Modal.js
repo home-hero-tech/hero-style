@@ -59,11 +59,7 @@ const Modal = ({
 };
 
 Modal.propTypes = {
-  children: PropTypes.oneOfType([
-    PropTypes.object,
-    PropTypes.array,
-    PropTypes.string
-  ]).isRequired,
+  children: PropTypes.oneOfType([PropTypes.object, PropTypes.array, PropTypes.string]).isRequired,
   contentLabel: PropTypes.string.isRequired,
   left: PropTypes.bool,
   onRequestClose: PropTypes.func,

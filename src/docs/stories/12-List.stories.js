@@ -155,14 +155,7 @@ export const withActions = () => (
       <ListItem>
         <CardLine>
           <EmptyCardItem>
-            <Input
-              id="ipt"
-              name="ipt"
-              type="checkbox"
-              defaultChecked
-              value="1"
-              onChange={action('toggleCheck')}
-            />
+            <Input id="ipt" name="ipt" type="checkbox" defaultChecked value="1" onChange={action('toggleCheck')} />
           </EmptyCardItem>
           <CardItem value="Value" label="Label" />
           <CardItem value="Value" label="Label" />
@@ -224,34 +217,11 @@ export const ListAndSubListExample = () => {
           <CardLine small>
             {!sub ? (
               <EmptyCardItem style={{ padding: 0 }}>
-                <Input
-                  small
-                  name="checked"
-                  type="checkbox"
-                  onChange={action('changing')}
-                  value=""
-                  checked
-                />
+                <Input small name="checked" type="checkbox" onChange={action('changing')} value="" checked />
               </EmptyCardItem>
             ) : null}
-            <CardItem
-              value="Value"
-              label="Label"
-              lg={2}
-              md={6}
-              sm={6}
-              ellipsis
-              small
-            />
-            <CardItem
-              value="Value"
-              label="Label"
-              lg={6}
-              md={6}
-              sm={6}
-              ellipsis
-              small
-            />
+            <CardItem value="Value" label="Label" lg={2} md={6} sm={6} ellipsis small />
+            <CardItem value="Value" label="Label" lg={6} md={6} sm={6} ellipsis small />
           </CardLine>
         </ListItem>
       </List>
@@ -263,33 +233,10 @@ export const ListAndSubListExample = () => {
         <ListItem>
           <Card small>
             <EmptyCardItem style={{ padding: 0 }}>
-              <Input
-                small
-                name="checked"
-                type="checkbox"
-                onChange={action('toggleCheck')}
-                value=""
-                checked
-              />
+              <Input small name="checked" type="checkbox" onChange={action('toggleCheck')} value="" checked />
             </EmptyCardItem>
-            <CardItem
-              value="Value"
-              label="Label"
-              lg={2}
-              md={6}
-              sm={6}
-              ellipsis
-              small
-            />
-            <CardItem
-              value="Value"
-              label="Label"
-              lg={6}
-              md={6}
-              sm={6}
-              ellipsis
-              small
-            />
+            <CardItem value="Value" label="Label" lg={2} md={6} sm={6} ellipsis small />
+            <CardItem value="Value" label="Label" lg={6} md={6} sm={6} ellipsis small />
             <EmptyCardItem lg={12}>
               <Collapse isOpen>{renderList(true)}</Collapse>
             </EmptyCardItem>

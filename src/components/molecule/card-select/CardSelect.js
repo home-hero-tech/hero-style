@@ -7,16 +7,7 @@ import TextOption from './TextOption';
 
 import './CardSelect.scss';
 
-const CardSelect = ({
-  type,
-  selected,
-  multiple,
-  options,
-  onChange,
-  className,
-  noCheck,
-  flex
-}) => {
+const CardSelect = ({ type, selected, multiple, options, onChange, className, noCheck, flex }) => {
   const classes = classNames('c-card-select', className, {
     'c-card-select--flex-col': flex === 'col',
     'c-card-select--flex-row': flex === 'row'
@@ -24,18 +15,14 @@ const CardSelect = ({
 
   const isSelected = opt => {
     if (!selected) return false;
-    return multiple
-      ? selected.map(x => x.value).includes(opt.value)
-      : selected.value === opt.value;
+    return multiple ? selected.map(x => x.value).includes(opt.value) : selected.value === opt.value;
   };
 
   const handleChange = id => () => {
     const option = options.find(opt => opt.id === id);
     let changed = option;
     if (multiple) {
-      changed = isSelected(option)
-        ? selected.filter(s => s.value !== option.value)
-        : selected.concat(option);
+      changed = isSelected(option) ? selected.filter(s => s.value !== option.value) : selected.concat(option);
     }
     onChange(changed);
   };

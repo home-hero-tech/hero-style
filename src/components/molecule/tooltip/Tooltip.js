@@ -22,11 +22,7 @@ const ToolTip = ({ description, animation, children, ...otherProps }) => {
 
 ToolTip.propTypes = {
   animation: PropTypes.oneOf(['shift', 'perspective', 'fade', 'scale', 'none']),
-  children: PropTypes.oneOfType([
-    PropTypes.array,
-    PropTypes.object,
-    PropTypes.string
-  ]).isRequired,
+  children: PropTypes.oneOfType([PropTypes.array, PropTypes.object, PropTypes.string]).isRequired,
   description: PropTypes.string.isRequired
 };
 
