@@ -34,6 +34,7 @@ import * as mask from './components/atom/masked-input/masks';
 
 // molecules
 import Card from './components/molecule/card/Card';
+import CatalogCard from './components/molecule/catalog-card/CatalogCard';
 import CardSelect from './components/molecule/card-select/CardSelect';
 import Collapse from './components/molecule/collapse/Collapse';
 import FilterHeader from './components/molecule/filter-header/FilterHeader';
@@ -71,6 +72,7 @@ export {
   CardItem,
   CardLine,
   CardSelect,
+  CatalogCard,
   Col,
   Collapse,
   DatePicker,
@@ -116,5 +118,5 @@ export {
   TabPanel,
   Text,
   Tooltip,
-  TextMaskInput,
+  TextMaskInput
 };
