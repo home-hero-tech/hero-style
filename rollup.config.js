@@ -37,7 +37,7 @@ export default [
       postcss({
         modules: true,
         minimize: true,
-        extract: 'dist/style/base/hero-style.css'
+        extract: 'dist/styles/base/hero-style.css'
         // sourceMap: true (adds 500kb to the package)
       }),
       resolve(),
