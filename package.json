@@ -1,6 +1,6 @@
 {
   "name": "@homehero/hero-style",
-  "version": "1.17.5",
+  "version": "1.17.6",
   "main": "dist/index.js",
   "browser": "dist/index.umd.js",
   "module": "dist/index.es.js",
@@ -45,7 +45,7 @@
     "storybook": "start-storybook -p 9009 -s public",
     "build-storybook": "build-storybook -s public",
     "lint:fix":  "eslint ./src/  --ext .js --fix",
-    "lint": "./node_modules/.bin/eslint src/**/*.js"
+    "lint":  "eslint ./src/  --ext .js"
   },
   "eslintConfig": {
     "extends": "react-app"
