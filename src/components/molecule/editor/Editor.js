@@ -4,17 +4,7 @@ import ReactQuill from 'react-quill';
 import './Editor.scss';
 import classNames from 'classnames';
 
-const Editor = ({
-  value,
-  modules,
-  fullHeight,
-  onChange,
-  toolbar,
-  rows,
-  className,
-  bgWhite,
-  ...otherProps
-}) => {
+const Editor = ({ value, modules, fullHeight, onChange, toolbar, rows, className, bgWhite, ...otherProps }) => {
   const optionsToolbar = modules || {};
 
   const classes = classNames('c-editor', `c-editor--rows-${rows}`, className, {
@@ -41,11 +31,7 @@ Editor.propTypes = {
   onChange: PropTypes.func.isRequired,
   className: PropTypes.string,
   rows: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
-  modules: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.object,
-    PropTypes.array
-  ]),
+  modules: PropTypes.oneOfType([PropTypes.string, PropTypes.object, PropTypes.array]),
   fullHeight: PropTypes.bool,
   bgWhite: PropTypes.bool
 };
