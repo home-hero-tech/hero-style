@@ -1,9 +1,10 @@
 .c-card {
   display: flex;
+  position: relative;
   flex-direction: column;
   background-color: #fff;
-  box-shadow: 0 4px 8px 0 rgba(#000000, 0.4);
   margin: 4% 1%;
+  border: 1px #f0f3fa solid;
   border-radius: 8px;
   height: 478px;
 }
@@ -18,11 +19,11 @@
 .c-card-img-fallback {
   background: #f3f3f3;
 }
+
 .c-card h5 {
   position: absolute;
-  margin: 2% 2%!important;
+  margin: 8% 6%;
 }
-
 
 .c-card a, .c-card-footer > a {
   cursor: pointer;
@@ -33,8 +34,8 @@
     transform: scale(1.1) translateX(4%);
   }
 }
-.c-card a:first-of-type {
-  margin-top:4%;
+.c-card-first-anchor {
+  margin-top:5%!important;
 }
 
 
@@ -63,18 +64,21 @@
   .c-card {
     overflow: hidden;
     margin: 3% 2%;
-    height: 72px;
-    width: 340px;
+    height: 80px;
+    width: 88vw;
   }
   .c-card h5 {
     font-size: 16px;
     position: absolute;
+    top: 30%;
+    left: 4%;
     margin: 2% 2%;
   }
 
   .c-card > img {
-    min-height: 72px;
-    background: lightgreen;
+    width: 50%;
+    height: 80px;
+    align-self: flex-end;
   }
 
 }

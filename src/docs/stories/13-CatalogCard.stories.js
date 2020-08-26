@@ -4,9 +4,10 @@ import CatalogCard from '../../components/molecule/catalog-card/CatalogCard';
 
 const data = {
   id: 47,
-  name: 'Mobilia',
+  name: 'Banheiros',
   url: '/data',
-  imgUrl: 'Bath.png',
+  // imgUrl: 'Fornitures.png',
+  imgUrl: 'Fornitures.png',
   hasChildren: true,
   children: [
     { name: 'Sala de visitas', url: '/sala-visitas' },

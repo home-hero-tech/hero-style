@@ -22,9 +22,13 @@ const CatalogCard = ({ data, LinkComponent, pathname, defaultImage, xs, sm, md, 
         {title && <Heading level={5} title={title} bold />}
         <img className={imageClass} src={imageUrl} alt={alt} />
         {items &&
-          items.map(({ name = '', url = '/' }, tempKey) => (
+          items.map(({ id, name = '', url = '/' }, key) => (
             // eslint-disable-next-line react/no-array-index-key
-            <LinkComponent className={style['c-card-responsive']} key={tempKey} to={pathname + url}>
+            <LinkComponent
+              className={`${key === 0 ? style['c-card-first-anchor'] : ''} ${style['c-card-responsive']}`}
+              key={id}
+              to={pathname + url}
+            >
               <Text sm> {name}</Text>
             </LinkComponent>
           ))}
