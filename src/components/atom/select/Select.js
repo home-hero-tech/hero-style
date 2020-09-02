@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import RSelect from 'react-select';
 import RSelectAsync from 'react-select/async';
+import RSelectCreatable from 'react-select/creatable';
+import RSelectAsyncCreatable from 'react-select/async-creatable';
 
 import classNames from 'classnames';
 import css from './Select.module.scss';
@@ -22,6 +24,8 @@ const Select = ({
   icon,
   isClearable,
   async,
+  customOptionsMessage,
+  allowCustomOptions,
   ...otherProps
 }) => {
   let selectClass = 'c-select';
@@ -65,7 +69,17 @@ const Select = ({
 
   let elem = <RSelect {...allProps} />;
 
-  if (async) elem = <RSelectAsync {...allProps} />;
+  if (allowCustomOptions) {
+    elem = <RSelectCreatable {...allProps} formatCreateLabel={customOptionsMessage} />;
+  }
+
+  if (async) {
+    if (allowCustomOptions) {
+      elem = <RSelectAsync {...allProps} />;
+    } else {
+      elem = <RSelectAsync {...allProps} />;
+    }
+  }
 
   return (
     <div className={css['c-select-wrapper']}>
@@ -90,7 +104,9 @@ Select.propTypes = {
   searchable: PropTypes.bool,
   async: PropTypes.bool,
   value: PropTypes.oneOfType([PropTypes.array, PropTypes.object, PropTypes.string, PropTypes.number]),
-  isClearable: PropTypes.bool
+  isClearable: PropTypes.bool,
+  allowCustomOptions: PropTypes.bool,
+  customOptionsMessage: PropTypes.func
 };
 
 Select.defaultProps = {
@@ -108,7 +124,9 @@ Select.defaultProps = {
   searchable: true,
   async: false,
   value: null,
-  isClearable: false
+  isClearable: false,
+  allowCustomOptions: false,
+  customOptionsMessage: newValue => `Criar "${newValue}"`
 };
 
 export default Select;

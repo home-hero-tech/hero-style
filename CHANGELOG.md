@@ -704,3 +704,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.15.2] - 2020-07-16
 ### Change
 - Modal actions MQ.
+
+## [1.20.0] - 2020-08-02
+### Added
+- New props in Select.
