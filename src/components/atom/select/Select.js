@@ -75,7 +75,7 @@ const Select = ({
 
   if (async) {
     if (allowCustomOptions) {
-      elem = <RSelectAsyncCreatable {...allProps} />;
+      elem = <RSelectAsyncCreatable {...allProps} formatCreateLabel={customOptionsMessage} />;
     } else {
       elem = <RSelectAsync {...allProps} />;
     }
