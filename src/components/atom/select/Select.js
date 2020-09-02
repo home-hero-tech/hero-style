@@ -75,7 +75,7 @@ const Select = ({
 
   if (async) {
     if (allowCustomOptions) {
-      elem = <RSelectAsync {...allProps} />;
+      elem = <RSelectAsyncCreatable {...allProps} />;
     } else {
       elem = <RSelectAsync {...allProps} />;
     }
