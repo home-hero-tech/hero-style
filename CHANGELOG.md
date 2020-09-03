@@ -712,3 +712,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.20.0] - 2020-08-02
 ### Added
 - A custom message for Select creatable async.
+
+## [1.21.0] - 2020-08-02
+### Added
+- Style for Select and Editor when they're disabled.

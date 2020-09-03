@@ -74,3 +74,26 @@ export const BgWhite = () => {
     </Wrapper>
   );
 };
+
+export const Disabled = () => {
+  return (
+    <Wrapper style={{ height: '400px', backgroundColor: '#f0f0f0' }}>
+      <Editor
+        readOnly
+        value={input}
+        modules={[['bold', 'italic', 'underline', 'link'], ['clean']]}
+        onChange={action('cancel')}
+        fullHeight
+        bgWhite
+      />
+    </Wrapper>
+  );
+};
+
+export const NoToolsAndDisabled = () => {
+  return (
+    <Wrapper style={{ height: '400px' }}>
+      <Editor readOnly toolbar={false} value={input} onChange={action('cancel')} bgWhite />
+    </Wrapper>
+  );
+};

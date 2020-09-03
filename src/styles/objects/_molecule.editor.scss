@@ -46,6 +46,11 @@ $row-size: 18px;
   }
 
   .quill {
+    div[contenteditable="false"] {
+      background-color: $color-brand-gray-100;
+      border-color: $color-brand-gray-100;
+      color: $color-brand-gray-500;
+    }
     .ql-container {
       border-radius: $radius-2;
       border-color: $color-brand-gray-200;

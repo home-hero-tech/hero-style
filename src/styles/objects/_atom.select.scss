@@ -51,6 +51,14 @@
       }
     }
 
+    &__control {
+      &--is-disabled {
+        background-color: $color-brand-gray-100 !important;
+        border-color: $color-brand-gray-100 !important;
+        color: $color-brand-gray-500 !important;
+      }
+    }
+
     &__placeholder {
       color: $color-brand-gray-200 !important;
     }

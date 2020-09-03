@@ -57,3 +57,14 @@ export const SearchableOff = () => (
     searchable={false}
   />
 );
+
+export const Disabled = () => (
+  <Select
+    isDisabled
+    options={options}
+    value={options[3]}
+    placeholder="Digite para encontrar uma opção"
+    noOptionsMessage={noOptionsMessage}
+    searchable={false}
+  />
+);
