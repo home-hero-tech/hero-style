@@ -54,6 +54,7 @@ $row-size: 18px;
     .ql-container {
       border-radius: $radius-2;
       border-color: $color-brand-gray-200;
+      overflow: hidden;
     }
 
     .ql-toolbar ~ .ql-container {

@@ -41,8 +41,17 @@
     font-weight: 300;
   }
 
+  &:focus, &:hover {
+    border: 1px solid currentColor;
+  }
+
   &--disabled {
     background-color: $color-brand-gray-100;
+    border-color: $color-brand-gray-100;
+
+    &:hover {
+      border-color: $color-brand-gray-100;
+    }
   }
 
   &--small {
@@ -193,10 +202,6 @@
         }
       }
     }
-  }
-
-  &:focus, &:hover {
-    border: 1px solid currentColor;
   }
 
   &__checkbox, &__radio {

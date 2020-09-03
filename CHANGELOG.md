@@ -716,3 +716,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.21.0] - 2020-08-02
 ### Added
 - Style for Select and Editor when they're disabled.
+
+## [1.21.1] - 2020-08-02
+### Added
+- Improvements on css of some components.
