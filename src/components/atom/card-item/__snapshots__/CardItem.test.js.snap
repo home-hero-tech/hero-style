@@ -30,6 +30,7 @@ exports[`CardItem should match with the snapshot 1`] = `
       Label
     </span>
     <span
+      aria-hidden="true"
       className="c-card-item__value truncate"
     >
       Value
