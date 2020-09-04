@@ -32,9 +32,8 @@ const CardItem = ({ format, label, leftIcon, value, small, tooltip, href, classN
     if (_html) {
       return (
         <div
-          {/* eslint-disable-next-line react/no-danger */}
+          /* eslint-disable-next-line react/no-danger */
           dangerouslySetInnerHTML={{
-            //eslint-disable-line
             __html: _value
           }}
         />
@@ -58,8 +57,7 @@ const CardItem = ({ format, label, leftIcon, value, small, tooltip, href, classN
       <div className={classes}>
         {_label ? <span className={labelClasses}>{_label}</span> : null}
         {_value ? (
-          // eslint-disable-next-line jsx-a11y/click-events-have-key-events,jsx-a11y/no-static-element-interactions
-          <span onClick={textItemOnClick} className={valueClasses}>
+          <span aria-hidden="true" onClick={textItemOnClick} className={valueClasses}>
             {_value instanceof Date
               ? RenderValue(moment(_value).format(format), _tooltip, _href, _html)
               : RenderValue(_value, _tooltip, _href, _html)}
