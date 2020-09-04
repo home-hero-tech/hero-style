@@ -8,9 +8,22 @@ import css from './CardItem.module.scss';
 import EmptyCardItem from '../empty-card-item/EmptyCardItem';
 import Tooltip from '../../molecule/tooltip/Tooltip';
 
-const CardItem = ({ format, label, leftIcon, value, small, tooltip, href, className, html, thin, ...otherProps }) => {
+const CardItem = ({
+  format,
+  label,
+  leftIcon,
+  textItemClassName = '',
+  textItemOnClick = () => {},
+  value,
+  small,
+  tooltip,
+  href,
+  className,
+  html,
+  thin,
+  ...otherProps
+}) => {
   const classes = classNames(css['c-card-item__content'], className);
-  const { textItemClassName, textItemOnClick } = otherProps;
   const valueClasses = classNames(
     {
       [css['c-card-item__value']]: true,
@@ -79,6 +92,8 @@ CardItem.propTypes = {
   format: PropTypes.string,
   gray: PropTypes.bool,
   label: PropTypes.string,
+  textItemClassName: PropTypes.string,
+  textItemOnClick: PropTypes.func,
   lbPrimary: PropTypes.bool,
   lbWhite: PropTypes.bool,
   lbGray: PropTypes.bool,
