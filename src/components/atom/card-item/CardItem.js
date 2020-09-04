@@ -10,13 +10,16 @@ import Tooltip from '../../molecule/tooltip/Tooltip';
 
 const CardItem = ({ format, label, leftIcon, value, small, tooltip, href, className, html, thin, ...otherProps }) => {
   const classes = classNames(css['c-card-item__content'], className);
-
-  const valueClasses = classNames({
-    [css['c-card-item__value']]: true,
-    [css['c-card-item__value--thin']]: thin,
-    [css['c-card-item__value--small']]: !!small,
-    [css.truncate]: true
-  });
+  const { textItemClassName, textItemOnClick } = otherProps;
+  const valueClasses = classNames(
+    {
+      [css['c-card-item__value']]: true,
+      [css['c-card-item__value--thin']]: thin,
+      [css['c-card-item__value--small']]: !!small,
+      [css.truncate]: true
+    },
+    textItemClassName
+  );
 
   const labelClasses = classNames({
     [css['c-card-item__label']]: true,
@@ -29,7 +32,8 @@ const CardItem = ({ format, label, leftIcon, value, small, tooltip, href, classN
     if (_html) {
       return (
         <div
-          dangerouslySetInnerHTML={{ //eslint-disable-line
+          dangerouslySetInnerHTML={{
+            //eslint-disable-line
             __html: _value
           }}
         />
@@ -53,7 +57,7 @@ const CardItem = ({ format, label, leftIcon, value, small, tooltip, href, classN
       <div className={classes}>
         {_label ? <span className={labelClasses}>{_label}</span> : null}
         {_value ? (
-          <span className={valueClasses}>
+          <span onClick={textItemOnClick} className={valueClasses}>
             {_value instanceof Date
               ? RenderValue(moment(_value).format(format), _tooltip, _href, _html)
               : RenderValue(_value, _tooltip, _href, _html)}
