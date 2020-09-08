@@ -27,6 +27,7 @@
   background-color: $color-structural-white;
   z-index: 9030;
   transition: all .3s ease-in-out;
+  overflow: hidden;
 
   &--has-padding {
     padding: $space-5 $space-4;
