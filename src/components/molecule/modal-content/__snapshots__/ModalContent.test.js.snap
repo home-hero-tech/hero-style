@@ -2,7 +2,7 @@
 
 exports[`ModalContent should match with the snapshot 1`] = `
 <main
-  className="c-modal__content"
+  className="c-modal__content c-modal__content--has-padding"
 >
   <div>
     Content
