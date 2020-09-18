@@ -18,7 +18,6 @@ const Modal = ({
   onRequestClose,
   contentLabel,
   widthLevel,
-  hasPadding,
   onCancel,
   className,
   ...otherProps
@@ -28,7 +27,6 @@ const Modal = ({
     [css['c-modal--pre-right']]: right,
     [css[`c-modal--width-${widthLevel}`]]: true,
     [css['c-modal--center']]: center,
-    [css['c-modal--has-padding']]: hasPadding,
 
     [css['c-modal-overlay--left']]: left,
     [css['c-modal-overlay--right']]: right
@@ -49,7 +47,7 @@ const Modal = ({
       shouldCloseOnOverlayClick
       closeTimeoutMS={300}
       onRequestClose={onRequestClose}
-      ariaHideApp={process.env.NODE_ENV !== 'test'}
+      ariaHideApp={false}
       {...otherProps}
     >
       {onCancel ? <CloseButton onClick={onCancel} /> : null}

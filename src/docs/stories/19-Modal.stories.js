@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 
 import { action } from '@storybook/addon-actions';
 
+import { Col, Row } from 'react-flexbox-grid';
 import Modal from '../../components/organism/modal/Modal';
 import ModalForm from '../../components/organism/form-modal/FormModal';
 import ModalHeader from '../../components/molecule/modal-header/ModalHeader';
@@ -13,6 +14,7 @@ import Label from '../../components/atom/label/Label';
 import FormGroup from '../../components/molecule/form-group/FormGroup';
 import FormRow from '../../components/molecule/form-row/FormRow';
 import Button from '../../components/atom/button/Button';
+import Form from '../../components/organism/form/Form';
 
 export default {
   title: 'Modal',
@@ -25,44 +27,6 @@ const style = {
   maxWidth: '100%'
 };
 
-export const emptyModal = () => {
-  const [open, toggleOpen] = useState(true);
-  return (
-    <Wrapper style={style}>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime! Lorem ipsum dolor sit amet, consectetur
-      adipisicing elit. Harum, maxime! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime!
-      <button onClick={() => toggleOpen(true)}>Open</button>
-      <Modal
-        open={open}
-        contentLabel="With Actions EmptyModal"
-        onRequestClose={() => toggleOpen(false)}
-        onCancel={() => toggleOpen(false)}
-      >
-        Test
-      </Modal>
-    </Wrapper>
-  );
-};
-
-export const noPadding = () => {
-  const [open, toggleOpen] = useState(true);
-  return (
-    <Wrapper style={style}>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime! Lorem ipsum dolor sit amet, consectetur
-      adipisicing elit. Harum, maxime! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime!
-      <button onClick={() => toggleOpen(true)}>Open</button>
-      <Modal
-        open={open}
-        contentLabel="With Actions EmptyModal"
-        onRequestClose={() => toggleOpen(false)}
-        hasPadding={false}
-      >
-        Test
-      </Modal>
-    </Wrapper>
-  );
-};
-
 export const Width1Default = () => {
   const [open, toggleOpen] = useState(true);
   return (
@@ -71,7 +35,7 @@ export const Width1Default = () => {
       adipisicing elit. Harum, maxime! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime!
       <button onClick={() => toggleOpen(true)}>Open</button>
       <Modal open={open} contentLabel="With Actions EmptyModal" onRequestClose={() => toggleOpen(false)} widthLevel={1}>
-        Test
+        My modal
       </Modal>
     </Wrapper>
   );
@@ -85,7 +49,7 @@ export const Width2 = () => {
       adipisicing elit. Harum, maxime! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime!
       <button onClick={() => toggleOpen(true)}>Open</button>
       <Modal open={open} contentLabel="With Actions EmptyModal" onRequestClose={() => toggleOpen(false)} widthLevel={2}>
-        Test
+        My modal
       </Modal>
     </Wrapper>
   );
@@ -99,7 +63,7 @@ export const Width3 = () => {
       adipisicing elit. Harum, maxime! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime!
       <button onClick={() => toggleOpen(true)}>Open</button>
       <Modal open={open} contentLabel="With Actions EmptyModal" onRequestClose={() => toggleOpen(false)} widthLevel={3}>
-        Test
+        My modal
       </Modal>
     </Wrapper>
   );
@@ -113,7 +77,7 @@ export const Width4 = () => {
       adipisicing elit. Harum, maxime! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime!
       <button onClick={() => toggleOpen(true)}>Open</button>
       <Modal open={open} contentLabel="With Actions EmptyModal" onRequestClose={() => toggleOpen(false)} widthLevel={4}>
-        Test
+        My modal
       </Modal>
     </Wrapper>
   );
@@ -126,7 +90,7 @@ export const Width5 = () => {
       adipisicing elit. Harum, maxime! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime!
       <button onClick={() => toggleOpen(true)}>Open</button>
       <Modal open={open} contentLabel="With Actions EmptyModal" onRequestClose={() => toggleOpen(false)} widthLevel={5}>
-        Test
+        My modal
       </Modal>
     </Wrapper>
   );
@@ -140,7 +104,7 @@ export const left = () => {
       adipisicing elit. Harum, maxime! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime!
       <button onClick={() => toggleOpen(true)}>Open</button>
       <Modal open={open} contentLabel="With Actions EmptyModal" onRequestClose={() => toggleOpen(false)} left>
-        Test
+        My modal
       </Modal>
     </Wrapper>
   );
@@ -154,7 +118,7 @@ export const right = () => {
       adipisicing elit. Harum, maxime! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime!
       <button onClick={() => toggleOpen(true)}>Open</button>
       <Modal contentLabel="With Actions EmptyModal" open={open} onRequestClose={() => toggleOpen(false)} right>
-        Test
+        My modal
       </Modal>
     </Wrapper>
   );
@@ -185,6 +149,8 @@ export const _ModalFooter = () => (
       onCancel={action('Cancel')}
       contentLabel="With Actions EmptyModal"
     >
+      <div />
+      <div />
       <ModalFooter align="between">
         <Button onClick={action('click')}>1st action</Button>
         <Button onClick={action('click')} type="primary">
@@ -216,79 +182,37 @@ export const _ModalForm = () => {
           <FormRow style={{ marginRight: 0 }}>
             <FormGroup md>
               <Label name="name">Nome</Label>
-              <Input
-                id="name"
-                name="name"
-                type="text"
-                placeholder="Ex: Banheiro"
-                onChange={action('onChange')}
-                value=""
-              />
+              <Input name="name" type="text" placeholder="Ex: Banheiro" onChange={action('onChange')} value="" />
             </FormGroup>
           </FormRow>
           <FormRow style={{ marginRight: 0 }}>
             <FormGroup md>
               <Label name="name">Nome</Label>
-              <Input
-                id="name"
-                name="name"
-                type="text"
-                placeholder="Ex: Banheiro"
-                onChange={action('onChange')}
-                value=""
-              />
+              <Input name="name" type="text" placeholder="Ex: Banheiro" onChange={action('onChange')} value="" />
             </FormGroup>
           </FormRow>
           <FormRow style={{ marginRight: 0 }}>
             <FormGroup md>
               <Label name="name">Nome</Label>
-              <Input
-                id="name"
-                name="name"
-                type="text"
-                placeholder="Ex: Banheiro"
-                onChange={action('onChange')}
-                value=""
-              />
+              <Input name="name" type="text" placeholder="Ex: Banheiro" onChange={action('onChange')} value="" />
             </FormGroup>
           </FormRow>
           <FormRow style={{ marginRight: 0 }}>
             <FormGroup md>
               <Label name="name">Nome</Label>
-              <Input
-                id="name"
-                name="name"
-                type="text"
-                placeholder="Ex: Banheiro"
-                onChange={action('onChange')}
-                value=""
-              />
+              <Input name="name" type="text" placeholder="Ex: Banheiro" onChange={action('onChange')} value="" />
             </FormGroup>
           </FormRow>
           <FormRow style={{ marginRight: 0 }}>
             <FormGroup md>
               <Label name="name">Nome</Label>
-              <Input
-                id="name"
-                name="name"
-                type="text"
-                placeholder="Ex: Banheiro"
-                onChange={action('onChange')}
-                value=""
-              />
+              <Input name="name" type="text" placeholder="Ex: Banheiro" onChange={action('onChange')} value="" />
             </FormGroup>
           </FormRow>
           <FormRow style={{ marginRight: 0 }}>
             <FormGroup md>
               <Label name="name">Nome</Label>
-              <Input
-                id="name"
-                name="name"
-                type="text"
-                placeholder="Ex: Banheiro"
-                onChange={action('onChange')}
-                value=""
-              />
+              <Input name="name" type="text" placeholder="Ex: Banheiro" onChange={action('onChange')} value="" />
             </FormGroup>
           </FormRow>
           <FormRow style={{ marginRight: 0 }}>
@@ -328,6 +252,165 @@ export const _ModalForm = () => {
           </Button>
         </ModalFooter>
       </ModalForm>
+    </Wrapper>
+  );
+};
+
+export const _Form = () => {
+  const [open, toggleOpen] = useState(true);
+  const handleSubmit = e => {
+    e.preventDefault();
+  };
+  return (
+    <Wrapper style={style}>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime! Lorem ipsum dolor sit amet, consectetur
+      adipisicing elit. Harum, maxime! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime!
+      <button onClick={() => toggleOpen(true)}>Open</button>
+      <Modal open={open} contentLabel="With Actions EmptyModal" onRequestClose={() => toggleOpen(false)}>
+        <ModalHeader title="Titleww" description="Description" />
+        <ModalContent>
+          <Form onSubmit={handleSubmit}>
+            <FormRow style={{ marginRight: 0 }}>
+              <FormGroup md>
+                <Label name="name">Nome</Label>
+                <Input
+                  id="name"
+                  name="name"
+                  type="text"
+                  placeholder="Ex: Banheiro"
+                  onChange={action('onChange')}
+                  value=""
+                />
+              </FormGroup>
+            </FormRow>
+            <FormRow style={{ marginRight: 0 }}>
+              <FormGroup md>
+                <Label name="name">Nome</Label>
+                <Input
+                  id="name"
+                  name="name"
+                  type="text"
+                  placeholder="Ex: Banheiro"
+                  onChange={action('onChange')}
+                  value=""
+                />
+              </FormGroup>
+            </FormRow>
+            <FormRow style={{ marginRight: 0 }}>
+              <FormGroup md>
+                <Label name="name">Nome</Label>
+                <Input
+                  id="name"
+                  name="name"
+                  type="text"
+                  placeholder="Ex: Banheiro"
+                  onChange={action('onChange')}
+                  value=""
+                />
+              </FormGroup>
+            </FormRow>
+            <FormRow style={{ marginRight: 0 }}>
+              <FormGroup md>
+                <Label name="name">Nome</Label>
+                <Input
+                  id="name"
+                  name="name"
+                  type="text"
+                  placeholder="Ex: Banheiro"
+                  onChange={action('onChange')}
+                  value=""
+                />
+              </FormGroup>
+            </FormRow>
+            <FormRow style={{ marginRight: 0 }}>
+              <FormGroup md>
+                <Label name="name">Nome</Label>
+                <Input
+                  id="name"
+                  name="name"
+                  type="text"
+                  placeholder="Ex: Banheiro"
+                  onChange={action('onChange')}
+                  value=""
+                />
+              </FormGroup>
+            </FormRow>
+            <FormRow style={{ marginRight: 0 }}>
+              <FormGroup md>
+                <Label name="name">Nome</Label>
+                <Input
+                  id="name"
+                  name="name"
+                  type="text"
+                  placeholder="Ex: Banheiro"
+                  onChange={action('onChange')}
+                  value=""
+                />
+              </FormGroup>
+            </FormRow>
+            <FormRow style={{ marginRight: 0 }}>
+              <FormGroup md>
+                <Label name="idRefurbish">Nome</Label>
+                <Input
+                  id="idRefurbish"
+                  name="idRefurbish"
+                  type="text"
+                  placeholder="Ex: Banheiro"
+                  onChange={action('idRefurbish')}
+                  value=""
+                />
+              </FormGroup>
+            </FormRow>
+
+            <FormRow style={{ marginRight: 0 }}>
+              <FormGroup md>
+                <Label name="observation">Observações</Label>
+                <Input
+                  id="observation"
+                  name="observation"
+                  placeholder="Ativo"
+                  multiple
+                  onChange={action('change')}
+                  value=""
+                />
+              </FormGroup>
+            </FormRow>
+            <FormRow style={{ marginRight: 0 }}>
+              <FormGroup md>
+                <Label name="observation">Observações</Label>
+                <Input
+                  id="observation"
+                  name="observation"
+                  placeholder="Ativo"
+                  multiple
+                  onChange={action('change')}
+                  value=""
+                />
+              </FormGroup>
+            </FormRow>
+            <FormRow style={{ marginRight: 0 }}>
+              <FormGroup md>
+                <Label name="observation">Observações</Label>
+                <Input
+                  id="observation"
+                  name="observation"
+                  placeholder="Ativo"
+                  multiple
+                  onChange={action('change')}
+                  value=""
+                />
+              </FormGroup>
+            </FormRow>
+            <Row end="xs">
+              <Col lg={8}>
+                <Button type="primary" submit>
+                  btn
+                </Button>
+              </Col>
+            </Row>
+          </Form>
+        </ModalContent>
+      </Modal>
     </Wrapper>
   );
 };

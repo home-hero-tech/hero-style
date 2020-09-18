@@ -23,22 +23,34 @@
   bottom: 0;
 }
 
+.c-modal,
+.c-modal form {
+  height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
 .c-modal {
   background-color: $color-structural-white;
   z-index: 9030;
   transition: all .3s ease-in-out;
-  overflow: hidden;
 
-  &--has-padding {
-    padding: $space-5 $space-4;
-
-    @include mq($until: tablet) {
-      padding: $space-3 $space-2;
-    }
+  .c-modal__heading,
+  .c-modal__content {
+    padding: 0 $space-3;
 
     @include mq($until: mobile) {
-      padding: $space-2 $space-3;
+      padding: 0 $space-2;
     }
+  }
+
+  .c-modal__heading {
+    padding-top: $space-3;
+  }
+
+  .c-modal__heading,
+  .c-modal__content {
+    padding-bottom: $space-2;
   }
 
   &--width-1 {
@@ -73,41 +85,6 @@
     }
   }
 
-  form {
-    height: 100%;
-
-    @include mq($until: tablet) {
-      height: auto;
-    }
-  }
-
-  &__actions {
-    position: absolute;
-    content: '';
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: $modal-footer-height;
-    padding: 0 $space-3;
-
-    background-color: $color-brand-gray-050;
-
-    display: flex;
-    align-items: center;
-
-    &--align-end {
-      justify-content: flex-end;
-    }
-
-    &--align-between {
-      justify-content: space-between;
-    }
-
-    @include mq($until: mobile) {
-      padding: $space-1 $space-2;
-    }
-  }
-
   &--pre-left {
     left: -100%;
   }
@@ -129,15 +106,37 @@
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: $radius-5;
+    height: auto;
+
     .c-modal__actions {
       border-bottom-left-radius: $radius-5;
       border-bottom-right-radius: $radius-5;
     }
   }
 
-  &__heading {
-    margin-bottom: $space-2;
+  &__actions {
+    height: $modal-footer-height;
+    padding: 0 $space-3;
 
+    background-color: $color-brand-gray-050;
+
+    display: flex;
+    align-items: center;
+
+    &--align-end {
+      justify-content: flex-end;
+    }
+
+    &--align-between {
+      justify-content: space-between;
+    }
+
+    @include mq($until: mobile) {
+      padding: $space-1 $space-2;
+    }
+  }
+
+  &__heading {
     h3 {
       font-weight: 300;
       margin-bottom: $space-1;
@@ -149,15 +148,14 @@
     }
   }
 
-  &__content {
+  &__content,
+  form {
     overflow: hidden auto;
-    height: 100%;
-    padding-bottom: $modal-footer-height * 2;
   }
 
   &__close-btn {
     position: absolute;
-    top: $space-2;
+    top: $space-3;
     right: $space-2;
     border: none;
     background-color: transparent;
@@ -182,15 +180,17 @@
 }
 
 @include mq($until: tablet) {
-    .c-modal {
-      &:not(.c-modal--center) {
+  .c-modal {
+    &:not(.c-modal--center) {
 
       height: 100%;
       overflow: auto;
+
       .c-modal__content {
         height: auto;
         overflow: unset;
       }
+
       .c-modal__actions {
         position: fixed;
         width: 90%;
