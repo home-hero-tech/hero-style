@@ -15,6 +15,7 @@ import FormGroup from '../../components/molecule/form-group/FormGroup';
 import FormRow from '../../components/molecule/form-row/FormRow';
 import Button from '../../components/atom/button/Button';
 import Form from '../../components/organism/form/Form';
+import Spacer from '../../components/molecule/spacer/Spacer';
 
 export default {
   title: 'Modal',
@@ -267,7 +268,7 @@ export const _Form = () => {
       adipisicing elit. Harum, maxime! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maxime!
       <button onClick={() => toggleOpen(true)}>Open</button>
       <Modal open={open} contentLabel="With Actions EmptyModal" onRequestClose={() => toggleOpen(false)}>
-        <ModalHeader title="Titleww" description="Description" />
+        <ModalHeader title="Form" description="Form description" />
         <ModalContent>
           <Form onSubmit={handleSubmit}>
             <FormRow style={{ marginRight: 0 }}>
@@ -403,9 +404,11 @@ export const _Form = () => {
             </FormRow>
             <Row end="xs">
               <Col lg={8}>
-                <Button type="primary" submit>
-                  btn
-                </Button>
+                <Spacer mtLg={3} mtMd={3} mtSm={2} mtXs={2}>
+                  <Button type="primary" submit>
+                    Confirm
+                  </Button>
+                </Spacer>
               </Col>
             </Row>
           </Form>

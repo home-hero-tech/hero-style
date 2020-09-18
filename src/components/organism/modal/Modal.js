@@ -19,6 +19,7 @@ const Modal = ({
   contentLabel,
   widthLevel,
   onCancel,
+  hasForm,
   className,
   ...otherProps
 }) => {
@@ -27,6 +28,7 @@ const Modal = ({
     [css['c-modal--pre-right']]: right,
     [css[`c-modal--width-${widthLevel}`]]: true,
     [css['c-modal--center']]: center,
+    [css['c-modal--has-form']]: hasForm,
 
     [css['c-modal-overlay--left']]: left,
     [css['c-modal-overlay--right']]: right
@@ -67,7 +69,8 @@ Modal.propTypes = {
   right: PropTypes.bool,
   hasPadding: PropTypes.bool,
   widthLevel: PropTypes.number,
-  className: PropTypes.string
+  className: PropTypes.string,
+  hasForm: PropTypes.bool
 };
 
 Modal.defaultProps = {
@@ -78,7 +81,10 @@ Modal.defaultProps = {
   onCancel: null,
   widthLevel: 1,
   center: false,
-  className: ''
+  className: '',
+  hasForm: false
 };
+
+Modal.displayName = 'Modal';
 
 export default Modal;

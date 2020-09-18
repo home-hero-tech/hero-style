@@ -23,6 +23,7 @@ const FormModal = ({
       left={left}
       right={right}
       {...otherProps}
+      hasForm
     >
       <form onSubmit={onSubmit}>{children}</form>
     </Modal>
