@@ -134,6 +134,7 @@
     }
 
     @include mq($until: mobile) {
+      height: auto;
       padding: $space-1 $space-2;
     }
   }
@@ -178,35 +179,5 @@
 
   &--right {
     right: 0;
-  }
-}
-
-@include mq($until: tablet) {
-  .c-modal {
-    &:not(.c-modal--center) {
-
-      height: 100%;
-      overflow: auto;
-
-      .c-modal__content {
-        height: auto;
-        overflow: unset;
-      }
-
-      .c-modal__actions {
-        position: fixed;
-        width: 90%;
-        left: auto;
-      }
-    }
-  }
-}
-
-@include mq($until: mobile) {
-  .c-modal {
-    .c-modal__actions {
-      height: auto;
-      display: flex;
-    }
   }
 }
