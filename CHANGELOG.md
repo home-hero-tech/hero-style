@@ -736,3 +736,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.21.7] - 2020-09-18
 ### Remove
 - Unnecessary media queries from Modal css.
+
+## [1.21.8] - 2020-09-18
+### Remove
+- Unnecessary media queries from Modal css.
