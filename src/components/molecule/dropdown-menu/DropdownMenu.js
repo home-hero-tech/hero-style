@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 import css from './DropdownMenu.module.scss';
 
-const DropdownMenu = ({ onLeave, above, below, before, rightInside, children }) => {
+const DropdownMenu = ({ onLeave, above, below, before, rightInside, children, ...otherProps }) => {
   const classes = classNames({
     [css['c-dropdown-menu']]: true,
     [css['c-dropdown-menu--above']]: above,
@@ -14,7 +14,7 @@ const DropdownMenu = ({ onLeave, above, below, before, rightInside, children }) 
   });
 
   return (
-    <div className={classes} onMouseLeave={onLeave}>
+    <div className={classes} onMouseLeave={onLeave} {...otherProps}>
       {children}
     </div>
   );
