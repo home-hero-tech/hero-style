@@ -3,9 +3,11 @@
 .c-dropdown-menu {
   position: absolute;
   background: $color-white;
-  box-shadow: 0 0 ($shadow*2) ($shadow/2) $color-structural-black-shadow;
+  box-shadow: $elevation-1;
   white-space: nowrap;
   z-index: 999;
+  border-radius: $radius-2;
+  overflow: hidden;
 
   &--above {
     bottom: 100%;
@@ -36,7 +38,7 @@
       display: block;
       padding: $space-2 $space-3;
       color: $color-brand-gray-300;
-      transition: all .3s cubic-bezier(.65, -0.79, .29, 1.76);
+      transition: all .3s ease-in-out;
       font-weight: normal;
       height: auto;
       font-size: 12px;
