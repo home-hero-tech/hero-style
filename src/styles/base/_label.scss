@@ -1,9 +1,12 @@
-@import "../settings/settings";
-@import "../tools/tools";
+@use "../settings/settings";
+@use "../tools/tools";
+@use "../settings/colors";
+@use "../settings/spaces";
+
 
 label {
   @extend %small;
-  color: $color-brand-gray-300;
-  margin-bottom: $space-0;
+  color: colors.$color-brand-gray-300;
+  margin-bottom: spaces.$space-0;
   font-weight: 300;
 }

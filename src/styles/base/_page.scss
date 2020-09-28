@@ -1,6 +1,8 @@
-@import "../tools/tools";
+@use "../tools/tools";
+@use "../settings/colors";
+
 
 body, html, #root {
   @extend %paragraph;
-  color: $color-brand-gray-500;
+  color: colors.$color-brand-gray-500;
 }

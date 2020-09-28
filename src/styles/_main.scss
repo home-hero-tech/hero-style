@@ -1,20 +1,20 @@
 // Variables
-@import "settings/settings";
+@use "settings/settings";
 
 // Mixins or functions
-@import "tools/tools";
+@use "tools/tools";
 
 // Resets, box-sizing, etc.
-@import "generic/generic";
+@use "generic/generic";
 
 // Basic styles like h1-h6, ul, li, etc.
-@import "base/base";
+@use "base/base";
 
 // Little "objects" like btn or list styles, reusable objects/components
-@import "objects/objects";
+@use "objects/objects";
 
 // Specific components/objects or override components
-@import "components/components";
+@use "components/components";
 
 // Helpers, to force a class no matter what happens
-@import "trumps/trumps";
+@use "trumps/trumps";

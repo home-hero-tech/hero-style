@@ -1,4 +1,6 @@
-@import "../settings/settings";
+@use "../settings/settings";
+@use "../settings/colors";
+
 
 :global {
   @import "~react-toastify/dist/ReactToastify.css";
@@ -7,16 +9,16 @@
 .Toastify {
   &__toast {
     &--success {
-      background: $color-success !important;
+      background: colors.$color-success !important;
     }
     &--error {
-      background: $color-danger !important;
+      background: colors.$color-danger !important;
     }
     &--warning {
-      background: $color-warning !important;
+      background: colors.$color-warning !important;
     }
     &--info {
-      background: $color-brand-primary-300 !important;
+      background: colors.$color-brand-primary-300 !important;
     }
   }
 

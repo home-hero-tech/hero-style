@@ -1,5 +1,8 @@
-@import '../settings/settings';
-@import '../tools/mq';
+@use '../settings/settings';
+@use '../tools/mq';
+@use "../settings/colors";
+@use "../settings/radius";
+
 
 $initial-size: 28px;
 $row-size: 18px;
@@ -15,7 +18,7 @@ $row-size: 18px;
 
 .c-editor {
   height: auto;
-  border-radius: $radius-2;
+  border-radius: radius.$radius-2;
 
   &--rows-auto {
     height: auto;
@@ -32,28 +35,28 @@ $row-size: 18px;
       height: 100%;
     }
 
-    @include mq($until: tablet) {
+    @include mq.mq($until: tablet) {
       height: auto;
     }
   }
 
   &--bg-white {
     .ql-editor {
-      background-color: $color-white;
-      border-bottom-left-radius: $radius-2;
-      border-bottom-right-radius: $radius-2;
+      background-color: colors.$color-white;
+      border-bottom-left-radius: radius.$radius-2;
+      border-bottom-right-radius: radius.$radius-2;
     }
   }
 
   .quill {
     div[contenteditable="false"] {
-      background-color: $color-brand-gray-100;
-      border-color: $color-brand-gray-100;
-      color: $color-brand-gray-500;
+      background-color: colors.$color-brand-gray-100;
+      border-color: colors.$color-brand-gray-100;
+      color: colors.$color-brand-gray-500;
     }
     .ql-container {
-      border-radius: $radius-2;
-      border-color: $color-brand-gray-200;
+      border-radius: radius.$radius-2;
+      border-color: colors.$color-brand-gray-200;
       overflow: hidden;
     }
 
@@ -63,13 +66,13 @@ $row-size: 18px;
     }
 
     .ql-toolbar {
-      background: $color-brand-gray-050;
-      border-top-left-radius: $radius-2;
-      border-top-right-radius: $radius-2;
+      background: colors.$color-brand-gray-050;
+      border-top-left-radius: radius.$radius-2;
+      border-top-right-radius: radius.$radius-2;
     }
 
     .ql-editor.ql-blank::before {
-      color: $color-brand-gray-200;
+      color: colors.$color-brand-gray-200;
       font-style: unset;
     }
   }

@@ -1,12 +1,12 @@
-@import "../settings/spaces";
-@import "../settings/colors";
-@import "../tools/mq";
+@use "../settings/spaces";
+@use "../settings/colors";
+@use "../tools/mq";
 
 .c-list {
   list-style: none;
 
   a, a:hover, a:focus, a:visited, a:link {
-    color: $color-brand-gray-500;
+    color: colors.$color-brand-gray-500;
   }
 
   &--clickable {
@@ -17,49 +17,49 @@
 
   &--0 {
     > li + li {
-      margin-top: $space-0;
+      margin-top: spaces.$space-0;
     }
   }
 
   &--1 {
     > li + li {
-      margin-top: $space-1;
+      margin-top: spaces.$space-1;
     }
   }
 
   &--2 {
     > li + li {
-      margin-top: $space-2;
+      margin-top: spaces.$space-2;
     }
   }
 
   &--3 {
     > li + li {
-      margin-top: $space-3;
+      margin-top: spaces.$space-3;
     }
   }
 
   &--4 {
     > li + li {
-      margin-top: $space-4;
+      margin-top: spaces.$space-4;
     }
   }
 
   &--5 {
     > li + li {
-      margin-top: $space-5;
+      margin-top: spaces.$space-5;
     }
   }
 
   ul {
-    margin-left: $space-4 + 3px;
+    margin-left: spaces.$space-4 + 3px;
 
-    @include mq($until: tablet) {
-      margin-left: $space-4;
+    @include mq.mq($until: tablet) {
+      margin-left: spaces.$space-4;
     }
 
-    @include mq($until: mobile) {
-      margin-left: $space-2;
+    @include mq.mq($until: mobile) {
+      margin-left: spaces.$space-2;
     }
   }
 }

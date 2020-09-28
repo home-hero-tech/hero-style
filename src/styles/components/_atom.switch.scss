@@ -1,10 +1,10 @@
-@import "../settings/colors";
+@use "../settings/colors";
 
 .c-switch {
 
   :global(.react-switch-bg) {
     height: 11px !important;
-    background: $color-brand-gray-100 !important;
+    background: colors.$color-brand-gray-100 !important;
   }
 
   :global(.react-switch-handle) {
@@ -15,7 +15,7 @@
 
   &--active {
     :global(.react-switch-bg) {
-      background: $color-primary !important;
+      background: colors.$color-primary !important;
     }
   }
 }

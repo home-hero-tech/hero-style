@@ -1,46 +1,51 @@
-@import "../settings/settings";
+@use "../settings/types";
+@use "../settings/colors";
+@use "../settings/radius";
+@use "../settings/spaces";
+@use "../settings/shadows";
+
 
 .c-file {
   label {
-    font-size: $font-size-md;
+    font-size: types.$font-size-md;
     cursor: pointer;
   }
 
   svg {
-    color: $color-brand-primary-300;
+    color: colors.$color-brand-primary-300;
   }
-  
+
   input[type="file"] {
     display: none
   }
 
   &__empty, &__content {
     display: flex;
-    padding: $space-2;
-    border-radius: $radius-2;
+    padding: spaces.$space-2;
+    border-radius: radius.$radius-2;
     img, svg {
-      margin-right: $space-2;
+      margin-right: spaces.$space-2;
     }
   };
 
   &__content {
-    border: 1px solid $color-brand-primary-300;
+    border: 1px solid colors.$color-brand-primary-300;
   }
 
   &__empty {
-    border: 2px dashed $color-brand-gray-100;
-    padding: calc(#{$space-2} + 5px) $space-2;
+    border: 2px dashed colors.$color-brand-gray-100;
+    padding: calc(#{spaces.$space-2} + 5px) spaces.$space-2;
   }
-  
+
   &__empty > &__text {
     display: flex;
     align-items: center;
   }
 
   &__text {
-    color: $color-brand-gray-300;
+    color: colors.$color-brand-gray-300;
     &--primary {
-      color: $color-brand-primary-300;
+      color: colors.$color-brand-primary-300;
     }
     &--align-center {
       display: flex;
@@ -52,71 +57,71 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    
+
     button {
       padding: 0;
-      height: $space-2;
+      height: spaces.$space-2;
     }
   }
 
-  &--disabled { 
+  &--disabled {
     .c-file__text, svg {
-      color: $color-brand-gray-100 !important;
+      color: colors.$color-brand-gray-100 !important;
     }
   }
 
   &__button {
     display: block;
     color: #fff;
-    padding: $space-1 $space-3;
+    padding: spaces.$space-1 spaces.$space-3;
     font-weight: bold;
-    border-radius: $radius-4;
+    border-radius: radius.$radius-4;
     cursor: pointer;
-    border: 1px solid $color-primary;
-    box-shadow: $elevation-4;
+    border: 1px solid colors.$color-primary;
+    box-shadow: shadows.$elevation-4;
     white-space: nowrap;
     width: min-content;
     background-position: center;
     transition: transform .5s;
-    background: $color-brand-primary-300;
+    background: colors.$color-brand-primary-300;
     user-select: none;
-    
+
     span {
-      font-size: $font-size-sm;
+      font-size: types.$font-size-sm;
     }
-  
+
     svg, span {
-      color: $color-white;
+      color: colors.$color-white;
     }
-  
+
     svg+span {
-      margin-left: $space-0;
+      margin-left: spaces.$space-0;
     }
-  
+
     &:not(.c-file__button--disabled) {
       &:active {
         transform: scale(.92);
       }
     }
-  
+
     &--disabled {
-      background-color: $color-brand-gray-100;
-      border-color: $color-brand-gray-100;
+      background-color: colors.$color-brand-gray-100;
+      border-color: colors.$color-brand-gray-100;
 
       svg, span {
         color: #fff !important;
       }
-  
+
       &.c-btn--outlined {
         background: transparent;
-        border: solid 1px $color-brand-gray-100;
-  
+        border: solid 1px colors.$color-brand-gray-100;
+
         &:hover {
-          background: rgba($color-brand-gray-100, .1);
+          background: rgba(colors.$color-brand-gray-100, .1);
         }
-  
+
         &:focus {
-          background: rgba($color-brand-gray-100, .2);
+          background: rgba(colors.$color-brand-gray-100, .2);
         }
       }
     }

@@ -1,5 +1,5 @@
-@import "../settings/types";
+@use "../settings/types";
 
 p {
-  font-size: $font-size-md;
+  font-size: types.$font-size-md;
 }

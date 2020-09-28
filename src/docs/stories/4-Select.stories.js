@@ -43,7 +43,7 @@ export const smallWithIcon = () => (
 );
 
 export const SmallDark = () => (
-  <Select options={options} placeholder={placeholder} noOptionsMessage={noOptionsMessage} dark small />
+  <Select options={options} placeholder={placeholder} noOptionsMessage={noOptionsMessage} dark small isClearable />
 );
 
 export const MultiSelect = () => (
@@ -58,6 +58,31 @@ export const SearchableOff = () => (
   />
 );
 
+export const ColorApproved = () => (
+  <Select approved options={options} placeholder={placeholder} value={options[3]} isClearable />
+);
+export const SmallApproved = () => (
+  <Select small approved options={options} placeholder={placeholder} value={options[3]} isClearable />
+);
+export const ColorPending = () => (
+  <Select options={options} placeholder={placeholder} value={options[3]} isClearable pending />
+);
+export const SmallPending = () => (
+  <Select options={options} placeholder={placeholder} value={options[3]} isClearable pending small />
+);
+export const ColorRejected = () => (
+  <Select rejected options={options} placeholder={placeholder} value={options[3]} isClearable />
+);
+export const RejectedWithIcon = () => (
+  <Select
+    icon={<FontAwesomeIcon icon={faLink} />}
+    rejected
+    options={options}
+    placeholder={placeholder}
+    value={options[3]}
+    isClearable
+  />
+);
 export const Disabled = () => (
   <Select
     isDisabled

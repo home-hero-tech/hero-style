@@ -1,8 +1,10 @@
-@import '../settings/settings';
-@import "../tools/tools";
+@use '../settings/settings';
+@use "../tools/tools";
+@use "../settings/spaces";
+
 
 .c-form-row {
   & + .c-form-row {
-    margin-top: $space-3;
+    margin-top: spaces.$space-3;
   }
 }

@@ -1,8 +1,8 @@
-@import "../settings/colors";
+@use "../settings/colors";
 
 .c-heading {
   &--gray {
-    color: $color-brand-gray-300;
+    color: colors.$color-brand-gray-300;
   }
 
   &--withMargin {

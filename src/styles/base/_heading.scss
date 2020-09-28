@@ -1,7 +1,9 @@
-@import "../settings/settings";
+@use "../settings/settings";
+@use "../settings/types";
+
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: $font-family-secondary;
+  font-family: types.$font-family-secondary;
   font-weight: 400;
 }
 

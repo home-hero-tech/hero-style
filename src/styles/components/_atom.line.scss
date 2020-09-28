@@ -1,8 +1,8 @@
-@import "../settings/colors";
+@use "../settings/colors";
 
 .c-line {
   border: 0;
   height: 1px;
-  background: rgba($color-brand-gray-100, .5);
+  background: rgba(colors.$color-brand-gray-100, .5);
   width: 100%;
 }

@@ -1,15 +1,15 @@
 // atoms
-@import "atom.box-shadow";
-@import "atom.datepicker";
-@import "atom.heading";
-@import "atom.pagination";
+@use "atom.box-shadow";
+@use "atom.datepicker" as atom2;
+@use "atom.heading" as atom3;
+@use "atom.pagination" as atom4;
 
 // molecules
-@import "molecule.flexgrid";
-@import "molecule.tooltip";
-@import "molecule.tabs";
-@import "molecule.toastr";
+@use "molecule.flexgrid";
+@use "molecule.tooltip" as molecule2;
+@use "molecule.tabs" as molecule3;
+@use "molecule.toastr" as molecule4;
 
 // organism
-@import "organism.modal";
+@use "organism.modal";
 

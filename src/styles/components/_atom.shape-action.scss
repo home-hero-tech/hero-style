@@ -1,11 +1,11 @@
-@import "../settings/colors";
-@import "../settings/radius";
-@import "../settings/width";
-@import "../settings/height";
-@import "../settings/spaces";
+@use "../settings/colors";
+@use "../settings/radius";
+@use "../settings/width";
+@use "../settings/height";
+@use "../settings/spaces";
 
 .c-shape-action {
-  border: solid 1px $color-brand-gray-300;
+  border: solid 1px colors.$color-brand-gray-300;
   padding: 0;
   margin: 0;
 
@@ -18,42 +18,42 @@
 
   &--is-link {
     a:link {
-      color: $color-white;
+      color: colors.$color-white;
       display: flex;
     };
   }
 
   &--white {
-    color: $color-white;
-    border: solid 1px $color-white;
+    color: colors.$color-white;
+    border: solid 1px colors.$color-white;
   }
 
   &--gray-light {
-    color: $color-brand-gray-200;
-    border: solid 1px $color-brand-gray-200;
+    color: colors.$color-brand-gray-200;
+    border: solid 1px colors.$color-brand-gray-200;
   }
 
   &--primary {
-    color: $color-primary;
-    border: solid 1px $color-primary;
+    color: colors.$color-primary;
+    border: solid 1px colors.$color-primary;
   }
 
   &--success {
-    color: $color-success;
-    border: solid 1px $color-success;
+    color: colors.$color-success;
+    border: solid 1px colors.$color-success;
   }
 
   &--danger {
-    color: $color-danger;
-    border: solid 1px $color-danger;
+    color: colors.$color-danger;
+    border: solid 1px colors.$color-danger;
   }
 
   &--rounded {
-    border-radius: $radius-percent-50;
+    border-radius: radius.$radius-percent-50;
   }
 
   &--squared {
-    border-radius: $radius-2;
+    border-radius: radius.$radius-2;
   }
 
   &--fill-gray-light,
@@ -61,35 +61,35 @@
   &--fill-success,
   &--fill-danger,
   &:link {
-    color: $color-white;
+    color: colors.$color-white;
   }
 
   &--fill-gray-light {
-    background-color: $color-brand-gray-200;
-    border: solid 1px $color-brand-gray-200;
-    color: $color-brand-gray-300;
+    background-color: colors.$color-brand-gray-200;
+    border: solid 1px colors.$color-brand-gray-200;
+    color: colors.$color-brand-gray-300;
   }
 
   &--fill-primary {
-    background-color: $color-primary;
-    border: solid 1px $color-primary;
+    background-color: colors.$color-primary;
+    border: solid 1px colors.$color-primary;
   }
 
   &--fill-success {
-    background-color: $color-success;
-    border: solid 1px $color-success;
+    background-color: colors.$color-success;
+    border: solid 1px colors.$color-success;
   }
 
   &--fill-danger {
-    background-color: $color-danger;
-    border: solid 1px $color-danger;
+    background-color: colors.$color-danger;
+    border: solid 1px colors.$color-danger;
   }
 
   &--size-0 {
     font-size: 12px !important;
-    height: $shape-action-height - 12px;
-    width: $shape-action-width - 12px;
-    border-radius: $space-0;
+    height: height.$shape-action-height - 12px;
+    width: width.$shape-action-width - 12px;
+    border-radius: spaces.$space-0;
 
     svg {
       font-size: 12px !important;
@@ -98,8 +98,8 @@
 
   &--size-1 {
     font-size: 12px !important;
-    height: $shape-action-height - 6px;
-    width: $shape-action-width - 6px;
+    height: height.$shape-action-height - 6px;
+    width: width.$shape-action-width - 6px;
 
     svg {
       font-size: 12px !important;
@@ -108,8 +108,8 @@
 
   &--size-2 {
     font-size: 12px !important;
-    height: $shape-action-height - 4px;
-    width: $shape-action-width - 4px;
+    height: height.$shape-action-height - 4px;
+    width: width.$shape-action-width - 4px;
 
     svg {
       font-size: 12px !important;
@@ -118,8 +118,8 @@
 
   &--size-3 {
     font-size: 14px !important;
-    height: $shape-action-height - 2px;
-    width: $shape-action-width - 2px;
+    height: height.$shape-action-height - 2px;
+    width: width.$shape-action-width - 2px;
 
     svg {
       font-size: 14px !important;
@@ -128,8 +128,8 @@
 
   &--size-4 {
     font-size: 16px !important;
-    height: $shape-action-height;
-    width: $shape-action-width;
+    height: height.$shape-action-height;
+    width: width.$shape-action-width;
 
     svg {
       font-size: 16px !important;

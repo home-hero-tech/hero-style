@@ -1,11 +1,16 @@
-@import "../../styles/settings/settings";
-@import "../tools/tools";
+@use "../../styles/settings/settings";
+@use "../tools/tools";
+@use "../settings/colors";
+@use "../settings/radius";
+@use "../settings/shadows";
+@use "../settings/spaces";
+
 
 .c-card {
   position: relative;
-  background-color: $color-white;
-  border-radius: $radius-2;
-  box-shadow: $elevation-1;
+  background-color: colors.$color-white;
+  border-radius: radius.$radius-2;
+  box-shadow: shadows.$elevation-1;
 
   &--borderless {
     box-shadow: none;
@@ -14,34 +19,34 @@
 
   &__header {
     font-weight: bold;
-    padding: $space-2 $space-2;
-    background-color: $color-brand-gray-050;
-    border-bottom: 1px solid $color-brand-gray-050;
-    border-top-left-radius: $radius-3;
-    border-top-right-radius: $radius-3;
+    padding: spaces.$space-2 spaces.$space-2;
+    background-color: colors.$color-brand-gray-050;
+    border-bottom: 1px solid colors.$color-brand-gray-050;
+    border-top-left-radius: radius.$radius-3;
+    border-top-right-radius: radius.$radius-3;
 
     &--small {
-      padding: $space-1 $space-2;
+      padding: spaces.$space-1 spaces.$space-2;
     }
   }
 
   &__body {
-    padding: $space-2 $space-3;
+    padding: spaces.$space-2 spaces.$space-3;
 
     &--small {
-      padding: $space-1 $space-2;
+      padding: spaces.$space-1 spaces.$space-2;
     }
   }
 
   &__footer {
-    padding: $space-0 $space-2;
-    background-color: $color-brand-gray-050;
-    border-top: 1px solid $color-brand-gray-050;
-    border-bottom-left-radius: $radius-3;
-    border-bottom-right-radius: $radius-3;
+    padding: spaces.$space-0 spaces.$space-2;
+    background-color: colors.$color-brand-gray-050;
+    border-top: 1px solid colors.$color-brand-gray-050;
+    border-bottom-left-radius: radius.$radius-3;
+    border-bottom-right-radius: radius.$radius-3;
 
     &--small {
-      padding: $space-1 $space-2;
+      padding: spaces.$space-1 spaces.$space-2;
     }
   }
 }

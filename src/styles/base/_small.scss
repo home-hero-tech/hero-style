@@ -1,7 +1,9 @@
-@import '../tools/tools';
-@import "../settings/settings";
+@use '../tools/tools';
+@use "../settings/settings";
+@use "../settings/colors";
+
 
 small {
   @extend %extra-small;
-  color: $color-brand-gray-500;
+  color: colors.$color-brand-gray-500;
 }

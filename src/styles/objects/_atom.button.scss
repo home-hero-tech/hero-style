@@ -1,20 +1,26 @@
-@import "../settings/settings";
-@import "../tools/tools";
+@use "../settings/settings";
+@use "../tools/tools";
+@use "../settings/colors";
+@use "../settings/radius";
+@use "../settings/shadows";
+@use "../settings/spaces";
+@use "../settings/types";
+
 
 
 .c-btn {
-  padding: $space-1 $space-3;
+  padding: spaces.$space-1 spaces.$space-3;
   font-weight: bold;
-  color: $color-structural-gray-600;
-  border-radius: $radius-4;
+  color: colors.$color-structural-gray-600;
+  border-radius: radius.$radius-4;
   cursor: pointer;
   border: solid 1px currentColor;
-  box-shadow: $elevation-4;
+  box-shadow: shadows.$elevation-4;
   white-space: nowrap;
   width: min-content;
   background-position: center;
   transition: transform .5s;
-  font-family: $font-family;
+  font-family: types.$font-family;
 
 
   &:active {
@@ -32,32 +38,32 @@
     align-items: center;
 
     svg {
-      margin-right: $space-1;
+      margin-right: spaces.$space-1;
     }
   }
 
   &--size-1 {
-    font-size: $font-size-xs;
+    font-size: types.$font-size-xs;
     height: 30px;
   }
 
   &--size-2 {
-    font-size: $font-size-sm;
+    font-size: types.$font-size-sm;
     height: 32px;
   }
 
   &--size-3 {
-    font-size: $font-size-md;
+    font-size: types.$font-size-md;
     height: 34px;
   }
 
   &--size-4 {
-    font-size: $font-size-lg;
+    font-size: types.$font-size-lg;
     height: 36px;
   }
 
   &--squared {
-    border-radius: $radius-2;
+    border-radius: radius.$radius-2;
   }
 
   &--outlined {
@@ -65,11 +71,11 @@
     border: solid 1px currentColor;
 
     &:hover {
-      background: rgba($color-structural-gray-600, .1);
+      background: rgba(colors.$color-structural-gray-600, .1);
     }
 
     &:focus {
-      background: rgba($color-structural-gray-600, .2);
+      background: rgba(colors.$color-structural-gray-600, .2);
     }
   }
 
@@ -77,7 +83,7 @@
     background: transparent;
     border: none;
     box-shadow: none;
-    color: $color-structural-gray-600;
+    color: colors.$color-structural-gray-600;
 
     &:hover {
       border: none;
@@ -90,27 +96,27 @@
   }
 
   &:disabled {
-    color: $color-brand-gray-300;
-    background-color: $color-brand-gray-100;
-    border-color: $color-brand-gray-100;
+    color: colors.$color-brand-gray-300;
+    background-color: colors.$color-brand-gray-100;
+    border-color: colors.$color-brand-gray-100;
 
     &.c-btn--outlined {
       background: transparent;
-      border: solid 1px $color-brand-gray-100;
+      border: solid 1px colors.$color-brand-gray-100;
 
       &:hover {
-        background: rgba($color-brand-gray-100, .1);
+        background: rgba(colors.$color-brand-gray-100, .1);
       }
 
       &:focus {
-        background: rgba($color-brand-gray-100, .2);
+        background: rgba(colors.$color-brand-gray-100, .2);
       }
     }
 
     &.c-btn--text {
       border: none;
       background: transparent;
-      color: $color-brand-gray-300;
+      color: colors.$color-brand-gray-300;
 
       &:hover {
         border: none;
@@ -120,28 +126,28 @@
   }
 
   &--primary {
-    color: $color-white;
-    border: 1px solid $color-primary;
-    background: $color-brand-primary-300;
+    color: colors.$color-white;
+    border: 1px solid colors.$color-primary;
+    background: colors.$color-brand-primary-300;
 
     &.c-btn--outlined {
       background: transparent;
-      border: solid 1px $color-primary;
-      color: $color-primary;
+      border: solid 1px colors.$color-primary;
+      color: colors.$color-primary;
 
       &:hover {
-        background: rgba($color-primary, .1);
+        background: rgba(colors.$color-primary, .1);
       }
 
       &:focus {
-        background: rgba($color-primary, .2);
+        background: rgba(colors.$color-primary, .2);
       }
     }
 
     &.c-btn--text {
       border: none;
       background: transparent;
-      color: $color-primary;
+      color: colors.$color-primary;
 
       &:hover {
         border: none;
@@ -151,28 +157,28 @@
   }
 
   &--secondary {
-    color: $color-white;
-    border: 1px solid $color-secondary;
-    background: $color-brand-secondary-300;
+    color: colors.$color-white;
+    border: 1px solid colors.$color-secondary;
+    background: colors.$color-brand-secondary-300;
 
     &.c-btn--outlined {
       background: transparent;
-      border: solid 1px $color-secondary;
-      color: $color-secondary;
+      border: solid 1px colors.$color-secondary;
+      color: colors.$color-secondary;
 
       &:hover {
-        background: rgba($color-secondary, .1);
+        background: rgba(colors.$color-secondary, .1);
       }
 
       &:focus {
-        background: rgba($color-secondary, .2);
+        background: rgba(colors.$color-secondary, .2);
       }
     }
 
     &.c-btn--text {
       border: none;
       background: transparent;
-      color: $color-secondary;
+      color: colors.$color-secondary;
 
       &:hover {
         border: none;
@@ -182,28 +188,28 @@
   }
 
   &--danger {
-    color: $color-white;
-    border: solid 1px $color-danger;
-    background: $color-danger;
+    color: colors.$color-white;
+    border: solid 1px colors.$color-danger;
+    background: colors.$color-danger;
 
     &.c-btn--outlined {
       background: transparent;
-      border: solid 1px $color-danger;
-      color: $color-danger;
+      border: solid 1px colors.$color-danger;
+      color: colors.$color-danger;
 
       &:hover {
-        background: rgba($color-danger, .1);
+        background: rgba(colors.$color-danger, .1);
       }
 
       &:focus {
-        background: rgba($color-danger, .2);
+        background: rgba(colors.$color-danger, .2);
       }
     }
 
     &.c-btn--text {
       border: none;
       background: transparent;
-      color: $color-danger;
+      color: colors.$color-danger;
 
       &:hover {
         border: none;
@@ -213,28 +219,28 @@
   }
 
   &--success {
-    background-color: $color-success;
-    border: solid 1px $color-success;
-    color: $color-white;
+    background-color: colors.$color-success;
+    border: solid 1px colors.$color-success;
+    color: colors.$color-white;
 
     &.c-btn--outlined {
       background: transparent;
-      border: solid 1px $color-success;
-      color: $color-success;
+      border: solid 1px colors.$color-success;
+      color: colors.$color-success;
 
       &:hover {
-        background: rgba($color-success, .1);
+        background: rgba(colors.$color-success, .1);
       }
 
       &:focus {
-        background: rgba($color-success, .2);
+        background: rgba(colors.$color-success, .2);
       }
     }
 
     &.c-btn--text {
       border: none;
       background: transparent;
-      color: $color-success;
+      color: colors.$color-success;
 
       &:hover {
         border: none;

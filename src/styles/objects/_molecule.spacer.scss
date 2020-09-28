@@ -1,5 +1,7 @@
-@import "../tools/tools";
-@import "../settings/spaces";
+@use "../tools/tools";
+@use "../settings/spaces";
+@use "../tools/mq";
+
 
 .c-spacer {
   display: block;
@@ -9,75 +11,75 @@
   }
 
   @for $size from 0 to 10 {
-    @include mq($from: desktop) {
+    @include mq.mq($from: desktop) {
       &--mt-lg-#{$size} {
-        margin-top: $space * $size;
+        margin-top: spaces.$space * $size;
       }
 
       &--mb-lg-#{$size} {
-        margin-bottom: $space * $size;
+        margin-bottom: spaces.$space * $size;
       }
 
       &--ml-lg-#{$size} {
-        margin-left: $space * $size;
+        margin-left: spaces.$space * $size;
       }
 
       &--mr-lg-#{$size} {
-        margin-right: $space * $size;
+        margin-right: spaces.$space * $size;
       }
     }
 
-    @include mq($from: tablet, $until: desktop) {
+    @include mq.mq($from: tablet, $until: desktop) {
       &--mt-md-#{$size} {
-        margin-top: $space * $size;
+        margin-top: spaces.$space * $size;
       }
 
       &--mb-md-#{$size} {
-        margin-bottom: $space * $size;
+        margin-bottom: spaces.$space * $size;
       }
 
       &--ml-md-#{$size} {
-        margin-left: $space * $size;
+        margin-left: spaces.$space * $size;
       }
 
       &--mr-md-#{$size} {
-        margin-right: $space * $size;
+        margin-right: spaces.$space * $size;
       }
     }
 
-    @include mq($from: mobile, $until: tablet) {
+    @include mq.mq($from: mobile, $until: tablet) {
       &--mt-sm-#{$size} {
-        margin-top: $space * $size;
+        margin-top: spaces.$space * $size;
       }
 
       &--mb-sm-#{$size} {
-        margin-bottom: $space * $size;
+        margin-bottom: spaces.$space * $size;
       }
 
       &--ml-sm-#{$size} {
-        margin-left: $space * $size;
+        margin-left: spaces.$space * $size;
       }
 
       &--mr-sm-#{$size} {
-        margin-right: $space * $size;
+        margin-right: spaces.$space * $size;
       }
     }
 
-    @include mq($until: mobile) {
+    @include mq.mq($until: mobile) {
       &--mt-xs-#{$size} {
-        margin-top: $space * $size;
+        margin-top: spaces.$space * $size;
       }
 
       &--mb-xs-#{$size} {
-        margin-bottom: $space * $size;
+        margin-bottom: spaces.$space * $size;
       }
 
       &--ml-xs-#{$size} {
-        margin-left: $space * $size;
+        margin-left: spaces.$space * $size;
       }
 
       &--mr-xs-#{$size} {
-        margin-right: $space * $size;
+        margin-right: spaces.$space * $size;
       }
     }
   }

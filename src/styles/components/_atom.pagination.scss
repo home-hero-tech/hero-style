@@ -1,4 +1,9 @@
-@import '../settings/settings';
+@use '../settings/settings';
+@use "../settings/colors";
+@use "../settings/radius";
+@use "../settings/shadows";
+@use "../settings/spaces";
+
 
 .c-pagination {
   width: 100%;
@@ -6,15 +11,15 @@
     .pagination {
       display: flex !important;
       justify-content: center;
-      margin-top: $space-5;
+      margin-top: spaces.$space-5;
 
       .page {
-        color: $color-brand-primary-300;
-        background: $color-structural-white;
-        border-radius: $radius-2;
-        box-shadow: $elevation-4;
-        height: $space-4;
-        width: $space-4;
+        color: colors.$color-brand-primary-300;
+        background: colors.$color-structural-white;
+        border-radius: radius.$radius-2;
+        box-shadow: shadows.$elevation-4;
+        height: spaces.$space-4;
+        width: spaces.$space-4;
         margin: auto 6px;
         display: table;
         text-align: center;
@@ -25,9 +30,9 @@
         }
 
         &.active {
-          background: $color-brand-primary-300;
+          background: colors.$color-brand-primary-300;
           a {
-            color: $color-structural-white;
+            color: colors.$color-structural-white;
           }
         }
       }

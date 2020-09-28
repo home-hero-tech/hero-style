@@ -1,12 +1,19 @@
-@import '../settings/settings';
-@import "../tools/tools";
+@use '../settings/settings';
+@use "../tools/tools";
+@use "../settings/colors";
+@use "../settings/height";
+@use "../settings/radius";
+@use "../settings/spaces";
+@use "../settings/types";
+@use "../tools/mq";
+
 
 .c-form-group {
   display: flex;
   justify-content: center;
   flex-direction: column;
   position: relative;
-  min-height: $input-height;
+  min-height: height.$input-height;
 
   &--error,
   &--error-no-icon,
@@ -14,14 +21,14 @@
     position: relative;
 
     &:after {
-      font-size: $font-size-md;
+      font-size: types.$font-size-md;
       position: absolute;
       font-family: 'Font Awesome 5 Pro', sans-serif;
       font-weight: 900;
-      top: $input-height - 10px;
+      top: height.$input-height - 10px;
       transform: translateY(10%);
       background-color: transparent;
-      right: $space-3;
+      right: spaces.$space-3;
     }
 
     input {
@@ -33,16 +40,16 @@
     label,
     small,
     input {
-      color: $color-danger;
+      color: colors.$color-danger;
     }
 
     &--icon {
       &:after {
         content: '\f057';
-        color: $color-danger;
+        color: colors.$color-danger;
         font-weight: 900;
-        border-top-right-radius: $radius-2;
-        border-bottom-right-radius: $radius-2;
+        border-top-right-radius: radius.$radius-2;
+        border-bottom-right-radius: radius.$radius-2;
       }
     }
 
@@ -51,12 +58,12 @@
         &--default, &--small {
           &__control,
           &__menu {
-            border-color: $color-danger !important;
+            border-color: colors.$color-danger !important;
 
             &:hover,
             &--is-focused,
             &--is-selected {
-              border-color: $color-danger !important;
+              border-color: colors.$color-danger !important;
             }
           }
         }
@@ -68,23 +75,23 @@
     label,
     small,
     input {
-      color: $color-success;
+      color: colors.$color-success;
     }
 
     &:after {
       content: '\f00c';
-      color: $color-success;
+      color: colors.$color-success;
     }
 
     :global {
       .c-select {
         &__control {
-          border-color: $color-success !important;
+          border-color: colors.$color-success !important;
 
           &:hover,
           &--is-focused,
           &--is-selected {
-            border-color: $color-success !important;
+            border-color: colors.$color-success !important;
           }
         }
       }
@@ -92,14 +99,14 @@
   }
 
   & + .c-form-group {
-    @include mq($until: tablet) {
-      margin-top: $space-3;
+    @include mq.mq($until: tablet) {
+      margin-top: spaces.$space-3;
     }
   }
 
   small {
     position: relative;
-    margin-top: $space-0;
+    margin-top: spaces.$space-0;
     // position: absolute;
     // bottom: -$space-2;
     // right: $space-1;

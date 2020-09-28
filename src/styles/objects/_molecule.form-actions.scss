@@ -1,8 +1,10 @@
-@import "../settings/settings";
+@use "../settings/settings";
+@use "../settings/spaces";
+
 
 .c-form-actions {
   display: flex;
-  margin-top: $space-4;
+  margin-top: spaces.$space-4;
 
   &--align-between {
     justify-content: space-between;
@@ -13,6 +15,6 @@
   }
 
   button + button {
-    margin-left: $space-1;
+    margin-left: spaces.$space-1;
   }
 }

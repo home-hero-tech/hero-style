@@ -1,20 +1,19 @@
 // atoms
-@import "atom.button";
-@import "atom.card-item";
-@import "atom.form";
-@import "atom.input";
-@import "atom.loader";
-@import "atom.select";
+@use "atom.button";
+@use "atom.card-item" as atom2;
+@use "atom.form" as atom3;
+@use "atom.input" as atom4;
+@use "atom.loader" as atom5;
 
 // molecules
-@import "molecule.card";
-@import "molecule.form-actions";
-@import "molecule.form-group";
-@import "molecule.form-row";
-@import "molecule.list";
-@import "molecule.spacer";
-@import "molecule.editor";
-@import "molecule.card-select";
+@use "molecule.card";
+@use "molecule.form-actions" as molecule2;
+@use "molecule.form-group" as molecule3;
+@use "molecule.form-row" as molecule4;
+@use "molecule.list" as molecule5;
+@use "molecule.spacer" as molecule6;
+@use "molecule.editor" as molecule7;
+@use "molecule.card-select" as molecule8;
 
 // organism
-@import "organism.filter";
+@use "organism.filter";

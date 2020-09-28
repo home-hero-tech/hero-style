@@ -1,4 +1,10 @@
-@import '../settings/settings';
+@use '../settings/settings';
+@use "../settings/colors";
+@use "../settings/height";
+@use "../settings/radius";
+@use "../settings/spaces";
+@use "../settings/types";
+
 
 .c-input-wrapper {
   position: relative;
@@ -7,35 +13,35 @@
     svg {
       position: absolute;
       content: '';
-      top: calc(#{$input-height} - 70%);
+      top: calc(#{height.$input-height} - 70%);
       color: currentColor;
-      left: $space-2;
+      left: spaces.$space-2;
     }
 
     &--small {
       svg {
-        top: calc(#{$input-height-small} - 80%);
-        left: $space-1 * 1.5;
-        font-size: $font-size-sm;
+        top: calc(#{height.$input-height-small} - 80%);
+        left: spaces.$space-1 * 1.5;
+        font-size: types.$font-size-sm;
       }
     }
   }
 
   &__icon .c-input {
-    padding: 0 $space-2 0 $space-5;
+    padding: 0 spaces.$space-2 0 spaces.$space-5;
   }
 
   &__icon--small .c-input {
-    padding: 0 $space-2 0 $space-4;
+    padding: 0 spaces.$space-2 0 spaces.$space-4;
   }
 }
 
 .c-input {
   width: 100%;
-  height: $input-height;
-  border: 1px solid $color-brand-gray-200;
-  padding: 0 $space-2;
-  border-radius: $radius-2;
+  height: height.$input-height;
+  border: 1px solid colors.$color-brand-gray-200;
+  padding: 0 spaces.$space-2;
+  border-radius: radius.$radius-2;
 
   &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
     font-weight: 300;
@@ -46,86 +52,86 @@
   }
 
   &--disabled {
-    background-color: $color-brand-gray-100;
-    border-color: $color-brand-gray-100;
+    background-color: colors.$color-brand-gray-100;
+    border-color: colors.$color-brand-gray-100;
 
     &:hover {
-      border-color: $color-brand-gray-100;
+      border-color: colors.$color-brand-gray-100;
     }
   }
 
   &--small {
-    height: $input-height-small;
-    font-size: $font-size-sm;
-    padding: 0 $space-1;
+    height: height.$input-height-small;
+    font-size: types.$font-size-sm;
+    padding: 0 spaces.$space-1;
   }
 
   &--dark {
-    color: $color-structural-white;
-    background-color: $color-brand-gray-600;
-    border: 1px solid $color-structural-white;
+    color: colors.$color-structural-white;
+    background-color: colors.$color-brand-gray-600;
+    border: 1px solid colors.$color-structural-white;
 
     &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-      color: $color-brand-gray-200;
+      color: colors.$color-brand-gray-200;
       opacity: 1; /* Firefox */
     }
 
     &:focus {
-      color: $color-structural-white;
-      border: 1px solid $color-structural-white;
+      color: colors.$color-structural-white;
+      border: 1px solid colors.$color-structural-white;
     }
 
     &:-webkit-autofill {
-      color: $color-structural-white;
-      border: 1px solid $color-structural-white;
-      -webkit-text-fill-color: $color-structural-white;
-      -webkit-box-shadow: 0 0 0 1000px $color-brand-gray-600 inset;
+      color: colors.$color-structural-white;
+      border: 1px solid colors.$color-structural-white;
+      -webkit-text-fill-color: colors.$color-structural-white;
+      -webkit-box-shadow: 0 0 0 1000px colors.$color-brand-gray-600 inset;
       transition: background-color 5000s ease-in-out 0s;
 
       &:focus {
-        border: 1px solid $color-structural-white;
+        border: 1px solid colors.$color-structural-white;
       }
     }
   }
 
   &__checkbox {
-    width: $space-3;
-    height: $space-3;
+    width: spaces.$space-3;
+    height: spaces.$space-3;
     -webkit-appearance: none;
     -moz-appearance: none;
-    border-radius: $radius-1;
-    border: 1px solid $color-brand-primary-300;
+    border-radius: radius.$radius-1;
+    border: 1px solid colors.$color-brand-primary-300;
     padding: 0;
     position: relative;
 
     &--small {
-      width: $space-2 + 3px !important;
-      height: $space-2 + 3px !important;
+      width: spaces.$space-2 + 3px !important;
+      height: spaces.$space-2 + 3px !important;
 
       &:checked {
         &:after {
-          width: $space-2 + 3px !important;
-          height: $space-2 + 3px !important;
+          width: spaces.$space-2 + 3px !important;
+          height: spaces.$space-2 + 3px !important;
 
           padding: 2px !important;
-          font-size: $font-size-sm;
+          font-size: types.$font-size-sm;
         }
       }
     }
 
     &:focus {
-      border: 1px solid $color-brand-primary-300 !important;
+      border: 1px solid colors.$color-brand-primary-300 !important;
     }
 
     &:checked {
       &:after {
-        width: $space-3;
-        height: $space-3;
-        border-radius: $radius-1;
+        width: spaces.$space-3;
+        height: spaces.$space-3;
+        border-radius: radius.$radius-1;
         content: '\f00c';
         position: absolute;
-        background-color: $color-brand-primary-300;
-        color: $color-structural-white;
+        background-color: colors.$color-brand-primary-300;
+        color: colors.$color-structural-white;
         font-family: 'Font Awesome 5 Pro';
         left: -1px;
         top: -1px;
@@ -136,40 +142,40 @@
     }
 
     &--disabled {
-      border: 1px solid $color-brand-gray-100;
+      border: 1px solid colors.$color-brand-gray-100;
 
       &:checked {
         &:after {
-          background-color: $color-brand-gray-100;
-          color: $color-brand-gray-300;
+          background-color: colors.$color-brand-gray-100;
+          color: colors.$color-brand-gray-300;
         }
       }
     }
   }
 
   &__radio {
-    width: $space-3;
-    height: $space-3;
+    width: spaces.$space-3;
+    height: spaces.$space-3;
     -webkit-appearance: none;
     -moz-appearance: none;
-    border-radius: $space-4;
-    border: 1px solid $color-brand-primary-300;
+    border-radius: spaces.$space-4;
+    border: 1px solid colors.$color-brand-primary-300;
     padding: 0;
     position: relative;
 
     &:focus {
-      border: 1px solid $color-brand-primary-300;
+      border: 1px solid colors.$color-brand-primary-300;
     }
 
     &:checked {
       &:before {
         content: '';
         position: absolute;
-        width: $space-3;
-        height: $space-3;
-        border: 1px solid $color-brand-primary-300;
+        width: spaces.$space-3;
+        height: spaces.$space-3;
+        border: 1px solid colors.$color-brand-primary-300;
         border-radius: 100%;
-        background: $color-structural-white;
+        background: colors.$color-structural-white;
         left: -1px;
         top: -1px;
       }
@@ -178,7 +184,7 @@
         content: '';
         width: 18px;
         height: 18px;
-        background-color: $color-brand-primary-300;
+        background-color: colors.$color-brand-primary-300;
         position: absolute;
         top: 2px;
         left: 2px;
@@ -188,17 +194,17 @@
     }
 
     &--disabled {
-      border: 1px solid $color-brand-gray-200;
-      background-color: $color-brand-gray-100;
+      border: 1px solid colors.$color-brand-gray-200;
+      background-color: colors.$color-brand-gray-100;
 
       &:checked {
         &:before {
-          border: 1px solid $color-brand-gray-300;
-          background-color: $color-brand-gray-100;
+          border: 1px solid colors.$color-brand-gray-300;
+          background-color: colors.$color-brand-gray-100;
         }
 
         &:after {
-          background-color: $color-brand-gray-300;
+          background-color: colors.$color-brand-gray-300;
         }
       }
     }

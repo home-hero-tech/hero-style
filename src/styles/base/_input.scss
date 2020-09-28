@@ -1,12 +1,14 @@
-@import '../tools/tools';
-@import "../settings/settings";
+@use '../tools/tools';
+@use "../settings/settings";
+@use "../settings/colors";
+
 
 input {
   @extend %paragraph;
-  color: $color-brand-gray-500;
+  color: colors.$color-brand-gray-500;
 
   &::placeholder {
-    color: $color-brand-gray-200;
+    color: colors.$color-brand-gray-200;
   }
 
   transition: border-color .3s ease-in-out;

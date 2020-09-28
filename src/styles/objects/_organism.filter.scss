@@ -1,20 +1,27 @@
-@import '../settings/settings';
-@import "../tools/tools";
+@use '../settings/settings';
+@use "../tools/tools";
+@use "../settings/colors";
+@use "../settings/gradients";
+@use "../settings/height";
+@use "../settings/radius";
+@use "../settings/spaces";
+@use "../tools/mq";
+
 
 
 .c-filter {
-  background-color: $color-brand-gray-600;
-  border-radius: $radius-2;
+  background-color: colors.$color-brand-gray-600;
+  border-radius: radius.$radius-2;
 
   &__header {
-    background: $gradient-brand-gray-300-100-270;
+    background: gradients.$gradient-brand-gray-300-100-270;
     width: 100%;
-    height: $filter-height;
-    padding: 0 $space-3;
-    color: $color-structural-white;
+    height: height.$filter-height;
+    padding: 0 spaces.$space-3;
+    color: colors.$color-structural-white;
     font-size: 12px;
     font-weight: bold;
-    border-radius: $radius-2;
+    border-radius: radius.$radius-2;
     cursor: pointer;
 
     display: flex;
@@ -22,23 +29,23 @@
     justify-content: space-between;
 
     svg {
-      margin-right: $space-1;
+      margin-right: spaces.$space-1;
     }
   }
 
   label {
-    color: $color-brand-gray-300;
+    color: colors.$color-brand-gray-300;
   }
 
   &__content {
-    padding: $space-3;
+    padding: spaces.$space-3;
   }
 
   &__footer {
-    padding: $space-2 $space-3;
+    padding: spaces.$space-2 spaces.$space-3;
   }
 
-  @include mq($until: mobile) {
+  @include mq.mq($until: mobile) {
     &__heading:nth-child(2) {
       display: none;
     } 

@@ -1,5 +1,13 @@
-@import "../settings/settings";
-@import "../tools/tools";
+@use "../settings/settings";
+@use "../tools/tools";
+@use "../settings/colors";
+@use "../settings/gradients";
+@use "../settings/radius";
+@use "../settings/shadows";
+@use "../settings/spaces";
+@use "../settings/types";
+@use "../tools/mq";
+
 
 .c-card-select {
   display: flex;
@@ -18,33 +26,33 @@
 .c-text-option {
   display: flex;
   align-items: center;
-  background: $color-brand-primary-050;
-  color: $color-brand-primary-300;
-  padding: 10px $space-1;
-  margin: $space-2 $space-2 0 0;
-  border-radius: $radius-2;
-  font-size: $font-size-lg;
-  box-shadow: $elevation-3;
+  background: colors.$color-brand-primary-050;
+  color: colors.$color-brand-primary-300;
+  padding: 10px spaces.$space-1;
+  margin: spaces.$space-2 spaces.$space-2 0 0;
+  border-radius: radius.$radius-2;
+  font-size: types.$font-size-lg;
+  box-shadow: shadows.$elevation-3;
   &:hover {
     cursor: pointer;
-    border: 2px solid $color-brand-primary-300;
-    padding: $space-1 calc(#{$space-1} - 2px);
+    border: 2px solid colors.$color-brand-primary-300;
+    padding: spaces.$space-1 calc(#{spaces.$space-1} - 2px);
   }
 
   &--checked {
-    background: $color-brand-primary-300;
+    background: colors.$color-brand-primary-300;
     .c-text-option__title, .c-text-option__checkbox {
       color: #fff;
     }
     .c-text-option__checkbox {
       border: 2px solid #50c9c3;
-      background: $gradient-brand-secondary-300-100-90;
+      background: gradients.$gradient-brand-secondary-300-100-90;
     }
   }
 
   &__title {
-    padding: 0 $space-1;
-    color: $color-brand-primary-300;
+    padding: 0 spaces.$space-1;
+    color: colors.$color-brand-primary-300;
   }
 
   &__checkbox {
@@ -52,18 +60,18 @@
     justify-content: center;
     align-items: center;
     background: #fff;
-    height: $space-3;
-    width: $space-3;
-    min-width: $space-3;
-    border-radius: $radius-4;
-    top: $space-1;
-    right: $space-1;
-    border: 2px solid $color-brand-primary-300;
+    height: spaces.$space-3;
+    width: spaces.$space-3;
+    min-width: spaces.$space-3;
+    border-radius: radius.$radius-4;
+    top: spaces.$space-1;
+    right: spaces.$space-1;
+    border: 2px solid colors.$color-brand-primary-300;
   }
 
-  @include mq($until: tablet) {
-    margin: $space-2 $space-1 0 0;
-    font-size: $font-size-sm;
+  @include mq.mq($until: tablet) {
+    margin: spaces.$space-2 spaces.$space-1 0 0;
+    font-size: types.$font-size-sm;
   }
 };
 
@@ -76,27 +84,27 @@
   height: 180px;
   width: 180px;
   padding: 6px;
-  margin: $space-3 $space-3 0 0;
-  border-radius: $radius-2;
-  background: $color-brand-primary-050;
-  color: $color-brand-primary-300;
-  font-size: $font-size-lg;
+  margin: spaces.$space-3 spaces.$space-3 0 0;
+  border-radius: radius.$radius-2;
+  background: colors.$color-brand-primary-050;
+  color: colors.$color-brand-primary-300;
+  font-size: types.$font-size-lg;
   font-weight: bold;
   transition: .2s;
-  box-shadow: $elevation-3;
+  box-shadow: shadows.$elevation-3;
   &:hover {
     cursor: pointer;
-    border: 2px solid $color-brand-primary-300;
+    border: 2px solid colors.$color-brand-primary-300;
     .c-card-option__checkbox {
-      top: $space-1 - 2;
-      right: $space-1 - 2;
+      top: spaces.$space-1 - 2;
+      right: spaces.$space-1 - 2;
       transition: .2s;
     }
   }
 
   &--small {
     height: 90px;
-    font-size: $font-size-md;
+    font-size: types.$font-size-md;
 
     .c-card-option__icon {
       padding: 12px;
@@ -107,7 +115,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: $space-3;
+    padding: spaces.$space-3;
   }
 
   &__checkbox {
@@ -115,12 +123,12 @@
     justify-content: center;
     align-items: center;
     position: absolute;
-    height: $space-3;
-    width: $space-3;
-    border-radius: $radius-4;
-    top: $space-1;
-    right: $space-1;
-    border: 2px solid $color-brand-primary-300;
+    height: spaces.$space-3;
+    width: spaces.$space-3;
+    border-radius: radius.$radius-4;
+    top: spaces.$space-1;
+    right: spaces.$space-1;
+    border: 2px solid colors.$color-brand-primary-300;
     
     svg {
       display: none;
@@ -128,11 +136,11 @@
   }
 
   &--checked {
-    background: $color-brand-primary-300;
+    background: colors.$color-brand-primary-300;
     color: #fff;
     .c-card-option__checkbox {
       border: 2px solid #50c9c3;
-      background: $gradient-brand-secondary-300-100-90;
+      background: gradients.$gradient-brand-secondary-300-100-90;
     }
 
     svg {
@@ -140,8 +148,8 @@
     }
   }
 
-  @include mq($until: tablet) {
-    margin: $space-2 $space-1 0 0;
+  @include mq.mq($until: tablet) {
+    margin: spaces.$space-2 spaces.$space-1 0 0;
     width: 95%;
   }
 }

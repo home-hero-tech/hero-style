@@ -1,6 +1,8 @@
-@import "../settings/settings";
+@use "../settings/colors";
+@use "../settings/shadows";
+@use "../settings/spaces";
 
-.c-dropdown-menu {
+.c-drspaces.opdown-menu {
   position: absolute;
   background: $color-white;
   box-shadow: $elevation-1;
@@ -30,7 +32,7 @@
     transition: background-color .3s ease-in-out;
 
     &:hover {
-      background-color: $color-brand-gray-050;
+      background-color: colors.$color-brand-gray-050;
     }
 
     button, a {
@@ -46,7 +48,7 @@
     }
 
     &:hover button, &:hover a {
-      color: $color-brand-gray-500;
+      color: colors.$color-brand-gray-500;
       font-weight: bold;
     }
   }

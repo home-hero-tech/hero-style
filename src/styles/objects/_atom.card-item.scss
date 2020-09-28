@@ -1,48 +1,53 @@
-@import "../settings/settings";
-@import "../tools/tools";
+@use "../settings/settings";
+@use "../tools/tools";
+@use "../settings/colors";
+@use "../settings/spaces";
+@use "../settings/types";
+@use "../tools/mq";
+
 
 .c-card-item {
   display: flex;
   align-items: center;
-  margin-right: $space-2;
+  margin-right: spaces.$space-2;
 
-  @include mq($until: tablet) {
-    margin-right: $space-1;
+  @include mq.mq($until: tablet) {
+    margin-right: spaces.$space-1;
   }
 
-  @include mq($until: mobile) {
-    margin-right: $space-0;
-    padding: $space-1 $space-0;
+  @include mq.mq($until: mobile) {
+    margin-right: spaces.$space-0;
+    padding: spaces.$space-1 spaces.$space-0;
   }
 
   &--svg-default-size {
     svg {
-      font-size: $font-size-lg;
+      font-size: types.$font-size-lg;
 
-      @include mq($until: tablet) {
-        font-size: $font-size-md;
+      @include mq.mq($until: tablet) {
+        font-size: types.$font-size-md;
       }
 
-      @include mq($until: mobile) {
-        font-size: $font-size-sm;
+      @include mq.mq($until: mobile) {
+        font-size: types.$font-size-sm;
       }
     }
   }
 
   svg + div {
-    margin-left: $space-1;
+    margin-left: spaces.$space-1;
 
-    @include mq($until: mobile) {
-      margin-left: $space-0;
+    @include mq.mq($until: mobile) {
+      margin-left: spaces.$space-0;
     }
   }
 
   &__label {
-    font-size: $font-size-sm;
-    color: $color-brand-gray-300;
+    font-size: types.$font-size-sm;
+    color: colors.$color-brand-gray-300;
 
     &--small {
-      font-size: $font-size-xs;
+      font-size: types.$font-size-xs;
     }
 
     &--thin {
@@ -51,11 +56,11 @@
   }
 
   &__value {
-    font-size: $font-size-md;
-    line-height: $space-2;
+    font-size: types.$font-size-md;
+    line-height: spaces.$space-2;
 
     &--small {
-      font-size: $font-size-sm;
+      font-size: types.$font-size-sm;
     }
 
     &--thin {
@@ -65,13 +70,13 @@
 
   &--default {
     span + span {
-      margin-top: $space-1;
+      margin-top: spaces.$space-1;
     }
   }
 
   &--small {
     span + span {
-      margin-top: $space-0;
+      margin-top: spaces.$space-0;
     }
   }
 
@@ -89,7 +94,7 @@
   &--lb-primary {
     span {
       &:nth-child(1) {
-        color: $color-primary;
+        color: colors.$color-primary;
       }
     }
   }
@@ -97,7 +102,7 @@
   &--val-primary {
     span {
       &:nth-child(2) {
-        color: $color-primary;
+        color: colors.$color-primary;
       }
     }
   }
@@ -105,7 +110,7 @@
   &--val-success {
     span {
       &:nth-child(2) {
-        color: $color-success;
+        color: colors.$color-success;
       }
     }
   }
@@ -113,21 +118,21 @@
   &--val-gray-light {
     span {
       &:nth-child(2) {
-        color: $color-brand-gray-100;
+        color: colors.$color-brand-gray-100;
       }
     }
   }
 
   &--svg-primary {
     svg {
-      color: $color-primary;
+      color: colors.$color-primary;
     }
   }
 
   &--lb-white {
     span {
       &:nth-child(1) {
-        color: $color-white;
+        color: colors.$color-white;
       }
     }
   }
@@ -135,21 +140,21 @@
   &--val-white {
     span {
       &:nth-child(2) {
-        color: $color-white;
+        color: colors.$color-white;
       }
     }
   }
 
   &--svg-white {
     svg {
-      color: $color-white;
+      color: colors.$color-white;
     }
   }
 
   &--lb-gray {
     span {
       &:nth-child(1) {
-        color: $color-brand-gray-500;
+        color: colors.$color-brand-gray-500;
       }
     }
   }

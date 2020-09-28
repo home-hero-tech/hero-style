@@ -1,12 +1,13 @@
 import React from 'react';
+import classNames from 'classnames';
+
 import PropTypes from 'prop-types';
 import RSelect from 'react-select';
 import RSelectAsync from 'react-select/async';
 import RSelectCreatable from 'react-select/creatable';
 import RSelectAsyncCreatable from 'react-select/async-creatable';
 
-import classNames from 'classnames';
-import css from './Select.module.scss';
+import './Select.scss';
 
 const Select = ({
   dark,
@@ -24,31 +25,26 @@ const Select = ({
   icon,
   isClearable,
   async,
+  pending,
+  approved,
+  rejected,
   customOptionsMessage,
   allowCustomOptions,
   ...otherProps
 }) => {
-  let selectClass = 'c-select';
-
-  if (icon && !small && !dark) {
-    selectClass = selectClass.concat('--with-icon');
-  } else if (icon && small) {
-    selectClass = selectClass.concat('--with-icon--small');
-  } else if (dark && !small) {
-    selectClass = selectClass.concat('--dark');
-  } else if (!dark && small) {
-    selectClass = selectClass.concat('--small');
-  } else if (small && dark) {
-    selectClass = selectClass.concat('--small-dark');
-  } else {
-    selectClass = selectClass.concat('--default');
-  }
+  const _icon = icon ? 'with-icon' : '';
+  const _small = small ? 'small' : '';
+  const _dark = dark ? 'dark' : '';
+  const _pending = pending ? 'pending' : '';
+  const _approved = approved ? 'approved' : '';
+  const _rejected = rejected ? 'rejected' : '';
+  const status = _pending || _approved || _rejected;
 
   const allProps = {
     backspaceRemoves: true,
     inputId: id || name,
-    className: css[selectClass],
-    classNamePrefix: selectClass,
+    className: `c-select ${_dark} ${_small} ${_icon} ${status}`,
+    classNamePrefix: 'select-default',
     deleteRemoves: true,
     isMulti: multiple,
     isSearchable: searchable,
@@ -63,8 +59,8 @@ const Select = ({
   };
 
   const classesWrapper = classNames({
-    [css['c-select-wrapper__icon']]: !!icon,
-    [css['c-select-wrapper__icon--small']]: !!small
+    'c-select-wrapper__icon': !!icon,
+    'c-select-wrapper__icon--small': !!small
   });
 
   let elem = <RSelect {...allProps} />;
@@ -82,7 +78,7 @@ const Select = ({
   }
 
   return (
-    <div className={css['c-select-wrapper']}>
+    <div className="c-select-wrapper">
       <span className={classesWrapper}>{icon || null}</span>
       {elem}
     </div>
@@ -95,6 +91,9 @@ Select.propTypes = {
   id: PropTypes.string,
   icon: PropTypes.instanceOf(Object),
   multiple: PropTypes.bool,
+  pending: PropTypes.bool,
+  approved: PropTypes.bool,
+  rejected: PropTypes.bool,
   name: PropTypes.string,
   noOptionsMessage: PropTypes.func,
   onChange: PropTypes.func,
@@ -126,6 +125,9 @@ Select.defaultProps = {
   value: null,
   isClearable: false,
   allowCustomOptions: false,
+  pending: false,
+  approved: false,
+  rejected: false,
   customOptionsMessage: newValue => `Criar "${newValue}"`
 };
 

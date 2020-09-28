@@ -1,5 +1,5 @@
-@import "../settings/types";
-@import "../settings/colors";
+@use "../settings/types";
+@use "../settings/colors";
 
 .c-text {
   line-height: normal;
@@ -17,15 +17,15 @@
   }
 
   &--lg {
-    font-size: $font-size-lg;
+    font-size: types.$font-size-lg;
   }
 
   &--sm {
-    font-size: $font-size-sm;
+    font-size: types.$font-size-sm;
   }
 
   &--xs {
-    font-size: $font-size-xs;
+    font-size: types.$font-size-xs;
   }
 
   &--uppercase {
@@ -33,43 +33,43 @@
   }
 
   &--primary {
-    color: $color-primary;
+    color: colors.$color-primary;
   }
 
   &--danger {
-    color: $color-danger;
+    color: colors.$color-danger;
   }
 
   &--success {
-    color: $color-success;
+    color: colors.$color-success;
   }
 
   &--warning {
-    color: $color-warning;
+    color: colors.$color-warning;
   }
 
   &--gray-100 {
-    color: $color-brand-gray-100;
+    color: colors.$color-brand-gray-100;
   }
 
   &--gray-200 {
-    color: $color-brand-gray-200;
+    color: colors.$color-brand-gray-200;
   }
 
   &--gray-300 {
-    color: $color-brand-gray-300;
+    color: colors.$color-brand-gray-300;
   }
 
   &--gray-400 {
-    color: $color-brand-gray-400;
+    color: colors.$color-brand-gray-400;
   }
 
   &--gray-500 {
-    color: $color-brand-gray-500;
+    color: colors.$color-brand-gray-500;
   }
 
   &--gray-600 {
-    color: $color-brand-gray-600;
+    color: colors.$color-brand-gray-600;
   }
 
   &--ellipsis {

@@ -9,8 +9,8 @@ exports[`Select should match with the snapshot 1`] = `
   />
   <StateManager
     backspaceRemoves={true}
-    className="c-select--default"
-    classNamePrefix="c-select--default"
+    className="c-select    "
+    classNamePrefix="select-default"
     defaultInputValue=""
     defaultMenuIsOpen={false}
     defaultValue={null}

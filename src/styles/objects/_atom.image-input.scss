@@ -1,14 +1,18 @@
-@import "../settings/settings";
-@import "../tools/tools";
+@use "../settings/radius";
+@use "../settings/spaces";
+@use "../settings/colors";
+@use "../settings/shadows";
+
+@use "../tools/tools";
 
 .c-image-input {
   display: flex;
   flex-direction: row;
-  
+
   &__content {
     padding: 2px;
     border: 1px solid black;
-    border-radius: $radius-2;
+    border-radius: radius.$radius-2;
     width: fit-content;
   }
 
@@ -18,11 +22,11 @@
     flex-direction: column;
 
     label+span {
-      margin-top: $space-0;
+      margin-top: spaces.$space-0;
     }
 
     label, span {
-      margin: 0 $space-1;
+      margin: 0 spaces.$space-1;
     }
   }
 
@@ -37,45 +41,45 @@ input[type="file"].c-input {
 
 .c-image-input__button {
   display: block;
-  padding: $space-1 $space-3;
+  padding: spaces.$space-1 spaces.$space-3;
   font-weight: bold;
-  border-radius: $radius-4;
+  border-radius: radius.$radius-4;
   cursor: pointer;
-  border: 1px solid $color-primary;
-  box-shadow: $elevation-4;
+  border: 1px solid colors.$color-primary;
+  box-shadow: shadows.$elevation-4;
   white-space: nowrap;
   width: min-content;
   background-position: center;
   transition: transform .5s;
-  background: $color-brand-primary-300;
+  background: colors.$color-brand-primary-300;
   user-select: none;
 
   svg, span {
-    color: $color-white;
+    color: colors.$color-white;
   }
 
   svg+span {
-    margin-left: $space-0;
+    margin-left: spaces.$space-0;
   }
 
   &.c-btn--outlined {
     background: transparent;
-    border: solid 1px $color-primary;
-    color: $color-primary;
+    border: solid 1px colors.$color-primary;
+    color: colors.$color-primary;
 
     &:hover {
-      background: rgba($color-primary, .1);
+      background: rgba(colors.$color-primary, .1);
     }
 
     &:focus {
-      background: rgba($color-primary, .2);
+      background: rgba(colors.$color-primary, .2);
     }
   }
 
   &.c-btn--text {
     border: none;
     background: transparent;
-    color: $color-primary;
+    color: colors.$color-primary;
 
     &:hover {
       border: none;
@@ -90,27 +94,27 @@ input[type="file"].c-input {
   }
 
   &--disabled {
-    color: $color-brand-gray-300;
-    background-color: $color-brand-gray-100;
-    border-color: $color-brand-gray-100;
+    color: colors.$color-brand-gray-300;
+    background-color: colors.$color-brand-gray-100;
+    border-color: colors.$color-brand-gray-100;
 
     &.c-btn--outlined {
       background: transparent;
-      border: solid 1px $color-brand-gray-100;
+      border: solid 1px colors.$color-brand-gray-100;
 
       &:hover {
-        background: rgba($color-brand-gray-100, .1);
+        background: rgba(colors.$color-brand-gray-100, .1);
       }
 
       &:focus {
-        background: rgba($color-brand-gray-100, .2);
+        background: rgba(colors.$color-brand-gray-100, .2);
       }
     }
 
     &.c-btn--text {
       border: none;
       background: transparent;
-      color: $color-brand-gray-300;
+      color: colors.$color-brand-gray-300;
 
       &:hover {
         border: none;
