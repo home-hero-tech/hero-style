@@ -7,7 +7,7 @@ import RSelectAsync from 'react-select/async';
 import RSelectCreatable from 'react-select/creatable';
 import RSelectAsyncCreatable from 'react-select/async-creatable';
 
-import './Select.scss';
+import style from './Select.module.scss';
 
 const Select = ({
   dark,
@@ -43,8 +43,8 @@ const Select = ({
   const allProps = {
     backspaceRemoves: true,
     inputId: id || name,
-    className: `c-select ${_dark} ${_small} ${_icon} ${status}`,
-    classNamePrefix: 'select-default',
+    className: `${style[`c-select`]} ${style[_dark]} ${style[_small]} ${style[_icon]} ${style[status]}`,
+    classNamePrefix: `select-default`,
     deleteRemoves: true,
     isMulti: multiple,
     isSearchable: searchable,
@@ -59,8 +59,8 @@ const Select = ({
   };
 
   const classesWrapper = classNames({
-    'c-select-wrapper__icon': !!icon,
-    'c-select-wrapper__icon--small': !!small
+    [style['c-select-wrapper__icon']]: !!icon,
+    [style['c-select-wrapper__icon--small']]: !!small
   });
 
   let elem = <RSelect {...allProps} />;
@@ -78,7 +78,7 @@ const Select = ({
   }
 
   return (
-    <div className="c-select-wrapper">
+    <div className={style['c-select-wrapper']}>
       <span className={classesWrapper}>{icon || null}</span>
       {elem}
     </div>

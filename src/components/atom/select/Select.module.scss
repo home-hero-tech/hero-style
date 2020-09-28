@@ -9,7 +9,7 @@
 .c-select-wrapper {
   position: relative;
 
-  &__icon {
+   &__icon {
     position: absolute;
     content: '';
     align-items: center;
@@ -43,7 +43,7 @@
 .c-select {
   width: 100%;
 
-  .select-default {
+  :global .select-default {
 
     &__control {
       width: 100%;
@@ -145,7 +145,7 @@
 }
 
 .small {
-  .select-default {
+  :global .select-default {
 
     &__control {
       min-height: 23px;
@@ -189,7 +189,7 @@
 }
 
 .dark {
-  .select-default {
+  :global .select-default {
     &__control {
       background-color: colors.$color-brand-gray-600;
 
@@ -243,7 +243,7 @@
 }
 
 .pending {
-  .select-default {
+  :global .select-default {
     &__control {
       background-color: #FFE4A9;
       border-color: #FFE4A9;
@@ -276,7 +276,7 @@
 }
 
 .approved {
-  .select-default {
+  :global .select-default {
     &__control {
       background-color: #E2F2FF;
       border-color: #E2F2FF;
@@ -307,7 +307,7 @@
 }
 
 .rejected {
-  .select-default {
+  :global .select-default {
     &__control {
       background-color: #FFC5BC;
       border-color: #FFC5BC;
@@ -336,8 +336,7 @@
 }
 
 .with-icon {
-
-  .select-default {
+  :global .select-default {
 
     &__value-container {
       padding: 0 40px;
@@ -352,7 +351,7 @@
   }
 }
 
-.css-b8ldur-Input {
+ .css-b8ldur-Input {
   margin: 0 !important;;
   padding-bottom: 0 !important;;
   height: 100% !important;
@@ -362,7 +361,7 @@
 // see examples above
 .with-icon.small {
 
-  .select-default {
+  :global  .select-default {
 
     &__value-container {
       padding: 0 32px !important;
