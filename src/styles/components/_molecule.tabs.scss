@@ -73,7 +73,7 @@
       }
 
       & + .react-tabs__tab {
-        margin-left: $space-1;
+        margin-left: spaces.$space-1;
       }
 
       @include mq.mq($until: tablet) {
@@ -86,7 +86,7 @@
         bottom: 1px;
         left: 0;
         right: 0;
-        background-color: rgba($color-primary, .25);
+        background-color: rgba(colors.$color-primary, .25);
         height: 3px;
         border-top-left-radius: 200px;
         border-top-right-radius: 200px;

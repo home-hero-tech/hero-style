@@ -43,20 +43,20 @@
 
   .c-modal__heading,
   .c-modal__content--has-padding {
-    padding: 0 $space-3;
+    padding: 0 spaces.$space-3;
 
-    @include mq($until: mobile) {
-      padding: 0 $space-2;
+    @include mq.mq($until: mobile) {
+      padding: 0 spaces.$space-2;
     }
   }
 
   .c-modal__heading {
-    padding-top: $space-3;
+    padding-top: spaces.$space-3;
   }
 
   .c-modal__heading,
   .c-modal__content {
-    padding-bottom: $space-2;
+    padding-bottom: spaces.$space-2;
   }
 
   &--has-form {
@@ -150,7 +150,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    border-radius: $radius-5;
+    border-radius: radius.$radius-5;
 
     .c-modal__actions {
       border-bottom-left-radius: radius.$radius-5;
@@ -159,10 +159,10 @@
   }
 
   &__actions {
-    height: $modal-footer-height;
-    padding: 0 $space-3;
+    height: height.$modal-footer-height;
+    padding: 0 spaces.$space-3;
 
-    background-color: $color-brand-gray-050;
+    background-color: colors.$color-brand-gray-050;
 
     display: flex;
     align-items: center;
@@ -175,9 +175,9 @@
       justify-content: space-between;
     }
 
-    @include mq($until: mobile) {
+    @include mq.mq($until: mobile) {
       height: auto;
-      padding: $space-1 $space-2;
+      padding: spaces.$space-1 spaces.$space-2;
     }
   }
 
@@ -200,8 +200,8 @@
 
   &__close-btn {
     position: absolute;
-    top: $space-3;
-    right: $space-2;
+    top: spaces.$space-3;
+    right: spaces.$space-2;
     border: none;
     background-color: transparent;
     font-size: types.$font-size-lg;

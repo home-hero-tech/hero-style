@@ -1,14 +1,15 @@
 @use "../settings/colors";
 @use "../settings/shadows";
 @use "../settings/spaces";
+@use "../settings/radius";
 
-.c-drspaces.opdown-menu {
+.c-dropdown-menu {
   position: absolute;
-  background: $color-white;
-  box-shadow: $elevation-1;
+  background: colors.$color-white;
+  box-shadow: shadows.$elevation-1;
   white-space: nowrap;
   z-index: 999;
-  border-radius: $radius-2;
+  border-radius: radius.$radius-2;
   overflow: hidden;
 
   &--above {
@@ -38,8 +39,8 @@
     button, a {
       box-shadow: none;
       display: block;
-      padding: $space-2 $space-3;
-      color: $color-brand-gray-300;
+      padding: spaces.$space-2 spaces.$space-3;
+      color: colors.$color-brand-gray-300;
       transition: all .3s ease-in-out;
       font-weight: normal;
       height: auto;
