@@ -1,11 +1,10 @@
 // Variables
 @use "settings/settings";
+// Resets, box-sizing, etc.
+@use "generic/generic";
 
 // Mixins or functions
 @use "tools/tools";
-
-// Resets, box-sizing, etc.
-@use "generic/generic";
 
 // Basic styles like h1-h6, ul, li, etc.
 @use "base/base";
