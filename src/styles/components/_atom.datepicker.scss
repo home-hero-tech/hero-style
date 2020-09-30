@@ -5,11 +5,11 @@
 @use "../settings/shadows";
 @use "../settings/spaces";
 @use "../settings/types";
-
+@import "~react-datepicker/dist/react-datepicker.min.css";
 
 .c-datepicker {
   :global {
-    @import "~react-datepicker/dist/react-datepicker.min.css";
+
 
     .react-datepicker {
       border: none;

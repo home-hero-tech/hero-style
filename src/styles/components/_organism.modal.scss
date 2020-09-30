@@ -1,11 +1,10 @@
 @use "sass:map";
-@use "../settings/settings";
-@use '../tools/mq';
 @use "../settings/colors";
 @use "../settings/height";
 @use "../settings/radius";
 @use "../settings/spaces";
 @use "../settings/types";
+@use '../tools/mq';
 
 
 :global {
@@ -92,41 +91,6 @@
   &--width-3 {
     @include mq.mq($until: tablet) {
       width: 90%;
-    }
-  }
-
-  form {
-    height: 100%;
-
-    @include mq.mq($until: tablet) {
-      height: auto;
-    }
-  }
-
-  &__actions {
-    position: absolute;
-    content: '';
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: height.$modal-footer-height;
-    padding: 0 spaces.$space-3;
-
-    background-color: colors.$color-brand-gray-050;
-
-    display: flex;
-    align-items: center;
-
-    &--align-end {
-      justify-content: flex-end;
-    }
-
-    &--align-between {
-      justify-content: space-between;
-    }
-
-    @include mq.mq($until: mobile) {
-      padding: spaces.$space-1 spaces.$space-2;
     }
   }
 

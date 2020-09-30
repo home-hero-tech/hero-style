@@ -1,8 +1,8 @@
+@charset "UTF-8"; // Fixes an issue where Ruby locale is not set properly
 @use "sass:map";
 @use "sass:math";
 @use "sass:meta";
 @use "sass:string";
-@charset "UTF-8"; // Fixes an issue where Ruby locale is not set properly
 // See https://github.com/sass-mq/sass-mq/pull/10
 
 /// Base font size on the `<body>` element
