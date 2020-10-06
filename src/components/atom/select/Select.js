@@ -107,7 +107,7 @@ Select.propTypes = {
   isClearable: PropTypes.bool,
   allowCustomOptions: PropTypes.bool,
   customOptionsMessage: PropTypes.func,
-  wrapperStyle: PropTypes.object
+  wrapperStyle: PropTypes.instanceOf(Object)
 };
 
 Select.defaultProps = {
