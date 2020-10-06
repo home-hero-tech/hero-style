@@ -111,14 +111,15 @@
   }
 
   &--center {
-    top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-60%, 0);
     border-radius: radius.$radius-5;
-
-    main {
-      height: fit-content;
-    }
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    max-height: 90vh;
+    height: fit-content;
 
     .c-modal__actions {
       border-bottom-left-radius: radius.$radius-5;
