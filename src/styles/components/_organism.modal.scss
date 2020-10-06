@@ -116,6 +116,10 @@
     transform: translate(-50%, -50%);
     border-radius: radius.$radius-5;
 
+    main {
+      height: fit-content;
+    }
+
     .c-modal__actions {
       border-bottom-left-radius: radius.$radius-5;
       border-bottom-right-radius: radius.$radius-5;
