@@ -30,6 +30,7 @@ const Select = ({
   rejected,
   customOptionsMessage,
   allowCustomOptions,
+  wrapperStyle,
   ...otherProps
 }) => {
   const _icon = icon ? 'with-icon' : '';
@@ -78,7 +79,7 @@ const Select = ({
   }
 
   return (
-    <div className={style['c-select-wrapper']}>
+    <div className={style['c-select-wrapper']} style={wrapperStyle}>
       <span className={classesWrapper}>{icon || null}</span>
       {elem}
     </div>
@@ -105,7 +106,8 @@ Select.propTypes = {
   value: PropTypes.oneOfType([PropTypes.array, PropTypes.object, PropTypes.string, PropTypes.number]),
   isClearable: PropTypes.bool,
   allowCustomOptions: PropTypes.bool,
-  customOptionsMessage: PropTypes.func
+  customOptionsMessage: PropTypes.func,
+  wrapperStyle: PropTypes.object
 };
 
 Select.defaultProps = {
