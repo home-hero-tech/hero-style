@@ -1,0 +1,398 @@
+@use '../../../styles/settings/colors';
+@use '../../../styles/settings/spaces';
+@use '../../../styles/settings/radius';
+@use '../../../styles/settings/height';
+@use '../../../styles/settings/shadows';
+@use '../../../styles/settings/types';
+
+
+.c-select-wrapper {
+  position: relative;
+
+  &__icon {
+    position: absolute;
+    content: '';
+    align-items: center;
+    color: currentColor;
+    left: spaces.$space-2;
+    top: 50%;
+    transform: translateY(-50%);
+
+    z-index: 2;
+
+    &--small {
+      top: 50%;
+      transform: translateY(-50%);
+      left: spaces.$space-1 * 1.5;
+      font-size: types.$font-size-sm;
+    }
+  }
+
+  &__icon .c-select--default__value-container {
+    margin: 30px !important;
+    padding-left: 50px !important;
+    background-color: red !important;
+  }
+
+  &__icon--small .c-select {
+    background-color: red;
+    padding: 0 spaces.$space-2 0 spaces.$space-4;
+  }
+}
+
+.c-select {
+  width: 100%;
+
+  /* Let's get this party started */
+  ::-webkit-scrollbar {
+    height: 4px;
+    width: 4px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: colors.$color-structural-gray-500;
+  }
+  ::-webkit-scrollbar-thumb:window-inactive {
+    background: colors.$color-structural-gray-500;
+  }
+  ::-webkit-scrollbar-corner {
+    background: transparent;
+  }
+
+  :global .select-default {
+
+    &__control {
+      width: 100%;
+      border-radius: radius.$radius-2;
+      border-color: colors.$color-brand-gray-200;
+      box-shadow: none;
+      transition: all .3s ease-in-out;
+      background-color: colors.$color-structural-white;
+      min-height: height.$input-height;
+      color: colors.$color-brand-gray-200;
+
+      &:hover,
+      &--is-focused,
+      &--is-selected {
+        background-color: transparent;
+        border-color: colors.$color-brand-gray-500;
+      }
+
+      &--is-disabled {
+        background-color: colors.$color-brand-gray-100;
+        border-color: colors.$color-brand-gray-100;
+        color: colors.$color-brand-gray-500;
+      }
+
+    }
+
+    &__single-value {
+      font-weight: 300;
+      color: colors.$color-brand-gray-500;
+      margin: 0;
+    }
+
+    &__menu {
+      border-radius: radius.$radius-2;
+      min-height: 36px
+    }
+
+    &__menu-list {
+      border-radius: radius.$radius-2;
+      box-shadow: shadows.$elevation-4;
+      background-color: colors.$color-white;
+      border: solid 1px colors.$color-brand-gray-400;
+    }
+
+    &__option {
+      cursor: pointer;
+      transition: all .3s ease-in-out;
+      color: colors.$color-brand-gray-200;
+      background-color: transparent;
+
+      &:hover {
+        color: colors.$color-brand-gray-500;
+      }
+
+      &--is-selected {
+        color: colors.$color-brand-gray-500;
+      }
+    }
+
+    &__indicator {
+      background-color: transparent;
+
+      &:after {
+        color: colors.$color-brand-gray-300;
+        content: '\f0dd';
+        font-size: types.$font-size-md;
+        position: absolute;
+        font-family: types.$font-family-awesome-5-pro;
+        font-weight: 900;
+        top: 0;
+        right: 0;
+        background-color: transparent;
+        padding: spaces.$space-1 spaces.$space-2;
+      }
+    }
+
+    &__dropdown-indicator {
+      svg {
+        color: transparent;
+      }
+    }
+
+    &__placeholder {
+      color: colors.$color-brand-gray-200;
+      font-weight: 300;
+    }
+
+    &__value-container {
+      padding: 0 spaces.$space-2;
+    }
+
+    &__indicators {
+
+      height: 100%;
+    }
+
+  }
+}
+
+.small {
+  :global .select-default {
+
+    &__control {
+      min-height: 23px;
+      height: 23px;
+      line-height: spaces.$space-2;
+    }
+
+    &__indicator {
+      &:after {
+        top: -7px;
+        right: -4px;
+      }
+    }
+
+    &__placeholder {
+      font-size: types.$font-size-sm;
+      top: 9px;
+      margin: 0;
+    }
+
+    &__value-container {
+      padding: 0 spaces.$space-1;
+    }
+
+    &__single-value {
+      font-size: types.$font-size-sm;
+      top: 11px;
+      margin: 0;
+    }
+
+    &__dropdown-indicator {
+      padding: 0 spaces.$space-1;
+
+      svg {
+        color: transparent;
+      }
+
+    }
+
+  }
+}
+
+.dark {
+  :global .select-default {
+    &__control {
+      background-color: colors.$color-brand-gray-600;
+
+      &:hover,
+      &--is-focused,
+      &--is-selected {
+        border-color: colors.$color-structural-white;
+      }
+    }
+
+    &__menu, &__menu-list {
+      background-color: colors.$color-brand-gray-400;
+    }
+
+    &__single-value, &__input {
+      color: colors.$color-structural-white;
+    }
+
+    &__placeholder {
+      color: colors.$color-brand-gray-200;
+    }
+
+    &__option {
+      border-color: colors.$color-structural-white;
+
+      &--is-focused,
+      &--is-selected {
+        border-color: colors.$color-brand-gray-500;
+      }
+
+      &:hover {
+        color: colors.$color-structural-white;
+        border-color: colors.$color-structural-white;
+      }
+
+      &--is-selected {
+        color: colors.$color-structural-white;
+      }
+    }
+
+    &__indicator {
+
+      &:after {
+        color: inherit;
+        position: absolute;
+      }
+    }
+
+  }
+
+}
+
+.pending {
+  :global .select-default {
+    &__control {
+      background-color: #FFE4A9;
+      border-color: #FFE4A9;
+
+      &:hover,
+      &--is-focused,
+      &--is-selected {
+        border-color: #FFE4A9;
+      }
+
+    }
+
+
+    &__single-value, &__input {
+      color: #A57713;
+
+    }
+
+    &__indicator {
+
+      &:after {
+
+        color: #A57713;
+        position: absolute;
+      }
+    }
+
+  }
+
+}
+
+.approved {
+  :global .select-default {
+    &__control {
+      background-color: #E2F2FF;
+      border-color: #E2F2FF;
+
+      &:hover,
+      &--is-focused,
+      &--is-selected {
+        border-color: #E2F2FF;
+      }
+    }
+
+    &__single-value, &__input {
+      color: #0195FE;
+
+    }
+
+    &__indicator {
+
+      &:after {
+
+        color: #0195FE;
+        position: absolute;
+      }
+    }
+  }
+
+
+}
+
+.rejected {
+  :global .select-default {
+    &__control {
+      background-color: #FFC5BC;
+      border-color: #FFC5BC;
+
+      &:hover,
+      &--is-focused,
+      &--is-selected {
+        border-color: #FFC5BC;
+      }
+    }
+
+    &__single-value, &__input {
+      color: #B65242;
+
+    }
+
+    &__indicator {
+
+      &:after {
+
+        color: #B65242;
+        position: absolute;
+      }
+    }
+  }
+}
+
+.with-icon {
+  :global .select-default {
+
+    &__value-container {
+      padding: 0 40px;
+    }
+
+    &__dropdown-indicator {
+      svg {
+        color: transparent;
+      }
+    }
+
+  }
+}
+
+.css-b8ldur-Input {
+  margin: 0 !important;;
+  padding-bottom: 0 !important;;
+  height: 100% !important;
+}
+
+// DO NOT expand on this idea please (it will lead to bloated code)
+// see examples above
+.with-icon.small {
+
+  :global  .select-default {
+
+    &__value-container {
+      padding: 0 32px !important;
+    }
+
+  }
+
+}
+
+
