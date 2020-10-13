@@ -752,3 +752,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.21.11] - 2020-09-25
 ### Add
 - Repassing other props to Dropdown component.
+
+## [1.22.8] - 2020-09-25
+### Changed
+- Several improvements on Select component css and its stories.
