@@ -4,7 +4,7 @@
 @use '../settings/height';
 @use '../settings/shadows';
 @use '../settings/types';
-
+@use '../tools/mq';
 
 .c-select-wrapper {
   position: relative;
@@ -17,7 +17,6 @@
     left: spaces.$space-2;
     top: 50%;
     transform: translateY(-50%);
-
     z-index: 2;
 
     &--small {
@@ -51,14 +50,14 @@
 
   /* Track */
   ::-webkit-scrollbar-track {
-    -webkit-border-radius: 10px;
-    border-radius: 10px;
+    -webkit-border-radius: radius.$radius-2;
+    border-radius: radius.$radius-2;
   }
 
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    -webkit-border-radius: 10px;
-    border-radius: 10px;
+    -webkit-border-radius: radius.$radius-2;
+    border-radius: radius.$radius-2;
     background: colors.$color-structural-gray-500;
   }
   ::-webkit-scrollbar-thumb:window-inactive {
@@ -69,7 +68,6 @@
   }
 
   :global .select-default {
-
     &__control {
       width: 100%;
       border-radius: radius.$radius-2;
@@ -92,7 +90,6 @@
         border-color: colors.$color-brand-gray-100;
         color: colors.$color-brand-gray-500;
       }
-
     }
 
     &__single-value {
@@ -111,6 +108,7 @@
       box-shadow: shadows.$elevation-4;
       background-color: colors.$color-white;
       border: solid 1px colors.$color-brand-gray-400;
+      overflow: hidden;
     }
 
     &__option {
@@ -161,16 +159,19 @@
     }
 
     &__indicators {
-
       height: 100%;
     }
 
+    &__input, &__input input {
+      width: 100% !important;
+      color: colors.$color-brand-gray-500;
+      line-height: 1.5;
+    }
   }
 }
 
 .small {
   :global .select-default {
-
     &__control {
       min-height: 23px;
       height: 23px;
@@ -180,13 +181,19 @@
     &__indicator {
       &:after {
         top: -7px;
-        right: -4px;
+        right: - spaces.$space-0;
+        padding: 7px spaces.$space-1 + 2px;
+      }
+
+      &-separator {
+        margin-top: spaces.$space-0 + 1px;
+        margin-bottom: spaces.$space-0 + 1px;
       }
     }
 
     &__placeholder {
       font-size: types.$font-size-sm;
-      top: 9px;
+      top: 11px;
       margin: 0;
     }
 
@@ -200,15 +207,21 @@
       margin: 0;
     }
 
+    &__clear-indicator {
+      padding: 0 spaces.$space-0 0 spaces.$space-0;
+
+      svg {
+        width: types.$font-size-md;
+      }
+    }
+
     &__dropdown-indicator {
-      padding: 0 spaces.$space-1;
+      padding: 0;
 
       svg {
         color: transparent;
       }
-
     }
-
   }
 }
 
@@ -216,19 +229,22 @@
   :global .select-default {
     &__control {
       background-color: colors.$color-brand-gray-600;
+      border-color: colors.$color-brand-gray-600;
 
       &:hover,
       &--is-focused,
       &--is-selected {
-        border-color: colors.$color-structural-white;
+        border-color: colors.$color-brand-gray-600;
       }
     }
 
-    &__menu, &__menu-list {
+    &__menu,
+    &__menu-list {
       background-color: colors.$color-brand-gray-400;
     }
 
-    &__single-value, &__input {
+    &__single-value,
+    &__input {
       color: colors.$color-structural-white;
     }
 
@@ -255,15 +271,12 @@
     }
 
     &__indicator {
-
       &:after {
         color: inherit;
         position: absolute;
       }
     }
-
   }
-
 }
 
 .pending {
@@ -277,26 +290,32 @@
       &--is-selected {
         border-color: #FFE4A9;
       }
-
     }
 
-
-    &__single-value, &__input {
+    &__single-value,
+    &__input {
       color: #A57713;
+    }
 
+    &__indicator-separator {
+      background-color: #A57713;
+    }
+
+    &__clear-indicator {
+      padding: 0 spaces.$space-0 0 spaces.$space-0;
+
+      svg {
+        color: #A57713;
+      }
     }
 
     &__indicator {
-
       &:after {
-
         color: #A57713;
         position: absolute;
       }
     }
-
   }
-
 }
 
 .approved {
@@ -312,22 +331,30 @@
       }
     }
 
-    &__single-value, &__input {
+    &__single-value,
+    &__input {
       color: #0195FE;
+    }
 
+    &__indicator-separator {
+      background-color: #0195FE;
+    }
+
+    &__clear-indicator {
+      padding: 0 spaces.$space-0 0 spaces.$space-0;
+
+      svg {
+        color: #0195FE;
+      }
     }
 
     &__indicator {
-
       &:after {
-
         color: #0195FE;
         position: absolute;
       }
     }
   }
-
-
 }
 
 .rejected {
@@ -343,15 +370,25 @@
       }
     }
 
-    &__single-value, &__input {
+    &__single-value,
+    &__input {
       color: #B65242;
+    }
 
+    &__indicator-separator {
+      background-color: #B65242;
+    }
+
+    &__clear-indicator {
+      padding: 0 spaces.$space-0 0 spaces.$space-0;
+
+      svg {
+        color: #B65242;
+      }
     }
 
     &__indicator {
-
       &:after {
-
         color: #B65242;
         position: absolute;
       }
@@ -371,28 +408,20 @@
         color: transparent;
       }
     }
-
   }
 }
 
 .css-b8ldur-Input {
-  margin: 0 !important;;
-  padding-bottom: 0 !important;;
+  margin: 0 !important;
+  padding: 0 !important;
   height: 100% !important;
+  width: 100% !important;
 }
 
-// DO NOT expand on this idea please (it will lead to bloated code)
-// see examples above
 .with-icon.small {
-
-  :global  .select-default {
-
+  :global .select-default {
     &__value-container {
       padding: 0 32px !important;
     }
-
   }
-
 }
-
-
