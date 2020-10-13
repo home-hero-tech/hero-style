@@ -100,7 +100,8 @@
 
     &__menu {
       border-radius: radius.$radius-2;
-      min-height: 36px
+      min-height: 36px;
+      z-index: 3;
     }
 
     &__menu-list {
