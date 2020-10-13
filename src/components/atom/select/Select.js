@@ -43,7 +43,9 @@ const Select = ({
   const allProps = {
     backspaceRemoves: true,
     inputId: id || name,
-    className: `${style[`c-select`]} ${style[_dark]} ${style[_small]} ${style[_icon]} ${style[status]}`,
+    className: `${style[`c-select`]} ${style[_dark] || ''} ${style[_small] || ''} ${style[_icon] || ''} ${style[
+      status
+    ] || ''}`,
     classNamePrefix: `select-default`,
     deleteRemoves: true,
     isMulti: multiple,
@@ -130,5 +132,7 @@ Select.defaultProps = {
   rejected: false,
   customOptionsMessage: newValue => `Criar "${newValue}"`
 };
+
+Select.displayName = 'Select';
 
 export default Select;
