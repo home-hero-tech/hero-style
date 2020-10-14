@@ -6,11 +6,12 @@ import classNames from 'classnames';
 import css from './DatePicker.module.scss';
 import cssInput from '../input/Input.module.scss';
 
-const DatePicker = ({ selected, format, onChange, dark, ...otherProps }) => {
+const DatePicker = ({ selected, format, onChange, dark, small, ...otherProps }) => {
   const className = dark ? 'c-datepicker--dark' : 'c-datepicker';
   const classes = classNames({
     [cssInput['c-input']]: true,
-    [cssInput['c-input--dark']]: dark
+    [cssInput['c-input--dark']]: dark,
+    [cssInput['c-input--small']]: small
   });
 
   return (
@@ -42,14 +43,16 @@ DatePicker.propTypes = {
   format: PropTypes.string,
   onChange: PropTypes.func,
   selected: PropTypes.instanceOf(Date),
-  dark: PropTypes.bool
+  dark: PropTypes.bool,
+  small: PropTypes.bool
 };
 
 DatePicker.defaultProps = {
   format: 'dd/MM/yyyy',
   onChange: f => f,
   selected: null,
-  dark: false
+  dark: false,
+  small: false,
 };
 
 export default DatePicker;
