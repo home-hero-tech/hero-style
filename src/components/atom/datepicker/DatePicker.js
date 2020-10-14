@@ -52,7 +52,7 @@ DatePicker.defaultProps = {
   onChange: f => f,
   selected: null,
   dark: false,
-  small: false,
+  small: false
 };
 
 export default DatePicker;
