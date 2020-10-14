@@ -7,7 +7,12 @@ import css from './DatePicker.module.scss';
 import cssInput from '../input/Input.module.scss';
 
 const DatePicker = ({ selected, format, onChange, dark, small, ...otherProps }) => {
-  const className = dark ? 'c-datepicker--dark' : 'c-datepicker';
+  const className = classNames({
+    [css['c-datepicker']]: true,
+    [css['c-datepicker--dark']]: dark,
+    [css['c-datepicker--small']]: small
+  });
+
   const classes = classNames({
     [cssInput['c-input']]: true,
     [cssInput['c-input--dark']]: dark,
@@ -15,7 +20,7 @@ const DatePicker = ({ selected, format, onChange, dark, small, ...otherProps }) 
   });
 
   return (
-    <div className={css[className]}>
+    <div className={className}>
       <RDatePicker
         selected={selected}
         dateFormat={format}

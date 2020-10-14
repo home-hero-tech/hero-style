@@ -136,6 +136,20 @@
     }
   }
 
+  &--small {
+    :global {
+      .react-datepicker {
+        &__input-container {
+          &:after {
+            font-size: types.$font-size-sm;
+            top: 2px;
+            padding: spaces.$space-0 spaces.$space-1;
+          }
+        }
+      }
+    }
+  }
+
   &--dark {
     background-color: colors.$color-brand-gray-500;
 

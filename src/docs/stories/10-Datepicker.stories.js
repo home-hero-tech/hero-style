@@ -8,3 +8,5 @@ export default {
 };
 
 export const Default = () => <DatePicker />;
+export const Dark = () => <DatePicker dark />;
+export const Small = () => <DatePicker small />;
