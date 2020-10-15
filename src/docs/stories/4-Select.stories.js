@@ -78,7 +78,7 @@ export const types = () => (
       <Select options={options} placeholder="Rejected" rejected />
     </Spacer>
     <Select options={options} placeholder="Pending" pending isClearable />
-    <Spacer myLg={1} myMd={1} mySm={1} myXs={1}>
+    <Spacer myLg={1} myMd={1} mySm={1} myXs={1} style={{ backgroundColor: '#3c4358', padding: '4px' }}>
       <Select options={options} placeholder="Dark" noOptionsMessage={noOptionsMessage} dark isClearable />
     </Spacer>
   </Wrapper>
@@ -101,7 +101,7 @@ export const smallTypes = () => (
       <Select options={options} placeholder="Rejected" small rejected />
     </Spacer>
     <Select options={options} placeholder="Pending" small pending isClearable />
-    <Spacer myLg={1} myMd={1} mySm={1} myXs={1}>
+    <Spacer myLg={1} myMd={1} mySm={1} myXs={1} style={{ backgroundColor: '#3c4358', padding: '4px' }}>
       <Select options={options} placeholder="Dark" noOptionsMessage={noOptionsMessage} dark small isClearable />
     </Spacer>
   </Wrapper>

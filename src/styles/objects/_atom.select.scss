@@ -229,12 +229,12 @@
   :global .select-default {
     &__control {
       background-color: colors.$color-brand-gray-600;
-      border-color: colors.$color-brand-gray-600;
+      border-color: colors.$color-structural-white;
 
       &:hover,
       &--is-focused,
       &--is-selected {
-        border-color: colors.$color-brand-gray-600;
+        border-color: colors.$color-brand-gray-200;
       }
     }
 
