@@ -357,6 +357,45 @@
   }
 }
 
+.success {
+  :global .select-default {
+    &__control {
+      background-color: #DCF7F7;
+      border-color: #DCF7F7;
+
+      &:hover,
+      &--is-focused,
+      &--is-selected {
+        border-color: #DCF7F7;
+      }
+    }
+
+    &__single-value,
+    &__input {
+      color: #2DB3B3;
+    }
+
+    &__indicator-separator {
+      background-color: #2DB3B3;
+    }
+
+    &__clear-indicator {
+      padding: 0 spaces.$space-0 0 spaces.$space-0;
+
+      svg {
+        color: #2DB3B3;
+      }
+    }
+
+    &__indicator {
+      &:after {
+        color: #2DB3B3;
+        position: absolute;
+      }
+    }
+  }
+}
+
 .rejected {
   :global .select-default {
     &__control {
