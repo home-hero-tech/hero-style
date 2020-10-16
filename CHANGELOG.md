@@ -757,6 +757,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - Several improvements on Select component css and its stories.
 
-## [1.23.2] - 2020-09-25
+## [1.23.2] - 2020-10-15
 ### Changed
 - Minor fix in Select style.
+
+## [1.24.0] - 2020-10-16
+### Add
+- New scss colors.
