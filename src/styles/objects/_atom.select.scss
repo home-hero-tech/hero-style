@@ -282,36 +282,36 @@
 .pending {
   :global .select-default {
     &__control {
-      background-color: #FFE4A9;
-      border-color: #FFE4A9;
+      background-color: colors.$color-functional-mustard-light;
+      border-color: colors.$color-functional-mustard-light;
 
       &:hover,
       &--is-focused,
       &--is-selected {
-        border-color: #FFE4A9;
+        border-color: colors.$color-functional-mustard-light;
       }
     }
 
     &__single-value,
     &__input {
-      color: #A57713;
+      color: colors.$color-functional-mustard;
     }
 
     &__indicator-separator {
-      background-color: #A57713;
+      background-color: colors.$color-functional-mustard;
     }
 
     &__clear-indicator {
       padding: 0 spaces.$space-0 0 spaces.$space-0;
 
       svg {
-        color: #A57713;
+        color: colors.$color-functional-mustard;
       }
     }
 
     &__indicator {
       &:after {
-        color: #A57713;
+        color: colors.$color-functional-mustard;
         position: absolute;
       }
     }
@@ -321,36 +321,36 @@
 .approved {
   :global .select-default {
     &__control {
-      background-color: #E2F2FF;
-      border-color: #E2F2FF;
+      background-color: colors.$color-brand-primary-050;
+      border-color: colors.$color-brand-primary-050;
 
       &:hover,
       &--is-focused,
       &--is-selected {
-        border-color: #E2F2FF;
+        border-color: colors.$color-brand-primary-050;
       }
     }
 
     &__single-value,
     &__input {
-      color: #0195FE;
+      color: colors.$color-primary;
     }
 
     &__indicator-separator {
-      background-color: #0195FE;
+      background-color: colors.$color-primary;
     }
 
     &__clear-indicator {
       padding: 0 spaces.$space-0 0 spaces.$space-0;
 
       svg {
-        color: #0195FE;
+        color: colors.$color-primary;
       }
     }
 
     &__indicator {
       &:after {
-        color: #0195FE;
+        color: colors.$color-primary;
         position: absolute;
       }
     }
@@ -360,36 +360,36 @@
 .rejected {
   :global .select-default {
     &__control {
-      background-color: #FFC5BC;
-      border-color: #FFC5BC;
+      background-color: colors.$color-functional-brown-light;
+      border-color: colors.$color-functional-brown-light;
 
       &:hover,
       &--is-focused,
       &--is-selected {
-        border-color: #FFC5BC;
+        border-color: colors.$color-functional-brown-light;
       }
     }
 
     &__single-value,
     &__input {
-      color: #B65242;
+      color: colors.$color-functional-brown;
     }
 
     &__indicator-separator {
-      background-color: #B65242;
+      background-color: colors.$color-functional-brown;
     }
 
     &__clear-indicator {
       padding: 0 spaces.$space-0 0 spaces.$space-0;
 
       svg {
-        color: #B65242;
+        color: colors.$color-functional-brown;
       }
     }
 
     &__indicator {
       &:after {
-        color: #B65242;
+        color: colors.$color-functional-brown;
         position: absolute;
       }
     }
