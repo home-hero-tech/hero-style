@@ -73,14 +73,15 @@ export const types = () => (
         icon={<FontAwesomeIcon icon={faLink} />}
       />
     </Spacer>
-    <Select options={options} placeholder="Approved" approved />
+    <Select options={options} placeholder="primary" primary />
     <Spacer myLg={1} myMd={1} mySm={1} myXs={1}>
-      <Select options={options} placeholder="Rejected" rejected />
+      <Select options={options} placeholder="danger" danger />
     </Spacer>
-    <Select options={options} placeholder="Pending" pending isClearable />
+    <Select options={options} placeholder="warning" warning isClearable />
     <Spacer myLg={1} myMd={1} mySm={1} myXs={1} style={{ backgroundColor: '#3c4358', padding: '4px' }}>
       <Select options={options} placeholder="Dark" noOptionsMessage={noOptionsMessage} dark isClearable />
     </Spacer>
+    <Select options={options} placeholder="grayLight" grayLight />
   </Wrapper>
 );
 
