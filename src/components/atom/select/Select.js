@@ -25,9 +25,10 @@ const Select = ({
   icon,
   isClearable,
   async,
-  pending,
-  approved,
-  rejected,
+  grayLight,
+  warning,
+  primary,
+  danger,
   customOptionsMessage,
   allowCustomOptions,
   wrapperStyle,
@@ -36,10 +37,11 @@ const Select = ({
   const _icon = icon ? 'with-icon' : '';
   const _small = small ? 'small' : '';
   const _dark = dark ? 'dark' : '';
-  const _pending = pending ? 'pending' : '';
-  const _approved = approved ? 'approved' : '';
-  const _rejected = rejected ? 'rejected' : '';
-  const status = _pending || _approved || _rejected;
+  const _grayLight = grayLight ? 'grayLight' : '';
+  const _warning = warning ? 'warning' : '';
+  const _primary = primary ? 'primary' : '';
+  const _danger = danger ? 'danger' : '';
+  const status = _warning || _primary || _danger || _grayLight;
 
   const allProps = {
     backspaceRemoves: true,
@@ -94,9 +96,10 @@ Select.propTypes = {
   id: PropTypes.string,
   icon: PropTypes.instanceOf(Object),
   multiple: PropTypes.bool,
-  pending: PropTypes.bool,
-  approved: PropTypes.bool,
-  rejected: PropTypes.bool,
+  grayLight: PropTypes.bool,
+  warning: PropTypes.bool,
+  primary: PropTypes.bool,
+  danger: PropTypes.bool,
   name: PropTypes.string,
   noOptionsMessage: PropTypes.func,
   onChange: PropTypes.func,
@@ -129,9 +132,10 @@ Select.defaultProps = {
   value: null,
   isClearable: false,
   allowCustomOptions: false,
-  pending: false,
-  approved: false,
-  rejected: false,
+  grayLight: false,
+  warning: false,
+  primary: false,
+  danger: false,
   customOptionsMessage: newValue => `Criar "${newValue}"`
 };
 

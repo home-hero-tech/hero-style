@@ -279,7 +279,46 @@
   }
 }
 
-.pending {
+.grayLight {
+  :global .select-default {
+    &__control {
+      background-color: colors.$color-brand-gray-050;
+      border-color: colors.$color-brand-gray-050;
+
+      &:hover,
+      &--is-focused,
+      &--is-selected {
+        border-color: colors.$color-brand-gray-050;
+      }
+    }
+
+    &__single-value,
+    &__input {
+      color: colors.$color-brand-gray-400;
+    }
+
+    &__indicator-separator {
+      background-color: colors.$color-brand-gray-400;
+    }
+
+    &__clear-indicator {
+      padding: 0 spaces.$space-0 0 spaces.$space-0;
+
+      svg {
+        color: colors.$color-brand-gray-400;
+      }
+    }
+
+    &__indicator {
+      &:after {
+        color: colors.$color-brand-gray-400;
+        position: absolute;
+      }
+    }
+  }
+}
+
+.warning {
   :global .select-default {
     &__control {
       background-color: colors.$color-functional-mustard-light;
@@ -318,7 +357,7 @@
   }
 }
 
-.approved {
+.primary {
   :global .select-default {
     &__control {
       background-color: colors.$color-brand-primary-050;
@@ -396,7 +435,7 @@
   }
 }
 
-.rejected {
+.danger {
   :global .select-default {
     &__control {
       background-color: colors.$color-functional-brown-light;
