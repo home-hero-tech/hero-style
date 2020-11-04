@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 import CardOption from './Option';
+import ContentOption from './ContentOption';
 import TextOption from './TextOption';
 
 import './CardSelect.scss';
@@ -27,7 +28,19 @@ const CardSelect = ({ type, selected, multiple, options, onChange, className, no
     onChange(changed);
   };
 
-  const Option = type === 'text' ? TextOption : CardOption;
+  let Option;
+
+  switch (type) {
+    case 'text':
+      Option = TextOption;
+      break;
+    case 'content':
+      Option = ContentOption;
+      break;
+    default:
+      Option = CardOption;
+      break;
+  }
 
   return (
     <div className={classes}>
@@ -40,6 +53,7 @@ const CardSelect = ({ type, selected, multiple, options, onChange, className, no
           selected={isSelected(opt)}
           onClick={handleChange(opt.id)}
           noCheck={noCheck}
+          Content={opt.Content}
         />
       ))}
     </div>

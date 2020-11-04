@@ -65,3 +65,30 @@ export const Text = () => {
     </div>
   );
 };
+
+const options2 = [
+  {
+    id: 1,
+    value: '1',
+    Content: () => <div>Content 1</div>
+  },
+  {
+    id: 2,
+    value: '2',
+    Content: () => <div>Content 2</div>
+  },
+  {
+    id: 3,
+    value: '3',
+    Content: () => <div>Content 3</div>
+  }
+];
+
+export const Content = () => {
+  const [selected, setSelected] = useState(options2[0]);
+  return (
+    <div style={{ padding: 12, width: 800 }}>
+      <CardSelect type="content" flex="col" selected={selected} options={options2} onChange={setSelected} />
+    </div>
+  );
+};

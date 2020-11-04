@@ -153,3 +153,54 @@
     width: 95%;
   }
 }
+
+
+.c-card-content-option {
+  display: flex;
+  position: relative;
+  padding: spaces.$space-1;
+  margin: spaces.$space-3 spaces.$space-3 0 0;
+  border-radius: radius.$radius-2;
+  font-size: types.$font-size-lg;
+  font-weight: bold;
+  transition: .2s;
+  border: 2px solid colors.$color-brand-gray-100;
+
+  &:hover {
+    cursor: pointer;
+    border: 2px solid colors.$color-brand-primary-300;
+  }
+
+  &__checkbox {
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    height: spaces.$space-3;
+    width: spaces.$space-3;
+    border-radius: radius.$radius-4;
+    border: 2px solid colors.$color-brand-primary-100;
+  }
+
+  &__content {
+    padding: spaces.$space-2;
+  }
+
+  &--checked {
+    border: 2px solid colors.$color-brand-primary-300;
+    .c-card-content-option__checkbox {
+      border: 2px solid colors.$color-brand-primary-300;
+      div {
+        height: spaces.$space-2;
+        width: spaces.$space-2;
+        border-radius: 50%;
+        margin: 2px auto;
+        background-color: colors.$color-brand-primary-300;;
+      }
+    }
+  }
+
+  @include mq.mq($until: tablet) {
+    margin: spaces.$space-2 spaces.$space-1 0 0;
+    width: 95%;
+  }
+}
