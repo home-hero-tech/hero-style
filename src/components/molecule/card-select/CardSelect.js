@@ -61,7 +61,7 @@ const CardSelect = ({ type, selected, multiple, options, onChange, className, no
 };
 
 CardSelect.propTypes = {
-  type: PropTypes.oneOf(['small', 'default', 'text']),
+  type: PropTypes.oneOf(['small', 'default', 'text', 'content']),
   flex: PropTypes.oneOf(['row', 'col']),
   selected: PropTypes.oneOfType([
     PropTypes.shape({
