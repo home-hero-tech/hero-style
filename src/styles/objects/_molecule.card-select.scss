@@ -203,4 +203,22 @@
     margin: spaces.$space-2 spaces.$space-1 0 0;
     width: 95%;
   }
+
+  &--disabled {
+    &:hover {
+      cursor: auto;
+      border: 2px solid colors.$color-brand-gray-100;
+    }
+
+    .c-card-content-option__checkbox {
+      background-color: colors.$color-brand-gray-300;
+      border: none;
+    }
+
+    img {
+      filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
+      filter: colors.$color-brand-gray-100;
+      -webkit-filter: grayscale(100%);
+    }
+  }
 }

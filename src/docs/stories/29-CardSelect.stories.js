@@ -92,3 +92,31 @@ export const Content = () => {
     </div>
   );
 };
+
+const options3 = [
+  {
+    id: 1,
+    value: '1',
+    Content: () => <div>Content 1</div>
+  },
+  {
+    id: 2,
+    value: '2',
+    Content: () => <div>Content 2</div>,
+    disabled: true
+  },
+  {
+    id: 3,
+    value: '3',
+    Content: () => <div>Content 3</div>
+  }
+];
+
+export const Disabled = () => {
+  const [selected, setSelected] = useState(options2[0]);
+  return (
+    <div style={{ padding: 12, width: 800 }}>
+      <CardSelect type="content" flex="col" selected={selected} options={options3} onChange={setSelected} />
+    </div>
+  );
+};

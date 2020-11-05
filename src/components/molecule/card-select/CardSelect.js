@@ -21,6 +21,9 @@ const CardSelect = ({ type, selected, multiple, options, onChange, className, no
 
   const handleChange = id => () => {
     const option = options.find(opt => opt.id === id);
+
+    if (option.disabled) return;
+
     let changed = option;
     if (multiple) {
       changed = isSelected(option) ? selected.filter(s => s.value !== option.value) : selected.concat(option);
@@ -54,6 +57,7 @@ const CardSelect = ({ type, selected, multiple, options, onChange, className, no
           onClick={handleChange(opt.id)}
           noCheck={noCheck}
           Content={opt.Content}
+          disabled={opt.disabled}
         />
       ))}
     </div>
