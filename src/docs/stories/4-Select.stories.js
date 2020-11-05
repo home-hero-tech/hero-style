@@ -82,6 +82,9 @@ export const types = () => (
       <Select options={options} placeholder="Dark" noOptionsMessage={noOptionsMessage} dark isClearable />
     </Spacer>
     <Select options={options} placeholder="grayLight" grayLight />
+    <Spacer myLg={1} myMd={1} mySm={1} myXs={1}>
+      <Select options={options} placeholder="Success" noOptionsMessage={noOptionsMessage} success isClearable />
+    </Spacer>
   </Wrapper>
 );
 

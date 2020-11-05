@@ -29,6 +29,7 @@ const Select = ({
   warning,
   primary,
   danger,
+  success,
   customOptionsMessage,
   allowCustomOptions,
   wrapperStyle,
@@ -41,7 +42,8 @@ const Select = ({
   const _warning = warning ? 'warning' : '';
   const _primary = primary ? 'primary' : '';
   const _danger = danger ? 'danger' : '';
-  const status = _warning || _primary || _danger || _grayLight;
+  const _success = success ? 'success' : '';
+  const status = _warning || _primary || _danger || _grayLight || _success;
 
   const allProps = {
     backspaceRemoves: true,
@@ -99,6 +101,7 @@ Select.propTypes = {
   grayLight: PropTypes.bool,
   warning: PropTypes.bool,
   primary: PropTypes.bool,
+  success: PropTypes.bool,
   danger: PropTypes.bool,
   name: PropTypes.string,
   noOptionsMessage: PropTypes.func,
@@ -135,6 +138,7 @@ Select.defaultProps = {
   grayLight: false,
   warning: false,
   primary: false,
+  success: false,
   danger: false,
   customOptionsMessage: newValue => `Criar "${newValue}"`
 };
