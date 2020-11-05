@@ -45,6 +45,7 @@ export const colors = () => (
   <Wrapper>
     <Heading level={1} title="Title" />
     <Heading level={1} title="Title" gray />
+    <Heading level={1} title="Title" primary />
   </Wrapper>
 );
 
