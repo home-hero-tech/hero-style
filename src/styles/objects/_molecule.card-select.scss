@@ -124,7 +124,7 @@
     align-items: center;
     position: absolute;
     height: spaces.$space-3;
-    width: spaces.$space-3;
+    min-width: spaces.$space-3;
     border-radius: radius.$radius-4;
     top: spaces.$space-1;
     right: spaces.$space-1;
@@ -213,6 +213,16 @@
     .c-card-content-option__checkbox {
       background-color: colors.$color-brand-gray-300;
       border: none;
+    }
+
+    li {
+      &::before {
+        color: colors.$color-brand-gray-300 !important;
+      }
+    }
+
+    p {
+      color: colors.$color-brand-gray-300 !important;
     }
 
     img {

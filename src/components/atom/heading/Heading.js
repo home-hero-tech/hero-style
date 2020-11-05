@@ -4,10 +4,23 @@ import classNames from 'classnames';
 
 import css from './Heading.module.scss';
 
-const Heading = ({ level, withMargin, gray, light, bold, title, uppercase, lowercase, capitalize, ...otherProps }) => {
+const Heading = ({
+  level,
+  withMargin,
+  gray,
+  light,
+  bold,
+  title,
+  uppercase,
+  lowercase,
+  capitalize,
+  primary,
+  ...otherProps
+}) => {
   const classes = classNames({
     [css['c-heading--withMargin']]: withMargin,
     [css['c-heading--gray']]: gray,
+    [css['c-heading--primary']]: primary,
     [css['c-heading--bold']]: bold,
     [css['c-heading--light']]: light,
     [css['c-heading--uppercase']]: uppercase,
