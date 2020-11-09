@@ -11,6 +11,7 @@ exports[`Select should match with the snapshot 1`] = `
     backspaceRemoves={true}
     className="c-select    "
     classNamePrefix="select-default"
+    components={Object {}}
     defaultInputValue=""
     defaultMenuIsOpen={false}
     defaultValue={null}
