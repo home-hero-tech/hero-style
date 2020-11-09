@@ -764,3 +764,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.24.0] - 2020-10-16
 ### Add
 - New scss colors.
+
+## [1.25.8] - 2020-11-09
+### Add
+- New props in Select component to remove indicators.

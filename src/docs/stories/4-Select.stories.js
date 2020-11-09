@@ -26,6 +26,12 @@ export const Default = () => (
   </Wrapper>
 );
 
+export const NoIndicator = () => (
+  <Wrapper>
+    <Select options={options} placeholder={placeholder} value={options[3]} isClearable noIndicator />
+  </Wrapper>
+);
+
 export const withIcon = () => (
   <Wrapper>
     <Select options={options} placeholder={placeholder} value={options[3]} icon={<FontAwesomeIcon icon={faLink} />} />

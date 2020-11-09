@@ -162,6 +162,19 @@
       height: 100%;
     }
 
+    &__clear-indicator {
+      padding: 0 spaces.$space-0;
+    }
+
+    &__dropdown-indicator {
+      padding: spaces.$space-1 - 1px;
+
+      svg {
+        color: transparent;
+        padding: 0;
+      }
+    }
+
     &__input, &__input input {
       width: 100% !important;
       color: colors.$color-brand-gray-500;

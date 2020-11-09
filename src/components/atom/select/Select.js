@@ -33,6 +33,7 @@ const Select = ({
   customOptionsMessage,
   allowCustomOptions,
   wrapperStyle,
+  noIndicator,
   ...otherProps
 }) => {
   const _icon = icon ? 'with-icon' : '';
@@ -44,6 +45,10 @@ const Select = ({
   const _danger = danger ? 'danger' : '';
   const _success = success ? 'success' : '';
   const status = _warning || _primary || _danger || _grayLight || _success;
+
+  const RSComponents = {};
+
+  if (noIndicator) RSComponents.IndicatorsContainer = () => null;
 
   const allProps = {
     backspaceRemoves: true,
@@ -61,6 +66,7 @@ const Select = ({
     onChange,
     placeholder,
     isClearable,
+    components: RSComponents,
     noOptionsMessage: ({ inputValue }) => (inputValue && inputValue.length ? noOptionsMessage() : firstMessage()),
     ...otherProps
   };
@@ -115,7 +121,8 @@ Select.propTypes = {
   isClearable: PropTypes.bool,
   allowCustomOptions: PropTypes.bool,
   customOptionsMessage: PropTypes.func,
-  wrapperStyle: PropTypes.instanceOf(Object)
+  wrapperStyle: PropTypes.instanceOf(Object),
+  noIndicator: PropTypes.bool
 };
 
 Select.defaultProps = {
@@ -140,7 +147,8 @@ Select.defaultProps = {
   primary: false,
   success: false,
   danger: false,
-  customOptionsMessage: newValue => `Criar "${newValue}"`
+  customOptionsMessage: newValue => `Criar "${newValue}"`,
+  noIndicator: false
 };
 
 Select.displayName = 'Select';
