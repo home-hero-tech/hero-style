@@ -16,6 +16,7 @@ import FormRow from '../../components/molecule/form-row/FormRow';
 import Button from '../../components/atom/button/Button';
 import Form from '../../components/organism/form/Form';
 import Spacer from '../../components/molecule/spacer/Spacer';
+import Select from '../../components/atom/select/Select';
 
 export default {
   title: 'Modal',
@@ -257,6 +258,13 @@ export const _ModalForm = () => {
   );
 };
 
+const options = [
+  { value: 'chocolate', label: 'Chocolate' },
+  { value: 'strawberry', label: 'Strawberry' },
+  { value: 'vanilla', label: 'Vanilla' },
+  { value: 'Coconut', label: 'Coconut' }
+];
+
 export const _Form = () => {
   const [open, toggleOpen] = useState(true);
   const handleSubmit = e => {
@@ -402,17 +410,22 @@ export const _Form = () => {
                 />
               </FormGroup>
             </FormRow>
-            <Row end="xs">
-              <Col lg={8}>
-                <Spacer mtLg={3} mtMd={3} mtSm={2} mtXs={2}>
-                  <Button type="primary" submit>
-                    Confirm
-                  </Button>
-                </Spacer>
-              </Col>
-            </Row>
+            <FormRow style={{ marginRight: 0 }}>
+              <FormGroup md>
+                <Label name="observation">Observações</Label>
+                <Select options={options} placeholder="Selecione" value={options[3]} isClearable />
+              </FormGroup>
+            </FormRow>
           </Form>
         </ModalContent>
+        <ModalFooter>
+          <Button onClick={action('click')} container="outlined" type="primary">
+            Cancel
+          </Button>
+          <Button onClick={action('click')} type="primary" submit>
+            Confirm
+          </Button>
+        </ModalFooter>
       </Modal>
     </Wrapper>
   );
