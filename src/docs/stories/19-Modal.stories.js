@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 
 import { action } from '@storybook/addon-actions';
 
-import { Col, Row } from 'react-flexbox-grid';
 import Modal from '../../components/organism/modal/Modal';
 import ModalForm from '../../components/organism/form-modal/FormModal';
 import ModalHeader from '../../components/molecule/modal-header/ModalHeader';
@@ -15,7 +14,6 @@ import FormGroup from '../../components/molecule/form-group/FormGroup';
 import FormRow from '../../components/molecule/form-row/FormRow';
 import Button from '../../components/atom/button/Button';
 import Form from '../../components/organism/form/Form';
-import Spacer from '../../components/molecule/spacer/Spacer';
 import Select from '../../components/atom/select/Select';
 
 export default {
