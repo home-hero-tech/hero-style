@@ -60,6 +60,10 @@
 
   &--has-form {
     grid-template-rows: 1fr;
+
+    form {
+      overflow: hidden auto;
+    }
   }
 
   &--width-1 {

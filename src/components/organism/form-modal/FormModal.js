@@ -11,7 +11,6 @@ const FormModal = ({
   onRequestClose,
   onSubmit,
   contentLabel,
-
   children,
   ...otherProps
 }) => {
