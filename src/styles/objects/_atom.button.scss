@@ -95,6 +95,11 @@
     box-shadow: none;
   }
 
+  &--loading {
+    border: 1px solid colors.$color-primary;
+    background: colors.$color-brand-primary-300;
+  }
+
   &:disabled {
     color: colors.$color-brand-gray-300;
     background-color: colors.$color-brand-gray-100;
@@ -122,6 +127,11 @@
         border: none;
         background: transparent;
       }
+    }
+
+    &.c-btn--loading {
+      border: 1px solid colors.$color-primary;
+      background: colors.$color-brand-primary-300;
     }
   }
 

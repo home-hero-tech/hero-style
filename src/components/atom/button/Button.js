@@ -34,13 +34,14 @@ const Button = ({
       [css[`c-btn--size-${size}`]]: true,
       [css['c-btn--no-shadow']]: !!noShadow,
       [css['c-btn--has-svg']]: !!hasSVG,
-      [css['c-btn--full-width']]: fullWidth
+      [css['c-btn--full-width']]: fullWidth,
+      [css['c-btn--loading']]: loading
     },
     className
   );
 
   return (
-    <button disabled={disabled} type={btnType} className={classes} onClick={onClick} {...otherProps}>
+    <button disabled={disabled || loading} type={btnType} className={classes} onClick={onClick} {...otherProps}>
       {loading ? <Loader small={size <= 2} /> : children}
     </button>
   );
