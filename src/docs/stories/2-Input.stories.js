@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { action } from '@storybook/addon-actions';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLink } from '@fortawesome/pro-light-svg-icons';
+import { faLink, faCloudUpload } from '@fortawesome/pro-light-svg-icons';
 import Wrapper from '../../helpers/wrapper/Wrapper';
 import Input from '../../components/atom/input/Input';
 import MaskedInput from '../../components/atom/masked-input/MaskedInput';
@@ -187,6 +187,22 @@ export const buttonFileInput = () => {
         onChange={action('change')}
         onRemove={action('remove')}
       />
+      <FileInput
+        text="Selecionar arquivo"
+        type="button"
+        id="ipt"
+        name="ipt"
+        onChange={action('change')}
+        onRemove={action('remove')}
+        buttonProps={{
+          type: 'primary',
+          shape: 'squared',
+          container: 'outlined',
+          hasSVG: true
+        }}
+      >
+        <FontAwesomeIcon icon={faCloudUpload} /> Upload
+      </FileInput>
       <FileInput
         text="Desabilitado"
         type="button"

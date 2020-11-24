@@ -3,7 +3,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUpload, faCloudUpload } from '@fortawesome/pro-light-svg-icons';
+import { faUpload } from '@fortawesome/pro-light-svg-icons';
 
 import Button from '../button/Button';
 
@@ -11,7 +11,21 @@ import fileIcon from '../../../assets/images/file-icon.svg';
 
 import css from './FileInput.module.scss';
 
-const FileInput = ({ id, type, name, text, value, multiple, onChange, onRemove, className, disabled, inputProps }) => {
+const FileInput = ({
+  id,
+  type,
+  name,
+  text,
+  value,
+  multiple,
+  onChange,
+  onRemove,
+  className,
+  disabled,
+  inputProps,
+  buttonProps,
+  children
+}) => {
   const classes = classNames(className, css['c-file'], {
     [css['c-file--disabled']]: disabled
   });
@@ -54,14 +68,10 @@ const FileInput = ({ id, type, name, text, value, multiple, onChange, onRemove, 
   };
 
   const renderButton = () => {
-    const btnClasses = classNames(css['c-file__button'], {
-      [css['c-file__button--disabled']]: disabled
-    });
     return (
-      <label className={btnClasses} htmlFor={disabled ? null : id}>
-        <FontAwesomeIcon icon={faCloudUpload} />
-        <span>{text}</span>
-      </label>
+      <Button {...buttonProps} disabled={disabled}>
+        {children || text}
+      </Button>
     );
   };
 
@@ -92,7 +102,9 @@ FileInput.propTypes = {
   onChange: PropTypes.func,
   text: PropTypes.string,
   type: PropTypes.oneOf(['card', 'button']),
-  value: PropTypes.instanceOf(Object)
+  value: PropTypes.instanceOf(Object),
+  buttonProps: PropTypes.instanceOf(Object),
+  children: PropTypes.oneOfType([PropTypes.string, PropTypes.object, PropTypes.array])
 };
 
 FileInput.defaultProps = {
@@ -105,7 +117,11 @@ FileInput.defaultProps = {
   onRemove: f => f,
   text: 'Carregar imagem',
   type: 'card',
-  value: null
+  value: null,
+  buttonProps: {
+    type: 'primary'
+  },
+  children: null
 };
 
 export default FileInput;
