@@ -67,13 +67,13 @@ const FileInput = ({
     );
   };
 
-  const renderButton = () => {
-    return (
+  const renderButton = () => (
+    <div className={css['c-file__button']}>
       <Button {...buttonProps} disabled={disabled}>
-        {children || text}
+        <label htmlFor={disabled ? null : id}>{children || text}</label>
       </Button>
-    );
-  };
+    </div>
+  );
 
   return (
     <div className={classes}>
