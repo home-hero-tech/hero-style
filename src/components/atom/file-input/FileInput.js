@@ -12,20 +12,20 @@ import fileIcon from '../../../assets/images/file-icon.svg';
 import css from './FileInput.module.scss';
 
 const FileInput = ({
-  id,
-  type,
-  name,
-  text,
-  value,
-  multiple,
-  onChange,
-  onRemove,
-  className,
-  disabled,
-  inputProps,
-  buttonProps,
-  children
-}) => {
+                     id,
+                     type,
+                     name,
+                     text,
+                     value,
+                     multiple,
+                     onChange,
+                     onRemove,
+                     className,
+                     disabled,
+                     inputProps,
+                     buttonProps,
+                     children
+                   }) => {
   const classes = classNames(className, css['c-file'], {
     [css['c-file--disabled']]: disabled
   });
@@ -67,13 +67,15 @@ const FileInput = ({
     );
   };
 
-  const renderButton = () => {
-    return (
+  const renderButton = () => (
+    <div className={css['c-file__button']}>
       <Button {...buttonProps} disabled={disabled}>
-        {children || text}
+        <label htmlFor={disabled ? null : id}>
+          {children || text}
+        </label>
       </Button>
-    );
-  };
+    </div>
+  );
 
   return (
     <div className={classes}>

@@ -71,59 +71,17 @@
   }
 
   &__button {
-    display: block;
-    color: #fff;
-    padding: spaces.$space-1 spaces.$space-3;
-    font-weight: bold;
-    border-radius: radius.$radius-4;
-    cursor: pointer;
-    border: 1px solid colors.$color-primary;
-    box-shadow: shadows.$elevation-4;
-    white-space: nowrap;
-    width: min-content;
-    background-position: center;
-    transition: transform .5s;
-    background: colors.$color-brand-primary-300;
-    user-select: none;
-
-    span {
-      font-size: types.$font-size-sm;
+    button {
+      padding: 0;
     }
 
-    svg, span {
-      color: colors.$color-white;
-    }
-
-    svg+span {
-      margin-left: spaces.$space-0;
-    }
-
-    &:not(.c-file__button--disabled) {
-      &:active {
-        transform: scale(.92);
-      }
-    }
-
-    &--disabled {
-      background-color: colors.$color-brand-gray-100;
-      border-color: colors.$color-brand-gray-100;
-
-      svg, span {
-        color: #fff !important;
-      }
-
-      &.c-btn--outlined {
-        background: transparent;
-        border: solid 1px colors.$color-brand-gray-100;
-
-        &:hover {
-          background: rgba(colors.$color-brand-gray-100, .1);
-        }
-
-        &:focus {
-          background: rgba(colors.$color-brand-gray-100, .2);
-        }
-      }
+    label {
+      font-size: inherit;
+      padding: spaces.$space-1 spaces.$space-3;
+      cursor: pointer;
+      color: inherit;
+      margin-bottom: inherit;
+      font-weight: inherit;
     }
   }
 }
