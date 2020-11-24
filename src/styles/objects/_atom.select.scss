@@ -101,6 +101,7 @@
       border-radius: radius.$radius-2;
       min-height: 36px;
       z-index: 3;
+      width: min-content;
     }
 
     &__menu-list {
