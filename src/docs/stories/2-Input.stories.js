@@ -180,13 +180,18 @@ export const buttonFileInput = () => {
   return (
     <Wrapper>
       <FileInput
-        text="Selecionar arquivo"
         type="button"
         id="ipt"
         name="ipt"
         onChange={action('change')}
         onRemove={action('remove')}
-      />
+        buttonProps={{
+          type: 'primary',
+          hasSVG: true
+        }}
+      >
+        <FontAwesomeIcon icon={faCloudUpload} /> Selecionar arquivo
+      </FileInput>
       <FileInput
         text="Selecionar arquivo"
         type="button"
