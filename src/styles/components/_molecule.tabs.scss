@@ -39,7 +39,7 @@
     .react-tabs__tab-list {
       border-bottom: none;
       transition: all .3s ease-in-out;
-      padding: 0 spaces.$space-4;
+      padding: 0 spaces.$space-2;
       margin: 0;
       display: block;
       overflow: auto hidden;
@@ -47,7 +47,7 @@
       white-space: nowrap;
 
       @include mq.mq($until: tablet) {
-        padding: 0 spaces.$space-2;
+        padding: 0 spaces.$space-1;
       }
 
       @include mq.mq($until: mobile) {
