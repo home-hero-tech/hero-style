@@ -147,6 +147,13 @@ export const Masked = () => {
       <MaskedInput type="phone" placeholder="Phone Input" onChange={action('click')} value="" />
       <MaskedInput type="zipCode" placeholder="Zipcode Input" onChange={action('click')} value="" />
       <MaskedInput type="currency" placeholder="currency Input" onChange={action('click')} value="" />
+      <MaskedInput
+        type="currency"
+        placeholder="currency Neg Input"
+        onChange={action('click')}
+        value={-90}
+        maskOptions={{ allowNegative: true }}
+      />
     </Wrapper>
   );
 };

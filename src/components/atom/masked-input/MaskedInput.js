@@ -29,10 +29,22 @@ const getMask = (maskType, maskOptions) => {
   }
 };
 
-const MaskedInput = ({ type, maskOptions, ...otherProps }) => {
+const defaultMaskOptions = {
+  prefix: 'R$ ',
+  suffix: '',
+  includeThousandsSeparator: true,
+  thousandsSeparatorSymbol: '.',
+  allowDecimal: true,
+  decimalSymbol: ',',
+  decimalLimit: 2,
+  allowNegative: false,
+  allowLeadingZeroes: false
+};
+
+const MaskedInput = ({ type, maskOptions = {}, ...otherProps }) => {
   return (
     <TextMaskInput
-      mask={getMask(type, maskOptions)}
+      mask={getMask(type, { ...defaultMaskOptions, ...maskOptions })}
       render={(ref, props) => <Input parentRef={ref} {...props} />}
       {...otherProps}
     />
@@ -42,20 +54,6 @@ const MaskedInput = ({ type, maskOptions, ...otherProps }) => {
 MaskedInput.propTypes = {
   type: PropTypes.oneOf(['phone', 'cnpj', 'cpf', 'zipCode', 'currency']).isRequired,
   maskOptions: PropTypes.oneOfType([PropTypes.array, PropTypes.object, PropTypes.string])
-};
-
-MaskedInput.defaultProps = {
-  maskOptions: {
-    prefix: 'R$ ',
-    suffix: '',
-    includeThousandsSeparator: true,
-    thousandsSeparatorSymbol: '.',
-    allowDecimal: true,
-    decimalSymbol: ',',
-    decimalLimit: 2,
-    allowNegative: false,
-    allowLeadingZeroes: false
-  }
 };
 
 export default MaskedInput;
