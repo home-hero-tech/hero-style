@@ -115,8 +115,7 @@
   }
 
   &--center {
-    left: 50%;
-    transform: translate(-60%, 0);
+    left: 0;
     border-radius: radius.$radius-5;
     margin: auto;
     display: flex;
