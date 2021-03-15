@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
-import React from 'react';
+import React, { useRef } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -26,6 +26,8 @@ const FileInput = ({
   buttonProps,
   children
 }) => {
+  const inputRef = useRef();
+
   const classes = classNames(className, css['c-file'], {
     [css['c-file--disabled']]: disabled
   });
@@ -39,6 +41,7 @@ const FileInput = ({
   const handleRemove = e => {
     e.preventDefault();
     onRemove(e);
+    inputRef.current.value = '';
   };
 
   const renderCard = () => {
@@ -82,6 +85,7 @@ const FileInput = ({
         type="file"
         name={name}
         className={css['c-file--input']}
+        ref={inputRef}
         onChange={handleChange}
         multiple={multiple}
         {...inputProps}
