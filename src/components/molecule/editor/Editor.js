@@ -17,7 +17,7 @@ const Editor = ({ value, modules, fullHeight, onChange, toolbar, rows, className
       <ReactQuill
         modules={!toolbar ? { toolbar: null } : { toolbar: optionsToolbar }}
         theme="snow"
-        value={value}
+        defaultValue={value}
         onChange={onChange}
         {...otherProps}
       />
