@@ -4,5 +4,5 @@
 
 body, html, #root {
   @extend %paragraph;
-  color: colors.$color-brand-gray-500;
+  color: colors.$color-neutral-30;
 }

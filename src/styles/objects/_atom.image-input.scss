@@ -51,7 +51,7 @@ input[type="file"].c-input {
   width: min-content;
   background-position: center;
   transition: transform .5s;
-  background: colors.$color-brand-primary-300;
+  background: colors.$color-brand-primary-40;
   user-select: none;
 
   svg, span {
@@ -94,27 +94,27 @@ input[type="file"].c-input {
   }
 
   &--disabled {
-    color: colors.$color-brand-gray-300;
-    background-color: colors.$color-brand-gray-100;
-    border-color: colors.$color-brand-gray-100;
+    color: colors.$color-neutral-50;
+    background-color: colors.$color-neutral-70;
+    border-color: colors.$color-neutral-70;
 
     &.c-btn--outlined {
       background: transparent;
-      border: solid 1px colors.$color-brand-gray-100;
+      border: solid 1px colors.$color-neutral-70;
 
       &:hover {
-        background: rgba(colors.$color-brand-gray-100, .1);
+        background: rgba(colors.$color-neutral-70, .1);
       }
 
       &:focus {
-        background: rgba(colors.$color-brand-gray-100, .2);
+        background: rgba(colors.$color-neutral-70, .2);
       }
     }
 
     &.c-btn--text {
       border: none;
       background: transparent;
-      color: colors.$color-brand-gray-300;
+      color: colors.$color-neutral-50;
 
       &:hover {
         border: none;

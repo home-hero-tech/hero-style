@@ -34,7 +34,7 @@
       }
 
       &__navigation {
-        background-color: colors.$color-structural-white;
+        background-color: colors.$color-white;
         padding: 0;
         border-radius: radius.$radius-2;
         box-shadow: shadows.$elevation-1;
@@ -47,7 +47,7 @@
       &__navigation--next {
         &:after {
           content: '';
-          border: solid colors.$color-brand-primary-300;
+          border: solid colors.$color-brand-primary-40;
           border-width: 0 2px 2px 0;
           display: inline-block;
           height: spaces.$space-1;
@@ -74,7 +74,7 @@
       }
 
       &__header {
-        background-color: colors.$color-structural-white;
+        background-color: colors.$color-white;
         font-size: types.$font-size-sm;
         font-family: types.$font-family;
         font-weight: normal;
@@ -82,12 +82,12 @@
       }
 
       &__day-name {
-        color: colors.$color-brand-gray-200;
+        color: colors.$color-neutral-60;
       }
 
       &__current-month {
         margin-top: spaces.$space-1;
-        color: colors.$color-brand-gray-500;
+        color: colors.$color-neutral-30;
         font-size: types.$font-size-md;
         font-family: types.$font-family;
         font-weight: normal;
@@ -99,7 +99,7 @@
       }
 
       &__day {
-        color: colors.$color-brand-gray-500;
+        color: colors.$color-neutral-30;
 
         &:hover {
           background: none;
@@ -107,19 +107,19 @@
         }
 
         &--today {
-          color: colors.$color-brand-primary-300;
-          background-color: colors.$color-brand-gray-050;
+          color: colors.$color-brand-primary-40;
+          background-color: colors.$color-neutral-90;
           border-radius: radius.$radius-percent-50;
           font-weight: normal;
 
           &:hover {
-            background-color: colors.$color-brand-gray-050;
+            background-color: colors.$color-neutral-90;
             border-radius: radius.$radius-percent-50;
           }
         }
 
         &--selected {
-          color: colors.$color-structural-white;
+          color: colors.$color-white;
           background: gradients.$gradient-brand-primary-300-100-315;
           border-radius: radius.$radius-percent-50;
 
@@ -130,7 +130,7 @@
         }
 
         &--outside-month {
-          color: colors.$color-brand-gray-200;
+          color: colors.$color-neutral-60;
         }
       }
     }
@@ -151,7 +151,7 @@
   }
 
   &--dark {
-    background-color: colors.$color-brand-gray-500;
+    background-color: colors.$color-neutral-30;
 
     :global {
       @import "~react-datepicker/dist/react-datepicker.min.css";
@@ -160,7 +160,7 @@
         border: none;
         box-shadow: shadows.$elevation-4;
         padding: 0 spaces.$space-2;
-        background-color: colors.$color-brand-gray-500;
+        background-color: colors.$color-neutral-30;
 
         &-wrapper {
           width: 100%;
@@ -176,12 +176,12 @@
             right: 1px;
             background-color: transparent;
             padding: spaces.$space-1 spaces.$space-2;
-            color: colors.$color-structural-white;
+            color: colors.$color-white;
           }
         }
 
         &__navigation {
-          background-color: colors.$color-brand-gray-600;
+          background-color: colors.$color-neutral-20;
           padding: 0;
           border-radius: radius.$radius-2;
           box-shadow: shadows.$elevation-1;
@@ -194,7 +194,7 @@
         &__navigation--next {
           &:after {
             content: '';
-            border: solid colors.$color-brand-primary-300;
+            border: solid colors.$color-brand-primary-40;
             border-width: 0 2px 2px 0;
             display: inline-block;
             height: spaces.$space-1;
@@ -221,7 +221,7 @@
         }
 
         &__header {
-          background-color: colors.$color-brand-gray-500;
+          background-color: colors.$color-neutral-30;
           font-size: types.$font-size-sm;
           font-family: types.$font-family;
           font-weight: normal;
@@ -229,12 +229,12 @@
         }
 
         &__day-name {
-          color: colors.$color-brand-gray-200;
+          color: colors.$color-neutral-60;
         }
 
         &__current-month {
           margin-top: spaces.$space-1;
-          color: colors.$color-structural-white;
+          color: colors.$color-white;
           font-size: types.$font-size-md;
           font-family: types.$font-family;
           font-weight: normal;
@@ -246,7 +246,7 @@
         }
 
         &__day {
-          color: colors.$color-structural-white;
+          color: colors.$color-white;
 
           &:hover {
             background: none;
@@ -254,19 +254,19 @@
           }
 
           &--today {
-            color: colors.$color-brand-primary-300;
-            background-color: colors.$color-brand-gray-600;
+            color: colors.$color-brand-primary-40;
+            background-color: colors.$color-neutral-20;
             border-radius: radius.$radius-percent-50;
             font-weight: normal;
 
             &:hover {
-              background-color: colors.$color-brand-gray-050;
+              background-color: colors.$color-neutral-90;
               border-radius: radius.$radius-percent-50;
             }
           }
 
           &--selected {
-            color: colors.$color-structural-white;
+            color: colors.$color-white;
             background: gradients.$gradient-brand-primary-300-100-315;
             border-radius: radius.$radius-percent-50;
 
@@ -277,7 +277,7 @@
           }
 
           &--outside-month {
-            color: colors.$color-brand-gray-200;
+            color: colors.$color-neutral-60;
           }
         }
       }

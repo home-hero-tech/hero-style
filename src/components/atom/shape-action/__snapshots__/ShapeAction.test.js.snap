@@ -5,10 +5,14 @@ exports[`ShapeAction should match with the *fill* props equals danger 1`] = `
   className="c-shape-action c-shape-action--primary c-shape-action--fill-danger c-shape-action--squared c-shape-action--size-1"
 >
   <FontAwesomeIcon
+    beat={false}
+    beatFade={false}
     border={false}
+    bounce={false}
     className=""
+    fade={false}
     fixedWidth={false}
-    flip={null}
+    flip={false}
     icon={
       Object {
         "icon": Array [
@@ -25,14 +29,19 @@ exports[`ShapeAction should match with the *fill* props equals danger 1`] = `
     inverse={false}
     listItem={false}
     mask={null}
+    maskId={null}
     pull={null}
     pulse={false}
     rotation={null}
+    shake={false}
     size={null}
     spin={false}
+    spinPulse={false}
+    spinReverse={false}
     swapOpacity={false}
     symbol={false}
     title=""
+    titleId={null}
     transform={null}
   />
 </span>
@@ -43,10 +52,14 @@ exports[`ShapeAction should match with the *fill* props equals primary 1`] = `
   className="c-shape-action c-shape-action--primary c-shape-action--fill-primary c-shape-action--squared c-shape-action--size-1"
 >
   <FontAwesomeIcon
+    beat={false}
+    beatFade={false}
     border={false}
+    bounce={false}
     className=""
+    fade={false}
     fixedWidth={false}
-    flip={null}
+    flip={false}
     icon={
       Object {
         "icon": Array [
@@ -63,14 +76,19 @@ exports[`ShapeAction should match with the *fill* props equals primary 1`] = `
     inverse={false}
     listItem={false}
     mask={null}
+    maskId={null}
     pull={null}
     pulse={false}
     rotation={null}
+    shake={false}
     size={null}
     spin={false}
+    spinPulse={false}
+    spinReverse={false}
     swapOpacity={false}
     symbol={false}
     title=""
+    titleId={null}
     transform={null}
   />
 </span>
@@ -81,10 +99,14 @@ exports[`ShapeAction should match with the *fill* props equals success 1`] = `
   className="c-shape-action c-shape-action--primary c-shape-action--fill-success c-shape-action--squared c-shape-action--size-1"
 >
   <FontAwesomeIcon
+    beat={false}
+    beatFade={false}
     border={false}
+    bounce={false}
     className=""
+    fade={false}
     fixedWidth={false}
-    flip={null}
+    flip={false}
     icon={
       Object {
         "icon": Array [
@@ -101,14 +123,19 @@ exports[`ShapeAction should match with the *fill* props equals success 1`] = `
     inverse={false}
     listItem={false}
     mask={null}
+    maskId={null}
     pull={null}
     pulse={false}
     rotation={null}
+    shake={false}
     size={null}
     spin={false}
+    spinPulse={false}
+    spinReverse={false}
     swapOpacity={false}
     symbol={false}
     title=""
+    titleId={null}
     transform={null}
   />
 </span>
@@ -120,10 +147,14 @@ exports[`ShapeAction should match with the *isButton* props equals true 1`] = `
   type="button"
 >
   <FontAwesomeIcon
+    beat={false}
+    beatFade={false}
     border={false}
+    bounce={false}
     className=""
+    fade={false}
     fixedWidth={false}
-    flip={null}
+    flip={false}
     icon={
       Object {
         "icon": Array [
@@ -140,14 +171,19 @@ exports[`ShapeAction should match with the *isButton* props equals true 1`] = `
     inverse={false}
     listItem={false}
     mask={null}
+    maskId={null}
     pull={null}
     pulse={false}
     rotation={null}
+    shake={false}
     size={null}
     spin={false}
+    spinPulse={false}
+    spinReverse={false}
     swapOpacity={false}
     symbol={false}
     title=""
+    titleId={null}
     transform={null}
   />
 </button>
@@ -158,10 +194,14 @@ exports[`ShapeAction should match with the *isLink* props equals true 1`] = `
   className="c-shape-action c-shape-action--is-link c-shape-action--primary c-shape-action--fill-danger c-shape-action--squared c-shape-action--size-1"
 >
   <FontAwesomeIcon
+    beat={false}
+    beatFade={false}
     border={false}
+    bounce={false}
     className=""
+    fade={false}
     fixedWidth={false}
-    flip={null}
+    flip={false}
     icon={
       Object {
         "icon": Array [
@@ -178,14 +218,19 @@ exports[`ShapeAction should match with the *isLink* props equals true 1`] = `
     inverse={false}
     listItem={false}
     mask={null}
+    maskId={null}
     pull={null}
     pulse={false}
     rotation={null}
+    shake={false}
     size={null}
     spin={false}
+    spinPulse={false}
+    spinReverse={false}
     swapOpacity={false}
     symbol={false}
     title=""
+    titleId={null}
     transform={null}
   />
 </span>
@@ -196,10 +241,14 @@ exports[`ShapeAction should match with the *shape* props equals rounded 1`] = `
   className="c-shape-action c-shape-action--primary c-shape-action--rounded c-shape-action--size-1"
 >
   <FontAwesomeIcon
+    beat={false}
+    beatFade={false}
     border={false}
+    bounce={false}
     className=""
+    fade={false}
     fixedWidth={false}
-    flip={null}
+    flip={false}
     icon={
       Object {
         "icon": Array [
@@ -216,14 +265,19 @@ exports[`ShapeAction should match with the *shape* props equals rounded 1`] = `
     inverse={false}
     listItem={false}
     mask={null}
+    maskId={null}
     pull={null}
     pulse={false}
     rotation={null}
+    shake={false}
     size={null}
     spin={false}
+    spinPulse={false}
+    spinReverse={false}
     swapOpacity={false}
     symbol={false}
     title=""
+    titleId={null}
     transform={null}
   />
 </span>
@@ -234,10 +288,14 @@ exports[`ShapeAction should match with the *shape* props equals squared 1`] = `
   className="c-shape-action c-shape-action--primary c-shape-action--squared c-shape-action--size-1"
 >
   <FontAwesomeIcon
+    beat={false}
+    beatFade={false}
     border={false}
+    bounce={false}
     className=""
+    fade={false}
     fixedWidth={false}
-    flip={null}
+    flip={false}
     icon={
       Object {
         "icon": Array [
@@ -254,14 +312,19 @@ exports[`ShapeAction should match with the *shape* props equals squared 1`] = `
     inverse={false}
     listItem={false}
     mask={null}
+    maskId={null}
     pull={null}
     pulse={false}
     rotation={null}
+    shake={false}
     size={null}
     spin={false}
+    spinPulse={false}
+    spinReverse={false}
     swapOpacity={false}
     symbol={false}
     title=""
+    titleId={null}
     transform={null}
   />
 </span>
@@ -272,10 +335,14 @@ exports[`ShapeAction should match with the *size* props equals 1 1`] = `
   className="c-shape-action c-shape-action--primary c-shape-action--fill-danger c-shape-action--squared c-shape-action--size-1"
 >
   <FontAwesomeIcon
+    beat={false}
+    beatFade={false}
     border={false}
+    bounce={false}
     className=""
+    fade={false}
     fixedWidth={false}
-    flip={null}
+    flip={false}
     icon={
       Object {
         "icon": Array [
@@ -292,14 +359,19 @@ exports[`ShapeAction should match with the *size* props equals 1 1`] = `
     inverse={false}
     listItem={false}
     mask={null}
+    maskId={null}
     pull={null}
     pulse={false}
     rotation={null}
+    shake={false}
     size={null}
     spin={false}
+    spinPulse={false}
+    spinReverse={false}
     swapOpacity={false}
     symbol={false}
     title=""
+    titleId={null}
     transform={null}
   />
 </span>
@@ -310,10 +382,14 @@ exports[`ShapeAction should match with the *size* props equals 2 1`] = `
   className="c-shape-action c-shape-action--primary c-shape-action--fill-danger c-shape-action--squared c-shape-action--size-2"
 >
   <FontAwesomeIcon
+    beat={false}
+    beatFade={false}
     border={false}
+    bounce={false}
     className=""
+    fade={false}
     fixedWidth={false}
-    flip={null}
+    flip={false}
     icon={
       Object {
         "icon": Array [
@@ -330,14 +406,19 @@ exports[`ShapeAction should match with the *size* props equals 2 1`] = `
     inverse={false}
     listItem={false}
     mask={null}
+    maskId={null}
     pull={null}
     pulse={false}
     rotation={null}
+    shake={false}
     size={null}
     spin={false}
+    spinPulse={false}
+    spinReverse={false}
     swapOpacity={false}
     symbol={false}
     title=""
+    titleId={null}
     transform={null}
   />
 </span>
@@ -348,10 +429,14 @@ exports[`ShapeAction should match with the *size* props equals 3 1`] = `
   className="c-shape-action c-shape-action--primary c-shape-action--fill-danger c-shape-action--squared c-shape-action--size-3"
 >
   <FontAwesomeIcon
+    beat={false}
+    beatFade={false}
     border={false}
+    bounce={false}
     className=""
+    fade={false}
     fixedWidth={false}
-    flip={null}
+    flip={false}
     icon={
       Object {
         "icon": Array [
@@ -368,14 +453,19 @@ exports[`ShapeAction should match with the *size* props equals 3 1`] = `
     inverse={false}
     listItem={false}
     mask={null}
+    maskId={null}
     pull={null}
     pulse={false}
     rotation={null}
+    shake={false}
     size={null}
     spin={false}
+    spinPulse={false}
+    spinReverse={false}
     swapOpacity={false}
     symbol={false}
     title=""
+    titleId={null}
     transform={null}
   />
 </span>
@@ -386,10 +476,14 @@ exports[`ShapeAction should match with the *size* props equals 4 1`] = `
   className="c-shape-action c-shape-action--primary c-shape-action--fill-danger c-shape-action--squared c-shape-action--size-4"
 >
   <FontAwesomeIcon
+    beat={false}
+    beatFade={false}
     border={false}
+    bounce={false}
     className=""
+    fade={false}
     fixedWidth={false}
-    flip={null}
+    flip={false}
     icon={
       Object {
         "icon": Array [
@@ -406,14 +500,19 @@ exports[`ShapeAction should match with the *size* props equals 4 1`] = `
     inverse={false}
     listItem={false}
     mask={null}
+    maskId={null}
     pull={null}
     pulse={false}
     rotation={null}
+    shake={false}
     size={null}
     spin={false}
+    spinPulse={false}
+    spinReverse={false}
     swapOpacity={false}
     symbol={false}
     title=""
+    titleId={null}
     transform={null}
   />
 </span>
@@ -424,10 +523,14 @@ exports[`ShapeAction should match with the *type* props equals danger 1`] = `
   className="c-shape-action c-shape-action--danger c-shape-action--squared c-shape-action--size-1"
 >
   <FontAwesomeIcon
+    beat={false}
+    beatFade={false}
     border={false}
+    bounce={false}
     className=""
+    fade={false}
     fixedWidth={false}
-    flip={null}
+    flip={false}
     icon={
       Object {
         "icon": Array [
@@ -444,14 +547,19 @@ exports[`ShapeAction should match with the *type* props equals danger 1`] = `
     inverse={false}
     listItem={false}
     mask={null}
+    maskId={null}
     pull={null}
     pulse={false}
     rotation={null}
+    shake={false}
     size={null}
     spin={false}
+    spinPulse={false}
+    spinReverse={false}
     swapOpacity={false}
     symbol={false}
     title=""
+    titleId={null}
     transform={null}
   />
 </span>
@@ -462,10 +570,14 @@ exports[`ShapeAction should match with the *type* props equals primary 1`] = `
   className="c-shape-action c-shape-action--primary c-shape-action--squared c-shape-action--size-1"
 >
   <FontAwesomeIcon
+    beat={false}
+    beatFade={false}
     border={false}
+    bounce={false}
     className=""
+    fade={false}
     fixedWidth={false}
-    flip={null}
+    flip={false}
     icon={
       Object {
         "icon": Array [
@@ -482,14 +594,19 @@ exports[`ShapeAction should match with the *type* props equals primary 1`] = `
     inverse={false}
     listItem={false}
     mask={null}
+    maskId={null}
     pull={null}
     pulse={false}
     rotation={null}
+    shake={false}
     size={null}
     spin={false}
+    spinPulse={false}
+    spinReverse={false}
     swapOpacity={false}
     symbol={false}
     title=""
+    titleId={null}
     transform={null}
   />
 </span>
@@ -500,10 +617,14 @@ exports[`ShapeAction should match with the *type* props equals success 1`] = `
   className="c-shape-action c-shape-action--success c-shape-action--squared c-shape-action--size-1"
 >
   <FontAwesomeIcon
+    beat={false}
+    beatFade={false}
     border={false}
+    bounce={false}
     className=""
+    fade={false}
     fixedWidth={false}
-    flip={null}
+    flip={false}
     icon={
       Object {
         "icon": Array [
@@ -520,14 +641,19 @@ exports[`ShapeAction should match with the *type* props equals success 1`] = `
     inverse={false}
     listItem={false}
     mask={null}
+    maskId={null}
     pull={null}
     pulse={false}
     rotation={null}
+    shake={false}
     size={null}
     spin={false}
+    spinPulse={false}
+    spinReverse={false}
     swapOpacity={false}
     symbol={false}
     title=""
+    titleId={null}
     transform={null}
   />
 </span>
@@ -538,10 +664,14 @@ exports[`ShapeAction should match with the snapshot 1`] = `
   className="c-shape-action c-shape-action--squared c-shape-action--size-1"
 >
   <FontAwesomeIcon
+    beat={false}
+    beatFade={false}
     border={false}
+    bounce={false}
     className=""
+    fade={false}
     fixedWidth={false}
-    flip={null}
+    flip={false}
     icon={
       Object {
         "icon": Array [
@@ -558,14 +688,19 @@ exports[`ShapeAction should match with the snapshot 1`] = `
     inverse={false}
     listItem={false}
     mask={null}
+    maskId={null}
     pull={null}
     pulse={false}
     rotation={null}
+    shake={false}
     size={null}
     spin={false}
+    spinPulse={false}
+    spinReverse={false}
     swapOpacity={false}
     symbol={false}
     title=""
+    titleId={null}
     transform={null}
   />
 </span>

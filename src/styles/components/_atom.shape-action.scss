@@ -5,7 +5,7 @@
 @use "../settings/spaces";
 
 .c-shape-action {
-  border: solid 1px colors.$color-brand-gray-300;
+  border: solid 1px colors.$color-neutral-50;
   padding: 0;
   margin: 0;
 
@@ -29,8 +29,8 @@
   }
 
   &--gray-light {
-    color: colors.$color-brand-gray-200;
-    border: solid 1px colors.$color-brand-gray-200;
+    color: colors.$color-neutral-60;
+    border: solid 1px colors.$color-neutral-60;
   }
 
   &--primary {
@@ -65,9 +65,9 @@
   }
 
   &--fill-gray-light {
-    background-color: colors.$color-brand-gray-200;
-    border: solid 1px colors.$color-brand-gray-200;
-    color: colors.$color-brand-gray-300;
+    background-color: colors.$color-neutral-60;
+    border: solid 1px colors.$color-neutral-60;
+    color: colors.$color-neutral-50;
   }
 
   &--fill-primary {

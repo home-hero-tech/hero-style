@@ -36,7 +36,7 @@
 }
 
 .c-modal {
-  background-color: colors.$color-structural-white;
+  background-color: colors.$color-white;
   z-index: 9030;
   transition: all .3s ease-in-out;
 
@@ -134,7 +134,7 @@
     height: height.$modal-footer-height;
     padding: 0 spaces.$space-3;
 
-    background-color: colors.$color-brand-gray-050;
+    background-color: colors.$color-neutral-90;
 
     display: flex;
     align-items: center;
@@ -161,7 +161,7 @@
 
     p {
       font-size: 14px;
-      color: colors.$color-brand-gray-300;
+      color: colors.$color-neutral-50;
     }
   }
 
@@ -182,7 +182,7 @@
 }
 
 .c-modal-overlay {
-  background-color: rgba(colors.$color-brand-gray-600, .8);
+  background-color: rgba(colors.$color-neutral-20, .8);
   left: 0;
   right: 0;
   z-index: 9000;

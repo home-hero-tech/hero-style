@@ -10,7 +10,7 @@
 
 
 .c-filter {
-  background-color: colors.$color-brand-gray-600;
+  background-color: colors.$color-neutral-20;
   border-radius: radius.$radius-2;
 
   &__header {
@@ -18,7 +18,7 @@
     width: 100%;
     height: height.$filter-height;
     padding: 0 spaces.$space-3;
-    color: colors.$color-structural-white;
+    color: colors.$color-white;
     font-size: 12px;
     font-weight: bold;
     border-radius: radius.$radius-2;
@@ -34,7 +34,7 @@
   }
 
   label {
-    color: colors.$color-brand-gray-300;
+    color: colors.$color-neutral-50;
   }
 
   &__content {
@@ -48,6 +48,6 @@
   @include mq.mq($until: mobile) {
     &__heading:nth-child(2) {
       display: none;
-    } 
+    }
   }
 }

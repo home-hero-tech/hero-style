@@ -33,14 +33,14 @@
     transition: background-color .3s ease-in-out;
 
     &:hover {
-      background-color: colors.$color-brand-gray-050;
+      background-color: colors.$color-neutral-90;
     }
 
     button, a {
       box-shadow: none;
       display: block;
       padding: spaces.$space-2 spaces.$space-3;
-      color: colors.$color-brand-gray-300;
+      color: colors.$color-neutral-50;
       transition: all .3s ease-in-out;
       font-weight: normal;
       height: auto;
@@ -49,7 +49,7 @@
     }
 
     &:hover button, &:hover a {
-      color: colors.$color-brand-gray-500;
+      color: colors.$color-neutral-30;
       font-weight: bold;
     }
   }

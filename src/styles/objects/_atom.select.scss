@@ -57,10 +57,10 @@
   ::-webkit-scrollbar-thumb {
     -webkit-border-radius: radius.$radius-2;
     border-radius: radius.$radius-2;
-    background: colors.$color-structural-gray-500;
+    background: colors.$color-neutral-secondary-50;
   }
   ::-webkit-scrollbar-thumb:window-inactive {
-    background: colors.$color-structural-gray-500;
+    background: colors.$color-neutral-secondary-50;
   }
   ::-webkit-scrollbar-corner {
     background: transparent;
@@ -70,30 +70,30 @@
     &__control {
       width: 100%;
       border-radius: radius.$radius-2;
-      border-color: colors.$color-brand-gray-200;
+      border-color: colors.$color-neutral-60;
       box-shadow: none;
       transition: all .3s ease-in-out;
-      background-color: colors.$color-structural-white;
+      background-color: colors.$color-white;
       min-height: height.$input-height;
-      color: colors.$color-brand-gray-200;
+      color: colors.$color-neutral-60;
 
       &:hover,
       &--is-focused,
       &--is-selected {
         background-color: transparent;
-        border-color: colors.$color-brand-gray-500;
+        border-color: colors.$color-neutral-30;
       }
 
       &--is-disabled {
-        background-color: colors.$color-brand-gray-100;
-        border-color: colors.$color-brand-gray-100;
-        color: colors.$color-brand-gray-500;
+        background-color: colors.$color-neutral-70;
+        border-color: colors.$color-neutral-70;
+        color: colors.$color-neutral-30;
       }
     }
 
     &__single-value {
       font-weight: 300;
-      color: colors.$color-brand-gray-500;
+      color: colors.$color-neutral-30;
       margin: 0;
     }
 
@@ -109,21 +109,21 @@
       border-radius: radius.$radius-2;
       box-shadow: shadows.$elevation-4;
       background-color: colors.$color-white;
-      border: solid 1px colors.$color-brand-gray-400;
+      border: solid 1px colors.$color-neutral-40;
     }
 
     &__option {
       cursor: pointer;
       transition: all .3s ease-in-out;
-      color: colors.$color-brand-gray-200;
+      color: colors.$color-neutral-60;
       background-color: transparent;
 
       &:hover {
-        color: colors.$color-brand-gray-500;
+        color: colors.$color-neutral-30;
       }
 
       &--is-selected {
-        color: colors.$color-brand-gray-500;
+        color: colors.$color-neutral-30;
       }
     }
 
@@ -131,7 +131,7 @@
       background-color: transparent;
 
       &:after {
-        color: colors.$color-brand-gray-300;
+        color: colors.$color-neutral-50;
         content: '\f0dd';
         font-size: types.$font-size-md;
         position: absolute;
@@ -151,7 +151,7 @@
     }
 
     &__placeholder {
-      color: colors.$color-brand-gray-200;
+      color: colors.$color-neutral-60;
       font-weight: 300;
     }
 
@@ -178,7 +178,7 @@
 
     &__input, &__input input {
       width: 100% !important;
-      color: colors.$color-brand-gray-500;
+      color: colors.$color-neutral-30;
       line-height: 1.5;
     }
   }
@@ -242,45 +242,45 @@
 .dark {
   :global .select-default {
     &__control {
-      background-color: colors.$color-brand-gray-600;
-      border-color: colors.$color-structural-white;
+      background-color: colors.$color-neutral-20;
+      border-color: colors.$color-white;
 
       &:hover,
       &--is-focused,
       &--is-selected {
-        border-color: colors.$color-brand-gray-200;
+        border-color: colors.$color-neutral-60;
       }
     }
 
     &__menu,
     &__menu-list {
-      background-color: colors.$color-brand-gray-400;
+      background-color: colors.$color-neutral-40;
     }
 
     &__single-value,
     &__input {
-      color: colors.$color-structural-white;
+      color: colors.$color-white;
     }
 
     &__placeholder {
-      color: colors.$color-brand-gray-200;
+      color: colors.$color-neutral-60;
     }
 
     &__option {
-      border-color: colors.$color-structural-white;
+      border-color: colors.$color-white;
 
       &--is-focused,
       &--is-selected {
-        border-color: colors.$color-brand-gray-500;
+        border-color: colors.$color-neutral-30;
       }
 
       &:hover {
-        color: colors.$color-structural-white;
-        border-color: colors.$color-structural-white;
+        color: colors.$color-white;
+        border-color: colors.$color-white;
       }
 
       &--is-selected {
-        color: colors.$color-structural-white;
+        color: colors.$color-white;
       }
     }
 
@@ -296,36 +296,36 @@
 .grayLight {
   :global .select-default {
     &__control {
-      background-color: colors.$color-brand-gray-050;
-      border-color: colors.$color-brand-gray-050;
+      background-color: colors.$color-neutral-90;
+      border-color: colors.$color-neutral-90;
 
       &:hover,
       &--is-focused,
       &--is-selected {
-        border-color: colors.$color-brand-gray-050;
+        border-color: colors.$color-neutral-90;
       }
     }
 
     &__single-value,
     &__input {
-      color: colors.$color-brand-gray-400;
+      color: colors.$color-neutral-40;
     }
 
     &__indicator-separator {
-      background-color: colors.$color-brand-gray-400;
+      background-color: colors.$color-neutral-40;
     }
 
     &__clear-indicator {
       padding: 0 spaces.$space-0 0 spaces.$space-0;
 
       svg {
-        color: colors.$color-brand-gray-400;
+        color: colors.$color-neutral-40;
       }
     }
 
     &__indicator {
       &:after {
-        color: colors.$color-brand-gray-400;
+        color: colors.$color-neutral-40;
         position: absolute;
       }
     }
@@ -335,36 +335,36 @@
 .warning {
   :global .select-default {
     &__control {
-      background-color: colors.$color-functional-mustard-light;
-      border-color: colors.$color-functional-mustard-light;
+      background-color: colors.$color-warning-secondary-80;
+      border-color: colors.$color-warning-secondary-80;
 
       &:hover,
       &--is-focused,
       &--is-selected {
-        border-color: colors.$color-functional-mustard-light;
+        border-color: colors.$color-warning-secondary-80;
       }
     }
 
     &__single-value,
     &__input {
-      color: colors.$color-functional-mustard;
+      color: colors.$color-warning-secondary-60;
     }
 
     &__indicator-separator {
-      background-color: colors.$color-functional-mustard;
+      background-color: colors.$color-warning-secondary-60;
     }
 
     &__clear-indicator {
       padding: 0 spaces.$space-0 0 spaces.$space-0;
 
       svg {
-        color: colors.$color-functional-mustard;
+        color: colors.$color-warning-secondary-60;
       }
     }
 
     &__indicator {
       &:after {
-        color: colors.$color-functional-mustard;
+        color: colors.$color-warning-secondary-60;
         position: absolute;
       }
     }
@@ -374,13 +374,13 @@
 .primary {
   :global .select-default {
     &__control {
-      background-color: colors.$color-brand-primary-050;
-      border-color: colors.$color-brand-primary-050;
+      background-color: colors.$color-brand-primary-80;
+      border-color: colors.$color-brand-primary-80;
 
       &:hover,
       &--is-focused,
       &--is-selected {
-        border-color: colors.$color-brand-primary-050;
+        border-color: colors.$color-brand-primary-80;
       }
     }
 
@@ -452,36 +452,36 @@
 .danger {
   :global .select-default {
     &__control {
-      background-color: colors.$color-functional-brown-light;
-      border-color: colors.$color-functional-brown-light;
+      background-color: colors.$color-warning-secondary-50;
+      border-color: colors.$color-warning-secondary-50;
 
       &:hover,
       &--is-focused,
       &--is-selected {
-        border-color: colors.$color-functional-brown-light;
+        border-color: colors.$color-warning-secondary-50;
       }
     }
 
     &__single-value,
     &__input {
-      color: colors.$color-functional-brown;
+      color: colors.$color-warning-secondary-40;
     }
 
     &__indicator-separator {
-      background-color: colors.$color-functional-brown;
+      background-color: colors.$color-warning-secondary-40;
     }
 
     &__clear-indicator {
       padding: 0 spaces.$space-0 0 spaces.$space-0;
 
       svg {
-        color: colors.$color-functional-brown;
+        color: colors.$color-warning-secondary-40;
       }
     }
 
     &__indicator {
       &:after {
-        color: colors.$color-functional-brown;
+        color: colors.$color-warning-secondary-40;
         position: absolute;
       }
     }

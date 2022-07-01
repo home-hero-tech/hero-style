@@ -19,8 +19,9 @@ const Text = ({
   warning,
   xs,
   ellipsis,
-  thin,
+  light,
   regular,
+  medium,
   bold,
   ...otherProps
 }) => {
@@ -39,8 +40,9 @@ const Text = ({
     [css['c-text--success']]: success,
     [css['c-text--warning']]: warning,
     [css['c-text--xs']]: xs,
-    [css['c-text--thin']]: thin,
+    [css['c-text--light']]: light,
     [css['c-text--regular']]: regular,
+    [css['c-text--medium']]: medium,
     [css['c-text--bold']]: bold
   });
 
@@ -64,7 +66,8 @@ Text.propTypes = {
   regular: PropTypes.bool,
   sm: PropTypes.bool,
   success: PropTypes.bool,
-  thin: PropTypes.bool,
+  light: PropTypes.bool,
+  medium: PropTypes.bool,
   bold: PropTypes.bool,
   uppercase: PropTypes.bool,
   warning: PropTypes.bool,
@@ -84,7 +87,8 @@ Text.defaultProps = {
   regular: false,
   sm: false,
   success: false,
-  thin: false,
+  light: false,
+  medium: false,
   bold: false,
   uppercase: false,
   warning: false,

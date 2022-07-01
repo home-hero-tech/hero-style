@@ -14,8 +14,8 @@
       margin-top: spaces.$space-5;
 
       .page {
-        color: colors.$color-brand-primary-300;
-        background: colors.$color-structural-white;
+        color: colors.$color-brand-primary-40;
+        background: colors.$color-white;
         border-radius: radius.$radius-2;
         box-shadow: shadows.$elevation-4;
         height: spaces.$space-4;
@@ -30,9 +30,9 @@
         }
 
         &.active {
-          background: colors.$color-brand-primary-300;
+          background: colors.$color-brand-primary-40;
           a {
-            color: colors.$color-structural-white;
+            color: colors.$color-white;
           }
         }
       }

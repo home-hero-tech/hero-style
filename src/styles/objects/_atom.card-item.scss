@@ -44,7 +44,7 @@
 
   &__label {
     font-size: types.$font-size-sm;
-    color: colors.$color-brand-gray-300;
+    color: colors.$color-neutral-50;
 
     &--small {
       font-size: types.$font-size-xs;
@@ -118,7 +118,7 @@
   &--val-gray-light {
     span {
       &:nth-child(2) {
-        color: colors.$color-brand-gray-100;
+        color: colors.$color-neutral-70;
       }
     }
   }
@@ -154,7 +154,7 @@
   &--lb-gray {
     span {
       &:nth-child(1) {
-        color: colors.$color-brand-gray-500;
+        color: colors.$color-neutral-30;
       }
     }
   }

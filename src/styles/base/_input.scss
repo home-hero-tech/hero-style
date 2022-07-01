@@ -5,10 +5,10 @@
 
 input {
   @extend %paragraph;
-  color: colors.$color-brand-gray-500;
+  color: colors.$color-neutral-30;
 
   &::placeholder {
-    color: colors.$color-brand-gray-200;
+    color: colors.$color-neutral-60;
   }
 
   transition: border-color .3s ease-in-out;

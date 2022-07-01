@@ -50,27 +50,27 @@
   }
 
   &--gray-100 {
-    color: colors.$color-brand-gray-100;
+    color: colors.$color-neutral-70;
   }
 
   &--gray-200 {
-    color: colors.$color-brand-gray-200;
+    color: colors.$color-neutral-60;
   }
 
   &--gray-300 {
-    color: colors.$color-brand-gray-300;
+    color: colors.$color-neutral-50;
   }
 
   &--gray-400 {
-    color: colors.$color-brand-gray-400;
+    color: colors.$color-neutral-40;
   }
 
   &--gray-500 {
-    color: colors.$color-brand-gray-500;
+    color: colors.$color-neutral-30;
   }
 
   &--gray-600 {
-    color: colors.$color-brand-gray-600;
+    color: colors.$color-neutral-20;
   }
 
   &--ellipsis {
@@ -79,11 +79,15 @@
     text-overflow: ellipsis;
   }
 
-  &--thin {
+  &--light {
     font-weight: 300;
   }
 
   &--regular {
+    font-weight: 400;
+  }
+
+  &--medium {
     font-weight: 500;
   }
 

@@ -5,24 +5,24 @@
   @import "~react-tippy/dist/tippy.css";
 
   .tippy-tooltip-content {
-    color: colors.$color-structural-white;
+    color: colors.$color-white;
     font-size: 12px;
     font-family: types.$font-family;
   }
 
   .tippy-tooltip {
-    background-color: colors.$color-brand-secondary-300 !important;
+    background-color: colors.$color-brand-secondary-80 !important;
   }
 
   .tippy-popper[x-placement^=bottom] [x-arrow] {
-    border-bottom: 7px solid colors.$color-brand-secondary-300 !important;;
+    border-bottom: 7px solid colors.$color-brand-secondary-80 !important;;
   }
 
   .tippy-popper[x-placement^=right] [x-arrow] {
-    border-right: 7px solid colors.$color-brand-secondary-300 !important;;
+    border-right: 7px solid colors.$color-brand-secondary-80 !important;;
   }
 
   .tippy-popper[x-placement^=left] [x-arrow] {
-    border-left: 7px solid colors.$color-brand-secondary-300 !important;;
+    border-left: 7px solid colors.$color-brand-secondary-80 !important;;
   }
 }

@@ -8,8 +8,8 @@
   display: flex;
 
   .spinner {
-    border: 2px solid colors.$color-brand-primary-300;
-    border-top: 2px solid colors.$color-structural-white;
+    border: 2px solid colors.$color-brand-primary-40;
+    border-top: 2px solid colors.$color-white;
     border-radius: 50%;
     width: 20px;
     height: 20px;
@@ -23,7 +23,7 @@
   }
 
   p {
-    color: colors.$color-brand-gray-500;
+    color: colors.$color-neutral-30;
     margin-left: spaces.$space-1;
   }
 }

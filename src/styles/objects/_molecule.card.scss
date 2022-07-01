@@ -20,8 +20,8 @@
   &__header {
     font-weight: bold;
     padding: spaces.$space-2 spaces.$space-2;
-    background-color: colors.$color-brand-gray-050;
-    border-bottom: 1px solid colors.$color-brand-gray-050;
+    background-color: colors.$color-neutral-90;
+    border-bottom: 1px solid colors.$color-neutral-90;
     border-top-left-radius: radius.$radius-3;
     border-top-right-radius: radius.$radius-3;
 
@@ -40,8 +40,8 @@
 
   &__footer {
     padding: spaces.$space-0 spaces.$space-2;
-    background-color: colors.$color-brand-gray-050;
-    border-top: 1px solid colors.$color-brand-gray-050;
+    background-color: colors.$color-neutral-90;
+    border-top: 1px solid colors.$color-neutral-90;
     border-bottom-left-radius: radius.$radius-3;
     border-bottom-right-radius: radius.$radius-3;
 

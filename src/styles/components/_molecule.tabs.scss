@@ -29,10 +29,10 @@
   ::-webkit-scrollbar-thumb {
       -webkit-border-radius: 10px;
       border-radius: 10px;
-      background: colors.$color-structural-gray-500;
+      background: colors.$color-neutral-secondary-50;
   }
   ::-webkit-scrollbar-thumb:window-inactive {
-      background: colors.$color-structural-gray-500;
+      background: colors.$color-neutral-secondary-50;
   }
 
   :global {
@@ -62,7 +62,7 @@
       transition: all .3s linear;
       background-color: transparent;
       height: 36px;
-      color: colors.$color-brand-gray-200;
+      color: colors.$color-neutral-60;
       position: relative;
 
       display: flex;
@@ -95,7 +95,7 @@
 
       &:hover, &:focus, &--selected {
         outline: none;
-        color: colors.$color-brand-gray-500;
+        color: colors.$color-neutral-30;
         box-shadow: none;
         position: relative;
 
@@ -126,10 +126,10 @@
   &--dark {
     /* Handle */
     ::-webkit-scrollbar-thumb {
-        background: colors.$color-brand-gray-200;
+        background: colors.$color-neutral-60;
     }
     ::-webkit-scrollbar-thumb:window-inactive {
-        background: colors.$color-brand-gray-200;
+        background: colors.$color-neutral-60;
     }
 
     :global {
@@ -139,7 +139,7 @@
 
       .react-tabs__tab {
         &:hover, &:focus, &--selected {
-          color: colors.$color-structural-white;
+          color: colors.$color-white;
         }
       }
     }
@@ -148,20 +148,20 @@
   &--dark-secondary {
     /* Handle */
     ::-webkit-scrollbar-thumb {
-        background: colors.$color-brand-gray-200;
+        background: colors.$color-neutral-60;
     }
     ::-webkit-scrollbar-thumb:window-inactive {
-        background: colors.$color-brand-gray-200;
+        background: colors.$color-neutral-60;
     }
 
     :global {
       .react-tabs__tab-list {
-        background: colors.$color-brand-gray-500;
+        background: colors.$color-neutral-30;
       }
 
       .react-tabs__tab {
         &:hover, &:focus, &--selected {
-          color: colors.$color-structural-white;
+          color: colors.$color-white;
         }
 
         &:hover, &:focus, &--selected {

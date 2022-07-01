@@ -26,8 +26,8 @@
 .c-text-option {
   display: flex;
   align-items: center;
-  background: colors.$color-brand-primary-050;
-  color: colors.$color-brand-primary-300;
+  background: colors.$color-brand-primary-80;
+  color: colors.$color-brand-primary-40;
   padding: 10px spaces.$space-1;
   margin: spaces.$space-2 spaces.$space-2 0 0;
   border-radius: radius.$radius-2;
@@ -35,12 +35,12 @@
   box-shadow: shadows.$elevation-3;
   &:hover {
     cursor: pointer;
-    border: 2px solid colors.$color-brand-primary-300;
+    border: 2px solid colors.$color-brand-primary-40;
     padding: spaces.$space-1 calc(#{spaces.$space-1} - 2px);
   }
 
   &--checked {
-    background: colors.$color-brand-primary-300;
+    background: colors.$color-brand-primary-40;
     .c-text-option__title, .c-text-option__checkbox {
       color: #fff;
     }
@@ -52,7 +52,7 @@
 
   &__title {
     padding: 0 spaces.$space-1;
-    color: colors.$color-brand-primary-300;
+    color: colors.$color-brand-primary-40;
   }
 
   &__checkbox {
@@ -66,7 +66,7 @@
     border-radius: radius.$radius-4;
     top: spaces.$space-1;
     right: spaces.$space-1;
-    border: 2px solid colors.$color-brand-primary-300;
+    border: 2px solid colors.$color-brand-primary-40;
   }
 
   @include mq.mq($until: tablet) {
@@ -86,15 +86,15 @@
   padding: 6px;
   margin: spaces.$space-3 spaces.$space-3 0 0;
   border-radius: radius.$radius-2;
-  background: colors.$color-brand-primary-050;
-  color: colors.$color-brand-primary-300;
+  background: colors.$color-brand-primary-80;
+  color: colors.$color-brand-primary-40;
   font-size: types.$font-size-lg;
   font-weight: bold;
   transition: .2s;
   box-shadow: shadows.$elevation-3;
   &:hover {
     cursor: pointer;
-    border: 2px solid colors.$color-brand-primary-300;
+    border: 2px solid colors.$color-brand-primary-40;
     .c-card-option__checkbox {
       top: spaces.$space-1 - 2;
       right: spaces.$space-1 - 2;
@@ -128,15 +128,15 @@
     border-radius: radius.$radius-4;
     top: spaces.$space-1;
     right: spaces.$space-1;
-    border: 2px solid colors.$color-brand-primary-300;
-    
+    border: 2px solid colors.$color-brand-primary-40;
+
     svg {
       display: none;
     }
   }
 
   &--checked {
-    background: colors.$color-brand-primary-300;
+    background: colors.$color-brand-primary-40;
     color: #fff;
     .c-card-option__checkbox {
       border: 2px solid #50c9c3;
@@ -164,11 +164,11 @@
   font-size: types.$font-size-lg;
   font-weight: bold;
   transition: .2s;
-  border: 2px solid colors.$color-brand-gray-100;
+  border: 2px solid colors.$color-neutral-70;
 
   &:hover {
     cursor: pointer;
-    border: 2px solid colors.$color-brand-primary-300;
+    border: 2px solid colors.$color-brand-primary-40;
   }
 
   &__checkbox {
@@ -178,7 +178,7 @@
     height: spaces.$space-3;
     min-width: spaces.$space-3;
     border-radius: radius.$radius-4;
-    border: 2px solid colors.$color-brand-primary-100;
+    border: 2px solid colors.$color-brand-primary-70;
   }
 
   &__content {
@@ -186,15 +186,15 @@
   }
 
   &--checked {
-    border: 2px solid colors.$color-brand-primary-300;
+    border: 2px solid colors.$color-brand-primary-40;
     .c-card-content-option__checkbox {
-      border: 2px solid colors.$color-brand-primary-300;
+      border: 2px solid colors.$color-brand-primary-40;
       div {
         height: spaces.$space-2;
         width: spaces.$space-2;
         border-radius: 50%;
         margin: 2px auto;
-        background-color: colors.$color-brand-primary-300;;
+        background-color: colors.$color-brand-primary-40;;
       }
     }
   }
@@ -207,27 +207,27 @@
   &--disabled {
     &:hover {
       cursor: auto;
-      border: 2px solid colors.$color-brand-gray-100;
+      border: 2px solid colors.$color-neutral-70;
     }
 
     .c-card-content-option__checkbox {
-      background-color: colors.$color-brand-gray-300;
+      background-color: colors.$color-neutral-50;
       border: none;
     }
 
     li {
       &::before {
-        color: colors.$color-brand-gray-300 !important;
+        color: colors.$color-neutral-50 !important;
       }
     }
 
     h1,h2,h3,h4,h5,h6,p {
-      color: colors.$color-brand-gray-300 !important;
+      color: colors.$color-neutral-50 !important;
     }
 
     img {
       filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
-      filter: colors.$color-brand-gray-100;
+      filter: colors.$color-neutral-70;
       -webkit-filter: grayscale(100%);
     }
   }
