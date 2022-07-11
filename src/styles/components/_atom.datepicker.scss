@@ -87,7 +87,7 @@
 
       &__current-month {
         margin-top: spaces.$space-1;
-        color: colors.$color-neutral-30;
+        color: colors.$color-neutral-40;
         font-size: types.$font-size-md;
         font-family: types.$font-family;
         font-weight: normal;
@@ -99,7 +99,7 @@
       }
 
       &__day {
-        color: colors.$color-neutral-30;
+        color: colors.$color-neutral-40;
 
         &:hover {
           background: none;

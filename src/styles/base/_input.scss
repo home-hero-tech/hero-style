@@ -5,7 +5,7 @@
 
 input {
   @extend %paragraph;
-  color: colors.$color-neutral-30;
+  color: colors.$color-neutral-40;
 
   &::placeholder {
     color: colors.$color-neutral-60;

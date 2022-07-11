@@ -1,9 +1,11 @@
 @use "../settings/settings";
 @use "../settings/types";
+@use "../settings/colors";
 
 
 h1, h2, h3, h4, h5, h6 {
   font-family: types.$font-family;
+  color: colors.$color-neutral-30;
 }
 
 h1 {
